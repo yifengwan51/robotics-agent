@@ -1,0 +1,26 @@
+# Runtime outputs and large local assets
+logs/
+runs/
+models/
+# Downloadable EmbodiedBench Habitat dataset (Git LFS assets are not present locally)
+third_party/EmbodiedBench/embodiedbench/envs/eb_habitat/datasets/*.pickle
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Environment files and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,634 @@
+{
+ "tasks": [
+  {
+   "targetObjectType": "Pot",
+   "targetObjectIds": "Pot|-01.22|+00.90|-02.36",
+   "target_position": {
+    "x": -1.2190020084381104,
+    "y": 0.9008802175521851,
+    "z": -2.355998992919922
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.4000000953674316,
+     "y": 0.900999128818512,
+     "z": -1.2000000476837158
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan1",
+   "object_to_hide": [],
+   "instruction": "The sunlight streaming through the window today feels particularly warm and pleasant. I noticed the gentle glint of the morning light on the countertop, which makes everything seem brighter. By the way, could you navigate to the silver pot? It's quite shiny and stands out in the light. Oh, and there's a delicious aroma of freshly baked bread in the air."
+  },
+  {
+   "targetObjectType": "Pot",
+   "targetObjectIds": "Pot|+00.89|+00.90|-01.41",
+   "target_position": {
+    "x": 0.8894879817962646,
+    "y": 0.9031880497932434,
+    "z": -1.412380576133728
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.0,
+     "y": 0.9009992480278015,
+     "z": 1.2999999523162842
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan2",
+   "object_to_hide": [],
+   "instruction": "It's such a peaceful evening, with the sound of leaves rustling outside. The kettle on the stove is still warm from earlier. When you get a chance, please move closer to the black pot on the counter. It looks like it hasn't been used yet today. The aroma of the soup I made earlier still lingers."
+  },
+  {
+   "targetObjectType": "Bread",
+   "targetObjectIds": "Bread|-01.51|+01.38|+00.66",
+   "target_position": {
+    "x": -1.5136305093765259,
+    "y": 1.3809161186218262,
+    "z": 0.6621981263160706
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.5,
+     "y": 1.123205542564392,
+     "z": -2.0999999046325684
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan3",
+   "object_to_hide": [],
+   "instruction": "This morning, the smell of coffee filled the kitchen, making everything feel cozy. I noticed some crumbs on the table, a clear sign that breakfast was enjoyed here. Can you please move towards the yellow rectangular bread on the counter? It's sitting near the fruit bowl filled with bananas and apples."
+  },
+  {
+   "targetObjectType": "Microwave",
+   "targetObjectIds": "Microwave|-00.37|+01.11|+00.43",
+   "target_position": {
+    "x": -0.36675870418548584,
+    "y": 1.1131449937820435,
+    "z": 0.433275431394577
+   },
+   "agentPose": {
+    "position": {
+     "x": -2.4000000953674316,
+     "y": 0.9009998440742493,
+     "z": 2.1000001430511475
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan4",
+   "object_to_hide": [],
+   "instruction": "The air feels crisp and cool this evening, making the indoor warmth even more pleasant. I noticed the soft hum of a fan in the background, blending with the occasional sound of footsteps outside. Could you navigate to the microwave for me? By the way, the kitchen smells faintly of vanilla from the cookies baked earlier."
+  },
+  {
+   "targetObjectType": "CoffeeMachine",
+   "targetObjectIds": "CoffeeMachine|+00.50|+00.90|-02.13",
+   "target_position": {
+    "x": 0.501907229423523,
+    "y": 0.9000000953674316,
+    "z": -2.1251957416534424
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.100000023841858,
+     "y": 0.9009991884231567,
+     "z": 0.5
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan5",
+   "object_to_hide": [],
+   "instruction": "The early morning light is filtering through the blinds, casting delicate patterns on the walls. I noticed a book lying open on the table and a couple of mugs left out from yesterday. Please move towards the coffee machine. The faint aroma of brewed coffee still lingers in the room."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+01.65|00.00|+00.68",
+   "target_position": {
+    "x": 1.6460013389587402,
+    "y": -0.0007670223712921143,
+    "z": 0.6790003180503845
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.100000023841858,
+     "y": 0.9009991884231567,
+     "z": 1.7000000476837158
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan6",
+   "object_to_hide": [],
+   "instruction": "It's a lazy afternoon with the sound of birds chirping softly outside the window. The counters have some empty containers waiting to be sorted, and there's a stack of papers nearby. Could you please navigate to the garbage can? The space feels quite peaceful today."
+  },
+  {
+   "targetObjectType": "CoffeeMachine",
+   "targetObjectIds": "CoffeeMachine|-01.11|+00.90|-01.73",
+   "target_position": {
+    "x": -1.1119967699050903,
+    "y": 0.9005778431892395,
+    "z": -1.7269976139068604
+   },
+   "agentPose": {
+    "position": {
+     "x": -2.799999952316284,
+     "y": 0.9009991884231567,
+     "z": 0.7000000476837158
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan7",
+   "object_to_hide": [],
+   "instruction": "The day feels unusually quiet, with only the faint ticking of a clock breaking the silence. There's a newspaper folded neatly on the table, and a couple of pens scattered nearby. When you can, please move to the coffee machine. The rich smell of coffee seems to fill the air."
+  },
+  {
+   "targetObjectType": "Bowl",
+   "targetObjectIds": "Bowl|+01.02|+00.90|-00.52",
+   "target_position": {
+    "x": 1.0221045017242432,
+    "y": 0.8909938335418701,
+    "z": -0.5185359120368958
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.5,
+     "y": 0.9009991884231567,
+     "z": 0.5
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan8",
+   "object_to_hide": [],
+   "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|-01.97|-00.03|+01.36",
+   "target_position": {
+    "x": -1.9655803442001343,
+    "y": -0.02942967414855957,
+    "z": 1.3585395812988281
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.699999988079071,
+     "y": 0.9009991884231567,
+     "z": 0.20000000298023224
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan9",
+   "object_to_hide": [],
+   "instruction": "The cool breeze coming in through the open window is refreshing. I noticed some groceries left unpacked on the counter, with a faint scent of fresh produce. Can you move to the garbage can? It's a quiet afternoon here."
+  },
+  {
+   "targetObjectType": "Toaster",
+   "targetObjectIds": "Toaster|+00.98|+00.90|+00.33",
+   "target_position": {
+    "x": 0.9840067625045776,
+    "y": 0.9000058174133301,
+    "z": 0.3290005028247833
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.8000000715255737,
+     "y": 0.9009992480278015,
+     "z": 1.2000000476837158
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan10",
+   "object_to_hide": [],
+   "instruction": "The soft sound of rain tapping against the windows creates a calming rhythm. There's a towel folded neatly on the countertop and a couple of spoons resting by the sink. Could you please navigate to the toaster? The atmosphere feels so serene right now."
+  },
+  {
+   "targetObjectType": "Box",
+   "targetObjectIds": "Box|-03.36|+00.19|+06.43",
+   "target_position": {
+    "x": -3.3620107173919678,
+    "y": 0.19336077570915222,
+    "z": 6.426008224487305
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.0999999046325684,
+     "y": 0.9026566743850708,
+     "z": 4.699999809265137
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan201",
+   "object_to_hide": [],
+   "instruction": "The scent of freshly brewed coffee fills the air, creating a cozy atmosphere. A small pile of magazines rests neatly on the corner of the sofa. Please move toward the box and position yourself close to it. The light streaming in through the window highlights the soft texture of the rug."
+  },
+  {
+   "targetObjectType": "FloorLamp",
+   "targetObjectIds": "FloorLamp|-03.69|00.00|+04.01",
+   "target_position": {
+    "x": -3.6869921684265137,
+    "y": -0.0018846392631530762,
+    "z": 4.013891220092773
+   },
+   "agentPose": {
+    "position": {
+     "x": -3.299999952316284,
+     "y": 0.9010459184646606,
+     "z": 1.5
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan202",
+   "object_to_hide": [],
+   "instruction": "The faint sound of birds chirping outside adds a tranquil touch to the room. A fluffy cushion sits comfortably on the armchair, looking inviting. Could you navigate to the floorlamp and stay close to it? The warm glow of the sunlight enhances the wooden furniture's natural tones."
+  },
+  {
+   "targetObjectType": "FloorLamp",
+   "targetObjectIds": "FloorLamp|+01.11|+00.01|+06.81",
+   "target_position": {
+    "x": 1.1119095087051392,
+    "y": 0.007121682167053223,
+    "z": 6.805015563964844
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.100000023841858,
+     "y": 0.9070531129837036,
+     "z": 5.5
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan203",
+   "object_to_hide": [],
+   "instruction": "The room is filled with a gentle quietness, broken only by the sound of a distant wind chime. A book with a vibrant cover lies open on the table. Could you move toward the floorlamp and remain close to it? The shadows cast by the leaves outside dance across the walls."
+  },
+  {
+   "targetObjectType": "Laptop",
+   "targetObjectIds": "Laptop|-00.60|+00.74|+01.31",
+   "target_position": {
+    "x": -0.5949997901916504,
+    "y": 0.7356978058815002,
+    "z": 1.308001160621643
+   },
+   "agentPose": {
+    "position": {
+     "x": -2.4000000953674316,
+     "y": 0.902314305305481,
+     "z": 3.0999999046325684
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan204",
+   "object_to_hide": [],
+   "instruction": "The coolness of the morning air drifting in through the window feels invigorating. A pen with an intricate design rests on the edge of the desk. Please navigate to the laptop and stay as close as possible. The faint ticking of a clock adds a steady rhythm to the quiet."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|-00.26|-00.01|+06.80",
+   "target_position": {
+    "x": -0.25699931383132935,
+    "y": -0.01087065041065216,
+    "z": 6.79974365234375
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.399999976158142,
+     "y": 0.9011250734329224,
+     "z": 4.100000381469727
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan205",
+   "object_to_hide": [],
+   "instruction": "The soft hum of the ceiling fan creates a soothing background sound. A folded blanket sits neatly on the couch, adding a cozy vibe to the room. Could you move toward the trash can and position yourself near it? The polished floor reflects the light, giving the space a bright feel."
+  },
+  {
+   "targetObjectType": "Laptop",
+   "targetObjectIds": "Laptop|-01.73|+00.75|-00.70",
+   "target_position": {
+    "x": -1.7249711751937866,
+    "y": 0.7536596059799194,
+    "z": -0.6958543062210083
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.9000000357627869,
+     "y": 0.9009991884231567,
+     "z": -0.10000000149011612
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan206",
+   "object_to_hide": [],
+   "instruction": "The warm sunlight streaming in creates golden streaks on the floorboards. A steaming mug of tea sits nearby, its aroma filling the room. Please navigate to the laptop and stay close. The patterned curtains gently sway in the breeze, adding a sense of calm."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+01.77|00.00|+03.88",
+   "target_position": {
+    "x": 1.767322301864624,
+    "y": -0.001821964979171753,
+    "z": 3.8780102729797363
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.100000023841858,
+     "y": 0.9009992480278015,
+     "z": 1.0
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan207",
+   "object_to_hide": [],
+   "instruction": "The gentle rustling of leaves outside sets a calming tone for the afternoon. A stack of neatly arranged papers sits on the corner of the table. Could you move toward the trash can and remain near it? The subtle glow of the lamp adds a cozy touch to the ambiance."
+  },
+  {
+   "targetObjectType": "Laptop",
+   "targetObjectIds": "Laptop|-02.91|+00.78|-03.09",
+   "target_position": {
+    "x": -2.914997100830078,
+    "y": 0.7804622650146484,
+    "z": -3.0899975299835205
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.699999988079071,
+     "y": 0.9009991884231567,
+     "z": -1.3000000715255737
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan208",
+   "object_to_hide": [],
+   "instruction": "The room feels alive with the soft hum of a distant radio playing a classical tune. A photo frame sits on the desk, displaying a cherished memory. Please move toward the laptop and stay as close as possible. The crisp scent of fresh flowers adds a lively note."
+  },
+  {
+   "targetObjectType": "Statue",
+   "targetObjectIds": "Statue|-02.02|+00.48|-05.09",
+   "target_position": {
+    "x": -2.0204381942749023,
+    "y": 0.48197001218795776,
+    "z": -5.094831943511963
+   },
+   "agentPose": {
+    "position": {
+     "x": -4.699999809265137,
+     "y": 0.9027014970779419,
+     "z": -4.300000190734863
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan209",
+   "object_to_hide": [],
+   "instruction": "The faint aroma of vanilla lingers in the air, creating a sense of comfort. A pair of cozy slippers rests by the armchair, inviting relaxation. Could you navigate to the statue and remain close to it? The soft light highlights the intricate details of the carvings."
+  },
+  {
+   "targetObjectType": "DeskLamp",
+   "targetObjectIds": "DeskLamp|-06.77|+00.41|-00.03",
+   "target_position": {
+    "x": -6.766035079956055,
+    "y": 0.4111257791519165,
+    "z": -0.028010711073875427
+   },
+   "agentPose": {
+    "position": {
+     "x": -5.099999904632568,
+     "y": 0.9057542085647583,
+     "z": 2.299999952316284
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan210",
+   "object_to_hide": [],
+   "instruction": "The late afternoon light casts a golden hue across the room, making everything feel warm. A stack of colorful notebooks sits neatly on the shelf. Please move toward the desklamp and stay close. The ticking of the wall clock provides a steady, calming rhythm."
+  },
+  {
+   "targetObjectType": "Box",
+   "targetObjectIds": "Box|+02.73|+00.20|+00.89",
+   "target_position": {
+    "x": 2.734192371368408,
+    "y": 0.2011203169822693,
+    "z": 0.8900041580200195
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.3999999761581421,
+     "y": 0.910415768623352,
+     "z": -0.5
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan301",
+   "object_to_hide": [],
+   "instruction": "The weather outside feels refreshing, and the gentle breeze coming through the window is quite calming. I noticed a faint scent of coffee lingering in the air, which makes the room feel cozy. Please navigate to the box and be as close as possible. By the way, the floor looks spotless today, and the sunlight streaming through the curtains is just perfect."
+  },
+  {
+   "targetObjectType": "DeskLamp",
+   "targetObjectIds": "DeskLamp|+00.47|+00.67|+01.35",
+   "target_position": {
+    "x": 0.47372305393218994,
+    "y": 0.6693270802497864,
+    "z": 1.3501381874084473
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.20000000298023224,
+     "y": 0.9009991884231567,
+     "z": -1.2000000476837158
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan302",
+   "object_to_hide": [],
+   "instruction": "Today feels like a perfect day to sit by the window and enjoy the view of the clear blue sky. The table has some random papers scattered around, adding a lived-in touch to the room. Please move to the desk lamp and get as close as you can. I also noticed the soft ticking of the wall clock, which is oddly comforting."
+  },
+  {
+   "targetObjectType": "Book",
+   "targetObjectIds": "Book|+00.34|+00.72|-02.65",
+   "target_position": {
+    "x": 0.3389998972415924,
+    "y": 0.7234514355659485,
+    "z": -2.6500015258789062
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.6000000238418579,
+     "y": 0.9010001420974731,
+     "z": -0.30000001192092896
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan303",
+   "object_to_hide": [],
+   "instruction": "It's a quiet afternoon, and the sound of birds chirping outside is very relaxing. There's a faint smell of lavender in the room, probably from the candle on the table. Please navigate to the book and position yourself as close as possible. The chair in the corner also looks quite inviting for reading."
+  },
+  {
+   "targetObjectType": "CellPhone",
+   "targetObjectIds": "CellPhone|-00.78|+00.99|-01.25",
+   "target_position": {
+    "x": -0.780676007270813,
+    "y": 0.9924221634864807,
+    "z": -1.2523939609527588
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.8999999761581421,
+     "y": 0.9069997072219849,
+     "z": 0.6000000238418579
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan304",
+   "object_to_hide": [],
+   "instruction": "The air feels pleasantly warm, and the sunlight is casting beautiful patterns on the walls. There's a small vase with fresh flowers on the table, adding a pop of color to the room. Could you move close to the phone and ensure you are nearby? The ambiance here is just perfect for a peaceful day."
+  },
+  {
+   "targetObjectType": "DeskLamp",
+   "targetObjectIds": "DeskLamp|-00.40|+00.66|-01.67",
+   "target_position": {
+    "x": -0.39597460627555847,
+    "y": 0.6648674011230469,
+    "z": -1.666042447090149
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.6000000238418579,
+     "y": 0.9009991884231567,
+     "z": 1.2000000476837158
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan305",
+   "object_to_hide": [],
+   "instruction": "It's been a calm morning, and the faint hum of distant traffic adds a soothing background noise. There's a cozy blanket folded neatly on the couch, making the space feel inviting. Please move toward the water cup and stay close to it. The overall vibe of this place is just so serene."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+03.35|00.00|-00.03",
+   "target_position": {
+    "x": 3.345407247543335,
+    "y": -0.000676572322845459,
+    "z": -0.02681753784418106
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.699999988079071,
+     "y": 0.9009991884231567,
+     "z": -1.2000000476837158
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan306",
+   "object_to_hide": [],
+   "instruction": "The clouds outside are moving lazily, and the room feels fresh after a good cleaning. There's a magazine on the coffee table that seems interesting. Please navigate to the trash can and remain nearby. The wooden texture of the furniture adds a warm tone to the space."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+01.31|00.00|-02.45",
+   "target_position": {
+    "x": 1.3061789274215698,
+    "y": -0.0013641417026519775,
+    "z": -2.4514429569244385
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.5,
+     "y": 0.9009994864463806,
+     "z": -0.30000001192092896
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan307",
+   "object_to_hide": [],
+   "instruction": "It's a breezy day, and the curtains are swaying gently with the wind. The faint sound of a radio playing somewhere adds a nostalgic touch. Could you please move close to the trash can and stay nearby? The room smells faintly of fresh-baked cookies, which is delightful."
+  },
+  {
+   "targetObjectType": "Safe",
+   "targetObjectIds": "Safe|-02.18|00.00|+02.58",
+   "target_position": {
+    "x": -2.183271884918213,
+    "y": 6.258487701416016e-07,
+    "z": 2.575989246368408
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.20000004768371582,
+     "y": 0.9009991884231567,
+     "z": 0.8999999761581421
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan308",
+   "object_to_hide": [],
+   "instruction": "The afternoon sun is shining brightly, and the golden rays make the room look lively. There's an old painting hanging on the wall that adds character to the space. Please move to the safe and stay as close as possible. The wooden flooring gives the room a very rustic feel."
+  },
+  {
+   "targetObjectType": "LaundryHamper",
+   "targetObjectIds": "LaundryHamper|+01.83|+00.06|+03.69",
+   "target_position": {
+    "x": 1.8316738605499268,
+    "y": 0.058576494455337524,
+    "z": 3.6893837451934814
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.0,
+     "y": 0.9469271898269653,
+     "z": 1.9000000953674316
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan309",
+   "object_to_hide": [],
+   "instruction": "It's a chilly morning, and the heater is doing a great job of keeping the room cozy. The books on the shelf look neatly organized. Please navigate to the laundry hamper and remain nearby. There's a soft throw pillow on the couch that looks incredibly comfortable."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+00.13|-00.03|-02.15",
+   "target_position": {
+    "x": 0.12801812589168549,
+    "y": -0.030198991298675537,
+    "z": -2.1469838619232178
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.5,
+     "y": 0.9009992480278015,
+     "z": 0.6000000238418579
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan310",
+   "object_to_hide": [],
+   "instruction": "The air smells faintly of pine, probably from the floor cleaner used earlier. The ceiling light is casting a warm glow over the room. Please move toward the trash can and stay nearby. The framed photographs on the wall give the room a personal touch."
+  }
+ ]
+}

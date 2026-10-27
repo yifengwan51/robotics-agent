@@ -1,0 +1,45 @@
+# TEST-split experiments on EB-Navigation (official test set, 5 subsets x 60). S2M config frozen on dev:
+# runs/frozen/s2m_v5_eb. Line format:  MODEL_DIR | MAX_LEN | GPU_UTIL | command
+# Nothing below is tuned on test; ablations/robustness change one frozen component at a time.
+#
+# ---- main model: Qwen3-VL-4B (AWQ) ----
+# 0) RoboTHOR dev v2 (goal instruction fix: 'HousePlant' -> 'Find a house plant.'); tuning split only
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v2 --split dev --per-type 2 --workers 2
+# 0b) RoboTHOR dev v3 (adds vantage fallback instead of spinning in place); tuning split only
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v3 --split dev --per-type 2 --workers 2
+# 1) EB official-prompt baseline (long prompts -> 8k context, 1 renderer)
+models/Qwen3-VL-4B-Instruct-AWQ | 8192 |0.72| ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-4B-Instruct-AWQ --exp eb_official_r1 --workers 1
+# 1b) diagnostics on the official TEST split (numbers reported in the paper): oracle-geometry ceiling (no VLM),
+#     per-frame recognition and verification probes
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner oracle_geo --model none --exp ceiling --workers 2
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python scripts/eval_grounding.py --split test --model Qwen3-VL-4B-Instruct-AWQ --subsets base common_sense complex_instruction visual_appearance
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python scripts/probe_verification.py --split test --model Qwen3-VL-4B-Instruct-AWQ --subsets visual_appearance common_sense complex_instruction
+# 2) S2M, 3 repeats
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r1 --workers 2 --repeat 1
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r2 --workers 2 --repeat 2
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r3 --workers 2 --repeat 3
+# 3) diagnostics on DEV frames (per-frame grounding and verification probes; no episodes)
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python scripts/eval_grounding.py --model Qwen3-VL-4B-Instruct-AWQ --subsets base common_sense complex_instruction visual_appearance
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python scripts/probe_verification.py --model Qwen3-VL-4B-Instruct-AWQ --subsets visual_appearance common_sense complex_instruction
+# 4) robustness: monocular depth (calibrated once on DEV frames) and noisy odometry
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | (curl -s -m 2 -X POST http://127.0.0.1:8010/ >/dev/null 2>&1 || (CUDA_VISIBLE_DEVICES= nohup ~/miniforge3/envs/vlm/bin/python -m embagent.depth_est --serve --device cpu --threads 8 > logs/depth_server.log 2>&1 & sleep 25)); ~/miniforge3/envs/embnav_thor/bin/python scripts/calib_depth.py && ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp depth_est_r1 --workers 2 --depth est
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp odom_noise_r1 --workers 2 --odom-noise 0.05 2.0
+# 5) component ablations (one switch each)
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_negative --workers 2 --s2m '{"use_negative": false}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_fusion --workers 2 --s2m '{"use_fusion": false}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_tiles --workers 2 --s2m '{"use_tiles": false}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_zoom --workers 2 --s2m '{"use_zoom": false}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_scan --workers 2 --s2m '{"use_scan": false}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_exhaust --workers 2 --s2m '{"use_exhaust": false}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_strongest_first --workers 2 --s2m '{"nearest_first": false}'
+# 6) retry renderer-crash episodes of everything above
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | for e in final_r1 final_r2 final_r3 depth_est_r1 odom_noise_r1 abl_no_negative abl_no_fusion abl_no_tiles abl_no_zoom abl_no_scan abl_no_exhaust abl_strongest_first; do x=""; [ $e = depth_est_r1 ] && x="--depth est"; [ $e = odom_noise_r1 ] && x="--odom-noise 0.05 2.0"; ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp $e --workers 1 --retry-errors $x; done
+models/Qwen3-VL-4B-Instruct-AWQ | 8192 |0.72| ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-4B-Instruct-AWQ --exp eb_official_r1 --workers 1 --retry-errors
+#
+# ---- second model family: Qwen2.5-VL-3B (AWQ) ----
+models/Qwen2.5-VL-3B-Instruct-AWQ | 2048 | 0.62 | ~/miniforge3/envs/embnav_thor/bin/python scripts/eval_grounding.py --split test --model Qwen2.5-VL-3B-Instruct-AWQ --subsets base common_sense complex_instruction visual_appearance
+models/Qwen2.5-VL-3B-Instruct-AWQ | 2048 | 0.62 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen2.5-VL-3B-Instruct-AWQ --exp final_r1 --workers 2 --repeat 1
+models/Qwen2.5-VL-3B-Instruct-AWQ | 10240 | 0.66 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen2.5-VL-3B-Instruct-AWQ --exp eb_official_r1 --workers 1
+#
+# ---- RoboTHOR ObjectNav VAL (frozen dev v2 config: runs/frozen/s2m_robothor_v2); full official val, 1800 eps ----
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp final --split val --per-type 00 --workers 2

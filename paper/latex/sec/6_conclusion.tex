@@ -1,0 +1,14 @@
+\section{Limitations and Conclusion}
+\label{sec:conclusion}
+
+\noindent\textbf{Limitations.}
+\ours assumes depth and odometry. We measure what is lost with estimated depth and noisy odometry, but we do not
+remove these assumptions. EB-Navigation ends an episode automatically on success; the exhaust-on-arrival rule uses
+that signal, so we report its ablation and evaluate on RoboTHOR, where the agent must decide to stop.
+Appearance-only goals remain hard because a 4B model's candidate set often misses the target. Single-room scenes
+and same-category look-alikes limit how far the EB-Navigation results generalize.
+
+\noindent\textbf{Conclusion.}
+Small VLMs can recognize what they are asked to find far better than they can act on it. Restricting the VLM to
+per-image semantic questions, and turning its answers into view-diverse 3D evidence handled by geometry and
+optimal search, lets a 4B model on a consumer GPU \TODO{summary of headline result}.

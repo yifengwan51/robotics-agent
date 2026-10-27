@@ -1,0 +1,634 @@
+{
+ "tasks": [
+  {
+   "targetObjectType": "Pot",
+   "targetObjectIds": "Pot|-01.22|+00.90|-02.36",
+   "target_position": {
+    "x": -1.2190020084381104,
+    "y": 0.9008802175521851,
+    "z": -2.355998992919922
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.4000000953674316,
+     "y": 0.900999128818512,
+     "z": -1.2000000476837158
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan1",
+   "object_to_hide": [],
+   "instruction": "Move towards the round metallic object with a silver finish."
+  },
+  {
+   "targetObjectType": "Pot",
+   "targetObjectIds": "Pot|+00.89|+00.90|-01.41",
+   "target_position": {
+    "x": 0.8894879817962646,
+    "y": 0.9031880497932434,
+    "z": -1.412380576133728
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.0,
+     "y": 0.9009992480278015,
+     "z": 1.2999999523162842
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan2",
+   "object_to_hide": [],
+   "instruction": "Approach the circular dark container with a smooth black surface."
+  },
+  {
+   "targetObjectType": "Bread",
+   "targetObjectIds": "Bread|-01.51|+01.38|+00.66",
+   "target_position": {
+    "x": -1.5136305093765259,
+    "y": 1.3809161186218262,
+    "z": 0.6621981263160706
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.5,
+     "y": 1.123205542564392,
+     "z": -2.0999999046325684
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan3",
+   "object_to_hide": [],
+   "instruction": "Head closer to the rectangular yellow object with a soft surface."
+  },
+  {
+   "targetObjectType": "Microwave",
+   "targetObjectIds": "Microwave|-00.37|+01.11|+00.43",
+   "target_position": {
+    "x": -0.36675870418548584,
+    "y": 1.1131449937820435,
+    "z": 0.433275431394577
+   },
+   "agentPose": {
+    "position": {
+     "x": -2.4000000953674316,
+     "y": 0.9009998440742493,
+     "z": 2.1000001430511475
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan4",
+   "object_to_hide": [],
+   "instruction": "Get near the box-shaped item with a shiny black surface and golden details."
+  },
+  {
+   "targetObjectType": "CoffeeMachine",
+   "targetObjectIds": "CoffeeMachine|+00.50|+00.90|-02.13",
+   "target_position": {
+    "x": 0.501907229423523,
+    "y": 0.9000000953674316,
+    "z": -2.1251957416534424
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.100000023841858,
+     "y": 0.9009991884231567,
+     "z": 0.5
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan5",
+   "object_to_hide": [],
+   "instruction": "Move to the tall, compact black device with a smooth finish."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+01.65|00.00|+00.68",
+   "target_position": {
+    "x": 1.6460013389587402,
+    "y": -0.0007670223712921143,
+    "z": 0.6790003180503845
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.100000023841858,
+     "y": 0.9009991884231567,
+     "z": 1.7000000476837158
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan6",
+   "object_to_hide": [],
+   "instruction": "Locate the tall cylindrical container with a matte gray color."
+  },
+  {
+   "targetObjectType": "CoffeeMachine",
+   "targetObjectIds": "CoffeeMachine|-01.11|+00.90|-01.73",
+   "target_position": {
+    "x": -1.1119967699050903,
+    "y": 0.9005778431892395,
+    "z": -1.7269976139068604
+   },
+   "agentPose": {
+    "position": {
+     "x": -2.799999952316284,
+     "y": 0.9009991884231567,
+     "z": 0.7000000476837158
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan7",
+   "object_to_hide": [],
+   "instruction": "Approach the rectangular object with a dark brown finish and smooth texture."
+  },
+  {
+   "targetObjectType": "Bowl",
+   "targetObjectIds": "Bowl|+01.02|+00.90|-00.52",
+   "target_position": {
+    "x": 1.0221045017242432,
+    "y": 0.8909938335418701,
+    "z": -0.5185359120368958
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.5,
+     "y": 0.9009991884231567,
+     "z": 0.5
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan8",
+   "object_to_hide": [],
+   "instruction": "Move towards the rounded metallic object with a shiny silver surface."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|-01.97|-00.03|+01.36",
+   "target_position": {
+    "x": -1.9655803442001343,
+    "y": -0.02942967414855957,
+    "z": 1.3585395812988281
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.699999988079071,
+     "y": 0.9009991884231567,
+     "z": 0.20000000298023224
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan9",
+   "object_to_hide": [],
+   "instruction": "Head to the tall blue container with a recycling symbol on the front."
+  },
+  {
+   "targetObjectType": "Toaster",
+   "targetObjectIds": "Toaster|+00.98|+00.90|+00.33",
+   "target_position": {
+    "x": 0.9840067625045776,
+    "y": 0.9000058174133301,
+    "z": 0.3290005028247833
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.8000000715255737,
+     "y": 0.9009992480278015,
+     "z": 1.2000000476837158
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan10",
+   "object_to_hide": [],
+   "instruction": "Get close to the black rectangular object with two narrow openings at the top."
+  },
+  {
+   "targetObjectType": "Box",
+   "targetObjectIds": "Box|-03.36|+00.19|+06.43",
+   "target_position": {
+    "x": -3.3620107173919678,
+    "y": 0.19336077570915222,
+    "z": 6.426008224487305
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.0999999046325684,
+     "y": 0.9026566743850708,
+     "z": 4.699999809265137
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan201",
+   "object_to_hide": [],
+   "instruction": "Move to the rectangular object with a brown cardboard-like appearance."
+  },
+  {
+   "targetObjectType": "FloorLamp",
+   "targetObjectIds": "FloorLamp|-03.69|00.00|+04.01",
+   "target_position": {
+    "x": -3.6869921684265137,
+    "y": -0.0018846392631530762,
+    "z": 4.013891220092773
+   },
+   "agentPose": {
+    "position": {
+     "x": -3.299999952316284,
+     "y": 0.9010459184646606,
+     "z": 1.5
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan202",
+   "object_to_hide": [],
+   "instruction": "Get near the tall upright object with a slim stand and a rounded shade."
+  },
+  {
+   "targetObjectType": "FloorLamp",
+   "targetObjectIds": "FloorLamp|+01.11|+00.01|+06.81",
+   "target_position": {
+    "x": 1.1119095087051392,
+    "y": 0.007121682167053223,
+    "z": 6.805015563964844
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.100000023841858,
+     "y": 0.9070531129837036,
+     "z": 5.5
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan203",
+   "object_to_hide": [],
+   "instruction": "Get near the tall upright object with a slim stand and a rounded shade."
+  },
+  {
+   "targetObjectType": "Laptop",
+   "targetObjectIds": "Laptop|-00.60|+00.74|+01.31",
+   "target_position": {
+    "x": -0.5949997901916504,
+    "y": 0.7356978058815002,
+    "z": 1.308001160621643
+   },
+   "agentPose": {
+    "position": {
+     "x": -2.4000000953674316,
+     "y": 0.902314305305481,
+     "z": 3.0999999046325684
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan204",
+   "object_to_hide": [],
+   "instruction": "Locate the rectangular item with a smooth black surface on one side and grayish-white on the others."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|-00.26|-00.01|+06.80",
+   "target_position": {
+    "x": -0.25699931383132935,
+    "y": -0.01087065041065216,
+    "z": 6.79974365234375
+   },
+   "agentPose": {
+    "position": {
+     "x": -1.399999976158142,
+     "y": 0.9011250734329224,
+     "z": 4.100000381469727
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan205",
+   "object_to_hide": [],
+   "instruction": "Head closer to the cylindrical container with a bright blue surface."
+  },
+  {
+   "targetObjectType": "Laptop",
+   "targetObjectIds": "Laptop|-01.73|+00.75|-00.70",
+   "target_position": {
+    "x": -1.7249711751937866,
+    "y": 0.7536596059799194,
+    "z": -0.6958543062210083
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.9000000357627869,
+     "y": 0.9009991884231567,
+     "z": -0.10000000149011612
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan206",
+   "object_to_hide": [],
+   "instruction": "Move towards the slim metallic object with a shiny silver finish."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+01.77|00.00|+03.88",
+   "target_position": {
+    "x": 1.767322301864624,
+    "y": -0.001821964979171753,
+    "z": 3.8780102729797363
+   },
+   "agentPose": {
+    "position": {
+     "x": 1.100000023841858,
+     "y": 0.9009992480278015,
+     "z": 1.0
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan207",
+   "object_to_hide": [],
+   "instruction": "Approach the tall green container with a smooth texture."
+  },
+  {
+   "targetObjectType": "Laptop",
+   "targetObjectIds": "Laptop|-02.91|+00.78|-03.09",
+   "target_position": {
+    "x": -2.914997100830078,
+    "y": 0.7804622650146484,
+    "z": -3.0899975299835205
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.699999988079071,
+     "y": 0.9009991884231567,
+     "z": -1.3000000715255737
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan208",
+   "object_to_hide": [],
+   "instruction": "Move towards the slim metallic object with a shiny silver finish."
+  },
+  {
+   "targetObjectType": "Statue",
+   "targetObjectIds": "Statue|-02.02|+00.48|-05.09",
+   "target_position": {
+    "x": -2.0204381942749023,
+    "y": 0.48197001218795776,
+    "z": -5.094831943511963
+   },
+   "agentPose": {
+    "position": {
+     "x": -4.699999809265137,
+     "y": 0.9027014970779419,
+     "z": -4.300000190734863
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan209",
+   "object_to_hide": [],
+   "instruction": "Find the small upright object with a polished golden surface and intricate details."
+  },
+  {
+   "targetObjectType": "DeskLamp",
+   "targetObjectIds": "DeskLamp|-06.77|+00.41|-00.03",
+   "target_position": {
+    "x": -6.766035079956055,
+    "y": 0.4111257791519165,
+    "z": -0.028010711073875427
+   },
+   "agentPose": {
+    "position": {
+     "x": -5.099999904632568,
+     "y": 0.9057542085647583,
+     "z": 2.299999952316284
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan210",
+   "object_to_hide": [],
+   "instruction": "Locate the short metallic item with a golden surface and a round light source."
+  },
+  {
+   "targetObjectType": "Box",
+   "targetObjectIds": "Box|+02.73|+00.20|+00.89",
+   "target_position": {
+    "x": 2.734192371368408,
+    "y": 0.2011203169822693,
+    "z": 0.8900041580200195
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.3999999761581421,
+     "y": 0.910415768623352,
+     "z": -0.5
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan301",
+   "object_to_hide": [],
+   "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open."
+  },
+  {
+   "targetObjectType": "DeskLamp",
+   "targetObjectIds": "DeskLamp|+00.47|+00.67|+01.35",
+   "target_position": {
+    "x": 0.47372305393218994,
+    "y": 0.6693270802497864,
+    "z": 1.3501381874084473
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.20000000298023224,
+     "y": 0.9009991884231567,
+     "z": -1.2000000476837158
+    },
+    "rotation": 0.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan302",
+   "object_to_hide": [],
+   "instruction": "Move near to that object who has a conical cover supported by a rod on a rectangular base, where warm light emits"
+  },
+  {
+   "targetObjectType": "Book",
+   "targetObjectIds": "Book|+00.34|+00.72|-02.65",
+   "target_position": {
+    "x": 0.3389998972415924,
+    "y": 0.7234514355659485,
+    "z": -2.6500015258789062
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.6000000238418579,
+     "y": 0.9010001420974731,
+     "z": -0.30000001192092896
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan303",
+   "object_to_hide": [],
+   "instruction": "Head closer to the rectangular object with a cover in white and brown tones."
+  },
+  {
+   "targetObjectType": "CellPhone",
+   "targetObjectIds": "CellPhone|-00.78|+00.99|-01.25",
+   "target_position": {
+    "x": -0.780676007270813,
+    "y": 0.9924221634864807,
+    "z": -1.2523939609527588
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.8999999761581421,
+     "y": 0.9069997072219849,
+     "z": 0.6000000238418579
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan304",
+   "object_to_hide": [],
+   "instruction": "Move towards the slim white rectangular device with smooth edges."
+  },
+  {
+   "targetObjectType": "DeskLamp",
+   "targetObjectIds": "DeskLamp|-00.40|+00.66|-01.67",
+   "target_position": {
+    "x": -0.39597460627555847,
+    "y": 0.6648674011230469,
+    "z": -1.666042447090149
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.6000000238418579,
+     "y": 0.9009991884231567,
+     "z": 1.2000000476837158
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan305",
+   "object_to_hide": [],
+   "instruction": "Get near the cylindrical object with a plain white surface."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+03.35|00.00|-00.03",
+   "target_position": {
+    "x": 3.345407247543335,
+    "y": -0.000676572322845459,
+    "z": -0.02681753784418106
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.699999988079071,
+     "y": 0.9009991884231567,
+     "z": -1.2000000476837158
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan306",
+   "object_to_hide": [],
+   "instruction": "Approach the tall, cylindrical container with a clean white finish."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+01.31|00.00|-02.45",
+   "target_position": {
+    "x": 1.3061789274215698,
+    "y": -0.0013641417026519775,
+    "z": -2.4514429569244385
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.5,
+     "y": 0.9009994864463806,
+     "z": -0.30000001192092896
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan307",
+   "object_to_hide": [],
+   "instruction": "Approach the tall green container with a smooth texture."
+  },
+  {
+   "targetObjectType": "Safe",
+   "targetObjectIds": "Safe|-02.18|00.00|+02.58",
+   "target_position": {
+    "x": -2.183271884918213,
+    "y": 6.258487701416016e-07,
+    "z": 2.575989246368408
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.20000004768371582,
+     "y": 0.9009991884231567,
+     "z": 0.8999999761581421
+    },
+    "rotation": 270.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan308",
+   "object_to_hide": [],
+   "instruction": "Locate the box-like object with a smooth white surface and sharp edges."
+  },
+  {
+   "targetObjectType": "LaundryHamper",
+   "targetObjectIds": "LaundryHamper|+01.83|+00.06|+03.69",
+   "target_position": {
+    "x": 1.8316738605499268,
+    "y": 0.058576494455337524,
+    "z": 3.6893837451934814
+   },
+   "agentPose": {
+    "position": {
+     "x": 0.0,
+     "y": 0.9469271898269653,
+     "z": 1.9000000953674316
+    },
+    "rotation": 90.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan309",
+   "object_to_hide": [],
+   "instruction": "Find the tall cylindrical container with a brown surface and woven texture."
+  },
+  {
+   "targetObjectType": "GarbageCan",
+   "targetObjectIds": "GarbageCan|+00.13|-00.03|-02.15",
+   "target_position": {
+    "x": 0.12801812589168549,
+    "y": -0.030198991298675537,
+    "z": -2.1469838619232178
+   },
+   "agentPose": {
+    "position": {
+     "x": -0.5,
+     "y": 0.9009992480278015,
+     "z": 0.6000000238418579
+    },
+    "rotation": 180.0,
+    "horizon": 0.0
+   },
+   "scene": "FloorPlan310",
+   "object_to_hide": [],
+   "instruction": "Move towards the small black square object with a smooth matte finish."
+  }
+ ]
+}

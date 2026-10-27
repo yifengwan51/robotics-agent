@@ -1,0 +1,303 @@
+{
+ "vlms": [
+  {
+   "name": "Qwen3.5-4B (Qwen/Qwen3.5-4B) -- PRIMARY",
+   "params": "4.66B total (BF16 safetensors); natively multimodal; hybrid 3:1 Gated-DeltaNet linear attn + full attn, 32 layers (8 full-attn, 4 KV heads, head_dim 256); 24-layer ViT; Apache-2.0; released 2026-02-27; thinking on by default (enable_thinking=False for instruct mode).",
+   "embodied_evidence": "Self-reported card: ERQA 54.0, EmbSpatialBench 81.3, RefSpatial 54.6, MMMU 77.6. Third-party LightNav-0 (2608.30935): ERQA 40.8, EmbSpatial 76.8, RefSpatial 54.6, RoboSpatial-VQA 59.7, Where2Place 61.3 (avg 60.8 vs Qwen3-VL-4B 63.1). LocalNav (2606.27871): zero-shot OVON ObjectNav SR 21 -> 47-49 after SFT(+RL). No EmbodiedBench number found.",
+   "vram_4bit": "GGUF Q4_K_M 2.74 GB + mmproj-F16 0.67 GB; AWQ-4bit (compressed-tensors, vision/embeds kept BF16) 4.04 GB file. KV (8 full-attn layers only) ~32 KiB/token BF16 => ~0.25 GiB @8k, plus fixed GDN state ~24 MiB/seq. 8-bit: Q8_0 4.48 GB; FP8 RedHatAI 8.03 GB file (does not fit).",
+   "quant_checkpoints": "unsloth/Qwen3.5-4B-GGUF, bartowski/Qwen_Qwen3.5-4B-GGUF, lmstudio-community/Qwen3.5-4B-GGUF; cyankiwi/Qwen3.5-4B-AWQ-4bit, QuantTrio/Qwen3.5-4B-AWQ (6.07 GB); RedHatAI/Qwen3.5-4B-FP8-dynamic, surogate/Qwen3.5-4B-FP8; AxionML/Qwen3.5-4B-NVFP4. All verified via HF API, gated=false. Also mirrored on modelscope.cn.",
+   "throughput_note": "Estimate (unmeasured): ~70-90 tok/s decode, ~0.3 s TTFT per 640x480 image on vLLM AWQ, from measured Qwen2.5-VL-3B-AWQ 142 tok/s scaled by per-token weight bytes (~3.2 GB vs ~1.95 GB incl. BF16 lm_head). GDN kernels may be slower; confirm with scripts/vlm_smoke.py.",
+   "sources": [
+    "https://huggingface.co/Qwen/Qwen3.5-4B",
+    "https://arxiv.org/abs/2608.30935",
+    "https://arxiv.org/abs/2606.27871",
+    "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF",
+    "https://huggingface.co/cyankiwi/Qwen3.5-4B-AWQ-4bit"
+   ]
+  },
+  {
+   "name": "Qwen3-VL-8B-Instruct (Qwen/Qwen3-VL-8B-Instruct) -- strongest agent-level evidence; offline cross-check only (does not fit vLLM in 8 GB)",
+   "params": "8.77B dense; 36 layers, 8 KV heads, head_dim 128; 27-layer ViT; Apache-2.0; released 2025-10-11; Instruct (non-thinking) and Thinking variants.",
+   "embodied_evidence": "EmbodiSkill (2605.10332), no-memory baseline: EB-Habitat 24.0, EB-Navigation 45.0 (vs leaderboard Qwen2.5-VL-7B 14.3 / 20.3, InternVL3-8B 24.3 / 29.3). MolmoAct2 (2605.02881): VSI 63.3, ERQA 41.5, EmbSpatial 78.2. Embodied-R1.5 (2606.11324): ERQA 41.8, VSI 55.1, Where2Place 64.0. Ouroboros-Spatial: VSI 56.5.",
+   "vram_4bit": "GGUF Q4_K_M 5.03 GB + mmproj Q8_0 0.75 GB; KV 144 KiB/token BF16 => ~1.1 GiB @8k (0.56 GiB q8_0 KV). Total ~6.9 GB at 8k: does NOT fit next to a simulator in ~6.8 GB; OK at 4k with q8 KV and no sim. AWQ-4bit 7.55 GB, FP8 10.59 GB: do not fit in vLLM.",
+   "quant_checkpoints": "Qwen/Qwen3-VL-8B-Instruct-GGUF (official; Q4_K_M, Q8_0, mmproj F16/Q8_0); Qwen/Qwen3-VL-8B-Instruct-FP8 (official); cyankiwi/Qwen3-VL-8B-Instruct-AWQ-4bit; sitatech/Qwen3-VL-8B-Instruct-GPTQ-Int4 (7.26 GB). Verified on HF, gated=false.",
+   "throughput_note": "Unmeasured here. Reference: Ollama Q4 qwen3:8b text decode 61.7 tok/s on RTX 5060 8GB (DatabaseMart, Ollama 0.9.5); expect a similar ~50-60 tok/s for the LM part plus image-encode time.",
+   "sources": [
+    "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct",
+    "https://arxiv.org/abs/2511.21631",
+    "https://arxiv.org/abs/2605.10332",
+    "https://arxiv.org/abs/2605.02881",
+    "https://arxiv.org/abs/2606.11324",
+    "https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct-GGUF"
+   ]
+  },
+  {
+   "name": "Qwen3-VL-4B-Instruct (Qwen/Qwen3-VL-4B-Instruct) -- BACKUP",
+   "params": "4.44B dense; 36 layers, 8 KV heads, head_dim 128, tied embeddings; 24-layer ViT; Apache-2.0; 2025-10-11.",
+   "embodied_evidence": "HY-Embodied-0.5 (2604.07430): ERQA 47.3, EmbSpatial 80.7, VSI 55.2, Where2Place 59.0, RoboSpatial-Home 63.2. MolmoAct2: VSI 61.4, ERQA 39.5, EmbSpatial 78.1. LightNav-0: avg 63.1 over 8 ER benchmarks (beats Qwen3.5-4B 60.8). Ouroboros: VSI 52.8.",
+   "vram_4bit": "GGUF Q4_K_M 2.50 GB + mmproj Q8_0 0.45 GB; AWQ-4bit 4.43 GB; FP8 (official) 6.02 GB (too big with KV). KV 144 KiB/token BF16 => ~1.1 GiB @8k (0.56 with FP8/q8 KV).",
+   "quant_checkpoints": "Qwen/Qwen3-VL-4B-Instruct-GGUF (official), unsloth/Qwen3-VL-4B-Instruct-GGUF; cyankiwi/Qwen3-VL-4B-Instruct-AWQ-4bit; Qwen/Qwen3-VL-4B-Instruct-FP8 (official). Verified on HF, gated=false.",
+   "throughput_note": "Estimate (unmeasured): ~80-100 tok/s on vLLM AWQ (tied embeddings, ~2.6 GB read/token); same method as Qwen3.5-4B. KV is 4.5x larger per token than Qwen3.5-4B, so fewer parallel samples fit.",
+   "sources": [
+    "https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct",
+    "https://arxiv.org/abs/2604.07430",
+    "https://arxiv.org/abs/2605.02881",
+    "https://arxiv.org/abs/2608.30935"
+   ]
+  },
+  {
+   "name": "Qwen3.5-9B (Qwen/Qwen3.5-9B)",
+   "params": "9.65B total; same hybrid GDN design as 4B, hidden 4096, untied 248K-vocab embeddings; Apache-2.0; 2026-02-27.",
+   "embodied_evidence": "Self-reported: ERQA 55.5, EmbSpatialBench 83.0, RefSpatial 58.5, MMMU 78.4, VideoMME 84.5. Base of RynnBrain1.1-9B and MiMo-V2.6-Distill-Qwen-9B. No third-party EmbodiedBench number found.",
+   "vram_4bit": "GGUF Q4_K_M 5.68 GB / IQ4_XS 5.17 GB + mmproj 0.92 GB; KV ~32 KiB/token => ~0.25 GiB @8k. ~6.4-6.9 GB total: only fits with simulator off or on CPU. AWQ-4bit files 9.07 GB (cyankiwi) / 12.38 GB (QuantTrio): do not fit.",
+   "quant_checkpoints": "unsloth/Qwen3.5-9B-GGUF, bartowski/Qwen_Qwen3.5-9B-GGUF; cyankiwi/Qwen3.5-9B-AWQ-4bit; RedHatAI/Qwen3.5-9B-quantized.w4a16; RedHatAI/Qwen3.5-9B-FP8-dynamic; AxionML/Qwen3.5-9B-NVFP4. Verified on HF.",
+   "throughput_note": "Unmeasured; decode should be about 2x slower than 4B (weights ~2x).",
+   "sources": [
+    "https://huggingface.co/Qwen/Qwen3.5-9B",
+    "https://huggingface.co/unsloth/Qwen3.5-9B-GGUF"
+   ]
+  },
+  {
+   "name": "InternVL3.5-8B / 4B (OpenGVLab)",
+   "params": "8.53B / 4.73B (Qwen3 LM + InternViT); Apache-2.0; 2025-08-25.",
+   "embodied_evidence": "MolmoAct2: 8B VSI 56.4, ERQA 41.0, EmbSpatial 74.7; 4B VSI 56.5, ERQA 37.0, EmbSpatial 72.0 (both below Qwen3-VL same size). Embodied-R1.5: 8B Where2Place 34.8 vs Qwen3-VL-8B 64.0. EmbodiedBench leaderboard has only InternVL3-8B: ALFRED 10.3, Habitat 24.3, Nav 29.3, Mani 11.5.",
+   "vram_4bit": "8B AWQ-4bit / GGUF Q4_K_M ~5-5.5 GB est. (unverified sizes); KV like Qwen3 8B (~144 KiB/token).",
+   "quant_checkpoints": "cyankiwi/InternVL3_5-8B-AWQ-4bit, bartowski/OpenGVLab_InternVL3_5-8B-GGUF, hsmin92/internvl35-4b-awq-w4a16-g128 (exist on HF; not size-checked).",
+   "throughput_note": "Not measured.",
+   "sources": [
+    "https://huggingface.co/OpenGVLab/InternVL3_5-8B",
+    "https://arxiv.org/abs/2605.02881",
+    "https://arxiv.org/abs/2606.11324",
+    "https://embodiedbench.github.io/"
+   ]
+  },
+  {
+   "name": "Gemma 4 E4B-it / E2B-it (google)",
+   "params": "E4B: 4.5B effective, 8.0B with per-layer embeddings; E2B: 2.3B eff / 5.1B; ~150M vision encoder; 512-token sliding window; Apache-2.0; 2026-03-02.",
+   "embodied_evidence": "No embodied numbers found for Gemma 4. Card: E4B MMMU-Pro 52.6 (Qwen3.5-4B 66.3). EmbodiedBench only lists gemma-3-12b-it (ALFRED 25.7, Habitat 23.0, Nav 34.0, Mani 20.6) and gemma-3-27b-it.",
+   "vram_4bit": "google/gemma-4-E4B-it-qat-q4_0-gguf 5.15 GB + mmproj 0.99 GB (large for its quality); w4a16-ct 11.5 GB file.",
+   "quant_checkpoints": "google/gemma-4-E4B-it-qat-q4_0-gguf, google/gemma-4-E4B-it-qat-w4a16-ct, google/gemma-4-E2B-it-qat-q4_0-gguf (official, verified).",
+   "throughput_note": "Not measured. Use only as a cross-family robustness backbone.",
+   "sources": [
+    "https://huggingface.co/google/gemma-4-E4B-it",
+    "https://embodiedbench.github.io/"
+   ]
+  },
+  {
+   "name": "MiniCPM-V 4.6 (1.3B) / 4.7-1B (openbmb)",
+   "params": "4.6: 1.30B; 4.7-1B: 1.55B (released 2026-10-06); Apache-2.0.",
+   "embodied_evidence": "No embodied benchmarks on cards. 4.6 card claims Qwen3.5-2B-level on OpenCompass, RefCOCO, HallusionBench, OCRBench. ERQA-Plus (2606.17639): older MiniCPM-V-4.5-8B 79.4 MCQ vs Qwen3-VL-8B 81.9.",
+   "vram_4bit": "4.6 GGUF Q4_K_M 0.53 GB + mmproj f16 1.11 GB; AWQ 1.87 GB. Fits next to any simulator.",
+   "quant_checkpoints": "openbmb/MiniCPM-V-4.6-gguf, openbmb/MiniCPM-V-4.6-AWQ, openbmb/MiniCPM-V-4.7-1B-gguf, -AWQ, -GPTQ (official, verified).",
+   "throughput_note": "Not measured; good candidate for cheap verifier/critic role.",
+   "sources": [
+    "https://huggingface.co/openbmb/MiniCPM-V-4.6",
+    "https://huggingface.co/openbmb/MiniCPM-V-4.7-1B",
+    "https://arxiv.org/abs/2606.17639"
+   ]
+  },
+  {
+   "name": "RoboBrain 2.5-4B / 8B (BAAI) [embodied-tuned]",
+   "params": "4.83B and 8.77B, Qwen3-VL architecture; Apache-2.0; 4B released 2026-02-28. 8B-NV repo is gated='auto' (HF login + accept): avoid.",
+   "embodied_evidence": "RoboBrain2.5 report (2601.14352): 8B-NV CV-Bench 94.58, RoboSpatial 73.03, RefSpatial 60.50, EmbSpatial 75.58 vs Qwen3-VL-8B 92.89/66.90/54.20/78.50. HY-Embodied-0.5: 4B ERQA 43.3, VSI 41.7, Where2Place 65.0 (Qwen3-VL-4B 47.3/55.2/59.0).",
+   "vram_4bit": "4B GGUF Q4_K_M 2.72 GB + mmproj Q8_0 0.45 GB (community mradermacher).",
+   "quant_checkpoints": "mradermacher/RoboBrain2.5-4B-GGUF, mradermacher/RoboBrain2.5-8B-NV-GGUF (community).",
+   "throughput_note": "Same as Qwen3-VL-4B/8B.",
+   "sources": [
+    "https://huggingface.co/BAAI/RoboBrain2.5-4B",
+    "https://arxiv.org/abs/2601.14352",
+    "https://arxiv.org/abs/2604.07430"
+   ]
+  },
+  {
+   "name": "RynnBrain / RynnBrain 1.1 (Alibaba-DAMO-Academy) [embodied-tuned]",
+   "params": "v1: 2B/4B/8B on Qwen3-VL, plus Nav-8B, Plan-8B, CoP-8B; v1.1 (2026-07-13): 2B (2.21B) and 9B (9.41B) on Qwen3.5. Apache-2.0, ungated.",
+   "embodied_evidence": "RynnBrain report (2602.14979) Table 3: 8B VSI 71.0, ERQA 46.8, RoboSpatial 73.1 vs Qwen3-VL-8B 60.3/44.8/58.2; 2B VSI 70.5. RynnBrain-Nav-8B: R2R val-unseen SR 58.6 vs StreamVLN 56.9 (VLN-CE needs MP3D, so not reproducible under our license rule).",
+   "vram_4bit": "8B ~= Qwen3-VL-8B; 1.1-2B small; community GGUFs exist (mradermacher/RynnBrain-8B-GGUF, prithivMLmods/...RynnBrain1.1-2B-GGUF).",
+   "quant_checkpoints": "mradermacher/RynnBrain-Nav-8B-GGUF, mradermacher/RynnBrain-Plan-8B-GGUF, mradermacher/RynnBrain-2B-GGUF (community, exist).",
+   "throughput_note": "Same as base models.",
+   "sources": [
+    "https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain1.1-9B",
+    "https://huggingface.co/Alibaba-DAMO-Academy/RynnBrain-Nav-8B",
+    "https://arxiv.org/abs/2602.14979"
+   ]
+  },
+  {
+   "name": "Embodied-R1.5 (IffYuan) [embodied-tuned]",
+   "params": "8.77B, fine-tuned from Qwen3-VL-8B-Instruct; Apache-2.0; 2026-06-07. Outputs <answer> tags; points/boxes in [0,1000].",
+   "embodied_evidence": "Paper (2606.11324): planning avg 65.3 vs Qwen3-VL-8B 54.2; pointing avg 72.8 vs 59.2; cognition avg 70.2 vs 67.0 (ERQA 46.0 vs 41.8, VSI 56.1 vs 55.1).",
+   "vram_4bit": "No GGUF/AWQ found; quantize yourself (same arch as Qwen3-VL-8B).",
+   "quant_checkpoints": "None found on HF (searched 'Embodied-R1.5-GGUF').",
+   "throughput_note": "Same as Qwen3-VL-8B.",
+   "sources": [
+    "https://huggingface.co/IffYuan/Embodied-R1.5",
+    "https://arxiv.org/abs/2606.11324"
+   ]
+  },
+  {
+   "name": "MiMo-Embodied-7B (XiaomiMiMo) [embodied-tuned]",
+   "params": "8.31B, Qwen2.5-VL architecture; MIT; 2025-11-19.",
+   "embodied_evidence": "Embodied-R1.5 table: ERQA 46.8, EmbSpatial 76.2, VSI 48.5, RoboVQA 62.0; RynnBrain table: VSI 48.5, RoboSpatial 61.8.",
+   "vram_4bit": "Qwen2.5-VL-7B-class (~5 GB Q4 est.).",
+   "quant_checkpoints": "Not checked in detail (unverified).",
+   "throughput_note": "Not measured.",
+   "sources": [
+    "https://huggingface.co/XiaomiMiMo/MiMo-Embodied-7B",
+    "https://arxiv.org/abs/2511.16518"
+   ]
+  },
+  {
+   "name": "Cosmos-Reason2-2B / 8B (nvidia) [embodied-tuned]",
+   "params": "2.44B / 8.77B on Qwen3-VL; NVIDIA license ('other'); HF gated='auto' (login + accept) -> violates no-registration preference for the model stack.",
+   "embodied_evidence": "RynnBrain table (their reproduction): 8B VSI 53.7, ERQA 46.0, RoboSpatial 59.0 (below RynnBrain-8B and roughly Qwen3-VL-8B level).",
+   "vram_4bit": "Community GGUFs (apolo13x, mradermacher) exist.",
+   "quant_checkpoints": "apolo13x/Cosmos-Reason2-2B-GGUF, mradermacher/Cosmos-Reason2-8B-GGUF (community).",
+   "throughput_note": "Not measured.",
+   "sources": [
+    "https://huggingface.co/nvidia/Cosmos-Reason2-8B",
+    "https://arxiv.org/abs/2602.14979"
+   ]
+  },
+  {
+   "name": "Molmo2-ER (allenai) [embodied-tuned]",
+   "params": "4.85B (Qwen3-4B + SigLIP2), stored F32 (19 GB files); Apache-2.0; 2026-05-04. Needs allenai/molmo2 code.",
+   "embodied_evidence": "MolmoAct2 (2605.02881): avg 63.8 over 13 ER benchmarks vs Qwen3-VL-8B 61.0; VSI 74.5, ERQA 46.8, EmbSpatial 78.8, Point-Bench 77.3.",
+   "vram_4bit": "No quantized checkpoint found; must quantize yourself; vLLM/llama.cpp support unverified.",
+   "quant_checkpoints": "None found.",
+   "throughput_note": "Not measured.",
+   "sources": [
+    "https://huggingface.co/allenai/Molmo2-ER",
+    "https://arxiv.org/abs/2605.02881"
+   ]
+  },
+  {
+   "name": "Qwen2.5-VL-7B / 3B (legacy baseline)",
+   "params": "8.29B / 3.75B; 2025-01.",
+   "embodied_evidence": "EmbodiedBench leaderboard 7B: ALFRED 4.7, Habitat 14.3, Nav 20.3, Mani 9.6; ERA paper: 3B scores 0 on EB-ALFRED and EB-Manipulation. Ouroboros: VSI 31.4 (7B) / 29.0 (3B). Clearly superseded.",
+   "vram_4bit": "7B Q4 ~4.7 GB + mmproj (est.).",
+   "quant_checkpoints": "Qwen/Qwen2.5-VL-7B-Instruct-AWQ, Qwen/Qwen2.5-VL-3B-Instruct-AWQ (official, exist).",
+   "throughput_note": "Use only as a weak baseline for comparability with older papers (ERA, RL4VLM, VAGEN).",
+   "sources": [
+    "https://embodiedbench.github.io/",
+    "https://arxiv.org/abs/2510.12693",
+    "https://arxiv.org/abs/2606.11719"
+   ]
+  },
+  {
+   "name": "Not recommended: GLM-4.1V-9B-Thinking / GLM-4.6V-Flash, Phi-4-multimodal, SmolVLM2, LLaVA-OneVision-1.5, Kimi-VL-A3B",
+   "params": "GLM-4.1V-9B 10.29B, GLM-4.6V-Flash 10.29B; Phi-4-multimodal 5.57B; SmolVLM2-2.2B 2.25B; LLaVA-OV-1.5 4.74B/8.53B; Kimi-VL-A3B 16.41B total (MoE).",
+   "embodied_evidence": "No embodied numbers found for these in late-2026 comparisons, except MolmoAct2: LLaVA-OV-7B (older OV) VSI 31.2, ERQA 39.8. Kimi-VL 16B total weights do not fit 8 GB; GLM 10B is borderline; SmolVLM2/Phi-4-mm are weaker generalists (unverified on embodied tasks).",
+   "vram_4bit": "Kimi-VL-A3B ~9 GB at 4-bit (does not fit); GLM 10B ~6 GB at 4-bit (tight).",
+   "quant_checkpoints": "Not checked in detail.",
+   "throughput_note": "Skip.",
+   "sources": [
+    "https://huggingface.co/zai-org/GLM-4.6V-Flash",
+    "https://huggingface.co/moonshotai/Kimi-VL-A3B-Instruct",
+    "https://huggingface.co/microsoft/Phi-4-multimodal-instruct",
+    "https://arxiv.org/abs/2605.02881"
+   ]
+  }
+ ],
+ "serving": [
+  {
+   "name": "vLLM 0.32.0 (PyPI, released 2026-10-18)",
+   "sm120_status": "Wheel vllm-0.32.0-cp38-abi3-manylinux_2_28_x86_64 pins torch==2.13.0, which pulls CUDA 13.0.3 wheels; verified here: conda env 'vlm' has torch 2.13.0+cu130 with sm_120 in arch list, and vLLM 0.32.0 served Qwen2.5-VL-3B-AWQ on this RTX 5060 (Marlin AWQ, FlashAttention 2, CUDA graphs). Driver 580.126.09 meets CUDA 13's R580 minimum. Qwen3_5ForConditionalGeneration is in the 0.32 model registry.",
+   "ubuntu2004": "OK without sudo: manylinux_2_28 needs glibc>=2.28 (host 2.31). Needs Python>=3.11 -> conda-forge python 3.12 env 'vlm' (exists). Docker path blocked: no nvidia-container-runtime installed (Runtimes: runc only).",
+   "structured_output": "response_format json_schema / guided decoding via xgrammar 0.2.8 and llguidance (deps of 0.32.0); OpenAI-compatible /v1/chat/completions with logprobs + top_logprobs.",
+   "batching": "Continuous batching + PagedAttention; n>1 sampling shares prefix (prompt/image encoded once); prefix caching (experimental 'align' mode for Mamba/GDN hybrids per vLLM Qwen3.5 recipe).",
+   "install": "conda create -n vlm -c conda-forge python=3.12 pip; ~/miniforge3/bin/uv pip install --python ~/miniforge3/envs/vlm/bin/python --index-url https://mirrors.aliyun.com/pypi/simple/ vllm==0.32.0 openai pillow",
+   "verdict": "CHOOSE. Only engine verified end-to-end on this box (sm_120 + glibc 2.31, no sudo). Features verified: OpenAI API, json_schema, logprobs, n=8. Use AWQ 4-bit 4B models; 8B AWQ (7.55 GB) does not fit."
+  },
+  {
+   "name": "llama.cpp (ggml-org, build b11724)",
+   "sm120_status": "Prebuilt llama-b11724-bin-ubuntu-cuda-13.4-x64 and -cuda-12.8-x64 tarballs exist; CUDA sm_120 itself is supported by CUDA 12.8+/13.x builds.",
+   "ubuntu2004": "Prebuilt Ubuntu binaries FAIL on 20.04 (tested): need libssl.so.3, GLIBC_2.38, GLIBCXX_3.4.30 (host has glibc 2.31, GLIBCXX_3.4.28). Requires building from source with a newer toolchain (conda-forge gcc + cuda-nvcc + cmake, no sudo) -- not tested here.",
+   "structured_output": "json_schema / GBNF grammar on /completion and response_format json_schema on /v1/chat/completions; n_probs (top-N probs) on /completion; chat_template_kwargs enable_thinking supported.",
+   "batching": "-np N parallel slots with continuous batching; n_cmpl for multiple completions on /completion; multimodal via mtmd (--mmproj).",
+   "install": "git clone https://github.com/ggml-org/llama.cpp && cmake -B build -DGGML_CUDA=ON -DCMAKE_CUDA_ARCHITECTURES=120 && cmake --build build -j  (needs conda-forge cmake, gcc>=11, cuda-nvcc 12.8+; untested on this box)",
+   "verdict": "Best memory efficiency (GGUF also quantizes embeddings/lm_head; Q8_0 mmproj) and the only way to run an 8B VLM in 8 GB, but not plug-and-play on Ubuntu 20.04."
+  },
+  {
+   "name": "Ollama v0.40.6",
+   "sm120_status": "Linux amd64 tarball (ollama-linux-amd64.tar.zst, 1.44 GB) bundles CUDA 12.8 and 13.0 runners (Dockerfile); RTX 5060 benchmarked by DatabaseMart with Ollama 0.9.5 (qwen3:4b 89.6 tok/s, qwen3:8b 61.7 tok/s).",
+   "ubuntu2004": "Built on AlmaLinux 8 (glibc 2.28) so should run on 20.04 (not tested). No sudo: extract tar.zst into ~/opt/ollama (needs a zstd decoder; zstd binary not installed -> use python 'zstandard' module) and run 'OLLAMA_MODELS=~/models/ollama ~/opt/ollama/bin/ollama serve'. qwen3.5 (0.8B-9B, vision) in official library.",
+   "structured_output": "format=JSON schema on native API and OpenAI endpoint. Native API has logprobs/top_logprobs; OpenAI /v1/chat/completions drops logprobs (issue #16117, opened ~May 2026; fix status unverified).",
+   "batching": "OLLAMA_NUM_PARALLEL for concurrent requests; no n>1 per request.",
+   "install": "curl -L -o ~/opt/ollama.tar.zst https://github.com/ollama/ollama/releases/download/v0.40.6/ollama-linux-amd64.tar.zst ; python -m zstandard ... | tar x -C ~/opt/ollama",
+   "verdict": "Easiest GGUF fallback for demos; weaker for research sampling (no n>1, limited logprobs on OpenAI API)."
+  },
+  {
+   "name": "SGLang 0.5.22",
+   "sm120_status": "Requires torch 2.14.1, flashinfer[cu13] 0.7.1, cuda-python>=13 (PyPI metadata). sm_120 kernel coverage not verified.",
+   "ubuntu2004": "BLOCKED: wheels are manylinux_2_34 (glibc>=2.34); host glibc 2.31. Docker GPU passthrough unavailable (no nvidia runtime, needs sudo to install).",
+   "structured_output": "xgrammar/llguidance/outlines (deps).",
+   "batching": "RadixAttention prefix caching, n>1.",
+   "install": "Not installable on this host without sudo.",
+   "verdict": "Reject."
+  },
+  {
+   "name": "LMDeploy 0.18.0",
+   "sm120_status": "PyPI wheels built against CUDA 12.8 since v0.13.0 'including GeForce RTX 50 series' (README).",
+   "ubuntu2004": "manylinux_2_28 wheels (glibc OK); torch<=2.12.1.",
+   "structured_output": "xgrammar dependency (guided decoding supported).",
+   "batching": "Continuous batching.",
+   "install": "pip install lmdeploy==0.18.0 (py3.10-3.14)",
+   "verdict": "Reject for this stack: supported-models table says TurboMind does not support the Qwen3.5 vision encoder, and PyTorch engine lists Qwen3-VL/Qwen3.5 with W4A16 = No (BF16 only, too big for 8 GB). Fine for InternVL3.5 W4A16."
+  }
+ ],
+ "recommendation": "PRIMARY: Qwen3.5-4B (Apache-2.0, 2026-02) as cyankiwi/Qwen3.5-4B-AWQ-4bit on vLLM 0.32.0, non-thinking for per-step actions, thinking optional for replanning. Why: best small-model card scores (ERQA 54.0, EmbSpatial 81.3, MMMU 77.6); hybrid Gated-DeltaNet attention makes KV ~32 KiB/token (4.5x less than Qwen3-VL-4B), so n>1 self-consistency and long histories fit next to AI2-THOR; it is the base of 2026 embodied fine-tunes (RynnBrain1.1, Intern-Decision, Fara1.5, LocalNav), giving reviewers recognizable baselines. Caveat: independent ER evals (LightNav-0) put it slightly below Qwen3-VL-4B (60.8 vs 63.1 avg), and no EmbodiedBench number exists yet; measure both in week 1. BACKUP: Qwen3-VL-4B-Instruct (cyankiwi/Qwen3-VL-4B-Instruct-AWQ-4bit), same vLLM stack, standard attention (no GDN/mamba-cache edge cases), strong third-party spatial scores (HY-Embodied: ERQA 47.3, VSI 55.2). Report gains on both backbones (+Qwen3-VL-8B GGUF offline, simulator stopped) to show the method is backbone-agnostic. STACK: vLLM 0.32.0 in the existing conda env 'vlm' (python 3.12, torch 2.13.0+cu130), bound to 127.0.0.1 with --gpu-memory-utilization ~0.70, --max-model-len 8192, max_pixels 409600, VLLM_USE_FLASHINFER_SAMPLER=0; use response_format json_schema for actions (fixes the JSON-decode failures seen in the 3B smoke run), logprobs for calibrated choice scores, n>1 for voting. Rejected: SGLang (manylinux_2_34 wheels, glibc 2.31 host); LMDeploy (no Qwen3.5 vision in TurboMind, BF16-only Qwen3-VL/3.5 in PyTorch engine); llama.cpp prebuilt (GLIBC 2.38) unless built from source; Ollama only for demos (no n>1, OpenAI endpoint drops logprobs). No separate text LLM: reuse the VLM text-only (Qwen3-VL-4B/8B text scores match or beat Qwen3-4B/8B).",
+ "install_commands": [
+  "# 0) Env already exists (conda env 'vlm', built by robotics-agent/scripts/setup_env2.sh). To rebuild from scratch without sudo:",
+  "source ~/miniforge3/etc/profile.d/conda.sh && conda create -y -n vlm -c conda-forge python=3.12 pip && conda activate vlm",
+  "UV_HTTP_TIMEOUT=600 ~/miniforge3/bin/uv pip install --python \"$(command -v python)\" --index-url https://mirrors.aliyun.com/pypi/simple/ 'vllm==0.32.0' openai pillow   # or https://mirror.nju.edu.cn/pypi/web/simple/",
+  "python -c \"import torch,vllm;print(vllm.__version__,torch.__version__,torch.version.cuda,torch.cuda.get_arch_list())\"   # expect 0.32.0 2.13.0+cu130 13.0 [... 'sm_120']",
+  "# 1) Models (ungated). ModelScope is ~10x faster than HF from this network; HF mirror fallback shown second.",
+  "python /home/ht/robotics-agent/scripts/modelscope_download.py cyankiwi/Qwen3.5-4B-AWQ-4bit ~/models/Qwen3.5-4B-AWQ-4bit   # already downloaded + sha256-verified",
+  "python /home/ht/robotics-agent/scripts/modelscope_download.py cyankiwi/Qwen3-VL-4B-Instruct-AWQ-4bit ~/models/Qwen3-VL-4B-Instruct-AWQ-4bit   # already downloaded + sha256-verified",
+  "HF_ENDPOINT=https://hf-mirror.com ~/miniforge3/envs/vlm/bin/hf download cyankiwi/Qwen3.5-4B-AWQ-4bit --local-dir ~/models/Qwen3.5-4B-AWQ-4bit",
+  "# 2) Serve PRIMARY (stop any other vLLM server on the GPU first; loopback only, no auth -> add --api-key if ever exposed)",
+  "conda activate vlm && VLLM_USE_FLASHINFER_SAMPLER=0 HF_HUB_OFFLINE=1 vllm serve ~/models/Qwen3.5-4B-AWQ-4bit --served-model-name qwen3.5-4b --host 127.0.0.1 --port 8000 --gpu-memory-utilization 0.70 --max-model-len 8192 --max-num-seqs 8 --limit-mm-per-prompt '{\"image\":2}' --mm-processor-kwargs '{\"max_pixels\":409600}' --reasoning-parser qwen3 --default-chat-template-kwargs '{\"enable_thinking\":false}' --generation-config vllm",
+  "# If startup OOMs: lower --max-model-len to 6144 or add --enforce-eager; if mamba-cache errors appear, add --max-cudagraph-capture-size 8 (per vLLM Qwen3.5 recipe troubleshooting).",
+  "# 3) Serve BACKUP",
+  "conda activate vlm && VLLM_USE_FLASHINFER_SAMPLER=0 HF_HUB_OFFLINE=1 vllm serve ~/models/Qwen3-VL-4B-Instruct-AWQ-4bit --served-model-name qwen3-vl-4b --host 127.0.0.1 --port 8000 --gpu-memory-utilization 0.70 --max-model-len 8192 --max-num-seqs 8 --limit-mm-per-prompt '{\"image\":2}' --mm-processor-kwargs '{\"max_pixels\":409600}' --generation-config vllm",
+  "# Optional for more KV room on Qwen3-VL: --kv-cache-dtype fp8 (flag exists in 0.32; not tested on sm_120).",
+  "# 4) Verify (TTFT, tok/s, n=8, json_schema, logprobs):",
+  "~/miniforge3/envs/vlm/bin/python /tmp/ccfa_research/scripts/vlm_smoke.py --base http://127.0.0.1:8000/v1 --model qwen3.5-4b --no-thinking"
+ ],
+ "text_llms": [
+  {
+   "name": "Reuse the VLM in text-only mode (recommended)",
+   "note": "Qwen3-VL tech report Table 6: Qwen3-VL-8B-Instruct text MMLU-Pro 71.6, BFCL-v3 66.3 vs Qwen3-8B 63.4 / 60.2; Qwen3-VL-4B 67.1 / 63.3 vs Qwen3-4B-Instruct-2507 69.6 / 61.9. A second LLM would cost 2-3 GB VRAM for no clear gain; send text-only prompts to the same server (vLLM --language-model-only is only for a text-only server)."
+  },
+  {
+   "name": "Qwen3-4B-Instruct-2507",
+   "note": "If a separate text planner is needed (e.g. on CPU via llama.cpp or a second process): MMLU-Pro 69.6, AIME-25 47.4, BFCL-v3 61.9 (Qwen3-VL report). Ollama qwen3:4b Q4 runs 89.6 tok/s on RTX 5060 (DatabaseMart)."
+  },
+  {
+   "name": "MiniCPM5-2B / MiniCPM5-1B (openbmb)",
+   "note": "2026-09 / 2026-05 small text models with GGUF and DSpark speculative variants on HF; no embodied numbers checked (unverified)."
+  },
+  {
+   "name": "Gemma 4 E2B-it",
+   "note": "Card: MMLU-Pro 60.0, Tau2 24.5 (E4B 69.4 / 42.2); weaker than Qwen3-4B-2507 for planning."
+  }
+ ],
+ "measured_on_this_machine": {
+  "stack": "conda env 'vlm' (python 3.12) with vllm 0.32.0 + torch 2.13.0+cu130 (arch list includes sm_120), xgrammar 0.2.8, llguidance 1.7.6, transformers 5.19.0 -- built by the main pipeline (scripts/setup_env2.sh) and serving EB-Navigation.",
+  "qwen2.5-vl-3b-awq_vllm_log": "Marlin AWQ kernels, FlashAttention v2, torch.compile + CUDA graphs OK on sm_120; weights 3.32 GiB; startup 32 s; --gpu-memory-utilization 0.62 -> 0.53 GiB KV = 15,328 tokens; FlashInfer disabled (no nvcc) -> run with VLLM_USE_FLASHINFER_SAMPLER=0.",
+  "qwen2.5-vl-3b-awq_api_smoke": "My client (scripts/vlm_smoke.py): 1-image TTFT 0.244 s; single-stream decode 142.4 tok/s (256 tok); n=8 one-image 8-token sampling 0.066 s total; json_schema (enum action) valid JSON with finish=stop at max_tokens 400 (truncated at 200 -> raise max_tokens); logprobs/top_logprobs=5 OK (B -0.003 vs A -6.88).",
+  "eb_nav_smoke_baseline": "Main pipeline log (EB-Navigation base, down-sample 0.1, Qwen2.5-VL-3B-AWQ): task_success 0.0, planner_output_error 2.67/episode, 'Failed to decode JSON' errors -> confirms need for a stronger 4B model and schema-constrained output.",
+  "qwen3.5-4b_checks": "cyankiwi/Qwen3.5-4B-AWQ-4bit downloaded from ModelScope to ~/models/Qwen3.5-4B-AWQ-4bit, sha256 matches HF LFS oid. CPU-only: vLLM 0.32 registry has Qwen3_5ForConditionalGeneration (also Qwen3VL, InternVLChat, Gemma4, MiniCPMV4_6, Molmo2); transformers 5.19 loads Qwen3_5Config + Qwen3VLProcessor; 640x480 image prompt = 315 tokens; mm_processor_kwargs max_pixels=409600 caps 1280x960 at 391 image tokens; lm_head kept BF16 in the AWQ file. Backup cyankiwi/Qwen3-VL-4B-Instruct-AWQ-4bit also downloaded to ~/models/Qwen3-VL-4B-Instruct-AWQ-4bit (sha256 OK).",
+  "not_run": "No GPU load of Qwen3.5-4B: the main pipeline's vLLM server holds 4.5 GB and restarted during this task, leaving ~2.3 GB free; I did not preempt it. Throughput for 4B models below is an estimate from the measured 3B rate scaled by bytes read per token.",
+  "llama.cpp": "Prebuilt b11724 ubuntu-cuda-13.4 binary fails here: needs libssl.so.3, GLIBC_2.38, GLIBCXX_3.4.30 (host 2.31 / 3.4.28). Removed."
+ },
+ "unverified": [
+  "4B-model tok/s and TTFT (estimated, not run on GPU)",
+  "--kv-cache-dtype fp8 on sm_120 with Qwen3-VL (flag exists; not run)",
+  "Ollama on Ubuntu 20.04 (not run)",
+  "llama.cpp source build (not run)",
+  "InternVL3.5 quant file sizes",
+  "MiMo-Embodied quant checkpoints"
+ ],
+ "generated": "2026-10-19"
+}

@@ -1,0 +1,348 @@
+{
+ "area": "Embodied perception for legged and mobile robots (open-vocabulary 3D mapping/scene graphs, 3D foundation models and streaming SLAM, depth/stereo foundation models, 3DGS real2sim, traversability, quadruped egocentric perception, edge open-vocabulary detection)",
+ "papers": [
+  {
+   "title": "VGGT: Visual Geometry Grounded Transformer",
+   "venue_year": "CVPR 2025 (Best Paper)",
+   "url": "https://arxiv.org/abs/2503.11651",
+   "code": "https://github.com/facebookresearch/vggt",
+   "key_idea": "~1B-param feed-forward transformer with minimal 3D bias; from 1 to hundreds of views predicts cameras, depth, pointmaps and 3D tracks in one pass, typically <1 s, often beating optimisation-based pipelines.",
+   "compute_needs": "Inference-only use is feasible on 8 GB for short clips (bf16/fp16); README notes a May-2026 memory fix giving 2-3x more frames. Fine-tuning code exists, but full 1B fine-tuning on 8 GB is unrealistic; use frozen backbone plus small heads/adapters.",
+   "limitation": "Batch, not streaming; no semantics; long robot runs need chunking into submaps (what VGGT-SLAM does). Original checkpoint non-commercial; separate commercial checkpoint on request."
+  },
+  {
+   "title": "MASt3R-SLAM: Real-Time Dense SLAM with 3D Reconstruction Priors",
+   "venue_year": "CVPR 2025",
+   "url": "https://arxiv.org/abs/2412.12392",
+   "code": "https://github.com/rmurai0610/MASt3R-SLAM",
+   "key_idea": "Monocular dense SLAM built on the MASt3R two-view prior: pointmap matching, tracking/local fusion, loop closure and second-order global optimisation; only assumes a unique camera centre; ~15 FPS with globally consistent poses; SOTA when calibrated.",
+   "compute_needs": "Training-free (pretrained MASt3R). Authors ran on RTX 4090; README pins PyTorch 2.5.1 with CUDA 11.8/12.1/12.4 and Python 3.11, so extensions must be rebuilt for sm_120. 8 GB fit not confirmed.",
+   "limitation": "Geometry only, no semantics; static-scene assumption; benchmarks are TUM RGB-D, 7-Scenes, EuRoC, ETH3D, not legged footage; checkpoints follow Naver's MASt3R licence notice."
+  },
+  {
+   "title": "CUT3R: Continuous 3D Perception Model with Persistent State",
+   "venue_year": "CVPR 2025 (Oral)",
+   "url": "https://arxiv.org/abs/2501.12387",
+   "code": "https://github.com/CUT3R/CUT3R",
+   "key_idea": "Stateful recurrent model: each RGB frame updates a persistent state that is read out into camera parameters and pointmaps online; can also infer unseen regions by querying virtual views; no explicit global alignment as in DUSt3R.",
+   "compute_needs": "Streaming inference with constant-size state; TTT3R runs this backbone at ~20 FPS in ~6 GB, so 8 GB inference is feasible. Training from scratch is large-scale and out of reach.",
+   "limitation": "Forgets over long sequences and degrades beyond training length (TTT3R, TTSA3R report this), which spawned a crowded line of state-update fixes."
+  },
+  {
+   "title": "TTT3R: 3D Reconstruction as Test-Time Training",
+   "venue_year": "ICLR 2026",
+   "url": "https://arxiv.org/abs/2509.26645",
+   "code": "https://github.com/Inception3D/TTT3R",
+   "key_idea": "Treats recurrent 3D reconstruction as test-time training: a closed-form learning rate for CUT3R's memory update, from alignment confidence between memory and new frame. Training-free drop-in; ~2x better global pose; handles thousands of frames.",
+   "compute_needs": "Training-free; reported ~20 FPS with ~6 GB GPU memory, so it should fit an 8 GB RTX 5060 (the paper's GPU was not checked). Clearest example of a low-compute CCF-A perception paper.",
+   "limitation": "Inherits CUT3R backbone limits; follow-ups (TTSA3R, Mem3R, Info3R) already crowd plain state-update tweaks; no robot-specific signals such as IMU or gait used."
+  },
+  {
+   "title": "VGGT-SLAM: Dense RGB SLAM Optimized on the SL(4) Manifold",
+   "venue_year": "NeurIPS 2025",
+   "url": "https://arxiv.org/abs/2505.12549",
+   "code": "https://github.com/MIT-SPARK/VGGT-SLAM",
+   "key_idea": "Builds maps by incrementally aligning VGGT submaps. Uncalibrated submaps carry projective ambiguity, so it optimises 15-DoF homographies on SL(4) instead of Sim(3); VGGT-SLAM 2.0 (arXiv 2601.19887) is real-time and shows open-set object retrieval.",
+   "compute_needs": "Training-free; cost dominated by VGGT inference per submap, so submap size sets GPU memory (8 GB fit not verified).",
+   "limitation": "Uncalibrated monocular RGB only; ignores IMU/odometry a robot already has; semantics only demonstrated as retrieval demos."
+  },
+  {
+   "title": "StreamVGGT: Streaming 4D Visual Geometry Transformer",
+   "venue_year": "ICLR 2026",
+   "url": "https://arxiv.org/abs/2507.11539",
+   "code": "https://github.com/wzzheng/StreamVGGT",
+   "key_idea": "Causal VGGT: temporal causal attention with cached past keys/values as implicit memory, so each new frame updates the reconstruction without reprocessing history; distilled from VGGT; works with FlashAttention-style kernels for real-time 4D reconstruction.",
+   "compute_needs": "Cheap per-frame inference; training needs large-scale distillation (not feasible on one 8 GB GPU). KV cache grows with sequence length, which caps run length on 8 GB.",
+   "limitation": "Unbounded KV memory for long patrols needs eviction/compression; no semantics (4DLangVGGT, arXiv 2512.05060, adds a language decoder)."
+  },
+  {
+   "title": "Sensor Configuration Matters: A Systematic Evaluation of Multimodal SLAM on Quadruped Robots",
+   "venue_year": "arXiv 2026",
+   "url": "https://arxiv.org/abs/2606.19067",
+   "code": "unknown",
+   "key_idea": "Benchmarks visual, visual-inertial and LiDAR-visual-inertial SLAM on GrandTour (ANYmal D) under foot-impact shocks, vibration and fast rotations: stereo beats mono/RGB-D, global shutter cuts tracking failures, and naive inertial integration can hurt mainly-visual methods.",
+   "compute_needs": "Evaluation only; CPU/GPU light. Directly reproducible on a single PC with public data.",
+   "limitation": "One platform and dataset; classical SLAM only, no 3D foundation models; design guidance rather than a new method."
+  },
+  {
+   "title": "Depth Anything 3: Recovering the Visual Space from Any Views",
+   "venue_year": "arXiv 2025 (venue unconfirmed)",
+   "url": "https://arxiv.org/abs/2511.10647",
+   "code": "https://github.com/ByteDance-Seed/Depth-Anything-3",
+   "key_idea": "A single plain transformer (vanilla DINO encoder) predicts depth plus ray maps for any number of posed or unposed views, giving consistent geometry; teacher-student training on public academic data; reports beating VGGT on pose and geometry, and DA2 on monocular depth.",
+   "compute_needs": "Inference-oriented; variant sizes not checked here, so 8 GB fit is unverified. Training is large-scale.",
+   "limitation": "Gains are measured on the authors' own new benchmark (44.3%/25.1% in v1, 35.7%/23.6% on OpenReview); venue unconfirmed; no semantics."
+  },
+  {
+   "title": "FoundationStereo: Zero-Shot Stereo Matching",
+   "venue_year": "CVPR 2025",
+   "url": "https://arxiv.org/abs/2501.09898",
+   "code": "https://github.com/NVlabs/FoundationStereo",
+   "key_idea": "Stereo foundation model built for zero-shot generalisation to in-the-wild indoor/outdoor scenes, including textureless, reflective, translucent and thin objects, shadows and strong exposure. Fast-FoundationStereo (arXiv 2512.11130) distils and prunes it to >10x faster with close zero-shot accuracy.",
+   "compute_needs": "Inference-only; the full model is slow, so real-time onboard use needs the Fast variant. 8 GB fit not verified.",
+   "limitation": "Needs a calibrated stereo pair; geometry only; Fast variant's venue unconfirmed."
+  },
+  {
+   "title": "ConceptGraphs: Open-Vocabulary 3D Scene Graphs for Perception and Planning",
+   "venue_year": "ICRA 2024 (CCF-B)",
+   "url": "https://arxiv.org/abs/2309.16650",
+   "code": "https://concept-graphs.github.io/",
+   "key_idea": "Fuses 2D foundation-model outputs into 3D objects by multi-view association, giving a graph-structured open-vocabulary scene representation used for language-grounded perception and planning; generalises to new classes without large 3D datasets or fine-tuning.",
+   "compute_needs": "Training-free; cost is per-frame 2D foundation-model inference over posed RGB-D, run offline. 8 GB fit depends on which 2D models are plugged in (not verified).",
+   "limitation": "The baseline everyone beats: DualMap cites costly 3D object merging; Think-While-You-Map notes graphs are not queryable during exploration; static scenes."
+  },
+  {
+   "title": "HOV-SG: Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation",
+   "venue_year": "RSS 2024 (not in CCF list)",
+   "url": "https://arxiv.org/abs/2403.17846",
+   "code": "https://github.com/hovsg/HOV-SG",
+   "key_idea": "Builds an open-vocabulary 3D map from RGB-D with OpenCLIP ViT-H-14 features, segments floors and rooms, names rooms, and organises a floor-room-object graph for multi-storey language navigation; 75% smaller than dense open-vocabulary maps; beats baselines at all three levels.",
+   "compute_needs": "Training-free; offline mapping. ViT-H CLIP inference is the main GPU cost (8 GB fit not verified).",
+   "limitation": "Offline, static, needs posed RGB-D sequences; RSS is not a CCF-ranked venue."
+  },
+  {
+   "title": "DualMap: Online Open-Vocabulary Semantic Mapping for Natural Language Navigation in Dynamic Changing Scenes",
+   "venue_year": "IEEE RA-L 2025",
+   "url": "https://arxiv.org/abs/2506.01950",
+   "code": "https://github.com/Eku127/DualMap",
+   "key_idea": "Online open-vocabulary mapping for changing scenes: a global abstract map chooses candidate targets and a local concrete map handles precise goal-reaching; a hybrid segmentation frontend plus object-level status checks avoid costly 3D object merging. Claims SOTA on 3D open-vocabulary segmentation, mapping efficiency and online language navigation.",
+   "compute_needs": "Training-free, online. Hardware and runtime not given in the abstract.",
+   "limitation": "Robot platform and runtime not stated in the abstract; RA-L is not CCF-A; abstract frames dynamics as scene changes to be updated, and continuously moving people are not shown there."
+  },
+  {
+   "title": "LangSplat: 3D Language Gaussian Splatting",
+   "venue_year": "CVPR 2024",
+   "url": "https://arxiv.org/abs/2312.16084",
+   "code": "unknown (not verified in this sweep)",
+   "key_idea": "Embeds CLIP language features into 3D Gaussians, with SAM masks giving sharp object boundaries, for precise open-vocabulary 3D queries; 199x faster than LERF at 1440x1080.",
+   "compute_needs": "Per-scene optimisation; single GPU. 8 GB fit not verified for large scenes.",
+   "limitation": "Offline, per-scene; queries resolved as masks on 2D renderings rather than 3D points (criticised by arXiv 2503.21767); the essential language-3DGS baseline."
+  },
+  {
+   "title": "Online Language Splatting",
+   "venue_year": "arXiv 2025 (venue unconfirmed)",
+   "url": "https://arxiv.org/abs/2503.09447",
+   "code": "unknown",
+   "key_idea": "Claims the first online, near real-time open-vocabulary language mapping inside a 3DGS-SLAM system without pre-computed features: high-resolution CLIP module (18 ms/frame), two-stage online autoencoder (768 to 15 dims), colour-language disentangled optimisation; >40x efficiency over offline methods with higher accuracy.",
+   "compute_needs": "Online; GPU type and memory not stated on the abstract page.",
+   "limitation": "Relies on the underlying 3DGS-SLAM tracking; robustness to robot motion blur or shake not shown; no code link seen."
+  },
+  {
+   "title": "EmbodiedSplat: Online Feed-Forward Semantic 3DGS for Open-Vocabulary 3D Scene Understanding",
+   "venue_year": "CVPR 2026",
+   "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Lee_EmbodiedSplat_Online_Feed-Forward_Semantic_3DGS_for_Open-Vocabulary_3D_Scene_Understanding_CVPR_2026_paper.html",
+   "code": "unknown",
+   "key_idea": "Online, feed-forward semantic 3D Gaussian splatting that reconstructs and labels a scene with open vocabulary from streaming images, replacing per-scene optimisation.",
+   "compute_needs": "Unverified: the CVF page returned 403, so only the search snippet was seen. The feed-forward design suggests inference-only deployment.",
+   "limitation": "Details unverified here; sits in a crowded CVPR 2026 cluster with OnlinePG (online open-vocabulary panoptic 3DGS mapping) and OVI-MAP (incremental instance-semantic mapping)."
+  },
+  {
+   "title": "MSGNav: Unleashing the Power of Multi-modal 3D Scene Graph for Zero-Shot Embodied Navigation",
+   "venue_year": "CVPR 2026",
+   "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Huang_MSGNav_Unleashing_the_Power_of_Multi-modal_3D_Scene_Graph_for_CVPR_2026_paper.html",
+   "code": "unknown",
+   "key_idea": "Multi-modal 3D scene graph (M3DSG) that keeps image evidence on graph edges instead of text-only relations, enabling zero-shot, any-vocabulary navigation with a VLM and no RL training; built on 3D-Mem and ConceptGraphs.",
+   "compute_needs": "Training-free but VLM-bound; experiments used A800 GPUs with API or open-source VLMs (GPT-OSS, LLaVA). On 8 GB, use a cloud API or a small local VLM.",
+   "limitation": "VLM inference cost and latency per step; real-robot validation not confirmed from the snippet."
+  },
+  {
+   "title": "Vid2Sim: Realistic and Interactive Simulation from Video for Urban Navigation",
+   "venue_year": "CVPR 2025",
+   "url": "https://arxiv.org/abs/2501.06693",
+   "code": "https://github.com/Vid2Sim/Vid2Sim",
+   "key_idea": "Real2sim from one monocular video: neural 3D reconstruction yields photorealistic, physically interactable urban digital twins rendering RGB and depth for RL visual-navigation training; success-rate gains of 31.2% in twins and 68.3% in the real world over prior simulation methods.",
+   "compute_needs": "Per-scene reconstruction plus RL training; GPU needs not stated on the abstract page.",
+   "limitation": "Urban and static; one twin per video; robot platform not stated on the abstract page. Not the same as Chen et al.'s CVPR 2025 Vid2Sim (mesh-free physics)."
+  },
+  {
+   "title": "VR-Robo: A Real-to-Sim-to-Real Framework for Visual Robot Navigation and Locomotion",
+   "venue_year": "IEEE RA-L 2025",
+   "url": "https://arxiv.org/abs/2502.01536",
+   "code": "https://vr-robo.github.io/ (project page; repo not verified)",
+   "key_idea": "Builds photorealistic, physically interactive digital twins from multi-view images with a 3DGS-plus-mesh hybrid (GS for rendering, mesh for contact), occlusion-aware composition and randomisation; an RL visual goal-tracking policy transfers RGB-only to a real quadruped.",
+   "compute_needs": "Per-scene 3DGS reconstruction plus RL in simulation; GPU needs not stated on the abstract page.",
+   "limitation": "Static per-scene twins; robot model not named on the abstract page; RA-L is not CCF-A."
+  },
+  {
+   "title": "GaussGym: An open-source real-to-sim framework for learning locomotion from pixels",
+   "venue_year": "arXiv 2025 (venue unconfirmed)",
+   "url": "https://arxiv.org/abs/2510.15352",
+   "code": "https://escontrela.me/gauss_gym/ (code and data promised open)",
+   "key_idea": "Uses 3DGS as a drop-in renderer inside vectorised physics (IsaacGym), exceeding 100,000 steps/s on consumer GPUs; thousands of scenes from iPhone scans, GrandTour, ARKit and Veo-generated video; RGB policies exploit semantics beyond depth (e.g. avoiding undesirable regions); sim-to-real shown.",
+   "compute_needs": "Built for consumer GPUs, but parallel-environment capacity on 8 GB and IsaacGym support for Blackwell/sm_120 are both unverified.",
+   "limitation": "Venue unconfirmed; locomotion-focused; static splat scenes; IsaacGym is a legacy stack, so expect setup friction on new GPUs."
+  },
+  {
+   "title": "ReaDy-Go: Real-to-Sim Dynamic 3D Gaussian Splatting Simulation for Environment-Specific Visual Navigation with Moving Obstacles",
+   "venue_year": "arXiv 2026",
+   "url": "https://arxiv.org/abs/2602.11575",
+   "code": "unknown",
+   "key_idea": "Reconstructs the static target environment with 3DGS and inserts moving human Gaussian avatars as obstacles, generating photorealistic dynamic data to train RGB-only goal-navigation policies robust to the sim-to-real gap and moving people; beats baselines in simulation and real tests.",
+   "compute_needs": "Per-environment reconstruction plus policy training; GPU needs not stated in snippets.",
+   "limitation": "Environment-specific (one site at a time); robot platform and venue unconfirmed."
+  },
+  {
+   "title": "Wild Visual Navigation: Fast Traversability Learning via Pre-Trained Models and Online Self-Supervision",
+   "venue_year": "arXiv 2024 (extended version of arXiv 2305.08510)",
+   "url": "https://arxiv.org/abs/2404.07110",
+   "code": "https://bit.ly/498b0CV (link given on the arXiv page)",
+   "key_idea": "Online self-supervised visual traversability: frozen self-supervised features plus an online supervision generator, so the model trains and infers at the same time during deployment, bootstrapped from a short human demonstration in under 5 minutes of field training; legged robot (ANYmal) in forests, parks, grassland.",
+   "compute_needs": "Light: only a small head is trained online on frozen features, using onboard sensing and compute. Fits 8 GB easily.",
+   "limitation": "Outputs scalar traversability, not open-vocabulary semantics; needs a demonstration; venue of the extended version not listed."
+  },
+  {
+   "title": "CATNAV: Cached Vision-Language Traversability for Efficient Zero-Shot Robot Navigation",
+   "venue_year": "arXiv 2026",
+   "url": "https://arxiv.org/abs/2603.22800",
+   "code": "unknown",
+   "key_idea": "Multimodal LLMs build zero-shot, embodiment-aware costmaps; a visuosemantic cache flags scene novelty and reuses prior risk assessments, cutting online VLM queries by 85.7%; VLM-based trajectory selection. On a quadruped: +10 pp goal-reaching and 33% fewer constraint violations than VLA baselines over five tasks.",
+   "compute_needs": "Training-free; VLM-bound (API or local VLM), and caching is what makes it practical on low compute.",
+   "limitation": "Venue and code unknown; VLM latency and hallucination risk remain; specific quadruped not named."
+  },
+  {
+   "title": "OneOcc: Semantic Occupancy Prediction for Legged Robots with a Single Panoramic Camera",
+   "venue_year": "CVPR 2026",
+   "url": "https://cvpr.thecvf.com/virtual/2026/poster/37049",
+   "code": "promised upon publication (not seen)",
+   "key_idea": "Vision-only panoramic semantic scene completion for legged and humanoid robots: dual-projection fusion (annular plus equirectangular), bi-grid voxels (Cartesian plus cylindrical), hierarchical AMoE-3D decoder, and plug-and-play Gait Displacement Compensation that corrects gait jitter at feature level with no extra sensors.",
+   "compute_needs": "Trained model described as lightweight; FPS, parameter count and training GPUs not given on the poster page.",
+   "limitation": "Needs a panoramic camera; closed-set SSC classes; benchmarks are QuadOcc (real quadruped) and H3O (CARLA); code and data not yet released. Shows CCF-A accepts quadruped-specific perception."
+  },
+  {
+   "title": "YOLOE: Real-Time Seeing Anything",
+   "venue_year": "ICCV 2025",
+   "url": "https://openaccess.thecvf.com/content/ICCV2025/html/Wang_YOLOE_Real-Time_Seeing_Anything_ICCV_2025_paper.html",
+   "code": "https://github.com/THU-MIG/yoloe",
+   "key_idea": "One real-time YOLO model for open-vocabulary detection and instance segmentation with text prompts (re-parameterisable region-text alignment), visual-exemplar prompts, or a prompt-free mode with a built-in ~4,585-class vocabulary and no language model.",
+   "compute_needs": "Real-time inference; small variants are plausibly fine-tunable on 8 GB through Ultralytics (not verified).",
+   "limitation": "Category-name prompts, no relational reasoning; trained on human-viewpoint web data, so behaviour from a low, shaking quadruped camera is untested."
+  },
+  {
+   "title": "SAM 3: Segment Anything with Concepts",
+   "venue_year": "ICLR 2026",
+   "url": "https://arxiv.org/abs/2511.16719",
+   "code": "https://docs.ultralytics.com/models/sam-3 (official repo not verified here)",
+   "key_idea": "Promptable Concept Segmentation: from a noun phrase, image exemplars or both, detects, segments and tracks every matching instance with identities across images and video; about 2x prior systems on PCS, and also improves interactive SAM tasks.",
+   "compute_needs": "Inference-only for most labs; 8 GB latency and memory not verified. Likely too heavy for real-time onboard use without distillation.",
+   "limitation": "Short noun-phrase prompts (SAM3-I, arXiv 2512.04585, extends to instructions); heavier than YOLO-class detectors for edge deployment."
+  }
+ ],
+ "benchmarks": [
+  {
+   "name": "HM3D-OVON (open-vocabulary ObjectNav)",
+   "simulator": "Habitat (HM3D scenes)",
+   "metrics": "Success Rate (SR), SPL; val seen / seen-synonyms / unseen splits",
+   "sota_note": "DRIVE-Nav (arXiv 2603.28691) reports 50.2 SR / 32.6 SPL; VLM-free OVSegDT reports 44.7 SR / 20.6 SPL on val unseen; D3D-VLP (CVPR 2026) also claims SOTA. Protocols differ, so check splits before comparing.",
+   "gpu_needs": "Zero-shot evaluation fits one consumer GPU (VLM via API or small local model); training VLM policies like D3D-VLP (10M samples) needs much more."
+  },
+  {
+   "name": "Open-vocabulary 3D semantic segmentation (Replica, ScanNet)",
+   "simulator": "Offline datasets (Replica, ScanNet RGB-D sequences)",
+   "metrics": "mIoU, F-mIoU, mAcc; class-agnostic Panoptic Quality",
+   "sota_note": "No single leaderboard. Used by ConceptGraphs, HOV-SG, DualMap; OVIP-SG (arXiv 2608.17633) reports +6.31 mAcc and +5.15 F-mIoU over ConceptGraphs on Replica under a unified protocol. A NeurIPS 2025 D&B supplement notes mIoU loses meaning as label spaces grow.",
+   "gpu_needs": "Training-free mapping pipelines run on one GPU; 8 GB is enough with mid-size CLIP and segmenters."
+  },
+  {
+   "name": "Dense SLAM / streaming reconstruction (TUM RGB-D, 7-Scenes, EuRoC, ETH3D SLAM; NRGBD long sequences)",
+   "simulator": "Offline datasets",
+   "metrics": "ATE RMSE; depth Abs Rel and delta; reconstruction accuracy/completeness; FPS and GPU memory",
+   "sota_note": "MASt3R-SLAM is the dense monocular reference (calibrated SOTA, ~15 FPS); TTT3R about 2x better global pose than CUT3R; TTSA3R error rises 1.33x from 50 to 250 frames vs >4x for CUT3R; Mem3R plus TTT3R reports up to 39% lower ATE on 500-1000 frames.",
+   "gpu_needs": "Inference only. MASt3R-SLAM was run on an RTX 4090; TTT3R reports ~6 GB."
+  },
+  {
+   "name": "GrandTour (legged robot in-the-wild dataset) / COMFORT Localization Benchmark",
+   "simulator": "None (real ANYmal-D logs: LiDAR, multiple RGB, stereo depth, proprioception, RTK GNSS ground truth)",
+   "metrics": "Localization / SLAM accuracy; robustness and compute (as used in arXiv 2606.19067)",
+   "sota_note": "Released 2026 (arXiv 2602.18164), CC BY-SA 4.0; benchmark run with the IROS 2026 workshop 'Data in Field Robotics'. Also a scene source for GaussGym. The closest public legged-robot test bed for 3D foundation models.",
+   "gpu_needs": "Evaluation only; fine on one 8 GB GPU."
+  },
+  {
+   "name": "QuadOcc / Human360Occ (H3O) / PanoMMOcc (quadruped panoramic occupancy)",
+   "simulator": "QuadOcc and PanoMMOcc are real quadruped data; H3O is built in CARLA",
+   "metrics": "Semantic occupancy mIoU (within-city and cross-city on H3O)",
+   "sota_note": "OneOcc (CVPR 2026): +3.83 mIoU within-city and +8.08 cross-city on H3O, beats LiDAR methods on QuadOcc. VoxelHound: +4.16 mIoU on PanoMMOcc with vertical jitter compensation. Data and code release still pending for both.",
+   "gpu_needs": "Training occupancy networks is moderate; one 8 GB GPU is plausible at reduced resolution (not verified)."
+  },
+  {
+   "name": "Real2sim 3DGS digital-twin navigation (Vid2Sim, VR-Robo, ReaDy-Go protocols)",
+   "simulator": "Per-paper 3DGS (+ mesh) reconstructions of real scenes",
+   "metrics": "Navigation success rate in the twin and in the real world; sim-to-real gap",
+   "sota_note": "Vid2Sim: +31.2% SR in twins and +68.3% real-world over prior simulation training. There is no shared benchmark; each paper builds its own scenes, which is itself an opening.",
+   "gpu_needs": "Per-scene 3DGS reconstruction fits 8 GB for small scenes; RL training scale varies (not verified)."
+  },
+  {
+   "name": "GaussGym scenes (3DGS rendering inside IsaacGym)",
+   "simulator": "IsaacGym plus 3DGS renderer",
+   "metrics": "Locomotion/navigation task success; simulation throughput",
+   "sota_note": ">100,000 steps/s on consumer GPUs reported; thousands of scenes from iPhone, GrandTour, ARKit and Veo video. Infrastructure rather than a leaderboard.",
+   "gpu_needs": "Designed for consumer GPUs; 8 GB parallelism and sm_120 support unverified."
+  },
+  {
+   "name": "LVIS zero-shot open-vocabulary detection",
+   "simulator": "Offline (LVIS minival)",
+   "metrics": "AP, rare-class AP; FPS",
+   "sota_note": "YOLO-World baseline: 35.4 AP at 52 FPS on V100; YOLOE (ICCV 2025) and YOLOE-26 (arXiv 2602.00168) are newer real-time options. None measure quadruped or low-viewpoint shift.",
+   "gpu_needs": "Inference trivially fits 8 GB; fine-tuning small variants is plausible."
+  },
+  {
+   "name": "Quadruped egocentric VLM QA: GuideDogQA and GangnamLoop",
+   "simulator": "Real egocentric quadruped data",
+   "metrics": "QA accuracy (GuideDogQA); spatial QA and navigation (GangnamLoop)",
+   "sota_note": "ACCV 2026 guide-dog system: 83.8% vs GPT-4o 67.1% on GuideDogQA; GangnamLoop is a multi-trip outdoor street benchmark from a real quadruped (BinTrack, arXiv 2606.16902). Both niche but on-topic.",
+   "gpu_needs": "Inference only."
+  },
+  {
+   "name": "Traversability estimation (no consensus benchmark)",
+   "simulator": "Mostly self-collected real logs (urban, off-road, campus, forest)",
+   "metrics": "Traversable-mask IoU; navigation success rate",
+   "sota_note": "Multimodal self-supervised framework (arXiv 2508.18249): ~88% auto-label IoU, +1.6 to 3.5 IoU over self-supervised SOTA; ZeST: 90-100% success vs <=60% for baselines. Methods are compared on different data.",
+   "gpu_needs": "Light: frozen DINOv2-style features plus small heads, or training-free VLM queries."
+  }
+ ],
+ "trends": [
+  "Feed-forward 3D foundation models replace per-scene optimisation: VGGT (CVPR'25 best paper), pi3 (ICLR'26, reference-free, permutation-equivariant), Depth Anything 3, MapAnything (accepts optional intrinsics/poses/depth). SLAM systems now wrap them (MASt3R-SLAM, VGGT-SLAM).",
+  "Streaming geometry with memory: CUT3R, StreamVGGT, then training-free state-update fixes for long sequences (TTT3R at ICLR'26, TTSA3R, Mem3R, Info3R). Low-compute, inference-only work is reaching CCF-A venues.",
+  "Online open-vocabulary semantic 3DGS mapping is a crowded CVPR 2026 cluster (EmbodiedSplat, OnlinePG, OVI-MAP) alongside arXiv systems (Online Language Splatting, LEG-SLAM, LEGO-SLAM, LatentAM); feature compression and feed-forward prediction drive the speed-ups.",
+  "3D scene graphs and 3DGS as VLM memory for zero-shot navigation: MSGNav (CVPR'26), 3DGSNav (renders views for the VLM, tested on a quadruped), Think-While-You-Map, DualMap, OpenBelief-Nav (keeps multiple candidate labels per object).",
+  "Real2sim with Gaussian splatting for legged robots: VR-Robo, GaussGym, QuadVerse (aligns visuals, contact and actuator dynamics), ReaDy-Go (moving human avatars), Vid2Sim. Twins are mainly used to train policies, rarely as evaluation benchmarks.",
+  "VLMs as zero-shot traversability estimators, with uncertainty and cost control: ZeST (posterior over repeated VLM outputs), CATNAV (cache cuts VLM queries 85.7%), AnyTraverse (human in the loop). Self-supervised DINOv2-feature methods (WVN line) remain the low-latency baseline.",
+  "Quadruped-specific perception is now its own topic: OneOcc (CVPR'26, gait displacement compensation), PanoMMOcc/VoxelHound (vertical jitter compensation), GrandTour dataset, and a SLAM sensor-configuration study showing shocks and vibration break standard pipelines.",
+  "Real-time promptable perception for edge use: YOLOE (ICCV'25), YOLOE-26, SAM 3 concept segmentation (ICLR'26), Fast-FoundationStereo (>10x faster zero-shot stereo)."
+ ],
+ "open_gaps": [
+  "None of the streaming 3D foundation models found (CUT3R, TTT3R, StreamVGGT, VGGT-SLAM) explicitly models legged-gait shake, motion blur or rolling shutter. A quadruped SLAM study shows shocks and rolling shutter cause tracking failures. Gait- or IMU-aware state updates are untested.",
+  "No benchmark measuring open-vocabulary detection or 3D mapping accuracy as a function of camera height or quadruped viewpoint turned up. Closest: a 0.15 m robot camera homography-warped to 1.5 m eye level, and guide-dog work on dog-height vs human-height hazards.",
+  "Open-vocabulary maps mostly assume static scenes. DualMap and DovSG handle object changes; ReaDy-Go models moving humans only in simulation. Online maps that separate transient people from persistent objects, keep uncertainty, and run on a moving legged robot are missing.",
+  "Proprioception is an unused prior: leg odometry, foot contacts and IMU are rarely fed into 3D foundation models. MapAnything accepts optional poses, but robust use of noisy legged odometry is unexplored, and naive inertial fusion can hurt under legged motion.",
+  "Budgeted VLM perception: CATNAV's cache and ZeST's posterior reduce query cost, but there is no principled policy for when to call a VLM vs YOLOE/SAM-class models, with calibrated uncertainty and latency guarantees on onboard compute.",
+  "3DGS digital twins are built to train policies, not as reproducible perception-robustness benchmarks with controlled gait jitter, blur, lighting changes and inserted people. The real-vs-twin gap for perception metrics is unmeasured.",
+  "Open-vocabulary traversability work is mostly embodiment-agnostic or wheeled. Few methods combine foothold/proprioceptive self-supervision with open-vocabulary semantics specifically for legged robots (e.g. stairs, grass, soft ground)."
+ ],
+ "low_compute_entry_points": [
+  "Gait-aware training-free streaming reconstruction: gate or reweight CUT3R/TTT3R state updates with IMU-measured shake, gait phase and a blur score. Evaluate on TUM/7-Scenes/NRGBD, GrandTour ANYmal sequences and your own M1 logs (ATE, depth error, memory). Pure inference, fits 8 GB; TTT3R is the CCF-A precedent.",
+  "Quadruped-viewpoint open-vocabulary benchmark plus fix: record the same scenes at dog height (moving) and human height (static), measure YOLOE, SAM 3 and ConceptGraphs/DualMap degradation, then propose a training-free multi-view or temporal fusion fix for jitter and low viewpoint. Target CVPR/ICCV/ACM MM (CCF-A).",
+  "Dynamic-aware online open-vocabulary mapping: build on DualMap with a prompt-free YOLOE frontend, add transient vs persistent object reasoning with uncertainty (OpenBelief-style evidence). Evaluate on Replica/ScanNet, HM3D-OVON zero-shot and real M1 runs with people. Inference-only.",
+  "Proprioception-conditioned geometry: feed leg-odometry poses as optional priors to MapAnything/VGGT, or LoRA/adapter-tune a small head on frozen VGGT/DA3 features with your robot's data. Train only a few million parameters on 8 GB.",
+  "Real2sim perception testbed: reconstruct 3-5 lab scenes with 3DGS, render with synthetic gait shake, blur and inserted people, and validate that perception metrics in the twin predict real M1 runs. A benchmark/dataset contribution with modest compute.",
+  "Budgeted VLM traversability: cheap onboard segmentation plus a novelty trigger that calls a VLM only when uncertain (extending CATNAV/ZeST), compared with WVN-style online self-supervision. Report success, latency and query counts on the real quadruped.",
+  "Before choosing, confirm the M1's sensors (stereo vs mono, global vs rolling shutter, IMU rate, depth camera, panoramic camera) and SDK access to joint states and odometry; directions 1 and 4 need IMU or odometry access."
+ ],
+ "venue_notes": "From a 2026 CCF list PDF hosted by Hangzhou Dianzi University (created 2026-04-09; matches a second copy and third-party reports). AI section, class A conferences: AAAI, NeurIPS, ACL, CVPR, ICCV, ICML, ICLR. Class B: ECCV, ICRA, IJCAI (dropped from A), AAMAS. Class C: IROS. Graphics/multimedia class A: ACM MM, SIGGRAPH, IEEE VR, IEEE VIS; journals TOG, TIP, TVCG, TMM. AI class A journals: AI, TPAMI, IJCV, JMLR. IEEE T-RO is class B (interdisciplinary). RSS, CoRL and RA-L were not found in the list. Implication: a perception paper should target CVPR/ICCV/NeurIPS/ICLR/AAAI/ACM MM; robotics venues are not CCF-A. Verify against ccf.org.cn before relying on this.",
+ "hardware_notes": "RTX 5060 is sm_120: use official PyTorch >=2.7 wheels built with CUDA 12.8+ (cu126 wheels lack sm_120 kernels and give 'no kernel image'); driver 570+ is needed (580 is fine). Repos pinned to older stacks (MASt3R-SLAM: PyTorch 2.5.1, CUDA <=12.4, Python 3.11) need their CUDA extensions rebuilt under cu128 in conda or Docker, not system Python 3.8. VGGT's bf16 path needs Ampere+ (OK). TTT3R's reported ~6 GB is the clearest 8 GB-compatible 3D foundation-model setup found.",
+ "coverage_notes": "About 45 web searches and 25 page fetches, mostly arXiv abstract pages, GitHub READMEs and CVF/NeurIPS pages. The shared web-search budget ran out near the end, and CVF Open Access returned HTTP 403 for CVPR 2026 pages, so EmbodiedSplat and MSGNav details come from search snippets only. OpenReview pages were blocked by a bot check. Spann3R, Feature-3DGS and DUSt3R were not separately verified and are not listed as papers. The robot model (LTR M1) was not researched here.",
+ "sources": [
+  "CCF 2026 list (HDU copy): https://com.hdu.edu.cn/_upload/article/files/0e/3d/463a3fc348a7b71c17a258c370c2/b3118c2d-ea49-406c-b576-6f1b924ba1b1.pdf",
+  "IJCAI moved to CCF-B (third-party reports): https://github.com/userElaina/ijcbi ; https://www.myhuiban.com/conference/405",
+  "PyTorch sm_120 support: https://discuss.pytorch.org/t/rtx-5050-sm-120-support-timeline-when-in-stable-pytorch/224288/8",
+  "HM3D-OVON: https://arxiv.org/abs/2409.14296 ; DRIVE-Nav: https://arxiv.org/pdf/2603.28691 ; OVSegDT: https://arxiv.org/abs/2508.11479",
+  "OVIP-SG: https://arxiv.org/abs/2608.17633 ; Bare Necessities: https://arxiv.org/abs/2412.01539",
+  "GrandTour: https://arxiv.org/abs/2602.18164 ; https://github.com/leggedrobotics/grand_tour_dataset",
+  "PanoMMOcc/VoxelHound: https://arxiv.org/abs/2603.13108 ; Guide-dog perception (ACCV 2026): https://arxiv.org/abs/2610.03187",
+  "Low-camera homography warp: https://arxiv.org/abs/2408.05315 ; Dog vs human hazards: https://arxiv.org/abs/2603.20121",
+  "QuadVerse: https://arxiv.org/abs/2606.07118 ; ZeST: https://arxiv.org/abs/2508.19131 ; Multimodal self-supervised traversability: https://arxiv.org/abs/2508.18249",
+  "MapAnything: https://arxiv.org/abs/2509.13414 ; pi3 (ICLR 2026): https://arxiv.org/abs/2507.13347",
+  "TTSA3R: https://arxiv.org/abs/2601.22615 ; Mem3R: https://arxiv.org/abs/2604.07279 ; Info3R: https://arxiv.org/abs/2609.21938",
+  "Fast-FoundationStereo: https://arxiv.org/abs/2512.11130 ; Go2 open-vocabulary scene-graph system: https://arxiv.org/abs/2410.06239 ; 3DGSNav: https://arxiv.org/abs/2602.12159",
+  "OnlinePG (CVPR 2026): https://openaccess.thecvf.com/content/CVPR2026/papers/Zhai_OnlinePG_Online_Open-Vocabulary_Panoptic_Mapping_with_3D_Gaussian_Splatting_CVPR_2026_paper.pdf ; OVI-MAP (CVPR 2026): https://www.openaccess.thecvf.com/content/CVPR2026/papers/Deng_OVI-MAP_Open-Vocabulary_Instance-Semantic_Mapping_CVPR_2026_paper.pdf"
+ ]
+}

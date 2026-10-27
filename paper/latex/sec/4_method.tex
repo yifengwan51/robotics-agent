@@ -1,0 +1,53 @@
+\section{Semantic-to-Metric Navigation}
+\label{sec:method}
+
+\noindent\textbf{Setting.}
+At each step the agent receives a language instruction $\ell$ naming or describing one object, an egocentric
+RGB-D frame $(I_t, D_t)$, its odometry pose, and whether its last motion succeeded. It acts with the benchmark's
+discrete actions. On EB-Navigation these are four 0.25\,m translations, two 90$^\circ$ rotations and two camera
+tilts, for at most 20 steps; success means ending within 1\,m of the target. The VLM $f$ is a small local model
+(3--4B, 4-bit). No other simulator state is used.
+
+\noindent\textbf{Semantic queries.}
+\ours asks $f$ only questions whose answers can be checked against the current image:
+a target specification $s=f(\ell)$ (a category name, or the appearance words when $\ell$ only describes looks);
+a presence probability $\pi_t=P_f(\textit{yes}\mid I_t,s)$ read from first-token log-probabilities;
+and a grounding box $b_t=f(I_t,s)$, or none.
+
+\noindent\textbf{Metric lifting, map and planning.}
+A box is lifted to a 3D point $q_t$ by back-projecting its centre with the median depth of its central half,
+using a pinhole camera with known height and tilt. Depth also builds a 5\,cm top-down occupancy grid. A* runs
+over (position, heading) with the benchmark's actions as unit-cost edges. The camera faces forward only, so
+backward and sideways moves must stay inside observed free space, and moves the simulator rejected become
+forbidden edges.
+
+\noindent\textbf{Multi-view evidence fusion.}
+Detections are merged into 3D hypotheses $\{(\mu_k,w_k)\}$ within 0.5\,m.
+\emph{Positive evidence}: a detection adds $\pi_t$. If presence disagrees, or the goal is appearance-only, it adds
+instead the presence probability on a 2.5$\times$ magnified crop around $b_t$. A repeated look from the same pose
+adds a quarter of its weight, so confidence grows with view diversity rather than frame count.
+\emph{Negative evidence}: a hypothesis that projects into the current image, unoccluded according to $D_t$, and is
+not detected loses $\lambda{=}0.4$.
+\emph{Commitment}: the agent commits when $w_k\ge\tau_c$ and keeps its target while $w_k\ge\tau_k$ (hysteresis).
+\emph{Exhaustion}: a reached hypothesis that does not end the episode is discarded.
+
+\noindent\textbf{Optimal-search selection.}
+Among committed candidates the agent visits
+$\arg\max_k\,(1-e^{-w_k})/(c_k+1)$, where $c_k$ is the step cost to reach hypothesis $k$. This is the classical
+index for sequential search with inspection costs. It reduces to nearest-first for equal evidence and to
+strongest-first for equal cost, and it handles same-category look-alikes without any special case.
+
+\noindent\textbf{Uncertainty-triggered magnified search.}
+If the full frame yields no confident detection and nothing is committed, the frame is split into $3\times3$
+overlapping tiles. Each tile is upsampled and grounded in parallel, and every tile box must pass crop
+verification. This is done once per view, and spends VLM calls rather than environment steps.
+
+\noindent\textbf{Search policy.}
+With nothing committed, the agent finishes a 360$^\circ$ look-around, then inspects the best weak hypothesis,
+then moves to the free cell farthest from all visited positions.
+
+\noindent\textbf{Explicit stopping (RoboTHOR).}
+When the benchmark requires a Stop action, the agent stops only after it is within reach of a committed
+hypothesis, has turned and tilted to centre it, and re-confirms it with a presence query. A failed confirmation
+discards the hypothesis. Over long episodes, a miss counts as negative evidence only within 3\,m and once per view.
+When exploration ends, the best hypothesis seen so far is revisited once.

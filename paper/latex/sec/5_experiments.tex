@@ -1,0 +1,33 @@
+\section{Experiments}
+\label{sec:exp}
+
+\noindent\textbf{Setup.}
+\textit{Benchmarks.} EB-Navigation test set (5 subsets $\times$ 60 episodes, official environment, actions and
+success test), and the full RoboTHOR ObjectNav val split (1800 episodes, 15 apartments, 12 categories; LoCoBot with stochastic
+actuation, 30$^\circ$ turns, explicit Stop, 500 steps, success if a target-category object is visible within
+1\,m when stopping). Neither benchmark requires a license application.
+\textit{Models.} Qwen3-VL-4B and Qwen2.5-VL-3B (AWQ 4-bit) served with vLLM on one RTX~5060 (8\,GB), which they
+share with the simulator.
+\textit{Baselines.} The benchmark's own prompting and parser with the same local model (EB prompt), and
+published numbers for GPT-4o, open 7--8B models, and EMHO~\cite{lee2026emho}.
+\textit{Protocol.} \ours's configuration is frozen on the development split. Test runs are repeated three times;
+we report the mean, bootstrap 95\% CIs, and paired McNemar tests against the same model's baseline.
+
+\noindent\textbf{Main results.}
+\Cref{tab:main} \TODO{fill from paper/tables/main\_eb\_nav.tex}.
+
+\noindent\textbf{Ablations.}
+\Cref{tab:abl} removes one component at a time: negative evidence, multi-view fusion, tiled search, crop
+verification, look-around, exhaust-on-arrival, and the search index. \TODO{discussion}.
+
+\noindent\textbf{Robustness.}
+With monocular metric depth (Depth Anything V2, globally calibrated once on development frames) in place of
+sensor depth, and with 5\% / 2$^\circ$ odometry noise per step, \TODO{numbers}.
+
+\noindent\textbf{RoboTHOR ObjectNav.}
+\Cref{tab:robothor} \TODO{fill}. Published zero-shot results on the same full val split: SG-Nav (LLaMA-7B) 47.3,
+CogNav 54.6, CoW 27.5 SR~\cite{yin2024online,cao2024cognav,gadre2022cows}.
+
+\noindent\textbf{Efficiency.}
+\TODO{VLM calls, tokens and wall-clock per episode: \ours's short yes/no and box queries vs the EB prompt's long
+JSON plans.}

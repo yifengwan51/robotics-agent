@@ -1,0 +1,229 @@
+{
+  "archetypes": [
+    {
+      "archetype": "Training-free / zero-shot LLM-VLM navigation agent (scene graph, belief map, RAG memory, imagined views) evaluated on Habitat benchmarks",
+      "frequency_note": "8.4% of 119 embodied-nav titles (CCF-A 2025-26) say zero-shot/training-free; all 10 are at CVPR/ICCV/NeurIPS, none at ICLR/ICML. ICLR26 nav: 25% of rejected vs 5% of accepted abstracts claim zero-shot; reviewers attack novelty and fairness.",
+      "real_robot_evidence": "Often sim-only (UniGoal, FBN, TrajRAG, BeliefMapNav per paper/abstract). Some add small demos: CogNav (custom robot + Unitree quadruped, supplementary video), EvoNav (omnidirectional wheeled robot, 4 scenes x 20 samples).",
+      "compute_scale": "Inference-only. API VLMs (GPT-4v, GPT-4o-mini, Gemini-2.5-pro) or local 7B models (UniGoal: LLaMA-2-7B + LLaVA-1.6-Mistral-7B). EvoNav reports 2.4 GB GPU memory on an RTX 3090 plus API.",
+      "example_papers": [
+        "UniGoal: Towards Universal Zero-shot Goal-oriented Navigation — CVPR 2025",
+        "CogNav: Cognitive Process Modeling for Object Goal Navigation with LLMs — ICCV 2025",
+        "Function-centric Bayesian Network for Zero-Shot Object Goal Navigation — ICCV 2025",
+        "ImagineNav: Prompting Vision-Language Models as Embodied Navigator through Scene Imagination — ICLR 2025",
+        "BeliefMapNav: 3D Voxel-Based Belief Map for Zero-Shot Object Navigation — NeurIPS 2025",
+        "History to Future: Evolving Agent with Experience and Thought for Zero-shot Vision-and-Language Navigation — CVPR 2026",
+        "MSGNav: Unleashing the Power of Multi-modal 3D Scene Graph for Zero-Shot Embodied Navigation — CVPR 2026",
+        "TrajRAG: Retrieving Geometric-Semantic Experience for Zero-Shot Object Navigation — CVPR 2026"
+      ]
+    },
+    {
+      "archetype": "Trained navigation foundation model / Video-VLM / VLA navigator on large mixed data",
+      "frequency_note": "11.7% of nav titles; 29.6% of 956 embodied titles carry foundation/generalist/VLA wording (mostly manipulation VLAs). Highest-rated ICLR26 nav paper is this type (NavFoM, mean 8.0).",
+      "real_robot_evidence": "Strongest of all archetypes. NavFoM: 110 real test cases (50 VLN/30 search/30 tracking) across quadruped/humanoid/drone/wheeled. CityWalker: Go1, 8-14 trials x 3 cases. DualVLN, OmniNav (5 Hz), CompassNav report physical-robot runs.",
+      "compute_scale": "High. NavFoM 56 H100 x 72 h (4,032 GPU-h), 12.7M samples; CityWalker 2x H100 30 h; MTU3D 4x A100 ~164 GPU-h; NaVILA (RSS, not CCF-A) 4 A100 nodes 18 h. Out of reach for one 8 GB GPU.",
+      "example_papers": [
+        "Embodied Navigation Foundation Model — ICLR 2026",
+        "CityWalker: Learning Embodied Urban Navigation from Web-Scale Videos — CVPR 2025",
+        "Ground Slow, Move Fast: A Dual-System Foundation Model for Generalizable Vision-Language Navigation — ICLR 2026",
+        "OmniNav: A Unified Framework for Prospective Exploration and Visual-Language Navigation — ICLR 2026",
+        "JanusVLN: Decoupling Semantics and Spatiality with Dual Implicit Memory for Vision-Language Navigation — ICLR 2026",
+        "Move to Understand a 3D Scene: Bridging Visual Grounding and Exploration for Efficient and Versatile Embodied Navigation — ICCV 2025",
+        "Dynam3D: Dynamic Layered 3D Tokens Empower VLM for Vision-and-Language Navigation — NeurIPS 2025",
+        "SocialNav: Training Human-Inspired Foundation Model for Socially-Aware Embodied Navigation — CVPR 2026 (oral)"
+      ]
+    },
+    {
+      "archetype": "Benchmark / dataset / simulator / real-to-sim platform",
+      "frequency_note": "10.9% of nav titles, 10.0% of embodied titles. ICLR26 nav: 74% of accepted vs 63% of rejected abstracts mention benchmark/dataset; across all embodied subs acceptance is equal (35.4% vs 35.6%). NeurIPS25 D&B: 10 of 497 titles embodied-related.",
+      "real_robot_evidence": "Mixed. VLN-PE: 14 real Go2 episodes. UrbanVerse: 16 unseen streets x 3 repeats on Go2 + wheeled robot. NavBench: real dual-arm wheeled robot pipeline. CapNav, CitySeeker: evaluation on real-scene data, no robot.",
+      "compute_scale": "Low to moderate. Mostly evaluating existing VLMs/APIs; VLN-PE baselines trained on 1-4 RTX 4090; UrbanVerse uses GPT-4.1 for asset parsing plus IsaacSim.",
+      "example_papers": [
+        "Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities — ICCV 2025",
+        "UrbanVerse: Scaling Urban Simulation by Watching City-Tour Videos — ICLR 2026",
+        "NavBench: Probing Multimodal Large Language Models for Embodied Navigation — NeurIPS 2025",
+        "CapNav: Benchmarking Vision Language Models on Capability-conditioned Indoor Navigation — CVPR 2026",
+        "CitySeeker: How Do VLMs Explore Embodied Urban Navigation with Implicit Human Needs? — ICLR 2026",
+        "RoboSense: Large-scale Dataset and Benchmark for Egocentric Robot Perception and Navigation in Crowded and Unstructured Environments — CVPR 2025",
+        "Towards Physically Executable 3D Gaussian for Embodied Navigation — ICLR 2026",
+        "Towards Long-Horizon Vision-Language Navigation: Platform, Benchmark and Method — CVPR 2025"
+      ]
+    },
+    {
+      "archetype": "Efficient / on-device embodied model (caching, pruning, early exit, SSM, quantization)",
+      "frequency_note": "11.7% of nav titles, 8.5% of embodied titles. NeurIPS25 cluster (EfficientNav, DynaNav, EfficientVLA, VLA-Cache); continues at CVPR26/ICLR26 (QuantVLA, SP-VLA, GA-VLN). Mostly manipulation VLAs, almost no legged work.",
+      "real_robot_evidence": "Usually sim or offline. EfficientNav deploys LLaVA-7b on a Jetson AGX Orin (32 GB). CE-Nav runs >10 Hz on Jetson Orin NX on a Go2. DynaNav evaluated on real-world-based datasets.",
+      "compute_scale": "Low. EfficientNav on one RTX A6000; DynaNav 2.6x fewer FLOPs and 42.3% lower inference time than ViNT; EfficientVLA and VLA-Cache are training-free.",
+      "example_papers": [
+        "EfficientNav: Towards On-Device Object-Goal Navigation with Navigation Map Caching and Retrieval — NeurIPS 2025",
+        "DynaNav: Dynamic Feature and Layer Selection for Efficient Visual Navigation — NeurIPS 2025",
+        "EfficientVLA: Training-Free Acceleration and Compression for Vision-Language-Action Models — NeurIPS 2025",
+        "VLA-Cache: Efficient Vision-Language-Action Manipulation via Adaptive Token Caching — NeurIPS 2025",
+        "COSMO: Combination of Selective Memorization for Low-cost Vision-and-Language Navigation — ICCV 2025",
+        "Harnessing Input-Adaptive Inference for Efficient VLN — ICCV 2025",
+        "GA-VLN: Geometry-Aware BEV Representation for Efficient Vision-Language Navigation — CVPR 2026",
+        "LiteNav: Lightweight Map-free Outdoor Visual Navigation — NeurIPS 2026"
+      ]
+    },
+    {
+      "archetype": "Analysis / diagnostic / embodiment-gap study (often packaged with a reusable platform or dataset)",
+      "frequency_note": "About 5.5% of embodied titles by keyword (rough). Gets accepted when it pairs a reusable platform or surprising finding with a fix (VLN-PE; Aux-Think's 'inference-time reasoning collapse' + R2R-CoT-320k).",
+      "real_robot_evidence": "Small but quantitative. VLN-PE: CMA on Go2 over 14 indoor episodes, SR 7.14 -> 28.57 after VLN-PE fine-tuning; 34% relative SR drop sim -> physical; quadruped zero-shot CMA only 4.73 SR.",
+      "compute_scale": "Low to moderate. VLN-PE: CMA/Seq2Seq on 1 RTX 4090 ~1 day, RDP on 4 GPUs ~2 days.",
+      "example_papers": [
+        "Rethinking the Embodied Gap in Vision-and-Language Navigation: A Holistic Study of Physical and Visual Disparities — ICCV 2025",
+        "Aux-Think: Exploring Reasoning Strategies for Data-Efficient Vision-Language Navigation — NeurIPS 2025",
+        "Reasoning in Visual Navigation of End-to-end Trained Agents: A Dynamical Systems Approach — CVPR 2025",
+        "NavBench: Probing Multimodal Large Language Models for Embodied Navigation — NeurIPS 2025"
+      ]
+    },
+    {
+      "archetype": "World model / imagination / generative or 3DGS real-to-sim for navigation",
+      "frequency_note": "13.4% of nav titles use world-model/imagination/generation wording; 5.0% use 3DGS/real-to-sim. 'World model' appears in 4.3% of embodied titles.",
+      "real_robot_evidence": "Variable. EmbodiedSplat: phone-captured 3DGS -> Habitat fine-tune, real Stretch robot with 10 start-goal pairs, sim-vs-real correlation 0.87-0.97. monoVLN: real-world validation. NWM: offline planning on robot/human egocentric video.",
+      "compute_scale": "Bimodal. NWM scales a CDiT to 1B params (heavy). EmbodiedSplat-style capture-and-fine-tune and Gaussian-map agents are moderate.",
+      "example_papers": [
+        "Navigation World Models — CVPR 2025",
+        "EmbodiedSplat: Personalized Real-to-Sim-to-Real Navigation with Gaussian Splats from a Mobile Device — ICCV 2025",
+        "NavMorph: A Self-Evolving World Model for Vision-and-Language Navigation in Continuous Environments — ICCV 2025",
+        "monoVLN: Bridging the Observation Gap between Monocular and Panoramic Vision and Language Navigation — ICCV 2025",
+        "Vid2Sim: Realistic and Interactive Simulation from Video for Urban Navigation — CVPR 2025",
+        "From Seeing to Experiencing: Scaling Navigation Foundation Models with Reinforcement Learning — ICLR 2026",
+        "NavForesee: A Unified Vision-Language World Model for Hierarchical Planning and Dual-Horizon Navigation Prediction — CVPR 2026"
+      ]
+    },
+    {
+      "archetype": "Legged / humanoid locomotion and whole-body control (sim RL + hardware)",
+      "frequency_note": "Humanoid: 40 of 956 embodied titles (4.1%). Quadruped/legged in title: 1 of ~44.8k CCF-A titles swept (OneOcc). Legged-RL awesome lists are dominated by ICRA/RSS/CoRL/RA-L/Science Robotics; apexrl list has zero CCF-A venue tags.",
+      "real_robot_evidence": "Expected. LEGO-H (Unitree H1/G1), Gallant (>90% success on stairs/platforms). ICLR26 reviewers penalized missing hardware: PHUMA 'no hardware deployment results'; HWC-Loco asked for quantitative sim2real gap analysis.",
+      "compute_scale": "Sim RL fits one consumer GPU: CE-Nav all experiments on one RTX 4090; NaVILA locomotion RL at >60K FPS on an RTX 4090.",
+      "example_papers": [
+        "Let Humanoids Hike! Integrative Skill Development on Complex Trails — CVPR 2025",
+        "Gallant: Voxel Grid-based Humanoid Locomotion and Local-navigation across 3-D Constrained Terrains — CVPR 2026",
+        "KungfuBot: Physics-Based Humanoid Whole-Body Control for Learning Highly-Dynamic Skills — NeurIPS 2025",
+        "OneOcc: Semantic Occupancy Prediction for Legged Robots with a Single Panoramic Camera — CVPR 2026"
+      ]
+    },
+    {
+      "archetype": "Continual / lifelong / test-time adaptation for navigation",
+      "frequency_note": "10.9% of nav titles (ICLR26: 3; NeurIPS25: 2; ICML25: 1; ICML26: 1).",
+      "real_robot_evidence": "Mostly sim. ICLR26 reviewers: '18 tasks ... limited for truly lifelong learning'; for All-day Multi-scenes VLN, 'real-world deployment is superficial' (DeepRobotDog).",
+      "compute_scale": "Moderate. Adapter- or test-time updates on pretrained VLN backbones.",
+      "example_papers": [
+        "Lifelong Embodied Navigation Learning — ICLR 2026",
+        "All-day Multi-scenes Lifelong Vision-and-Language Navigation with Tucker Adaptation — ICLR 2026",
+        "Active Test-time Vision-Language Navigation — NeurIPS 2025",
+        "C-NAV: Towards Self-Evolving Continual Object Navigation in Open World — NeurIPS 2025",
+        "Test-Time Adaptation for Online Vision-Language Navigation with Feedback-based Reinforcement Learning — ICML 2025"
+      ]
+    },
+    {
+      "archetype": "LLM multi-agent / multi-robot cooperation framework",
+      "frequency_note": "2.9% of embodied titles; ICLR leans this way (EMOS, CaPo in 2025; SeqWM in 2026).",
+      "real_robot_evidence": "Often sim-only. EMOS runs in Habitat-MAS. SeqWM (model-based RL) deployed on two Unitree Go2-W robots.",
+      "compute_scale": "API-based (EMOS: GPT-4o API, ablations on a 519-episode subset) or single GPU (SeqWM timing on one RTX A6000).",
+      "example_papers": [
+        "EMOS: Embodiment-aware Heterogeneous Multi-robot Operating System with LLM Agents — ICLR 2025",
+        "CaPo: Cooperative Plan Optimization for Efficient Embodied Multi-Agent Cooperation — ICLR 2025",
+        "Empowering Multi-Robot Cooperation via Sequential World Models — ICLR 2026",
+        "Seeing Together, Acting Apart: Shared Environmental Understanding for Multi-Robot Navigation — NeurIPS 2026"
+      ]
+    }
+  ],
+  "legged_robot_papers_at_ccfa": [
+    "CityWalker — CVPR 2025: urban point-goal navigation learned from ~2,000 h of web video. Real Unitree Go1 + Livox Mid-360, 8-14 trials per case (forward/left/right), 50-100 m targets. SR 77.3% vs ViNT-FT 57.1%, NoMaD 42.9%.",
+    "Rethinking the Embodied Gap in VLN (VLN-PE) — ICCV 2025: physically realistic VLN on IsaacSim/GRUTopia with H1/G1/Aliengo/Jetbot. 34% relative SR drop sim -> physical. Real Go2 + D455, 14 indoor episodes, CMA SR 7.14 -> 28.57 after fine-tuning.",
+    "CogNav — ICCV 2025: LLM cognitive-state ObjectNav (GPT-4v), HM3D SR 62% -> 72.5%. Real tests on a custom mobile robot and a Unitree quadruped, shown qualitatively plus a supplementary video. Trial counts are in the supplement, not the main text.",
+    "Embodied Navigation Foundation Model (NavFoM) — ICLR 2026: cross-embodiment VLN/search/tracking model, 12.7M samples. 110 real test cases in a 5x5 m space across quadruped/humanoid/drone/wheeled robots. Inference offboard on an RTX 4090; a reviewer flagged this.",
+    "CE-Nav — ICLR 2026: IL-then-RL cross-embodiment local navigation (Go2, MagicDog, Spot, H1, quadrotor in sim). Real Go2 and MagicDog on Jetson Orin NX at >10 Hz; 40 trials x 3 scenarios vs DWA (SR 0.75) and NavRL (0.51).",
+    "UrbanVerse — ICLR 2026: real-to-sim from city-tour videos. Zero-shot sim2real on Unitree Go2 and a Coco wheeled robot over 16 unseen streets (avg 24.6 m, 3 repeats). Up to 89.7% SR; 337 m mission with 2 interventions.",
+    "Empowering Multi-Robot Cooperation via Sequential World Models (SeqWM) — ICLR 2026: Multi-Quadruped sim benchmark plus physical deployment on two Unitree Go2-W robots.",
+    "OneOcc — CVPR 2026: vision-only panoramic semantic occupancy for legged robots with Gait Displacement Compensation. Releases QuadOcc (real quadruped, 360°, 10 campus scenes, 24K frames, day/dusk/night). It is the only swept CCF-A title naming legged robots.",
+    "Let Humanoids Hike! (LEGO-H) — CVPR 2025; Gallant — CVPR 2026: humanoid (Unitree H1/G1) vision-based hiking and LiDAR-voxel locomotion/local navigation. Humanoids appear in CCF-A titles about 40x more often than quadrupeds.",
+    "Related but not CCF-A (2026 list): NaVILA — RSS 2025 (Go2 + Booster T1, 25 instructions x 3 repeats, 88% SR; R2R-CE SR 54.0). GVNav — ICRA 2025 (CCF-B), low-height quadruped VLN-CE with real quadruped.",
+    "Rejected example: L4Dog (quadruped BEV perception dataset) — ICLR 2026 submission, ratings 6/4/8, absent from proceedings. Reviewers: planar terrain only (no hills, stairs, slopes, elevators); perception-only, no VLN/VQA.",
+    "Base rate: across CVPR25, ICCV25, CVPR26, ICLR25/26, ICML25/26, NeurIPS25/26, IJCAI25 (~44.8k titles), legged platforms show up as testbeds inside nav/benchmark papers, not as title topics. AAAI and ACM MM were not swept (bot-blocked)."
+  ],
+  "low_compute_success_stories": [
+    "UniGoal — CVPR 2025: training-free universal goal navigation via LLM graph matching with local LLaMA-2-7B + LLaVA-v1.6-Mistral-7B in Habitat. No training at all. Both 7B models on one 8 GB GPU would need 4-bit weights (inference only).",
+    "ImagineNav — ICLR 2025: mapless VLM navigation. Only training is a ResNet-18 Where2Imagine module trained from scratch; the planner is the GPT-4o-mini API, chosen for low cost and latency.",
+    "EvoNav (History to Future) — CVPR 2026: zero-shot VLN-CE with F-CoT + H-CoE. One RTX 3090 plus Gemini-2.5-pro API. 2.4 GB inference GPU memory vs 12.5 GB for Open-Nav. Open Llama4-Maverick is comparable to GPT-4o. Real wheeled-robot test.",
+    "CogNav — ICCV 2025: training-free GPT-4v cognitive-state ObjectNav. +10.5 SR on HM3D, demonstrated on a real Unitree quadruped.",
+    "EfficientNav — NeurIPS 2025: on-device zero-shot ObjNav with small open LLMs. +11.1% SR on HM3D over GPT-4 baselines, 6.7x lower real-time latency. LLaVA-7b/LLaMA3.2-11b on one RTX A6000 and LLaVA-7b on a Jetson AGX Orin.",
+    "VLN-PE — ICCV 2025: the platform and analysis carried the paper. Baselines (CMA/Seq2Seq, ~36M params) train on one RTX 4090 in ~1 day. Real validation was only 14 Go2 episodes.",
+    "CE-Nav — ICLR 2026: every experiment on a single RTX 4090 desktop. No real robot training data (classical-planner data + RL refiner). Deployed on Go2/MagicDog at >10 Hz on Jetson Orin NX.",
+    "EMOS — ICLR 2025: LLM multi-agent framework using the GPT-4o API plus a new sim benchmark (Habitat-MAS). No model training, no real robot.",
+    "Benchmark-only accepts with no new training: CapNav — CVPR 2026 (45 real scenes, 473 tasks, 13 VLMs); NavBench — NeurIPS 2025 (3,200 QA + 432 episodes, real-robot pipeline); CitySeeker — ICLR 2026 (6,440 trajectories; best VLM 21.1%).",
+    "Training-free acceleration accepts: EfficientVLA and VLA-Cache — NeurIPS 2025 (manipulation VLAs). Zero-shot nav with no training: BeliefMapNav — NeurIPS 2025, TrajRAG and MSGNav — CVPR 2026 (compute not stated in abstracts).",
+    "Contrast (not 8 GB-feasible): NavFoM 4,032 H100-h; CityWalker 2x H100 30 h; MTU3D ~164 A100-h. NaVILA-8B inference is 18.5 GB FP16 and 8.6 GB at AWQ W4A16, so even quantized it slightly exceeds an 8 GB card."
+  ],
+  "reviewer_expectations": [
+    "Data source: public HF scrape (davidheineman/iclr-2026) of 19,629 ICLR 2026 OpenReview submissions. Embodied/robot subset: 799 submissions (676 non-withdrawn), 3,096 reviews. Acceptance comes from title-matching the ICLR 2026 proceedings, so counts are lower bounds. OpenReview itself was bot-blocked.",
+    "Baselines are the most common complaint. 'Baseline/comparison' appears in 53.9% of embodied reviews; in weakness text it is 33.9% for rejected vs 26.7% for accepted papers. CAPNAV (rejected): 'compared against only one baseline, VLMaps. This is a critical flaw.'",
+    "Novelty is the clearest accept/reject separator: 21.1% of rejected vs 13.2% of accepted weakness sections. Zero-shot nav rejections cite overlap with SG-Nav/UniGoal/WMNav (HGWM) and a hand-tuned 'strategy stack' (DP-Nav). An insight is needed, not module assembly.",
+    "Training-free claims get audited. SE-VLN reviewers: 'Unfair Comparisons' from relying on proprietary APIs, an 'omniscient oracle' (ground truth used in reflection), possible data leakage from the experience repository, and missing compute/cost discussion.",
+    "Benchmark breadth: single-scene or single-dataset evaluation is penalized (CAPNAV: one MP3D scene; SE-VLN: 'confined to indoor Matterport3D'). Accepted nav papers report several standard suites (R2R-CE, RxR-CE, HM3D, MP3D, HM3D-OVON, GOAT-Bench).",
+    "Real-world validation is requested often but does not decide acceptance alone: it appears in 25.4% of weakness sections for both accepted and rejected papers. Qualitative-only demos are criticized (JanusVLN: 'only qualitative results'; HELIOS: Spot runs 'lack side-by-side performance metrics').",
+    "Typical real-world scale in accepted CCF-A papers: VLN-PE 14 episodes; CityWalker 8-14 trials x 3 cases; NaVILA (RSS) 25 instructions x 3; CE-Nav 40 trials x 3 scenarios; UrbanVerse 16 routes x 3; NavFoM 110 cases. The norm is a success-rate table vs 1-3 baselines.",
+    "Deployability and latency: NavFoM reviewer flagged real-world 'remote inference using an RTX-4090 GPU ... too large ... on-board'; OmniNav reviewer: slow-module latency 'not quantitatively analyzed'. Latency/compute terms appear in 21.7% of embodied reviews.",
+    "Statistics: trials/seeds/variance is raised in 9.7% of embodied reviews (10.8% rejected vs 9.2% accepted). The NeurIPS checklist (mandatory, desk-reject if missing) requires error bars with their meaning, plus compute type, memory and total compute.",
+    "Ablations isolating each module are expected (raised in ~20% of reviews). HGWM reviewer: most gain came from 'adding any memory', so the cost/benefit of the novel module was unclear.",
+    "Failure analysis is rarely demanded (5.9% of reviews) but strong accepted papers include it: UrbanVerse has an appendix on failure cases; VLN-PE quantifies that NaVid spins near the goal for over 25 steps in 70% of episodes.",
+    "Legged datasets: reviewers expect terrain diversity that matches legged advantages (stairs, slopes, hills, elevators) and an embodied task beyond perception (VLN/VQA). Both were L4Dog criticisms.",
+    "Base rates (ICLR 2026, lower bound): overall acceptance 28.4%, embodied/robot 35.5%, navigation 44.2%. Mean review 5.62 accepted vs 4.05 rejected. Acceptance is 38.6% when the abstract claims real-world deployment vs 34.9% otherwise.",
+    "Videos and project pages are de facto standard: video/demo terms appear in 31.4% of embodied reviews. CogNav cites its supplementary video; most accepted nav papers link project pages."
+  ],
+  "whitespace": [
+    "Real egocentric legged data for embodied reasoning (not just perception). At CCF-A only OneOcc/QuadOcc exists (10 campus scenes, occupancy only). L4Dog was rejected for planar-only terrain and no VLN/VQA. A modest quadruped-height dataset with stairs/slopes plus nav/QA tasks targets a named gap.",
+    "Legged sim-to-real predictivity. VLN-PE's real validation is 14 Go2 episodes; EmbodiedSplat's sim-vs-real correlation (0.87-0.97) is wheeled Stretch only. A cheap paired sim/real protocol for a quadruped (phone-captured 3DGS of your lab, N matched episodes) is unclaimed.",
+    "Viewpoint- and gait-aware training-free agents. VLN-PE: low camera height collapses quadruped zero-shot CMA SR to 4.73. OneOcc shows gait jitter matters for perception. Zero-shot LLM/VLM agents (UniGoal, TrajRAG, MSGNav) assume Stretch/Habitat views. Explicit low-view and jitter handling is open.",
+    "Capability-conditioned closed loop. CapNav shows VLM navigation degrades as mobility constraints tighten, but tests no robot. A quadruped that can actually climb stairs/curbs is the natural platform for closing traversability reasoning -> execution.",
+    "Memory-bounded onboard agents. NavFoM and NaVILA run offboard (RTX 4090; NaVILA 8.6 GB even at W4A16); EfficientNav targets a 32 GB Jetson. Sub-8 GB VLN/ObjectNav with measured latency on legged hardware matches both reviewer asks and your hardware.",
+    "Stop and terminal-decision reliability. VLN-PE reports unreliable stopping on the real Go2 (stop threshold 1e-4) and NaVid goal-spinning in 70% of episodes. A failure taxonomy plus a lightweight fix (verifier or uncertainty-gated stop) on a real quadruped is under-served (inferred from swept papers).",
+    "Fair open-model evaluation. Reviewers penalize API-only comparisons (SE-VLN). EvoNav shows an open model can match GPT-4o. Running everything with small local VLMs and reporting cost/latency is cheap for you and pre-empts a known critique.",
+    "Legged real-to-sim eval sets. 3DGS nav benchmarks (SAGE-3D/InteriorGS, NavBench-GS, EmbodiedSplat) use wheeled or abstract agents. A small legged-view 3DGS eval set with measured sim-real correlation was not found among swept titles (inference, not exhaustive)."
+  ],
+  "venue_notes": [
+    "CCF 2026 list (PDF dated 2026-04-09, hosted by HDU; text extracted locally). AI conference class A: AAAI, NeurIPS, ACL, CVPR, ICCV, ICML, ICLR. Graphics/Multimedia class A: ACM MM, SIGGRAPH, VR, IEEE VIS. AI journal class A: AI, TPAMI, IJCV, JMLR.",
+    "IJCAI is class B in the 2026 list, alongside ECCV, ICRA and AAMAS. IROS is class C, T-RO is class B, and CoRL/RSS are not listed. Any future IJCAI paper therefore no longer counts as CCF-A under the 2026 list.",
+    "Venue fit from counts: zero-shot/training-free nav titles cluster at CVPR/ICCV/NeurIPS (10 of 10), with none at ICLR/ICML 2025-26. ICLR rewards trained foundation models with real-robot breadth.",
+    "Embodied-nav accepted titles per venue: CVPR25 8, ICCV25 15, CVPR26 28, ICLR25 4, ICLR26 17, ICML25 3, ICML26 11, NeurIPS25 13, NeurIPS26 20; IJCAI25 had only a survey. The trend is rising, with CVPR26 the largest."
+  ],
+  "method_caveats": [
+    "Counts come from official listings (openaccess.thecvf.com, proceedings.iclr.cc, proceedings.neurips.cc, proceedings.mlr.press v267, ijcai.org, icml.cc/neurips.cc virtual 2026) using title-keyword matching. These are lower bounds: many legged papers do not say 'quadruped' in the title.",
+    "Not swept: AAAI 2025/2026 (ojs.aaai.org), ACM MM 2025 (dl.acm.org) and DBLP were all bot-check blocked. CVPR 2026 and NeurIPS/ICML 2026 counts are from public listings as of 2026-10-19.",
+    "Review statistics come from a third-party HF scrape of OpenReview, not OpenReview directly. Keyword percentages are rough signals: 'video' and 'real-world' also match non-request mentions.",
+    "The web-search budget ran out partway through. Later facts come from direct fetches of known primary URLs (PDFs/abstract pages), not new searches. ICML 2025 MASQ/A2Perf (found via icml.cc search hits) were not in the PMLR v267 title list, so they are excluded.",
+    "Two different CVPR 2025 papers are titled 'Vid2Sim'. Only the urban-navigation one is cited here as an example; no compute figure is attached to it."
+  ],
+  "sources": [
+    "https://com.hdu.edu.cn/_upload/article/files/0e/3d/463a3fc348a7b71c17a258c370c2/b3118c2d-ea49-406c-b576-6f1b924ba1b1.pdf",
+    "https://openaccess.thecvf.com/CVPR2025?day=all",
+    "https://openaccess.thecvf.com/ICCV2025?day=all",
+    "https://openaccess.thecvf.com/CVPR2026?day=all",
+    "https://proceedings.iclr.cc/paper_files/paper/2025",
+    "https://proceedings.iclr.cc/paper_files/paper/2026",
+    "https://proceedings.neurips.cc/paper_files/paper/2025/vol38-main-conference",
+    "https://proceedings.mlr.press/v267/",
+    "https://www.ijcai.org/proceedings/2025/",
+    "https://icml.cc/virtual/2026/papers.html",
+    "https://neurips.cc/virtual/2026/papers.html",
+    "https://huggingface.co/datasets/davidheineman/iclr-2026",
+    "https://neurips.cc/public/guides/PaperChecklist",
+    "https://arxiv.org/html/2507.13019v1",
+    "https://arxiv.org/html/2411.17820v2",
+    "https://arxiv.org/html/2509.12129",
+    "https://arxiv.org/html/2412.04453",
+    "https://arxiv.org/abs/2502.19024",
+    "https://proceedings.iclr.cc/paper_files/paper/2026/file/514bdfb12b318ad02c6f28dc68f2feea-Paper-Conference.pdf",
+    "https://proceedings.iclr.cc/paper_files/paper/2026/file/bc18c538d983cea434f9281148d43e1e-Paper-Conference.pdf",
+    "https://proceedings.iclr.cc/paper_files/paper/2026/file/16415eed5a0a121bfce79924db05d3fe-Paper-Conference.pdf",
+    "https://proceedings.neurips.cc/paper_files/paper/2025/file/067437c6d5d0369b6d09200bef89715b-Paper-Conference.pdf",
+    "https://openaccess.thecvf.com/content/CVPR2026/papers/Shi_OneOcc_Semantic_Occupancy_Prediction_for_Legged_Robots_with_a_Single_CVPR_2026_paper.pdf",
+    "https://openaccess.thecvf.com/content/CVPR2026/papers/Dai_History_to_Future_Evolving_Agent_with_Experience_and_Thought_for_CVPR_2026_paper.pdf",
+    "https://openaccess.thecvf.com/content/ICCV2025/papers/Cao_CogNav_Cognitive_Process_Modeling_for_Object_Goal_Navigation_with_LLMs_ICCV_2025_paper.pdf",
+    "https://openaccess.thecvf.com/content/CVPR2025/papers/Yin_UniGoal_Towards_Universal_Zero-shot_Goal-oriented_Navigation_CVPR_2025_paper.pdf",
+    "https://proceedings.iclr.cc/paper_files/paper/2025/file/eb261df4322a8bd0a73093c4d8a0d02d-Paper-Conference.pdf",
+    "https://github.com/apexrl/awesome-rl-for-legged-locomotion",
+    "https://github.com/userElaina/ijcbi"
+  ]
+}

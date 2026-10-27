@@ -1,0 +1,5 @@
+| Method / run | episodes | SR (95% CI) | SPL |
+|---|---|---|---|
+| SG-Nav (LLaMA-7B) [published, val 1800] | 1800 | 47.3 | 23.7 |
+| CoW (OWL-ViT) [published] | 1800 | 27.5 | 17.2 |
+| CogNav (GPT-4V) [published, ICCV'25] | 1800 | 54.6 | 24.3 |

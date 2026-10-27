@@ -1,0 +1,100 @@
+{
+  "identified": false,
+  "candidates": [
+    {
+      "name": "GENISOM 铜锤 M1 series ('中狗 M1 系列' in the official SDK; a.k.a. Tongchui M1 / Genisom M1)",
+      "manufacturer": "GENISOM AI / ZsiBot (智身科技), offices Beijing Haidian and Suzhou Wuzhong; claims >15,000 robots mass-produced by Jun 2026. FCC ID 2BVPE-ZSM1 'Bionic Quadruped Robot'. No GENISOM source uses the prefix 'LTR'.",
+      "specs": "Medium-size dog. Wheel-foot (16 DOF, joints fl1-fl4 etc.) and point-foot 'F' variants; SDK DeviceTypes M1, M1F, M1_PRO, M1F_PRO, M1_ULTRA, M1F_ULTRA, M1_AIR, M1F_AIR. Datasheet: ~93x48x58 cm standing, ~30 kg (legged, no battery), 30 kg continuous payload, legged >4 m/s, wheeled >8 m/s, step >25 cm, obstacle 80 cm, slope >45 deg, 20 Ah dual hot-swap batteries, >3.5 h loaded (site: up to 5 h/29 km unloaded), IP67, -20 to 55 C. Price tier: USD 15,000 at US reseller Maverick. Resellers give differing dimensions/endurance.",
+      "sensors": "Official page: 4 fisheye cameras + forward stereo camera; Pro adds UWB, mic/speaker, LiDAR-vision fusion following; Ultra adds 720-deg Omni-Panorama (fisheye surround, BEV temporal fusion, OCC). Aparobot: dual 96-line LiDAR front/rear, front/rear wide-angle cameras, ultrasonic, optional RTK GNSS. SDK exposes IMU, illuminance, camera_front/camera_back. Exact LiDAR model unconfirmed.",
+      "onboard_compute": "Not published. SDK network doc: Motion Control Host (192.168.168.168) plus a separate Navigation Host (192.168.168.100: mapping, localization, navigation, obstacle avoidance) on an internal switch; 2 external Ethernet ports; WiFi AP 192.168.234.1. SDK libs for x86_64 and aarch64. Open nav stack targets 'NX/3588' platforms (not confirmed for M1). Payload power 5/12/24/48 V, 480 W; Gigabit Ethernet, USB, serial.",
+      "sdk_interface": "genisom_robot_sdk v0.2.2 (GEN2, 'M1 and later'): C++ only, Ubuntu 22.04, GCC 11.4; UDP 8082 / WebSocket 8081 to the Motion Control Host; raw protocol PDF v1.3.0. High-level only: posture modes (StandUp, Stair, Climb, Slim, DSB, Sand, PosControl...), Move(lateral, forward, yaw) in [-1,1], held 1 s, send at 10-20 Hz; PosMove body pose. Telemetry: RobotState 1 Hz, IMU up to 100 Hz, odometry 50 Hz, speed 1-50 Hz, joint pos/vel/torque read-only. No joint-command API. Aparobot labels the software closed source.",
+      "sim_assets": "No public M1 URDF: genisom_model only has zsl-1/zsl-1w (L1). MATRiX v1.1.2 (MuJoCo 500 Hz + UE5, ROS2-compatible data via Zenoh) bundles MJCF 'zgws'/'zgwt' (preview image zsm-1w, likely the M1 wheel-foot) with a built-in Passive/Stand/Walk controller, plus go2/go2w; it simulates RGB, depth, fisheye, Mid-360 and Airy LiDAR. Navigation: genisom_roamerx_open (ROS2 Humble, Nav2). VLN: genisom_vln.",
+      "used_in_papers": "No research paper using the M1 found. Vendor claims: only finisher of the autonomous-navigation event at the 2026 Yizhuang robot challenge; international debut at ICRA 2026 (Vienna, Jun 2026).",
+      "evidence_urls": [
+        "https://www.genisomai.com/product-robot/M1",
+        "https://cdn.robotaigeek.com/research-sources/genisom/genisom-m1-datasheet-v1.1-en.pdf",
+        "https://github.com/zsibot/genisom_robot_sdk",
+        "https://raw.githubusercontent.com/zsibot/genisom_robot_sdk/HEAD/README_zh.md",
+        "https://raw.githubusercontent.com/zsibot/genisom_robot_sdk/HEAD/docs/en/sdk_api_capability_en.md",
+        "https://raw.githubusercontent.com/zsibot/genisom_robot_sdk/HEAD/docs/en/sdk_client_api_en.md",
+        "https://raw.githubusercontent.com/zsibot/genisom_robot_sdk/HEAD/docs/en/sdk_network_en.md",
+        "https://raw.githubusercontent.com/zsibot/genisom_robot_sdk/HEAD/docs/en/sdk_type_en.md",
+        "https://github.com/zsibot/matrix",
+        "https://raw.githubusercontent.com/zsibot/matrix/HEAD/docs/Robots_and_Maps.md",
+        "https://raw.githubusercontent.com/zsibot/matrix/HEAD/docs/Motion_Control.md",
+        "https://github.com/zsibot/genisom_roamerx_open",
+        "https://github.com/zsibot/genisom_vln",
+        "https://github.com/zsibot/genisom_model",
+        "https://www.aparobot.com/robots/genisom-m1",
+        "https://www.maverickdrone.com/products/genisom-m1-quadruped-wheeled-robot",
+        "https://techtimes.com/articles/318149/20260610/genisom-debuts-m1-quadruped-robot-full-stack-embodied-ai-platform-icra.htm",
+        "https://fccid.io/2BVPE-ZSM1",
+        "https://www.genisomai.com/education-research"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "name": "Lightyear M1 (wheeled quadruped with parallel-joint drive)",
+      "manufacturer": "Lightyear Technology / LightYear Robotics, a China-based embodied-intelligence startup (CB Insights). Reading 'LTR' as LightYear Robotics is a guess; no source uses that abbreviation. Chinese name, official site and SDK not found.",
+      "specs": "Wheel-legged quadruped built on in-house Parallel Joint Drive Modules; claims ~40% higher force efficiency; dual mode (wheel cruising / legged gait); unveiled ~Oct 2025. Targets outdoor inspection, disaster exploration, last-mile transport. Weight, DOF, speed, payload and price not published in sources found.",
+      "sensors": "'Intelligent perception' that tells grass, gravel and steep slopes apart and auto-selects locomotion mode; no sensor hardware named.",
+      "onboard_compute": "Unknown (not published).",
+      "sdk_interface": "Unknown; no public SDK, docs or GitHub found.",
+      "sim_assets": "None found (no URDF/MJCF).",
+      "used_in_papers": "None found.",
+      "evidence_urls": [
+        "https://robohorizon.com/en-us/news/2025/10/lightyear-m1-a-wheeled-quadruped-with-parallel-joints/",
+        "https://www.cbinsights.com/company/lightyear-robotics"
+      ],
+      "confidence": "low"
+    },
+    {
+      "name": "Corgi-M1 (open-source DIY quadruped, MOCO8 controller)",
+      "manufacturer": "Community open-source project (Gitee user tinymal); not a commercial 'M1 series'.",
+      "specs": "Small hobby/education quadruped with ODrive motor nodes on CAN; force control up to 500 Hz. Price and size not found.",
+      "sensors": "Onboard 9-axis IMU only (per repo description).",
+      "onboard_compute": "Raspberry Pi main controller with PiHat carrier board; STM32 with two CAN buses to ODrive nodes; USB virtual serial or WiFi to a host PC.",
+      "sdk_interface": "Open-source code with a joint-level force-control loop up to 500 Hz on the controller. No ROS2 interface mentioned.",
+      "sim_assets": "Webots simulation project (MOCO8_ML_Webots).",
+      "used_in_papers": "None found.",
+      "evidence_urls": [
+        "https://gitee.com/tinymal/MOCO8_ML_Webots"
+      ],
+      "confidence": "low"
+    }
+  ],
+  "proxy_sim_models": [
+    "GENISOM MATRiX v1.1.2 (MuJoCo 500 Hz + UE5; ROS2-compatible data over Zenoh; Linux x86_64, >=16 GB RAM): MJCF zgws/zgwt (M1-class wheel-foot), xgb/xg2/xgw/xgw2 (L-series), go2, go2w; simulates RGB, depth, fisheye, Mid-360, Airy LiDAR. The only simulator found with an M1-class model. https://github.com/zsibot/matrix",
+    "MuJoCo Menagerie MJCF quadrupeds: Unitree A1, Go1, Go2 (12 DoF), ANYmal B, ANYmal C, Google Barkour v0/vB, Boston Dynamics Spot (19 DoF incl. arm); no wheeled quadruped. https://github.com/google-deepmind/mujoco_menagerie",
+    "MuJoCo Playground (MJX/JAX or MuJoCo Warp, GPU-batched; arXiv 2502.08844 claims zero-shot sim-to-real and training in minutes on one GPU): locomotion envs go1, spot, barkour plus humanoids g1, h1, t1, berkeley_humanoid, op3, apollo; needs jax[cuda12]. https://github.com/google-deepmind/mujoco_playground",
+    "Isaac Lab: Isaac-Velocity-Flat/Rough for ANYmal B/C/D, Unitree A1/Go1/Go2, Spot (flat only); Isaac-Navigation-Flat-Anymal-C-v0; no wheeled quadruped. Isaac Sim minimum: RTX 4080 16 GB, 32 GB RAM, Ubuntu 22.04/24.04. https://isaac-sim.github.io/IsaacLab/main/source/overview/environments.html",
+    "legged_gym (ETH; Isaac Gym Preview 3, Python 3.6-3.8, PyTorch 1.10 cu113): envs a1, anymal_b, anymal_c, cassie; sim dt 0.005 s x decimation 4 = 50 Hz policy, PD position actions; migrated to Isaac Lab, limited updates. https://github.com/leggedrobotics/legged_gym",
+    "Unitree: unitree_rl_gym (Isaac Gym, then MuJoCo sim2sim, then real) for Go2, G1, H1, H1_2; unitree_rl_lab (Isaac Lab 2.3, Isaac Sim 5.1) for Go2, H1, G1-29dof. https://github.com/unitreerobotics/unitree_rl_gym , https://github.com/unitreerobotics/unitree_rl_lab",
+    "unitree_mujoco: MuJoCo + unitree_sdk2 DDS (C++/Python), same LowCmd/LowState interface as the real robots; MJCF a2, as2, b2, b2w, g1, go2, go2w, h1, h1_2, h2, r1 (includes wheeled Go2-W and B2-W). https://github.com/unitreerobotics/unitree_mujoco",
+    "Genesis (pip genesis-world, Python 3.10-3.13): examples/locomotion go2_train.py/go2_env.py with Go2 URDF, dt 0.02 s ('control frequency on real robot is 50hz'), kp 20, kd 0.5; LiDAR and contact-force sensors. https://github.com/Genesis-Embodied-AI/Genesis",
+    "DEEP Robotics rl_training (Isaac Lab 2.3.2, Isaac Sim 5.1.0, Python 3.11): Lite3, M20, M20S (LYNX M20, wheel-legged), DR02, S10 envs; MuJoCo/real deploy in separate repos; the older Lite3_rl_training (legged_gym) is unmaintained. https://github.com/DeepRoboticsLab/rl_training",
+    "Xiaomi cyberdog_sim: Gazebo + ROS2 Galactic, LCM-to-ROS2 bridge, recommended on Ubuntu 20.04. The only stack here that matches the user's current OS without Docker. https://github.com/MiRoboticsLab/cyberdog_sim"
+  ],
+  "research_interface_notes": [
+    "The GENISOM M1 public SDK v0.2.2 is high-level only: Move() velocity ratios held 1 s (send at 10-20 Hz), PosMove body pose, ~14 posture modes; joint position/velocity/torque are read-only. With no joint-command API, RL locomotion/sim2real on the real M1 needs vendor-granted low-level access.",
+    "M1 data for agents/perception: RobotState 1 Hz, IMU up to 100 Hz, odometry (world/body velocity, position) 50 Hz, speed 1-50 Hz, front/back cameras (bitrate and take-photo APIs). Move() caps: forward 1.0/2.0/3.0 m/s (Low/Medium/High), lateral 0.5 m/s, yaw up to 1.5 rad/s.",
+    "The M1 Navigation Host (192.168.168.100) handles mapping, localization and obstacle avoidance. Open genisom_roamerx_open: ROS2 Humble, Nav2 NavFn + MPPI, fast_gicp/NDT relocalization on PCD maps, RL_TRACK_VELOCITY or RL_TRACK_PATH motion modes over UDP/LCM; hardware deployment docs are still TODO.",
+    "High-level access (velocity commands + cameras/LiDAR/odometry) supports VLN/ObjectNav, LLM/VLM agent task planning, open-vocabulary 3D semantic mapping, active perception, failure detection/recovery, multi-robot coordination and safe navigation. Locomotion stays a black box, so contributions sit in perception, memory, planning and reasoning.",
+    "genisom_vln is a ready baseline: MATRiX-ROS2-ZMQ bridge, UniGoal zero-shot VLN with text or image goals, backends SmolVLM2-256M (HuggingFace), Ollama (e.g. gemma3:4b) or DashScope; discrete forward/left/right/stop via mc_sdk_bridge; default robot xgb (L-series); the README recommends an RTX 4090 for local LLMs.",
+    "Low-level joint access (e.g. Unitree Go2/Go2-W LowCmd over DDS) enables RL locomotion, wheel-leg whole-body control and sim2real. Typical rates: policy 50 Hz (legged_gym 0.005 s x 4; Genesis 0.02 s), joint command loop 500 Hz (unitree_sdk2 go2_low_level dt 0.002 s), MATRiX physics 500 Hz.",
+    "Wheel-leg precedent: arXiv 2606.26313 (Eisman, Lam, Sonnino, Borrelli; AVEC 2026) on Unitree Go2-W racing: offline raceline + LTR-minimizing MPC + whole-body RL on all 16 actuators; mean load-transfer ratio down up to 44%, best lap 8.7% faster. Here LTR means Load Transfer Ratio, not a brand.",
+    "A feasible split for one RTX 5060 8 GB: use the real M1 for high-level validation (navigation, agents, perception) and do locomotion learning only in simulation on proxies (Go2/Go2-W in unitree_mujoco, MuJoCo Playground, Genesis). Isaac Lab fits poorly: Isaac Sim's minimum is 16 GB VRAM and Ubuntu 22.04+.",
+    "Software mismatch: the user runs Ubuntu 20.04/Python 3.8, but the GENISOM SDK, RoamerX and genisom_vln target Ubuntu 22.04/ROS2 Humble; Genesis needs Python >=3.10; Playground needs jax[cuda12]. Use Docker 22.04/24.04 images or upgrade the OS. Isaac Gym's PyTorch 1.10/cu113 likely lacks Blackwell sm_120 kernels (inference, unverified).",
+    "GENISOM's 万有引力计划 offers researchers real-robot, project and research resources through an application form. Ask there for a low-level SDK, an M1 URDF/MJCF and rights to deploy code on the Navigation Host. Aparobot lists the M1 software as closed source."
+  ],
+  "questions_for_user": [
+    "请提供机身铭牌、包装或说明书的照片，以及厂家全称和配套手机 App 的名称。'LTR' 是品牌、经销商、型号前缀还是贴纸？是不是智身科技 GENISOM 的 '铜锤 M1'（中狗 M1 系列）？",
+    "具体是哪个版本：轮足（M1）还是点足（M1F）？标准版、Pro（激光版）、Ultra（全景版）还是 Air？机器人系统版本号是多少（例如 v0.3.1）？",
+    "厂家是否开放关节级底层接口：能否直接下发关节位置或力矩指令，频率是多少？还是只有 Move() 速度指令和姿态切换？这决定能不能做 RL 运动控制和 sim2real。",
+    "机上实际装了哪些传感器：激光雷达型号（Livox Mid-360、RoboSense Airy 或其他），鱼眼、双目、深度相机的型号与分辨率？能否拿到原始点云和图像（ROS2 话题或 RTSP 流）？",
+    "导航主机是什么平台（Jetson Orin NX、RK3588 还是 x86）？有没有 SSH/root 权限，能否在机上运行自己的 ROS2 节点、Docker 或 GPU 推理？能否通过网口外挂一台 Jetson 或笔记本？",
+    "是否拿到过 URDF/MJCF 模型，或 MATRiX 里 M1（zgws/zgwt）模型的使用许可？课题组是否已经和厂家有合作，比如万有引力计划？",
+    "实验条件：是否只有一台机器狗？场地是室内还是室外，大概多大？有没有动捕、RTK 或其他真值设备用于评估？",
+    "能否使用云端大模型 API（如 DashScope、OpenAI、DeepSeek），预算多少？目标是哪个 CCF-A 会议或期刊，截稿时间是什么时候？"
+  ]
+}

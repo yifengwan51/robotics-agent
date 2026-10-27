@@ -1,0 +1,12 @@
+| Method | Base | Common | Complex | Visual | Long | Avg |
+|---|---|---|---|---|---|---|
+| GPT-4o (API) [EmbodiedBench] | -- | -- | -- | -- | -- | 57.7 |
+| Qwen2.5-VL-7B (API) [EmbodiedBench] | -- | -- | -- | -- | -- | 20.3 |
+| InternVL3-8B [EmbodiedBench] | -- | -- | -- | -- | -- | 29.3 |
+| Qwen3.5-9B + EMHO (held-out) [EMHO] | 66.7 | 60.0 | 65.0 | 40.0 | 51.7 | 56.7 |
+| Qwen3-VL-4B-Instruct-AWQ + EB prompt | -- | -- | -- | -- | -- | -- |
+| Qwen3-VL-4B-Instruct-AWQ + S2M (ours) | -- | -- | -- | -- | -- | -- |
+| Qwen2.5-VL-3B-Instruct-AWQ + EB prompt | -- | -- | -- | -- | -- | -- |
+| Qwen2.5-VL-3B-Instruct-AWQ + S2M (ours) | -- | -- | -- | -- | -- | -- |
+| Qwen3.5-4B-AWQ + EB prompt | -- | -- | -- | -- | -- | -- |
+| Qwen3.5-4B-AWQ + S2M (ours) | -- | -- | -- | -- | -- | -- |

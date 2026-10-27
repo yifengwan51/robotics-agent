@@ -1,0 +1,28 @@
+\section{Related Work}
+\label{sec:related}
+
+\noindent\textbf{MLLM agents for embodied tasks.}
+EmbodiedBench~\cite{yang2025embodiedbench} evaluates MLLM agents on high-level planning and low-level control. It
+reports a large gap between frontier models and $\le$8B open models, especially when the target is initially out
+of view. One line of work closes the gap by training small VLMs on embodied trajectories or with
+RL~\cite{chen2025transforming,wang2025seenav,zhang2025embodiedx,wang2025vagen}, which needs task-specific data and
+substantial compute. Training-free methods add memory~\cite{ma2026brainmem}, tools~\cite{zhou2026enabling},
+visual prompts~\cite{wang2025seenav}, or a harness searched automatically from experience
+traces~\cite{lee2026emho}. Their reported gains use 9--27B or API models. \ours is training-free, uses no
+privileged rendering, and targets 3--4B local models. It also differs in \emph{where} the VLM is used: it answers
+only per-image semantic questions and never chooses motions.
+
+\noindent\textbf{Zero-shot object navigation with foundation models.}
+Modular ObjectNav agents combine open-vocabulary perception with maps and
+planners~\cite{gadre2022cows,yokoyama2023vlfm,yin2024online,yin2025unigoal,cao2024cognav}, usually with separate
+detectors and an LLM or VLM for frontier or scene-graph reasoning. Some instead let a VLM choose among
+depth-derived directions~\cite{goetting2024navigation}. \ours shares the map-and-planner structure but is designed
+for \emph{small} VLMs. One local model does recognition, verification and grounding, and the contribution lies in
+turning noisy per-frame answers into reliable 3D evidence.
+
+\noindent\textbf{Uncertainty, verification and visual prompting.}
+Calibrated uncertainty can decide when to ask for help~\cite{ren2023robots} or when to stop
+exploring~\cite{ren2024explore}. Visual marks elicit grounding from VLMs~\cite{yang2023mark,nasiriany2024pivot}. We
+find that for a 4B model the binding constraint on appearance-only goals is \emph{recall}, not the form of
+verification (\cref{sec:diagnosis}), so \ours spends extra calls on magnified search and multi-view evidence
+rather than re-ranking.

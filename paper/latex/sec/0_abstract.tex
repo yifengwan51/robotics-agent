@@ -1,0 +1,15 @@
+\begin{abstract}
+Embodied agents built on multimodal LLMs navigate well when the model is a frontier API, but small open models
+that fit on a robot or an 8\,GB GPU fail: on EB-Navigation, 7--8B models reach 14--29\% success and almost never
+find a target that starts behind them. We show that the failure is not recognition. A 4B model often localizes
+the target in the image, and depth places its box within \TODO{0.18}\,m of the true object, but the model cannot turn
+that recognition into metric actions. Given the target position, a geometric planner over the same action set
+succeeds in \TODO{91.7}\% of episodes. We introduce \ours, a training-free agent that restricts the VLM to semantic
+questions about the current image (is the target visible, which box is it) and gives every metric decision to
+geometry. Detections are fused into 3D hypotheses with view-diverse positive and negative evidence; an
+optimal-search index decides which hypothesis to visit; and magnified, crop-verified search is triggered only
+when evidence is weak. With a 4-bit Qwen3-VL-4B on a single consumer GPU, \ours reaches \TODO{X}\% average
+success on the EB-Navigation test set, against \TODO{Y}\% for the same model with the benchmark's prompting and
+57.7\% for GPT-4o. It reaches \TODO{R}\% on RoboTHOR ObjectNav with an explicit stop action, without training
+or privileged state.
+\end{abstract}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.356921208518881, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.08205127716064453, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.2212879119429503, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.0974113941192627, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.095987212438527, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.48 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.1156623363494873, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.9829787704491355, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.48 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.12977313995361328, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8844753157795118, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.53 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.14516448974609375, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8028559594304663, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.53 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.16100358963012695, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.46 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.17985057830810547, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveBack is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (6 left, residual 0.46 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.1947166919708252, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveLeft is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.21337532997131348, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.22954082489013672, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.24876856803894043, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.2692990303039551, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.28699517250061035, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.3029510974884033, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.3186073303222656, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.3336966037750244, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.3514096736907959, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.37573909759521484, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.4021918773651123, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.4261953830718994, "task_success": 0.0, "last_action_success": false, "action_id": 0}

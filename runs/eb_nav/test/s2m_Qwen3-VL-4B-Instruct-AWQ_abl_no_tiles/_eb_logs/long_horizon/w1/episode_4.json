@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.5858180522918701, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.8042683601379395, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 1.6078987121582031, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1148340022136427, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, -0.45]}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 1.9160361289978027, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.1148340022136427, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, -0.45]}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 2.2475087642669678, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.885732436265341, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.17], "score": 0.99}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 2.790297031402588, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.740612810112479, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.48, 0.16], "score": 1.99}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 3.3951823711395264, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.602780339240773, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.46, 0.16], "score": 2.99}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 4.061214923858643, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.41241088717469, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 4.6833226680755615, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2461048563144117, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 4.91222071647644, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.151393502399162, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 5.157860517501831, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0717145327675413, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 5.48637580871582, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.008857436170717, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 5.719857454299927, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.008857436170717, "env_feedback": "Last action MoveLeft is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 5.9450438022613525, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9644376453735477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 6.089318513870239, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9397222339235367, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 6.409203767776489, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.7403139988777203, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 6.742230176925659, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.5410591445452035, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 6.967839956283569, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.5410591445452035, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.15], "score": 3.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 7.211233139038086, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.242625841315522, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.44, 0.13], "score": 4.55}, "instruction": "navigate to the Pot in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 7.904491424560547, "task_success": 0.0, "last_action_success": true, "action_id": 0}

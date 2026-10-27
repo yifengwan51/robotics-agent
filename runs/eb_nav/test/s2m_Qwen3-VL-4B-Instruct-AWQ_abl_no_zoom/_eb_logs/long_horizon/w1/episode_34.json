@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.2115968793625203, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.95, -2.41], "score": 1.0}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.0001137256622314, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4552478537347477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.95, -2.41], "score": 1.0}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.248292922973633, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.6223832387485966, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.95, -2.41], "score": 1.0}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 2.488891839981079, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.6223832387485966, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.95, -2.41], "score": 1.0}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 2.790545701980591, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4707304316518135, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.95, -2.41], "score": 0.6}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 3.03855562210083, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.4707304316518135, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 3.3088481426239014, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.2959137020810774, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.1, 1.39], "score": 1.0}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 5.764117240905762, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0395170531448397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.1, 1.39], "score": 0.6}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.374809265136719, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.0395170531448397, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 7.037824869155884, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.0395170531448397, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.95, 1.85]}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 8.186763525009155, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.873280593052794, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.12, 1.42], "score": 1.2}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 10.17182993888855, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6327472540148245, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.12, 1.42], "score": 0.8}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 10.830034255981445, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.47960394256137, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.11, 1.41], "score": 0.88}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 11.493025541305542, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.333562380590212, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.1, 1.41], "score": 1.82}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 12.12324047088623, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1960398581605958, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.1, 1.41], "score": 2.44}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 12.74508285522461, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.068736023647858, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.09, 1.41], "score": 3.12}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 13.314061403274536, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9536495117678796, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.09, 1.41], "score": 3.12}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 13.573111534118652, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.7091096390921305, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.09, 1.41], "score": 3.12}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 13.822364330291748, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.556897055280245, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.09, 1.42], "score": 3.85}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 14.38656210899353, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4166160952036164, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.08, 1.42], "score": 4.42}, "instruction": "navigate to the DeskLamp in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 14.94795823097229, "task_success": 0.0, "last_action_success": true, "action_id": 2}

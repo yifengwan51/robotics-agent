@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.141300916671753, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.827970964372817, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.6613965034484863, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 3.1060843467712402, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.020697746851777, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 4.159649848937988, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.020697746851777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 5.11149787902832, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.020697746851777, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 5.6223204135894775, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.827970964372817, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 6.068061828613281, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.596413612365723, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5409895256779027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 0.6}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 7.0555126667022705, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5409895256779027, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 7.512084722518921, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.827970964372817, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 9.208785772323608, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.020697746851777, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 10.878151655197144, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.020697746851777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 12.206929922103882, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.214313246525459, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 14.35757064819336, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5060807158515326, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 16.637581825256348, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.799130720157365, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 18.066176891326904, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.799130720157365, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 20.228996515274048, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.7489721604899646, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 21.619514226913452, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.9474025796189016, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 23.106475353240967, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.9280511473357596, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 24.40796995162964, "task_success": 0.0, "last_action_success": true, "action_id": 0}

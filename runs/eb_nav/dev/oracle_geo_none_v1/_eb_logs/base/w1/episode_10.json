@@ -1,0 +1,30 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.726853732606298, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 11 moves, residual 0.79 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.04883718490600586, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.538134814609682, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 10 moves, residual 0.84 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.13219332695007324, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2586997349542646, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 9 moves, residual 0.89 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.18082547187805176, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0756015028109336, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 8 moves, residual 0.84 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.2276458740234375, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.807682966212834, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 7 moves, residual 0.89 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.27761030197143555, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5515519984567263, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 6 moves, residual 0.84 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.31881117820739746, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.314119292834257, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 5 moves, residual 0.79 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.36544275283813477, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1074770616082616, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 4 moves, residual 0.74 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.40296196937561035, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.1074770616082616, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "face target"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.4271087646484375, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9581782506681079, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 5 moves, residual 0.69 m"}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.465573787689209, "task_success": 1.0, "last_action_success": true, "action_id": 0}

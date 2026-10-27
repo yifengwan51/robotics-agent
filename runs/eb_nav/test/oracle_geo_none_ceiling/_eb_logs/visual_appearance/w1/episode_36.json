@@ -1,0 +1,33 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5290649149531084, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.49 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 1, "episode_elapsed_seconds": 0.0245819091796875, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3422141169287367, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.49 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 2, "episode_elapsed_seconds": 0.0418701171875, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1577220935933172, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.49 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 3, "episode_elapsed_seconds": 0.05619645118713379, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8869185461059532, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 4, "episode_elapsed_seconds": 0.07568955421447754, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8869185461059532, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 5, "episode_elapsed_seconds": 0.08956575393676758, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.803697947638293, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 6, "episode_elapsed_seconds": 0.10287284851074219, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.803697947638293, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 7, "episode_elapsed_seconds": 0.11855936050415039, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.529059578810457, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 8, "episode_elapsed_seconds": 0.1332852840423584, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3519692734721944, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 9, "episode_elapsed_seconds": 0.1468491554260254, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1822092842259913, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 10, "episode_elapsed_seconds": 0.15982484817504883, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9499029142555969, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.54 m)"}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 11, "episode_elapsed_seconds": 0.17309165000915527, "task_success": 1.0, "last_action_success": true, "action_id": 0}

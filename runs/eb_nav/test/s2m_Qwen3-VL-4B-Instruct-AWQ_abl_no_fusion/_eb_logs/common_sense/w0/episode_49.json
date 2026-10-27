@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.734119868275097, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.67, 0.88], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.01688814163208, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.513799857502935, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.64, 0.85], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 2.2258360385894775, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3766310092480745, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.66, 0.87], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.9632387161254883, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.189098713151362, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.67, 0.81], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.551974296569824, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.078782926171564, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.85, 0.72], "score": 0.95}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.110222339630127, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9403908442012707, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.85, 0.72], "score": 0.95}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.364164352416992, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9403908442012707, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 4.940354108810425, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9403908442012707, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 6.496020555496216, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.66982300479876, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.61, -0.01], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 7.064430236816406, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.411205480714847, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.63, -0.04], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 7.73052453994751, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1724730122903473, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.05], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 8.313950061798096, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.411205480714847, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.6, -0.08], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 8.924891710281372, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.66982300479876, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.05], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 9.38893461227417, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8288058106965455, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.03], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 9.900033950805664, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9532909191966226, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.03], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 10.137305736541748, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.161380853346897, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.03], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 10.365808963775635, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.311359332227859, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.03], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 11.173176765441895, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.549235903793855, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -0.03], "score": 1.0}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 11.510350227355957, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.549235903793855, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 12.30264949798584, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.311359332227859, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.05, 1.95]}, "instruction": "I need a light-emiting device on my desk to provide light for my work area. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 14.464860200881958, "task_success": 0.0, "last_action_success": true, "action_id": 2}

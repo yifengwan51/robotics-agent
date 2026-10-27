@@ -1,0 +1,27 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.391606103155337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.43 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 1, "episode_elapsed_seconds": 0.017571687698364258, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1470885733059752, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.43 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 2, "episode_elapsed_seconds": 0.032898902893066406, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.992518205048491, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.43 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 3, "episode_elapsed_seconds": 0.04650068283081055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.777734046120841, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.43 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 4, "episode_elapsed_seconds": 0.0609433650970459, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5907695693607662, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.43 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 5, "episode_elapsed_seconds": 0.07610154151916504, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.486838032824445, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.51 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 6, "episode_elapsed_seconds": 0.09096455574035645, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.403861441386688, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.51 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 7, "episode_elapsed_seconds": 0.10341358184814453, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1285681125486628, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.51 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 8, "episode_elapsed_seconds": 0.11675691604614258, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9533577738553682, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.51 m)"}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 9, "episode_elapsed_seconds": 0.13141798973083496, "task_success": 1.0, "last_action_success": true, "action_id": 2}

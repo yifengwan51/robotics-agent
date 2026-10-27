@@ -1,0 +1,29 @@
+base 1/30 phrase='Pot' (2s, 8 calls)
+base 2/30 phrase='Pot' (4s, 16 calls)
+base 3/30 phrase='Bread' (6s, 24 calls)
+base 4/30 phrase='Microwave' (8s, 32 calls)
+base 5/30 phrase='CoffeeMachine' (9s, 40 calls)
+base 6/30 phrase='GarbageCan' (11s, 48 calls)
+base 7/30 phrase='CoffeeMachine' (13s, 56 calls)
+base 8/30 phrase='Bowl' (14s, 64 calls)
+base 9/30 phrase='GarbageCan' (16s, 72 calls)
+base 10/30 phrase='Toaster' (18s, 80 calls)
+base 11/30 phrase='Box' (20s, 88 calls)
+base 12/30 phrase='FloorLamp' (22s, 96 calls)
+base 13/30 phrase='FloorLamp' (24s, 104 calls)
+base 14/30 phrase='Laptop' (26s, 112 calls)
+base 15/30 phrase='GarbageCan' (28s, 120 calls)
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/scripts/eval_grounding.py", line 116, in <module>
+    main()
+  File "/home/ht/robotics-agent/scripts/eval_grounding.py", line 55, in main
+    ctrl.reset(scene=t["scene"])
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/controller.py", line 679, in reset
+    self.last_event = self.server.receive()
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/fifo_server.py", line 229, in receive
+    metadata, files = self._recv_message(
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/fifo_server.py", line 145, in _recv_message
+    header = self._read_with_timeout(
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/fifo_server.py", line 134, in _read_with_timeout
+    raise TimeoutError(f"Reading from AI2-THOR backend timed out (using {timeout}s) timeout.")
+TimeoutError: Reading from AI2-THOR backend timed out (using 100.0s) timeout.

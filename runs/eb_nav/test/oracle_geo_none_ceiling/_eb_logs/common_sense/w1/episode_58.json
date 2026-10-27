@@ -1,0 +1,27 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4022322182463522, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.58 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.03695535659790039, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2355889653338124, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.58 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 0.049469709396362305, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.074848528410691, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.58 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 0.06348776817321777, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9214928602932404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.58 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 0.07527971267700195, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7774344462882372, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.58 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 0.08831405639648438, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6451174976790097, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.48 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 0.0999758243560791, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4755064461288179, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.48 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 0.11066150665283203, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2241298510170644, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.48 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 0.121612548828125, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9999341439018817, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.48 m)"}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 0.13546133041381836, "task_success": 1.0, "last_action_success": true, "action_id": 3}

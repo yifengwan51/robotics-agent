@@ -1,0 +1,36 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5409895256779027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.98, -0.72], "score": 1.0}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 1, "episode_elapsed_seconds": 1.2843551635742188, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.257395779798804, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.11, -0.7], "score": 1.56}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 2, "episode_elapsed_seconds": 1.9893994331359863, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.257395779798804, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.2, -0.7], "score": 2.56}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 3, "episode_elapsed_seconds": 2.712235689163208, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3341458901979943, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.11, -0.71], "score": 3.55}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 4, "episode_elapsed_seconds": 3.2272555828094482, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3341458901979943, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [3.75, 1.65]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 5, "episode_elapsed_seconds": 3.7863006591796875, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.154307775469642, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.75, 1.65]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 6, "episode_elapsed_seconds": 6.296027898788452, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9783445059737967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.75, 1.65]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 7, "episode_elapsed_seconds": 7.105881452560425, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7242548776843774, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.99, 0.46], "score": 1.0}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 8, "episode_elapsed_seconds": 8.936483383178711, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4873677167733519, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.99, 0.46], "score": 0.6}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 9, "episode_elapsed_seconds": 9.148705244064331, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3435281072563299, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.75, 1.65]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 10, "episode_elapsed_seconds": 9.932754755020142, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2156779438745098, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.99, -0.52], "score": 0.99}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 11, "episode_elapsed_seconds": 10.60283875465393, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9895811620650249, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.99, -0.52], "score": 0.99}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 12, "episode_elapsed_seconds": 11.148423671722412, "task_success": 1.0, "last_action_success": true, "action_id": 3}

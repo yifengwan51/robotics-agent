@@ -1,0 +1,36 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.535820344767846, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 1, "episode_elapsed_seconds": 3.5299978256225586, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.535820344767846, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 2, "episode_elapsed_seconds": 5.896338224411011, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.535820344767846, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 3, "episode_elapsed_seconds": 8.240883588790894, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.535820344767846, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.65, -0.95]}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 4, "episode_elapsed_seconds": 9.57050633430481, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.346635966938102, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.65, -0.95]}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 5, "episode_elapsed_seconds": 10.036257266998291, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0666819297192007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.65, -0.95]}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 6, "episode_elapsed_seconds": 11.381074666976929, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7932227911522265, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.65, -0.95]}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 7, "episode_elapsed_seconds": 12.774229526519775, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6161570394974742, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.84, -0.25], "score": 0.94}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 8, "episode_elapsed_seconds": 14.609468698501587, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4450880098536605, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.84, -0.25], "score": 0.54}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 9, "episode_elapsed_seconds": 14.959831476211548, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2824176880375764, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.83, -0.25], "score": 1.53}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 10, "episode_elapsed_seconds": 15.824926376342773, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1317733161684882, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.83, -0.25], "score": 1.53}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 11, "episode_elapsed_seconds": 16.24118161201477, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9466552546070818, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.83, -0.25], "score": 1.53}, "instruction": "The rhythmic sound of rain tapping against the window is so soothing. A small vase of fresh flowers adds a pop of color to the room. Could you move toward the trash can and stay near it? The reflections on the floor shimmer faintly in the dim light.", "env_step": 12, "episode_elapsed_seconds": 16.542537450790405, "task_success": 1.0, "last_action_success": true, "action_id": 2}

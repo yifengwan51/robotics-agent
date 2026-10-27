@@ -1,0 +1,54 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 3.515791893005371, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.048386096954346, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.621804380146996, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.0}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 4.64667010307312, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 5.284172534942627, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.621804380146996, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 5.886264085769653, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 6.426234006881714, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 7.115684986114502, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.729610401900379, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 7.654712677001953, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.729610401900379, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.61], "score": 1.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 8.396326541900635, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.487868662550497, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.59], "score": 2.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 8.942246913909912, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.260134500603536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.6], "score": 3.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 9.509036302566528, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1183372451122815, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.62], "score": 4.25}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 10.705737590789795, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9865793703385772, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.61], "score": 5.24}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 11.528514862060547, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8125161753647834, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.61], "score": 5.24}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 11.714072465896606, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6744946136083811, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.61], "score": 5.24}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 11.943558931350708, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4030538600826554, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.61], "score": 5.24}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 12.185711145401001, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1459441980611955, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.61], "score": 5.24}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 12.424888849258423, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9153229026449881, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.61], "score": 5.24}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 12.658047199249268, "task_success": 1.0, "last_action_success": true, "action_id": 2}

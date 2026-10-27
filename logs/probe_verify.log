@@ -1,0 +1,48 @@
+visual_appearance FloorPlan1 done
+visual_appearance FloorPlan2 done
+visual_appearance FloorPlan3 done
+visual_appearance FloorPlan4 done
+visual_appearance FloorPlan5 done
+visual_appearance FloorPlan6 done
+visual_appearance FloorPlan7 done
+visual_appearance FloorPlan8 done
+visual_appearance FloorPlan9 done
+visual_appearance FloorPlan10 done
+visual_appearance FloorPlan201 done
+visual_appearance FloorPlan202 done
+visual_appearance FloorPlan203 done
+visual_appearance FloorPlan204 done
+visual_appearance FloorPlan205 done
+visual_appearance FloorPlan206 done
+visual_appearance FloorPlan207 done
+visual_appearance FloorPlan208 done
+visual_appearance FloorPlan209 done
+visual_appearance FloorPlan210 done
+visual_appearance FloorPlan301 done
+visual_appearance FloorPlan302 done
+visual_appearance FloorPlan303 done
+visual_appearance FloorPlan304 done
+visual_appearance FloorPlan305 done
+visual_appearance FloorPlan306 done
+visual_appearance FloorPlan307 done
+Traceback (most recent call last):
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/controller.py", line 979, in step
+    self.last_event = self.server.receive()
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/fifo_server.py", line 229, in receive
+    metadata, files = self._recv_message(
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/fifo_server.py", line 145, in _recv_message
+    header = self._read_with_timeout(
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/fifo_server.py", line 134, in _read_with_timeout
+    raise TimeoutError(f"Reading from AI2-THOR backend timed out (using {timeout}s) timeout.")
+TimeoutError: Reading from AI2-THOR backend timed out (using 100.0s) timeout.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/scripts/probe_verification.py", line 97, in <module>
+    main()
+  File "/home/ht/robotics-agent/scripts/probe_verification.py", line 51, in main
+    ev = c.step(action="Teleport", position=p["position"], rotation={"x": 0, "y": (p["rotation"] + 90 * r) % 360, "z": 0},
+  File "/home/ht/miniforge3/envs/embnav_thor/lib/python3.9/site-packages/ai2thor/controller.py", line 997, in step
+    raise (TimeoutError if isinstance(e, TimeoutError) else RuntimeError)(
+TimeoutError: Error encountered when running action {'action': 'Teleport', 'position': {'x': -0.20000004768371582, 'y': 0.9009991884231567, 'z': 0.8999999761581421}, 'rotation': {'x': 0, 'y': 270.0, 'z': 0}, 'horizon': 0.0, 'standing': True, 'sequenceId': 3} in scene FloorPlan308_physics.

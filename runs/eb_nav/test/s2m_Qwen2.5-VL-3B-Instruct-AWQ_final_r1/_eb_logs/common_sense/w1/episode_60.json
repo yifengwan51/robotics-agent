@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.859352279197634, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 1, "episode_elapsed_seconds": 3.5173723697662354, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.859352279197634, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 2, "episode_elapsed_seconds": 5.780728101730347, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.859352279197634, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 3, "episode_elapsed_seconds": 8.16184949874878, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.859352279197634, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 4, "episode_elapsed_seconds": 10.581481218338013, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.671288239122011, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 5, "episode_elapsed_seconds": 11.7874915599823, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.485088815258768, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 6, "episode_elapsed_seconds": 14.605507373809814, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3012066368236175, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 7, "episode_elapsed_seconds": 15.958090543746948, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1202446918650892, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 8, "episode_elapsed_seconds": 17.363614559173584, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9430190614388791, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-1.73, -2.48], "score": 0.53}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 9, "episode_elapsed_seconds": 19.015460729599, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6867577147281403, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 10, "episode_elapsed_seconds": 21.047558784484863, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5248072148129004, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 11, "episode_elapsed_seconds": 22.80043339729309, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3018700049320726, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 12, "episode_elapsed_seconds": 25.162115573883057, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1724977661284164, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 13, "episode_elapsed_seconds": 27.587068557739258, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0220466874310443, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 14, "episode_elapsed_seconds": 29.819960117340088, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9457313412755753, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.25, -2.55]}, "instruction": "I need a round container to hold my breakfast cereal. Please navigate to that object and stay close.", "env_step": 15, "episode_elapsed_seconds": 31.277281522750854, "task_success": 1.0, "last_action_success": true, "action_id": 0}

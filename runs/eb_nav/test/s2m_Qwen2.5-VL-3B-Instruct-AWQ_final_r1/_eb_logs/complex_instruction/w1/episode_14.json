@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.597706272552763, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 1, "episode_elapsed_seconds": 2.5328116416931152, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.597706272552763, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 2, "episode_elapsed_seconds": 4.753521203994751, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.597706272552763, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 3, "episode_elapsed_seconds": 7.0045084953308105, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.597706272552763, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 4, "episode_elapsed_seconds": 8.53214955329895, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3593233659016537, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 5, "episode_elapsed_seconds": 8.833309412002563, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2087611233408038, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 6, "episode_elapsed_seconds": 10.29596209526062, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0666022506599595, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 7, "episode_elapsed_seconds": 11.741383075714111, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8732788157408624, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 8, "episode_elapsed_seconds": 13.054805278778076, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7109945117681877, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 9, "episode_elapsed_seconds": 14.618415832519531, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5892862881751388, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 10, "episode_elapsed_seconds": 16.048614025115967, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5179458480547257, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 11, "episode_elapsed_seconds": 17.514335870742798, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8153122858255892, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 12, "episode_elapsed_seconds": 18.846540212631226, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.1134232267323116, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 13, "episode_elapsed_seconds": 20.3103129863739, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1035414017557, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 3.85]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 14, "episode_elapsed_seconds": 21.78799057006836, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.1035414017557, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 15, "episode_elapsed_seconds": 23.13331961631775, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8037980454247216, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.05, 1.15]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 16, "episode_elapsed_seconds": 24.55658745765686, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8037980454247216, "env_feedback": "Last action MoveRight is invalid. GarbageCan_6595174d is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "explore", "goal": [-0.05, 1.15]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 17, "episode_elapsed_seconds": 25.970592737197876, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8037980454247216, "env_feedback": "Last action MoveBack is invalid. GarbageCan_6595174d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "explore", "goal": [-0.05, 1.15]}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 18, "episode_elapsed_seconds": 26.115504264831543, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8037980454247216, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 19, "episode_elapsed_seconds": 26.23368239402771, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8037980454247216, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "The light breeze coming through the open window carries the faint scent of blooming flowers. A book is resting on the kitchen table, its pages slightly ruffled. Could you navigate to the pot for me? The room feels lively yet serene.", "env_step": 20, "episode_elapsed_seconds": 27.566099405288696, "task_success": 0.0, "last_action_success": true, "action_id": 4}

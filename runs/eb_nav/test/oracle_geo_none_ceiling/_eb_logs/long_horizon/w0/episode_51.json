@@ -1,0 +1,30 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.588948669531402, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.36 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.00958561897277832, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.588948669531402, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.36 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.020679235458374023, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.389285210981153, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.36 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.03546261787414551, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1896832474056063, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.36 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.050428152084350586, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.990161204271535, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.36 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.0713655948638916, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7907457658974253, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.50 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.09638714790344238, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5914770619494436, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.50 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.12274980545043945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3924180700231865, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.50 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.14234256744384766, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1936737104951014, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.64 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.16404342651367188, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9954324562276324, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.64 m)"}, "instruction": "navigate to the CellPhone in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.17471623420715332, "task_success": 1.0, "last_action_success": true, "action_id": 0}

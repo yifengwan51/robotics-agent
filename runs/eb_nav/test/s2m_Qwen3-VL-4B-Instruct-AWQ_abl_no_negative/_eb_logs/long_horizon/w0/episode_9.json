@@ -1,0 +1,36 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.4826884269714355, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 3.3674938678741455, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6051750997278784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.29, -3.66], "score": 1.0}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 4.579931974411011, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3121039039428215, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.88}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 5.373116493225098, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3121039039428215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.88}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 5.662036657333374, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2630062524518615, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.88}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 5.902417898178101, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2630062524518615, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.88}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 6.131443023681641, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9647097505232773, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.88}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.385594367980957, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7661659502074625, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.92}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 6.993648052215576, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5679923347039033, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.97}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 7.9261085987091064, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2718046346464695, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 2.79}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 8.69588041305542, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9779437808513474, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 3.78}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 9.444189548492432, "task_success": 1.0, "last_action_success": true, "action_id": 0}

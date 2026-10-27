@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.805751103647488, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.21, -0.23], "score": 1.0}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 3.794353723526001, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5161083575179584, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.21, -0.23], "score": 0.6}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.659629821777344, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 4.921377182006836, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 6.100426912307739, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 7.27332067489624, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.05, -1.35]}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 8.344796180725098, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.324473178243544, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.21, -0.24], "score": 1.2}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 10.07565450668335, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.040033705565315, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.21, -0.24], "score": 0.8}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 10.326004981994629, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8531356823309486, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.76], "score": 1.3}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 10.951852798461914, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5788203738593511, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.76], "score": 0.9}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 11.567310094833374, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.401801780047592, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.77], "score": 1.9}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 12.765628099441528, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2318371373080914, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.77], "score": 2.9}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 13.606136560440063, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0722859868255186, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.77], "score": 3.9}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 14.267141819000244, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9285320374750377, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.77], "score": 4.9}, "instruction": "navigate to the AlarmClock in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 14.833209753036499, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.365911723242201, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.15, 0.19], "score": 0.99}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 1, "episode_elapsed_seconds": 3.145885705947876, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.365911723242201, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.15, 0.19], "score": 0.59}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 2, "episode_elapsed_seconds": 4.117169618606567, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4856998767967493, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.15, 0.19], "score": 0.59}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 3, "episode_elapsed_seconds": 4.951802730560303, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4856998767967493, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.15, 0.19], "score": 0.59}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 4, "episode_elapsed_seconds": 5.747472763061523, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4856998767967493, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 5, "episode_elapsed_seconds": 6.495206356048584, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.365911723242201, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.44, 4.21], "score": 0.84}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 6, "episode_elapsed_seconds": 9.433527708053589, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2081191570510614, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.44, 4.21], "score": 0.44}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 7, "episode_elapsed_seconds": 10.286454916000366, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2081191570510614, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 8, "episode_elapsed_seconds": 11.096569538116455, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4759525677886307, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.1, 1.03], "score": 0.75}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 9, "episode_elapsed_seconds": 11.818309307098389, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.45, 4.25]}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 10, "episode_elapsed_seconds": 12.91873049736023, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4759525677886307, "env_feedback": "Last action MoveAhead is invalid. Door is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "explore", "goal": [-1.45, 4.25]}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 11, "episode_elapsed_seconds": 15.544796705245972, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.4759525677886307, "env_feedback": "Last action MoveLeft is invalid. Door is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "explore", "goal": [-1.45, 4.25]}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 12, "episode_elapsed_seconds": 16.446844577789307, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.4759525677886307, "env_feedback": "Last action MoveBack is invalid. Door is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "explore", "goal": [-1.45, 4.25]}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 13, "episode_elapsed_seconds": 17.214707851409912, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 14, "episode_elapsed_seconds": 17.937291383743286, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 15, "episode_elapsed_seconds": 18.200555086135864, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.4759525677886307, "env_feedback": "Last action MoveLeft is invalid. Door is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [-1.21, 0.25], "score": 1.39}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 16, "episode_elapsed_seconds": 18.986091136932373, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-1.23, 0.25], "score": 1.58}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 17, "episode_elapsed_seconds": 19.56618881225586, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-1.23, 0.25], "score": 1.58}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 18, "episode_elapsed_seconds": 20.32639217376709, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-1.24, 0.25], "score": 1.76}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 19, "episode_elapsed_seconds": 20.964733600616455, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.4759525677886307, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-1.24, 0.25], "score": 1.76}, "instruction": "Move towards the shiny silver object with a rounded base and smooth texture.", "env_step": 20, "episode_elapsed_seconds": 21.631837129592896, "task_success": 0.0, "last_action_success": true, "action_id": 5}

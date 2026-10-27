@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.350963039202622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.76, -1.9], "score": 0.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 1, "episode_elapsed_seconds": 1.2361631393432617, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.350963039202622, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 2, "episode_elapsed_seconds": 2.0065736770629883, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4697004940044955, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 3, "episode_elapsed_seconds": 2.2764930725097656, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.666085171680586, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 4, "episode_elapsed_seconds": 2.545804262161255, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.807205554373241, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 5, "episode_elapsed_seconds": 2.919243574142456, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9551305184441787, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 6, "episode_elapsed_seconds": 3.1844277381896973, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9551305184441787, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 7, "episode_elapsed_seconds": 3.447252035140991, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.7357278411646133, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 8, "episode_elapsed_seconds": 3.6719374656677246, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5984251911347664, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.1], "score": 1.99}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 9, "episode_elapsed_seconds": 4.458801984786987, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.4089881415488676, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.04], "score": 2.08}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 10, "episode_elapsed_seconds": 5.258984327316284, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2437990554196094, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.03], "score": 2.33}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 11, "episode_elapsed_seconds": 5.987430095672607, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9904486443857063, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.77, -2.0], "score": 2.58}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 12, "episode_elapsed_seconds": 6.707719326019287, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9904486443857063, "env_feedback": "Last action MoveAhead is invalid. Dresser_f96530a5 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [1.76, -1.98], "score": 3.58}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 13, "episode_elapsed_seconds": 7.435891151428223, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9904486443857063, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.96], "score": 3.83}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 14, "episode_elapsed_seconds": 8.010855674743652, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.884009691099784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.96], "score": 3.83}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 15, "episode_elapsed_seconds": 8.810871839523315, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.884009691099784, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.96], "score": 3.83}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 16, "episode_elapsed_seconds": 9.059467077255249, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.712987641240225, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.95], "score": 4.68}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 17, "episode_elapsed_seconds": 9.704458713531494, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.470230667682115, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.94], "score": 5.68}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 18, "episode_elapsed_seconds": 10.574029207229614, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3215189770716729, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.94], "score": 5.68}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 19, "episode_elapsed_seconds": 10.830787181854248, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.128567196150984, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.75, -1.94], "score": 5.68}, "instruction": "Find the compact rectangular object with a dark body and a bright blue display.", "env_step": 20, "episode_elapsed_seconds": 11.075158596038818, "task_success": 0.0, "last_action_success": true, "action_id": 0}

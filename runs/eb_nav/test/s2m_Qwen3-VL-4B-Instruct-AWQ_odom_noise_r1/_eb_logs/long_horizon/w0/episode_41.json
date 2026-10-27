@@ -1,0 +1,42 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.601605738475377, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.2209832668304443, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3806229412133746, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.53, 2.43], "score": 1.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 1.7781078815460205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2435182415691646, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.52, 2.44], "score": 2.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 2.304572105407715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.057276651870936, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.52, 2.48], "score": 2.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 2.850722551345825, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9489473523005127, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.52, 2.48], "score": 2.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 3.105407476425171, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9489473523005127, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.52, 2.48], "score": 2.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 3.3303709030151367, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6968672086478371, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.55, 2.53], "score": 3.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 3.8306539058685303, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4629835297463094, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.56, 2.55], "score": 4.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 4.355480670928955, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.257490849117076, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.56, 2.57], "score": 5.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 4.866227388381958, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.14393679730574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.56, 2.57], "score": 6.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 5.342798709869385, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0563614887878199, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.56, 2.57], "score": 6.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 5.966526508331299, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.0563614887878199, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.56, 2.57], "score": 6.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 6.18729043006897, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0563614887878199, "env_feedback": "Last action MoveAhead is invalid. Chair_bb0ff525 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [2.59, 2.55], "score": 7.73}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 6.68719744682312, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9883632855136091, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.61, 2.55], "score": 7.98}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 7.11320948600769, "task_success": 1.0, "last_action_success": true, "action_id": 2}

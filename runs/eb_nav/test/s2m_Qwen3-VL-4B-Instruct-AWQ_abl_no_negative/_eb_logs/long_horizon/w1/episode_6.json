@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.556095568529216, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.7304296493530273, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.705481659946267, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 5.713231086730957, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.818445590912725, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 6.573886394500732, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.004936265231357, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 7.379488706588745, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.208683267330903, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 7.661699295043945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3525591574049134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 7.91469669342041, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.501950533045369, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 8.22930645942688, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.704090719575095, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, 3.55], "score": 0.95}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 9.08313536643982, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.5678005370220776, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.5], "score": 0.97}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 9.83244800567627, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.5678005370220776, "env_feedback": "Last action MoveLeft is invalid. DiningTable_606ac980 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [2.96, 3.53], "score": 1.14}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 10.477972984313965, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.5678005370220776, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 11.687750816345215, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.421285729075814, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 12.437522888183594, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.563184450297956, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 13.120924949645996, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.704090719575095, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 13.827236890792847, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.5678005370220776, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 14.333861589431763, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.421285729075814, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 14.95670485496521, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.563184450297956, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 15.452249765396118, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.704090719575095, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 16.043898582458496, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.704090719575095, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 16.64830708503723, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.704090719575095, "env_feedback": "Last action MoveAhead is invalid. DiningTable_606ac980 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [2.96, 3.54], "score": 1.31}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 17.32838726043701, "task_success": 0.0, "last_action_success": false, "action_id": 0}

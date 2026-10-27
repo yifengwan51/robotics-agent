@@ -1,0 +1,42 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.1550509929656982, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.530096156842032, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.05, -0.95]}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 3.332348346710205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.429559829034171, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.05, -0.95]}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.169196128845215, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3630775568153854, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.05, -0.95]}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 7.099622964859009, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3335616681313858, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.05, -0.95]}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 8.745949268341064, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3335616681313858, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [3.05, -0.95]}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 9.875885486602783, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3630775568153854, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.9, -1.64], "score": 1.0}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 10.717591047286987, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0675694006784644, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.9, -1.63], "score": 1.99}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 11.47934865951538, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.871358228176375, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, -1.62], "score": 2.99}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 12.207407236099243, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6760429624830995, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, -1.61], "score": 3.72}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 12.8423433303833, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4819778704147417, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, -1.6], "score": 4.45}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 13.70733380317688, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2897274158104444, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, -1.6], "score": 5.45}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 14.451802253723145, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1002432355669185, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, -1.6], "score": 6.45}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 15.01473879814148, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8253743809985921, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, -1.6], "score": 7.45}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 15.735314846038818, "task_success": 1.0, "last_action_success": true, "action_id": 0}

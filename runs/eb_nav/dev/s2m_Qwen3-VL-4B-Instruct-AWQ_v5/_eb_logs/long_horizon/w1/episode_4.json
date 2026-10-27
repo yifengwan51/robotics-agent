@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.867400501621614, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.04, 2.28], "score": 0.88}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.4615418910980225, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.867400501621614, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.7025861740112305, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.867400501621614, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.019652366638184, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7071551296257197, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.65, 0.6], "score": 1.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 5.693429946899414, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.477648944705778, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.65, 0.6], "score": 2.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 6.42284369468689, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.333548285346659, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.64, 0.6], "score": 3.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 7.157487154006958, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1982154000538685, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.57, 0.58], "score": 4.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 7.875667095184326, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0154915788039944, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.57, 0.58], "score": 4.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 8.52544379234314, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.0154915788039944, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.48, 0.56], "score": 5.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 9.138959884643555, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7754356509397993, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 0.53], "score": 6.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 9.743501901626587, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.556321669773246, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.42, 0.52], "score": 7.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 10.39206600189209, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.3535850330810995, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.45, 0.53], "score": 8.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 11.799898386001587, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1323240586238827, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 0.52], "score": 9.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 12.668513536453247, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9944149918160788, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.46, 0.53], "score": 10.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 13.891509771347046, "task_success": 1.0, "last_action_success": true, "action_id": 3}

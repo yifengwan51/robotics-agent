@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.655050406578268, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.1858623027801514, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.655050406578268, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.1599442958831787, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3789593286336794, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.97, -0.32], "score": 1.0}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 2.6654231548309326, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1983820626769193, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.98, -0.33], "score": 2.0}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 3.1679956912994385, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9346933792303342, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.98, -0.34], "score": 2.25}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 3.6782355308532715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9346933792303342, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-4.98, -0.34], "score": 3.25}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 4.185999870300293, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1030422265584936, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.98, -0.34], "score": 3.25}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 4.410609483718872, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1030422265584936, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-4.98, -0.34], "score": 3.25}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 4.64684796333313, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.874284217402931, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.97, -0.36], "score": 3.93}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 5.149798631668091, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6682613678026812, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.97, -0.36], "score": 3.53}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 5.369675397872925, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5480735935770318, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.97, -0.36], "score": 3.53}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 5.59027886390686, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.3102609343486082, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-4.97, -0.36], "score": 3.53}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 5.8061254024505615, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1344332264304968, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.02, -0.4], "score": 4.53}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 6.4156036376953125, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.048987555292928, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.02, -0.4], "score": 4.53}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 7.017314434051514, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.7750010435340688, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-5.02, -0.4], "score": 4.53}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 7.237565040588379, "task_success": 1.0, "last_action_success": true, "action_id": 3}

@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.769021909608917, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.7132163047790527, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.625483661646395, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.28, -2.27], "score": 1.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.3594415187835693, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.425219181388878, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.29, -2.28], "score": 2.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 3.4848809242248535, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.247267594382222, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.28, -2.24], "score": 3.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 4.808483123779297, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.143803587005783, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.28, -2.24], "score": 3.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 5.200182676315308, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.143803587005783, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.28, -2.24], "score": 3.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 5.567596912384033, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9710669546963093, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.26, -2.28], "score": 4.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 6.093293905258179, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7230559631822981, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.26, -2.27], "score": 4.25}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.610389709472656, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5678433940615562, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.25, -2.26], "score": 5.25}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 7.782452344894409, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3571845021886444, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.23, -2.25], "score": 6.24}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 8.370721101760864, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.237400855304835, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.22, -2.27], "score": 7.24}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 8.973365545272827, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.237400855304835, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.22, -2.27], "score": 7.24}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 9.737683057785034, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.237400855304835, "env_feedback": "Last action MoveAhead is invalid. Chair_b37e67b5 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [3.22, -2.26], "score": 8.24}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 10.336808443069458, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.102260265864646, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.23, -2.26], "score": 8.49}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 10.91025996208191, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9168750791407629, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.23, -2.26], "score": 9.49}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 11.546683073043823, "task_success": 1.0, "last_action_success": true, "action_id": 0}

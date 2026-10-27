@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.629076229260417, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.7206771373748779, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.629076229260417, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 1.3393042087554932, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.629076229260417, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 1.9642977714538574, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8287941704363417, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.33, 2.54], "score": 0.02}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 2.2583932876586914, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.045014128194915, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.33, 2.54], "score": 0.02}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 2.5373051166534424, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.045014128194915, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.33, 2.54], "score": 0.02}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 2.799257755279541, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.899210409282632, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.65, 0.55], "score": 0.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 3.1036746501922607, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.6935824517949136, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.65, 0.55], "score": 0.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 3.403444290161133, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.566845618397675, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.65, 0.55], "score": 0.0}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 3.706026792526245, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8104521061354655, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.25, 2.53], "score": 0.01}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 4.333716154098511, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0640798938432967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.14, 2.42], "score": 0.08}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 4.956839561462402, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.894009130164757, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 5.256776332855225, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.646761096140004, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 5.563403367996216, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.894009130164757, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.17, 2.46], "score": 0.17}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 6.184199810028076, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0640798938432967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.17, 2.46], "score": 0.17}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 6.3751161098480225, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.894009130164757, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 6.560153484344482, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0640798938432967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.17, 2.46], "score": 0.17}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 6.750860214233398, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.894009130164757, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 6.937100648880005, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0640798938432967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-3.17, 2.46], "score": 0.17}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 7.1271140575408936, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.894009130164757, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 7.313381910324097, "task_success": 0.0, "last_action_success": true, "action_id": 1}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7599017717186127, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (19 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.04986977577209473, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.469868798366151, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (18 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.06663799285888672, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.4062124904836604, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (17 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.07944822311401367, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3838895954133212, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (16 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.09367108345031738, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3838895954133212, "env_feedback": "Last action MoveRight is invalid. Walls is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (15 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.10698866844177246, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.6832322880274027, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (17 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.1333177089691162, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.6832322880274027, "env_feedback": "Last action MoveRight is invalid. Walls is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (16 left, residual 0.50 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.14834380149841309, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.6832322880274027, "env_feedback": "Last action MoveBack is invalid. Television_ca8419fd is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (18 left, residual 0.46 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.17191338539123535, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.70308424910369, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (20 left, residual 0.59 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.21370911598205566, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.70308424910369, "env_feedback": "Last action MoveBack is invalid. TVStand_2273dd5d is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (19 left, residual 0.59 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.23279500007629395, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.7599017717186127, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (20 left, residual 0.66 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.2727525234222412, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.954363240043849, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (19 left, residual 0.66 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.28576231002807617, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.149518406031119, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (20 left, residual 0.60 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.33344101905822754, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.345245912664489, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (19 left, residual 0.60 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.3473951816558838, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0518624396785863, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.55 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.3897433280944824, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8570369208430946, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.55 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.40183424949645996, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.566291887899609, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.55 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.4144611358642578, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.373741712554825, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.55 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.43114447593688965, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.307435023167421, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.55 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.44573211669921875, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2841469829894807, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.55 m)"}, "instruction": "navigate to the GarbageCan in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.4571394920349121, "task_success": 0.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,36 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149512209783134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 1, "episode_elapsed_seconds": 2.8314478397369385, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149512209783134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 2, "episode_elapsed_seconds": 4.084515571594238, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149512209783134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 3, "episode_elapsed_seconds": 5.729720830917358, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149512209783134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [2.85, 1.25]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 4, "episode_elapsed_seconds": 7.012056827545166, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2284493529315634, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.85, 1.25]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 5, "episode_elapsed_seconds": 7.730509281158447, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.94601994438148, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [3.17, 0.81], "score": 0.56}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 6, "episode_elapsed_seconds": 9.558337926864624, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7609650968561097, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.85, 1.25]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 7, "episode_elapsed_seconds": 11.590401887893677, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4906391682802134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.85, 1.25]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 8, "episode_elapsed_seconds": 13.281565427780151, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2341036781665629, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.85, 1.25]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 9, "episode_elapsed_seconds": 15.775386810302734, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0020074367062213, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.85, 1.25]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 10, "episode_elapsed_seconds": 18.050594091415405, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.0020074367062213, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 11, "episode_elapsed_seconds": 20.600654125213623, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8202537475807157, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "Move to the tall, compact black device with a smooth finish.", "env_step": 12, "episode_elapsed_seconds": 22.65596079826355, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,33 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.989671629891952, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.8194923400878906, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.989671629891952, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 5.062252044677734, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.713623770997647, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 4.65], "score": 0.98}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.8004515171051025, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.532620288489764, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.29, 4.65], "score": 1.09}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 7.080676078796387, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2671088908233887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.29, 4.65], "score": 0.69}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 7.426575422286987, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.011317971933896, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 4.65], "score": 1.69}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 8.052335739135742, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.769468061748519, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 4.65], "score": 2.69}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 8.71494460105896, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5481067354146671, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 4.64], "score": 3.69}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 9.934836149215698, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3572957477602605, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 4.64], "score": 3.69}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 10.550645589828491, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1984375303365955, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 4.64], "score": 3.69}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 11.516860008239746, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9885615221717633, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.34, 4.64], "score": 4.66}, "instruction": "navigate to the Toaster in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 12.169058561325073, "task_success": 1.0, "last_action_success": true, "action_id": 3}

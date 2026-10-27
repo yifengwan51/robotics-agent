@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.637554446097963, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.98, -3.22], "score": 0.99}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 1, "episode_elapsed_seconds": 3.0111377239227295, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.45774497629299, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.98, -3.22], "score": 0.59}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 2, "episode_elapsed_seconds": 3.870053291320801, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.45774497629299, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.35, -2.75]}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 3, "episode_elapsed_seconds": 4.689673662185669, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6258004528971752, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.35, -2.75]}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 4, "episode_elapsed_seconds": 6.979824781417847, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7980610534510943, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.35, -2.75]}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 5, "episode_elapsed_seconds": 9.479586601257324, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9737961340370194, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.52, -3.22], "score": 1.0}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 6, "episode_elapsed_seconds": 11.990325212478638, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9737961340370194, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.52, -3.22], "score": 1.0}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 7, "episode_elapsed_seconds": 12.720398664474487, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8866372309069086, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.52, -3.22], "score": 0.6}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 8, "episode_elapsed_seconds": 13.449862241744995, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7778573339062045, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 9, "episode_elapsed_seconds": 14.233275413513184, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.721342034964474, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 10, "episode_elapsed_seconds": 15.00682544708252, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.662615122066921, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 11, "episode_elapsed_seconds": 15.725852966308594, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8607406394192716, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 12, "episode_elapsed_seconds": 16.467838287353516, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8368386890071524, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 13, "episode_elapsed_seconds": 17.247687339782715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.036769906923727, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 14, "episode_elapsed_seconds": 18.000581979751587, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.04397572948226, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 15, "episode_elapsed_seconds": 18.69933009147644, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.243471283087144, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 16, "episode_elapsed_seconds": 18.96357226371765, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.4430253686444217, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 17, "episode_elapsed_seconds": 19.73215126991272, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.642628381373325, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 18, "episode_elapsed_seconds": 21.81246852874756, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.9421082834716223, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 19, "episode_elapsed_seconds": 22.6814546585083, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 4.141803448589272, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, -2.69], "score": 1.53}, "instruction": "Move towards the slim metallic object with a shiny silver finish.", "env_step": 20, "episode_elapsed_seconds": 24.12250280380249, "task_success": 0.0, "last_action_success": true, "action_id": 2}

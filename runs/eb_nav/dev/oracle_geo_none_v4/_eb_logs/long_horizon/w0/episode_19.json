@@ -1,0 +1,33 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7949611739256395, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.02110886573791504, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7949611739256395, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.03721475601196289, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5087989868368905, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.055861473083496094, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3199668852726227, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.07315182685852051, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0407132221998463, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.09492826461791992, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.858140343098111, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.11865735054016113, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6795417982840521, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.13575983047485352, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4223655230776482, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.15311312675476074, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.261466942277177, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.1705925464630127, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1133166889179764, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.52 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.1846449375152588, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9282979267094335, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.55 m)"}, "instruction": "navigate to the Statue in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.20349979400634766, "task_success": 1.0, "last_action_success": true, "action_id": 0}

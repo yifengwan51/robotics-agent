@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8260714809014194, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 3.4603817462921143, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8260714809014194, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.7262208461761475, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6721907855356917, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, -2.1], "score": 1.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.4044389724731445, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4538722495256047, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.52, -2.07], "score": 2.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 6.065317392349243, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.318493613340082, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.52, -2.07], "score": 1.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 6.7324535846710205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1930198850886162, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.42, -2.13], "score": 2.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 7.4355387687683105, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.027368187191074, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 8.090632438659668, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9349794068932766, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 8.344259977340698, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 8.589736223220825, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveRight is invalid. Cabinet_1575d9a4 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 9.135841608047485, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveBack is invalid. Dresser_11d27db0 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 9.653788566589355, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveLeft is invalid. Dresser_11d27db0 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 10.192576885223389, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 3.6}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 10.732009410858154, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveLeft is invalid. Drawer_aa8242aa is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 3.2}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 11.362421989440918, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 2.8}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 11.791176080703735, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 2.8}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 12.034409046173096, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 2.4}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 12.462988138198853, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 2.4}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 12.625370264053345, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 2.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 13.090505838394165, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.44, -2.11], "score": 2.0}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 13.24369478225708, "task_success": 0.0, "last_action_success": true, "action_id": 5}

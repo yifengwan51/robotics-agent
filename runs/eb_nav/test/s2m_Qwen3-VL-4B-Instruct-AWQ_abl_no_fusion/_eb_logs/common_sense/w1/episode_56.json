@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.637554446097963, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.2, -2.4], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.2064485549926758, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.45774497629299, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.4, -2.74], "score": 0.82}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 1.8380074501037598, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.45774497629299, "env_feedback": "Last action MoveAhead is invalid. FP326:Bookcase is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [3.4, -2.74], "score": 0.82}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 2.1783621311187744, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.45774497629299, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.4, -2.74], "score": 0.82}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 2.3752002716064453, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2948186181420476, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.2, -2.32], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 3.018897771835327, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0626963204446147, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.2, -2.37], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 3.661855697631836, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8501999009187289, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.2, -2.41], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 4.31023645401001, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8501999009187289, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.2, -2.32], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 4.949179410934448, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7065903812585073, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, -2.31], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 5.6514573097229, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5153440513898604, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.16, -2.41], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 6.318510055541992, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4090701536157575, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.16, -2.41], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 6.600315809249878, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2920121960746336, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.16, -2.41], "score": 1.0}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 6.857760429382324, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2920121960746336, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 7.6144187450408936, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2920121960746336, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 9.11264967918396, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.102260265864646, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -3.45]}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 11.286437034606934, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.0386502949149141, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -3.45]}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 13.45465087890625, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.059533486590374, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -3.45]}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 15.421698331832886, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.059533486590374, "env_feedback": "Last action MoveLeft is invalid. GarbageCan_6fd936bc is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "explore", "goal": [-0.75, -3.45]}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 17.41656517982483, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0386502949149141, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -3.45]}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 18.277924060821533, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2381891035816923, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -3.45]}, "instruction": "I need a device that is bigger than my cellphone to browse the internet. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 18.97818350791931, "task_success": 0.0, "last_action_success": true, "action_id": 3}

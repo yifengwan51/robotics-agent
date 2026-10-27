@@ -1,0 +1,42 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.412585735321045, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 4.495604515075684, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 6.189165353775024, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [3.15, -1.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 7.615245342254639, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4022322182463522, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.15, -1.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 8.692171573638916, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2355889653338124, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [3.15, -1.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 10.954445838928223, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.074848528410691, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.94, -1.6], "score": 1.02}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 12.11254334449768, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9214928602932404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.94, -1.6], "score": 0.62}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 12.842316150665283, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7774344462882372, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.6], "score": 1.52}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 13.755961656570435, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6451174976790097, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.62], "score": 2.52}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 14.822109699249268, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.4240035817205703, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.91, -1.63], "score": 3.08}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 15.69309687614441, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2365923340950897, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.64], "score": 4.06}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 16.648859977722168, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1002432355669185, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.65], "score": 5.06}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 17.6108558177948, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8253743809985921, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.65], "score": 6.05}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 18.584369659423828, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.71, -0.25], "score": 1.0}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 2.1583845615386963, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.794436099855777, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.71, -0.25], "score": 1.0}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 2.4516799449920654, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.71, -0.25], "score": 0.6}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 3.400942087173462, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6241324926727216, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.93, -1.61], "score": 1.59}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.6614739894866943, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.93, -1.61], "score": 1.19}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.171319961547852, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveAhead is invalid. Stool_265b5d5c is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-0.93, -1.61], "score": 0.79}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.406383752822876, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.71, -0.22], "score": 1.2}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 4.568524122238159, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveAhead is invalid. Stool_265b5d5c is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.72, -0.22], "score": 1.45}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.003747940063477, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6241324926727216, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 5.523234844207764, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 5.886296510696411, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9196017826401706, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 6.157292127609253, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9196017826401706, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 6.410521745681763, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6977538828324104, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 6.806096076965332, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5587256506489324, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 7.588121175765991, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4282252573895287, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 7.8422300815582275, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.4282252573895287, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.7}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 8.081287145614624, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4282252573895287, "env_feedback": "Last action MoveAhead is invalid. Stool_265b5d5c is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 1.3}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 8.857039451599121, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.5587256506489324, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 0.9}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 9.416781663894653, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5587256506489324, "env_feedback": "Last action MoveAhead is invalid. Stool_265b5d5c is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-1.72, -0.21], "score": 0.5}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 10.156033039093018, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.5587256506489324, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a machine that prepares a hot drink to keep me energized. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 10.650286436080933, "task_success": 0.0, "last_action_success": true, "action_id": 5}

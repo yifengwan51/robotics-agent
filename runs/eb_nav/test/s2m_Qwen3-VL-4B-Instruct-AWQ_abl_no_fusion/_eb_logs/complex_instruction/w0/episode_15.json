@@ -1,0 +1,51 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.622093007530892, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 1, "episode_elapsed_seconds": 0.8784277439117432, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4908866965158185, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.69, 0.77], "score": 0.94}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 2, "episode_elapsed_seconds": 1.477020263671875, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4908866965158185, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 3, "episode_elapsed_seconds": 2.264580488204956, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4908866965158185, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 4, "episode_elapsed_seconds": 3.8315045833587646, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4908866965158185, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.83, 0.69], "score": 0.56}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 5, "episode_elapsed_seconds": 5.312305927276611, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3395126688889114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.64, 0.81], "score": 1.0}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 6, "episode_elapsed_seconds": 5.952744483947754, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3395126688889114, "env_feedback": "Last action MoveAhead is invalid. Stool_36eae274 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 1.0}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 7, "episode_elapsed_seconds": 6.5806725025177, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3395126688889114, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 1.0}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 8, "episode_elapsed_seconds": 7.140489339828491, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1487291816364995, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.67, 0.79], "score": 0.56}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 9, "episode_elapsed_seconds": 7.746583461761475, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1487291816364995, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.67, 0.79], "score": 0.56}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 10, "episode_elapsed_seconds": 8.765212535858154, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9157875658642383, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.64, 0.81], "score": 0.56}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 11, "episode_elapsed_seconds": 9.375364780426025, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7717350361202344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.67, 0.8], "score": 0.78}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 12, "episode_elapsed_seconds": 9.93669319152832, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6394658023450477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 0.95}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 13, "episode_elapsed_seconds": 10.5260009765625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4700520332340878, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 0.95}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 14, "episode_elapsed_seconds": 10.809393644332886, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3469438691170488, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 0.95}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 15, "episode_elapsed_seconds": 11.070047616958618, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.159052470327729, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 0.95}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 16, "episode_elapsed_seconds": 11.32129979133606, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.887197920090911, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 0.95}, "instruction": "The gentle clinking of utensils in the sink adds a rhythmic background to the calm evening. There's a plate of cookies sitting on the counter, half-eaten. Please move towards the cup for me. The atmosphere feels warm and relaxed.", "env_step": 17, "episode_elapsed_seconds": 11.656372785568237, "task_success": 1.0, "last_action_success": true, "action_id": 2}

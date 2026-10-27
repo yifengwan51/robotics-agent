@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.478744588124123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.56 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 0.0376431941986084, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.478744588124123, "env_feedback": "Last action MoveAhead is invalid. OVENDOOR.002 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (12 left, residual 0.56 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 0.05195140838623047, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.478744588124123, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 0.08556318283081055, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3395126688889114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 0.09940409660339355, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1487291816364995, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 0.11379098892211914, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1487291816364995, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 0.12819123268127441, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9157875658642383, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 0.14779305458068848, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7717350361202344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 0.16209864616394043, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6394658023450477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 0.17601251602172852, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4700520332340878, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 0.18964123725891113, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3469438691170488, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 0.20665407180786133, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2973283788676568, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 0.2216935157775879, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1010021639561787, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 0.2354292869567871, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8098909096150023, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (1 left, residual 0.57 m)"}, "instruction": "I'd like a container to drink my morning coffee. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 0.25057029724121094, "task_success": 1.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8704765293683745, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 1, "episode_elapsed_seconds": 1.2310945987701416, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8704765293683745, "env_feedback": "Last action MoveAhead is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 0.99}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 2, "episode_elapsed_seconds": 2.0265896320343018, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8704765293683745, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 3, "episode_elapsed_seconds": 2.6572842597961426, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5787013079617007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 4, "episode_elapsed_seconds": 3.4834041595458984, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3853182753552926, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 5, "episode_elapsed_seconds": 4.254536390304565, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3853182753552926, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 6, "episode_elapsed_seconds": 5.011416912078857, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3853182753552926, "env_feedback": "Last action MoveAhead is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 7, "episode_elapsed_seconds": 5.80565071105957, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5787013079617007, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 8, "episode_elapsed_seconds": 6.428852796554565, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5787013079617007, "env_feedback": "Last action MoveAhead is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 9, "episode_elapsed_seconds": 7.257659912109375, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.5787013079617007, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 10, "episode_elapsed_seconds": 7.991337537765503, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3853182753552926, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 11, "episode_elapsed_seconds": 8.782980918884277, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1931225233165046, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 12, "episode_elapsed_seconds": 9.56471872329712, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.1931225233165046, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 13, "episode_elapsed_seconds": 10.425926208496094, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1931225233165046, "env_feedback": "Last action MoveAhead is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 14, "episode_elapsed_seconds": 11.217581510543823, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1931225233165046, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 15, "episode_elapsed_seconds": 11.836606979370117, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9078393455467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 16, "episode_elapsed_seconds": 12.535768270492554, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9078393455467173, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 17, "episode_elapsed_seconds": 13.239989995956421, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9078393455467173, "env_feedback": "Last action MoveAhead is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 18, "episode_elapsed_seconds": 14.064571619033813, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.1931225233165046, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 19, "episode_elapsed_seconds": 14.737129926681519, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3853182753552926, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.11, -1.99], "score": 1.24}, "instruction": "Find the rectangular yellowish object with a soft and smooth surface.", "env_step": 20, "episode_elapsed_seconds": 15.563510179519653, "task_success": 0.0, "last_action_success": true, "action_id": 2}

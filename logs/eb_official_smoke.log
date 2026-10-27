@@ -1,0 +1,299 @@
+model_name: Qwen2.5-VL-3B-Instruct-AWQ
+down_sample_ratio: 0.1
+model_type: remote
+language_only: false
+eval_sets:
+- base
+chat_history: false
+n_shots: 3
+multiview: false
+detection_box: false
+multistep: false
+resolution: 500
+exp_name: smoke
+visual_icl: false
+tp: 1
+truncate: true
+
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[2026-10-19 18:11:36,271][INFO] - Current eval set: base
+Episodes:   0%|          | 0/6 [00:00<?, ?it/s][2026-10-19 18:11:37,684][INFO] - Evaluating episode 0 ...
+INFO:EB_logger:Evaluating episode 0 ...
+[2026-10-19 18:11:37,684][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+Episodes:  17%|█▋        | 1/6 [01:35<07:59, 95.91s/it][2026-10-19 18:13:13,594][INFO] - Evaluating episode 1 ...
+INFO:EB_logger:Evaluating episode 1 ...
+[2026-10-19 18:13:13,595][INFO] - Restoring scene FloorPlan21...
+INFO:EB_logger:Restoring scene FloorPlan21...
+Episodes:  33%|███▎      | 2/6 [02:16<04:13, 63.49s/it][2026-10-19 18:13:54,390][INFO] - Evaluating episode 2 ...
+INFO:EB_logger:Evaluating episode 2 ...
+[2026-10-19 18:13:54,390][INFO] - Restoring scene FloorPlan211...
+INFO:EB_logger:Restoring scene FloorPlan211...
+Episodes:  50%|█████     | 3/6 [02:39<02:15, 45.06s/it][2026-10-19 18:14:17,511][INFO] - Evaluating episode 3 ...
+INFO:EB_logger:Evaluating episode 3 ...
+[2026-10-19 18:14:17,511][INFO] - Restoring scene FloorPlan221...
+INFO:EB_logger:Restoring scene FloorPlan221...
+Episodes:  67%|██████▋   | 4/6 [03:27<01:32, 46.07s/it][2026-10-19 18:15:05,135][INFO] - Evaluating episode 4 ...
+INFO:EB_logger:Evaluating episode 4 ...
+[2026-10-19 18:15:05,135][INFO] - Restoring scene FloorPlan311...
+INFO:EB_logger:Restoring scene FloorPlan311...
+Episodes:  83%|████████▎ | 5/6 [04:49<00:58, 58.94s/it][2026-10-19 18:16:26,882][INFO] - Evaluating episode 5 ...
+INFO:EB_logger:Evaluating episode 5 ...
+[2026-10-19 18:16:26,882][INFO] - Restoring scene FloorPlan321...
+INFO:EB_logger:Restoring scene FloorPlan321...
+Instruction: navigate to the Bread in the room and be as close as possible to it
+Failed to decode JSON: Unterminated string starting at: line 280 column 22 (char 6883)
+random action
+Planner Output Action: 7
+Executed action: 7, Task success: 0.0
+Planner Output Action: [4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4, 4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 284 column 7 (char 6895)
+random action
+Planner Output Action: 7
+Executed action: 7, Task success: 0.0
+Planner Output Action: [0, 4]
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Failed to decode JSON: Expecting ',' delimiter: line 112 column 20 (char 6990)
+random action
+Planner Output Action: 7
+Executed action: 7, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 4 column 20 (char 491)
+random action
+Planner Output Action: 4
+Executed action: 4, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 4 column 20 (char 564)
+random action
+Planner Output Action: 3
+Executed action: 3, Task success: 0.0
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0, 2, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 2, 3, 3, 2, 3]
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Failed to decode JSON: Unterminated string starting at: line 3 column 31 (char 237)
+random action
+Planner Output Action: 7
+Executed action: 7, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Instruction: navigate to the GarbageCan in the room and be as close as possible to it
+Planner Output Action: [3]
+Executed action: 3, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 4, 0, 4, 0]
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 4, 0, 4, 0, 4, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Instruction: navigate to the Pillow in the room and be as close as possible to it
+Planner Output Action: [4, 4, 4, 4, 0, 0, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [3, 0, 2, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [0, 1]
+Executed action: 0, Task success: 0.0
+Executed action: 1, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 3 column 31 (char 335)
+random action
+Planner Output Action: 6
+Executed action: 6, Task success: 0.0
+Planner Output Action: [3, 0, 2, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 2, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 92 column 6 (char 5884)
+random action
+Planner Output Action: 0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4]
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 0, 0, 0, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Instruction: navigate to the Laptop in the room and be as close as possible to it
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+Failed to decode JSON: Expecting value: line 92 column 36 (char 5774)
+random action
+Planner Output Action: 4
+Executed action: 4, Task success: 0.0
+Planner Output Action: [0, 4, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 284 column 22 (char 6889)
+random action
+Planner Output Action: 6
+Executed action: 6, Task success: 0.0
+Planner Output Action: [0, 7]
+Executed action: 0, Task success: 0.0
+Executed action: 7, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [4, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Failed to decode JSON: Unterminated string starting at: line 280 column 22 (char 6892)
+random action
+Planner Output Action: 4
+Executed action: 4, Task success: 0.0
+Planner Output Action: [3, 0, 0, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Failed to decode JSON: Unterminated string starting at: line 4 column 20 (char 432)
+random action
+Planner Output Action: 0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Instruction: navigate to the CellPhone in the room and be as close as possible to it
+Planner Output Action: [4, 4, 4, 4]
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Executed action: 4, Task success: 0.0
+Failed to decode JSON: Expecting ',' delimiter: line 277 column 4 (char 6952)
+random action
+Planner Output Action: 7
+Executed action: 7, Task success: 0.0
+Planner Output Action: [3, 0, 2, 0]
+Executed action: 3, Task success: 0.0
+invalid action, start replanning
+Planner Output Action: [4, 3, 0]
+Executed action: 4, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0, 3, 0]
+Executed action: 0, Task success: 0.0
+Executed action: 3, Task success: 0.0
+Episodes: 100%|██████████| 6/6 [06:10<00:00, 66.51s/it]Episodes: 100%|██████████| 6/6 [06:10<00:00, 61.74s/it]
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [3, 0]
+Executed action: 3, Task success: 0.0
+Executed action: 0, Task success: 0.0
+Planner Output Action: [0]
+Executed action: 0, Task success: 0.0
+invalid action, start replanning
+Failed to decode JSON: Expecting property name enclosed in double quotes: line 127 column 21 (char 6682)
+random action
+Planner Output Action: 6
+Executed action: 6, Task success: 0.0
+Failed to decode JSON: Expecting value: line 127 column 4 (char 6514)
+random action
+Planner Output Action: 1
+Executed action: 1, Task success: 0.0
+Failed to decode JSON: Expecting value: line 125 column 36 (char 6894)
+random action
+Planner Output Action: 6
+Executed action: 6, Task success: 0.0
+['running/eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_4_final_res.json', 'running/eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_2_final_res.json', 'running/eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_1_final_res.json', 'running/eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_5_final_res.json', 'running/eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_6_final_res.json', 'running/eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_3_final_res.json'] 6
+eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_4_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Pillow in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 9, 'planner_output_error': 2, 'episode_elapsed_seconds': 47.34648609161377}
+eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_2_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 12, 'planner_output_error': 1, 'episode_elapsed_seconds': 40.52472710609436}
+eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_1_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Bread in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 12, 'planner_output_error': 5, 'episode_elapsed_seconds': 95.60320901870728}
+eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_5_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the Laptop in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 12, 'planner_output_error': 4, 'episode_elapsed_seconds': 81.13445210456848}
+eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_6_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the CellPhone in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 11, 'planner_output_error': 4, 'episode_elapsed_seconds': 81.02795171737671}
+eb_nav/Qwen2.5-VL-3B-Instruct-AWQ_smoke/base/results/episode_3_final_res.json
+{'reward': 0.0, 'instruction': 'navigate to the GarbageCan in the room and be as close as possible to it', 'task_success': 0.0, 'num_steps': 20, 'planner_steps': 10, 'planner_output_error': 0, 'episode_elapsed_seconds': 22.587846279144287}
+final results: 
+{'reward': 0.0, 'task_success': 0.0, 'num_steps': 20.0, 'planner_steps': 11.0, 'planner_output_error': 2.6666666666666665, 'episode_elapsed_seconds': 61.370778719584145}
+model call stats: {"calls": 66, "failures": 0, "seconds": 356.71, "prompt_tokens": 234133, "completion_tokens": 42355}

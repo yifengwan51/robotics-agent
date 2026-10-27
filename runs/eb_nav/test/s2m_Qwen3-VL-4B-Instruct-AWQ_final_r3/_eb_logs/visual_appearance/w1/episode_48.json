@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9984714402345802, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 1, "episode_elapsed_seconds": 2.8239123821258545, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9984714402345802, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 2, "episode_elapsed_seconds": 4.462986707687378, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9984714402345802, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 3, "episode_elapsed_seconds": 6.3400702476501465, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9984714402345802, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.44, 3.31], "score": 0.68}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 4, "episode_elapsed_seconds": 7.92030143737793, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.2828267675247824, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 3.31], "score": 0.83}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 5, "episode_elapsed_seconds": 9.40333867073059, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.569743987463461, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 3.31], "score": 0.83}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 6, "episode_elapsed_seconds": 9.647552251815796, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.762156258630649, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 3.31], "score": 0.83}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 7, "episode_elapsed_seconds": 10.51806116104126, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.9553213941250047, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 3.31], "score": 0.83}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 8, "episode_elapsed_seconds": 10.836636543273926, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.9553213941250047, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 3.31], "score": 0.83}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 9, "episode_elapsed_seconds": 11.11029839515686, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.010548186240802, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, 3.31], "score": 0.43}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 10, "episode_elapsed_seconds": 11.355756044387817, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.820176584621473, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 11, "episode_elapsed_seconds": 11.625381469726562, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.820176584621473, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 12, "episode_elapsed_seconds": 12.749173164367676, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.6308403379063576, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 13, "episode_elapsed_seconds": 13.962890625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3491612396111403, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 14, "episode_elapsed_seconds": 15.045415163040161, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0709543144174023, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 15, "episode_elapsed_seconds": 16.119460821151733, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8879080456512254, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 16, "episode_elapsed_seconds": 17.196237325668335, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7072616048661207, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 17, "episode_elapsed_seconds": 18.28323268890381, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4419551083835533, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 18, "episode_elapsed_seconds": 19.39151620864868, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1856404206360946, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 19, "episode_elapsed_seconds": 20.399350881576538, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3015111439126232, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, 0.45]}, "instruction": "Get near the cylindrical object with a smooth gray surface and a handle on the side.", "env_step": 20, "episode_elapsed_seconds": 21.618306159973145, "task_success": 0.0, "last_action_success": true, "action_id": 2}

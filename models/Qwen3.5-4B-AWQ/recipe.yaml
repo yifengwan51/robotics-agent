@@ -1,0 +1,43 @@
+default_stage:
+  default_modifiers:
+    AWQModifier:
+      config_groups:
+        group_1:
+          targets: [Linear]
+          weights:
+            num_bits: 4
+            type: int
+            symmetric: true
+            group_size: 32
+            strategy: group
+            block_structure: null
+            dynamic: false
+            actorder: null
+            scale_dtype: null
+            zp_dtype: null
+            observer: mse
+            observer_kwargs: {}
+          input_activations: null
+          output_activations: null
+          format: null
+      targets: [Linear]
+      ignore: ['re:.*embed_tokens', 're:.*linear_attn.*', 're:model[.]visual.*', 're:mtp.*',
+        lm_head]
+      bypass_divisibility_checks: false
+      mappings:
+      - smooth_layer: re:model.*layers[.](3|7|11|15|19|23|27|31)[.]input_layernorm
+        balance_layers: ['re:model.*layers[.](3|7|11|15|19|23|27|31)[.]self_attn[.]q_proj',
+          're:model.*layers[.](3|7|11|15|19|23|27|31)[.]self_attn[.]k_proj', 're:model.*layers[.](3|7|11|15|19|23|27|31)[.]self_attn[.]v_proj']
+        activation_hook_target: null
+        balance_exponent: 1
+      - smooth_layer: re:model.*layers[.](3|7|11|15|19|23|27|31)[.]self_attn[.]v_proj
+        balance_layers: ['re:model.*layers[.](3|7|11|15|19|23|27|31)[.]self_attn[.]o_proj']
+        activation_hook_target: null
+        balance_exponent: 1
+      - smooth_layer: re:model.*post_attention_layernorm
+        balance_layers: ['re:model.*mlp[.]gate_proj', 're:model.*mlp[.]up_proj']
+        activation_hook_target: null
+        balance_exponent: 1
+      offload_device: !!python/object/apply:torch.device [cpu]
+      duo_scaling: true
+      n_grid: 20

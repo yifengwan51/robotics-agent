@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.47 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.030157804489135742, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveBack is invalid. Stool_265b5d5c is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (13 left, residual 0.47 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.04790806770324707, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.49 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.07043886184692383, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveBack is invalid. Stool_265b5d5c is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (12 left, residual 0.49 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.08760190010070801, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveRight is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (12 left, residual 0.45 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.11350154876708984, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.883100755730397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.45 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.13685321807861328, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.883100755730397, "env_feedback": "Last action MoveRight is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (13 left, residual 0.45 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.18404054641723633, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0599132263852864, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.48 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.2146589756011963, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.9360291413251915, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.48 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.229262113571167, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8679375381818732, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.41 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.24967360496520996, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.8679375381818732, "env_feedback": "Last action MoveBack is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (12 left, residual 0.41 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.264085054397583, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8124481089011475, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.45 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.2844359874725342, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.8124481089011475, "env_feedback": "Last action MoveBack is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (11 left, residual 0.45 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.304349422454834, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.7544622874197775, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.49 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.32419753074645996, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.7544622874197775, "env_feedback": "Last action MoveBack is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (10 left, residual 0.49 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.3404254913330078, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.728417226736683, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.50 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.3598825931549072, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.528529528765497, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.50 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.3755662441253662, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.3286611138136646, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.53 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.3954000473022461, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.1288173833894364, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.53 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.4172172546386719, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.9290060633363277, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.39 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.44078755378723145, "task_success": 0.0, "last_action_success": true, "action_id": 1}

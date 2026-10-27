@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6213174596454696, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.05140805244445801, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4789728155740796, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.06712603569030762, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2817335785345536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.08259797096252441, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.108864616149758, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.0949869155883789, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.01030122682697, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.65 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.14976835250854492, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9275144912717403, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.65 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.16756653785705566, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8374748764954432, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.71 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.21098756790161133, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.6432634417679552, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.71 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.22693443298339844, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.61 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.28423190116882324, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveLeft is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (4 left, residual 0.61 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.302170991897583, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.34356141090393066, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.3603198528289795, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveRight is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.37786030769348145, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.39052629470825195, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.4086742401123047, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.4360365867614746, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.45998430252075195, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.47531676292419434, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.49155473709106445, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5941507110433442, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 1.5941507110433442)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.5040905475616455, "task_success": 0.0, "last_action_success": true, "action_id": 4}

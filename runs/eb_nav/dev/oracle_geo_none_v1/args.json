@@ -1,0 +1,17 @@
+{
+ "planner": "oracle_geo",
+ "model": "none",
+ "exp": "v1",
+ "eval_sets": [
+  "base",
+  "long_horizon"
+ ],
+ "limit": 0,
+ "stride": 1,
+ "workers": 2,
+ "resolution": 500,
+ "n_shots": 3,
+ "platform": "cloud",
+ "data": "data/eb_nav_dev",
+ "out": "/home/ht/robotics-agent/runs/eb_nav"
+}

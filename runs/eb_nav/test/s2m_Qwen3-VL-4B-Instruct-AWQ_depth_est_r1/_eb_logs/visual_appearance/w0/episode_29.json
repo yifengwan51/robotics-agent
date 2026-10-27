@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.973364756727833, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 1, "episode_elapsed_seconds": 1.7871718406677246, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.973364756727833, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 2, "episode_elapsed_seconds": 3.510267734527588, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.973364756727833, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 3, "episode_elapsed_seconds": 4.928717136383057, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8644383406351706, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.35, -0.15]}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 4, "episode_elapsed_seconds": 6.39573860168457, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8644383406351706, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.35, -0.15]}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 5, "episode_elapsed_seconds": 7.926539421081543, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6128649588734887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.35, -0.15]}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 6, "episode_elapsed_seconds": 9.961251258850098, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3725765576892752, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.35, -0.15]}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 7, "episode_elapsed_seconds": 11.93153429031372, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2204706815861353, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.35, -0.15]}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 8, "episode_elapsed_seconds": 14.825626611709595, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.076502013391145, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 9, "episode_elapsed_seconds": 17.85034990310669, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8798714855697547, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 10, "episode_elapsed_seconds": 18.964141130447388, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7134681017394338, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 11, "episode_elapsed_seconds": 20.42204785346985, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6239900112786643, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 12, "episode_elapsed_seconds": 20.93761420249939, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.3540706990537406, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 13, "episode_elapsed_seconds": 22.013685941696167, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.099850581723918, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 14, "episode_elapsed_seconds": 23.381052494049072, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9453995928116841, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.45, -0.05], "score": 0.98}, "instruction": "Approach the rectangular metallic object with a smooth silver surface.", "env_step": 15, "episode_elapsed_seconds": 24.09294319152832, "task_success": 1.0, "last_action_success": true, "action_id": 3}

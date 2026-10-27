@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0891752789969606, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 3.65], "score": 1.22}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.334904909133911, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.34218646934671, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 3.65], "score": 1.22}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.6983513832092285, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.34218646934671, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 3.65], "score": 1.22}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 3.0516579151153564, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.506538789993103, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 3.65], "score": 0.82}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 3.347158908843994, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.6257714780590344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 3.65], "score": 0.42}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 4.2458202838897705, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.8173056486016637, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 3.65], "score": 0.42}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 4.630202054977417, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.8173056486016637, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 4.97887110710144, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.6257714780590344, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.49, 6.24], "score": 1.0}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.704273462295532, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.506538789993103, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.39, 6.17], "score": 2.0}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 8.362655401229858, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.34218646934671, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.39, 6.17], "score": 3.0}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 10.01328158378601, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0891752789969606, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.39, 6.17], "score": 2.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 10.810190677642822, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8453114815697753, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.39, 6.15], "score": 3.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 11.519264936447144, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.613157323647898, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.41, 6.17], "score": 4.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 13.015042066574097, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.466533343298379, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.42, 6.18], "score": 5.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 14.484235525131226, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.466533343298379, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.43, 6.19], "score": 6.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 15.151906251907349, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.330961710179915, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.43, 6.19], "score": 6.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 16.708370208740234, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1465736228651724, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.43, 6.19], "score": 6.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 18.424604177474976, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.038964042155967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.43, 6.19], "score": 6.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 19.162433385849, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.786104165076366, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-3.43, 6.19], "score": 6.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 19.442342281341553, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.786104165076366, "env_feedback": "Last action MoveLeft is invalid. CoffeeTable_eac77d52 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-3.43, 6.19], "score": 6.6}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 20.222071170806885, "task_success": 0.0, "last_action_success": false, "action_id": 3}

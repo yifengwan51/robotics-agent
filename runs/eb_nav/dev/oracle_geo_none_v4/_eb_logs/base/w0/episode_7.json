@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.794436099855777, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.68 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.08620142936706543, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.794436099855777, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.68 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.10897183418273926, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6241324926727216, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.68 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.1293792724609375, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.6241324926727216, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (16 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.20038056373596191, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.883100755730397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (16 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.21852636337280273, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0599132263852864, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.2386488914489746, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.0599132263852864, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.2574448585510254, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9360291413251915, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.28250885009765625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8679375381818732, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.3051486015319824, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8124481089011475, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.322770357131958, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7544622874197775, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.35009050369262695, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.728417226736683, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.37386107444763184, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7292964776152266, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.3924992084503174, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5294782618968004, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.41038060188293457, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3296912418939315, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.74 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.4301767349243164, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3296912418939315, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.83 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.5005581378936768, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.129944166261275, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.83 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.5184590816497803, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9302494895628668, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.83 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.5368154048919678, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7306253305984987, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.93 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.5914058685302734, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.531099271845168, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.93 m)"}, "instruction": "navigate to the CoffeeMachine in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.6102423667907715, "task_success": 0.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2284493529315634, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, 0.75], "score": 1.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.4211604595184326, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.94601994438148, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.98, 0.73], "score": 2.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.2789957523345947, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7609650968561097, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.0, 0.73], "score": 3.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 3.283071279525757, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4906391682802134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.98, 0.75], "score": 4.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.274226665496826, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4906391682802134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.97, 0.75], "score": 5.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 5.151741981506348, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4906391682802134, "env_feedback": "Last action MoveAhead is invalid. IslandMesh is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [2.97, 0.75], "score": 5.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 6.284075736999512, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.4906391682802134, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [2.97, 0.75], "score": 5.0}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 7.2016987800598145, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2341036781665629, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [2.97, 0.75], "score": 5.25}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 7.9049458503723145, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0020074367062213, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [2.98, 0.75], "score": 6.25}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 8.708690404891968, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.0020074367062213, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 9.546576976776123, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.0020074367062213, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 10.919973373413086, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2341036781665629, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 13.002547025680542, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.403213231583884, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 14.498719453811646, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.403213231583884, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 15.891731262207031, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5795578166901365, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 18.426859855651855, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.403213231583884, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 20.192234992980957, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5795578166901365, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 21.209554433822632, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.403213231583884, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 21.718851804733276, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5795578166901365, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 22.553454637527466, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.403213231583884, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, -1.55]}, "instruction": "I need a device to brew my morning coffee. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 22.960731029510498, "task_success": 0.0, "last_action_success": true, "action_id": 3}

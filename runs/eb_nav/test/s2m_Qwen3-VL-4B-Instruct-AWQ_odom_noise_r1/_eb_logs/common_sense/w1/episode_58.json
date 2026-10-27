@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 3.666137933731079, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 5.921953916549683, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 7.001040458679199, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 8.12505555152893, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.66082918340946, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 9.515180587768555, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.762685119078436, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 9.780528783798218, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.934459813987976, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 11.314725160598755, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.059979014877069, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 12.402992248535156, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.059979014877069, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 13.573531866073608, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8379885938081872, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 16.067180156707764, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8379885938081872, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 17.83752417564392, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0549639185487236, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 18.87454319000244, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.2070580934891595, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 19.91811752319336, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3641698263907394, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 21.03833842277527, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.4886244134563897, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 22.138622045516968, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.644573679640967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 23.217247486114502, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.8046464115451832, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 24.304200887680054, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.9683436506708656, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, 0.05]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 25.31607413291931, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.9683436506708656, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 26.3653666973114, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.8046464115451832, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [2.15, -0.95]}, "instruction": "I want to take a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 27.49595284461975, "task_success": 0.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.530649607411432, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.4274351596832275, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.530649607411432, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.22464394569397, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.06, -2.31], "score": 0.97}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 6.255249500274658, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-0.06, -2.31], "score": 0.57}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 7.65488600730896, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 9.146391868591309, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 9.383986949920654, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveRight is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 9.526561975479126, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 9.665760040283203, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 11.065528869628906, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 11.961946964263916, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.46, -2.24], "score": 1.06}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 12.196630716323853, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.46, -2.24], "score": 1.21}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 13.416292428970337, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.46, -2.24], "score": 1.21}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 13.790897369384766, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.37}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 15.899568796157837, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.37}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 16.23017382621765, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.51}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 18.29729700088501, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.51}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 18.55301594734192, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.66}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 19.667125463485718, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.66}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 19.982843160629272, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.82}, "instruction": "navigate to the Book in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 20.558584690093994, "task_success": 0.0, "last_action_success": true, "action_id": 4}

@@ -1,0 +1,1 @@
+[queue 10-26_12:53] job 1: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v2 --split dev --per-type 2 --workers 2

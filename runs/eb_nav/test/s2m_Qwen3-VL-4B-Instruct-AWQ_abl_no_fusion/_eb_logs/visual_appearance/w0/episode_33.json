@@ -1,0 +1,36 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.614085863077784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.82, -0.69], "score": 0.9}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 1, "episode_elapsed_seconds": 2.805666446685791, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.614085863077784, "env_feedback": "Last action MoveAhead is invalid. ArmChair_60bb8c35 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.31, -0.6], "score": 0.95}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 2, "episode_elapsed_seconds": 4.389160633087158, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.614085863077784, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -0.6], "score": 0.95}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 3, "episode_elapsed_seconds": 5.114582538604736, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.499783256506908, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -0.6], "score": 0.95}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 4, "episode_elapsed_seconds": 5.350183963775635, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.499783256506908, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -0.6], "score": 0.95}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 5, "episode_elapsed_seconds": 5.6152873039245605, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.311907755948331, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -0.6], "score": 0.55}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 6, "episode_elapsed_seconds": 5.879186630249023, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0344333503511063, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.35, -0.63], "score": 0.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 7, "episode_elapsed_seconds": 6.633905410766602, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7643471038387721, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.37, -0.61], "score": 0.92}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 8, "episode_elapsed_seconds": 7.304519891738892, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5056302090075095, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.35, -0.6], "score": 1.0}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 9, "episode_elapsed_seconds": 7.991112232208252, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2652762366740904, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.35, -0.61], "score": 1.0}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 10, "episode_elapsed_seconds": 8.676107406616211, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0559003829798037, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.36, -0.66], "score": 1.0}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 11, "episode_elapsed_seconds": 9.587756633758545, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8428505427170189, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.41, -0.58], "score": 1.0}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 12, "episode_elapsed_seconds": 10.418004989624023, "task_success": 1.0, "last_action_success": true, "action_id": 2}

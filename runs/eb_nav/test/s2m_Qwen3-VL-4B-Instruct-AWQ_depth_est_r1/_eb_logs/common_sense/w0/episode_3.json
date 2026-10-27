@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.418638632603499, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.93, 2.11], "score": 1.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.1933026313781738, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.418638632603499, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.98, 2.09], "score": 2.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 2.082211971282959, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3227547335145293, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.98, 2.09], "score": 2.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.7111687660217285, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.205278865497937, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.98, 2.09], "score": 2.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.3258819580078125, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.205278865497937, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.98, 2.09], "score": 2.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.06415057182312, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9251161147098519, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.93, 2.06], "score": 3.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.888505935668945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.742015085873559, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.96, 2.05], "score": 4.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 5.758568048477173, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5630614517201644, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.0, 2.03], "score": 5.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 6.771528720855713, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3061310210734056, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-3.04, 2.01], "score": 6.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 7.7894697189331055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.3061310210734056, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 8.687154293060303, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5630614517201644, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.85, 5.53], "score": 1.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 9.879535913467407, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.742015085873559, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.87, 5.43], "score": 2.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 10.624220371246338, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9251161147098519, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.82, 5.47], "score": 3.0}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 11.634512662887573, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.205278865497937, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 5.54], "score": 3.95}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 13.13897180557251, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3227547335145293, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.73, 5.56], "score": 4.95}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 14.081174373626709, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.418638632603499, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, 5.56], "score": 5.95}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 14.971632480621338, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.680857250470077, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.7, 5.57], "score": 6.95}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 15.753892183303833, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.778780113395612, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.67, 5.58], "score": 7.95}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 16.80001449584961, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.945089736817579, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.66, 5.59], "score": 8.95}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 18.117409706115723, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.131371606819141, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-0.65, 5.6], "score": 9.88}, "instruction": "I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 19.082306623458862, "task_success": 0.0, "last_action_success": true, "action_id": 0}

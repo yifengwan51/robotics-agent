@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6721907855356917, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.18, -2.31], "score": 1.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.0367588996887207, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4538722495256047, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.37, -2.17], "score": 2.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.649686336517334, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.318493613340082, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.27, -2.22], "score": 3.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.321385622024536, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1930198850886162, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.26, -2.23], "score": 4.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.075155258178711, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.027368187191074, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 3.954838514328003, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9349794068932766, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.279675245285034, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 4.53858757019043, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveRight is invalid. Cabinet_1575d9a4 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.326975345611572, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveBack is invalid. Dresser_11d27db0 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 6.167032957077026, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveLeft is invalid. Dresser_11d27db0 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 6.797213554382324, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 5.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 7.373046398162842, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8289425380414976, "env_feedback": "Last action MoveLeft is invalid. Drawer_aa8242aa is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 4.6}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 7.966435670852661, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 4.2}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 8.451527118682861, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 4.2}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 8.787985563278198, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 3.8}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 9.450506448745728, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 3.8}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 9.668259143829346, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 3.4}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 10.545132398605347, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 3.4}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 10.761504650115967, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 3.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 11.261010885238647, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8289425380414976, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.31, -2.19], "score": 3.0}, "instruction": "I need to use that portable device to complete some computation tasks. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 11.43410325050354, "task_success": 0.0, "last_action_success": true, "action_id": 5}

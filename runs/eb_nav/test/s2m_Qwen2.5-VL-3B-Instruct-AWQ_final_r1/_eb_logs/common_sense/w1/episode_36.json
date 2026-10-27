@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 3.7095532417297363, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 5.45391845703125, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 7.705265760421753, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-1.2, -2.07], "score": 0.75}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 9.977510213851929, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5290649149531084, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [1.63, -0.7], "score": 0.68}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 10.710760116577148, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3422141169287367, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [0.02, -1.89], "score": 0.71}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 12.31255054473877, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1577220935933172, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.61, -0.64], "score": 0.93}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 14.014202356338501, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8869185461059532, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.61, -0.64], "score": 0.53}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 15.773700475692749, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8869185461059532, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.06, -1.79], "score": 1.61}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 16.573349952697754, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.803697947638293, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.06, -1.79], "score": 1.61}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 17.263179063796997, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.803697947638293, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.06, -1.79], "score": 1.61}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 17.937567949295044, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.529059578810457, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.06, -1.79], "score": 1.21}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 18.64860725402832, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3519692734721944, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.08, -1.76], "score": 1.96}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 19.224053859710693, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1822092842259913, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.09, -1.74], "score": 2.9}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 19.78505825996399, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9499029142555969, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.09, -1.74], "score": 2.9}, "instruction": "I need a soft cushion to support my head while resting. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 20.57347345352173, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.954363240043849, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 1, "episode_elapsed_seconds": 2.252795457839966, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.954363240043849, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 2, "episode_elapsed_seconds": 3.429887533187866, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.954363240043849, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 3, "episode_elapsed_seconds": 5.212110757827759, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.0058594691112552, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.85, 1.94], "score": 0.97}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 4, "episode_elapsed_seconds": 6.140985488891602, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1057341212900305, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.83, 1.94], "score": 1.92}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 5, "episode_elapsed_seconds": 7.066338062286377, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1057341212900305, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_b7e0db94 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-1.82, 1.95], "score": 2.88}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 6, "episode_elapsed_seconds": 7.951690912246704, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.1057341212900305, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.81, 1.95], "score": 3.11}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 7, "episode_elapsed_seconds": 8.707944393157959, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9213661303503713, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.81, 1.95], "score": 3.11}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 8, "episode_elapsed_seconds": 9.060126781463623, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9213661303503713, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.81, 1.95], "score": 3.11}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 9, "episode_elapsed_seconds": 9.319273710250854, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9213661303503713, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_b7e0db94 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-1.83, 1.95], "score": 4.07}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 10, "episode_elapsed_seconds": 10.107388496398926, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9213661303503713, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.84, 1.95], "score": 4.3}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 11, "episode_elapsed_seconds": 10.728071689605713, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6490704330322026, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.84, 1.95], "score": 4.3}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 12, "episode_elapsed_seconds": 10.950387239456177, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.6490704330322026, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.84, 1.95], "score": 4.3}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 13, "episode_elapsed_seconds": 11.211657762527466, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7942740669023087, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.86, 1.94], "score": 5.23}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 14, "episode_elapsed_seconds": 12.012385606765747, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.962829893373096, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, 1.94], "score": 6.15}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 15, "episode_elapsed_seconds": 12.78589677810669, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1509926066991674, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.89, 1.94], "score": 7.13}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 16, "episode_elapsed_seconds": 13.635023355484009, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.355465370434555, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.9, 1.94], "score": 8.07}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 17, "episode_elapsed_seconds": 14.421150207519531, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.355465370434555, "env_feedback": "Last action MoveAhead is invalid. Sofa_c1dc7d56 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-1.91, 1.94], "score": 9.06}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 18, "episode_elapsed_seconds": 15.08405089378357, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.355465370434555, "env_feedback": "Last action MoveLeft is invalid. CoffeeTable_b7e0db94 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.92, 1.94], "score": 9.3}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 19, "episode_elapsed_seconds": 15.634707927703857, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.355465370434555, "env_feedback": "Last action MoveRight is invalid. ArmChair_a7dd4301 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "push", "target": [-1.93, 1.95], "score": 9.55}, "instruction": "Approach the tall green container with a smooth texture.", "env_step": 20, "episode_elapsed_seconds": 16.116000413894653, "task_success": 0.0, "last_action_success": false, "action_id": 2}

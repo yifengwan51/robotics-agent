@@ -1,0 +1,30 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.402902364730835, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.475384950637817, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6846481108697495, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.33, -3.32], "score": 0.97}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.184097051620483, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3887142364491587, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.31, -3.32], "score": 1.95}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 5.8511388301849365, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1920391143877387, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.32, -3.32], "score": 2.94}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 6.5317323207855225, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8983297014850808, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.34, -3.32], "score": 3.93}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 7.313903570175171, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6069459868824054, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.32, -3.32], "score": 4.92}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 8.137522459030151, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3194300051070447, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.32, -3.34], "score": 5.91}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 8.987115621566772, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0389974084547229, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.32, -3.35], "score": 6.9}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 9.733583211898804, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8594157982863612, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.34, -3.39], "score": 7.89}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 10.2720046043396, "task_success": 1.0, "last_action_success": true, "action_id": 0}

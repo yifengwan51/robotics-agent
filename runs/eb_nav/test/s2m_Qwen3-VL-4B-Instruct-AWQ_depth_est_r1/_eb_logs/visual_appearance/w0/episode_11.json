@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4108134848262024, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.01, -3.03], "score": 1.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 1, "episode_elapsed_seconds": 1.376138687133789, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2288165998129332, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.01, -3.03], "score": 1.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 2, "episode_elapsed_seconds": 2.3688442707061768, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9624032665415654, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.97, -2.98], "score": 2.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 3, "episode_elapsed_seconds": 3.4276816844940186, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7071699774294398, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.94, -2.96], "score": 3.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 4, "episode_elapsed_seconds": 4.5488972663879395, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7071699774294398, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.88, -2.92], "score": 4.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 5, "episode_elapsed_seconds": 5.617690086364746, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.875853802431683, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.88, -2.92], "score": 4.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 6, "episode_elapsed_seconds": 6.463472127914429, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7413290981376996, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.88, -2.92], "score": 4.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 7, "episode_elapsed_seconds": 6.937105178833008, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6509471903378565, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.88, -2.92], "score": 4.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 8, "episode_elapsed_seconds": 7.4746010303497314, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.619020166462999, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.88, -2.92], "score": 4.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 9, "episode_elapsed_seconds": 8.043745279312134, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.619020166462999, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.88, -2.92], "score": 4.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 10, "episode_elapsed_seconds": 8.629412412643433, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4201507466297043, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.95, -2.95], "score": 5.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 11, "episode_elapsed_seconds": 9.559936046600342, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1226002160915887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.99, -2.94], "score": 6.0}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 12, "episode_elapsed_seconds": 10.47374939918518, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.1226002160915887, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 13, "episode_elapsed_seconds": 11.46720004081726, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.1226002160915887, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 14, "episode_elapsed_seconds": 14.186032772064209, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4201507466297043, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.97, -0.65], "score": 0.91}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 15, "episode_elapsed_seconds": 17.519065141677856, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.619020166462999, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.97, -0.65], "score": 0.91}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 16, "episode_elapsed_seconds": 18.054607152938843, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.6509471903378565, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.97, -0.65], "score": 0.91}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 17, "episode_elapsed_seconds": 19.22581458091736, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.7413290981376996, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.97, -0.65], "score": 0.91}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 18, "episode_elapsed_seconds": 20.26619863510132, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8266437392813388, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.97, -0.65], "score": 0.91}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 19, "episode_elapsed_seconds": 21.315738439559937, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0052494968615897, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.97, -0.65], "score": 0.51}, "instruction": "Approach the tall cylindrical container with a brushed silver surface.", "env_step": 20, "episode_elapsed_seconds": 22.38714289665222, "task_success": 0.0, "last_action_success": true, "action_id": 0}

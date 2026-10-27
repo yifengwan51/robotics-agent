@@ -1,0 +1,215 @@
+WARNING: running only ['visual_appearance']; a reportable result needs all five subsets
+3 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/eb_Qwen3-VL-4B-Instruct-AWQ_stability_check
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[2026-10-26 16:54:15,395][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 16:55:02,662][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 16:56:09,679][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 16:57:36,947][INFO] - Restoring scene FloorPlan11...
+INFO:EB_logger:Restoring scene FloorPlan11...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+model server unavailable after 4 attempts
+[w0] visual_appearance#1 success=0 steps=None dist=None
+[2026-10-26 16:58:04,065][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 16:58:51,040][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 16:59:58,083][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 17:01:25,214][INFO] - Restoring scene FloorPlan12...
+INFO:EB_logger:Restoring scene FloorPlan12...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+model server unavailable after 4 attempts
+[w0] visual_appearance#2 success=0 steps=None dist=None
+[2026-10-26 17:01:52,432][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 17:02:39,390][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 17:03:46,511][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+[2026-10-26 17:05:13,681][INFO] - Restoring scene FloorPlan13...
+INFO:EB_logger:Restoring scene FloorPlan13...
+model server unavailable after 4 attempts
+[LocalOpenAIModel] call failed (1/4): Connection error.
+[LocalOpenAIModel] call failed (2/4): Connection error.
+[LocalOpenAIModel] call failed (3/4): Connection error.
+[LocalOpenAIModel] call failed (4/4): Connection error.
+Traceback (most recent call last):
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 175, in worker
+    rec = run_episode(env, planner, sensors=sensors)
+  File "/home/ht/robotics-agent/embagent/eb/nav_runner.py", line 109, in run_episode
+    actions, reasoning = planner.act(obs)
+  File "/home/ht/robotics-agent/embagent/planners/__init__.py", line 69, in act
+    action, out = self.inner.act(self._img, self._instruction)
+  File "/home/ht/robotics-agent/third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py", line 320, in act
+    logger.debug(f"Model Output:\n{out}\n")
+UnboundLocalError: local variable 'out' referenced before assignment
+model server unavailable after 4 attempts
+[w0] visual_appearance#3 success=0 steps=None dist=None
+{'eval_set': 'visual_appearance', 'n': 3, 'success_rate': 0.0, 'avg_steps': 0.0, 'errors': 3, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 3, 'success_rate': 0.0, 'pooled_success_rate': 0.0}

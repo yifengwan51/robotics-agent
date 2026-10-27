@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8932894391286257, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.66, -1.87], "score": 1.0}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.7353310585021973, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7747243946971056, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.66, -1.8], "score": 2.0}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.603978395462036, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6659083534270622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.66, -1.8], "score": 2.0}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 3.3450944423675537, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6659083534270622, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.8, -1.74], "score": 2.97}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.372034311294556, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.496940151344373, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.76, -1.76], "score": 3.97}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 5.429167032241821, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3328851005360973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.74, -1.77], "score": 4.97}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 6.938718318939209, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1748553210719925, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.78], "score": 5.97}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 8.597412109375, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1748553210719925, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.7, -1.78], "score": 6.97}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 9.90809416770935, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1748553210719925, "env_feedback": "Last action MoveAhead is invalid. DiningTable_00be542e is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.7, -1.79], "score": 7.97}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 10.74390435218811, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.1748553210719925, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.7, -1.79], "score": 8.22}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 11.528095245361328, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.02426243386008, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.69, -1.79], "score": 8.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 12.248425006866455, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8163432231378973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.67, -1.78], "score": 9.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 13.110537767410278, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8163432231378973, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.65, -1.79], "score": 10.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 13.959128618240356, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6694533556555322, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.64, -1.8], "score": 11.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 14.824145555496216, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.6694533556555322, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.63, -1.8], "score": 12.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 15.821608781814575, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5345087773441297, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.62, -1.8], "score": 13.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 16.558676958084106, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.3866106280171862, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.61, -1.8], "score": 14.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 17.31930708885193, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.25326010153457, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.6, -1.8], "score": 15.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 18.117355346679688, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1395756810545106, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.6, -1.8], "score": 16.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 19.08053684234619, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.0519527489328828, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.6, -1.8], "score": 17.47}, "instruction": "I want to use a machine to prepare toasted bread for breakfast. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 20.031553030014038, "task_success": 0.0, "last_action_success": true, "action_id": 3}

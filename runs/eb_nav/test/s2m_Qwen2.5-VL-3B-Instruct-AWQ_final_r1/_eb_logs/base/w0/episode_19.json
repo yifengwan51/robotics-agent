@@ -1,0 +1,54 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.800935962688674, "env_feedback": "Last action MoveAhead is invalid. Chair_5f8ed236 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.01, -1.33], "score": 0.93}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 4.2237629890441895, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.800935962688674, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.33], "score": 0.53}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.569396734237671, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8085905618653357, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.33], "score": 0.53}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 4.870441913604736, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8303921324967574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.33], "score": 0.53}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 5.1603758335113525, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.33], "score": 0.53}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 5.450196981430054, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 5.751615524291992, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 7.259202480316162, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, -0.75]}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 8.890674829483032, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, -0.75]}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 9.06281590461731, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5338831988833337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.34], "score": 1.1}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 10.877681255340576, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3367056502679495, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.34], "score": 0.7}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 11.194855213165283, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0419690718015633, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.0, -1.34], "score": 1.62}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 12.046616077423096, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8464200701986404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.34], "score": 2.61}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 12.704216241836548, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.651937203130617, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.34], "score": 2.21}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 12.997356176376343, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4589468711799767, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.34], "score": 3.17}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 13.705027341842651, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2681306814161024, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.0, -1.34], "score": 4.16}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 14.384521961212158, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0806409578375598, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.0, -1.34], "score": 3.76}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 14.809003829956055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8985623589256397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.34], "score": 4.76}, "instruction": "navigate to the Kettle in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 15.496179103851318, "task_success": 1.0, "last_action_success": true, "action_id": 0}

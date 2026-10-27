@@ -1,0 +1,51 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 1, "episode_elapsed_seconds": 2.815253257751465, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 2, "episode_elapsed_seconds": 3.8648226261138916, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 3, "episode_elapsed_seconds": 4.884418964385986, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.78810097745536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 4, "episode_elapsed_seconds": 6.019219398498535, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8706519173015583, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 5, "episode_elapsed_seconds": 7.1459033489227295, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8706519173015583, "env_feedback": "Last action MoveAhead is invalid. Window_e6469a68 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 6, "episode_elapsed_seconds": 8.210551977157593, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8706519173015583, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 7, "episode_elapsed_seconds": 8.467193603515625, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.75135229795707, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.15, -1.55], "score": 0.85}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 8, "episode_elapsed_seconds": 10.709489822387695, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.6606834541854556, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.15, -1.55], "score": 0.45}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 9, "episode_elapsed_seconds": 11.504268169403076, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.467596812836886, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 10, "episode_elapsed_seconds": 12.270369052886963, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2757046504799887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 11, "episode_elapsed_seconds": 15.398053407669067, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0853367401589398, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 12, "episode_elapsed_seconds": 19.72176194190979, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.803697947638293, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 13, "episode_elapsed_seconds": 24.301150798797607, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.529059578810457, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 14, "episode_elapsed_seconds": 29.120128870010376, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3519692734721944, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 15, "episode_elapsed_seconds": 33.27529335021973, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1822092842259913, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [1.96, 0.06], "score": 0.68}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 16, "episode_elapsed_seconds": 38.435261249542236, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9499029142555969, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.15, 0.75]}, "instruction": "Move towards the soft rectangular item with a yellow cover and floral patterns.", "env_step": 17, "episode_elapsed_seconds": 39.31931471824646, "task_success": 1.0, "last_action_success": true, "action_id": 0}

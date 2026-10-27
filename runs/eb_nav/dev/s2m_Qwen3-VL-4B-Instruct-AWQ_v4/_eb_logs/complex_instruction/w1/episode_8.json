@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4444148650767894, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.87, 0.29], "score": 0.97}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 1, "episode_elapsed_seconds": 2.8544843196868896, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2641382510797086, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.87, 0.29], "score": 0.57}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 2, "episode_elapsed_seconds": 3.5372560024261475, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2641382510797086, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 3, "episode_elapsed_seconds": 4.354752779006958, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2641382510797086, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 4, "episode_elapsed_seconds": 6.1621809005737305, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2641382510797086, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 5, "episode_elapsed_seconds": 7.313371896743774, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2641382510797086, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 6, "episode_elapsed_seconds": 8.604207277297974, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0874578469408527, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 7, "episode_elapsed_seconds": 10.790055274963379, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8314522975709844, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 8, "episode_elapsed_seconds": 13.065338134765625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5908974902638453, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 9, "episode_elapsed_seconds": 15.254971504211426, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.373933081871479, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 10, "episode_elapsed_seconds": 17.350956678390503, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1934946199117684, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 11, "episode_elapsed_seconds": 19.00692868232727, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.4579269482442596, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 12, "episode_elapsed_seconds": 20.58792996406555, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.733975945444578, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 13, "episode_elapsed_seconds": 21.7332706451416, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6502757022514467, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 14, "episode_elapsed_seconds": 22.973902702331543, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9453871779167549, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 15, "episode_elapsed_seconds": 24.102550506591797, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.142882598118772, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 16, "episode_elapsed_seconds": 25.35227608680725, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.439890809072806, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 17, "episode_elapsed_seconds": 26.626312971115112, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.737551658326224, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 18, "episode_elapsed_seconds": 28.8508403301239, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.0356729682175922, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.85]}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 19, "episode_elapsed_seconds": 30.172918796539307, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.0356729682175922, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "The sunlight is streaming through the window, making everything feel warm and cozy. There's a jar of honey on the table, alongside some oranges freshly peeled earlier. Please navigate to the bowl for me. The room feels so inviting this morning.", "env_step": 20, "episode_elapsed_seconds": 31.356939554214478, "task_success": 0.0, "last_action_success": true, "action_id": 4}

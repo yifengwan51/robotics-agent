@@ -1,0 +1,48 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.651302558318466, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.689789056777954, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.785391919095983, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.85, -1.35]}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 3.8687381744384766, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.94404671352521, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.85, -1.35]}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.053960561752319, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.94404671352521, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.85, -1.35]}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 6.932053804397583, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.785391919095983, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.42, -1.71], "score": 1.0}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 8.312336683273315, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.693029187917671, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.43, -1.71], "score": 2.0}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 9.63596796989441, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.426027195291895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.44, -1.7], "score": 3.0}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 10.519847393035889, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.252644910921901, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.44, -1.7], "score": 3.9}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 11.247107744216919, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0840370053079686, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.44, -1.7], "score": 4.86}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 11.876689910888672, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9214607429421657, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.44, -1.7], "score": 4.46}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 12.439353704452515, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7665821511182265, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.44, -1.7], "score": 5.46}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 13.008904457092285, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5537098640439782, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.44, -1.71], "score": 6.46}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 13.579506158828735, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4292709359030527, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.43, -1.73], "score": 7.46}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 14.12561559677124, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.27153979326378, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.42, -1.76], "score": 8.45}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 14.667508363723755, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.0619842881243529, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.42, -1.76], "score": 8.45}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 14.876165866851807, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9496360587630995, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.43, -1.78], "score": 9.45}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 15.42743444442749, "task_success": 1.0, "last_action_success": true, "action_id": 2}

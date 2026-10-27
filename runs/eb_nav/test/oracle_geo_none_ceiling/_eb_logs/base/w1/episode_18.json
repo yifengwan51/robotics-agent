@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3270067254915006, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.66 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.03538084030151367, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.196841021219714, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.66 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.04790043830871582, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.023075890247344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.66 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.06150484085083008, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.023075890247344, "env_feedback": "Last action MoveAhead is invalid. DiningTable_c3d0f596 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (9 left, residual 0.66 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.07354235649108887, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.023075890247344, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.10127544403076172, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7757979341895536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.11497020721435547, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5472816457333278, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.12947630882263184, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4099036986024516, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.1473078727722168, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.289021499273572, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.16762518882751465, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1498689384420553, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.18665337562561035, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0783416287882872, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.20367693901062012, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0754388461715736, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.21938157081604004, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.0754388461715736, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.23346328735351562, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.7767201811597262, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (1 left, residual 0.57 m)"}, "instruction": "navigate to the Lettuce in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.24712753295898438, "task_success": 1.0, "last_action_success": true, "action_id": 0}

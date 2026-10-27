@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9953972706688026, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 3.5050342082977295, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9953972706688026, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 7.271445989608765, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9953972706688026, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 9.325740337371826, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9953972706688026, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.35, 4.81], "score": 0.68}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 10.754017114639282, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1899570382383677, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 10.901914596557617, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4829522755277496, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 12.359545230865479, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.6789100624961093, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 14.230350255966187, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.9736014051936923, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 15.611178636550903, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.170483318248711, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 18.096542835235596, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.4663250778588255, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.19, 6.12], "score": 0.7}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 19.95640540122986, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.663848514654655, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 21.704179763793945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.960505143114358, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 23.440274238586426, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.012608435049757, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 25.1876540184021, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.08191650011878, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 26.94586443901062, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.137343365079425, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 28.815552234649658, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.199876770214719, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 30.348798513412476, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.306444231151327, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 31.700663805007935, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.427520822069622, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.05, 5.95]}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 33.18511629104614, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 5.427520822069622, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 34.56014347076416, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 5.306444231151327, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.35, 6.09], "score": 1.12}, "instruction": "I need a desk-mounted lighting device to illuminate my work area. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 35.285910844802856, "task_success": 0.0, "last_action_success": true, "action_id": 0}

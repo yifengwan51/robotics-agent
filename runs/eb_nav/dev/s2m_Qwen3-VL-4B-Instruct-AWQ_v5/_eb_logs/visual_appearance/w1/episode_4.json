@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.629076229260417, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 1, "episode_elapsed_seconds": 3.398952007293701, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.629076229260417, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 2, "episode_elapsed_seconds": 6.628308296203613, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.867400501621614, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.34, 2.58], "score": 0.96}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 3, "episode_elapsed_seconds": 9.490274667739868, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.867400501621614, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.19, 2.47], "score": 1.92}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 4, "episode_elapsed_seconds": 10.393168210983276, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.988088955171817, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.19, 2.47], "score": 1.92}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 5, "episode_elapsed_seconds": 11.477701902389526, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.116948124285468, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.13, 2.55], "score": 1.96}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 6, "episode_elapsed_seconds": 12.332845211029053, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.323462069129345, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.13, 2.55], "score": 1.96}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 7, "episode_elapsed_seconds": 13.076183080673218, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4687303409305428, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.13, 2.55], "score": 1.96}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 8, "episode_elapsed_seconds": 13.837773561477661, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.4687303409305428, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-3.13, 2.55], "score": 1.96}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 9, "episode_elapsed_seconds": 14.639217376708984, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.4687303409305428, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.38, 2.82], "score": 0.78}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 10, "episode_elapsed_seconds": 15.612250804901123, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.4687303409305428, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.38, 2.82], "score": 0.78}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 11, "episode_elapsed_seconds": 17.75949215888977, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.323462069129345, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.16, 0.32], "score": 0.85}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 12, "episode_elapsed_seconds": 18.67394185066223, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.116948124285468, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.34, 0.46], "score": 0.94}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 13, "episode_elapsed_seconds": 19.541311264038086, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.926658681297057, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.34, 0.46], "score": 0.54}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 14, "episode_elapsed_seconds": 20.457903623580933, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.769843731326804, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-1.26, 0.01], "score": 0.68}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 15, "episode_elapsed_seconds": 21.368343353271484, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.545994833716911, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.45, 0.55], "score": 0.82}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 16, "episode_elapsed_seconds": 24.116121292114258, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4059910640224493, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.48, 0.56], "score": 0.84}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 17, "episode_elapsed_seconds": 25.01803755760193, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4059910640224493, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.41, 0.52], "score": 1.72}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 18, "episode_elapsed_seconds": 25.9315664768219, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2632063547599284, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.41, 0.52], "score": 1.32}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 19, "episode_elapsed_seconds": 26.837044715881348, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.129650921264455, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.41, 0.52], "score": 0.92}, "instruction": "Get near the box-shaped item with a shiny black surface and golden details.", "env_step": 20, "episode_elapsed_seconds": 27.726097345352173, "task_success": 0.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,29 @@
+{
+ "planner": "s2m",
+ "model": "Qwen3-VL-4B-Instruct-AWQ",
+ "exp": "odom_noise_r1",
+ "eval_sets": [
+  "base",
+  "common_sense",
+  "complex_instruction",
+  "visual_appearance",
+  "long_horizon"
+ ],
+ "limit": 0,
+ "stride": 1,
+ "workers": 1,
+ "resolution": 500,
+ "n_shots": 3,
+ "platform": "cloud",
+ "data": "",
+ "s2m": "{}",
+ "depth": "gt",
+ "odom_noise": [
+  0.05,
+  2.0
+ ],
+ "repeat": 0,
+ "retry_errors": true,
+ "allow_subset": false,
+ "out": "/home/ht/robotics-agent/runs/eb_nav"
+}

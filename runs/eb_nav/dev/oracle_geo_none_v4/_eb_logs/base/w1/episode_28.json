@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3753619245108846, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.51 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.02899956703186035, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.173104026153685, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.51 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.05118155479431152, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.173104026153685, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.59 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.1094510555267334, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0228656059263908, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.59 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.12590265274047852, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.0228656059263908, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.59 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.14651775360107422, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0228656059263908, "env_feedback": "Last action MoveAhead is invalid. Chair_ea66794f is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (14 left, residual 0.59 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.1635913848876953, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.0228656059263908, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.2075808048248291, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8155968270172451, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.22465014457702637, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.8155968270172451, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.24379754066467285, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.598883575701966, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.25650548934936523, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4129634272345193, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.2860558032989502, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3126906823670035, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.29639625549316406, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.136996493579226, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.31012392044067383, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8928424034301254, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.61 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.32433271408081055, "task_success": 1.0, "last_action_success": true, "action_id": 2}

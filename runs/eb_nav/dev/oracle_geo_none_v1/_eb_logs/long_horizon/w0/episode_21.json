@@ -1,0 +1,39 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.716719657449105, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "face target"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.017139911651611328, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.716719657449105, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "face target"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.03420853614807129, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.716719657449105, "env_feedback": "Last action MoveAhead is invalid. DogBed_6ba109dd is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "plan 14 moves, residual 0.35 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.05407404899597168, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.5761527652153307, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "plan 15 moves, residual 0.49 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.07353949546813965, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.464256595012633, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "plan 14 moves, residual 0.53 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.09281182289123535, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.385069824505005, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "plan 12 moves, residual 0.39 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.11430573463439941, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3419128043810002, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "plan 11 moves, residual 0.42 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.1346132755279541, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3367826351592087, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "plan 10 moves, residual 0.46 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.15177559852600098, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0371641410267456, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 9 moves, residual 0.49 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.16756033897399902, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7376772617966973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 6 moves, residual 0.55 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.1831493377685547, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5381304142711438, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 5 moves, residual 0.50 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.19925928115844727, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2390842968889808, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 4 moves, residual 0.55 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.2177565097808838, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9406458212671462, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "plan 3 moves, residual 0.50 m"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.23131370544433594, "task_success": 1.0, "last_action_success": true, "action_id": 0}

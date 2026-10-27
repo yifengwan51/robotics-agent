@@ -1,0 +1,33 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.350963039202622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.01801586151123047, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.350963039202622, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 0.030268192291259766, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1950939732603847, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 0.04444003105163574, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1085645071324137, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 0.05808115005493164, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1085645071324137, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 0.07326722145080566, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8366534473257394, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 0.08675241470336914, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6607618819256929, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 0.10060405731201172, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4090356935183075, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 0.11246299743652344, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2530825097239928, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 0.12557578086853027, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.047600728161122, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 0.13802623748779297, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8970611224023405, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.51 m)"}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 0.1494884490966797, "task_success": 1.0, "last_action_success": true, "action_id": 0}

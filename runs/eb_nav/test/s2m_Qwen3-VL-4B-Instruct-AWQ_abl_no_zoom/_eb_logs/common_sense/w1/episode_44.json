@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.805751103647488, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.22, -0.23], "score": 1.0}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.524456024169922, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5161083575179584, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.22, -0.23], "score": 0.6}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.7787129878997803, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 3.0240726470947266, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.071728229522705, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 5.855442523956299, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5161083575179584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.05, -1.35]}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 7.205138444900513, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.324473178243544, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.22, -0.24], "score": 1.19}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 9.062235593795776, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.040033705565315, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.22, -0.24], "score": 0.79}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 9.307983875274658, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8531356823309486, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.76], "score": 0.88}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 10.005350589752197, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5788203738593511, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.76], "score": 0.48}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 10.672409057617188, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.401801780047592, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.76], "score": 1.48}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 11.325075149536133, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2318371373080914, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.77], "score": 2.48}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 11.964062690734863, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0722859868255186, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.77], "score": 3.48}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 12.614430904388428, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9285320374750377, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.77], "score": 4.48}, "instruction": "I need to set a time-based alert to wake me up. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 13.274099111557007, "task_success": 1.0, "last_action_success": true, "action_id": 0}

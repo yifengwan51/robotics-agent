@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8627446365810294, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 1, "episode_elapsed_seconds": 4.855078935623169, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7511619263998406, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-7.02, 3.62], "score": 0.95}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 2, "episode_elapsed_seconds": 5.813715219497681, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6037034544951476, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-7.02, 3.63], "score": 1.91}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 3, "episode_elapsed_seconds": 6.857896566390991, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5204874639741597, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-7.02, 3.63], "score": 2.85}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 4, "episode_elapsed_seconds": 7.738156080245972, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4214120887668993, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 5, "episode_elapsed_seconds": 8.583750009536743, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3741992685597597, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 6, "episode_elapsed_seconds": 9.407264232635498, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3339240193937316, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 7, "episode_elapsed_seconds": 10.22937822341919, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5334572889135, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 8, "episode_elapsed_seconds": 11.039509534835815, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8328805113687996, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 9, "episode_elapsed_seconds": 11.859739303588867, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.0325594051597435, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 10, "episode_elapsed_seconds": 13.581655263900757, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.2322780106450404, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-7.01, 3.63], "score": 3.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 11, "episode_elapsed_seconds": 14.588854312896729, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.5319155223329863, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-7.02, 3.63], "score": 4.77}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 12, "episode_elapsed_seconds": 15.694320678710938, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.5319155223329863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 13, "episode_elapsed_seconds": 16.738726139068604, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.5319155223329863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 14, "episode_elapsed_seconds": 18.063426733016968, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.558658187494747, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.95, 4.35]}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 15, "episode_elapsed_seconds": 20.691970586776733, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.590329014480453, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.95, 4.35]}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 16, "episode_elapsed_seconds": 22.576661586761475, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.6578795749237822, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.95, 4.35]}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 17, "episode_elapsed_seconds": 24.536773204803467, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.715709569859257, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.95, 4.35]}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 18, "episode_elapsed_seconds": 26.373133659362793, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.820486601712638, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.95, 4.35]}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 19, "episode_elapsed_seconds": 28.2349591255188, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.9016064361833256, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.95, 4.35]}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 20, "episode_elapsed_seconds": 30.839266061782837, "task_success": 0.0, "last_action_success": true, "action_id": 0}

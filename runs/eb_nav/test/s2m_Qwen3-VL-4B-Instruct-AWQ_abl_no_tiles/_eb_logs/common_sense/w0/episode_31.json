@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.621804380146996, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.0}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 0.9738976955413818, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.6355700492858887, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.621804380146996, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.2920830249786377, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 2.8804032802581787, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 3.604715347290039, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.729610401900379, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.239631175994873, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.729610401900379, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.65], "score": 1.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 4.865178108215332, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.487868662550497, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.63], "score": 2.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.505673885345459, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.260134500603536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 3.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 6.045555353164673, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1183372451122815, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.64], "score": 4.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 6.690740346908569, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9865793703385772, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 5.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 7.31597375869751, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8125161753647834, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 5.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 7.521601676940918, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6744946136083811, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 5.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 7.731241703033447, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4030538600826554, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 5.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 7.960020542144775, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4030538600826554, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 5.25}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 8.197401762008667, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.64], "score": 6.23}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 8.913649320602417, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveAhead is invalid. Wall is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.32, -1.64], "score": 7.23}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 9.605044603347778, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveLeft is invalid. Wall is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [0.33, -1.64], "score": 7.48}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 10.358766555786133, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveRight is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [0.33, -1.64], "score": 7.73}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 10.820452213287354, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2294898895084134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.33, -1.64], "score": 7.98}, "instruction": "I need a cushion to rest my head on while lying down. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 11.33440613746643, "task_success": 0.0, "last_action_success": true, "action_id": 4}

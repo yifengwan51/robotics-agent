@@ -1,0 +1,30 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3753619245108846, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.51 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.01613450050354004, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.173104026153685, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.51 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.03265023231506348, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.0228656059263908, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.59 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.07989907264709473, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0228656059263908, "env_feedback": "Last action MoveAhead is invalid. Chair_ea66794f is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (14 left, residual 0.59 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.09388995170593262, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8155968270172451, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.54 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.11193490028381348, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.598883575701966, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.54 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.13068675994873047, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4129634272345193, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.58 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.17193317413330078, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3126906823670035, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.58 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.18430447578430176, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.136996493579226, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.58 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.19971752166748047, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8928424034301254, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.58 m)"}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.21318888664245605, "task_success": 1.0, "last_action_success": true, "action_id": 2}

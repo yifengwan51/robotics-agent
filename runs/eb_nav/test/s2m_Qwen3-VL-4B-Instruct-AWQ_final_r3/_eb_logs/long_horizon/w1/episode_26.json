@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6950437865599155, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.4027099609375, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8232731639316087, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.61, -1.57], "score": 0.85}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.9135727882385254, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.95947322052837, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.61, -1.57], "score": 0.45}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 3.138375997543335, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1764597946460285, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.58, -1.55], "score": 0.5}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 3.8597323894500732, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3282889387092838, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.7, -1.61], "score": 1.35}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 4.586344957351685, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4849846097527357, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.69, -1.6], "score": 1.92}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 5.298479080200195, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.7278053565126736, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.69, -1.6], "score": 1.52}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 5.5724732875823975, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.978435341268635, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.67, -1.59], "score": 2.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.243722677230835, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.149163565413467, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.67, -1.59], "score": 1.9}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 8.338171005249023, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.322403082695785, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.67, -1.59], "score": 1.5}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 9.102849960327148, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.5863475456036475, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.67, -1.59], "score": 1.1}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 10.092148542404175, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 4.45589062428301, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.67, -1.59], "score": 0.7}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 10.618534326553345, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 4.45589062428301, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 10.865955114364624, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.378189831639511, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.65, -1.6], "score": 1.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 12.349767208099365, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.308379179059588, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.65, -1.6], "score": 1.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 12.692755937576294, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.2468477841360075, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.65, -1.6], "score": 1.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 12.927699089050293, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 4.535099931146556, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.65, -1.6], "score": 1.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 13.147284746170044, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 4.72808011968187, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.65, -1.6], "score": 1.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 13.375184059143066, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 4.921620856299328, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.65, -1.6], "score": 1.3}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 13.609495401382446, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.11565851973862, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.69, -1.65], "score": 2.18}, "instruction": "navigate to the FloorLamp in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 14.077811479568481, "task_success": 0.0, "last_action_success": true, "action_id": 3}

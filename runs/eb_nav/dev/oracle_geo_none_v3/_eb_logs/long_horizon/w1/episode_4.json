@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.477648944705778, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.50 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.028181791305541992, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.333548285346659, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.50 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.0506281852722168, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.1982154000538685, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.44 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.07626771926879883, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.0154915788039944, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.44 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.09732294082641602, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.44 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.11920404434204102, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveBack is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (8 left, residual 0.44 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.14158892631530762, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (7 left, residual 0.53 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.16411590576171875, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveAhead is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (9 left, residual 0.53 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.18566155433654785, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveRight is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (9 left, residual 0.53 m)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.20717811584472656, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.2323765754699707, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.2560594081878662, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.27792978286743164, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.2975783348083496, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.31627845764160156, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.34113264083862305, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.3619673252105713, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.3827385902404785, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.4086174964904785, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.43226194381713867, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.8634005490514365, "env_feedback": "Last action MoveLeft is invalid. DiningTable_b56b0c2f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "push (residual 1.8634005490514365)"}, "instruction": "navigate to the Microwave in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.4495689868927002, "task_success": 0.0, "last_action_success": false, "action_id": 3}

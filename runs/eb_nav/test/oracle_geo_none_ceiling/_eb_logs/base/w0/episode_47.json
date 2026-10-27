@@ -1,0 +1,30 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.379623289738397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.53 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.016807079315185547, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2025912338588545, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.53 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.029575347900390625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.029829866826907, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.53 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.04279756546020508, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8625279690349326, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.53 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.05557131767272949, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.702295962933306, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.53 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.06959009170532227, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4802072119798257, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.58 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.10015583038330078, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3490049877545744, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.58 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.1123495101928711, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.127302773611579, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.58 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.12341070175170898, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.0024019310609287, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.58 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.1366584300994873, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.904879918192625, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.58 m)"}, "instruction": "navigate to the LaundryHamper in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.14874053001403809, "task_success": 1.0, "last_action_success": true, "action_id": 2}

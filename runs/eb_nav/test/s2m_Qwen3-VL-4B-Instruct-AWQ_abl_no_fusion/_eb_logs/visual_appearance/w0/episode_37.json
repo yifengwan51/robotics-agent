@@ -1,0 +1,54 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3686553854939643, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.32, 0.3], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 1, "episode_elapsed_seconds": 1.8521738052368164, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.191827029933348, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.42, 0.23], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 2, "episode_elapsed_seconds": 2.779446601867676, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0439381267158923, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.34, 0.27], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 3, "episode_elapsed_seconds": 4.012403249740601, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.964705528793137, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.35, 0.22], "score": 0.99}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 4, "episode_elapsed_seconds": 4.935811758041382, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9032741948911756, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.35, 0.22], "score": 0.99}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 5, "episode_elapsed_seconds": 5.303228378295898, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9032741948911756, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 6, "episode_elapsed_seconds": 6.714602947235107, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.964705528793137, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-5.37, 1.82], "score": 0.82}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 7, "episode_elapsed_seconds": 7.735617637634277, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9032741948911756, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-7.07, 2.54], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 8, "episode_elapsed_seconds": 9.063615083694458, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9032741948911756, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 9, "episode_elapsed_seconds": 10.55691385269165, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.964705528793137, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.51, 4.83], "score": 0.95}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 10, "episode_elapsed_seconds": 13.02256464958191, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0439381267158923, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.51, 4.83], "score": 0.55}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 11, "episode_elapsed_seconds": 13.292770147323608, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.0439381267158923, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 12, "episode_elapsed_seconds": 13.763963460922241, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.964705528793137, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.36, 0.29], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 13, "episode_elapsed_seconds": 14.548323392868042, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9032741948911756, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.35, 0.3], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 14, "episode_elapsed_seconds": 15.432671785354614, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6154353826931744, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.36, 0.3], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 15, "episode_elapsed_seconds": 16.29439640045166, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4263297386563085, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.21, 0.24], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 16, "episode_elapsed_seconds": 17.736499786376953, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2406456420915206, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.2, 0.23], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 17, "episode_elapsed_seconds": 18.72480583190918, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9728203890584352, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.21, 0.23], "score": 1.0}, "instruction": "Move to the rectangular object with a brown cardboard-like appearance.", "env_step": 18, "episode_elapsed_seconds": 20.23816466331482, "task_success": 1.0, "last_action_success": true, "action_id": 0}

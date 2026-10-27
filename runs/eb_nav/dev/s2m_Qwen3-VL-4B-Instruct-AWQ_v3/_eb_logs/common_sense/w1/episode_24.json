@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.501206755983632, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.9589815139770508, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.501206755983632, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 3.607207775115967, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.501206755983632, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 5.108234643936157, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.501206755983632, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 6.9360191822052, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.730837128388775, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 7.176898956298828, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8910948135564114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 8.788553714752197, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1400422543172173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 10.339044332504272, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3107133983127257, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 11.454380989074707, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5724304466299204, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 12.587725400924683, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.5724304466299204, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 14.209800958633423, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.44149006066015, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 15.361343622207642, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.36624172972668, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 16.49819016456604, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3014107547858194, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 17.703714609146118, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.2476210621102126, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 18.921749114990234, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.205428544936299, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 20.101032972335815, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1752955378526897, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, 2.05]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 21.219805240631104, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.1752955378526897, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 22.431179523468018, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.1752955378526897, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, -0.85]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 23.65355348587036, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.1752955378526897, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, -0.85]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 25.159777641296387, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8776840796838954, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.55, -0.85]}, "instruction": "I need a portable device to make calls or send messages. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 26.801568746566772, "task_success": 0.0, "last_action_success": true, "action_id": 0}

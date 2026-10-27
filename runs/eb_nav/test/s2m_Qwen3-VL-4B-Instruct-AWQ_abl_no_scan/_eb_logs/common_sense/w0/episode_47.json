@@ -1,0 +1,30 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.379623289738397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.13, -1.6], "score": 0.96}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.1575169563293457, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2025912338588545, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.13, -1.6], "score": 0.56}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.9300947189331055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.029829866826907, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.85, -1.45]}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.7558646202087402, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8625279690349326, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.309030055999756, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.702295962933306, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.064004182815552, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4802072119798257, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.723154783248901, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.2814095663770924, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 5.365952253341675, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1730339146013844, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.617109060287476, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0024019310609287, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 5.870967626571655, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.904879918192625, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.1, -1.65], "score": 1.16}, "instruction": "I need a basket to gather my dirty laundry. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 6.773525238037109, "task_success": 1.0, "last_action_success": true, "action_id": 2}

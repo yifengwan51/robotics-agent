@@ -1,0 +1,54 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.800935962688674, "env_feedback": "Last action MoveAhead is invalid. Chair_5f8ed236 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 1, "episode_elapsed_seconds": 3.207472085952759, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.800935962688674, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 2, "episode_elapsed_seconds": 4.045478582382202, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8085905618653357, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 3, "episode_elapsed_seconds": 4.380644083023071, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8303921324967574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 4, "episode_elapsed_seconds": 4.638146638870239, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 5, "episode_elapsed_seconds": 4.872248649597168, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5338831988833337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.15, -1.94], "score": 1.0}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 6, "episode_elapsed_seconds": 5.722411632537842, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3367056502679495, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.15, -1.94], "score": 0.6}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 7, "episode_elapsed_seconds": 6.340112686157227, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 8, "episode_elapsed_seconds": 6.93765926361084, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 9, "episode_elapsed_seconds": 8.473265647888184, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [0.0, -1.32], "score": 0.79}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 10, "episode_elapsed_seconds": 9.521737575531006, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [0.0, -1.32], "score": 0.79}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 11, "episode_elapsed_seconds": 9.809804439544678, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0419690718015633, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.06, -1.33], "score": 0.91}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 12, "episode_elapsed_seconds": 10.33909559249878, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8464200701986404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.06, -1.33], "score": 0.51}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 13, "episode_elapsed_seconds": 10.897553443908691, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.651937203130617, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.0, -1.32], "score": 2.39}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 14, "episode_elapsed_seconds": 11.551816701889038, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4589468711799767, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.32], "score": 3.39}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 15, "episode_elapsed_seconds": 12.284560680389404, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2681306814161024, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.32], "score": 4.39}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 16, "episode_elapsed_seconds": 12.913124799728394, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0806409578375598, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.32], "score": 5.39}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 17, "episode_elapsed_seconds": 13.563927412033081, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8985623589256397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.0, -1.33], "score": 6.39}, "instruction": "The rhythmic tapping of raindrops against the window creates a soothing atmosphere. A jar of honey sits on the counter, untouched. Could you please move towards the kettle for me? Everything feels peaceful and in harmony.", "env_step": 18, "episode_elapsed_seconds": 14.17566967010498, "task_success": 1.0, "last_action_success": true, "action_id": 0}

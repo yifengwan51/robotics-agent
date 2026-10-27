@@ -1,0 +1,24 @@
+[
+ {
+  "eval_set": "base",
+  "n": 30,
+  "success_rate": 86.7,
+  "avg_steps": 12.6,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "long_horizon",
+  "n": 30,
+  "success_rate": 93.3,
+  "avg_steps": 13.63,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "AVG(subsets)",
+  "n": 60,
+  "success_rate": 90.0,
+  "pooled_success_rate": 90.0
+ }
+]

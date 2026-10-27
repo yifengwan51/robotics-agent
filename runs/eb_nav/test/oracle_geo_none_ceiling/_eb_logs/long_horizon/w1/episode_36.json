@@ -1,0 +1,33 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7177880074144625, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.49 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.01792120933532715, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6373601857334843, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.49 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.029864788055419922, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.6373601857334843, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.45 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.04839658737182617, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.442430415925635, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.45 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.062322139739990234, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.248391416575895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.45 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.08388829231262207, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0554954696550967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.45 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.09782218933105469, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7691123741103907, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.57 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.1194608211517334, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4881046675109668, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.57 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.13207101821899414, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3054704984521273, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.57 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.14608168601989746, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1287387198222816, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.57 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.16157150268554688, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8824669129362236, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.57 m)"}, "instruction": "navigate to the Pillow in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.17795062065124512, "task_success": 1.0, "last_action_success": true, "action_id": 0}

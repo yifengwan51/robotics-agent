@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.220336654032757, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.94, 5.13], "score": 0.95}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 1, "episode_elapsed_seconds": 1.9212236404418945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0243945316848326, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.94, 5.13], "score": 1.9}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 2, "episode_elapsed_seconds": 3.378338098526001, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7322221553078934, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.94, 5.15], "score": 2.85}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 3, "episode_elapsed_seconds": 5.173502445220947, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.539114110167239, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.94, 5.13], "score": 3.58}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 4, "episode_elapsed_seconds": 6.303986072540283, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2535119997182589, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.95, 5.12], "score": 4.55}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 5, "episode_elapsed_seconds": 7.843317985534668, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2535119997182589, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 6, "episode_elapsed_seconds": 9.681810855865479, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2535119997182589, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 7, "episode_elapsed_seconds": 12.0028715133667, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2535119997182589, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 8, "episode_elapsed_seconds": 14.721166133880615, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.3346358291591223, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.02, 4.81], "score": 0.74}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 9, "episode_elapsed_seconds": 17.394160270690918, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.4987305768695136, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.02, 4.81], "score": 0.74}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 10, "episode_elapsed_seconds": 19.343366146087646, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4987305768695136, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.02, 4.81], "score": 0.74}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 11, "episode_elapsed_seconds": 20.848450899124146, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4987305768695136, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.02, 4.81], "score": 0.74}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 12, "episode_elapsed_seconds": 21.894103288650513, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6297711044085088, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.33, 6.74], "score": 1.21}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 13, "episode_elapsed_seconds": 23.879322290420532, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.6297711044085088, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.33, 6.74], "score": 1.21}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 14, "episode_elapsed_seconds": 24.510151386260986, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8584223856387314, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.33, 6.74], "score": 0.81}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 15, "episode_elapsed_seconds": 25.667850494384766, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8584223856387314, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 7.45]}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 16, "episode_elapsed_seconds": 26.840251922607422, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7446412962904003, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 7.45]}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 17, "episode_elapsed_seconds": 28.267838716506958, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.7446412962904003, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 7.45]}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 18, "episode_elapsed_seconds": 31.82285237312317, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9171579496602467, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 7.45]}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 19, "episode_elapsed_seconds": 34.83780217170715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9171579496602467, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "Head closer to the soft, square object with a bright yellow cover.", "env_step": 20, "episode_elapsed_seconds": 37.262964487075806, "task_success": 0.0, "last_action_success": true, "action_id": 4}

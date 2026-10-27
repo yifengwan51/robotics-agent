@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 1, "episode_elapsed_seconds": 1.3214411735534668, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 2, "episode_elapsed_seconds": 2.5922789573669434, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 3, "episode_elapsed_seconds": 4.6000754833221436, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-1.29, -3.66], "score": 0.68}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 4, "episode_elapsed_seconds": 6.084669589996338, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6051750997278784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.29, -3.66], "score": 0.84}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 5, "episode_elapsed_seconds": 6.834679126739502, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3121039039428215, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 1.57}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 6, "episode_elapsed_seconds": 7.584525108337402, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3121039039428215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 2.13}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 7, "episode_elapsed_seconds": 8.39180588722229, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2750984662794007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 2.13}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 8, "episode_elapsed_seconds": 8.798476696014404, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2750984662794007, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 2.13}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 9, "episode_elapsed_seconds": 9.100602626800537, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.978625820217633, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.29, -3.66], "score": 2.14}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 10, "episode_elapsed_seconds": 9.778271436691284, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7816334910140446, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 3.11}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 11, "episode_elapsed_seconds": 10.554320096969604, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.585394491702573, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.29, -3.66], "score": 4.1}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 12, "episode_elapsed_seconds": 11.364545822143555, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.293198655017435, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 5.08}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 13, "episode_elapsed_seconds": 12.974748849868774, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0056091542624754, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 6.08}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 14, "episode_elapsed_seconds": 13.74569320678711, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8188453006367646, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, -3.66], "score": 7.08}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 15, "episode_elapsed_seconds": 14.77006459236145, "task_success": 1.0, "last_action_success": true, "action_id": 0}

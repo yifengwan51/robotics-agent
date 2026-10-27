@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.542463643510863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 1, "episode_elapsed_seconds": 2.5749244689941406, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.542463643510863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 2, "episode_elapsed_seconds": 4.605058670043945, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.542463643510863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 3, "episode_elapsed_seconds": 6.1064252853393555, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.375313374907076, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [0.06, 0.44], "score": 0.69}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 4, "episode_elapsed_seconds": 7.223755598068237, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.375313374907076, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "explore", "goal": [-1.85, 2.55]}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 5, "episode_elapsed_seconds": 9.207974195480347, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.375313374907076, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.85, 2.55]}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 6, "episode_elapsed_seconds": 9.906906604766846, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.375313374907076, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "inspect", "target": [-0.42, 0.88], "score": 0.54}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 7, "episode_elapsed_seconds": 11.036133050918579, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.483972467916171, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.42, 0.88], "score": 0.7}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 8, "episode_elapsed_seconds": 12.06899905204773, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.483972467916171, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "inspect", "target": [-0.43, 0.87], "score": 0.76}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 9, "episode_elapsed_seconds": 14.615975618362427, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.6668568725283377, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.43, 0.86], "score": 0.78}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 10, "episode_elapsed_seconds": 15.54084849357605, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5173201878834743, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 11, "episode_elapsed_seconds": 16.425944328308105, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.307393894061234, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 12, "episode_elapsed_seconds": 17.818735361099243, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.307393894061234, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 13, "episode_elapsed_seconds": 18.408168077468872, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.307393894061234, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 14, "episode_elapsed_seconds": 19.321259260177612, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.307393894061234, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 15, "episode_elapsed_seconds": 20.48376488685608, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1791839886213356, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 16, "episode_elapsed_seconds": 21.03670597076416, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1791839886213356, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.66}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 17, "episode_elapsed_seconds": 22.590460538864136, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9511116060024654, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 1.26}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 18, "episode_elapsed_seconds": 23.503552436828613, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9511116060024654, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.47, 0.86], "score": 0.86}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 19, "episode_elapsed_seconds": 24.441438913345337, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9511116060024654, "env_feedback": "Last action MoveRight is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [-0.47, 0.86], "score": 0.46}, "instruction": "Find the small upright object with a polished golden surface and intricate details.", "env_step": 20, "episode_elapsed_seconds": 25.506922960281372, "task_success": 0.0, "last_action_success": false, "action_id": 2}

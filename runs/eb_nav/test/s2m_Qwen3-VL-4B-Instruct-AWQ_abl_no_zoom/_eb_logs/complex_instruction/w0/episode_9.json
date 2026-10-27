@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 1, "episode_elapsed_seconds": 2.297215461730957, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 2, "episode_elapsed_seconds": 3.369513988494873, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 3, "episode_elapsed_seconds": 4.596860408782959, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 4, "episode_elapsed_seconds": 5.68183708190918, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6051750997278784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 5, "episode_elapsed_seconds": 6.331303834915161, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3121039039428215, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 6, "episode_elapsed_seconds": 8.23323106765747, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3121039039428215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 7, "episode_elapsed_seconds": 9.781880855560303, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2750984662794007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 8, "episode_elapsed_seconds": 10.84214973449707, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552874707101753, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 9, "episode_elapsed_seconds": 11.94211483001709, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2586930782223584, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 10, "episode_elapsed_seconds": 13.075814962387085, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3015358373174277, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 11, "episode_elapsed_seconds": 14.218627214431763, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.351024417557654, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 12, "episode_elapsed_seconds": 15.31258511543274, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.416105223618201, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 13, "episode_elapsed_seconds": 16.331650733947754, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.139264255944126, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 14, "episode_elapsed_seconds": 17.42265486717224, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9584966981415024, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 15, "episode_elapsed_seconds": 18.54196286201477, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.7818437402446756, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 16, "episode_elapsed_seconds": 19.590853452682495, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.527695709775732, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 17, "episode_elapsed_seconds": 20.69627594947815, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2933449622837543, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 18, "episode_elapsed_seconds": 21.84958577156067, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.154122630704029, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 19, "episode_elapsed_seconds": 22.852827310562134, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.154122630704029, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "The crinkling sound of plastic from a grocery bag echoes softly in the room. There's a loaf of bread sitting on the table, freshly baked and still warm. Please move to the lettuce for me. The room feels fresh and inviting.", "env_step": 20, "episode_elapsed_seconds": 23.980944871902466, "task_success": 0.0, "last_action_success": true, "action_id": 4}

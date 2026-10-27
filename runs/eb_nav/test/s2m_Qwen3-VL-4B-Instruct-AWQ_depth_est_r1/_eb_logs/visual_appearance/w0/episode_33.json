@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7959692510254963, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 1, "episode_elapsed_seconds": 1.29052734375, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7959692510254963, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 2, "episode_elapsed_seconds": 3.5155484676361084, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.073018413878215, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.02, 1.98], "score": 0.92}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 3, "episode_elapsed_seconds": 5.305932521820068, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.073018413878215, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_019812e2 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-4.03, 1.99], "score": 1.78}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 4, "episode_elapsed_seconds": 6.937845945358276, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 5, "episode_elapsed_seconds": 8.74795913696289, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.073018413878215, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_019812e2 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 6, "episode_elapsed_seconds": 9.60027551651001, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.073018413878215, "env_feedback": "Last action MoveRight is invalid. CoffeeTable_019812e2 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 7, "episode_elapsed_seconds": 10.241530418395996, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 8, "episode_elapsed_seconds": 11.079150199890137, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 9, "episode_elapsed_seconds": 12.53462266921997, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.073018413878215, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_019812e2 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 10, "episode_elapsed_seconds": 13.325990438461304, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 1.99}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 11, "episode_elapsed_seconds": 13.772444248199463, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.2}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 12, "episode_elapsed_seconds": 15.357763528823853, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.2}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 13, "episode_elapsed_seconds": 16.37887477874756, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.42}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 14, "episode_elapsed_seconds": 18.09595513343811, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.42}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 15, "episode_elapsed_seconds": 19.146903038024902, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.63}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 16, "episode_elapsed_seconds": 20.77250909805298, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.63}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 17, "episode_elapsed_seconds": 22.00783610343933, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.84}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 18, "episode_elapsed_seconds": 23.612261533737183, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 2.84}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 19, "episode_elapsed_seconds": 24.703104972839355, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.073018413878215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-4.04, 1.99], "score": 3.05}, "instruction": "Get near the flat, round item with a shiny golden surface.", "env_step": 20, "episode_elapsed_seconds": 26.45174741744995, "task_success": 0.0, "last_action_success": true, "action_id": 4}

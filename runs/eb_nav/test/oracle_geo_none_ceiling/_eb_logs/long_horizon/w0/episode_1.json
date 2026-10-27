@@ -1,0 +1,33 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8704765293683745, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.49 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.0231778621673584, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8704765293683745, "env_feedback": "Last action MoveAhead is invalid. StandardCounterHeightWidth is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (11 left, residual 0.49 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.03989148139953613, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8704765293683745, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.069549560546875, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5787013079617007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.08795547485351562, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3853182753552926, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.10991120338439941, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1931225233165046, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.1284623146057129, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9078393455467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.14512920379638672, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6278561341714108, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.15944886207580566, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3564586972137358, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.17668867111206055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1000203663107784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.63 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.1892223358154297, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8718425589129648, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.64 m)"}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.21009254455566406, "task_success": 1.0, "last_action_success": true, "action_id": 0}

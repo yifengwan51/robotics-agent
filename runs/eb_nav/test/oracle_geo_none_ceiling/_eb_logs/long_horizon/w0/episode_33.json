@@ -1,0 +1,36 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7959692510254963, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.046846628189086914, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.689408017138573, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.05977892875671387, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6350009034358037, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.07242202758789062, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.594907328200751, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.08309745788574219, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.594907328200751, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.09616708755493164, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.397820862536026, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.11051774024963379, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.201260100786542, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.14261221885681152, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9077598424124447, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.15668678283691406, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6166475380010918, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.16927742958068848, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.329492717383862, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.18166232109069824, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0495487193993795, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.1966109275817871, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.7845726085440564, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (1 left, residual 0.67 m)"}, "instruction": "navigate to the Plate in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.20972943305969238, "task_success": 1.0, "last_action_success": true, "action_id": 0}

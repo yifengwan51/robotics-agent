@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.478744588124123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.56 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.039435625076293945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.478744588124123, "env_feedback": "Last action MoveAhead is invalid. OVENDOOR.002 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (12 left, residual 0.56 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.05525326728820801, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.478744588124123, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.08911609649658203, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3395126688889114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.10379862785339355, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1487291816364995, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.11609983444213867, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1487291816364995, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.12969326972961426, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9157875658642383, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.14389801025390625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7717350361202344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.15673160552978516, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6394658023450477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.17190814018249512, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4700520332340878, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.18890047073364258, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3469438691170488, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.20897388458251953, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2973283788676568, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.22401714324951172, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1010021639561787, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.23825955390930176, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8098909096150023, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (1 left, residual 0.57 m)"}, "instruction": "navigate to the Cup in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.2537505626678467, "task_success": 1.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.478744588124123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.82], "score": 0.98}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 1, "episode_elapsed_seconds": 2.0783796310424805, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.478744588124123, "env_feedback": "Last action MoveAhead is invalid. OVENDOOR.002 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 1.92}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 2, "episode_elapsed_seconds": 3.6184396743774414, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.478744588124123, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 2.17}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 3, "episode_elapsed_seconds": 5.149745941162109, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3395126688889114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.65, 0.81], "score": 3.09}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 4, "episode_elapsed_seconds": 6.7717413902282715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1487291816364995, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.81], "score": 4.07}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 5, "episode_elapsed_seconds": 7.633703708648682, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1487291816364995, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.81], "score": 4.07}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 6, "episode_elapsed_seconds": 8.353899240493774, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9157875658642383, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.81], "score": 5.05}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 7, "episode_elapsed_seconds": 9.424362897872925, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7717350361202344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 5.97}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 8, "episode_elapsed_seconds": 10.269593954086304, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6394658023450477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 6.9}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 9, "episode_elapsed_seconds": 11.825316905975342, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4700520332340878, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 6.9}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 10, "episode_elapsed_seconds": 13.385140180587769, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3469438691170488, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 6.9}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 11, "episode_elapsed_seconds": 14.237203598022461, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2973283788676568, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 6.9}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 12, "episode_elapsed_seconds": 15.771950244903564, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1010021639561787, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 6.9}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 13, "episode_elapsed_seconds": 16.836925268173218, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8098909096150023, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.66, 0.8], "score": 6.9}, "instruction": "Move closer to the small round object with a green surface and a cylindrical shape.", "env_step": 14, "episode_elapsed_seconds": 18.424299478530884, "task_success": 1.0, "last_action_success": true, "action_id": 2}

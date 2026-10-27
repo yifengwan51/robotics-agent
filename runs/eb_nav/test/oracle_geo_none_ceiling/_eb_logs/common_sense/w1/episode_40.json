@@ -1,0 +1,27 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.391606103155337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.43 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.02079033851623535, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1470885733059752, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.43 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 0.038033485412597656, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.992518205048491, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.43 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 0.05344438552856445, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.777734046120841, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.43 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 0.07336878776550293, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5907695693607662, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.43 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 0.09439682960510254, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.486838032824445, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.51 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 0.11092543601989746, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.403861441386688, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.51 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 0.12636399269104004, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1285681125486628, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.51 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 0.14596056938171387, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9533577738553682, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.51 m)"}, "instruction": "I need to dispose of some trash properly. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 0.16833233833312988, "task_success": 1.0, "last_action_success": true, "action_id": 2}

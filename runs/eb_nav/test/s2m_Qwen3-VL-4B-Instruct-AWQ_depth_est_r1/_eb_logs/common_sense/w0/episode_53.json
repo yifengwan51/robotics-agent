@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.781703363231628, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.92, 0.77], "score": 1.0}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.0956885814666748, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.662541742287887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.92, 0.77], "score": 1.0}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.7256081104278564, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5032002087093552, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.92, 0.77], "score": 1.0}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.4651782512664795, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.5032002087093552, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.92, 0.77], "score": 1.0}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.123785972595215, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.662541742287887, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.99, 0.7], "score": 2.0}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.1186683177948, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.781703363231628, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.99, 0.71], "score": 2.98}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.8967204093933105, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6275425566780135, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.97, 0.73], "score": 3.23}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 5.649052381515503, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4799367281602365, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.98, 0.77], "score": 3.9}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 6.502756834030151, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.340126592000174, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.96, 0.79], "score": 4.88}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 7.277930736541748, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.340126592000174, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.96, 0.79], "score": 4.88}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 8.04034161567688, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.197145283088402, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.96, 0.79], "score": 4.48}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 8.717071294784546, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0010822448002377, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [1.96, 0.79], "score": 4.08}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 9.711234331130981, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.0010822448002377, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 10.209749460220337, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.0010822448002377, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 11.669108390808105, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.197145283088402, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, -0.95]}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 13.103823900222778, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.0010822448002377, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "inspect", "target": [2.32, 1.33], "score": 0.5}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 14.532168626785278, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.197145283088402, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, -0.95]}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 15.097197532653809, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.0010822448002377, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "inspect", "target": [2.32, 1.33], "score": 0.5}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 15.689228296279907, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.197145283088402, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, -0.95]}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 16.18094229698181, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.0010822448002377, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "inspect", "target": [2.32, 1.33], "score": 0.5}, "instruction": "I need a secure box to protect my valuables or important documents. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 16.73848247528076, "task_success": 0.0, "last_action_success": true, "action_id": 1}

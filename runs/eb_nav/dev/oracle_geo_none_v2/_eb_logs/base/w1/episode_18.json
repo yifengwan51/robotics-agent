@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6213174596454696, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.04647040367126465, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4789728155740796, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.06142163276672363, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2817335785345536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.07732462882995605, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.108864616149758, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.58 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.09567403793334961, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.01030122682697, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.65 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.13714385032653809, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9275144912717403, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.65 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.14964008331298828, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8374748764954432, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.71 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.22249579429626465, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.6432634417679552, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.71 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.23529720306396484, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.61 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.2757997512817383, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveLeft is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (4 left, residual 0.61 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.29318881034851074, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.3296647071838379, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.366121768951416, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.4050755500793457, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.44011521339416504, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.47455525398254395, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.5107049942016602, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.5447263717651367, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.5809638500213623, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.6172952651977539, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5941507110433442, "env_feedback": "Last action MoveBack is invalid. FP208:StandardDoor1 (1) is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (6 left, residual 0.60 m)"}, "instruction": "navigate to the Laptop in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.6526803970336914, "task_success": 0.0, "last_action_success": false, "action_id": 1}

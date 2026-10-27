@@ -1,0 +1,39 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.781703363231628, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.4835000038146973, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.781703363231628, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.697005271911621, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6275425566780135, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 1.0}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 3.3783211708068848, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4799367281602365, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 1.61}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 4.027711868286133, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.340126592000174, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 4.67505669593811, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2095924420306083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 4.946943998336792, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.09007297007726, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 5.30252480506897, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.935862745511296, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 5.567036390304565, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8530166742300098, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 5.831089496612549, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7643214833192062, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 6.089118003845215, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5697404960416066, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 6.3397557735443115, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.281002724575593, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 6.607821702957153, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9989247612341888, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 1.63], "score": 2.6}, "instruction": "navigate to the Safe in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 6.882086515426636, "task_success": 1.0, "last_action_success": true, "action_id": 2}

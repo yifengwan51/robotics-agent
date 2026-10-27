@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.350963039202622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -2.64], "score": 1.0}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.4519214630126953, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.110516244081479, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -2.64], "score": 1.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.4194653034210205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -2.63], "score": 2.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 3.577256202697754, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.110516244081479, "env_feedback": "Last action MoveAhead is invalid. Dresser_f96530a5 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.05, -2.55], "score": 3.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.551526308059692, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.5], "score": 4.22}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 5.5655670166015625, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.110516244081479, "env_feedback": "Last action MoveAhead is invalid. Drawer_7889be7d is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [0.06, -2.52], "score": 4.47}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 6.686164855957031, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.110516244081479, "env_feedback": "Last action MoveLeft is invalid. Dresser_f96530a5 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [0.05, -2.53], "score": 4.72}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 7.747308015823364, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.05, -2.54], "score": 4.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 8.781935930252075, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.06, -2.51], "score": 5.22}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 9.768341302871704, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.05, -2.52], "score": 5.47}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 10.656712055206299, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.06, -2.5], "score": 5.72}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 11.512296676635742, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.06, -2.51], "score": 5.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 12.326130867004395, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.5], "score": 6.22}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 13.226179838180542, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.06, -2.5], "score": 6.47}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 14.333756685256958, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.49], "score": 6.72}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 15.263298034667969, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.5], "score": 6.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 16.26539397239685, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.49], "score": 7.22}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 17.74034094810486, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.49], "score": 7.47}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 18.721479654312134, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.48], "score": 7.72}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 19.62361192703247, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.110516244081479, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.07, -2.49], "score": 7.97}, "instruction": "I need to set a time to wake up in the morning. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 20.414024829864502, "task_success": 0.0, "last_action_success": true, "action_id": 4}

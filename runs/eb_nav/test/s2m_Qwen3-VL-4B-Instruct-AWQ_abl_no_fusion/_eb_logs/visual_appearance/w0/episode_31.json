@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.621804380146996, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 1, "episode_elapsed_seconds": 1.3146636486053467, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 2, "episode_elapsed_seconds": 2.056356191635132, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.621804380146996, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 3, "episode_elapsed_seconds": 2.2627384662628174, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 4, "episode_elapsed_seconds": 2.419015884399414, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.621804380146996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 5, "episode_elapsed_seconds": 2.648355722427368, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.729610401900379, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 6, "episode_elapsed_seconds": 2.9105618000030518, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.729610401900379, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.62], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 7, "episode_elapsed_seconds": 3.133652448654175, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.487868662550497, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.31, -1.56], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 8, "episode_elapsed_seconds": 4.60228967666626, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.260134500603536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.63], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 9, "episode_elapsed_seconds": 5.571916103363037, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1183372451122815, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.66], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 10, "episode_elapsed_seconds": 7.035632133483887, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9865793703385772, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.56], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 11, "episode_elapsed_seconds": 8.07877516746521, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8125161753647834, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.56], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 12, "episode_elapsed_seconds": 8.289899110794067, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6744946136083811, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.56], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 13, "episode_elapsed_seconds": 8.494799852371216, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4030538600826554, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.56], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 14, "episode_elapsed_seconds": 8.697752237319946, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4030538600826554, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.56], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 15, "episode_elapsed_seconds": 8.907216548919678, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.28, -1.69], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 16, "episode_elapsed_seconds": 10.25327754020691, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveAhead is invalid. Wall is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.35, -1.64], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 17, "episode_elapsed_seconds": 11.224607467651367, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveLeft is invalid. Wall is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [0.35, -1.64], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 18, "episode_elapsed_seconds": 11.887102365493774, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.2294898895084134, "env_feedback": "Last action MoveRight is invalid. CoffeeTable_8c3305a5 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [0.35, -1.64], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 19, "episode_elapsed_seconds": 12.400984287261963, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.2294898895084134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.35, -1.64], "score": 1.0}, "instruction": "Locate the soft, cushion-like object with a vibrant purple cover.", "env_step": 20, "episode_elapsed_seconds": 13.066901206970215, "task_success": 0.0, "last_action_success": true, "action_id": 4}

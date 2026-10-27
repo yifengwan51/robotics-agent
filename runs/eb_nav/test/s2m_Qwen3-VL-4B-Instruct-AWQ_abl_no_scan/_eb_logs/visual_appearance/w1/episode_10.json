@@ -1,0 +1,48 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8932894391286257, "env_feedback": "Last action MoveAhead is invalid. Fridge_c8d99c87 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.7, -1.92], "score": 1.0}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 1, "episode_elapsed_seconds": 1.2725658416748047, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8932894391286257, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.7, -1.92], "score": 1.25}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 2, "episode_elapsed_seconds": 2.2543511390686035, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7747243946971056, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.73, -1.91], "score": 2.23}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 3, "episode_elapsed_seconds": 3.044063091278076, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6659083534270622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.73, -1.91], "score": 2.23}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 4, "episode_elapsed_seconds": 3.878727436065674, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6659083534270622, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.73, -1.91], "score": 2.23}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 5, "episode_elapsed_seconds": 4.709038019180298, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.496940151344373, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.73, -1.91], "score": 3.23}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 6, "episode_elapsed_seconds": 5.543457984924316, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3328851005360973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.73, -1.91], "score": 2.83}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 7, "episode_elapsed_seconds": 6.405212640762329, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1748553210719925, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.83}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 8, "episode_elapsed_seconds": 7.107599973678589, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.02426243386008, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.43}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 9, "episode_elapsed_seconds": 7.904488563537598, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8163432231378973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.03}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 10, "episode_elapsed_seconds": 8.683803796768188, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.69314659296696, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.03}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 11, "episode_elapsed_seconds": 9.733786821365356, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.5345087773441297, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.03}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 12, "episode_elapsed_seconds": 10.607917547225952, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.3866106280171862, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.03}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 13, "episode_elapsed_seconds": 11.281001806259155, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.25326010153457, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.03}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 14, "episode_elapsed_seconds": 11.971567630767822, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1395756810545106, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 4.03}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 15, "episode_elapsed_seconds": 12.673428058624268, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8944814074473351, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.72, -1.91], "score": 3.63}, "instruction": "Move towards the shiny rectangular object with a metallic silver finish.", "env_step": 16, "episode_elapsed_seconds": 13.377652168273926, "task_success": 1.0, "last_action_success": true, "action_id": 0}

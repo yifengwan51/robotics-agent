@@ -1,0 +1,52 @@
+[queue 10-26_16:17:06] job 1: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v2 --split dev --per-type 2 --workers 2
+[queue 10-26_16:17:40] job 1 exit 0 :: {'type': 'ALL', 'n': 24, 'SR': 75.0, 'SPL': 41.0, 'errors': 0}
+[queue 10-26_16:17:40] job 2: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v3 --split dev --per-type 2 --workers 2
+[queue 10-26_16:17:43] job 2 exit 0 :: {'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}
+[queue 10-26_16:17:43] job 3: Qwen3-VL-4B-Instruct-AWQ ctx=8192 util=0.80 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-4B-Instruct-AWQ --exp eb_official_r1 --workers 1
+[queue 10-26_17:35:38] job 1: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v2 --split dev --per-type 2 --workers 2
+[queue 10-26_17:36:07] job 1 exit 0 :: {'type': 'ALL', 'n': 24, 'SR': 75.0, 'SPL': 41.0, 'errors': 0}
+[queue 10-26_17:36:07] job 2: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v3 --split dev --per-type 2 --workers 2
+[queue 10-26_17:36:10] job 2 exit 0 :: {'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}
+[queue 10-26_17:36:10] job 3: Qwen3-VL-4B-Instruct-AWQ ctx=8192 util=0.78 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-4B-Instruct-AWQ --exp eb_official_r1 --workers 1
+[queue 10-26_17:36:36] vLLM failed to start for models/Qwen3-VL-4B-Instruct-AWQ|8192|0.78
+  File "/home/ht/miniforge3/envs/vlm/lib/python3.12/site-packages/vllm/v1/engine/utils.py", line 1431, in wait_for_engine_startup
+    raise RuntimeError(
+RuntimeError: Engine core initialization failed. See root cause above. Failed core proc(s): {}
+[queue 10-26_17:36:36] job 3 exit 99 :: 
+[queue 10-26_17:36:36] job 4: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner oracle_geo --model none --exp ceiling --workers 2
+scripts/run_queue.sh: line 105: logs/queue_4.log: No such file or directory
+[queue 10-26_17:38:16] job 4 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 91.3, 'pooled_success_rate': 91.3}
+[queue 10-26_17:38:16] job 5: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python scripts/eval_grounding.py --split test --model Qwen3-VL-4B-Instruct-AWQ --subsets base common_sense complex_instruction visual_appearance
+scripts/run_queue.sh: line 105: logs/queue_5.log: No such file or directory
+[queue 10-26_18:03:38] job 1: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v2 --split dev --per-type 2 --workers 2
+[queue 10-26_18:04:07] job 1 exit 0 :: {'type': 'ALL', 'n': 24, 'SR': 75.0, 'SPL': 41.0, 'errors': 0}
+[queue 10-26_18:04:07] job 2: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.robothor.runner --model Qwen3-VL-4B-Instruct-AWQ --exp v3 --split dev --per-type 2 --workers 2
+[queue 10-26_18:04:10] job 2 exit 0 :: {'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}
+[queue 10-26_18:04:10] job 3: Qwen3-VL-4B-Instruct-AWQ ctx=8192 util=0.72 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-4B-Instruct-AWQ --exp eb_official_r1 --workers 1
+[queue 10-27_05:58:04] job 3 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 48.0, 'pooled_success_rate': 48.0}
+[queue 10-27_05:58:04] job 4: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner oracle_geo --model none --exp ceiling --workers 2
+[queue 10-27_05:58:38] job 4 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 91.3, 'pooled_success_rate': 91.3}
+[queue 10-27_05:58:39] job 5: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python scripts/eval_grounding.py --split test --model Qwen3-VL-4B-Instruct-AWQ --subsets base common_sense complex_instruction visual_appearance
+[queue 10-27_06:07:16] job 5 exit 0 :: 
+[queue 10-27_06:07:16] job 6: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python scripts/probe_verification.py --split test --model Qwen3-VL-4B-Instruct-AWQ --subsets visual_appearance common_sense complex_instruction
+[queue 10-27_06:12:40] job 6 exit 0 :: 
+[queue 10-27_06:12:40] job 7: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r1 --workers 2 --repeat 1
+[queue 10-27_06:41:46] job 7 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.7, 'pooled_success_rate': 79.7}
+[queue 10-27_06:41:46] job 8: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r2 --workers 2 --repeat 2
+[queue 10-27_07:11:08] job 8 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.0, 'pooled_success_rate': 79.0}
+[queue 10-27_07:11:08] job 9: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r3 --workers 2 --repeat 3
+[queue 10-27_07:39:56] job 9 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 80.0, 'pooled_success_rate': 80.0}
+[queue 10-27_07:39:56] job 10: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python scripts/eval_grounding.py --model Qwen3-VL-4B-Instruct-AWQ --subsets base common_sense complex_instruction visual_appearance
+[queue 10-27_07:44:21] job 10 exit 0 :: 
+[queue 10-27_07:44:21] job 11: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python scripts/probe_verification.py --model Qwen3-VL-4B-Instruct-AWQ --subsets visual_appearance common_sense complex_instruction
+[queue 10-27_07:47:07] job 11 exit 0 :: 
+[queue 10-27_07:47:07] job 12: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  (curl -s -m 2 -X POST http://127.0.0.1:8010/ >/dev/null 2>&1 || (CUDA_VISIBLE_DEVICES= nohup ~/miniforge3/envs/vlm/bin/python -m embagent.depth_est --serve --device cpu --threads 8 > logs/depth_server.log 2>&1 & sleep 25)); ~/miniforge3/envs/embnav_thor/bin/python scripts/calib_depth.py && ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp depth_est_r1 --workers 2 --depth est
+[queue 10-27_08:37:52] job 12 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 45.7, 'pooled_success_rate': 45.7}
+[queue 10-27_08:37:52] job 13: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp odom_noise_r1 --workers 2 --odom-noise 0.05 2.0
+[queue 10-27_09:07:45] job 13 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.3, 'pooled_success_rate': 79.3}
+[queue 10-27_09:07:45] job 14: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_negative --workers 2 --s2m '{"use_negative": false}'
+[queue 10-27_09:35:26] job 14 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 81.0, 'pooled_success_rate': 81.0}
+[queue 10-27_09:35:26] job 15: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_fusion --workers 2 --s2m '{"use_fusion": false}'
+[queue 10-27_10:10:47] job 15 exit 0 :: {'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 69.0, 'pooled_success_rate': 69.0}
+[queue 10-27_10:10:47] job 16: Qwen3-VL-4B-Instruct-AWQ ctx=2048 util=0.68 ::  ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp abl_no_tiles --workers 2 --s2m '{"use_tiles": false}'
+[queue 10-27_10:10:48] waiting for memory before job 16

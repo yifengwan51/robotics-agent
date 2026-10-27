@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7200048753130064, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 3.1048545837402344, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7200048753130064, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 5.079172372817993, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7200048753130064, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 6.3592939376831055, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7200048753130064, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 7.603485822677612, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4444148650767894, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 8.385202646255493, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2641382510797086, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [1.1, -0.54], "score": 0.56}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 9.029508829116821, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0874578469408527, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 11.2165687084198, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8314522975709844, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 13.33766484260559, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5908974902638453, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 15.62089467048645, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.373933081871479, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 17.82499670982361, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1934946199117684, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 19.42901635169983, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.4579269482442596, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 20.5579092502594, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.733975945444578, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 21.76857614517212, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6502757022514467, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 22.949169397354126, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9453871779167549, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 24.12688422203064, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.142882598118772, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 25.382771968841553, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.439890809072806, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [0.85, 2.35]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 26.636502981185913, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.439890809072806, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 28.4053738117218, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.142882598118772, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.25, -1.05]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 30.745349645614624, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9453871779167549, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [0.25, -1.05]}, "instruction": "I need a round container suitable for holding soup, cereal, or other food items. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 32.91557192802429, "task_success": 0.0, "last_action_success": true, "action_id": 0}

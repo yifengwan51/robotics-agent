@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.859352279197634, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 1, "episode_elapsed_seconds": 3.0260493755340576, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.859352279197634, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 2, "episode_elapsed_seconds": 4.814280271530151, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1442116380179503, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.52, 1.45], "score": 0.85}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 3, "episode_elapsed_seconds": 6.5877721309661865, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3355930755148875, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.52, 1.45], "score": 0.85}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 4, "episode_elapsed_seconds": 7.219011068344116, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5279308244362095, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.52, 1.45], "score": 0.85}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 5, "episode_elapsed_seconds": 7.739567518234253, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.5279308244362095, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.52, 1.45], "score": 0.85}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 6, "episode_elapsed_seconds": 8.239535808563232, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.619466165588147, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.52, 1.45], "score": 0.45}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 7, "episode_elapsed_seconds": 8.820465803146362, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.555893087489479, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [2.12, -0.07], "score": 0.91}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 8, "episode_elapsed_seconds": 10.070119619369507, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.365153921155936, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.12, -0.07], "score": 0.51}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 9, "episode_elapsed_seconds": 10.679353713989258, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.0812480541498757, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.16, -0.09], "score": 1.39}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 10, "episode_elapsed_seconds": 11.589958190917969, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.893782134724626, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.16, -0.09], "score": 0.99}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 11, "episode_elapsed_seconds": 12.097981214523315, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9715542595472355, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.16, -0.09], "score": 0.59}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 12, "episode_elapsed_seconds": 12.784180402755737, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.893782134724626, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.65, 2.15]}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 13, "episode_elapsed_seconds": 13.615188598632812, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.0812480541498757, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.23, -0.11], "score": 1.11}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 14, "episode_elapsed_seconds": 16.047025203704834, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.365153921155936, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.23, -0.11], "score": 0.71}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 15, "episode_elapsed_seconds": 17.444655179977417, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.284816819694588, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.65, 2.15]}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 16, "episode_elapsed_seconds": 18.02572989463806, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.365153921155936, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.1], "score": 1.17}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 17, "episode_elapsed_seconds": 20.010152339935303, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.432261730587147, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.19, -0.1], "score": 0.77}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 18, "episode_elapsed_seconds": 20.543094158172607, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5094985728466765, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.18, -0.1], "score": 1.68}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 19, "episode_elapsed_seconds": 21.59801745414734, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.596211879291434, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [2.18, -0.1], "score": 2.47}, "instruction": "Move towards the round object with a clear, transparent surface.", "env_step": 20, "episode_elapsed_seconds": 22.744670391082764, "task_success": 0.0, "last_action_success": true, "action_id": 0}

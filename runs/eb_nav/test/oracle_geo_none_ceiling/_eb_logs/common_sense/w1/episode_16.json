@@ -1,0 +1,27 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.365911723242201, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.01714038848876953, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.126731667580434, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 0.03396272659301758, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9765171879383168, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 0.05218386650085449, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7697653658738064, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 0.06744980812072754, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6479387446917746, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 0.08367228507995605, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4970475325130603, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 0.10007357597351074, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3952062157433622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 0.11367988586425781, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1067304613183475, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 0.1258866786956787, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8265011714150662, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.53 m)"}, "instruction": "I'm looking to braise some meat and need a deep cooking vessel. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 0.1401047706604004, "task_success": 1.0, "last_action_success": true, "action_id": 2}

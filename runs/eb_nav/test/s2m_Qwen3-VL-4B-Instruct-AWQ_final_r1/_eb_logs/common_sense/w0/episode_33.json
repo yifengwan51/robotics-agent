@@ -1,0 +1,36 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.614085863077784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.83, -0.69], "score": 0.82}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 2.6623570919036865, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.614085863077784, "env_feedback": "Last action MoveAhead is invalid. ArmChair_60bb8c35 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.83, -0.69], "score": 0.42}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 3.290132999420166, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.614085863077784, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.43, -0.37], "score": 1.25}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 4.49660062789917, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.499783256506908, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.43, -0.37], "score": 1.25}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 4.724496364593506, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.499783256506908, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.43, -0.37], "score": 1.25}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.9594385623931885, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.311907755948331, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.43, -0.37], "score": 0.85}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 7.062506437301636, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0344333503511063, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.42, -0.43], "score": 1.53}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 7.824885129928589, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7643471038387721, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.42, -0.43], "score": 1.13}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 8.455023050308228, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5056302090075095, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.4, -0.46], "score": 2.13}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 9.090409278869629, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2652762366740904, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.42, -0.43], "score": 3.12}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 9.598722219467163, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0559003829798037, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.44, -0.42], "score": 4.12}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 10.20177698135376, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8428505427170189, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, -0.4], "score": 5.09}, "instruction": "I need a flat dish to hold my food. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 10.836811065673828, "task_success": 1.0, "last_action_success": true, "action_id": 2}

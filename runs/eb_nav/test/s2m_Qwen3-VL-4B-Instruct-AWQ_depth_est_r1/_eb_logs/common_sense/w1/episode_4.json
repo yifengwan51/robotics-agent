@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.693827648435705, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.18, 0.6], "score": 1.0}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.4443233013153076, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.693827648435705, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, 0.44], "score": 2.0}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 3.165076494216919, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.577378100505505, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.23, 0.59], "score": 3.0}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 4.134711503982544, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4716489092186404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.23, 0.59], "score": 3.0}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 5.039982080459595, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.4716489092186404, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.23, 0.59], "score": 3.0}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 5.685616731643677, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4716489092186404, "env_feedback": "Last action MoveAhead is invalid. Chair_5034f9c8 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [1.27, 0.54], "score": 3.65}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 6.7580742835998535, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "push", "target": [1.3, 0.51], "score": 3.82}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 7.404911756515503, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveAhead is invalid. Chair_5034f9c8 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [1.33, 0.48], "score": 4.82}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 8.26262354850769, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft is invalid. Chair_fa305b6f is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [1.35, 0.46], "score": 5.07}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 9.09616756439209, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.423248560851487, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "push", "target": [1.36, 0.45], "score": 5.32}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 9.95821738243103, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.36, 0.4], "score": 5.54}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 10.865607976913452, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.423248560851487, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "push", "target": [1.37, 0.4], "score": 5.79}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 11.627565622329712, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.37, 0.37], "score": 6.01}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 12.321226358413696, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.423248560851487, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "push", "target": [1.38, 0.36], "score": 6.26}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 13.119932651519775, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.38, 0.34], "score": 6.49}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 13.9467613697052, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.423248560851487, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "push", "target": [1.39, 0.34], "score": 6.74}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 14.720675706863403, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.39, 0.32], "score": 6.96}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 15.323550939559937, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.423248560851487, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "push", "target": [1.39, 0.32], "score": 7.21}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 16.048746585845947, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.39, 0.31], "score": 7.44}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 16.687841415405273, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.423248560851487, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "push", "target": [1.39, 0.31], "score": 7.69}, "instruction": "I'm preparing a stew and need a deep vessel to cook the ingredients thoroughly. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 17.49190664291382, "task_success": 0.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,30 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8704765293683745, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.3972527980804443, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8704765293683745, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 2.5800344944000244, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5787013079617007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.68, -1.45], "score": 1.0}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 3.5341577529907227, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3853182753552926, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.68, -1.45], "score": 0.6}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 4.168095827102661, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1931225233165046, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.23, -1.52], "score": 2.0}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 4.871045827865601, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9078393455467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.23, -1.5], "score": 2.25}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 5.444329261779785, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6278561341714108, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.24, -1.5], "score": 3.25}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 6.717491626739502, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3564586972137358, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.24, -1.5], "score": 4.25}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 8.140253782272339, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1000203663107784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.24, -1.5], "score": 5.25}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 8.953328371047974, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8718425589129648, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.24, -1.5], "score": 6.25}, "instruction": "navigate to the Bread in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 10.32634949684143, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,42 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801703096434348, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 0.5505564212799072, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801703096434348, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 0.7839875221252441, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801703096434348, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 1.0277903079986572, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.839966101683931, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [11.95, 1.65]}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 1.7112646102905273, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.839966101683931, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [11.95, 1.65]}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 2.3899073600769043, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5485709246428616, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.32, 1.98], "score": 1.0}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 3.0347483158111572, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3555079872361393, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.27, 2.05], "score": 2.0}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 3.6652984619140625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1637056177575804, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.27, 2.05], "score": 1.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 4.209691524505615, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9735313843672115, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.3, 2.13], "score": 2.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 4.962710618972778, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7855056012886652, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.29, 2.15], "score": 3.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 5.603791236877441, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6003856841550794, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.31, 2.19], "score": 4.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 6.168352842330933, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.330804518886454, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.31, 2.2], "score": 5.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 6.691076755523682, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1594156724951228, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.31, 2.19], "score": 6.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 7.287724018096924, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9241487885528425, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [14.3, 2.18], "score": 7.6}, "instruction": "I need to use that device that comes with a screen and a keyboard for some work tasks. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 7.909995079040527, "task_success": 1.0, "last_action_success": true, "action_id": 0}

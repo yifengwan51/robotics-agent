@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.750859240229083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.69], "score": 0.97}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 1, "episode_elapsed_seconds": 5.259272575378418, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5149868007838476, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.69], "score": 0.57}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 2, "episode_elapsed_seconds": 6.323331356048584, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149868007838476, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 3, "episode_elapsed_seconds": 6.714787721633911, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149868007838476, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 4, "episode_elapsed_seconds": 9.089393138885498, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.750859240229083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 0.37], "score": 0.91}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 5, "episode_elapsed_seconds": 11.645145893096924, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.998215236134768, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 0.37], "score": 0.51}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 6, "episode_elapsed_seconds": 11.931005001068115, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.998215236134768, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 7, "episode_elapsed_seconds": 12.204044342041016, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8321809979703407, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 8, "episode_elapsed_seconds": 13.635091543197632, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5921383336102912, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 9, "episode_elapsed_seconds": 15.097396612167358, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3658219069148476, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 10, "episode_elapsed_seconds": 16.4288547039032, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3658219069148476, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 11, "episode_elapsed_seconds": 17.86047077178955, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.224650038008464, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.76}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 12, "episode_elapsed_seconds": 18.555412769317627, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.031501882498171, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.36}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 13, "episode_elapsed_seconds": 19.84574794769287, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9180600727428179, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.36}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 14, "episode_elapsed_seconds": 21.23989200592041, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.776762927896972, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.36}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 15, "episode_elapsed_seconds": 23.09493136405945, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.5074188764126597, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.36}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 16, "episode_elapsed_seconds": 24.422889709472656, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.252092910552509, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.36}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 17, "episode_elapsed_seconds": 25.87266731262207, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.0213528570732135, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.58, -0.68], "score": 0.36}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 18, "episode_elapsed_seconds": 27.190333604812622, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.252092910552509, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 19, "episode_elapsed_seconds": 28.52745747566223, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.5074188764126597, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "The sound of water boiling creates a gentle bubbling noise in the background. A few tea bags are scattered on the counter, ready for use. Could you navigate to the kettle for me? The aroma of tea leaves fills the air.", "env_step": 20, "episode_elapsed_seconds": 28.668587923049927, "task_success": 0.0, "last_action_success": true, "action_id": 2}

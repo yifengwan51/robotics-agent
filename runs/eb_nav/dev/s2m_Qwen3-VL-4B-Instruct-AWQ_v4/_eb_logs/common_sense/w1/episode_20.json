@@ -1,0 +1,39 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.624595330645379, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.74, 0.05], "score": 1.0}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.1060783863067627, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.47331683997083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.74, 0.04], "score": 2.0}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 1.7571191787719727, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2606392765259233, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.73, 0.03], "score": 3.0}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 2.4140920639038086, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.069706169735104, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.72, 0.02], "score": 4.0}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 3.1271026134490967, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.069706169735104, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-6.74, -0.03], "score": 4.68}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 3.8011722564697266, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9123986822935708, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.73, -0.03], "score": 5.68}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 4.471563816070557, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.9123986822935708, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-6.72, -0.02], "score": 6.68}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 5.180541515350342, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7905486082473174, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.71, -0.02], "score": 7.68}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 5.884517669677734, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6837042655431416, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-6.74, -0.06], "score": 8.62}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 6.559653043746948, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4301188018783797, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-6.74, -0.06], "score": 8.62}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 7.212267160415649, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.2723306034938318, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-6.72, -0.1], "score": 9.62}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 7.897907257080078, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.0626403964477191, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-6.72, -0.09], "score": 10.12}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 8.69307017326355, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9501527642257254, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-6.72, -0.08], "score": 11.12}, "instruction": "I need a small light-emiting device that sits on a desk to provide focused lighting. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 9.45045280456543, "task_success": 1.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.539337607662411, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 1, "episode_elapsed_seconds": 0.562140941619873, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.539337607662411, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 2, "episode_elapsed_seconds": 0.8717379570007324, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.539337607662411, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 3, "episode_elapsed_seconds": 1.1044201850891113, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.408730494814377, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 4, "episode_elapsed_seconds": 1.3597309589385986, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.232174915090046, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 5, "episode_elapsed_seconds": 1.6186676025390625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.084041038282438, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 6, "episode_elapsed_seconds": 1.8535377979278564, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.004239266031368, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 7, "episode_elapsed_seconds": 2.090400457382202, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9177062302413082, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 8, "episode_elapsed_seconds": 2.370746612548828, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8756916799650858, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 9, "episode_elapsed_seconds": 2.6651363372802734, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8740243653078035, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 10, "episode_elapsed_seconds": 2.896832227706909, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.073841169766873, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 11, "episode_elapsed_seconds": 3.1311471462249756, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.373624131337182, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 12, "episode_elapsed_seconds": 3.3717539310455322, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.573507614172265, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 13, "episode_elapsed_seconds": 3.620710611343384, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.773407844371806, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 14, "episode_elapsed_seconds": 3.8527657985687256, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.97332149164983, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.85, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 15, "episode_elapsed_seconds": 4.092933177947998, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.97332149164983, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 16, "episode_elapsed_seconds": 4.336841821670532, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.1732460499821107, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 17, "episode_elapsed_seconds": 4.581841230392456, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.1742310014001816, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 18, "episode_elapsed_seconds": 4.922636032104492, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.199237465001009, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 19, "episode_elapsed_seconds": 5.16021728515625, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.2518453541737973, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, -0.25]}, "instruction": "The kitchen smells of fresh produce, with the occasional sound of paper rustling from unpacked groceries. There's a bag of oranges lying on the counter. Please navigate to the lettuce for me. The room feels full of life and activity.", "env_step": 20, "episode_elapsed_seconds": 5.413360118865967, "task_success": 0.0, "last_action_success": true, "action_id": 2}

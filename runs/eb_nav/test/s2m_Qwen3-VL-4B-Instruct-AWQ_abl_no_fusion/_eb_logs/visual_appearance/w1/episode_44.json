@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9999776181931646, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 1, "episode_elapsed_seconds": 1.195791244506836, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9999776181931646, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.47, 0.03], "score": 0.99}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 2, "episode_elapsed_seconds": 3.5521092414855957, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9999776181931646, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 3, "episode_elapsed_seconds": 5.05690336227417, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9452733216523432, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.17, 2.74], "score": 0.97}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 4, "episode_elapsed_seconds": 7.649764537811279, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9452733216523432, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 5, "episode_elapsed_seconds": 8.461287021636963, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1436063188290717, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.9, 2.74], "score": 0.95}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 6, "episode_elapsed_seconds": 12.167501449584961, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.8461944331662896, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 7, "episode_elapsed_seconds": 12.972371101379395, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.1, 2.74], "score": 0.95}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 8, "episode_elapsed_seconds": 13.832876205444336, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3421380094894477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.89, 2.74], "score": 0.99}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 9, "episode_elapsed_seconds": 15.226475954055786, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 10, "episode_elapsed_seconds": 16.159458875656128, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.8461944331662896, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 11, "episode_elapsed_seconds": 16.797606229782104, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.1, 2.74], "score": 0.95}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 12, "episode_elapsed_seconds": 17.558990478515625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3421380094894477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.89, 2.74], "score": 0.99}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 13, "episode_elapsed_seconds": 18.23626208305359, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 14, "episode_elapsed_seconds": 19.613585233688354, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.8461944331662896, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 15, "episode_elapsed_seconds": 20.61833620071411, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.1, 2.74], "score": 0.95}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 16, "episode_elapsed_seconds": 21.506953239440918, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3421380094894477, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.89, 2.74], "score": 0.99}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 17, "episode_elapsed_seconds": 22.063085794448853, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 18, "episode_elapsed_seconds": 22.766308784484863, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.8461944331662896, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [1.35, -0.65]}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 19, "episode_elapsed_seconds": 23.346893787384033, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.044412673824305, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.1, 2.74], "score": 0.94}, "instruction": "Move towards the small brown square object with a smooth finish.", "env_step": 20, "episode_elapsed_seconds": 24.698848724365234, "task_success": 0.0, "last_action_success": true, "action_id": 0}

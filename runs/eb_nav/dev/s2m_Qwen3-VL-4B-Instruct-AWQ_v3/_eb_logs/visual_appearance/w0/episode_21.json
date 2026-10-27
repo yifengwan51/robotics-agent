@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.716719657449105, "env_feedback": "Last action MoveAhead is invalid. DogBed_6ba109dd is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 0.9}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 1, "episode_elapsed_seconds": 0.8025455474853516, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.716719657449105, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 1.13}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 2, "episode_elapsed_seconds": 1.3440845012664795, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.716719657449105, "env_feedback": "Last action MoveAhead is invalid. DogBed_6ba109dd is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 1.13}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 3, "episode_elapsed_seconds": 2.0090181827545166, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.716719657449105, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 1.13}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 4, "episode_elapsed_seconds": 2.4967873096466064, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.716719657449105, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 1.13}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 5, "episode_elapsed_seconds": 3.0426065921783447, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5761527652153307, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 1.13}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 6, "episode_elapsed_seconds": 3.7067251205444336, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5761527652153307, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 1.13}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 7, "episode_elapsed_seconds": 4.387037038803101, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.307823156836376, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.24, -1.34], "score": 0.73}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 8, "episode_elapsed_seconds": 4.918771743774414, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.048299844239179, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.26, -1.35], "score": 1.63}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 9, "episode_elapsed_seconds": 5.437736749649048, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8819817100734264, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.27, -1.35], "score": 2.56}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 10, "episode_elapsed_seconds": 5.959981203079224, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6466146727579702, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.27, -1.35], "score": 2.16}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 11, "episode_elapsed_seconds": 6.4859607219696045, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4355572251959592, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.27, -1.35], "score": 2.16}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 12, "episode_elapsed_seconds": 7.007066488265991, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.67476178459129, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.27, -1.35], "score": 2.16}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 13, "episode_elapsed_seconds": 7.531968593597412, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.931017755027709, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.27, -1.35], "score": 2.16}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 14, "episode_elapsed_seconds": 8.056315660476685, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.931017755027709, "env_feedback": "Last action MoveAhead is invalid. Chair_b1475eac is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [2.79, -1.21], "score": 3.49}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 15, "episode_elapsed_seconds": 8.602061748504639, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.67476178459129, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.79, -1.21], "score": 3.49}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 16, "episode_elapsed_seconds": 9.033632278442383, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5719891849146133, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.79, -1.21], "score": 3.72}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 17, "episode_elapsed_seconds": 9.448389291763306, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.489118194770514, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.79, -1.21], "score": 3.72}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 18, "episode_elapsed_seconds": 9.968555927276611, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4095948446699504, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.82, -1.22], "score": 4.71}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 19, "episode_elapsed_seconds": 10.497480869293213, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3915610647841348, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.82, -1.22], "score": 4.71}, "instruction": "Locate the white rectangular container with sharp edges and with cover flipped open.", "env_step": 20, "episode_elapsed_seconds": 10.708844184875488, "task_success": 0.0, "last_action_success": true, "action_id": 0}

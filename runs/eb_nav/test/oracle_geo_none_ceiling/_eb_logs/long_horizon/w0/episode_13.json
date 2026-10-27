@@ -1,0 +1,30 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.022986888885498047, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.04028201103210449, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6846481108697495, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.05515718460083008, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3887142364491587, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.07181954383850098, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1920391143877387, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.08663439750671387, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8983297014850808, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.1021566390991211, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6069459868824054, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.11880803108215332, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3194300051070447, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.13332176208496094, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0389974084547229, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.54 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.14857268333435059, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8594157982863612, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.71 m)"}, "instruction": "navigate to the StoveBurner in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.17108154296875, "task_success": 1.0, "last_action_success": true, "action_id": 0}

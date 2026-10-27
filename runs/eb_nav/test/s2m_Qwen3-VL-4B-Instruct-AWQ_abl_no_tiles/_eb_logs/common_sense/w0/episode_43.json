@@ -1,0 +1,36 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4242443069720445, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.56], "score": 1.0}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.0580229759216309, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2192968733342, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.55], "score": 2.0}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.8092281818389893, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2192968733342, "env_feedback": "Last action MoveAhead is invalid. Chair_f933bff2 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.47, 0.53], "score": 2.94}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.512748956680298, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2192968733342, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.48, 0.52], "score": 3.17}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 2.997828245162964, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.070866313784744, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 4.17}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 3.5595765113830566, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.931759808467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 4.42}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.200409889221191, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.931759808467173, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 4.42}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 4.835233449935913, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.720469155514895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 5.42}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.449926137924194, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5389386977036381, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 6.4}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 6.058839797973633, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3988032249346272, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 6.4}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 6.294989109039307, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1275918530836724, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 6.4}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 6.543371200561523, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.8753721074485655, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.47, 0.52], "score": 6.4}, "instruction": "I need a storage container to keep some of my belongings organized. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 7.33136248588562, "task_success": 1.0, "last_action_success": true, "action_id": 3}

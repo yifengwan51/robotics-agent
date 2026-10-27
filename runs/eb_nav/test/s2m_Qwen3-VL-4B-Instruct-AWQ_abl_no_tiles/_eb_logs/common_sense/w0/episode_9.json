@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 0.6145565509796143, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 0.8315880298614502, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 1.042309284210205, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.801371032209484, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 1.2808434963226318, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6051750997278784, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 1.4943931102752686, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3121039039428215, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 1.7102210521697998, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3121039039428215, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 1.9262423515319824, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2750984662794007, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 2.1365597248077393, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552874707101753, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 2.3624582290649414, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2586930782223584, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 2.579072952270508, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3015358373174277, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 2.791887044906616, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.351024417557654, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 3.025223731994629, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.416105223618201, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 3.239732265472412, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.139264255944126, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 3.481182813644409, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9584966981415024, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 3.8115789890289307, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.7818437402446756, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 4.040597915649414, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.527695709775732, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 4.264585494995117, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.2933449622837543, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 4.474608898162842, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.154122630704029, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.65, -3.25]}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 4.729730129241943, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.154122630704029, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "I require some fresh green leafy vegetables for making a salad. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 4.9459068775177, "task_success": 0.0, "last_action_success": true, "action_id": 4}

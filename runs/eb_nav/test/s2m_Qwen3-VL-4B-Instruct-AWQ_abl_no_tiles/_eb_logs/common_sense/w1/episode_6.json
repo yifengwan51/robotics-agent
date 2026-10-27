@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.556095568529216, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.4941580295562744, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.471764565347728, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.47], "score": 1.0}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 1.1632249355316162, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.371415927871877, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.48], "score": 1.85}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 1.7429759502410889, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.323705902370538, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.48], "score": 2.85}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 2.498199224472046, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.323705902370538, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.48], "score": 3.83}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 3.3341383934020996, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6184422169788815, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.48], "score": 3.83}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 3.608689785003662, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.6184422169788815, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.48], "score": 3.83}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 3.851891040802002, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.590798190478893, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.47], "score": 4.82}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 4.552160024642944, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.578416352396238, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.46], "score": 5.82}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 5.148511171340942, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.578416352396238, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.45], "score": 6.5}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 5.780839920043945, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7783661226193024, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.45], "score": 6.5}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 6.088067531585693, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7783661226193024, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.45], "score": 6.5}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 6.314302921295166, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7812432364664574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.43], "score": 7.49}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 6.943066358566284, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7812432364664574, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_be1b4662 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-1.25, 2.43], "score": 7.49}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 7.188907623291016, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.7812432364664574, "env_feedback": "Last action MoveLeft is invalid. GarbageCan_be1b4662 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-1.25, 2.43], "score": 7.49}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 7.321949243545532, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.7783661226193024, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.43], "score": 7.49}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 7.476398468017578, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.578416352396238, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.42], "score": 7.74}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 7.914125442504883, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.7783661226193024, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.42], "score": 7.91}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 8.531948804855347, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7812432364664574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.25, 2.41], "score": 8.16}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 8.962810516357422, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7812432364664574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-1.25, 2.41], "score": 8.16}, "instruction": "I'm feeling thirsty and need a small container to hold water or coffee. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 9.129050731658936, "task_success": 0.0, "last_action_success": true, "action_id": 5}

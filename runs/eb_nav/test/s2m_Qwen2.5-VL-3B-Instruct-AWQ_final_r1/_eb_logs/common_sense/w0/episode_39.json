@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.542463643510863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 2.5414741039276123, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.542463643510863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 7.093268871307373, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.542463643510863, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 9.251839637756348, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.375313374907076, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.19, 1.57], "score": 0.65}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 10.322399139404297, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.375313374907076, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 1.43}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 13.028827905654907, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.375313374907076, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 15.678338050842285, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.375313374907076, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 18.504521369934082, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.483972467916171, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 20.191980600357056, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.483972467916171, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 21.333512544631958, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.6668568725283377, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 21.615469217300415, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5173201878834743, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 22.814851999282837, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.307393894061234, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 23.202020168304443, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.307393894061234, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.2, 1.56], "score": 1.62}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 24.403532028198242, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.307393894061234, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 2.49}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 26.325051307678223, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.307393894061234, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 2.67}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 28.80265784263611, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1791839886213356, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 2.67}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 28.951409816741943, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.1791839886213356, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 2.67}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 30.156028270721436, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9511116060024654, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 3.44}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 31.99614953994751, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9511116060024654, "env_feedback": "Last action MoveAhead is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.19, 1.56], "score": 4.2}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 33.77357244491577, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9511116060024654, "env_feedback": "Last action MoveRight is invalid. Chair_4c5c1613 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [-0.19, 1.56], "score": 4.35}, "instruction": "I'd like to view a decorative sculpture representing a figure or person. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 36.441680669784546, "task_success": 0.0, "last_action_success": false, "action_id": 2}

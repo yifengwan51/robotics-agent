@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3270067254915006, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.66 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 1, "episode_elapsed_seconds": 0.03319716453552246, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.196841021219714, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.66 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 2, "episode_elapsed_seconds": 0.045807600021362305, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.023075890247344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.66 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 3, "episode_elapsed_seconds": 0.05999302864074707, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.023075890247344, "env_feedback": "Last action MoveAhead is invalid. DiningTable_c3d0f596 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (9 left, residual 0.66 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 4, "episode_elapsed_seconds": 0.07385802268981934, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.023075890247344, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 5, "episode_elapsed_seconds": 0.10526037216186523, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7757979341895536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 6, "episode_elapsed_seconds": 0.12341880798339844, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5472816457333278, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 7, "episode_elapsed_seconds": 0.14250993728637695, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4099036986024516, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 8, "episode_elapsed_seconds": 0.15638208389282227, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.289021499273572, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 9, "episode_elapsed_seconds": 0.16909384727478027, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1498689384420553, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 10, "episode_elapsed_seconds": 0.18321943283081055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0783416287882872, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 11, "episode_elapsed_seconds": 0.1982111930847168, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0754388461715736, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 12, "episode_elapsed_seconds": 0.2140188217163086, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.0754388461715736, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 13, "episode_elapsed_seconds": 0.22657418251037598, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.7767201811597262, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (1 left, residual 0.57 m)"}, "instruction": "Find the crumpled green object with a leafy texture and uneven edges.", "env_step": 14, "episode_elapsed_seconds": 0.2420949935913086, "task_success": 1.0, "last_action_success": true, "action_id": 0}

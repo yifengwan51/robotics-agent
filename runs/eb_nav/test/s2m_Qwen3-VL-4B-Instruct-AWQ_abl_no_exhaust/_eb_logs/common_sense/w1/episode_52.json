@@ -1,0 +1,33 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.656421439633055, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.093665599822998, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.656421439633055, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.1759161949157715, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.656421439633055, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 3.378488302230835, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.656421439633055, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [0.64, 2.19], "score": 0.56}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.533066987991333, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4569691982202335, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [0.64, 2.19], "score": 0.79}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 5.2675251960754395, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.157981031631904, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.87, 1.8], "score": 1.0}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 8.989298582077026, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8593189235762795, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.87, 1.8], "score": 0.6}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 10.57837700843811, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6604787612890437, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.89, 1.75], "score": 1.6}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 11.940030813217163, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3628552365141493, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.83, 1.74], "score": 2.6}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 12.619336128234863, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1651168613065797, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.85, 1.73], "score": 3.6}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 13.170918703079224, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8704492701009179, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.86, 1.72], "score": 4.6}, "instruction": "I need to use that portable device to access the internet for some information. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 13.774949073791504, "task_success": 1.0, "last_action_success": true, "action_id": 0}

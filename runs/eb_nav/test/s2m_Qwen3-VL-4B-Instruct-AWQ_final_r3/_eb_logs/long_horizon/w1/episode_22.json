@@ -1,0 +1,42 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.4683337211608887, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 3.543597936630249, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5409895256779027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.69], "score": 1.0}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 5.0029425621032715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.257395779798804, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.69], "score": 0.6}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 5.22125506401062, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.070903344285827, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.67], "score": 1.58}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 5.767406940460205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.070903344285827, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.67], "score": 2.58}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 6.39180326461792, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.154307775469642, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.67], "score": 2.58}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 6.6279296875, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.154307775469642, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.67], "score": 2.58}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 6.805523157119751, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9783445059737967, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.66], "score": 3.58}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 7.34803032875061, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7242548776843774, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.66], "score": 4.57}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 7.924366235733032, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4873677167733519, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.66], "score": 5.57}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 8.509526014328003, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3435281072563299, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.66], "score": 6.57}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 9.143025159835815, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2156779438745098, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.65], "score": 7.57}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 9.875121355056763, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9895811620650249, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.87, 0.65], "score": 7.57}, "instruction": "navigate to the TissueBox in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 10.092410802841187, "task_success": 1.0, "last_action_success": true, "action_id": 3}

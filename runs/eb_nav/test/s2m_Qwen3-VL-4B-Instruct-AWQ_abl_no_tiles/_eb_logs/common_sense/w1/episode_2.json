@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5206743305362673, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.883488655090332, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5206743305362673, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 1.2185258865356445, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5206743305362673, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 1.4621024131774902, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5206743305362673, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.76, 0.91], "score": 0.62}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 1.7206459045410156, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3580068805398975, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.76, 0.91], "score": 0.75}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 2.3360157012939453, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.201498093314985, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.76, 0.91], "score": 1.37}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 2.9492568969726562, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9814616740330535, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.76, 0.9], "score": 2.37}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 3.5644283294677734, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8473190898005691, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 4.189433574676514, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7259737285278454, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 4.702154159545898, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5743512264465294, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 4.9712347984313965, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.469073925858946, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 5.762086391448975, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4298866209898533, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 6.098758220672607, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.231818419323174, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 6.325189828872681, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.0344938531116157, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 6.55936598777771, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8384381005487387, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.77, 0.89], "score": 2.93}, "instruction": "I need a large cooking vessel to prepare a hearty soup. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 6.883259296417236, "task_success": 1.0, "last_action_success": true, "action_id": 2}

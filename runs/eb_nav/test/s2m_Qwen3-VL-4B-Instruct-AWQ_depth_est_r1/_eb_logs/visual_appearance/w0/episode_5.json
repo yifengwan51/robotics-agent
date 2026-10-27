@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.776869860048738, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.94}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 1, "episode_elapsed_seconds": 1.3113234043121338, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.776869860048738, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.54}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 2, "episode_elapsed_seconds": 1.7695560455322266, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7468917291318604, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.54}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 3, "episode_elapsed_seconds": 2.220393419265747, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7495130598486877, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.54}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 4, "episode_elapsed_seconds": 2.994755744934082, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.769373098207268, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.54}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 5, "episode_elapsed_seconds": 3.6133880615234375, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8033966337314324, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.54}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 6, "episode_elapsed_seconds": 4.7071216106414795, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8033966337314324, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.76, 2.43], "score": 0.54}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 7, "episode_elapsed_seconds": 5.764700174331665, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8033966337314324, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 8, "episode_elapsed_seconds": 6.987988471984863, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8033966337314324, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 9, "episode_elapsed_seconds": 9.583058595657349, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8033966337314324, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.35, 1.55]}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 10, "episode_elapsed_seconds": 11.94496202468872, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8033966337314324, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.35, 1.55]}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 11, "episode_elapsed_seconds": 13.50120496749878, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.769373098207268, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.92, 2.4], "score": 0.96}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 12, "episode_elapsed_seconds": 14.534056425094604, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.472453608019095, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.96, 2.39], "score": 1.86}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 13, "episode_elapsed_seconds": 15.594659090042114, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.176379144654963, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-2.99, 2.38], "score": 2.37}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 14, "episode_elapsed_seconds": 16.637178897857666, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9796528971167284, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-3.01, 2.37], "score": 3.34}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 15, "episode_elapsed_seconds": 17.867217779159546, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6860086518784505, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-3.01, 2.37], "score": 4.34}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 16, "episode_elapsed_seconds": 19.04522728919983, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3950715745562554, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.0, 2.36], "score": 5.32}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 17, "episode_elapsed_seconds": 20.26775813102722, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2035880387943843, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-2.99, 2.35], "score": 6.32}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 18, "episode_elapsed_seconds": 21.39358949661255, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.1571598318008125, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.98, 2.35], "score": 7.27}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 19, "episode_elapsed_seconds": 22.53950047492981, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9599054033988473, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-2.97, 2.35], "score": 8.12}, "instruction": "Locate the metallic container with a polished golden surface.", "env_step": 20, "episode_elapsed_seconds": 23.638601779937744, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.713623770997647, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.89, 4.49], "score": 0.96}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.008821487426758, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.532620288489764, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.95, 4.5], "score": 1.96}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 3.790536403656006, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2671088908233887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.95, 4.5], "score": 1.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 4.341161727905273, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.011317971933896, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.94, 4.47], "score": 2.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 5.585160493850708, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.011317971933896, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.95, 4.46], "score": 3.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 6.416074752807617, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.907721350579134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.95, 4.46], "score": 3.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 6.934763193130493, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.907721350579134, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.95, 4.46], "score": 3.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 7.522618770599365, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.650762850557055, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [0.96, 4.46], "score": 4.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 8.352437257766724, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4108987318257293, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [0.98, 4.46], "score": 5.56}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 9.333179235458374, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4108987318257293, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 10.19503140449524, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4108987318257293, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 11.95976972579956, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.650762850557055, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 3.85]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 13.43510890007019, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.907721350579134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 3.85]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 15.27667498588562, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.175725968517554, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 3.85]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 16.740458011627197, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.3179262421099422, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 3.85]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 18.236307621002197, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.578209624270579, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 3.85]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 19.550182342529297, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.846321781493806, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.25, 3.85]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 21.198546648025513, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.846321781493806, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 23.222655296325684, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.666825631495351, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [0.55, 3.95]}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 25.59427523612976, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.54420132360242, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.22, 6.05], "score": 0.91}, "instruction": "I need a machine that could heat bread slices until they are nicely browned. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 27.353612184524536, "task_success": 0.0, "last_action_success": true, "action_id": 0}

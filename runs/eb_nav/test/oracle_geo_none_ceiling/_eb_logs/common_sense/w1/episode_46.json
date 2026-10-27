@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.60 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.03604006767272949, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.80 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 0.06638050079345703, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (9 left, residual 0.80 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 0.07803487777709961, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveRight is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (11 left, residual 0.80 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 0.10562539100646973, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.55 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 0.12570834159851074, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (11 left, residual 0.55 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 0.13815522193908691, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 1.85 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 0.1617746353149414, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (9 left, residual 1.85 m)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 0.1726548671722412, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 0.1867814064025879, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 0.19937705993652344, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 0.21463799476623535, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 0.22782421112060547, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 0.2452075481414795, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 0.2611865997314453, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 0.27416396141052246, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 0.2854335308074951, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 0.29735445976257324, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 0.30973124504089355, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 0.32292866706848145, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "push (residual 2.2552650346192227)"}, "instruction": "I want to pick up a bound collection of pages to read. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 0.33451318740844727, "task_success": 0.0, "last_action_success": true, "action_id": 4}

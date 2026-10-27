@@ -1,0 +1,45 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.6252065128056605, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.019063472747802734, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.549257730352036, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.028915882110595703, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4871109253085093, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.03994417190551758, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4220300547371707, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.04928088188171387, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.4220300547371707, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.06466221809387207, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1263223440624572, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.08530092239379883, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.832010856531131, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.51 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.10304832458496094, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.832010856531131, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.13897705078125, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.917225846682319, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.15688014030456543, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.917225846682319, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.1801900863647461, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7317907997616913, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.21372532844543457, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4608615245957395, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.24338507652282715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2037995500616718, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.26755285263061523, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0452166478303149, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.28853940963745117, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9032288933323512, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.63 m)"}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.30565404891967773, "task_success": 1.0, "last_action_success": true, "action_id": 0}

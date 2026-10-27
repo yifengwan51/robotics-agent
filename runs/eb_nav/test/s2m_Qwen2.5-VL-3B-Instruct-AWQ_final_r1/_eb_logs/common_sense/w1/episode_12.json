@@ -1,0 +1,57 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.750859240229083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.69], "score": 0.96}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.204601764678955, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5149868007838476, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.69], "score": 0.56}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.4926135540008545, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149868007838476, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 2.756237745285034, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5149868007838476, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.181996583938599, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.750859240229083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 0.37], "score": 0.9}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 4.880840301513672, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.998215236134768, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 0.37], "score": 0.5}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 5.16226863861084, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.998215236134768, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 5.578205347061157, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8321809979703407, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 6.916720151901245, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5921383336102912, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 8.355013370513916, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3658219069148476, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.45, 2.75]}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 9.727527141571045, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3658219069148476, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.59, -0.68], "score": 1.1}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 12.499209642410278, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.224650038008464, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 2.09}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 15.115727186203003, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.031501882498171, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.69}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 15.514305114746094, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9180600727428179, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.69}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 16.694881439208984, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.776762927896972, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.69}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 17.101308822631836, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.5074188764126597, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.69}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 17.488158702850342, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.252092910552509, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.69}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 18.686331033706665, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.0213528570732135, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.69}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 18.94517493247986, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.8358149765064601, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.58, -0.68], "score": 1.29}, "instruction": "I need to boil water for making tea or other hot beverages. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 19.33649754524231, "task_success": 1.0, "last_action_success": true, "action_id": 3}

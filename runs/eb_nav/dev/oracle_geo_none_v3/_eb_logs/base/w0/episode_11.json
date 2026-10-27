@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.689050658635078, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (18 left, residual 0.52 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.04324626922607422, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.538934611426669, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (17 left, residual 0.52 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.06241011619567871, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3278708468534206, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (16 left, residual 0.54 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.09131979942321777, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.18370749880845, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.54 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.1091606616973877, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.4074436071946703, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (16 left, residual 0.48 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.14223980903625488, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2293901735403163, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (15 left, residual 0.48 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.15968847274780273, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9856923891700582, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.54 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.19640731811523438, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8688419706418156, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.54 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.2109365463256836, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.72248827258293, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.48 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.23445653915405273, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.72248827258293, "env_feedback": "Last action MoveRight is invalid. TVStand_01ee4c4a is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (11 left, residual 0.48 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.2526357173919678, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.53 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.28134703636169434, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveRight is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"why": "follow plan (12 left, residual 0.53 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.29654431343078613, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveBack is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (14 left, residual 0.54 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.32099127769470215, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveLeft is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (18 left, residual 0.54 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.3519439697265625, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveAhead is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (7 left, residual 0.73 m)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.4065895080566406, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveAhead is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "push (residual 1.9985425015885838)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.422497034072876, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveAhead is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "push (residual 1.9985425015885838)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.444993257522583, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveAhead is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "push (residual 1.9985425015885838)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.46916913986206055, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveAhead is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "push (residual 1.9985425015885838)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 0.4879915714263916, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9985425015885838, "env_feedback": "Last action MoveAhead is invalid. ArmChair_db15b007 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "push (residual 1.9985425015885838)"}, "instruction": "navigate to the Box in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 0.5037126541137695, "task_success": 0.0, "last_action_success": false, "action_id": 0}

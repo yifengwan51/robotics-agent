@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 1, "episode_elapsed_seconds": 2.494208335876465, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 2, "episode_elapsed_seconds": 3.5803728103637695, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 3, "episode_elapsed_seconds": 4.7096757888793945, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [0.07, 1.56], "score": 0.78}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 4, "episode_elapsed_seconds": 6.175246477127075, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7063561946379378, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [0.07, 1.56], "score": 0.78}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 5, "episode_elapsed_seconds": 6.997686386108398, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5404120630022144, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.36, -1.4], "score": 0.99}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 6, "episode_elapsed_seconds": 11.02872371673584, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3797107214267883, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.36, -1.4], "score": 0.59}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 7, "episode_elapsed_seconds": 11.985682725906372, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3797107214267883, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [0.07, 1.56], "score": 0.78}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 8, "episode_elapsed_seconds": 13.326159715652466, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.207956312094852, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 1.46}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 9, "episode_elapsed_seconds": 14.820961475372314, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0657006020585214, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 1.06}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 10, "episode_elapsed_seconds": 16.380306005477905, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9904314710512954, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 11, "episode_elapsed_seconds": 17.29223346710205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9330069834144472, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 12, "episode_elapsed_seconds": 19.327560663223267, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8950500113110142, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 13, "episode_elapsed_seconds": 20.265989780426025, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8777414836722799, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 14, "episode_elapsed_seconds": 21.03510594367981, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.0776389031006652, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 15, "episode_elapsed_seconds": 21.71890664100647, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.277554349315359, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 16, "episode_elapsed_seconds": 22.444183349609375, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2807788929330624, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 17, "episode_elapsed_seconds": 23.236581802368164, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5803018437633223, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.17, 1.53], "score": 0.66}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 18, "episode_elapsed_seconds": 24.00969123840332, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.780041039049534, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.23, 1.52], "score": 0.75}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 19, "episode_elapsed_seconds": 24.78697371482849, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.797021044888196, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.23, 1.52], "score": 0.75}, "instruction": "Move towards the small black square object with a smooth matte finish.", "env_step": 20, "episode_elapsed_seconds": 25.599631786346436, "task_success": 0.0, "last_action_success": true, "action_id": 0}

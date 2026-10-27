@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6252065128056605, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 2.6818974018096924, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6252065128056605, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 4.850436210632324, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6252065128056605, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 7.150403738021851, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6252065128056605, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -0.45]}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 9.456270933151245, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.355148903930785, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.75, -0.45]}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 9.823168754577637, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0932614330931156, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.25, -3.86], "score": 0.68}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 12.83136796951294, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9248604765612354, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 1.31}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 13.524591207504272, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6852610700222372, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 2.26}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 14.386627197265625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.468033322788346, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 3.2}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 15.07637357711792, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3410690962772756, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 15.719899892807007, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2336170045191062, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 16.13821816444397, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1210833010295895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 16.442124605178833, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.082517730068212, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 16.760987043380737, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.082517730068212, "env_feedback": "Last action MoveBack is invalid. Mirror_fc58cf4f is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 17.082738637924194, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.082517730068212, "env_feedback": "Last action MoveRight is invalid. Mirror_fc58cf4f is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 17.261927843093872, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.082517730068212, "env_feedback": "Last action MoveLeft is invalid. Walls is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 17.420993089675903, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.082517730068212, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-0.24, -3.86], "score": 4.19}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 17.56015944480896, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.082517730068212, "env_feedback": "Last action MoveLeft is invalid. Walls is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [-0.24, -3.86], "score": 5.13}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 18.16361713409424, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.082517730068212, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-0.23, -3.85], "score": 5.37}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 19, "episode_elapsed_seconds": 18.97071886062622, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.082517730068212, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.23, -3.85], "score": 5.37}, "instruction": "navigate to the Mug in the room and be as close as possible to it", "env_step": 20, "episode_elapsed_seconds": 19.284345388412476, "task_success": 0.0, "last_action_success": true, "action_id": 5}

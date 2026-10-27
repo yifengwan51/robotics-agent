@@ -1,0 +1,48 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.418535705796616, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.65, 2.29], "score": 1.0}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 0.9227221012115479, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.418535705796616, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.65, 2.29], "score": 1.0}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.7162108421325684, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.418535705796616, "env_feedback": "Last action MoveAhead is invalid. FP311:StandardWallSize.009 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [2.63, 2.37], "score": 2.0}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.379563570022583, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.538110883475476, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.63, 2.4], "score": 2.25}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 2.9469432830810547, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.538110883475476, "env_feedback": "Last action MoveRight is invalid. FP311:StandardWallSize.009 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [2.62, 2.42], "score": 3.25}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 3.5982770919799805, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.311064695455337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.62, 2.44], "score": 3.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.115773916244507, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1695687448436023, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.62, 2.43], "score": 4.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 4.682054042816162, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.1695687448436023, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.61, 2.45], "score": 5.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.301254749298096, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0283827651601456, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.61, 2.46], "score": 6.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 5.925914764404297, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8371987172114472, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 6.534747838973999, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6781720870720027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 7.1664557456970215, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5948572708692554, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 7.4103147983551025, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5332572886532891, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 7.660193920135498, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4872257065979166, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 8.47734022140503, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1877935108617843, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 8.728046894073486, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9883632855136091, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.59, 2.47], "score": 7.5}, "instruction": "I need to access that digital device which people use to do their work such as attending online meeting. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 9.413554430007935, "task_success": 1.0, "last_action_success": true, "action_id": 3}

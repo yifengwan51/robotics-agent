@@ -1,0 +1,84 @@
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_final_r1
+{'eval_set': 'base', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.6, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 85.0, 'avg_steps': 12.82, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.67, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 56.7, 'avg_steps': 15.5, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 80.0, 'avg_steps': 14.67, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.7, 'pooled_success_rate': 79.7}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_final_r2
+{'eval_set': 'base', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.57, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 85.0, 'avg_steps': 12.98, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.62, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 50.0, 'avg_steps': 15.97, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 83.3, 'avg_steps': 14.33, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.0, 'pooled_success_rate': 79.0}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_final_r3
+{'eval_set': 'base', 'n': 60, 'success_rate': 91.7, 'avg_steps': 12.33, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 83.3, 'avg_steps': 12.93, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.52, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 53.3, 'avg_steps': 15.6, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 83.3, 'avg_steps': 14.52, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 80.0, 'pooled_success_rate': 80.0}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_depth_est_r1
+{'eval_set': 'base', 'n': 60, 'success_rate': 50.0, 'avg_steps': 16.43, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 51.7, 'avg_steps': 16.67, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 50.0, 'avg_steps': 16.52, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 28.3, 'avg_steps': 18.07, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 48.3, 'avg_steps': 17.2, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 45.7, 'pooled_success_rate': 45.7}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_odom_noise_r1
+{'eval_set': 'base', 'n': 60, 'success_rate': 91.7, 'avg_steps': 12.28, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 81.7, 'avg_steps': 13.23, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 90.0, 'avg_steps': 12.33, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 50.0, 'avg_steps': 16.03, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 83.3, 'avg_steps': 14.6, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.3, 'pooled_success_rate': 79.3}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_no_negative
+{'eval_set': 'base', 'n': 60, 'success_rate': 93.3, 'avg_steps': 11.98, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 83.3, 'avg_steps': 12.85, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.37, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 58.3, 'avg_steps': 15.48, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 81.7, 'avg_steps': 14.4, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 81.0, 'pooled_success_rate': 81.0}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_no_fusion
+{'eval_set': 'base', 'n': 60, 'success_rate': 78.3, 'avg_steps': 13.82, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 70.0, 'avg_steps': 14.12, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 75.0, 'avg_steps': 13.85, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 41.7, 'avg_steps': 16.88, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 80.0, 'avg_steps': 15.02, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 69.0, 'pooled_success_rate': 69.0}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_no_tiles
+{'eval_set': 'base', 'n': 60, 'success_rate': 86.7, 'avg_steps': 12.87, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 80.0, 'avg_steps': 13.32, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 85.0, 'avg_steps': 12.95, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 60.0, 'avg_steps': 15.17, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 80.0, 'avg_steps': 14.57, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 78.3, 'pooled_success_rate': 78.3}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_no_zoom
+{'eval_set': 'base', 'n': 60, 'success_rate': 85.0, 'avg_steps': 12.72, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 80.0, 'avg_steps': 13.08, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 83.3, 'avg_steps': 12.92, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 51.7, 'avg_steps': 15.9, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 83.3, 'avg_steps': 14.52, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 76.7, 'pooled_success_rate': 76.7}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_no_scan
+{'eval_set': 'base', 'n': 60, 'success_rate': 95.0, 'avg_steps': 11.45, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 91.7, 'avg_steps': 11.72, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 91.7, 'avg_steps': 11.75, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 71.7, 'avg_steps': 13.35, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 48.3, 'avg_steps': 16.93, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 79.7, 'pooled_success_rate': 79.7}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_no_exhaust
+{'eval_set': 'base', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.8, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 85.0, 'avg_steps': 12.93, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 88.3, 'avg_steps': 12.75, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 46.7, 'avg_steps': 16.13, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 83.3, 'avg_steps': 14.47, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 78.3, 'pooled_success_rate': 78.3}
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_abl_strongest_first
+{'eval_set': 'base', 'n': 60, 'success_rate': 90.0, 'avg_steps': 12.33, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 85.0, 'avg_steps': 12.82, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 90.0, 'avg_steps': 12.4, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 55.0, 'avg_steps': 15.55, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 83.3, 'avg_steps': 14.33, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 80.7, 'pooled_success_rate': 80.7}

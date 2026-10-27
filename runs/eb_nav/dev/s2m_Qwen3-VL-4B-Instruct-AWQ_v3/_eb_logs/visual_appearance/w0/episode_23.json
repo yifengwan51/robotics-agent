@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5306576156010343, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 1, "episode_elapsed_seconds": 1.733060359954834, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6566196193451073, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, 0.49], "score": 0.88}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 2, "episode_elapsed_seconds": 2.4194397926330566, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6566196193451073, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.28, 0.49], "score": 0.88}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 3, "episode_elapsed_seconds": 3.0866074562072754, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.835071156191624, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.17, 0.49], "score": 1.87}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 4, "episode_elapsed_seconds": 3.600616455078125, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1076726662864584, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.14, 0.49], "score": 2.85}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 5, "episode_elapsed_seconds": 4.101961612701416, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.1076726662864584, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 6, "episode_elapsed_seconds": 4.721997022628784, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.9253425053222553, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 7, "episode_elapsed_seconds": 5.851511240005493, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.745474120892488, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 8, "episode_elapsed_seconds": 6.900679111480713, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6237813007185924, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 9, "episode_elapsed_seconds": 8.05121922492981, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.559028784351296, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 10, "episode_elapsed_seconds": 9.174753189086914, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5085909101814425, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 11, "episode_elapsed_seconds": 10.261175632476807, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4733435654060743, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 12, "episode_elapsed_seconds": 11.346891403198242, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.453941407778615, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 13, "episode_elapsed_seconds": 12.92011547088623, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.450760795236764, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 14, "episode_elapsed_seconds": 14.043184518814087, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4638645515310245, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 15, "episode_elapsed_seconds": 15.102595806121826, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.513409745893056, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 16, "episode_elapsed_seconds": 16.618867874145508, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5654685059246862, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 17, "episode_elapsed_seconds": 17.735260009765625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.375211155312495, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 18, "episode_elapsed_seconds": 18.840458869934082, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.1866932457571124, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 19, "episode_elapsed_seconds": 20.389870166778564, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.30829532898524, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.75, -1.15]}, "instruction": "Head closer to the rectangular object with a cover in white and brown tones.", "env_step": 20, "episode_elapsed_seconds": 21.946354150772095, "task_success": 0.0, "last_action_success": true, "action_id": 0}

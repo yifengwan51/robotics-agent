@@ -1,0 +1,36 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4242443069720445, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.54 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 1, "episode_elapsed_seconds": 0.024719715118408203, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2192968733342, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.54 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 2, "episode_elapsed_seconds": 0.0448758602142334, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2192968733342, "env_feedback": "Last action MoveAhead is invalid. Chair_f933bff2 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (12 left, residual 0.54 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 3, "episode_elapsed_seconds": 0.0631871223449707, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2192968733342, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.48 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 4, "episode_elapsed_seconds": 0.09055566787719727, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.070866313784744, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.48 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 5, "episode_elapsed_seconds": 0.11511468887329102, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.931759808467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.48 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 6, "episode_elapsed_seconds": 0.1376049518585205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.931759808467173, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.48 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 7, "episode_elapsed_seconds": 0.15810537338256836, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.720469155514895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.48 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 8, "episode_elapsed_seconds": 0.1841745376586914, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5389386977036381, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.48 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 9, "episode_elapsed_seconds": 0.2093057632446289, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3988032249346272, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.59 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 10, "episode_elapsed_seconds": 0.2351365089416504, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1275918530836724, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.59 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 11, "episode_elapsed_seconds": 0.2549147605895996, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.8753721074485655, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.59 m)"}, "instruction": "The faint rustle of leaves outside adds a calming soundtrack to the day. There's a colorful throw draped over the chair that looks quite inviting. Please navigate to the box and position yourself nearby. The aroma of citrus in the air is refreshing.", "env_step": 12, "episode_elapsed_seconds": 0.27120256423950195, "task_success": 1.0, "last_action_success": true, "action_id": 3}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.605342708411542, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 1, "episode_elapsed_seconds": 2.9254660606384277, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.686747704301158, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.35, 2.28], "score": 0.99}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 2, "episode_elapsed_seconds": 4.300789833068848, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8310448805858606, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.36, 2.25], "score": 1.99}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 3, "episode_elapsed_seconds": 5.550824880599976, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8310448805858606, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.36, 2.25], "score": 2.99}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 4, "episode_elapsed_seconds": 6.625555038452148, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6624664969841123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.36, 2.25], "score": 2.99}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 5, "episode_elapsed_seconds": 7.94402813911438, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6624664969841123, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.36, 2.25], "score": 2.99}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 6, "episode_elapsed_seconds": 9.172357082366943, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6624664969841123, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_be5e9ad7 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.35, 2.25], "score": 3.98}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 7, "episode_elapsed_seconds": 10.104671716690063, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.9168233002165556, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.35, 2.25], "score": 4.23}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 8, "episode_elapsed_seconds": 11.065655708312988, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9168233002165556, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.35, 2.24], "score": 4.48}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 9, "episode_elapsed_seconds": 12.640785217285156, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1791490094975243, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.35, 2.24], "score": 4.48}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 10, "episode_elapsed_seconds": 14.262480974197388, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.1791490094975243, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.35, 2.24], "score": 4.48}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 11, "episode_elapsed_seconds": 15.648009538650513, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1791490094975243, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_be5e9ad7 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.36, 2.24], "score": 5.48}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 12, "episode_elapsed_seconds": 17.48417091369629, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.9168233002165556, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.24], "score": 5.73}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 13, "episode_elapsed_seconds": 19.120659351348877, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9168233002165556, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_be5e9ad7 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.37, 2.23], "score": 5.98}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 14, "episode_elapsed_seconds": 20.613137245178223, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.1791490094975243, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.23], "score": 6.23}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 15, "episode_elapsed_seconds": 22.13156533241272, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.9168233002165556, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.23], "score": 6.48}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 16, "episode_elapsed_seconds": 23.32217788696289, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.6624664969841123, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.22], "score": 6.73}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 17, "episode_elapsed_seconds": 24.2586932182312, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.9168233002165556, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.23], "score": 6.98}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 18, "episode_elapsed_seconds": 25.431193828582764, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.6624664969841123, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.22], "score": 7.23}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 19, "episode_elapsed_seconds": 26.636889219284058, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.9168233002165556, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.37, 2.23], "score": 7.48}, "instruction": "Locate the short metallic item with a golden surface and a round light source.", "env_step": 20, "episode_elapsed_seconds": 27.49452567100525, "task_success": 0.0, "last_action_success": true, "action_id": 2}

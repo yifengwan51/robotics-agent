@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3796085896298225, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.43, 0.47], "score": 1.0}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 1, "episode_elapsed_seconds": 3.468839168548584, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1227120551809926, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.43, 0.47], "score": 0.6}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 2, "episode_elapsed_seconds": 4.2335450649261475, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9582694246614403, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.43, 0.46], "score": 0.64}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 3, "episode_elapsed_seconds": 4.924994230270386, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9582694246614403, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 4, "episode_elapsed_seconds": 5.596747875213623, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.1227120551809926, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.76, 2.92], "score": 0.85}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 5, "episode_elapsed_seconds": 8.13283395767212, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3796085896298225, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.76, 2.92], "score": 0.45}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 6, "episode_elapsed_seconds": 8.924920558929443, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.1227120551809926, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.01, 1.72], "score": 1.45}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 7, "episode_elapsed_seconds": 9.840728044509888, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9582694246614403, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.05, 1.73], "score": 1.47}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 8, "episode_elapsed_seconds": 10.578408479690552, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7968897044600745, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.01, 1.74], "score": 1.49}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 9, "episode_elapsed_seconds": 11.31418776512146, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7102070709003834, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.02, 1.75], "score": 2.47}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 10, "episode_elapsed_seconds": 11.947081327438354, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6434122559798898, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.02, 1.76], "score": 3.46}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 11, "episode_elapsed_seconds": 12.573320627212524, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.6434122559798898, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.03, 1.77], "score": 4.35}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 12, "episode_elapsed_seconds": 13.194759845733643, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4524863343952747, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.03, 1.77], "score": 4.35}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 13, "episode_elapsed_seconds": 13.870501518249512, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.4524863343952747, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-1.03, 1.77], "score": 4.35}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 14, "episode_elapsed_seconds": 14.661978721618652, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4524863343952747, "env_feedback": "Last action MoveAhead is invalid. Cube.478 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "push", "target": [-1.0, 1.75], "score": 5.33}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 15, "episode_elapsed_seconds": 15.274284839630127, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1717874990068493, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.98, 1.74], "score": 5.57}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 16, "episode_elapsed_seconds": 15.79331088066101, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4524863343952747, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.97, 1.73], "score": 6.52}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 17, "episode_elapsed_seconds": 16.55167031288147, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1717874990068493, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.96, 1.72], "score": 6.77}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 18, "episode_elapsed_seconds": 17.14482808113098, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.4524863343952747, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.94, 1.71], "score": 7.0}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 19, "episode_elapsed_seconds": 17.732076168060303, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1717874990068493, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.93, 1.7], "score": 7.25}, "instruction": "Head closer to the small cylindrical object with a light gray and white finish.", "env_step": 20, "episode_elapsed_seconds": 18.456528902053833, "task_success": 0.0, "last_action_success": true, "action_id": 3}

@@ -1,0 +1,30 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7200048753130064, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.031099557876586914, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7200048753130064, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.05819845199584961, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4444148650767894, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.086334228515625, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2641382510797086, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.11473393440246582, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0874578469408527, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.14528918266296387, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8314522975709844, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.17589211463928223, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5908974902638453, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.20283102989196777, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.373933081871479, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.38 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.2260148525238037, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1934946199117684, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.67 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.2650115489959717, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9504250969008587, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.67 m)"}, "instruction": "navigate to the Bowl in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.29827213287353516, "task_success": 1.0, "last_action_success": true, "action_id": 2}

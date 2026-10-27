@@ -1,0 +1,48 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8932894391286257, "env_feedback": "Last action MoveAhead is invalid. Fridge_c8d99c87 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (14 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 1, "episode_elapsed_seconds": 0.04271388053894043, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8932894391286257, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (14 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 2, "episode_elapsed_seconds": 0.08475041389465332, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7747243946971056, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 3, "episode_elapsed_seconds": 0.10381436347961426, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6659083534270622, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 4, "episode_elapsed_seconds": 0.12580275535583496, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6659083534270622, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 5, "episode_elapsed_seconds": 0.14784622192382812, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.496940151344373, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 6, "episode_elapsed_seconds": 0.17640972137451172, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3328851005360973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.78 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 7, "episode_elapsed_seconds": 0.2076249122619629, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1748553210719925, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 8, "episode_elapsed_seconds": 0.2530338764190674, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.02426243386008, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 9, "episode_elapsed_seconds": 0.27812695503234863, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8163432231378973, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 10, "episode_elapsed_seconds": 0.2992379665374756, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.69314659296696, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 11, "episode_elapsed_seconds": 0.31870508193969727, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5388988403055408, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 12, "episode_elapsed_seconds": 0.3433830738067627, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.3624174995809066, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 13, "episode_elapsed_seconds": 0.3649790287017822, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.1933789377847797, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 14, "episode_elapsed_seconds": 0.38049936294555664, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.0354347577305651, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.64 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 15, "episode_elapsed_seconds": 0.39548635482788086, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.8944814074473351, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.68 m)"}, "instruction": "The sunlight coming through the kitchen window highlights the clean countertops, giving everything a bright and airy feel. There's a wooden spoon resting on the table. Could you navigate to the toaster for me? The atmosphere feels so cheerful.", "env_step": 16, "episode_elapsed_seconds": 0.41724491119384766, "task_success": 1.0, "last_action_success": true, "action_id": 3}

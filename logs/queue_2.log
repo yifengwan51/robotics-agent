@@ -1,0 +1,60 @@
+24 episodes selected, 4 to run -> /home/ht/robotics-agent/runs/robothor/dev/s2m_Qwen3-VL-4B-Instruct-AWQ_v3
+[w0] FloorPlan_Train5_3_GarbageCan_148 success=1 steps=9 dist=0.8450510829497665 t=14.7s
+[w0] FloorPlan_Train5_3_Television_8 success=1 steps=118 dist=0.8655985867619418 t=101.2s
+[w1] FloorPlan_Train5_3_SprayBottle_122 success=0 steps=500 dist=2.6885159028593923 t=234.6s
+[w1] FloorPlan_Train5_3_Vase_19 success=0 steps=17 dist=3.855479367351853 t=12.5s
+{'type': 'AlarmClock', 'n': 2, 'SR': 100.0, 'SPL': 62.4, 'errors': 0}
+{'type': 'Apple', 'n': 2, 'SR': 100.0, 'SPL': 62.5, 'errors': 0}
+{'type': 'BaseballBat', 'n': 2, 'SR': 50.0, 'SPL': 12.5, 'errors': 0}
+{'type': 'BasketBall', 'n': 2, 'SR': 100.0, 'SPL': 34.7, 'errors': 0}
+{'type': 'Bowl', 'n': 2, 'SR': 50.0, 'SPL': 44.8, 'errors': 0}
+{'type': 'GarbageCan', 'n': 2, 'SR': 50.0, 'SPL': 36.0, 'errors': 0}
+{'type': 'HousePlant', 'n': 2, 'SR': 100.0, 'SPL': 24.6, 'errors': 0}
+{'type': 'Laptop', 'n': 2, 'SR': 100.0, 'SPL': 36.7, 'errors': 0}
+{'type': 'Mug', 'n': 2, 'SR': 100.0, 'SPL': 78.9, 'errors': 0}
+{'type': 'SprayBottle', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'Television', 'n': 2, 'SR': 50.0, 'SPL': 29.4, 'errors': 0}
+{'type': 'Vase', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}
+24 episodes selected, 0 to run -> /home/ht/robotics-agent/runs/robothor/dev/s2m_Qwen3-VL-4B-Instruct-AWQ_v3
+{'type': 'AlarmClock', 'n': 2, 'SR': 100.0, 'SPL': 62.4, 'errors': 0}
+{'type': 'Apple', 'n': 2, 'SR': 100.0, 'SPL': 62.5, 'errors': 0}
+{'type': 'BaseballBat', 'n': 2, 'SR': 50.0, 'SPL': 12.5, 'errors': 0}
+{'type': 'BasketBall', 'n': 2, 'SR': 100.0, 'SPL': 34.7, 'errors': 0}
+{'type': 'Bowl', 'n': 2, 'SR': 50.0, 'SPL': 44.8, 'errors': 0}
+{'type': 'GarbageCan', 'n': 2, 'SR': 50.0, 'SPL': 36.0, 'errors': 0}
+{'type': 'HousePlant', 'n': 2, 'SR': 100.0, 'SPL': 24.6, 'errors': 0}
+{'type': 'Laptop', 'n': 2, 'SR': 100.0, 'SPL': 36.7, 'errors': 0}
+{'type': 'Mug', 'n': 2, 'SR': 100.0, 'SPL': 78.9, 'errors': 0}
+{'type': 'SprayBottle', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'Television', 'n': 2, 'SR': 50.0, 'SPL': 29.4, 'errors': 0}
+{'type': 'Vase', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}
+24 episodes selected, 0 to run -> /home/ht/robotics-agent/runs/robothor/dev/s2m_Qwen3-VL-4B-Instruct-AWQ_v3
+{'type': 'AlarmClock', 'n': 2, 'SR': 100.0, 'SPL': 62.4, 'errors': 0}
+{'type': 'Apple', 'n': 2, 'SR': 100.0, 'SPL': 62.5, 'errors': 0}
+{'type': 'BaseballBat', 'n': 2, 'SR': 50.0, 'SPL': 12.5, 'errors': 0}
+{'type': 'BasketBall', 'n': 2, 'SR': 100.0, 'SPL': 34.7, 'errors': 0}
+{'type': 'Bowl', 'n': 2, 'SR': 50.0, 'SPL': 44.8, 'errors': 0}
+{'type': 'GarbageCan', 'n': 2, 'SR': 50.0, 'SPL': 36.0, 'errors': 0}
+{'type': 'HousePlant', 'n': 2, 'SR': 100.0, 'SPL': 24.6, 'errors': 0}
+{'type': 'Laptop', 'n': 2, 'SR': 100.0, 'SPL': 36.7, 'errors': 0}
+{'type': 'Mug', 'n': 2, 'SR': 100.0, 'SPL': 78.9, 'errors': 0}
+{'type': 'SprayBottle', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'Television', 'n': 2, 'SR': 50.0, 'SPL': 29.4, 'errors': 0}
+{'type': 'Vase', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}
+24 episodes selected, 0 to run -> /home/ht/robotics-agent/runs/robothor/dev/s2m_Qwen3-VL-4B-Instruct-AWQ_v3
+{'type': 'AlarmClock', 'n': 2, 'SR': 100.0, 'SPL': 62.4, 'errors': 0}
+{'type': 'Apple', 'n': 2, 'SR': 100.0, 'SPL': 62.5, 'errors': 0}
+{'type': 'BaseballBat', 'n': 2, 'SR': 50.0, 'SPL': 12.5, 'errors': 0}
+{'type': 'BasketBall', 'n': 2, 'SR': 100.0, 'SPL': 34.7, 'errors': 0}
+{'type': 'Bowl', 'n': 2, 'SR': 50.0, 'SPL': 44.8, 'errors': 0}
+{'type': 'GarbageCan', 'n': 2, 'SR': 50.0, 'SPL': 36.0, 'errors': 0}
+{'type': 'HousePlant', 'n': 2, 'SR': 100.0, 'SPL': 24.6, 'errors': 0}
+{'type': 'Laptop', 'n': 2, 'SR': 100.0, 'SPL': 36.7, 'errors': 0}
+{'type': 'Mug', 'n': 2, 'SR': 100.0, 'SPL': 78.9, 'errors': 0}
+{'type': 'SprayBottle', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'Television', 'n': 2, 'SR': 50.0, 'SPL': 29.4, 'errors': 0}
+{'type': 'Vase', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'ALL', 'n': 24, 'SR': 66.7, 'SPL': 35.2, 'errors': 0}

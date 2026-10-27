@@ -1,0 +1,7 @@
+0 episodes to run -> /home/ht/robotics-agent/runs/eb_nav/test/eb_Qwen3-VL-4B-Instruct-AWQ_eb_official_r1
+{'eval_set': 'base', 'n': 60, 'success_rate': 65.0, 'avg_steps': 14.8, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'common_sense', 'n': 60, 'success_rate': 65.0, 'avg_steps': 14.75, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'complex_instruction', 'n': 60, 'success_rate': 60.0, 'avg_steps': 15.55, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'visual_appearance', 'n': 60, 'success_rate': 38.3, 'avg_steps': 17.03, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'long_horizon', 'n': 60, 'success_rate': 11.7, 'avg_steps': 19.37, 'errors': 0, 'json_errors': 0}
+{'eval_set': 'AVG(subsets)', 'n': 300, 'success_rate': 48.0, 'pooled_success_rate': 48.0}

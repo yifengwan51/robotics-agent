@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 0.7830080986022949, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 1.820784091949463, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 2.9213573932647705, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-1.4, -3.96], "score": 0.5}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.945544958114624, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8824045086159122, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 7.245047330856323, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8546375964272994, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 7.5136847496032715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.853551440867316, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 8.545460224151611, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.853551440867316, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 9.631530046463013, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1534323448861, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 10.782678604125977, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3533648286068924, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 11.951369762420654, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.3533648286068924, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 12.993239641189575, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.3742785423999764, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 14.01024580001831, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4028746096159153, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 15.092971324920654, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.4428702655858725, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 16.240626096725464, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.493874033317313, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 18.023053646087646, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5899659703841706, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 19.006303787231445, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.666286378780813, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 20.08080816268921, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.751727067911266, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 21.121817588806152, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.8956585915321766, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 22.229094982147217, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.056705026772147, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-4.05, -0.45]}, "instruction": "I need a heating element typically found on a cooking stove to prepare my meal. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 23.373533964157104, "task_success": 0.0, "last_action_success": true, "action_id": 0}

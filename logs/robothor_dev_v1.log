@@ -1,0 +1,38 @@
+24 episodes selected, 24 to run -> /home/ht/robotics-agent/runs/robothor/dev/s2m_Qwen3-VL-4B-Instruct-AWQ_v1
+[w1] FloorPlan_Train1_1_Apple_132 success=1 steps=105 dist=0.9155458035813704 t=88.6s
+[w0] FloorPlan_Train1_1_Apple_20 success=1 steps=135 dist=0.778673660813178 t=99.0s
+[w1] FloorPlan_Train1_1_HousePlant_71 success=0 steps=500 dist=1.606575737063228 t=232.8s
+[w0] FloorPlan_Train1_1_GarbageCan_111 success=1 steps=271 dist=0.9207542070973386 t=244.3s
+[w0] FloorPlan_Train1_1_Laptop_144 success=1 steps=90 dist=0.7525773141205223 t=99.5s
+[w0] FloorPlan_Train1_1_Mug_48 success=1 steps=7 dist=0.699236234537438 t=5.9s
+[w1] FloorPlan_Train1_1_Laptop_71 success=1 steps=189 dist=0.7613436480467115 t=145.7s
+[w1] FloorPlan_Train1_1_Mug_128 success=1 steps=48 dist=0.8970576688112386 t=52.0s
+[w0] FloorPlan_Train1_1_SprayBottle_75 success=0 steps=500 dist=3.168527550590959 t=253.0s
+[w0] FloorPlan_Train1_1_Vase_37 success=0 steps=17 dist=5.472156217590442 t=22.6s
+[w0] FloorPlan_Train5_3_AlarmClock_65 success=1 steps=97 dist=0.8570133931019124 t=84.3s
+[w1] FloorPlan_Train1_1_Television_50 success=0 steps=500 dist=2.690874144169869 t=363.4s
+[w1] FloorPlan_Train5_3_AlarmClock_47 success=1 steps=117 dist=0.6855759773371802 t=115.1s
+[w0] FloorPlan_Train5_3_BaseballBat_98 success=0 steps=500 dist=1.748571692844792 t=300.9s
+[w0] FloorPlan_Train5_3_BasketBall_5 success=1 steps=52 dist=0.5561091464949668 t=51.7s
+[w0] FloorPlan_Train5_3_Bowl_33 success=0 steps=10 dist=2.167570111786723 t=17.9s
+[w0] FloorPlan_Train5_3_HousePlant_108 success=1 steps=13 dist=0.6829863128204295 t=16.5s
+[w1] FloorPlan_Train5_3_BaseballBat_111 success=0 steps=500 dist=4.504947935416313 t=340.6s
+[w1] FloorPlan_Train5_3_BasketBall_57 success=1 steps=51 dist=0.7886692768939229 t=40.1s
+[w1] FloorPlan_Train5_3_Bowl_94 success=1 steps=25 dist=0.8641790934468289 t=23.4s
+[w1] FloorPlan_Train5_3_GarbageCan_148 success=1 steps=9 dist=0.8356718741166043 t=10.5s
+[w0] FloorPlan_Train5_3_Television_8 success=0 steps=500 dist=5.7773611027974425 t=284.9s
+[w1] FloorPlan_Train5_3_SprayBottle_122 success=0 steps=500 dist=3.6249367389903147 t=250.5s
+[w1] FloorPlan_Train5_3_Vase_19 success=0 steps=53 dist=3.3646626949401934 t=35.0s
+{'type': 'AlarmClock', 'n': 2, 'SR': 100.0, 'SPL': 75.3, 'errors': 0}
+{'type': 'Apple', 'n': 2, 'SR': 100.0, 'SPL': 64.1, 'errors': 0}
+{'type': 'BaseballBat', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'BasketBall', 'n': 2, 'SR': 100.0, 'SPL': 57.3, 'errors': 0}
+{'type': 'Bowl', 'n': 2, 'SR': 50.0, 'SPL': 44.8, 'errors': 0}
+{'type': 'GarbageCan', 'n': 2, 'SR': 100.0, 'SPL': 57.8, 'errors': 0}
+{'type': 'HousePlant', 'n': 2, 'SR': 50.0, 'SPL': 16.3, 'errors': 0}
+{'type': 'Laptop', 'n': 2, 'SR': 100.0, 'SPL': 40.0, 'errors': 0}
+{'type': 'Mug', 'n': 2, 'SR': 100.0, 'SPL': 77.4, 'errors': 0}
+{'type': 'SprayBottle', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'Television', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'Vase', 'n': 2, 'SR': 0.0, 'SPL': 0.0, 'errors': 0}
+{'type': 'ALL', 'n': 24, 'SR': 58.3, 'SPL': 36.1, 'errors': 0}

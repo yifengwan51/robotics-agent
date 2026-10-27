@@ -1,0 +1,51 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 1.0126714706420898, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 4.733242034912109, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 6.264356374740601, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [2.03, 0.86], "score": 0.78}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 7.457353830337524, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.593324395714114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [2.03, 0.86], "score": 0.78}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 8.198134899139404, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.593324395714114, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [2.03, 0.86], "score": 0.78}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 8.935634851455688, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.413015552810657, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 1.63}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 11.108752250671387, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.413015552810657, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 1.23}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 11.75175929069519, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1712763045345405, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 12.386973857879639, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.018821090502979, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 13.03085446357727, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8753230128887897, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 13.69034719467163, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7429957579595898, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 14.452361106872559, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6245713273080078, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 15.168058633804321, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4802124142039224, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 15.91277813911438, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.2117513741941253, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 16.628072261810303, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.0423770123590335, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 17.354097604751587, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8858657863192515, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.03, 0.92], "score": 0.83}, "instruction": "I need a large container for making soup. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 18.06600522994995, "task_success": 1.0, "last_action_success": true, "action_id": 2}

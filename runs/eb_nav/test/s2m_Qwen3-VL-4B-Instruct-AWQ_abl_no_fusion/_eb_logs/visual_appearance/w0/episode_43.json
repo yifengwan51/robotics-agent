@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4242443069720445, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.55], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 1, "episode_elapsed_seconds": 1.3262057304382324, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2192968733342, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.54], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 2, "episode_elapsed_seconds": 2.024179220199585, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2192968733342, "env_feedback": "Last action MoveAhead is invalid. Chair_f933bff2 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.53, 0.49], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 3, "episode_elapsed_seconds": 2.798703670501709, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2192968733342, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.53, 0.49], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 4, "episode_elapsed_seconds": 3.304309606552124, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.070866313784744, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.51], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 5, "episode_elapsed_seconds": 3.99767804145813, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.931759808467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.52], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 6, "episode_elapsed_seconds": 4.674912214279175, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.931759808467173, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.52], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 7, "episode_elapsed_seconds": 5.340977668762207, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.720469155514895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.56], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 8, "episode_elapsed_seconds": 6.079272747039795, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5389386977036381, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.45, 0.56], "score": 1.0}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 9, "episode_elapsed_seconds": 6.843187093734741, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5389386977036381, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 10, "episode_elapsed_seconds": 8.290419816970825, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5389386977036381, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 11, "episode_elapsed_seconds": 12.56863284111023, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.720469155514895, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.41, -0.88], "score": 0.63}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 12, "episode_elapsed_seconds": 15.313247919082642, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.931759808467173, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-2.41, -0.86], "score": 0.56}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 13, "episode_elapsed_seconds": 17.55501890182495, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.16411132003521, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-1.27, 0.64], "score": 0.57}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 14, "episode_elapsed_seconds": 20.618574619293213, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.355539153777301, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.15, -1.45]}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 15, "episode_elapsed_seconds": 23.511154890060425, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5846172884775256, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.15, -1.45]}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 16, "episode_elapsed_seconds": 26.154785633087158, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.826999896862743, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.15, -1.45]}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 17, "episode_elapsed_seconds": 31.08722710609436, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.826999896862743, "env_feedback": "Last action MoveLeft is invalid. Bed_7df5f7fa is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "explore", "goal": [-2.15, -1.45]}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 18, "episode_elapsed_seconds": 36.191691637039185, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.826999896862743, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": null}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 19, "episode_elapsed_seconds": 38.3111457824707, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.669595759171904, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.23, 0.94], "score": 0.94}, "instruction": "Locate the white rectangular container with smooth edges.", "env_step": 20, "episode_elapsed_seconds": 39.07161021232605, "task_success": 0.0, "last_action_success": true, "action_id": 0}

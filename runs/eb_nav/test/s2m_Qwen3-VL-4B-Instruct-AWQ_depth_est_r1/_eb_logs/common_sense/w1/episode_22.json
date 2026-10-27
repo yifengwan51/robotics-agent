@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.3352339267730713, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.827970964372817, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 2.8539297580718994, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 3.313314199447632, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.020697746851777, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 4.383602142333984, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.020697746851777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 4.9946513175964355, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.020697746851777, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 5.492436408996582, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.827970964372817, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 6.604579210281372, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.827970964372817, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 1.0}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 7.139250040054321, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5409895256779027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.17, 0.48], "score": 0.6}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 7.819947004318237, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5409895256779027, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 8.283097982406616, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.827970964372817, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 10.03996753692627, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.020697746851777, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 12.314712047576904, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.020697746851777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 13.816089630126953, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.214313246525459, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 15.620946884155273, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5060807158515326, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 17.56451392173767, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.799130720157365, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 18.83653426170349, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.799130720157365, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 20.603649377822876, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.7489721604899646, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 21.97443127632141, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 3.9474025796189016, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 23.295620679855347, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.9280511473357596, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.95, 1.25]}, "instruction": "I need a container filled with tissues for wiping or blowing my nose. Please navigate to that object and stay near it.", "env_step": 20, "episode_elapsed_seconds": 24.67788290977478, "task_success": 0.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,54 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.6442068202877462, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.308624267578125, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7183815549414416, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.87, 2.49], "score": 1.0}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 1.9190254211425781, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7183815549414416, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 2.49], "score": 2.0}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 2.4216747283935547, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.909843452363472, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 2.49], "score": 2.0}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 2.6460702419281006, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1023828897198142, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.88, 2.49], "score": 2.0}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 2.8781166076660156, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.1023828897198142, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 3.110201120376587, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.1023828897198142, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 4.529398679733276, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8139641496081236, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.48, -0.44], "score": 0.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 5.15052056312561, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6231285838961105, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.46], "score": 1.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 5.84998893737793, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.433765177286591, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.48, -0.46], "score": 2.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 6.528917551040649, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1533294083533434, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.48, -0.46], "score": 3.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 7.795623779296875, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8789470685374385, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.47], "score": 4.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 9.128113508224487, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7008384738433886, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.48, -0.47], "score": 5.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 9.969130516052246, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5281561223406852, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.48], "score": 6.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 10.53217625617981, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.362963955815409, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.48], "score": 7.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 11.122442722320557, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2083378222313448, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.48], "score": 8.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 11.67613673210144, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.0839282341887715, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.49], "score": 9.85}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 12.265369176864624, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9259103626386315, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.49, -0.49], "score": 10.1}, "instruction": "navigate to the Tomato in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 13.006304502487183, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -1,0 +1,18 @@
+{
+ "planner": "s2m",
+ "model": "Qwen3-VL-4B-Instruct-AWQ",
+ "exp": "v2",
+ "eval_sets": [
+  "base",
+  "long_horizon"
+ ],
+ "limit": 0,
+ "stride": 1,
+ "workers": 2,
+ "resolution": 500,
+ "n_shots": 3,
+ "platform": "cloud",
+ "data": "data/eb_nav_dev",
+ "s2m": "{}",
+ "out": "/home/ht/robotics-agent/runs/eb_nav"
+}

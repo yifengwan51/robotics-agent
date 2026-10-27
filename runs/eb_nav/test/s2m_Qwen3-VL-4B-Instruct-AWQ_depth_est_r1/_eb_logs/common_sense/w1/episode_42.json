@@ -1,0 +1,51 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 1.2647769451141357, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 3.1989588737487793, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 4.752141237258911, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.8766359641452204, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [0.31, -1.79], "score": 0.73}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 6.8924384117126465, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7063561946379378, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.31, -1.8], "score": 0.91}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 7.7678632736206055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5404120630022144, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.32, -1.77], "score": 1.91}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 8.659055948257446, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3797107214267883, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.75], "score": 2.91}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 9.824128866195679, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2253882330695087, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.72], "score": 3.91}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 10.911965370178223, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0788656667709535, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.71], "score": 4.69}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 11.870200872421265, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9419094045444134, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.34, -1.71], "score": 4.29}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 12.88261342048645, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8166842820737406, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.71], "score": 5.29}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 14.005595684051514, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.8166842820737406, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.33, -1.71], "score": 5.29}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 14.964396238327026, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5850519673435555, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.36, -1.69], "score": 6.28}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 16.014216899871826, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.380013637760553, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.39, -1.66], "score": 7.27}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 16.819048166275024, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.264569533086892, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.39, -1.66], "score": 7.27}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 17.46513605117798, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1721069324038644, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.39, -1.66], "score": 7.27}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 18.01921772956848, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 0.9043391352023943, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.39, -1.66], "score": 7.27}, "instruction": "I need a device to set an alarm for waking up at a specific time. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 18.774232864379883, "task_success": 1.0, "last_action_success": true, "action_id": 3}

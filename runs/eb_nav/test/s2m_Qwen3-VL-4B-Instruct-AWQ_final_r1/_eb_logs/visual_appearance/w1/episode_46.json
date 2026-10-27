@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 0.99}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 1, "episode_elapsed_seconds": 2.382697105407715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.62}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 2, "episode_elapsed_seconds": 4.216753244400024, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.62}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 3, "episode_elapsed_seconds": 4.46427583694458, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveRight is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.62}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 4, "episode_elapsed_seconds": 4.660997152328491, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.46, -2.24], "score": 1.62}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 5, "episode_elapsed_seconds": 4.884533405303955, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.47, -2.24], "score": 1.79}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 6, "episode_elapsed_seconds": 6.045868635177612, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.47, -2.24], "score": 1.94}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 7, "episode_elapsed_seconds": 6.579074859619141, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2552650346192227, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_28ebf24e is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [0.47, -2.24], "score": 1.94}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 8, "episode_elapsed_seconds": 6.893318176269531, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 1.94}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 9, "episode_elapsed_seconds": 7.649496078491211, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.1}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 10, "episode_elapsed_seconds": 8.267132759094238, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.1}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 11, "episode_elapsed_seconds": 9.013816595077515, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.27}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 12, "episode_elapsed_seconds": 9.585394859313965, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.27}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 13, "episode_elapsed_seconds": 9.911581993103027, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.42}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 14, "episode_elapsed_seconds": 11.075052499771118, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.42}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 15, "episode_elapsed_seconds": 11.41818904876709, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.59}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 16, "episode_elapsed_seconds": 12.564553260803223, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.59}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 17, "episode_elapsed_seconds": 12.847627878189087, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.75}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 18, "episode_elapsed_seconds": 13.48682689666748, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.75}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 19, "episode_elapsed_seconds": 13.686549425125122, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.2552650346192227, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [0.47, -2.24], "score": 2.91}, "instruction": "Locate the rectangular object with a bright yellow cover and visible spine.", "env_step": 20, "episode_elapsed_seconds": 14.192525148391724, "task_success": 0.0, "last_action_success": true, "action_id": 4}

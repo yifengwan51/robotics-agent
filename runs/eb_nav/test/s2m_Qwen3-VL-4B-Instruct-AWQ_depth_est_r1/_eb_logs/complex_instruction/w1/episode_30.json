@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3789593286336794, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.7, -0.23], "score": 1.0}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 1, "episode_elapsed_seconds": 2.010650157928467, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3789593286336794, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-4.68, -0.21], "score": 2.0}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 2, "episode_elapsed_seconds": 2.8884408473968506, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3789593286336794, "env_feedback": "Last action MoveAhead is invalid. Sofa_40677cc7 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-4.68, -0.21], "score": 2.0}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 3, "episode_elapsed_seconds": 3.571842908859253, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3789593286336794, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-4.68, -0.21], "score": 2.0}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 4, "episode_elapsed_seconds": 4.111558675765991, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1983820626769193, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.67, -0.2], "score": 2.25}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 5, "episode_elapsed_seconds": 4.904211759567261, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9346933792303342, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.67, -0.19], "score": 3.25}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 6, "episode_elapsed_seconds": 5.8279194831848145, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.683209194531476, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-4.66, -0.18], "score": 4.1}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 7, "episode_elapsed_seconds": 6.618430137634277, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4502923347561538, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-4.67, -0.17], "score": 5.1}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 8, "episode_elapsed_seconds": 7.611242771148682, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.4502923347561538, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-4.67, -0.17], "score": 5.1}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 9, "episode_elapsed_seconds": 8.156848907470703, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3229445654753924, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "push", "target": [-4.7, -0.18], "score": 6.1}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 10, "episode_elapsed_seconds": 9.34502387046814, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.3229445654753924, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 11, "episode_elapsed_seconds": 10.329069375991821, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.3229445654753924, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 12, "episode_elapsed_seconds": 12.001780271530151, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4502923347561538, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.6, 3.85], "score": 0.99}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 13, "episode_elapsed_seconds": 13.694100856781006, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.683209194531476, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-5.6, 3.85], "score": 0.59}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 14, "episode_elapsed_seconds": 14.498154878616333, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9346933792303342, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.45, 2.35]}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 15, "episode_elapsed_seconds": 15.032950162887573, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.1983820626769193, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.45, 2.35]}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 16, "episode_elapsed_seconds": 16.35895562171936, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.9346933792303342, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.48, 3.77], "score": 0.47}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 17, "episode_elapsed_seconds": 18.565494298934937, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.1983820626769193, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.45, 2.35]}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 18, "episode_elapsed_seconds": 19.771859884262085, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3789593286336794, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.45, 2.35]}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 19, "episode_elapsed_seconds": 21.207979440689087, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.56242293917959, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.45, 2.35]}, "instruction": "The gentle rustle of leaves outside makes the room feel alive with nature. A bookmark peeks out from a novel lying on the coffee table. Could you move toward the trash can and remain near it? The soft lighting gives the room a calming vibe.", "env_step": 20, "episode_elapsed_seconds": 22.723888397216797, "task_success": 0.0, "last_action_success": true, "action_id": 2}

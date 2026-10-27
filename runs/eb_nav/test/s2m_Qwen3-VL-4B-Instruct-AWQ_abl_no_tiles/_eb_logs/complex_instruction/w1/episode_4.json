@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 1, "episode_elapsed_seconds": 1.1445741653442383, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 2, "episode_elapsed_seconds": 1.3756096363067627, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 3, "episode_elapsed_seconds": 1.6060867309570312, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9379323625823996, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, -0.45]}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 4, "episode_elapsed_seconds": 1.8281805515289307, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.693827648435705, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-0.55, -0.45]}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 5, "episode_elapsed_seconds": 2.449366569519043, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.693827648435705, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.64, 0.01], "score": 1.0}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 6, "episode_elapsed_seconds": 2.9914321899414062, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.577378100505505, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.71, 0.06], "score": 1.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 7, "episode_elapsed_seconds": 3.597233533859253, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4716489092186404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 8, "episode_elapsed_seconds": 4.099532127380371, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 9, "episode_elapsed_seconds": 4.299323797225952, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3363013588288486, "env_feedback": "Last action MoveAhead is invalid. Chair_fa305b6f is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 10, "episode_elapsed_seconds": 4.545725584030151, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3363013588288486, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 11, "episode_elapsed_seconds": 4.667033910751343, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.614009029612921, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 12, "episode_elapsed_seconds": 4.88564658164978, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.614009029612921, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 13, "episode_elapsed_seconds": 5.112425088882446, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5223598089237624, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 14, "episode_elapsed_seconds": 5.309003829956055, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.4796107431063623, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 15, "episode_elapsed_seconds": 5.493206024169922, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.444938688069868, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 16, "episode_elapsed_seconds": 5.703568935394287, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.1454570657061507, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 17, "episode_elapsed_seconds": 5.99318790435791, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.142231663505777, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 18, "episode_elapsed_seconds": 6.204814672470093, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.142231663505777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [1.66, 0.21], "score": 2.56}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 19, "episode_elapsed_seconds": 6.397488117218018, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.142231663505777, "env_feedback": "Last action MoveAhead is invalid. GarbageCan_cfd7fb0b is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [1.62, 0.21], "score": 3.09}, "instruction": "The sound of the kettle boiling in the background adds a gentle rhythm to the quiet afternoon. There's a pile of napkins neatly folded on the table. Please navigate to the pot for me. The room feels calm and orderly.", "env_step": 20, "episode_elapsed_seconds": 6.909423351287842, "task_success": 0.0, "last_action_success": false, "action_id": 0}

@@ -1,0 +1,57 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3270067254915006, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 0.99}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 2.083571195602417, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.196841021219714, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 1.97}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 3.3672115802764893, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.023075890247344, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 2.91}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 4.997445344924927, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.023075890247344, "env_feedback": "Last action MoveAhead is invalid. DiningTable_c3d0f596 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 2.51}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 5.330066919326782, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.023075890247344, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 2.11}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 6.437358856201172, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7757979341895536, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 2.11}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 7.050323963165283, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7757979341895536, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 2.11}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 8.572596311569214, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6125085522371156, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 1.71}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 8.965256452560425, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5268706756923762, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 1.31}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 9.977037906646729, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.5268706756923762, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 0.91}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 10.257243871688843, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.253776793707972, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 0.91}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 10.88098692893982, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.253776793707972, "env_feedback": "Last action MoveRight is invalid. Cube.086 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 0.91}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 12.293593645095825, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 1.5268706756923762, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-2.8, -4.0], "score": 0.91}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 12.850270509719849, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.5268706756923762, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-2.8, -4.0], "score": 0.91}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 13.449714422225952, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5268706756923762, "env_feedback": "Last action MoveAhead is invalid. Cube.082 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [-2.8, -4.0], "score": 0.51}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 13.6768319606781, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.253776793707972, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.45, -3.0], "score": 2.49}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 13.782477855682373, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.253776793707972, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.45, -3.0], "score": 2.49}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 14.08412766456604, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0796778207179585, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.44, -3.0], "score": 2.74}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 18, "episode_elapsed_seconds": 15.590277433395386, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.9162162314688027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.42, -3.0], "score": 3.73}, "instruction": "I need some fresh greens for my salad. Please navigate to that object and stay near it.", "env_step": 19, "episode_elapsed_seconds": 16.985311269760132, "task_success": 1.0, "last_action_success": true, "action_id": 0}

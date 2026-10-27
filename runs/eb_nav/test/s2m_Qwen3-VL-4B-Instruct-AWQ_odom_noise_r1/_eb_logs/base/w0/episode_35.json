@@ -1,0 +1,33 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7818151276494123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.96, 0.0], "score": 1.0}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 1.0928473472595215, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5328670545624843, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.96, 0.0], "score": 1.25}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 1.7948095798492432, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.373470440209015, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.97, 0.01], "score": 2.24}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 2.418898344039917, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2206549446392825, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.98, 0.01], "score": 3.24}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 3.091658592224121, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0070447071933497, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-2.99, 0.01], "score": 3.49}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 3.624530792236328, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8180067307285546, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.0, 0.02], "score": 4.49}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 4.1694464683532715, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.659202686608557, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.0, 0.02], "score": 4.49}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 4.432037830352783, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.440368523660881, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.01, 0.02], "score": 5.49}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 5.047541618347168, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.255535420924398, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.02, 0.02], "score": 6.49}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 5.723060846328735, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0928475204808668, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-3.02, 0.02], "score": 7.49}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 7.094545364379883, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9359613180093526, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-3.02, 0.03], "score": 7.74}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 8.454604148864746, "task_success": 1.0, "last_action_success": true, "action_id": 2}

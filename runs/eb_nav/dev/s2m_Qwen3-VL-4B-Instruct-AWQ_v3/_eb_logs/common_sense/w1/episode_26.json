@@ -1,0 +1,51 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.893879190605513, "env_feedback": "Last action MoveAhead is invalid. Bed_05665f3d is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.0}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 1, "episode_elapsed_seconds": 0.9204800128936768, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.893879190605513, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 2, "episode_elapsed_seconds": 1.5844125747680664, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8187344098147826, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 3, "episode_elapsed_seconds": 1.9108784198760986, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.756082492714191, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 4, "episode_elapsed_seconds": 2.165581226348877, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7067910393454286, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 5, "episode_elapsed_seconds": 2.4037721157073975, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.671599656186456, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 6, "episode_elapsed_seconds": 2.6355338096618652, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.651069922626868, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 7, "episode_elapsed_seconds": 3.4188594818115234, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6455431859567615, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 8, "episode_elapsed_seconds": 3.6623482704162598, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.655113136055008, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 9, "episode_elapsed_seconds": 4.431272029876709, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.45590368698962, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 10, "episode_elapsed_seconds": 4.70881986618042, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.2568340207193813, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 11, "episode_elapsed_seconds": 4.961947202682495, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.9585851138982997, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 12, "episode_elapsed_seconds": 5.726706504821777, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.9585851138982997, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.04], "score": 1.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 13, "episode_elapsed_seconds": 5.975035190582275, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7600831154735086, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.03], "score": 2.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 14, "episode_elapsed_seconds": 6.612393617630005, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4630954777453258, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.03], "score": 3.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 15, "episode_elapsed_seconds": 7.251169443130493, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1676488557421225, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.21, -0.02], "score": 4.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 16, "episode_elapsed_seconds": 7.87484073638916, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8753054387037887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [3.25, -0.03], "score": 5.25}, "instruction": "I have some trash that needs to be disposed of properly. Please navigate to that object and stay near it.", "env_step": 17, "episode_elapsed_seconds": 8.51130723953247, "task_success": 1.0, "last_action_success": true, "action_id": 0}

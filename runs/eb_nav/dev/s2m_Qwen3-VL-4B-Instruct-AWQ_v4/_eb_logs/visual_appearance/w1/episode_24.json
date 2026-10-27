@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.356921208518881, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.61, -1.58], "score": 1.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 1, "episode_elapsed_seconds": 1.418677568435669, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2212879119429503, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.61, -1.58], "score": 2.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 2, "episode_elapsed_seconds": 2.1534693241119385, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.095987212438527, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.61, -1.58], "score": 3.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 3, "episode_elapsed_seconds": 2.863675117492676, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9829787704491355, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.61, -1.58], "score": 4.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 4, "episode_elapsed_seconds": 3.622526168823242, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8844753157795118, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.6, -1.58], "score": 5.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 5, "episode_elapsed_seconds": 4.238913536071777, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8028559594304663, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.6, -1.58], "score": 5.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 6, "episode_elapsed_seconds": 4.5011045932769775, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.6, -1.58], "score": 5.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 7, "episode_elapsed_seconds": 4.852761745452881, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveRight is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.6, -1.58], "score": 5.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 8, "episode_elapsed_seconds": 5.101380825042725, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.6, -1.58], "score": 5.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 9, "episode_elapsed_seconds": 5.490800619125366, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveRight is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [-0.62, -1.56], "score": 6.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 10, "episode_elapsed_seconds": 6.890674591064453, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.63, -1.55], "score": 6.25}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 11, "episode_elapsed_seconds": 8.321542024612427, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveRight is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"mode": "approach", "target": [-0.63, -1.55], "score": 6.25}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 12, "episode_elapsed_seconds": 8.633113861083984, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.63, -1.55], "score": 6.25}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 13, "episode_elapsed_seconds": 8.811653137207031, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 1.7172225487089068, "env_feedback": "Last action MoveLeft is invalid. Chair_7927cc5b is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "push", "target": [-0.64, -1.55], "score": 6.5}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 14, "episode_elapsed_seconds": 9.445288181304932, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-0.65, -1.54], "score": 6.75}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 15, "episode_elapsed_seconds": 10.050883531570435, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.65, -1.54], "score": 6.75}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 16, "episode_elapsed_seconds": 10.209521293640137, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-0.66, -1.54], "score": 7.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 17, "episode_elapsed_seconds": 10.776078462600708, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.66, -1.54], "score": 7.0}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 18, "episode_elapsed_seconds": 10.936696290969849, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "push", "target": [-0.66, -1.54], "score": 7.25}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 19, "episode_elapsed_seconds": 11.421358585357666, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 1.7172225487089068, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "push", "target": [-0.66, -1.54], "score": 7.25}, "instruction": "Move towards the slim white rectangular device with smooth edges.", "env_step": 20, "episode_elapsed_seconds": 11.66322374343872, "task_success": 0.0, "last_action_success": true, "action_id": 5}

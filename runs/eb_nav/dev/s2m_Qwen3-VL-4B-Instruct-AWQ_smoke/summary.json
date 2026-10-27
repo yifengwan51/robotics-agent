@@ -1,0 +1,16 @@
+[
+ {
+  "eval_set": "base",
+  "n": 4,
+  "success_rate": 50.0,
+  "avg_steps": 17.25,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "AVG(subsets)",
+  "n": 4,
+  "success_rate": 50.0,
+  "pooled_success_rate": 50.0
+ }
+]

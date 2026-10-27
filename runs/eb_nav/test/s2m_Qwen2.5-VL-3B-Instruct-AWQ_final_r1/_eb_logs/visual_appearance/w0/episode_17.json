@@ -1,0 +1,57 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 1, "episode_elapsed_seconds": 3.5175046920776367, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 2, "episode_elapsed_seconds": 4.81385350227356, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 3, "episode_elapsed_seconds": 6.889220237731934, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.750297050373769, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 4, "episode_elapsed_seconds": 8.4085853099823, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.593324395714114, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 5, "episode_elapsed_seconds": 8.740090131759644, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.593324395714114, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 6, "episode_elapsed_seconds": 10.34327745437622, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.413015552810657, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 7, "episode_elapsed_seconds": 11.634117603302002, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.413015552810657, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 8, "episode_elapsed_seconds": 13.164114952087402, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.1712763045345405, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 9, "episode_elapsed_seconds": 14.501090049743652, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.018821090502979, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 10, "episode_elapsed_seconds": 16.06653070449829, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8753230128887897, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 11, "episode_elapsed_seconds": 17.67639470100403, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7429957579595898, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 12, "episode_elapsed_seconds": 19.04805874824524, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6245713273080078, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 13, "episode_elapsed_seconds": 20.520823001861572, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4802124142039224, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 14, "episode_elapsed_seconds": 21.97797417640686, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4114625601505255, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 15, "episode_elapsed_seconds": 23.266737699508667, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3579481966095253, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 16, "episode_elapsed_seconds": 24.666770696640015, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.3583891636427499, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 17, "episode_elapsed_seconds": 26.548563241958618, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.059496919108308, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 18, "episode_elapsed_seconds": 27.864052772521973, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.8606637930302342, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [1.45, 1.95]}, "instruction": "Approach the circular dark container with a smooth black surface.", "env_step": 19, "episode_elapsed_seconds": 29.280083179473877, "task_success": 1.0, "last_action_success": true, "action_id": 2}

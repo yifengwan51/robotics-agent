@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5409895256779027, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.98, -0.72], "score": 1.0}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 1, "episode_elapsed_seconds": 1.291034460067749, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.257395779798804, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.12, -0.69], "score": 1.98}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 2, "episode_elapsed_seconds": 1.9855234622955322, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.257395779798804, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.2, -0.69], "score": 2.98}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 3, "episode_elapsed_seconds": 2.635101556777954, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3341458901979943, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.11, -0.7], "score": 3.97}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 4, "episode_elapsed_seconds": 3.337843418121338, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3341458901979943, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 5, "episode_elapsed_seconds": 4.025410175323486, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.609411638603528, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.16, -0.59], "score": 1.0}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 6, "episode_elapsed_seconds": 4.617396831512451, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8896057006814018, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.16, -0.58], "score": 2.0}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 7, "episode_elapsed_seconds": 5.161079406738281, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.8896057006814018, "env_feedback": "Last action MoveRight is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [0.0, -0.59], "score": 2.99}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 8, "episode_elapsed_seconds": 5.759485244750977, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.609411638603528, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.08, -0.59], "score": 3.24}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 9, "episode_elapsed_seconds": 6.333353042602539, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.609411638603528, "env_feedback": "Last action MoveRight is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [-0.03, -0.59], "score": 3.49}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 10, "episode_elapsed_seconds": 6.943161725997925, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.3341458901979943, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [0.0, -0.58], "score": 3.74}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 11, "episode_elapsed_seconds": 7.462113380432129, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.3341458901979943, "env_feedback": "Last action MoveRight is invalid. CoffeeTable_efe4814d is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"mode": "approach", "target": [0.03, -0.58], "score": 3.99}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 12, "episode_elapsed_seconds": 7.99575400352478, "task_success": 0.0, "last_action_success": false, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.609411638603528, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.04, -0.59], "score": 4.24}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 13, "episode_elapsed_seconds": 8.459250688552856, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8896057006814018, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.06, -0.58], "score": 4.49}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 14, "episode_elapsed_seconds": 8.976450681686401, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.078476280225355, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.02, -0.59], "score": 4.73}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 15, "episode_elapsed_seconds": 9.690694093704224, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.268671133176871, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.02, -0.59], "score": 5.64}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 16, "episode_elapsed_seconds": 10.278666257858276, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.268671133176871, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 17, "episode_elapsed_seconds": 10.821152925491333, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.268671133176871, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.15, -0.75]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 18, "episode_elapsed_seconds": 11.899331331253052, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.555981343615392, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.15, -0.75]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 19, "episode_elapsed_seconds": 12.476380348205566, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.8452302348387613, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-2.15, -0.75]}, "instruction": "Move towards the rectangular object with a shiny golden color and a small opening on the top.", "env_step": 20, "episode_elapsed_seconds": 13.063037157058716, "task_success": 0.0, "last_action_success": true, "action_id": 0}

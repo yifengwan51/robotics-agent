@@ -1,0 +1,54 @@
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9530575743870777, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 0.92 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 1, "episode_elapsed_seconds": 0.06075239181518555, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9530575743870777, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_3924b103 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (11 left, residual 0.92 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 2, "episode_elapsed_seconds": 0.07514786720275879, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.9530575743870777, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (13 left, residual 1.06 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 3, "episode_elapsed_seconds": 0.13382840156555176, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7818151276494123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (12 left, residual 1.06 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 4, "episode_elapsed_seconds": 0.1481332778930664, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.7818151276494123, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"why": "follow plan (11 left, residual 1.06 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 5, "episode_elapsed_seconds": 0.1616673469543457, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7818151276494123, "env_feedback": "Last action MoveAhead is invalid. CoffeeTable_3924b103 is blocking Agent 0 from moving by (-0.2500, 0.0000, 0.0000).", "reasoning": {"why": "follow plan (10 left, residual 1.06 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 6, "episode_elapsed_seconds": 0.17834091186523438, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.7818151276494123, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"why": "follow plan (10 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 7, "episode_elapsed_seconds": 0.21959185600280762, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5328670545624843, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (9 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 8, "episode_elapsed_seconds": 0.23266267776489258, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.373470440209015, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (8 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 9, "episode_elapsed_seconds": 0.2461414337158203, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2206549446392825, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (7 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 10, "episode_elapsed_seconds": 0.258683443069458, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0070447071933497, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (6 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 11, "episode_elapsed_seconds": 0.27220892906188965, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8180067307285546, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (5 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 12, "episode_elapsed_seconds": 0.286480188369751, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.659202686608557, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 13, "episode_elapsed_seconds": 0.3007543087005615, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5397727316310112, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 14, "episode_elapsed_seconds": 0.3186373710632324, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5397727316310112, "env_feedback": "Last action MoveAhead is invalid. ArmChair_4c4d99d1 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"why": "follow plan (2 left, residual 0.95 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 15, "episode_elapsed_seconds": 0.33934545516967773, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.3010026878444174, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (4 left, residual 0.67 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 16, "episode_elapsed_seconds": 0.3586843013763428, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.1792178000050468, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"why": "follow plan (3 left, residual 0.67 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 17, "episode_elapsed_seconds": 0.37667250633239746, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9445963842253063, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"why": "follow plan (2 left, residual 0.67 m)"}, "instruction": "navigate to the Vase in the room and be as close as possible to it", "env_step": 18, "episode_elapsed_seconds": 0.3968076705932617, "task_success": 1.0, "last_action_success": true, "action_id": 2}

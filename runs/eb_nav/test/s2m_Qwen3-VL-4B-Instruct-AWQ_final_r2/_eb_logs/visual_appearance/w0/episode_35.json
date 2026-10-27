@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9530575743870777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 1, "episode_elapsed_seconds": 3.6647727489471436, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9530575743870777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 2, "episode_elapsed_seconds": 5.262835502624512, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9530575743870777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 3, "episode_elapsed_seconds": 6.4184534549713135, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9530575743870777, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 4, "episode_elapsed_seconds": 9.255618333816528, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7818151276494123, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 5, "episode_elapsed_seconds": 10.585642576217651, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5328670545624843, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 6, "episode_elapsed_seconds": 14.169325590133667, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.373470440209015, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 7, "episode_elapsed_seconds": 14.860336065292358, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.2206549446392825, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 8, "episode_elapsed_seconds": 15.56911301612854, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0070447071933497, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 9, "episode_elapsed_seconds": 16.857930421829224, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8180067307285546, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 10, "episode_elapsed_seconds": 17.539446592330933, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.069647432918621, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 11, "episode_elapsed_seconds": 18.24143695831299, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.244022161654298, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 12, "episode_elapsed_seconds": 19.07371997833252, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.512752959987158, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 13, "episode_elapsed_seconds": 19.344632387161255, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.6955745775564037, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-0.02, 1.18], "score": 0.99}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 14, "episode_elapsed_seconds": 20.18606162071228, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.512752959987158, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 15, "episode_elapsed_seconds": 20.514875650405884, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.244022161654298, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 16, "episode_elapsed_seconds": 23.609264373779297, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.069647432918621, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 17, "episode_elapsed_seconds": 27.166760683059692, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.8180067307285546, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 18, "episode_elapsed_seconds": 30.79772710800171, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.659202686608557, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 19, "episode_elapsed_seconds": 33.955915451049805, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.440368523660881, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-3.75, 0.85]}, "instruction": "Find the tall, narrow object with a reflective silver surface and a rounded top opening.", "env_step": 20, "episode_elapsed_seconds": 36.653841733932495, "task_success": 0.0, "last_action_success": true, "action_id": 2}

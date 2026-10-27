@@ -1,0 +1,42 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.800935962688674, "env_feedback": "Last action MoveAhead is invalid. Chair_5f8ed236 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 1, "episode_elapsed_seconds": 2.868986129760742, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.800935962688674, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 2, "episode_elapsed_seconds": 3.956803560256958, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8085905618653357, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 3, "episode_elapsed_seconds": 4.179782867431641, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8303921324967574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 4, "episode_elapsed_seconds": 4.418094873428345, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 5, "episode_elapsed_seconds": 4.642176628112793, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5338831988833337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 6, "episode_elapsed_seconds": 5.3717427253723145, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3367056502679495, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 1.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 7, "episode_elapsed_seconds": 6.042882204055786, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0419690718015633, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 1.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 8, "episode_elapsed_seconds": 6.685191869735718, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8464200701986404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 2.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 9, "episode_elapsed_seconds": 7.299195766448975, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.651937203130617, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 3.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 10, "episode_elapsed_seconds": 7.923572063446045, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4589468711799767, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 4.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 11, "episode_elapsed_seconds": 8.526368856430054, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2681306814161024, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 5.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 12, "episode_elapsed_seconds": 9.145040512084961, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0806409578375598, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.33], "score": 6.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 13, "episode_elapsed_seconds": 9.751793146133423, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8985623589256397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.33], "score": 7.99}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 14, "episode_elapsed_seconds": 10.549349546432495, "task_success": 1.0, "last_action_success": true, "action_id": 0}

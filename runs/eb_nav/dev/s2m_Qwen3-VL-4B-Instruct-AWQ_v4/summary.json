@@ -1,0 +1,48 @@
+[
+ {
+  "eval_set": "base",
+  "n": 30,
+  "success_rate": 86.7,
+  "avg_steps": 12.13,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "common_sense",
+  "n": 30,
+  "success_rate": 80.0,
+  "avg_steps": 12.93,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "complex_instruction",
+  "n": 30,
+  "success_rate": 80.0,
+  "avg_steps": 12.87,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "visual_appearance",
+  "n": 30,
+  "success_rate": 50.0,
+  "avg_steps": 15.7,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "long_horizon",
+  "n": 30,
+  "success_rate": 83.3,
+  "avg_steps": 14.37,
+  "errors": 0,
+  "json_errors": 0
+ },
+ {
+  "eval_set": "AVG(subsets)",
+  "n": 150,
+  "success_rate": 76.0,
+  "pooled_success_rate": 76.0
+ }
+]

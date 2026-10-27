@@ -1,0 +1,36 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5325689964011757, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 1, "episode_elapsed_seconds": 1.7690842151641846, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5325689964011757, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 2, "episode_elapsed_seconds": 3.060053825378418, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5325689964011757, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 3, "episode_elapsed_seconds": 4.428637266159058, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5325689964011757, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 4, "episode_elapsed_seconds": 5.8625524044036865, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.365911723242201, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 5, "episode_elapsed_seconds": 6.145586967468262, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.126731667580434, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 6, "episode_elapsed_seconds": 7.56934380531311, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9765171879383168, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 7, "episode_elapsed_seconds": 8.88405156135559, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7697653658738064, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 8, "episode_elapsed_seconds": 10.311497211456299, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.6479387446917746, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 9, "episode_elapsed_seconds": 11.740108251571655, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4970475325130603, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 10, "episode_elapsed_seconds": 13.218885660171509, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 1.232640760385787, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 11, "episode_elapsed_seconds": 14.690553426742554, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 0.9887644393408397, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "explore", "goal": [-1.95, 3.75]}, "instruction": "The faint scent of citrus wafts through the room, mingling with the smell of freshly baked bread. There's a cutting board with a few herbs resting on it. Could you navigate to the pot for me? The kitchen feels alive with smells and sounds.", "env_step": 12, "episode_elapsed_seconds": 16.04340696334839, "task_success": 1.0, "last_action_success": true, "action_id": 2}

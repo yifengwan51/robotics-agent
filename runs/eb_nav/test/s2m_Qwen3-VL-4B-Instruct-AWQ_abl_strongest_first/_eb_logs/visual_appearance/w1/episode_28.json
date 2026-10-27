@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.783293610228908, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 1, "episode_elapsed_seconds": 2.46366024017334, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.783293610228908, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 2, "episode_elapsed_seconds": 4.921428680419922, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.783293610228908, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 3, "episode_elapsed_seconds": 7.609697580337524, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.783293610228908, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.52, 6.57], "score": 0.78}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 4, "episode_elapsed_seconds": 10.952399015426636, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.783293610228908, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.23, 7.0], "score": 0.77}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 5, "episode_elapsed_seconds": 11.229272842407227, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9461349472171894, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.52, 6.57], "score": 0.38}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 6, "episode_elapsed_seconds": 12.264151573181152, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.066219306126524, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.24, 7.0], "score": 1.25}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 7, "episode_elapsed_seconds": 13.763671398162842, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1943218989615434, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.25, 7.0], "score": 1.26}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 8, "episode_elapsed_seconds": 14.731286525726318, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.399511247867302, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.25, 7.0], "score": 0.86}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 9, "episode_elapsed_seconds": 15.510131120681763, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.543821182198794, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.25, 7.0], "score": 0.46}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 10, "episode_elapsed_seconds": 16.376476049423218, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.7698345607585466, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.52, 6.57], "score": 0.38}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 11, "episode_elapsed_seconds": 17.1983585357666, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.926021491104759, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-5.31, 7.0], "score": 0.68}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 12, "episode_elapsed_seconds": 19.57976722717285, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 4.1164594349583465, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.52, 6.57], "score": 0.38}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 13, "episode_elapsed_seconds": 22.755475759506226, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.347208533949575, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.28, 7.01], "score": 0.9}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 14, "episode_elapsed_seconds": 25.668800115585327, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.505575929542545, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.35, 7.01], "score": 0.98}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 15, "episode_elapsed_seconds": 26.720836400985718, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.749020733662604, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.35, 7.01], "score": 0.58}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 16, "episode_elapsed_seconds": 27.64064383506775, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 4.914793040819597, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.35, 7.01], "score": 0.58}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 17, "episode_elapsed_seconds": 28.52784013748169, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 5.167995145109037, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-5.35, 7.01], "score": 0.58}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 18, "episode_elapsed_seconds": 29.332147121429443, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 5.017626957918397, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-5.35, 7.01], "score": 0.58}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 19, "episode_elapsed_seconds": 29.63518524169922, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 4.924988897799513, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-5.35, 7.01], "score": 0.58}, "instruction": "Move towards the tall, cylindrical container with a clean white finish.", "env_step": 20, "episode_elapsed_seconds": 30.555967092514038, "task_success": 0.0, "last_action_success": true, "action_id": 3}

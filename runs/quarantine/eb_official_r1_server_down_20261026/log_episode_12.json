@@ -1,0 +1,60 @@
+
+
+{"action_description": "Tilt the camera downward by 30 degrees.", "distance": 2.914665070805098, "env_feedback": "Last action LookDown executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 1, "episode_elapsed_seconds": 25.58660650253296, "task_success": 0.0, "last_action_success": true, "action_id": 7}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.914665070805098, "env_feedback": "Last action MoveBack is invalid. StandardIslandHeight2 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 2, "episode_elapsed_seconds": 51.0438334941864, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Tilt the camera upward by 30 degrees.", "distance": 2.914665070805098, "env_feedback": "Last action LookUp executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 3, "episode_elapsed_seconds": 76.42982220649719, "task_success": 0.0, "last_action_success": true, "action_id": 6}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.750859240229083, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 4, "episode_elapsed_seconds": 102.04150152206421, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.750859240229083, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 5, "episode_elapsed_seconds": 127.93515682220459, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Tilt the camera upward by 30 degrees.", "distance": 2.750859240229083, "env_feedback": "Last action LookUp executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 6, "episode_elapsed_seconds": 153.32788753509521, "task_success": 0.0, "last_action_success": true, "action_id": 6}
+
+
+{"action_description": "Tilt the camera upward by 30 degrees.", "distance": 2.750859240229083, "env_feedback": "Last action LookUp is invalid. can't look up beyond 30 degrees above the forward horizon", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 7, "episode_elapsed_seconds": 178.65532851219177, "task_success": 0.0, "last_action_success": false, "action_id": 6}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.914664975724592, "env_feedback": "Last action MoveLeft executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 8, "episode_elapsed_seconds": 203.91971397399902, "task_success": 0.0, "last_action_success": true, "action_id": 3}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.914664975724592, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 9, "episode_elapsed_seconds": 229.50739336013794, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Tilt the camera upward by 30 degrees.", "distance": 2.914664975724592, "env_feedback": "Last action LookUp is invalid. can't look up beyond 30 degrees above the forward horizon", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 10, "episode_elapsed_seconds": 255.09911012649536, "task_success": 0.0, "last_action_success": false, "action_id": 6}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.914664975724592, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 11, "episode_elapsed_seconds": 280.7137632369995, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7587491889861644, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 12, "episode_elapsed_seconds": 306.08188486099243, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.914664975724592, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 13, "episode_elapsed_seconds": 331.1020255088806, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Tilt the camera downward by 30 degrees.", "distance": 2.914664975724592, "env_feedback": "Last action LookDown executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 14, "episode_elapsed_seconds": 356.48598313331604, "task_success": 0.0, "last_action_success": true, "action_id": 7}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.914664975724592, "env_feedback": "Last action MoveBack is invalid. StandardIslandHeight2 is blocking Agent 0 from moving by (0.0000, 0.0000, 0.2500).", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 15, "episode_elapsed_seconds": 381.8912196159363, "task_success": 0.0, "last_action_success": false, "action_id": 1}
+
+
+{"action_description": "Move leftward by 0.25", "distance": 2.914664975724592, "env_feedback": "Last action MoveLeft is invalid. StandardIslandHeight2 is blocking Agent 0 from moving by (0.2500, 0.0000, 0.0000).", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 16, "episode_elapsed_seconds": 407.59915590286255, "task_success": 0.0, "last_action_success": false, "action_id": 3}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.750859240229083, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 17, "episode_elapsed_seconds": 432.70582699775696, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 2.5921383336102912, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 18, "episode_elapsed_seconds": 458.0174105167389, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Tilt the camera downward by 30 degrees.", "distance": 2.5921383336102912, "env_feedback": "Last action LookDown executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 19, "episode_elapsed_seconds": 483.2220001220703, "task_success": 0.0, "last_action_success": true, "action_id": 7}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.7219290868919934, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"visual_state_description": "invalid json, random action", "reasoning_and_reflection": "invalid json, random action", "language_plan": "invalid json, random action"}, "instruction": "Locate the rounded metallic object with a shiny silver surface and a handle on top.", "env_step": 20, "episode_elapsed_seconds": 508.5568974018097, "task_success": 0.0, "last_action_success": true, "action_id": 1}

@@ -1,0 +1,60 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6810267639299767, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 1.0}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 2.109081745147705, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5020598463745003, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 0.6}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 2.3837759494781494, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3265215923350255, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 1.6}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 3.154705762863159, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3265215923350255, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 1.2}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 3.4679722785949707, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.192966810987755, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 1.2}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 4.2665886878967285, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.192966810987755, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 1.2}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 4.935391664505005, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9203390796664472, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-1.88, -2.5], "score": 0.8}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 5.192580938339233, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 2.192966810987755, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [0.71, -2.47], "score": 1.37}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 5.4490392208099365, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.192966810987755, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.71, -2.47], "score": 1.37}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 5.595634460449219, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0941595190830253, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.71, -2.48], "score": 1.52}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 6.17071533203125, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.0941595190830253, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 6.835921287536621, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.0941595190830253, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 7.607430458068848, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.0941595190830253, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [2.15, -2.58], "score": 0.62}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 8.79921579360962, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3847233296277346, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [2.15, -2.58], "score": 0.77}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 9.573262453079224, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.677369292509211, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.13, -2.58], "score": 1.77}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 10.15771770477295, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.87330948405332, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.13, -2.58], "score": 1.77}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 10.487619638442993, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.1681711306473845, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.13, -2.58], "score": 1.77}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 10.743897199630737, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 3.1681711306473845, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.13, -2.58], "score": 1.77}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 11.003149271011353, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.139252882912646, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.13, -2.58], "score": 1.77}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 19, "episode_elapsed_seconds": 11.623462438583374, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.1681711306473845, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "explore", "goal": [2.05, 0.85]}, "instruction": "I need a deep and sturdy container typically used for boiling or cooking food on a stove. Can you navigate to that object and stay close?", "env_step": 20, "episode_elapsed_seconds": 12.39310336112976, "task_success": 0.0, "last_action_success": true, "action_id": 1}

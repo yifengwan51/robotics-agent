@@ -1,0 +1,60 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.781703363231628, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 1, "episode_elapsed_seconds": 3.4246103763580322, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.662541742287887, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.9, -2.2], "score": 0.92}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 2, "episode_elapsed_seconds": 6.046046257019043, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5032002087093552, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.9, -2.2], "score": 0.52}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 3, "episode_elapsed_seconds": 6.881559610366821, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.5032002087093552, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [2.9, -2.2], "score": 0.52}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 4, "episode_elapsed_seconds": 7.827977657318115, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.6795344879656775, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.96}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 5, "episode_elapsed_seconds": 8.49720311164856, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.9497025917769037, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.96}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 6, "episode_elapsed_seconds": 9.154630184173584, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.132832479586857, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.96}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 7, "episode_elapsed_seconds": 9.830231189727783, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.411081881926688, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.96}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 8, "episode_elapsed_seconds": 10.502672910690308, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.5985238109690454, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.96}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 9, "episode_elapsed_seconds": 11.179599046707153, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 3.5985238109690454, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.96}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 10, "episode_elapsed_seconds": 11.770589828491211, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 3.508027411002923, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [2.92, -1.0], "score": 0.56}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 11, "episode_elapsed_seconds": 12.993042469024658, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.5985238109690454, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 12, "episode_elapsed_seconds": 13.742048740386963, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 3.8820373298670954, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 13, "episode_elapsed_seconds": 14.863064289093018, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move backward by 0.25", "distance": 3.986644086825974, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 14, "episode_elapsed_seconds": 15.628170013427734, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 4.067195120302595, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 15, "episode_elapsed_seconds": 17.016611337661743, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 4.155817732678505, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 16, "episode_elapsed_seconds": 17.96571135520935, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 4.30278264181969, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 17, "episode_elapsed_seconds": 18.62825322151184, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move backward by 0.25", "distance": 4.465093037932392, "env_feedback": "Last action MoveBack executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 18, "episode_elapsed_seconds": 19.31538200378418, "task_success": 0.0, "last_action_success": true, "action_id": 1}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 4.715707469996098, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 19, "episode_elapsed_seconds": 20.673017024993896, "task_success": 0.0, "last_action_success": true, "action_id": 2}
+
+
+{"action_description": "Move rightward by 0.25", "distance": 4.97179415422965, "env_feedback": "Last action MoveRight executed successfully.", "reasoning": {"mode": "approach", "target": [-0.71, -3.59], "score": 3.54}, "instruction": "Locate the box-like object with a smooth white surface and sharp edges.", "env_step": 20, "episode_elapsed_seconds": 21.443400859832764, "task_success": 0.0, "last_action_success": true, "action_id": 2}

@@ -1,0 +1,42 @@
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9892238200204346, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 3}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 1, "episode_elapsed_seconds": 3.034492254257202, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9892238200204346, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 2, "episode_elapsed_seconds": 5.767974615097046, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9892238200204346, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 3, "episode_elapsed_seconds": 8.020045518875122, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.9892238200204346, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [1.29, -2.01], "score": 0.75}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 4, "episode_elapsed_seconds": 10.286964654922485, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.7893527290497313, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, -2.01], "score": 0.94}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 5, "episode_elapsed_seconds": 12.897882461547852, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.589501517452863, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.3, -2.01], "score": 1.64}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 6, "episode_elapsed_seconds": 14.523440599441528, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3896752198112896, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 2.47}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 7, "episode_elapsed_seconds": 16.412521600723267, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.189880637353044, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 3.46}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 8, "episode_elapsed_seconds": 18.822582721710205, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.9901273220353517, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 4.39}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 9, "episode_elapsed_seconds": 21.428184747695923, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.7904290861002041, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 5.27}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 10, "episode_elapsed_seconds": 23.19324564933777, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.5908066576019937, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 6.24}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 11, "episode_elapsed_seconds": 25.718196868896484, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2915921588528532, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 7.17}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 12, "episode_elapsed_seconds": 26.282540798187256, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0923551416422252, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.01], "score": 8.11}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 13, "episode_elapsed_seconds": 26.89952564239502, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.7942192334159613, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [1.31, -2.04], "score": 9.06}, "instruction": "Head closer to the cylindrical container with a bright blue surface.", "env_step": 14, "episode_elapsed_seconds": 27.63175630569458, "task_success": 1.0, "last_action_success": true, "action_id": 0}

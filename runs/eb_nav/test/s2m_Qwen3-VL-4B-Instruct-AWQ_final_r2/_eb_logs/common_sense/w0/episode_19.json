@@ -1,0 +1,54 @@
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.800935962688674, "env_feedback": "Last action MoveAhead is invalid. Chair_5f8ed236 is blocking Agent 0 from moving by (0.0000, 0.0000, -0.2500).", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 1.0}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 1, "episode_elapsed_seconds": 2.4831440448760986, "task_success": 0.0, "last_action_success": false, "action_id": 0}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.800935962688674, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 2, "episode_elapsed_seconds": 4.1087682247161865, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8085905618653357, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 3, "episode_elapsed_seconds": 4.393544435501099, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.8303921324967574, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 4, "episode_elapsed_seconds": 4.6660144329071045, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.8303921324967574, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "approach", "target": [0.01, -1.32], "score": 0.6}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 5, "episode_elapsed_seconds": 5.037534713745117, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.5338831988833337, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.15, -1.94], "score": 1.0}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 6, "episode_elapsed_seconds": 5.824236154556274, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.3367056502679495, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.15, -1.94], "score": 0.6}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 7, "episode_elapsed_seconds": 6.451073884963989, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 2}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 8, "episode_elapsed_seconds": 7.070575714111328, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the left by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateLeft executed successfully.", "reasoning": {"mode": "scan", "unseen": 1}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 9, "episode_elapsed_seconds": 8.61592984199524, "task_success": 0.0, "last_action_success": true, "action_id": 5}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.01, -1.32], "score": 0.78}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 10, "episode_elapsed_seconds": 9.661350011825562, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Rotate to the right by 90 degrees.", "distance": 2.3367056502679495, "env_feedback": "Last action RotateRight executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.01, -1.32], "score": 0.78}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 11, "episode_elapsed_seconds": 9.961406946182251, "task_success": 0.0, "last_action_success": true, "action_id": 4}
+
+
+{"action_description": "Move forward by 0.25", "distance": 2.0419690718015633, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "inspect", "target": [-0.01, -1.32], "score": 0.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 12, "episode_elapsed_seconds": 10.594483852386475, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.8464200701986404, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 1.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 13, "episode_elapsed_seconds": 11.135308980941772, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.651937203130617, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 2.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 14, "episode_elapsed_seconds": 11.690709590911865, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.4589468711799767, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.32], "score": 3.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 15, "episode_elapsed_seconds": 12.306297540664673, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.2681306814161024, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.33], "score": 4.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 16, "episode_elapsed_seconds": 12.904122591018677, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 1.0806409578375598, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.33], "score": 5.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 17, "episode_elapsed_seconds": 13.497400283813477, "task_success": 0.0, "last_action_success": true, "action_id": 0}
+
+
+{"action_description": "Move forward by 0.25", "distance": 0.8985623589256397, "env_feedback": "Last action MoveAhead executed successfully.", "reasoning": {"mode": "approach", "target": [-0.01, -1.33], "score": 6.38}, "instruction": "I need to heat water for my tea. Can you navigate to that object and stay close?", "env_step": 18, "episode_elapsed_seconds": 14.122928380966187, "task_success": 1.0, "last_action_success": true, "action_id": 0}

@@ -88,3 +88,10 @@ The call-count contrast should also be interpreted carefully. S2M makes several 
 environment step, while the EB prompt makes fewer, longer structured planning requests. Calls, tokens, and wall
 time are thus different cost measures. A fair efficiency comparison requires request-level tokens and elapsed time
 under a shared serving configuration; this information is only partially available in the current artifacts.
+
+\noindent\textbf{Takeaway.}
+The evidence supports a bounded systems conclusion: with the recorded RGB-D and pose interface, a local 3--4B VLM
+can be embedded in a stateful semantic-to-metric controller that completes the listed benchmark runs. It does not
+yet isolate the contribution of the planner from its sensing interface, establish statistical significance for the
+single-run checks, or validate a final configuration on an untouched test split. Those distinctions are part of the
+result, not qualifications to be deferred outside the paper.

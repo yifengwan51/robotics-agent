@@ -1,11 +1,12 @@
-\section{Why Small VLM Agents Fail}
+\section{Problem Diagnosis and Audit Scope}
 \label{sec:diagnosis}
 
 \noindent\textbf{Held-out development split.}
 EB-Navigation's five test subsets (Base, Common-sense, Complex, Visual-appearance, Long-horizon) use 60 iTHOR
-rooms. We use the benchmark's own generator and instruction files to build a development split on the 30
-unused rooms (150 episodes; disjoint from the test rooms by construction). All tuning uses only this split. Every number reported in the paper, including the probes and ceilings below,
-comes from the full official test set (300 episodes), run once each configuration is frozen.
+rooms. The project contains a development split built with the benchmark's own generator and instruction files on
+30 unused rooms (150 episodes; disjoint from the test rooms by construction). The reported formal result
+directories use the full official test set (300 episodes). We retain this split distinction because it is the
+intended model-selection protocol, while separately documenting that later component comparisons revisit test data.
 
 \noindent\textbf{Audit boundary.}
 This section separates what the saved artifacts establish from what they do not. The runner records one JSON
@@ -41,3 +42,9 @@ The Qwen3 EB-prompt run contains no recorded JSON decoding errors. In contrast, 
 decode failures across 255/300 episodes. The benchmark parser substitutes a random action after a decode failure,
 so the 5.7\% number blends model planning failures with output-format failures. This motivates the parser caveat
 in \cref{tab:main}; a parser-instrumented rerun is needed before treating that row as a model comparison.
+
+\noindent\textbf{Implication for the method.}
+These observations motivate a narrow design goal rather than a claim that small VLMs cannot plan: preserve only
+the VLM decisions that are grounded in the current image, and make spatial memory, consistency checks, and action
+selection explicit. The next section specifies this controller. Its experimental comparison must nevertheless be
+read with the sensing and parser caveats above.

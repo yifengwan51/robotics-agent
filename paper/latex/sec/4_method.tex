@@ -1,6 +1,11 @@
 \section{Semantic-to-Metric Navigation}
 \label{sec:method}
 
+The diagnosis in \cref{sec:diagnosis} suggests separating two failure sources: image-conditioned semantic
+judgment and stateful metric control. \ours implements this separation as a controller around a local VLM. This
+section defines the information flow first, then the evidence state, and finally the action policy; the evaluation
+later distinguishes this system design from an input-matched causal comparison.
+
 \noindent\textbf{Setting.}
 At each step the agent receives a language instruction $\ell$ naming or describing one object, an egocentric
 RGB-D frame $(I_t, D_t)$, its odometry pose, and whether its last motion succeeded. It acts with the benchmark's
@@ -96,3 +101,8 @@ When the benchmark requires a Stop action, the agent stops only after it is with
 hypothesis, has turned and tilted to centre it, and re-confirms it with a presence query. A failed confirmation
 discards the hypothesis. Over long episodes, a miss counts as negative evidence only within 3\,m and once per view.
 When exploration ends, the best hypothesis seen so far is revisited once.
+
+\noindent\textbf{Summary of information access.}
+S2M's VLM never receives a target coordinate, a simulator object list, or a global map. Its controller does
+receive RGB-D and pose, so the overall agent is not RGB-only. This distinction is deliberate: it defines the
+system evaluated here and the central limitation of the EB-prompt comparison in \cref{sec:exp}.

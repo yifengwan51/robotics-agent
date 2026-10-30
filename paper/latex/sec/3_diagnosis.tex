@@ -20,8 +20,9 @@ the component table as diagnostic evidence and reserve claims about final model 
 For every official test episode we render the start view and the three other 90$^\circ$ headings, and ask the
 VLM (i) whether the target is visible (the yes/no first-token probability) and (ii) for its bounding box. We then
 score against the simulator's instance boxes, which are used only for evaluation. The raw probe outputs are retained
-under \texttt{runs/grounding/}, but no checked aggregation artifact is available in this snapshot; we therefore do
-not use probe numbers to support the reported claims.
+under \texttt{runs/grounding/}.  We preserve a simple, directly traceable IoU$\geq0.3$ hit/visible aggregation in
+\cref{app:dev-history}, but treat it as an auxiliary recognition diagnostic rather than as navigation evidence:
+candidate-verification records still lack a checked aggregate.
 
 \noindent\textbf{Oracle ceilings.}
 Given the true target position, our diagnostic geometric planner (\cref{sec:method}) succeeds in 93.3\% on Base,
@@ -30,8 +31,9 @@ an oracle-target diagnostic, not a deployable planner, and is not compared causa
 
 \noindent\textbf{Appearance-only goals are recall-limited.}
 The Visual subset is consistently lower than the other S2M subsets in the saved main runs (50.0--56.7\% versus
-80.0--91.7\% in the named-object subsets). A targeted candidate-recall analysis remains pending; without a checked
-probe aggregation, this pattern should not be attributed to a particular recognition failure mode.
+80.0--91.7\% in the named-object subsets). A targeted candidate-recall analysis remains pending. The auxiliary
+probe is consistent with lower start-view grounding on Visual, but it is not a causal failure attribution for an
+interactive navigation episode.
 
 \noindent\textbf{Failure taxonomy.}
 Detailed error-taxonomy percentages are intentionally omitted: the analysis script exists, but no saved,

@@ -1,6 +1,25 @@
 # Experiment snapshot — 2026-10-30
 
 Scope: static handoff snapshot only. No experiment, simulator, model server, algorithm, or evaluation configuration was changed.
+The complete asset-by-asset index is [`docs/experiment_inventory.md`](experiment_inventory.md); this file is the
+concise recovery brief for a later reviewer.
+
+## Full-asset coverage and paper destination
+
+The inventory finds 38 result groups: 10 EB-Navigation DEV, 16 formal EB-Navigation TEST, 4 RoboTHOR, 6 grounding
+JSONL, one legacy smoke group, and one quarantined partial group. It indexes 7,449 raw episode records, 30 summary
+artifacts, six grounding JSONL artifacts, 12 named executed historical versions, and two frozen configuration
+manifests. Each group is assigned to body, appendix, or handoff; retries are not counted as new runs.
+
+- **Body:** formal main comparison, seven component checks, two robustness checks, and 1800-episode RoboTHOR VAL.
+- **Appendix:** full five-subset values, DEV history, oracle diagnostics, depth calibration, grounded-box probes,
+  category-level RoboTHOR results, cost fields, and legacy context.
+- **Handoff only:** incomplete DEV v3, legacy six-episode smoke, server-down partial run, frozen-selection notes,
+  unaggregated candidate verification, and infrastructure logs.
+
+The updated paper root is `paper/latex/main.tex`; the complete experimental appendix is
+`paper/latex/sec/appendix.tex`.  No historical DEV value is presented as a TEST value, and the privileged oracle is
+not compared as a deployable method.
 
 ## Queue completion and artifact index
 
@@ -35,7 +54,7 @@ All EB-Navigation formal result directories contain five 60-episode subsets (300
 - RoboTHOR validation: 1800 episodes, SR 59.6%, SPL 35.9%, 17 logged errors.
 
 The LaTeX paper is rooted at `paper/latex/main.tex`. This handoff updated `sec/0_abstract.tex`, `sec/5_experiments.tex`,
-`sec/6_conclusion.tex`, `sec/tables.tex`, and the bodies in `paper/tables/`.
+`sec/6_conclusion.tex`, `sec/tables.tex`, `sec/appendix.tex`, and the bodies in `paper/tables/`.
 
 ## Static review findings
 
@@ -96,8 +115,9 @@ the same server and rendering settings.
 
 ## Claude review order
 
-1. `paper/latex/sec/5_experiments.tex` and `paper/tables/main_eb_nav.tex`
-2. `embagent/eb/nav_runner.py`, `embagent/planners/__init__.py`, and `embagent/planners/s2m.py`
-3. `third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py`
-4. `runs/eb_nav/test/*/summary.json` and `logs/queue_from16.log`
-5. `runs/robothor/val/s2m_Qwen3-VL-4B-Instruct-AWQ_final_summary.json`
+1. `docs/experiment_inventory.md` and `paper/latex/sec/appendix.tex`
+2. `paper/latex/sec/5_experiments.tex` and `paper/latex/sec/tables.tex`
+3. `embagent/eb/nav_runner.py`, `embagent/planners/__init__.py`, and `embagent/planners/s2m.py`
+4. `third_party/EmbodiedBench/embodiedbench/planner/nav_planner.py`
+5. `runs/eb_nav/test/*/summary.json`, `logs/queue_from16.log`, and `logs/queue_25.log`
+6. `runs/robothor/val/s2m_Qwen3-VL-4B-Instruct-AWQ_final_summary.json` and `runs/grounding/*.jsonl`

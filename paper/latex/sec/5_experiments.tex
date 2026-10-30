@@ -89,6 +89,12 @@ environment step, while the EB prompt makes fewer, longer structured planning re
 time are thus different cost measures. A fair efficiency comparison requires request-level tokens and elapsed time
 under a shared serving configuration; this information is only partially available in the current artifacts.
 
+\noindent\textbf{Complete record.}
+The appendix preserves every verified formal subset result, all component rows, development history, grounding
+probe aggregates, RoboTHOR category scores, and the legacy/incomplete artifacts that are excluded from comparison
+(\cref{app:record}). This separation keeps the main argument legible without silently dropping negative,
+preliminary, privileged-input, or configuration-incomparable evidence.
+
 \noindent\textbf{Takeaway.}
 The evidence supports a bounded systems conclusion: with the recorded RGB-D and pose interface, a local 3--4B VLM
 can be embedded in a stateful semantic-to-metric controller that completes the listed benchmark runs. It does not

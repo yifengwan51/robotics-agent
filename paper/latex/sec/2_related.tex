@@ -8,9 +8,10 @@ of view. One line of work closes the gap by training small VLMs on embodied traj
 RL~\cite{chen2025transforming,wang2025seenav,zhang2025embodiedx,wang2025vagen}, which needs task-specific data and
 substantial compute. Training-free methods add memory~\cite{ma2026brainmem}, tools~\cite{zhou2026enabling},
 visual prompts~\cite{wang2025seenav}, or a harness searched automatically from experience
-traces~\cite{lee2026emho}. Their reported gains use 9--27B or API models. \ours is training-free, uses no
-privileged rendering, and targets 3--4B local models. It also differs in \emph{where} the VLM is used: it answers
-only per-image semantic questions and never chooses motions.
+traces~\cite{lee2026emho}. Their reported gains use 9--27B or API models. \ours is training-free and targets
+3--4B local models. It uses simulator RGB-D and exact odometry in its primary EB-Navigation condition, but no
+target oracle or bird's-eye target rendering; it differs in \emph{where} the VLM is used: the VLM answers only
+per-image semantic questions and never chooses motions.
 
 \noindent\textbf{Zero-shot object navigation with foundation models.}
 Modular ObjectNav agents combine open-vocabulary perception with maps and

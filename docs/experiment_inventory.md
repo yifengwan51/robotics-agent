@@ -140,3 +140,91 @@ definition.
 - Qwen2.5 EB score is parser-confounded; a parser-instrumented rerun is needed before any clean model comparison.
 - Primary EB comparison uses unequal sensing (S2M RGB-D + pose, EB RGB).  An input-matched control and an
   untouched evaluation split are the minimum validity experiments; repeated TEST ablations create selection bias.
+
+## Addendum 2026-10-30: offline diagnostics from saved records
+
+`scripts/paper_diagnostics.py` (read-only; no model or simulator) regenerates every statistic added to the paper
+and writes `paper/tables/diagnostics.md`.  It resolves two of the gaps above without new runs:
+
+- **Failure taxonomy and candidate verification** now have checked aggregates (`diagnostics.md` sections 3 and 6).
+  The verification probe has only 7 multi-candidate TEST frames, so it supports no method comparison.
+- **Qwen2.5 EB parse failures are truncations.**  768/3,631 calls (21.2%) fail; no schema, empty-plan, or server
+  failures.  Fitted completion tokens: 185 per parsed call, 4,102 per failed call (budget 4,096); failed calls are
+  85.5% of completion tokens.  Raw generations were not saved.  All vLLM servers used `--generation-config vllm`,
+  so the Qwen2.5 checkpoint's `repetition_penalty: 1.05` was not applied; whether it removes the truncation is
+  untested.  `EB_RAW_CAPTURE_DIR` in `embagent/eb/local_model.py` (uncommitted) is intended for a DEV capture run.
+
+Paired results now in the paper: Qwen3 S2M r1 - EB prompt +31.7 pp [+25.0, +38.3], McNemar p = 1.1e-17.  Only
+no-fusion (-10.7 pp) and estimated depth (-34.0 pp) survive Holm over the nine variants; no-scan is -31.7 pp on
+Long and +15.0 pp on Visual.  Candidate recall at 0.5 m on Visual is 65.0-66.7% (other subsets 93.3-98.3%); 47
+of 84 Visual failures over r1-r3 never had a candidate.
+
+### Provenance note: stale `args.json` in 12 Qwen3 S2M TEST runs (found 2026-10-30)
+
+`args.json` in all 12 `runs/eb_nav/test/s2m_Qwen3-VL-4B-Instruct-AWQ_*` directories records `"s2m": "{}"` and
+`repeat: 0`; for depth_est_r1 / odom_noise_r1 the depth/noise flags are correct only because the retry loop passed
+them.  Cause: the retry job (queues/test_main.txt line 36, logs/queue_21.log) ran `--retry-errors` without `--s2m`
+/ `--repeat`, and the old `nav_runner.py` rewrote `args.json` even when 0 episodes were pending.  queue_21.log shows
+"0 episodes to run" for all 12 runs, so **no episode was produced with the wrong settings**; renderer crashes had
+already been absorbed by the worker's in-process retries.  The episode records confirm each switch took effect
+(no_scan 0 scan actions; no_fusion at most 1 live hypothesis; no_tiles 0 tiled detections; no_negative 0 score
+drops; no_zoom 0 full-frame crop queries; no_exhaust 282 vs 156 push steps).  The true flags are the ones in
+queues/test_main.txt lines 18-34.  The run directories were left unmodified.  `nav_runner.py` now writes
+`args.json` only when episodes run, records `VLM_EXTRA_BODY` / `VLM_MAX_TOKENS`, and refuses to resume a run
+directory whose recorded result-affecting settings differ from the current flags.
+
+### Qwen2.5 EB-prompt dev diagnosis (2026-10-30; DEV only, not reportable)
+
+`scripts/diag_qwen25_eb.sh` (server as in the formal run: ctx 10240, util 0.66) on 2 dev episodes per subset.
+Outputs: `runs/eb_nav/dev/eb_Qwen2.5-VL-3B-Instruct-AWQ_diag_{raw,rp105}/`, raw responses and truncated requests in
+`runs/diag/qwen25_eb_raw{,_rp105}/`, replay in `runs/diag/qwen25_eb_raw/replay.jsonl`, log `logs/diag_qwen25_eb.log`.
+
+- Baseline: 114 calls, 6 hit 4,096 tokens (5.3%; test was 21.2%), SR 2/10.  Every truncation is a greedy
+  repetition loop: one sentence repeated inside `visual_state_description`, or `{"action_id": 0, "action_name":
+  "Move forward"}` repeated without end inside `executable_plan`.  The schema bounds neither string nor array length.
+- Replaying the 6 truncated requests: repetition_penalty 1.0 -> 1/6 parse; 1.05 -> 6/6 parse.
+- But a live dev run with repetition_penalty 1.05 still truncates 4/85 calls (4.7%), SR 3/10: the penalty moves the
+  loops to other requests rather than removing them.  **Conclusion: no rerun of the test baseline with rp 1.05**;
+  the 5.7% row stands, with the truncation mechanism documented in the paper (appendix `app:qwen25`).
+- Test rate 21.2% vs dev 5.3% is not explained here (dev n = 10 episodes).  A test rerun with raw capture would
+  characterize it but is not needed for correctness.
+
+### Input-matching checks for an RGB-only S2M variant (2026-10-30; DEV / offline, not reportable)
+
+- Pose from action feedback (offline, saved TEST trajectories): failed moves give zero displacement, rotations are
+  exactly +-90 deg, tilts +-30 deg; translations are snapped to the 0.1 m grid, so dead reckoning from (action,
+  success) differs from the simulator pose by one cell (0.1 m) on 9.1% of steps (per-step check; cumulative drift
+  not measured).  The EB-prompt baseline receives the same action/success feedback.
+- `scripts/depth_scale_probe.py` on the 60 DEV calibration frames (DA-V2 Metric-Indoor-Small): global DEV scale
+  AbsRel 0.132 / delta<1.25 0.818; per-frame oracle scale 0.074 / 0.920 (about half the error is per-frame scale);
+  a naive floor-plane scale prior is worse (0.233 / 0.753; the bottom image band is floor-like in only 53% of frames).
+
+### Note: server log overwritten (2026-10-30)
+
+The bounded-baseline queue restarted vLLM through `scripts/run_queue.sh`, whose server log path depends only on
+model and context, so `logs/vllm_Qwen2.5-VL-3B-Instruct-AWQ_10240.log` was overwritten.  Its uncommitted content was
+the server log of the formal `eb_official_r1` Qwen2.5 run (launch 10-27 18:13).  The committed copy (git 9915cd7)
+has the same launch arguments: max_model_len 10240, gpu util 0.66, max_pixels 409600, `generation_config: vllm`.
+No episode record or summary was affected.  `run_queue.sh` will name server logs per queue (LOG_PREFIX) after the
+running queue finishes.
+
+### Qwen2.5 EB-prompt TEST rerun with a length-bounded schema (2026-10-30, formal)
+
+`queues/qwen25_eb_bounded.txt` (DEV gates A/B passed, then one TEST run).  Bounds `{"max_chars": 1500,
+"max_items": 20, "name_chars": 80}` fixed from DEV outputs before the TEST run; recorded in args.json.
+`runs/eb_nav/test/eb_Qwen2.5-VL-3B-Instruct-AWQ_eb_bounded_r1/`, raw capture `runs/diag/qwen25_eb_bounded_test/`.
+- SR 6.7/6.7/6.7/8.3/3.3, avg 6.3% [3.7, 9.3]; 2,439 calls, 0 decode failures, 0 length finishes, 0 runner errors.
+- vs original schema: +0.7 pp, 15/13 discordant, McNemar p = 0.85.  S2M Qwen2.5 vs bounded EB: +63.7 pp
+  [+58.0, +69.3], 192/1, p = 3.1e-56.
+- 397 calls (16.3%) reach a bound exactly (361 at 20 actions, 72 at a 1,500-char field, 1 at an 80-char name;
+  403 if fields of >=1,490 chars are counted): the loops remain but end at the bound.
+- Qwen3 EB outputs (EB logs): longest field 823 chars, at most 6 actions, so the bounds never bind; no rerun.
+
+### Queue/server memory changes (2026-10-30)
+
+- `scripts/run_queue.sh`: start/resume threshold HIGH_MB 10000 -> 7000 (pause threshold LOW_MB 5000 unchanged);
+  SKIP_JOBS to resume a queue; per-queue appended server logs; vLLM now starts with `--mm-processor-cache-gb 0`
+  (override with VLLM_SERVER_ARGS).  The multimodal processor cache only avoids re-processing an identical image,
+  so outputs are unchanged; it had grown the Qwen3 EngineCore to 6.7 GB RSS under S2M (2.5 GB without it).
+  Runs before 2026-10-30 13:58 used the default cache.
+- `queues/rgb_only_dev.txt` job 1 left its depth server running (1.3 GB) and blocked job 3; job 1 now stops it.

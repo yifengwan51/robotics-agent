@@ -1,123 +1,140 @@
-\section{Complete Experimental Record and Provenance}
+\section{Supplementary Results and Details}
 \label{app:record}
 
-This appendix preserves the result artifacts that are informative but too detailed, preliminary, diagnostic, or
-configuration-dependent for the main narrative.  Every aggregate below is traceable to the cited saved summary or
-raw episode records.  ``DEV'' and ``TEST'' are never pooled; repeated or resumed queue jobs are not treated as
-independent random seeds.
+All numbers below come from the per-episode records of the full EB-Navigation test set or the full RoboTHOR
+validation split. Every EB-Navigation run covers the same 300 episodes, so all comparisons are paired by episode.
 
-\subsection{Complete EB-Navigation Subset Results}
-\label{app:eb-subsets}
-\begin{table*}[t]
-\centering\small
-\caption{All verified formal EB-Navigation TEST summaries (SR, \%).  Each row has five 60-episode subsets
-and 300 episodes total.  S2M Qwen3 runs are separately recorded executions; their arithmetic mean is descriptive,
-not a significance estimate.  Oracle receives privileged target position and is diagnostic only.}
-\label{tab:app-eb}
-\begin{tabular}{llrrrrrr}
-\toprule
-Planner & model / setting & Base & Common & Complex & Visual & Long & Avg.\\
-\midrule
-EB prompt & Qwen3-VL-4B & 65.0&65.0&60.0&38.3&11.7&48.0\\
-S2M & Qwen3 run 1 &88.3&85.0&88.3&56.7&80.0&79.7\\
-S2M & Qwen3 run 2 &88.3&85.0&88.3&50.0&83.3&79.0\\
-S2M & Qwen3 run 3 &91.7&83.3&88.3&53.3&83.3&80.0\\
-S2M & Qwen3 three-run mean &89.4&84.4&88.3&53.3&82.2&79.6\\
-EB prompt & Qwen2.5-VL-3B &8.3&6.7&6.7&6.7&0.0&5.7\\
-S2M & Qwen2.5-VL-3B &78.3&71.7&71.7&53.3&75.0&70.0\\
-Oracle geometry & privileged target state &93.3&93.3&93.3&93.3&83.3&91.3\\
-\bottomrule
-\end{tabular}
-\end{table*}
+\subsection{Per-Subset Paired Comparisons}
+\label{app:stats}
+\Cref{tab:app-paired} gives the paired difference of every variant per subset. The two repeated reference runs
+set the noise floor: they differ from run~1 on 8 and 15 episodes and by at most 6.7\,pp in one subset (Visual,
+run~2).
 
 \begin{table*}[t]
-\centering\small
-\caption{Complete single-run S2M component and robustness checks on EB-Navigation TEST (SR, \%).  These
-are diagnostic test-set comparisons, not independent model-selection evidence.}
-\label{tab:app-ablation-subsets}
-\begin{tabular}{lrrrrrr}
+\centering\scriptsize
+\caption{Per-subset paired differences on EB-Navigation test (pp, B minus A; exact McNemar $p$ in parentheses,
+uncorrected; 60 episodes per subset). Unless stated, A is \ours run~1 with Qwen3-VL-4B and B is the listed variant.}
+\label{tab:app-paired}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrr}
 \toprule
-Setting & Base & Common & Complex & Visual & Long & Avg.\\
+Comparison & Base & Common & Complex & Visual & Long\\
 \midrule
-Reference (Qwen3 run 1) &88.3&85.0&88.3&56.7&80.0&79.7\\
-no negative evidence &93.3&83.3&88.3&58.3&81.7&81.0\\
-no fusion &78.3&70.0&75.0&41.7&80.0&69.0\\
-no tiles &86.7&80.0&85.0&60.0&80.0&78.3\\
-no zoom verification &85.0&80.0&83.3&51.7&83.3&76.7\\
-no scan &95.0&91.7&91.7&71.7&48.3&79.7\\
-no exhaust-on-arrival &88.3&85.0&88.3&46.7&83.3&78.3\\
-strongest-first &90.0&85.0&90.0&55.0&83.3&80.7\\
-estimated depth &50.0&51.7&50.0&28.3&48.3&45.7\\
-odometry noise &91.7&81.7&90.0&50.0&83.3&79.3\\
+\ours run 1 $-$ EB prompt (Qwen3) & $+23.3$ (0.0026) & $+20.0$ (0.0075) & $+28.3$ ($2.2{\times}10^{-4}$) & $+18.3$ (0.061) & $+68.3$ ($5.9{\times}10^{-11}$)\\
+\ours $-$ bounded EB prompt (Qwen2.5) & $+71.7$ ($2.6{\times}10^{-12}$) & $+65.0$ ($3.6{\times}10^{-12}$) & $+65.0$ ($3.6{\times}10^{-12}$) & $+45.0$ ($1.5{\times}10^{-8}$) & $+71.7$ ($2.3{\times}10^{-13}$)\\
+\ours monocular depth $-$ EB prompt (Qwen3) & $-15.0$ (0.12) & $-13.3$ (0.15) & $-10.0$ (0.34) & $-10.0$ (0.34) & $+36.7$ ($1.0{\times}10^{-5}$)\\
+\midrule
+\ours run 2 & $+0.0$ (1) & $+0.0$ (1) & $+0.0$ (1) & $-6.7$ (0.12) & $+3.3$ (0.5)\\
+\ours run 3 & $+3.3$ (0.5) & $-1.7$ (1) & $+0.0$ (1) & $-3.3$ (0.69) & $+3.3$ (0.5)\\
+\midrule
+w/o multi-view fusion & $-10.0$ (0.11) & $-15.0$ (0.012) & $-13.3$ (0.039) & $-15.0$ (0.035) & $+0.0$ (1)\\
+w/o look-around & $+6.7$ (0.12) & $+6.7$ (0.22) & $+3.3$ (0.5) & $+15.0$ (0.035) & $-31.7$ ($1.6{\times}10^{-4}$)\\
+w/o exhaust-on-arrival & $+0.0$ (1) & $+0.0$ (1) & $+0.0$ (1) & $-10.0$ (0.031) & $+3.3$ (0.5)\\
+w/o negative evidence & $+5.0$ (0.25) & $-1.7$ (1) & $+0.0$ (1) & $+1.7$ (1) & $+1.7$ (1)\\
+w/o tiled search & $-1.7$ (1) & $-5.0$ (0.38) & $-3.3$ (0.69) & $+3.3$ (0.73) & $+0.0$ (1)\\
+w/o full-frame crop check & $-3.3$ (0.62) & $-5.0$ (0.25) & $-5.0$ (0.45) & $-5.0$ (0.38) & $+3.3$ (0.5)\\
+strongest-first selection & $+1.7$ (1) & $+0.0$ (1) & $+1.7$ (1) & $-1.7$ (1) & $+3.3$ (0.5)\\
+odometry noise & $+3.3$ (0.62) & $-3.3$ (0.62) & $+1.7$ (1) & $-6.7$ (0.29) & $+3.3$ (0.73)\\
+monocular depth & $-38.3$ ($1.5{\times}10^{-5}$) & $-33.3$ ($1.8{\times}10^{-4}$) & $-38.3$ ($5.6{\times}10^{-6}$) & $-28.3$ ($7.6{\times}10^{-5}$) & $-31.7$ ($3.1{\times}10^{-4}$)\\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table*}
 
-\subsection{Development History and Auxiliary Diagnostics}
-\label{app:dev-history}
+\noindent\textbf{Candidate recall.}
+For each episode of \ours we ask whether any logged detection or fused hypothesis ever lies within $R$ of the true
+target in the floor plane. The perception log covers every step, and hypotheses are stored in the simulator frame,
+so only exact-pose runs are evaluated (\cref{tab:app-recall}). Changing $R$ from 0.5 to 1.0\,m changes no subset by
+more than 3.3\,pp. Some successes have no such candidate (4--5 per Qwen3 run) because EB-Navigation ends an
+episode as soon as the agent is within 1\,m, including during exploration.
+
 \begin{table}[t]
-\centering\small
-\caption{EB-Navigation development history.  DEV v3 has raw episode files but no complete summary and is
-therefore not used as a formal aggregate.}
-\label{tab:app-dev}
-\begin{tabular}{lrrl}
+\centering\scriptsize
+\caption{Candidate recall of \ours at $R=0.5$\,m (\% of episodes) and failed episodes split by whether such a
+candidate ever existed.}
+\label{tab:app-recall}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrcc}
 \toprule
-Run & episodes & SR (\%) & disposition\\
+Run & Base & Comm. & Cplx. & Vis. & Long & All & \multicolumn{2}{c}{failures: no cand. / cand.}\\
+ & & & & & & & all & Visual\\
 \midrule
-S2M smoke &4&50.0&smoke only\\
-S2M v2 &60&81.7&DEV (Base/Long)\\
-S2M v3 &113&--&incomplete raw records\\
-S2M v4 &150&76.0&DEV, five subsets\\
-S2M v5 &150&74.7&frozen DEV configuration\\
-Oracle v1--v5 &60 each&90.0,81.7,81.7,86.7,91.7&diagnostic DEV\\
+Qwen3 run 1 & 98.3 & 96.7 & 96.7 & 65.0 & 98.3 & 91.0 & 22 / 39 & 16 / 10\\
+Qwen3 run 2 & 98.3 & 95.0 & 96.7 & 66.7 & 96.7 & 90.7 & 24 / 39 & 16 / 14\\
+Qwen3 run 3 & 98.3 & 93.3 & 96.7 & 66.7 & 95.0 & 90.0 & 25 / 35 & 15 / 13\\
+Qwen2.5 & 81.7 & 75.0 & 75.0 & 40.0 & 78.3 & 70.0 & 60 / 30 & 22 / 6\\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table}
 
-The estimated-depth configuration uses the DEV calibration stored in
-\texttt{data/depth\_calib.json}: AbsRel $=0.1321$, scale $=0.37743$, 60 calibration frames.  This is a
-calibration artifact, not an independent TEST result.  The S2M records log mean VLM calls per episode of
-52.46, 53.03, and 51.70 for Qwen3 runs 1--3, and 98.30 for Qwen2.5; they do not log request tokens.  EB-prompt
-records log Qwen3 means of 8.21 calls, 28,766 prompt tokens and 2,425 completion tokens, and Qwen2.5 means of
-12.10 calls, 43,469 prompt tokens and 12,280 completion tokens.  These are not a matched cost comparison.
+\noindent\textbf{Single-view probe.}
+The probe of \cref{sec:diagnosis} renders each test start view and the three other 90$^\circ$ headings; a box is a
+hit at IoU${\ge}0.3$ with the simulator's instance box. Base queries the category name; the other subsets use the
+phrase that \ours extracts from the instruction. A second probe asks for every candidate box in the views where the
+target is visible (70 per subset for Common, Complex, and Visual). The target is among the candidates in 73, 80, and
+57\% of these views, but only 7 of the 210 views contain the target together with another candidate, too few to
+compare ways of choosing among candidates.
 
-\paragraph{Grounding probe.} The raw JSONL files in \texttt{runs/grounding/} provide an auxiliary start-view
-recognition check, not a navigation metric.  Using saved ground-truth boxes only for evaluation and IoU $\geq0.3$,
-Qwen3 test hit/visible rates are 78.7, 69.3, 77.3, and 49.3\% on Base, Common, Complex, and Visual (75 visible
-instances each); Qwen2.5 rates are 40.0, 33.3, 37.3, and 18.7\%.  The corresponding files also retain false-box
-and lift-error fields.  Candidate-verification JSONL has no checked aggregate in this paper and remains a handoff
-artifact rather than a numerical claim.
+\subsection{EB-Prompt Output Validity with Qwen2.5-VL-3B}
+\label{app:qwen25}
+The benchmark's planner parses each reply with \texttt{json.loads} and substitutes a uniformly random action on
+failure. Our client reproduces the benchmark's Qwen call: JSON-schema guided decoding with the benchmark's schema,
+temperature 0, and a 4{,}096-token completion budget. Of 3{,}631 Qwen2.5 planner calls, 768 (21.2\%) fail to
+parse, in 255 of 300 episodes; no call fails for any other reason. Regressing each episode's completion tokens on
+its numbers of parsed and failed calls gives 185 tokens per parsed call and 4{,}102 per failed call, so the failed
+calls run into the budget before the JSON closes. The schema bounds neither string length nor the number of actions,
+so a greedy repetition loop is never forced to end. Qwen3-VL-4B has no failures (295 completion tokens per call).
+With the original schema, Qwen2.5 scores 8.3, 6.7, 6.7, 6.7, and 0.0\% on the five subsets (5.7\% overall).
 
-\subsection{RoboTHOR Categories and Historical Runs}
+\noindent\textbf{Length-bounded rerun.}
+We repeated the run with the same prompt, examples, parser, server, and decoding, adding to the schema a
+1{,}500-character limit on each text field, an 80-character limit on action names, and 1--20 actions. The limits
+were set from the longest development-split outputs (941 characters, 8 actions) before the test run. They never
+bind for Qwen3-VL-4B, whose longest test output field has 823 characters and whose longest plan has 6 actions. All
+2{,}439 Qwen2.5 calls now parse (median 188 completion tokens), and success is 6.3\% (\cref{tab:main}). The loops
+remain: 397 calls (16.3\%) reach a limit, 361 of them the 20-action cap and 72 a text-field limit, and in 285 of
+the 361 capped plans a single action is repeated at least 15 times. Both runs measure the same behavior through different fallbacks and agree
+($+0.7$\,pp; 15 versus 13 discordant episodes; $p=0.85$). We use the bounded run as the baseline because none of its
+actions is random. All servers use vLLM's default sampling configuration, so the Qwen2.5-VL checkpoint's suggested
+repetition penalty is not applied to either agent.
+
+\subsection{Implementation and Evaluation Details}
+\label{app:impl}
+\noindent\textbf{Development split.} 150 episodes on FloorPlan1--10, 201--210, and 301--310, kitchen, living-room,
+and bedroom scenes that the test set (FloorPlan11--30, 211--230, 311--330) does not use, built with the benchmark's task-generation settings (start 2.5--3.0\,m from the
+target, horizon 0) and its instruction files, with the same five subsets.
+
+\noindent\textbf{Monocular depth.} Depth Anything V2 Metric-Indoor-Small runs on the CPU. One global scale
+(0.377) is fitted on 60 development frames against simulator depth (AbsRel 0.132); no test frame is used.
+
+\noindent\textbf{Outcome categories.} A failed episode is labeled by the first matching rule: the target never
+enters the view; final distance at most 1.5\,m; the target is out of view in the last five steps; at least 30\%
+of actions are rejected; at least three immediate reversals; otherwise approach failure.
+
+\noindent\textbf{Cost.} \ours issues 51.7--53.0 short single-image VLM queries per Qwen3 episode, counting crops
+and tiles (98.3 with Qwen2.5). The EB prompt issues 8.2 calls per Qwen3 episode with on average
+28{,}766 prompt and 2{,}425 completion tokens. The two agents are served with different context limits (2{,}048
+tokens for \ours, 8{,}192 and 10{,}240 for the EB prompt with Qwen3 and Qwen2.5), so we do not compare their wall
+time.
+
+\noindent\textbf{Information access.} Neither agent receives the target position or any simulator object state.
+The benchmark's per-step feedback also contains the distance to the target; \ours reads only the executed action
+and its success flag from it, and the EB prompt only the action and its feedback message.
+
+\subsection{RoboTHOR per Category}
 \label{app:robothor}
 \begin{table*}[t]
 \centering\scriptsize
-\caption{RoboTHOR formal validation result by target category: 150 episodes each, 1800 total.  Errors are
-retained rather than excluded.}
+\caption{\ours on the RoboTHOR validation split by target category (150 episodes each). Episodes with simulator
+errors count as failures.}
 \label{tab:app-robo-categories}
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lrrrrrrrrrrrr}
 \toprule
-Category & Alarm & Apple & Bat & Ball & Bowl & Can & Plant & Laptop & Mug & Spray & TV & Vase\\
+Category & AlarmClock & Apple & BaseballBat & BasketBall & Bowl & GarbageCan & HousePlant & Laptop & Mug & SprayBottle & Television & Vase\\
 \midrule
 SR (\%) &44.7&74.7&62.7&88.0&41.3&71.3&56.0&61.3&77.3&49.3&62.7&25.3\\
 SPL (\%)&29.5&50.1&34.4&54.3&23.8&47.2&28.7&27.8&45.7&31.8&38.5&18.5\\
 Errors&0&1&1&1&1&1&2&3&2&2&0&3\\
 \bottomrule
-\end{tabular}
+\end{tabular}}
 \end{table*}
-
-The three preliminary RoboTHOR DEV runs cover 24 episodes each and report respectively 58.3/36.1,
-75.0/41.0, and 66.7/35.2 SR/SPL.  They are development diagnostics and not pooled with the 1800-episode validation
-run.  The legacy official EB smoke artifact has six episodes and zero success; a quarantined four-record run was
-interrupted by server failure.  Both remain indexed in the handoff record, but neither is comparable to a formal
-result.
-
-\subsection{Audit Boundaries}
-\label{app:audit-boundaries}
-The oracle geometric planner explicitly requests \texttt{oracle\_target}; this privileged input makes its 91.3\%
-TEST score an upper-bound diagnostic only.  In contrast, S2M receives RGB, simulator depth, and exact pose,
-whereas the EB-prompt adapter forwards RGB alone.  The vLLM context settings (Qwen3: EB 8192, S2M 2048;
-Qwen2.5: EB 10240, S2M 2048) are maxima, not observations of actual token use.  Finally, the Qwen2.5 EB-prompt
-summary contains 768 JSON decode fallbacks across 255 affected episodes; its score should not be interpreted as a
-clean planning comparison.  Full paths, raw-file coverage, and audit evidence are maintained in
-\texttt{docs/experiment\_inventory.md}.

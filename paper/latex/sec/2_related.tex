@@ -1,32 +1,60 @@
 \section{Related Work}
 \label{sec:related}
 
-Our setting lies at the intersection of foundation-model agents, open-vocabulary object navigation, semantic mapping, and uncertainty-aware visual grounding. We organize prior work by the division of responsibility between the learned model and the geometric controller, because that division---rather than a new perception backbone---is the central design choice in \ours.
+\noindent\textbf{MLLM agents for embodied tasks.}
+EmbodiedBench~\cite{yang2025embodiedbench} evaluates multimodal LLMs on high-level and low-level embodied tasks
+through a standardized action interface; Embodied Agent Interface~\cite{li2024embodied} and
+NavBench~\cite{qiao2025navbench} probe embodied decision making and navigation reasoning. One line of work
+improves such agents by embodied pre-training, online reinforcement learning, or policy-level
+reasoning~\cite{chen2025transforming,wang2025vagen,zhang2025embodiedx,liu2025robogpt,anon2026policy}; another
+improves them at test time with reflection, experience, memory, or
+tools~\cite{shinn2023reflexion,zhao2023expel,chen2024automanual,wang2024agent,lei2025robomemory,ma2026brainmem,lee2026emho,zhou2026enabling,singhi2026think}.
+On EB-Navigation, the strongest reported results draw the ground-truth target box into a simulator-rendered
+bird's-eye view, optionally with reinforcement fine-tuning~\cite{wang2025seenav}, or let an 8B or larger model
+call a library of perception and mapping tools~\cite{zhou2026enabling}. These methods keep the model in charge of
+the plan. \ours instead removes planning from the model: the VLM is a semantic sensor, and state estimation and
+action selection are explicit.
 
-\noindent\textbf{MLLM agents and embodied benchmarks.}
-Recent benchmarks expose both the promise and brittleness of using multimodal large language models (MLLMs) as embodied agents. EmbodiedBench~\cite{yang2025embodiedbench} evaluates high-level planning and low-level control through a standardized action interface, while Embodied Agent Interface~\cite{li2024embodied} and NavBench~\cite{qiao2025navbench} probe embodied decision making and navigation-oriented reasoning more broadly. Such settings evaluate visual grounding, planning, action selection, and output formatting in a single score, but make it difficult to identify which capability caused a success or failure.
+\noindent\textbf{Zero-shot object navigation with foundation models.}
+Modular zero-shot ObjectNav combines open-vocabulary perception, a map of explored space, and a planner.
+CoW~\cite{gadre2022cows} pairs open-vocabulary localization with frontier exploration; later systems build
+vision-language value maps~\cite{yokoyama2023vlfm}, online scene graphs reasoned over by an
+LLM~\cite{yin2024online,huang2025msgnav}, universal goal graphs~\cite{yin2025unigoal}, world
+models~\cite{nie2025wmnav}, cognitive state machines~\cite{cao2024cognav}, or structured representations queried
+by a VLM~\cite{zhu2025strive}. Instruction-following systems similarly ground language in maps and scene
+graphs~\cite{long2024instructnav,rana2023sayplan,werby2024hierarchical}. Closest to our memory, ApexNav fuses
+target-centric detections over time~\cite{zhang2025apexnav}, and AECNav consolidates detections into beliefs that
+treat expected but absent detections as negative evidence~\cite{liu2026aecnav}. \ours shares the view that the
+map must keep evidence outside the current image, but uses a small generative VLM as its only perception model
+and keeps a short list of metric target hypotheses instead of a semantic map or scene graph.
 
-One line of work improves agents through embodied pre-training, online reinforcement learning, or policy-level reasoning~\cite{chen2025transforming,wang2025vagen,zhang2025embodiedx,liu2025robogpt,anon2026policy}. Another improves test-time behavior through experience traces, memory, tools, reflection, or verification~\cite{shinn2023reflexion,zhao2023expel,chen2024automanual,wang2024agent,ma2026brainmem,lei2025robomemory,lee2026emho,zhou2026enabling,singhi2026think}. These directions make an agent better at planning or self-improvement. \ours instead asks a narrower systems question: can a 3--4B local VLM serve as an image-conditioned semantic sensor while deterministic state estimation and action selection retain the long-horizon control burden? Accordingly, \ours neither learns from the reported test episodes nor asks its VLM to emit a multi-step motion program.
+\noindent\textbf{3D semantic representations and memory.}
+Open-vocabulary 3D scene graphs~\cite{gu2023conceptgraphs,werby2024hierarchicalx}, online semantic
+maps~\cite{jiang2025dualmap}, and language-embedded radiance or Gaussian
+fields~\cite{qin2023langsplat,katragadda2025online,lee2026embodiedsplat} attach semantics to geometry, and
+embodied memory systems keep spatial and temporal context available after it leaves the
+image~\cite{yang2024scene,anwar2024remembr,ginting2025enter}. \ours sits at the minimal end of this spectrum: a
+grounded box is lifted with depth and pose to one metric point, and nearby points are fused. This keeps the
+memory small enough for a single consumer GPU shared with the simulator.
 
-\noindent\textbf{Foundation models for zero-shot object navigation.}
-Classical zero-shot ObjectNav combines semantic perception, an explored-space representation, and a navigation policy. CoW~\cite{gadre2022cows} demonstrated the value of web-scale visual semantics for language-driven object navigation. Subsequent modular systems use vision-language frontier maps~\cite{yokoyama2023vlfm}, online scene graphs~\cite{yin2024online,huang2025msgnav}, generic goal representations~\cite{yin2025unigoal}, adaptive target fusion~\cite{zhang2025apexnav}, world models~\cite{nie2025wmnav}, or cognitive planning modules~\cite{cao2024cognav}. In related instruction-following settings, scene graphs and maps ground high-level language before local motion execution~\cite{long2024instructnav,rana2023sayplan,werby2024hierarchical}.
+\noindent\textbf{Grounding, verification, and zoom.}
+Set-of-Mark prompting~\cite{yang2023mark} and PIVOT~\cite{nasiriany2024pivot} make VLM decisions spatially
+explicit, and navigation can be cast as visual question answering over depth-derived
+options~\cite{goetting2024navigation}. Verification and test-time computation improve embodied
+decisions~\cite{kwok2025robomonkey,dao2026direct,choi2026scale}, and calibrated uncertainty lets robots defer or
+keep exploring~\cite{ren2023robots,liang2024introspective,ren2024explore}. \ours re-checks an uncertain box on a
+magnified crop and tiles the frame when nothing is found, and spends these extra queries only when the evidence
+is weak.
 
-These methods share the useful principle that a map preserves information outside the current camera view, but differ in sensor suites, perception modules, learned components, and protocols. \ours is closest in spirit to map-based open-vocabulary navigation, but stores a small set of target hypotheses rather than a full semantic scene graph. Its local VLM answers target-presence and image-box queries; depth, pose, occupancy mapping, path feasibility, and discrete actions are computed outside the VLM. This distinction matters for our EB-Navigation results: the primary S2M setting uses simulator RGB-D and exact pose, not an RGB-only interface.
+\noindent\textbf{Geometry from images.}
+Learned reconstruction and depth priors recover geometry from
+RGB~\cite{wang2025vggt,murai2024mast,maggio2025vggt,wen2025foundationstereo,yang2024depthv2,lin2025depth}, and
+the choice of sensors can change the conclusions of embodied
+evaluations~\cite{corlito2026sensor,wang2025rethinking,cai2025navdp}. We therefore report \ours both with a depth
+sensor and with a monocular depth estimate.
 
-\noindent\textbf{Open-vocabulary 3D representations and semantic memory.}
-Open-vocabulary scene representations bridge language and geometry. ConceptGraphs builds open-vocabulary 3D scene graphs for perception and planning~\cite{gu2023conceptgraphs}; hierarchical scene graphs support language-grounded navigation~\cite{werby2024hierarchicalx}; and DualMap maintains online semantic maps in changing scenes~\cite{jiang2025dualmap}. Other work associates language features with neural 3D representations, including LangSplat~\cite{qin2023langsplat}, online language splatting~\cite{katragadda2025online}, and online semantic 3DGS~\cite{lee2026embodiedsplat}. Long-horizon embodied memory also keeps spatial or temporal information available after it leaves the image~\cite{yang2024scene,anwar2024remembr,ginting2025enter}.
-
-\ours adopts the minimal end of this spectrum. It does not claim a learned 3D semantic representation, persistent language-feature map, or scene-graph inference. Instead, a grounded 2D box is lifted with observed depth and pose to a metric hypothesis, nearby observations are fused, and inconsistent visible hypotheses lose evidence. This choice is tailored to short-horizon discrete navigation and memory-constrained local deployment; it also makes the method dependent on reliable depth and pose, as the estimated-depth robustness condition documents.
-
-\noindent\textbf{Visual grounding, verification, and test-time allocation.}
-VLM agents can benefit from making visual decisions easier to inspect. Set-of-Mark prompting~\cite{yang2023mark} and PIVOT~\cite{nasiriany2024pivot} use visual annotations or iterative prompts to elicit actionable grounding. End-to-end VLM navigation can recast spatial decisions as visual question answering over depth-derived alternatives~\cite{goetting2024navigation}. Other work studies verification, test-time sampling, and selective allocation of computation for embodied decisions~\cite{kwok2025robomonkey,dao2026direct,choi2026scale}. Uncertainty-aware robot systems use calibrated uncertainty to defer or request help~\cite{ren2023robots,liang2024introspective}, while exploration can continue until confidence is sufficient~\cite{ren2024explore}.
-
-Our tiled search and crop verification follow this general pattern, but make a deliberately limited operational choice: magnified image queries are used only when full-frame evidence is weak and no target hypothesis is committed. We fuse the resulting evidence geometrically across views rather than treating a single VLM response as a motion command. The component checks support this as an implementation dependency, especially for fusion, but do not establish tiled prompting, verification, or uncertainty gating as novel in isolation. Likewise, the raw grounding probes in the appendix are auxiliary diagnostics rather than a substitute for end-to-end navigation evaluation.
-
-\noindent\textbf{Geometry, depth, and the embodied sensing gap.}
-Dense geometry and odometry make metric navigation tractable, while visual reconstruction and stereo priors seek to recover geometry from images~\cite{wang2025vggt,murai2024mast,maggio2025vggt,wen2025foundationstereo,lin2025depth}. Persistent visual state and streaming reconstruction are also active directions~\cite{wang2025continuous,zhuo2025streamvggt}. Sensor availability is itself an experimental variable: studies of multimodal SLAM and embodied transfer show that changes in depth, pose, appearance, or actuation can alter conclusions~\cite{corlito2026sensor,wang2025rethinking,cai2025navdp}. Real-world visual navigation further adds traversability, calibration, and sim-to-real mismatch~\cite{mattamala2024wild,zhu2025robo,chhablani2025embodiedsplat}.
-
-We therefore state the information interface explicitly. In the main EB-Navigation condition, \ours uses simulator depth and exact odometry to construct an occupancy map; the benchmark-prompt baseline is forwarded RGB alone. The result is a recorded systems comparison, not an input-matched estimate of the causal benefit of our planner. The oracle geometry result is retained separately as a privileged-input diagnostic ceiling, and estimated-depth plus odometry-noise tests change only limited aspects of this interface.
-
-\noindent\textbf{Positioning.}
-Prior work motivates two complementary strategies: improve a general-purpose model until it can plan and act end-to-end, or constrain the model to a narrow perceptual role inside a classical controller. \ours belongs to the latter family. Its contribution is not to replace learned mapping, scene graphs, or end-to-end embodied policies; rather, it documents a concrete semantic-to-metric integration for local small VLMs, together with the input-matching, parser-validity, and test-set-reuse limitations needed to interpret the current evidence.
+\noindent\textbf{Concurrent work.}
+Li et al.~\cite{li2026structure} also run Qwen3-VL-4B zero-shot and treat its answers as evidence rather than
+actions, accumulating per-direction scores in a bird's-eye semantic field for vision-language navigation. \ours
+targets object navigation, lifts VLM boxes to metric 3D hypotheses, and is evaluated on the full official splits
+of two object-navigation benchmarks.

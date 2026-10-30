@@ -1,0 +1,10 @@
+# Qwen2.5-VL-3B EB-prompt baseline with length-bounded output schema (fix for the JSON truncation confound).
+# Bounds chosen on DEV outputs only (max observed: text fields 941 chars, 8 actions, action name 39 chars).
+# Job 1 and 2 are DEV gates; the queue stops before the TEST run (job 3) if either fails.
+# Line format:  MODEL_DIR | MAX_LEN | GPU_UTIL | command
+# 1) gate A: every DEV request that previously hit max_tokens must parse under the bounded schema
+models/Qwen2.5-VL-3B-Instruct-AWQ | 10240 | 0.66 | ~/miniforge3/envs/vlm/bin/python scripts/replay_truncated.py runs/diag/qwen25_eb_raw runs/diag/qwen25_eb_raw_rp105 --bounds '{"max_chars": 1500, "max_items": 20, "name_chars": 80}' --out runs/diag/replay_bounded.jsonl --require-all
+# 2) gate B: 20 DEV episodes with the bounded schema: no decode failure, no max_tokens hit, bounds respected
+models/Qwen2.5-VL-3B-Instruct-AWQ | 10240 | 0.66 | VLM_SCHEMA_BOUNDS='{"max_chars": 1500, "max_items": 20, "name_chars": 80}' EB_RAW_CAPTURE_DIR=runs/diag/qwen25_eb_bounded_gate ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen2.5-VL-3B-Instruct-AWQ --exp eb_bounded_gate --data data/eb_nav_dev --limit 4 --workers 1 && ~/miniforge3/envs/vlm/bin/python scripts/check_eb_outputs.py runs/eb_nav/dev/eb_Qwen2.5-VL-3B-Instruct-AWQ_eb_bounded_gate runs/diag/qwen25_eb_bounded_gate --gate
+# 3) TEST: full official 300 episodes, same server and settings as eb_official_r1 except the schema bounds
+models/Qwen2.5-VL-3B-Instruct-AWQ | 10240 | 0.66 | VLM_SCHEMA_BOUNDS='{"max_chars": 1500, "max_items": 20, "name_chars": 80}' EB_RAW_CAPTURE_DIR=runs/diag/qwen25_eb_bounded_test ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen2.5-VL-3B-Instruct-AWQ --exp eb_bounded_r1 --workers 1 && ~/miniforge3/envs/vlm/bin/python scripts/check_eb_outputs.py runs/eb_nav/test/eb_Qwen2.5-VL-3B-Instruct-AWQ_eb_bounded_r1 runs/diag/qwen25_eb_bounded_test

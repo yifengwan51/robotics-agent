@@ -7,14 +7,18 @@
 # This machine is shared with the user's desktop work (IDE, browser, SIL containers). To never starve it:
 #  - every process started here gets oom_score_adj 1000, so the kernel kills experiments before the user's apps;
 #  - a watchdog stops the running job and the model server when MemAvailable < LOW_MB and resumes the same job
-#    (resumable) only after MemAvailable has stayed above HIGH_MB for RESUME_S seconds.
+#    (resumable) only after MemAvailable has stayed above HIGH_MB for RESUME_S seconds; the same check runs before
+#    each job. HIGH_MB = LOW_MB + 2 GB: a job adds about 1 GB (renderer + runner) on top of the model server.
+# SKIP_JOBS=k resumes a queue after its first k jobs, keeping job numbers (and log names) unchanged.
 #   systemd-run --user --unit=robotics-queue --property=OOMScoreAdjust=1000 --working-directory=$PWD \
 #       /bin/bash -c 'bash scripts/run_queue.sh queues/test_main.txt >> logs/queue_test_main.log 2>&1'
 set -uo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 QUEUE="${1:?queue file}"
 LOW_MB="${LOW_MB:-5000}"
-HIGH_MB="${HIGH_MB:-10000}"
+HIGH_MB="${HIGH_MB:-7000}"
+LOG_PREFIX="${LOG_PREFIX:-queue}"  # per-job logs: logs/<prefix>_<n>.log
+SKIP_JOBS="${SKIP_JOBS:-0}"
 RESUME_S="${RESUME_S:-180}"
 MAX_PAUSES="${MAX_PAUSES:-30}"
 cd "$ROOT"
@@ -40,17 +44,23 @@ serve() {  # model_dir max_len gpu_util   (model_dir "none": job needs no model 
   local mm='{}'
   [[ "$name" == *Qwen3* ]] && mm='{"size": {"longest_edge": 409600, "shortest_edge": 3136}}'
   [[ "$name" == *2.5-VL* ]] && mm='{"max_pixels": 409600}'
-  local extra_args=""
+  # vLLM keeps a multimodal-processor cache in host RAM (it reached ~4 GB under S2M); it only skips re-processing
+  # an identical image, so outputs are unchanged without it. Off by default on this shared 32 GB machine.
+  local extra_args="${VLLM_SERVER_ARGS---mm-processor-cache-gb 0}"
   if [[ "$name" == "Qwen3-VL-4B-Instruct-AWQ" && "$2" == "8192" ]]; then
-    extra_args="--cpu-offload-gb 2"
+    extra_args="$extra_args --cpu-offload-gb 2"
   fi
-  GPU_UTIL="$3" MAX_LEN="$2" MAX_SEQS=8 EXTRA_ARGS="$extra_args" MM_KWARGS="$mm" nohup bash scripts/serve_vlm.sh "$1" > "logs/vllm_${name}_$2.log" 2>&1 &
+  # one server log per queue (LOG_PREFIX), appended, so a new queue never overwrites an earlier run's server log
+  local slog="logs/vllm_${name}_$2.log"
+  [ "$LOG_PREFIX" != "queue" ] && slog="logs/vllm_${name}_$2_${LOG_PREFIX}.log"
+  echo "===== $(date '+%F %T') serve $key" >> "$slog"
+  GPU_UTIL="$3" MAX_LEN="$2" MAX_SEQS=8 EXTRA_ARGS="$extra_args" MM_KWARGS="$mm" nohup bash scripts/serve_vlm.sh "$1" >> "$slog" 2>&1 &
   for _ in $(seq 1 90); do
     sleep 5
     if curl -s -m 2 http://127.0.0.1:8000/v1/models >/dev/null 2>&1; then cur="$key"; return 0; fi
     pgrep -f "[v]llm serve" >/dev/null || break
   done
-  log "vLLM failed to start for $key"; tail -3 "logs/vllm_${name}_$2.log"; return 1
+  log "vLLM failed to start for $key"; tail -3 "$slog"; return 1
 }
 
 kill_job() {  # pgid
@@ -72,7 +82,7 @@ run_job() {  # n maxlen cmd ; returns the job's exit status, re-running it after
   local n="$1" maxlen="$2" cmd="$3" pauses=0
   while true; do
     if ! serve "$model" "$maxlen" "$util"; then return 99; fi
-    VLM_MAX_MODEL_LEN="$maxlen" setsid bash -c "$cmd" >> "logs/queue_${n}.log" 2>&1 &
+    VLM_MAX_MODEL_LEN="$maxlen" setsid bash -c "$cmd" >> "logs/${LOG_PREFIX}_${n}.log" 2>&1 &
     local pid=$! low=0 dead=0
     while kill -0 "$pid" 2>/dev/null; do
       if [ "$(mem_avail_mb)" -lt "$LOW_MB" ]; then low=1; break; fi
@@ -102,15 +112,16 @@ n=0
 while IFS= read -r line || [ -n "$line" ]; do
   [[ -z "${line// }" || "$line" == \#* ]] && continue
   n=$((n + 1))
+  [ "$n" -le "$SKIP_JOBS" ] && { log "job $n: skipped (SKIP_JOBS=$SKIP_JOBS)"; continue; }
   IFS='|' read -r model maxlen util cmd <<< "$line"
   model="$(echo "$model" | xargs)"; maxlen="$(echo "$maxlen" | xargs)"; util="$(echo "$util" | xargs)"
   log "job $n: $(basename "$model") ctx=$maxlen util=$util :: $cmd"
   if [ "$(mem_avail_mb)" -lt "$HIGH_MB" ]; then log "waiting for memory before job $n"; wait_for_memory; fi
-  touch "logs/queue_${n}.log"
-  start=$(wc -l < "logs/queue_${n}.log" 2>/dev/null || echo 0)
+  touch "logs/${LOG_PREFIX}_${n}.log"
+  start=$(wc -l < "logs/${LOG_PREFIX}_${n}.log" 2>/dev/null || echo 0)
   run_job "$n" "$maxlen" "$cmd"
   rc=$?
-  log "job $n exit $rc :: $(tail -n +"$((start + 1))" "logs/queue_${n}.log" 2>/dev/null | grep -E "AVG\(subsets\)|'type': 'ALL'" | tail -1)"
+  log "job $n exit $rc :: $(tail -n +"$((start + 1))" "logs/${LOG_PREFIX}_${n}.log" 2>/dev/null | grep -E "AVG\(subsets\)|'type': 'ALL'" | tail -1)"
   if [ "$rc" -ne 0 ]; then
     log "FATAL: job $n failed (exit $rc); stopping queue"
     stop_server

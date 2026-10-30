@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\small
+\caption{RoboTHOR ObjectNav, full validation split (1800 episodes). Published rows are reported numbers, not
+reproductions; all agents use RGB-D and pose.}
+\label{tab:robothor}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llrr}
+\toprule
+Method & Models & SR (\%) & SPL (\%) \\
+\midrule
+CoW~\cite{gadre2022cows} & OWL-ViT B/16 & 27.5 & 17.2 \\
+SG-Nav~\cite{yin2024online} & LLaMA-7B & 47.3 & 23.7 \\
+CogNav~\cite{cao2024cognav} & GPT-4V & 54.6 & 24.3 \\
+STRIVE~\cite{zhu2025strive}$^\ast$ & Gemini-2.0-flash + detector & 68.1 & 36.3 \\
+\midrule
+\ours & Qwen3-VL-4B (4-bit, local) & 59.6 & 35.9 \\
+\bottomrule
+\end{tabular}}
+
+\vspace{0.25em}\footnotesize $^\ast$Evaluated in Habitat on the 1800 RoboTHOR episodes; the split is not named.
+\end{table}

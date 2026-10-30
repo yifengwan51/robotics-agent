@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Component and sensing checks on EB-Navigation test (Qwen3-VL-4B; one 300-episode run each). $\Delta$: paired
+difference from run~1 (pp, bootstrap 95\% CI). $p_\text{H}$: exact McNemar $p$, Holm-corrected over the nine
+variants.}
+\label{tab:abl}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrcc}
+\toprule
+Variant & Base & Comm. & Cplx. & Vis. & Long & Avg. & $\Delta$ (95\% CI) & $p_\text{H}$ \\
+\midrule
+\ours (run 1) & 88.3 & 85.0 & 88.3 & 56.7 & 80.0 & 79.7 & -- & -- \\
+\midrule
+w/o multi-view fusion & 78.3 & 70.0 & 75.0 & 41.7 & 80.0 & 69.0 & $-10.7$ [$-15.7$, $-6.0$] & $1.7{\times}10^{-4}$ \\
+w/o look-around & 95.0 & 91.7 & 91.7 & 71.7 & 48.3 & 79.7 & $+0.0$ [$-4.7$, $+4.7$] & 1 \\
+w/o exhaust-on-arrival & 88.3 & 85.0 & 88.3 & 46.7 & 83.3 & 78.3 & $-1.3$ [$-3.3$, $+0.7$] & 1 \\
+w/o negative evidence & 93.3 & 83.3 & 88.3 & 58.3 & 81.7 & 81.0 & $+1.3$ [$-2.0$, $+4.7$] & 1 \\
+w/o tiled search & 86.7 & 80.0 & 85.0 & 60.0 & 80.0 & 78.3 & $-1.3$ [$-5.0$, $+2.7$] & 1 \\
+w/o full-frame crop check & 85.0 & 80.0 & 83.3 & 51.7 & 83.3 & 76.7 & $-3.0$ [$-6.0$, $+0.0$] & 0.55 \\
+strongest-first selection & 90.0 & 85.0 & 90.0 & 55.0 & 83.3 & 80.7 & $+1.0$ [$-1.0$, $+3.0$] & 1 \\
+\midrule
+odometry noise (5\%, 2$^\circ$) & 91.7 & 81.7 & 90.0 & 50.0 & 83.3 & 79.3 & $-0.3$ [$-4.0$, $+3.3$] & 1 \\
+monocular depth & 50.0 & 51.7 & 50.0 & 28.3 & 48.3 & 45.7 & $-34.0$ [$-40.3$, $-27.7$] & $3.3{\times}10^{-20}$ \\
+\bottomrule
+\end{tabular}}
+\end{table}

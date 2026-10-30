@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\scriptsize
+\caption{Outcomes on EB-Navigation test (episodes of 300; bottom block: Long-horizon, of 60). First matching
+category; target visibility and distance are used for this analysis only.}
+\label{tab:taxonomy}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+Run & Success & \makecell{Never\\seen} & \makecell{Lost after\\seen} & \makecell{Approach\\fail} & \makecell{Near\\miss} & Blocked & \makecell{Oscil-\\lation} \\
+\midrule
+EB prompt, Qwen3 & 144 & 18 & 47 & 20 & 26 & 43 & 2 \\
+\ours, Qwen3 (run 1) & 239 & 0 & 24 & 15 & 9 & 0 & 13 \\
+EB prompt, Qwen2.5 (bounded) & 19 & 16 & 60 & 122 & 17 & 44 & 22 \\
+\ours, Qwen2.5 & 210 & 0 & 48 & 17 & 20 & 3 & 2 \\
+\ours, Qwen3, monocular depth & 137 & 1 & 63 & 36 & 43 & 3 & 17 \\
+\midrule
+EB prompt, Qwen3 & 7 & 18 & 7 & 9 & 4 & 14 & 1 \\
+\ours, Qwen3 (run 1) & 48 & 0 & 3 & 4 & 2 & 0 & 3 \\
+\ours w/o look-around & 29 & 21 & 1 & 6 & 0 & 0 & 3 \\
+\bottomrule
+\end{tabular}}
+\end{table}

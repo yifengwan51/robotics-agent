@@ -1,52 +1,53 @@
-\section{Problem Diagnosis and Audit Scope}
+\section{Why Small VLM Agents Fail}
 \label{sec:diagnosis}
 
-\noindent\textbf{Held-out development split.}
-EB-Navigation's five test subsets (Base, Common-sense, Complex, Visual-appearance, Long-horizon) use 60 iTHOR
-rooms. The project contains a development split built with the benchmark's own generator and instruction files on
-30 unused rooms (150 episodes; disjoint from the test rooms by construction). The reported formal result
-directories use the full official test set (300 episodes). We retain this split distinction because it is the
-intended model-selection protocol, while separately documenting that later component comparisons revisit test data.
+\noindent\textbf{Benchmark and baseline.}
+EB-Navigation~\cite{yang2025embodiedbench} places an agent in a single AI2-THOR room~\cite{kolve2017ai2thor}
+with a language instruction that identifies one object. Its test set has five subsets of 60 episodes: Base names
+the object category, Common-sense describes it through its use, Complex embeds it in a longer instruction,
+Visual describes only its appearance, and Long-horizon repeats Base with the agent turned away from the target.
+The agent has eight discrete actions (four 0.25\,m translations, two 90$^\circ$ turns, two 30$^\circ$ camera
+tilts), at most 20 steps, and succeeds when it comes within 1\,m of the target. The benchmark's own agent, which
+we call the \emph{EB prompt}, sends the current RGB image, the instruction, examples, and a text history of
+executed actions and their success messages, and parses a JSON reply into a plan of actions; a reply that cannot
+be parsed is replaced by a random action. All design decisions in this paper were made on a development split
+of 150 episodes built in the same way on 30 iTHOR rooms that the test set does not use. Every number reported
+here comes from the full official test set.
 
-\noindent\textbf{Audit boundary.}
-This section separates what the saved artifacts establish from what they do not. The runner records one JSON
-file per episode, including success, step count, planner-call statistics, and any runner exception. It also logs
-analysis-only target distance and visibility, but these values are never passed to S2M or the EB-prompt planner.
-The artifact audit cannot retroactively prove that every configuration choice was made only on development data;
-moreover, the test set has subsequently been used for several one-run component checks. We consequently treat
-the component table as diagnostic evidence and reserve claims about final model selection for an independent split.
+\noindent\textbf{Planning is not the bottleneck.}
+We give a geometric planner (\cref{sec:method}) the true target position and let it build its map from depth.
+It succeeds in 91.3\% of the 300 test episodes (93.3\% on each of the first four subsets, 83.3\% on
+Long-horizon). Within 20 steps, the rooms and the action set leave ample room for success once the agent knows
+where to go.
 
-\noindent\textbf{Recognition probe.}
-For every official test episode we render the start view and the three other 90$^\circ$ headings, and ask the
-VLM (i) whether the target is visible (the yes/no first-token probability) and (ii) for its bounding box. We then
-score against the simulator's instance boxes, which are used only for evaluation. The raw probe outputs are retained
-under \texttt{runs/grounding/}.  We preserve a simple, directly traceable IoU$\geq0.3$ hit/visible aggregation in
-\cref{app:dev-history}, but treat it as an auxiliary recognition diagnostic rather than as navigation evidence:
-candidate-verification records still lack a checked aggregate.
+\noindent\textbf{Single views are informative but unreliable.}
+For every test episode of the first four subsets (Long-horizon reuses the Base scenes) we render the start view
+and the three other 90$^\circ$ headings and ask the VLM for a
+presence probability and a box, scoring against the simulator's instance boxes (IoU${\ge}0.3$). Qwen3-VL-4B boxes
+the visible target in 78.7, 69.3, and 77.3\% of cases on Base, Common-sense, and Complex, and in 49.3\% on Visual;
+Qwen2.5-VL-3B does so in 40.0, 33.3, 37.3, and 18.7\% (75 visible instances per subset). One answer is thus
+useful evidence, but not something an agent should act on alone.
 
-\noindent\textbf{Oracle ceilings.}
-Given the true target position, our diagnostic geometric planner (\cref{sec:method}) succeeds in 93.3\% on Base,
-83.3\% on Long-horizon, and 91.3\% overall on the official 300-episode test set using the depth-built map. This is
-an oracle-target diagnostic, not a deployable planner, and is not compared causally with the VLM baselines.
+\input{sec/tab_taxonomy}
 
-\noindent\textbf{Appearance-only goals are recall-limited.}
-The Visual subset is consistently lower than the other S2M subsets in the saved main runs (50.0--56.7\% versus
-80.0--91.7\% in the named-object subsets). A targeted candidate-recall analysis remains pending. The auxiliary
-probe is consistent with lower start-view grounding on Visual, but it is not a causal failure attribution for an
-interactive navigation episode.
+\noindent\textbf{Prompted agents lose spatial state.}
+We assign every episode one outcome category from its logged trajectory with a first-match rule: never seen,
+near miss (final distance ${\le}1.5$\,m), lost after seen (out of view in the last five steps), blocked (at least
+30\% of actions rejected by the simulator), oscillation (at least three immediate reversals), and otherwise
+approach failure. The simulator's target visibility and distance are used only for this analysis. Of the 156
+episodes that the Qwen3 EB prompt fails, 47 lose a target that was in view, 43 are blocked by collisions, and 26
+end within 1.5\,m (\cref{tab:taxonomy}). In 18 Long-horizon episodes the agent never brings the target into
+view at all. These are failures of remembering and acting on spatial information, which a metric controller can
+hold explicitly.
 
-\noindent\textbf{Failure taxonomy.}
-Detailed error-taxonomy percentages are intentionally omitted: the analysis script exists, but no saved,
-cross-checked aggregate taxonomy is present in the result artifacts.
+\noindent\textbf{A 3B model also loops.}
+With Qwen2.5-VL-3B, 21.2\% of the EB prompt's planner calls return JSON that cannot be parsed; their token
+counts show that they run to the 4{,}096-token completion budget before the JSON closes. The benchmark's schema bounds neither the length of a string nor the number of actions, so
+greedy decoding can repeat a sentence or an action until the budget ends. When we add length limits to the schema,
+every output parses, yet the success rate stays the same (5.7 versus 6.3\%, $p{=}0.85$; \cref{app:qwen25}). The
+model still repeats itself, but now within the limits; its low score comes from its plans, not from the parser.
 
-\noindent\textbf{Baseline output validity.}
-The Qwen3 EB-prompt run contains no recorded JSON decoding errors. In contrast, Qwen2.5 EB-prompt records 768
-decode failures across 255/300 episodes. The benchmark parser substitutes a random action after a decode failure,
-so the 5.7\% number blends model planning failures with output-format failures. This motivates the parser caveat
-in \cref{tab:main}; a parser-instrumented rerun is needed before treating that row as a model comparison.
-
-\noindent\textbf{Implication for the method.}
-These observations motivate a narrow design goal rather than a claim that small VLMs cannot plan: preserve only
-the VLM decisions that are grounded in the current image, and make spatial memory, consistency checks, and action
-selection explicit. The next section specifies this controller. Its experimental comparison must nevertheless be
-read with the sensing and parser caveats above.
+\noindent\textbf{Design principles.}
+These observations lead to three principles. (i) Ask the VLM only what the current image can settle, with no
+transcript to extend. (ii) Keep the target, the map, and the search state in an explicit metric memory.
+(iii) Treat every answer as weak evidence and act on evidence aggregated over views.

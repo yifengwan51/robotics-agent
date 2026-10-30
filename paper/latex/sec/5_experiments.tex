@@ -1,103 +1,129 @@
 \section{Experiments}
 \label{sec:exp}
 
-\noindent\textbf{Setup.}
-\textit{Benchmarks.} EB-Navigation test set (5 subsets $\times$ 60 episodes, official environment, actions and
-success test), and the full RoboTHOR ObjectNav val split (1800 episodes, 15 apartments, 12 categories; LoCoBot with stochastic
-actuation, 30$^\circ$ turns, explicit Stop, 500 steps, success if a target-category object is visible within
-1\,m when stopping). Neither benchmark requires a license application.
-\textit{Models.} Qwen3-VL-4B and Qwen2.5-VL-3B (AWQ 4-bit) served with vLLM on one RTX~5060 (8\,GB), which they
-share with the simulator.
-\textit{Baselines.} The benchmark's own prompting and parser with the same local model (EB prompt), and
-published numbers for GPT-4o, open 7--8B models, and EMHO~\cite{lee2026emho}.
-\textit{Protocol.} \ours's configuration is frozen on the development split. The Qwen3-VL-4B S2M test run is
-repeated three times (300 episodes each); component and robustness checks are single 300-episode test runs.
-We report descriptive success rates only: the saved artifacts do not provide a pre-registered paired analysis or
-a defensible uncertainty model for all comparisons.
+\subsection{Setup}
+\textit{Benchmarks.} We evaluate on the full EB-Navigation test set (300 episodes, official environment,
+actions, and success test) and on the full RoboTHOR ObjectNav validation split~\cite{deitke2020robothor} (1800
+episodes in 15 apartments with 12 target categories). RoboTHOR uses a LoCoBot with stochastic actuation, 0.25\,m
+steps, 30$^\circ$ turns, at most 500 steps, and an explicit Stop that succeeds if a target-category object is
+visible within 1\,m.
+\textit{Models.} Qwen3-VL-4B-Instruct and Qwen2.5-VL-3B-Instruct, both 4-bit AWQ, served with
+vLLM~\cite{kwon2023vllm} at temperature 0 on one 8\,GB RTX~5060 that also renders the simulator.
+\textit{Baseline.} The EB prompt (\cref{sec:diagnosis}) with the same local model, which isolates the interface
+from the model.
+\textit{Protocol.} The configuration of \ours was frozen on the development split before any test run. The main
+Qwen3 configuration was run three times on the test set; the runs differ only through nondeterminism in batched
+GPU inference. Component and sensing variants are single runs. Because all runs use the same 300 episodes, we
+report paired statistics: episode-level bootstrap 95\% confidence intervals and exact two-sided McNemar tests,
+with a Holm correction over the nine variants of \cref{tab:abl}. These variants reuse the test set, so their
+$p$-values are descriptive rather than confirmatory.
 
-\noindent\textbf{Metrics and result integrity.}
-For EB-Navigation, SR is the fraction of episodes satisfying the benchmark success condition; every formal row
-contains five subsets of 60 episodes. For RoboTHOR, we report the runner's saved SR and SPL over 1800 episodes.
-The evaluation runner writes one record per episode, then derives each summary from those records. We use the
-saved summaries as the source of the tables, and distinguish runner exceptions from output-format errors: a
-completed episode with a JSON fallback is not a runner exception. This distinction matters for the Qwen2.5
-baseline. We do not report confidence intervals, paired tests, or significance claims because the available
-artifacts do not provide a prespecified inferential protocol for every comparison.
+\input{sec/tab_main}
 
-\noindent\textbf{Comparison scope.}
-The EB-prompt planner uses the benchmark prompt and parser with the same local model, but its adapter forwards an
-RGB image only. S2M uses the same RGB image plus simulator depth and exact pose to build its map. Consequently,
-the ``EB prompt'' rows answer a practical systems question---how the two available controllers performed in their
-recorded configurations---rather than isolating a planner contribution under matched sensing. The oracle row is
-kept only as a diagnostic ceiling and is not compared to either learned controller in the tables.
+\subsection{Main results}
+\label{sec:main}
+\Cref{tab:main} gives success per subset. With Qwen3-VL-4B, \ours succeeds in 79.6\% of the episodes (95\% CI
+[75.1, 83.8]) against 48.0\% for the EB prompt, a paired gain of $+31.6$\,pp (CI [$+24.9$, $+38.1$]). Each run
+is significant on its own: run~1 solves 114 episodes that the EB prompt fails and fails 19 that it solves
+($p=1.1{\times}10^{-17}$; runs 2 and 3: 115/22 and 118/22, $p{<}10^{-15}$). The gain is positive on every subset
+and largest on Long-horizon, from 11.7 to 82.2\%. The three runs agree within a
+point (79.7, 79.0, 80.0\%), and runs 2 and 3 differ from run~1 on 8 and 15 episodes. With Qwen2.5-VL-3B, \ours reaches
+70.0\% against 6.3\% for the EB prompt with length-bounded outputs ($+63.7$\,pp, 192 episodes gained and 1 lost).
+Moving from the 4B to the 3B model costs \ours 9.6\,pp but costs the EB prompt 41.7\,pp: the interface makes the
+agent far less sensitive to the strength of the model.
 
-\noindent\textbf{Main results.}
-\Cref{tab:main} reports all five official subsets. Qwen3-VL-4B S2M obtains 79.7, 79.0, and 80.0\% across
-the three runs (mean 79.6\%), versus 48.0\% for the EB-prompt run. This is a descriptive comparison rather
-than an algorithm-only attribution: S2M consumes RGB-D and pose whereas the EB prompt is passed RGB only.
-For Qwen2.5-VL-3B, S2M reaches 70.0\%, while the EB-prompt run reaches 5.7\%; the latter has 768 JSON decoding
-failures across 255 of 300 episodes and must not be used as clean evidence of an algorithmic gap.
+For context, the benchmark paper reports 57.7\% for GPT-4o, 20.3\% for Qwen2.5-VL-7B, and 29.3\% for
+InternVL3-8B~\cite{yang2025embodiedbench}. A tool library lets an 8B model reach 80\%~\cite{zhou2026enabling},
+and reinforcement fine-tuning with a privileged bird's-eye view brings Qwen2.5-VL-3B to
+72.3\%~\cite{wang2025seenav}. These numbers come from different inputs, evaluation subsets, or models and are not
+controlled comparisons, but they place a training-free 3--4B agent that receives no target information in the
+range of much larger or fine-tuned systems.
 
-The three Qwen3 runs are close in aggregate (a 1.0-point range), but their Visual scores vary from 50.0 to
-56.7\%. The mean row is therefore a compact stability summary, not a replacement for the individual runs. The
-Long-horizon improvement relative to the RGB-only prompt is large in these artifacts, but it is especially exposed
-to the sensing mismatch: persistent metric state is precisely the information unavailable to the prompt baseline.
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig/trajectories.pdf}
+\caption{Top-down trajectories of the EB prompt (orange) and \ours (blue) with Qwen3-VL-4B on three test episodes;
+gray cells are reachable floor, and dots are the hypotheses of \ours at the end of the episode, sized by evidence.
+(a)~\textit{Pot}, Long-horizon: the EB prompt never brings the target into view in 20 steps; \ours turns twice,
+commits to a hypothesis 0.1\,m from the pot, and succeeds in 11 steps. (b)~\textit{Kettle}, Base: all 20 moves of
+the EB prompt are rejected at the start; \ours plans around the obstacle after one rejected move and succeeds in 18
+steps. (c)~A Visual failure of \ours (``tall, cylindrical container with a clean white finish''): its five
+hypotheses lie 4.1--7.9\,m from the target, while the EB prompt succeeds. The target is drawn for illustration
+only; neither agent receives it.}
+\label{fig:traj}
+\end{figure*}
 
-\noindent\textbf{Ablations.}
-\Cref{tab:abl} removes one component at a time: negative evidence, multi-view fusion, tiled search, crop
-verification, look-around, exhaust-on-arrival, and the search index. Removing multi-view fusion gives the
-largest observed drop (79.7\% to 69.0\% in these single-run checks). Other differences, including the slightly
-higher scores of some ablations, are not evidence of a reliable benefit or harm without independent reruns.
+\noindent\textbf{Where the gain comes from.}
+\Cref{tab:taxonomy} breaks the episodes down by outcome, and \cref{fig:traj} shows typical cases. The two failure modes that a metric controller should
+remove disappear. No episode of \ours fails without ever seeing the target (18 for the EB prompt), because the
+agent completes a look-around before searching, and none is blocked by collisions (43 for the EB prompt),
+because motions are planned on the occupancy map. \ours also loses a target it has seen half as often (24 versus
+47) and ends near the target a third as often (9 versus 26), because the target position stays in memory when it
+leaves the view. On Long-horizon episodes, \ours succeeds in 48 of 60 where the EB prompt succeeds in 7.
 
-The ablations are most useful for identifying implementation dependencies. The fusion switch is the clearest
-example: it replaces persistent cross-view hypotheses with the latest single-view detection, and its lower score
-is consistent with a benefit from retaining spatial evidence. In contrast, the no-negative and strongest-first
-rows score slightly above the reference in one run. Such reversals are expected under finite test variation and
-test-set reuse; they should guide follow-up experiments rather than be promoted as counterintuitive discoveries.
+\input{sec/tab_abl}
 
-\noindent\textbf{Robustness.}
-\Cref{tab:robust} distinguishes simulator depth from a monocular depth estimate. Replacing depth with the
-estimated signal lowers SR to 45.7\%, while injected 5\% translational and 2$^\circ$ rotational odometry noise
-gives 79.3\%. These checks do not remove the RGB-D/pose input disparity with the RGB-only baseline.
+\subsection{Components}
+\label{sec:abl}
+\Cref{tab:abl} removes one component at a time. Disabling multi-view fusion, so that each detection replaces the
+earlier hypotheses, lowers success from 79.7 to 69.0\% ($-10.7$\,pp, CI [$-15.7$, $-6.0$]; 44 episodes lost and
+12 gained), whereas the repeated reference runs lose 5 and 7 episodes relative to run~1. Among the seven
+component variants it is the only one that survives the Holm correction. The loss is spread over the four subsets in which the agent starts facing the target
+and is absent on Long-horizon. This is the central mechanism of \ours: single answers of a 4B model are too
+unreliable to act on, and fusing them across views recovers targets that no single view gives with confidence.
 
-The depth condition is deliberately a stress test of the metric interface: the RGB image and semantic queries are
-unchanged, while the depth signal is replaced by the configured monocular estimate. The large drop indicates that
-the reported primary result should be read as an RGB-D navigation result, not as evidence that the same controller
-will retain its performance with arbitrary monocular depth. The odometry perturbation is smaller in this one run,
-but it is not an end-to-end real-robot noise model.
+Removing the look-around leaves the average unchanged but trades one subset against the others. Long-horizon
+success falls by 31.7\,pp (22 versus 3 discordant episodes), because the agent no longer turns to find a target
+behind it, while the other subsets gain 3.3--15.0\,pp, consistent with the steps that the turn no longer costs.
+Removing exhaust-on-arrival lowers Visual by 10.0\,pp (6 versus 0 discordant episodes) and changes no other
+subset by more than 3.3\,pp, consistent with appearance-only goals producing look-alikes that must be ruled out
+once visited.
+Negative evidence, tiled search, the full-frame crop check, and the probability-to-cost index each change success
+by $-3.0$ to $+1.3$\,pp, with intervals that include zero, and strongest-first selection does as well as the
+index. We keep these components because they cost no environment steps, but we do not claim a measured benefit
+for them in EB-Navigation's single-room scenes, where competing hypotheses are rare.
 
-\noindent\textbf{RoboTHOR ObjectNav.}
-\Cref{tab:robothor} gives an additional full-split ObjectNav result: 59.6\% SR and 35.9\% SPL over 1800
-episodes, with 17 logged execution errors. The published rows are retained as reported reference points, not as
-newly reproduced comparisons~\cite{yin2024online,cao2024cognav,gadre2022cows}.
+\subsection{Sensing}
+\label{sec:sensing}
+\ours uses depth and odometry, while the EB prompt receives RGB and a text history of its actions. We examine
+the two extra inputs separately (\cref{tab:abl}, bottom).
 
-RoboTHOR supplies a complementary check because its agent must choose an explicit Stop action rather than relying
-on EB-Navigation's automatic termination. The 17 recorded errors are retained in the saved summary rather than
-silently removed. We do not attribute differences from the published rows to any single design choice because
-their implementations, perception stacks, and compute settings were not reproduced in this project.
+\noindent\textbf{Pose.}
+In EB-Navigation a rejected move leaves the agent in place and turns and tilts are exact. Dead reckoning from the
+executed actions and their success flags, the same feedback the EB prompt receives, therefore reproduces heading
+and tilt exactly and position up to the simulator's 0.1\,m grid snapping: on the logged test trajectories the mean
+position error is 0.10\,m and the median error at the end of an episode is 0.15\,m. Injecting zero-mean odometry
+noise of 5\% per translation and 2$^\circ$ per turn, accumulated over the episode, leaves success at 79.3\%
+($-0.3$\,pp). Pose is not what separates the two agents.
 
-\noindent\textbf{Efficiency and context.}
-The saved episode records support descriptive call counts but not a matched token accounting: Qwen3 S2M uses
-52.4--53.0 VLM calls per episode across its three runs, and Qwen2.5 S2M uses 98.3; token counts were not logged
-for S2M. For the EB prompt, the records report means of 8.21 calls, 28,766 prompt tokens, and 2,425 completion
-tokens per Qwen3 episode, and 12.10 calls, 43,469 prompt tokens, and 12,280 completion tokens per Qwen2.5 episode.
-The server context limits (Qwen3 EB 8192 / S2M 2048; Qwen2.5 EB 10240 / S2M 2048) are configuration ceilings,
-not measured token consumption.
+\noindent\textbf{Depth.}
+Replacing simulator depth with a monocular estimate (Depth Anything V2 Metric-Indoor-Small~\cite{yang2024depthv2},
+one scale calibrated on development frames) lowers success to 45.7\% ($-34.0$\,pp). The failures move after
+recognition: near misses rise from 9 to 43 and lost-after-seen episodes from 24 to 63, while never-seen episodes
+go only from 0 to 1, i.e., targets are found but placed at the wrong distance. Compared with the EB prompt on the same
+episodes, this agent still gains $+36.7$\,pp on Long-horizon (24 versus 2 discordant episodes,
+$p=1.0{\times}10^{-5}$) and loses 10.0--15.0\,pp on the other subsets ($-2.3$\,pp overall, $p=0.6$). The benefit
+of turning and remembering does not depend on metric depth quality; the benefit on targets already in view does,
+so recovering it without a depth sensor requires better RGB-only geometry.
 
-The call-count contrast should also be interpreted carefully. S2M makes several narrow semantic queries per
-environment step, while the EB prompt makes fewer, longer structured planning requests. Calls, tokens, and wall
-time are thus different cost measures. A fair efficiency comparison requires request-level tokens and elapsed time
-under a shared serving configuration; this information is only partially available in the current artifacts.
+\subsection{Remaining gap: appearance-only goals}
+\label{sec:gap}
+Visual is the weakest subset in every exact-depth run of \ours (50.0--56.7\%) and accounts for about two thirds
+of the gap to the oracle. The perception logs locate the failure in recognition. A detection or hypothesis comes within 0.5\,m of the
+true target in 93--98\% of the episodes of every other subset but in only 65--67\% of Visual episodes, and over the
+three runs 47 of the 84 Visual failures never produce such a candidate (\cref{app:stats}). Fusion helps where
+recognition works at all, raising the chance of a close candidate over an episode well above the 69--79\% of a
+single named-target view, but when the 4B model cannot match a description such as ``rectangular yellowish
+object with a soft and smooth surface'' to the right object, there is nothing to fuse.
 
-\noindent\textbf{Complete record.}
-The appendix preserves every verified formal subset result, all component rows, development history, grounding
-probe aggregates, RoboTHOR category scores, and the legacy/incomplete artifacts that are excluded from comparison
-(\cref{app:record}). This separation keeps the main argument legible without silently dropping negative,
-preliminary, privileged-input, or configuration-incomparable evidence.
+\input{sec/tab_robothor}
 
-\noindent\textbf{Takeaway.}
-The evidence supports a bounded systems conclusion: with the recorded RGB-D and pose interface, a local 3--4B VLM
-can be embedded in a stateful semantic-to-metric controller that completes the listed benchmark runs. It does not
-yet isolate the contribution of the planner from its sensing interface, establish statistical significance for the
-single-run checks, or validate a final configuration on an untouched test split. Those distinctions are part of the
-result, not qualifications to be deferred outside the paper.
+\subsection{RoboTHOR ObjectNav}
+\label{sec:robothor}
+\Cref{tab:robothor} reports the full validation split. \ours reaches 59.6\% SR (95\% CI [57.3, 61.9]) and 35.9\% SPL
+[34.1, 37.6]; the 17 episodes with simulator errors count as failures. It is above CoW~\cite{gadre2022cows},
+SG-Nav~\cite{yin2024online}, and CogNav~\cite{cao2024cognav}, which use an OWL-ViT detector, LLaMA-7B, and GPT-4V,
+and below STRIVE~\cite{zhu2025strive}, which pairs Gemini-2.0-flash with a dedicated open-vocabulary detector;
+its SPL is close to STRIVE's. These agents also use RGB-D and pose, so the sensing is matched here, but the rows
+are published numbers rather than reproductions. Per category, success ranges from 88.0\% for basketballs to
+25.3\% for vases (\cref{app:robothor}).

@@ -2,7 +2,9 @@
 \documentclass[10pt,twocolumn,letterpaper]{article}
 \usepackage[review]{cvpr}
 \input{preamble}
-\usepackage{booktabs,amsmath,amssymb,graphicx,xspace}
+\usepackage{booktabs,amsmath,amssymb,graphicx,xspace,makecell}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,fit,backgrounds}
 \definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
 \usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
 
@@ -11,7 +13,7 @@
 \def\confYear{2027}
 \newcommand{\ours}{S2M\xspace}
 
-\title{Small VLMs Know What, Not Where:\\Semantic-to-Metric Grounding for Embodied Navigation with Local Models}
+\title{Ask Small VLMs Only What They Can See:\\Semantic-to-Metric Navigation with Local Models}
 \author{Anonymous submission}
 
 \begin{document}
@@ -22,13 +24,13 @@
 \input{sec/3_diagnosis}
 \input{sec/4_method}
 \input{sec/5_experiments}
-\input{sec/tables}
 \input{sec/6_conclusion}
-\appendix
-\input{sec/appendix}
 {
     \small
     \bibliographystyle{ieeenat_fullname}
     \bibliography{main}
 }
+\clearpage
+\appendix
+\input{sec/appendix}
 \end{document}

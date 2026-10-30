@@ -1,0 +1,12 @@
+# RGB-only S2M on EB-Navigation DEV (150 episodes): monocular depth + pose from action feedback, frozen S2M v5 config.
+# Picks the depth model on DEV; the TEST run is queued separately after inspecting these results.
+# Line format:  MODEL_DIR | MAX_LEN | GPU_UTIL | command
+# 1) calibrate DA-V2 Metric-Indoor-Base on the 60 DEV frames (own calibration file) and probe its error
+none | 0 | 0 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python scripts/calib_depth.py && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python scripts/depth_scale_probe.py; rc=$?; bash scripts/depth_server.sh stop; exit $rc
+# 2) pose from actions, simulator depth: isolates the pose change
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp gt_depth_odom_actions --data data/eb_nav_dev --workers 2 --odom actions
+# 3) RGB-only with DA-V2 Small (the depth model of the depth_est_r1 TEST run)
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Small && /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_small --data data/eb_nav_dev --workers 2 --depth est --odom actions
+# 4) RGB-only with DA-V2 Base
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_base --data data/eb_nav_dev --workers 2 --depth est --odom actions
+none | 0 | 0 | bash scripts/depth_server.sh stop

@@ -3,6 +3,7 @@
 Matches embodiedbench.planner.remote_model.RemoteModel._call_qwen7b: data-URL images relabelled as jpeg
 (convert_format_2gemini), JSON-schema guided decoding with EB's own schema, temperature 0.
 """
+import json
 import os
 import re
 import threading
@@ -13,6 +14,44 @@ from openai import OpenAI
 DEFAULT_BASE_URL = os.environ.get("VLM_BASE_URL", "http://127.0.0.1:8000/v1")
 MAX_TOKENS = int(os.environ.get("VLM_MAX_TOKENS", "4096"))  # = EB's max_completion_tokens
 FAILED_OUTPUT = "<<model call failed>>"  # not valid JSON -> EB planner falls back to a random action
+# extra sampling params sent with every request, e.g. '{"repetition_penalty": 1.05}' (default: none)
+EXTRA_BODY = json.loads(os.environ.get("VLM_EXTRA_BODY") or "{}")
+# optional length bounds added to EB's own output schema, '{"max_chars": 1500, "max_items": 20, "name_chars": 80}':
+# guided decoding then closes every string and the action list, so a greedy repetition loop can no longer run
+# into max_tokens and leave unparseable JSON (default: EB's schema unchanged)
+SCHEMA_BOUNDS = json.loads(os.environ.get("VLM_SCHEMA_BOUNDS") or "{}")
+
+
+def bounded_schema(schema, max_chars, max_items, name_chars):
+    s = json.loads(json.dumps(schema))
+    for key, prop in s["properties"].items():
+        if prop.get("type") == "string":
+            prop["maxLength"] = max_chars
+        elif prop.get("type") == "array":
+            prop.update(minItems=1, maxItems=max_items)
+            item = prop["items"]["properties"]
+            if item.get("action_name", {}).get("type") == "string":
+                item["action_name"]["maxLength"] = name_chars
+    return s
+
+
+# diagnostics: append every raw response to $EB_RAW_CAPTURE_DIR/responses_<pid>.jsonl, and the full request of
+# every response cut off at max_tokens to truncated_requests_<pid>.jsonl (for offline replay)
+CAPTURE_DIR = os.environ.get("EB_RAW_CAPTURE_DIR", "")
+
+
+def _capture(model_name, max_tokens, messages, fmt, resp):
+    os.makedirs(CAPTURE_DIR, exist_ok=True)
+    choice, usage = resp.choices[0], resp.usage
+    record = {"model": model_name, "extra_body": EXTRA_BODY, "finish_reason": choice.finish_reason,
+              "max_tokens": max_tokens, "prompt_tokens": getattr(usage, "prompt_tokens", None),
+              "completion_tokens": getattr(usage, "completion_tokens", None), "raw": choice.message.content}
+    with open(os.path.join(CAPTURE_DIR, f"responses_{os.getpid()}.jsonl"), "a", encoding="utf-8") as fp:
+        fp.write(json.dumps(record, ensure_ascii=False) + "\n")
+    if choice.finish_reason == "length":
+        with open(os.path.join(CAPTURE_DIR, f"truncated_requests_{os.getpid()}.jsonl"), "a", encoding="utf-8") as fp:
+            fp.write(json.dumps({"model": model_name, "max_tokens": max_tokens, "messages": messages,
+                                 "response_format": fmt}) + "\n")
 
 
 def _relabel_images(messages):
@@ -71,6 +110,8 @@ class LocalOpenAIModel:
         self.task_type = task_type
         self.retries = retries
         self.schema = llm_generation_guide if language_only else vlm_generation_guide
+        if SCHEMA_BOUNDS:
+            self.schema = bounded_schema(self.schema, **SCHEMA_BOUNDS)
         self.client = OpenAI(base_url=base_url or DEFAULT_BASE_URL, api_key="EMPTY", timeout=180)
 
     def respond(self, message_history):
@@ -82,8 +123,10 @@ class LocalOpenAIModel:
             try:
                 resp = self.client.chat.completions.create(
                     model=self.model_name, messages=messages, response_format=fmt,
-                    temperature=0, max_tokens=max_tokens)
+                    temperature=0, max_tokens=max_tokens, extra_body=EXTRA_BODY or None)
                 STATS.add(time.time() - t0, resp.usage)
+                if CAPTURE_DIR:
+                    _capture(self.model_name, max_tokens, messages, fmt, resp)
                 return resp.choices[0].message.content
             except Exception as e:  # server restart, timeout, context overflow
                 STATS.add(time.time() - t0, failed=True)

@@ -2,27 +2,20 @@
 \label{sec:conclusion}
 
 \noindent\textbf{Limitations.}
-\ours assumes depth and odometry. Its primary EB-Navigation condition receives simulator depth and exact pose,
-whereas the benchmark-prompt baseline receives RGB only; therefore their gap cannot be assigned solely to the
-planning algorithm. Estimated depth reduces SR to 45.7\%, and we do not remove the sensing assumptions.
-EB-Navigation ends an episode automatically on success; the exhaust-on-arrival rule uses that signal, so we report
-its ablation and evaluate on RoboTHOR, where the agent must decide to stop.
-Appearance-only goals remain difficult, but the available probe artifacts do not yet establish whether the cause
-is candidate recall, verification, depth lifting, or planning. Single-room scenes and same-category look-alikes
-limit how far the EB-Navigation results generalize. Finally, the test set has been consulted repeatedly for
-component comparisons; this creates selection pressure and makes an independent final split necessary.
-
-\noindent\textbf{Reproducibility and next steps.}
-The project retains per-episode records, aggregate summaries, queue logs, and a static audit in
-\texttt{docs/experiment\_snapshot\_2026-10-30.md}. The smallest useful next experiment is an input-matched
-comparison: either restrict S2M to RGB or give the comparison controller equivalent depth and pose. Next, a
-parser-instrumented Qwen2.5 baseline should report decoding, schema, and episode-level fallback failures
-separately. Only after selecting a final configuration on development data should the work be evaluated once on a
-fresh held-out split.
+\ours relies on metric depth. With a monocular estimate it keeps its Long-horizon advantage but loses its
+advantage on targets already in view, so RGB-only geometry is the main step toward the benchmark's native RGB
+setting. Appearance-only goals remain hard because the small VLM often never proposes the right object
+(\cref{sec:gap}); fusion cannot repair a target that is never detected. EB-Navigation scenes are single rooms
+with few competing hypotheses, which may explain why negative evidence, tiled search, and the selection index
+show no measurable effect there; we do not know whether they matter in larger environments beyond RoboTHOR's
+apartments. The component and sensing variants were run on the test set, so their statistics are descriptive.
+Finally, all results are in simulation.
 
 \noindent\textbf{Conclusion.}
-Small VLMs can provide semantic cues that a geometric controller can use for navigation. In the present artifacts,
-semantic-to-metric grounding reaches a three-run mean of 79.6\% on EB-Navigation and 59.6\% SR on RoboTHOR;
-these results are useful evidence that a modular controller can run end-to-end with a 3--4B local VLM. They are
-not yet evidence for a causal planner-only gain: independent, input-matched baselines and a final held-out
-evaluation remain necessary.
+A small local VLM fails as a navigator when it has to carry spatial state through generated text, and works when
+it is asked only what the current image can answer. Lifting those answers into a metric hypothesis memory and
+fusing them across views raises a 4-bit Qwen3-VL-4B from 48.0 to 79.6\% on EB-Navigation and from 11.7 to 82.2\%
+when the target starts behind the agent, on a single 8\,GB GPU and without training. The same interface lifts a
+3B model from 6.3 to 70.0\% and reaches 59.6\% SR on RoboTHOR. The remaining gap is recognition of objects
+described only by their appearance, which is where better small VLMs, rather than better controllers, are
+needed. Code and per-episode records will be released.

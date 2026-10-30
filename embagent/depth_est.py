@@ -11,14 +11,16 @@ import io
 import json
 import os
 import threading
+import urllib.error
 import urllib.request
 
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PORT = int(os.environ.get("DEPTH_PORT", "8010"))
-MODEL = os.path.join(ROOT, "models", "DA2-Metric-Indoor-Small")
-CALIB = os.path.join(ROOT, "data", "depth_calib.json")
+# DEPTH_MODEL selects the checkpoint under models/ (server side); DEPTH_CALIB the DEV calibration file (client side)
+MODEL = os.path.join(ROOT, "models", os.environ.get("DEPTH_MODEL", "DA2-Metric-Indoor-Small"))
+CALIB = os.environ.get("DEPTH_CALIB") or os.path.join(ROOT, "data", "depth_calib.json")
 
 
 def serve(device="cpu", threads=8):
@@ -34,6 +36,13 @@ def serve(device="cpu", threads=8):
     lock = threading.Lock()
 
     class Handler(BaseHTTPRequestHandler):
+        def do_GET(self):  # identity: which checkpoint this server runs
+            body = os.path.basename(MODEL).encode()
+            self.send_response(200)
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
         def do_POST(self):
             n = int(self.headers["Content-Length"])
             img = Image.open(io.BytesIO(self.rfile.read(n))).convert("RGB")
@@ -67,6 +76,15 @@ def estimate_raw(rgb, url=None):
     req = urllib.request.Request(url or f"http://127.0.0.1:{PORT}/", data=buf.getvalue(), method="POST")
     with urllib.request.urlopen(req, timeout=120) as r:
         return np.load(io.BytesIO(r.read()))
+
+
+def served_model(url=None):
+    """Checkpoint name reported by the running server; servers started before the GET endpoint existed ran Small."""
+    try:
+        with urllib.request.urlopen(url or f"http://127.0.0.1:{PORT}/", timeout=10) as r:
+            return r.read().decode()
+    except urllib.error.HTTPError:
+        return "DA2-Metric-Indoor-Small"
 
 
 _calib = None

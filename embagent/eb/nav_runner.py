@@ -20,6 +20,25 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 EVAL_SETS = ["base", "common_sense", "complex_instruction", "visual_appearance", "long_horizon"]
 
 
+def _depth_model():
+    """Name of the model the running depth server serves (recorded so a run cannot silently mix depth models)."""
+    from embagent.depth_est import served_model
+    return served_model()
+
+
+# settings that change episode outcomes, normalized for comparison (older args.json files lack some keys)
+_RESULT_KEYS = {
+    "planner": lambda a: a.get("planner"), "model": lambda a: a.get("model"), "n_shots": lambda a: a.get("n_shots"),
+    "resolution": lambda a: a.get("resolution"), "data": lambda a: os.path.abspath(a["data"]) if a.get("data") else "",
+    "s2m": lambda a: json.loads(a.get("s2m") or "{}"), "depth": lambda a: a.get("depth", "gt"),
+    "odom_noise": lambda a: [float(x) for x in a.get("odom_noise", (0.0, 0.0))], "repeat": lambda a: a.get("repeat", 0),
+    "vlm_extra_body": lambda a: a.get("vlm_extra_body", {}), "vlm_max_tokens": lambda a: a.get("vlm_max_tokens", 4096),
+    "vlm_schema_bounds": lambda a: a.get("vlm_schema_bounds", {}), "odom": lambda a: a.get("odom", "sim"),
+    "depth_model": lambda a: a.get("depth_model") or ("DA2-Metric-Indoor-Small" if a.get("depth") == "est" else ""),
+    "depth_calib": lambda a: a.get("depth_calib") or ("depth_calib.json" if a.get("depth") == "est" else ""),
+}
+
+
 def _record_path(out_dir, eval_set, idx):
     return os.path.join(out_dir, eval_set, f"episode_{idx + 1}.json")
 
@@ -56,12 +75,41 @@ class Sensors:
     (sigma_t * |translation| in metres, sigma_r degrees per rotation), so errors accumulate like real wheel/VO
     odometry. The evaluation (success, logged distance) always uses the true simulator state."""
 
-    def __init__(self, depth="gt", odom_noise=(0.0, 0.0), seed=0):
+    # odom="actions": pose by dead reckoning from the executed action and its success flag only (the same feedback
+    # the EB-prompt baseline gets), starting from the episode's start pose; the simulator's 0.1 m grid snapping is
+    # not modelled, so the estimate drifts by up to one cell per translation
+    MOVES = {0: (1, 0), 1: (-1, 0), 2: (0, 1), 3: (0, -1)}  # action id -> (forward, right) in 0.25 m steps
+
+    def __init__(self, depth="gt", odom_noise=(0.0, 0.0), seed=0, odom="sim"):
         import numpy as np
 
-        self.depth, (self.sig_t, self.sig_r) = depth, odom_noise
+        self.depth, (self.sig_t, self.sig_r), self.odom = depth, odom_noise, odom
+        assert not (odom == "actions" and (self.sig_t > 0 or self.sig_r > 0)), "--odom actions excludes --odom-noise"
         self.rng = np.random.default_rng(seed)
         self.true_prev = self.est = None
+        self.last = None  # (action, success) of the step that produced the next observation
+
+    def record(self, action, ok):
+        self.last = (action, ok)
+
+    def _dead_reckon(self, t):
+        import math
+
+        if self.est is None:
+            self.est = dict(t)
+        elif self.last is not None and self.last[1]:
+            a, e = self.last[0], self.est
+            if a in self.MOVES:
+                fwd, rgt = (0.25 * v for v in self.MOVES[a])
+                y = math.radians(e["yaw"])
+                e["x"] += fwd * math.sin(y) + rgt * math.cos(y)
+                e["z"] += fwd * math.cos(y) - rgt * math.sin(y)
+            elif a in (4, 5):
+                e["yaw"] = (e["yaw"] + (90 if a == 4 else -90)) % 360
+            elif a in (6, 7):
+                e["horizon"] += -30 if a == 6 else 30
+        self.last = None
+        return dict(self.est)
 
     def __call__(self, obs):
         import math
@@ -69,6 +117,10 @@ class Sensors:
         if self.depth == "est":
             from embagent.depth_est import estimate
             obs["depth"] = estimate(obs["rgb"])
+        if self.odom == "actions":
+            obs["true_pose"] = obs["pose"]
+            obs["pose"] = self._dead_reckon(obs["pose"])
+            return obs
         if self.sig_t > 0 or self.sig_r > 0:
             t = obs["pose"]
             if self.est is None:
@@ -117,6 +169,8 @@ def run_episode(env, planner, max_retries_per_call=3, sensors=None):
             if not isinstance(a, int) or not 0 <= a < len(env.language_skill_set):
                 a = int(np.random.randint(len(env.language_skill_set)))  # same fallback as the EB env
             _, _, done, info = env.step(a, reasoning, 1 if i == 0 else 0)
+            if hasattr(sense, "record"):
+                sense.record(a, bool(info["last_action_success"]))
             obs = sense(_obs(env, env._current_step, oracle))
             planner.observe(info, obs)
             traj.append(dict(obs.get("true_pose", obs["pose"]), action=a, ok=bool(info["last_action_success"]), **_target_state(env)))
@@ -171,6 +225,7 @@ def worker(wid, jobs, args_dict, out_dir):
                     np.random.seed(seed)
                     STATS.reset()
                     sensors = Sensors(args_dict.get("depth", "gt"), tuple(args_dict.get("odom_noise", (0, 0))),
+                                      odom=args_dict.get("odom", "sim"),
                                       seed=seed + 7919 * args_dict.get("repeat", 0))
                     rec = run_episode(env, planner, sensors=sensors)
                     rec.update(eval_set=eval_set, index=idx, model_calls=STATS.snapshot())
@@ -233,6 +288,8 @@ def main():
     ap.add_argument("--s2m", default="{}", help='JSON kwargs for the s2m planner, e.g. \'{"commit": 1.2}\'')
     ap.add_argument("--depth", default="gt", choices=["gt", "est"], help="est: monocular depth (embagent/depth_est.py)")
     ap.add_argument("--odom-noise", nargs=2, type=float, default=[0.0, 0.0], metavar=("SIG_T", "SIG_R_DEG"))
+    ap.add_argument("--odom", default="sim", choices=["sim", "actions"],
+                    help="actions: pose by dead reckoning from executed actions and their success (RGB-only setting)")
     ap.add_argument("--repeat", type=int, default=0, help="repeat index; changes noise seeds, nothing else")
     ap.add_argument("--retry-errors", action="store_true", help="re-run episodes whose record has an error")
     ap.add_argument("--allow-subset", action="store_true", help="permit --limit/--stride on the test split (debug only)")
@@ -262,13 +319,28 @@ def main():
             return args.retry_errors and "error" in json.load(open(path))
         jobs += [(eval_set, i) for i in idxs if pending(i)]
     print(f"{len(jobs)} episodes to run -> {out_dir}", flush=True)
-    with open(os.path.join(out_dir, "args.json"), "w") as f:
-        json.dump(vars(args), f, indent=1)
+    # args.json records the settings the episodes were produced with. A resume (e.g. --retry-errors) must not
+    # rewrite it, and must not run new episodes under settings different from the ones already recorded.
+    record = dict(vars(args), vlm_extra_body=json.loads(os.environ.get("VLM_EXTRA_BODY") or "{}"),
+                  vlm_max_tokens=int(os.environ.get("VLM_MAX_TOKENS", "4096")),
+                  vlm_schema_bounds=json.loads(os.environ.get("VLM_SCHEMA_BOUNDS") or "{}"),
+                  depth_model=_depth_model() if args.depth == "est" else "",
+                  depth_calib=os.path.basename(os.environ.get("DEPTH_CALIB") or "depth_calib.json") if args.depth == "est" else "")
+    args_path = os.path.join(out_dir, "args.json")
+    if os.path.exists(args_path):
+        mismatch = {k: (old, new) for k, (old, new) in
+                    ((k, (v(json.load(open(args_path))), v(record))) for k, v in _RESULT_KEYS.items()) if old != new}
+        if mismatch and jobs:
+            sys.exit(f"{args_path} was recorded with different settings {mismatch} (recorded, now); refusing to mix "
+                     "configurations in one run directory. Use a new --exp or fix the flags.")
+    if jobs:
+        with open(args_path, "w") as f:
+            json.dump(record, f, indent=1)
 
     planner_kw = dict(planner=args.planner, model_name=args.model, n_shots=args.n_shots,
                       resolution=args.resolution, platform=args.platform,
                       data=os.path.abspath(args.data) if args.data else "", s2m=json.loads(args.s2m),
-                      depth=args.depth, odom_noise=args.odom_noise, repeat=args.repeat)
+                      depth=args.depth, odom_noise=args.odom_noise, repeat=args.repeat, odom=args.odom)
     shards = [jobs[i::args.workers] for i in range(args.workers)]
     ctx = mp.get_context("spawn")
     procs = [ctx.Process(target=worker, args=(w, s, planner_kw, out_dir)) for w, s in enumerate(shards) if s]

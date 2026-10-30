@@ -10,23 +10,20 @@ comes from the full official test set (300 episodes), run once each configuratio
 \noindent\textbf{Recognition probe.}
 For every official test episode we render the start view and the three other 90$^\circ$ headings, and ask the
 VLM (i) whether the target is visible (the yes/no first-token probability) and (ii) for its bounding box. We then
-score against the simulator's instance boxes, which are used only for evaluation. \Cref{tab:probe} reports hit
-rate (IoU$\ge$0.3) when the target is visible, boxes produced on frames where it is not, and the 3D error after
-lifting a correct box with depth.
-\TODO{Test-split numbers for Qwen2.5-VL-3B and Qwen3-VL-4B (dev split, 3B: hit 63/49/37\%, boxes on absent frames
-4/5/24\%, median lift error 0.18\,m).}
+score against the simulator's instance boxes, which are used only for evaluation. The raw probe outputs are retained
+under \texttt{runs/grounding/}, but no checked aggregation artifact is available in this snapshot; we therefore do
+not use probe numbers to support the reported claims.
 
 \noindent\textbf{Oracle ceilings.}
-Given the true target position, our geometric planner (\cref{sec:method}) succeeds in \TODO{x}\% (Base) and \TODO{y}\%
-(Long-horizon) of the official test episodes using only the depth-built map (dev split: 93.3 / 90.0). The same VLM choosing actions with the
-benchmark's prompt reaches \TODO{Y}\%. Small VLMs can see the target but cannot convert that into metric actions.
+Given the true target position, our diagnostic geometric planner (\cref{sec:method}) succeeds in 93.3\% on Base,
+83.3\% on Long-horizon, and 91.3\% overall on the official 300-episode test set using the depth-built map. This is
+an oracle-target diagnostic, not a deployable planner, and is not compared causally with the VLM baselines.
 
 \noindent\textbf{Appearance-only goals are recall-limited.}
-When the goal is given only by appearance (``the round metallic object with a silver finish''), the true target
-is among the 4B model's candidate boxes in only \TODO{47}\% of frames where it is visible. Comparing candidates
-(Set-of-Mark style) instead of verifying each one alone does not help, because the right box is usually not
-among them. \TODO{Final numbers from the queued probe.}
+The Visual subset is consistently lower than the other S2M subsets in the saved main runs (50.0--56.7\% versus
+80.0--91.7\% in the named-object subsets). A targeted candidate-recall analysis remains pending; without a checked
+probe aggregation, this pattern should not be attributed to a particular recognition failure mode.
 
 \noindent\textbf{Failure taxonomy.}
-\TODO{From scripts/analyze\_nav\_failures.py on the test EB-prompt baseline: never-seen / lost-after-seen /
-approach-fail / near-miss / blocked / oscillation shares.}
+Detailed error-taxonomy percentages are intentionally omitted: the analysis script exists, but no saved,
+cross-checked aggregate taxonomy is present in the result artifacts.

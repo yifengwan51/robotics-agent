@@ -1,15 +1,15 @@
 \begin{abstract}
 Embodied agents built on multimodal LLMs navigate well when the model is a frontier API, but small open models
 that fit on a robot or an 8\,GB GPU fail: on EB-Navigation, 7--8B models reach 14--29\% success and almost never
-find a target that starts behind them. We show that the failure is not recognition. A 4B model often localizes
-the target in the image, and depth places its box within \TODO{0.18}\,m of the true object, but the model cannot turn
-that recognition into metric actions. Given the target position, a geometric planner over the same action set
-succeeds in \TODO{91.7}\% of episodes. We introduce \ours, a training-free agent that restricts the VLM to semantic
+find a target that starts behind them. We investigate a modular alternative in which semantic judgments and metric
+control are separated. Given the target position, a diagnostic geometric planner over the same action set succeeds
+in 91.3\% of the saved test evaluation. We introduce \ours, a training-free agent that restricts the VLM to semantic
 questions about the current image (is the target visible, which box is it) and gives every metric decision to
 geometry. Detections are fused into 3D hypotheses with view-diverse positive and negative evidence; an
 optimal-search index decides which hypothesis to visit; and magnified, crop-verified search is triggered only
-when evidence is weak. With a 4-bit Qwen3-VL-4B on a single consumer GPU, \ours reaches \TODO{X}\% average
-success on the EB-Navigation test set, against \TODO{Y}\% for the same model with the benchmark's prompting and
-57.7\% for GPT-4o. It reaches \TODO{R}\% on RoboTHOR ObjectNav with an explicit stop action, without training
-or privileged state.
+when evidence is weak. With a 4-bit Qwen3-VL-4B on a single consumer GPU, \ours reaches 79.6\% average success
+over three EB-Navigation test runs, while an RGB-only benchmark-prompt run reaches 48.0\%. This difference is
+descriptive because the two planners use different sensor inputs. \ours reaches 59.6\% SR and 35.9\% SPL on the
+1800-episode RoboTHOR ObjectNav validation split with an explicit stop action. It uses simulator RGB-D and exact
+odometry in the primary EB-Navigation condition; it does not use target state as a planner input.
 \end{abstract}

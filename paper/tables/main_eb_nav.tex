@@ -1,16 +1,18 @@
-\begin{tabular}{lcccccc}
+\begin{tabular}{llrrrrrr}
 \toprule
-Method & Base & Common & Complex & Visual & Long & Avg \\
+Planner & Model & Base & Common & Complex & Visual & Long & Avg. SR \\
 \midrule
-GPT-4o (API) [EmbodiedBench] & -- & -- & -- & -- & -- & 57.7 \\
-Qwen2.5-VL-7B (API) [EmbodiedBench] & -- & -- & -- & -- & -- & 20.3 \\
-InternVL3-8B [EmbodiedBench] & -- & -- & -- & -- & -- & 29.3 \\
-Qwen3.5-9B + EMHO (held-out) [EMHO] & 66.7 & 60.0 & 65.0 & 40.0 & 51.7 & 56.7 \\
-Qwen3-VL-4B-Instruct-AWQ + EB prompt & -- & -- & -- & -- & -- & -- \\
-Qwen3-VL-4B-Instruct-AWQ + S2M (ours) & -- & -- & -- & -- & -- & -- \\
-Qwen2.5-VL-3B-Instruct-AWQ + EB prompt & -- & -- & -- & -- & -- & -- \\
-Qwen2.5-VL-3B-Instruct-AWQ + S2M (ours) & -- & -- & -- & -- & -- & -- \\
-Qwen3.5-4B-AWQ + EB prompt & -- & -- & -- & -- & -- & -- \\
-Qwen3.5-4B-AWQ + S2M (ours) & -- & -- & -- & -- & -- & -- \\
+EB prompt & Qwen3-VL-4B & 65.0 & 65.0 & 60.0 & 38.3 & 11.7 & 48.0 \\
+S2M (run 1) & Qwen3-VL-4B & 88.3 & 85.0 & 88.3 & 56.7 & 80.0 & 79.7 \\
+S2M (run 2) & Qwen3-VL-4B & 88.3 & 85.0 & 88.3 & 50.0 & 83.3 & 79.0 \\
+S2M (run 3) & Qwen3-VL-4B & 91.7 & 83.3 & 88.3 & 53.3 & 83.3 & 80.0 \\
+S2M (3-run mean) & Qwen3-VL-4B & 89.4 & 84.4 & 88.3 & 53.3 & 82.2 & 79.6 \\
+\midrule
+EB prompt$^\dagger$ & Qwen2.5-VL-3B & 8.3 & 6.7 & 6.7 & 6.7 & 0.0 & 5.7 \\
+S2M & Qwen2.5-VL-3B & 78.3 & 71.7 & 71.7 & 53.3 & 75.0 & 70.0 \\
 \bottomrule
 \end{tabular}
+
+\vspace{0.25em}\footnotesize Each row evaluates all five official test subsets (300 episodes); the 3-run mean pools three
+separate 300-episode S2M runs. $^\dagger$The Qwen2.5 EB-prompt run recorded 768 JSON decoding failures across
+255/300 episodes, so its result is not a clean algorithm-only comparison.

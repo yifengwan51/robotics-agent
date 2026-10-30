@@ -10,24 +10,38 @@ actuation, 30$^\circ$ turns, explicit Stop, 500 steps, success if a target-categ
 share with the simulator.
 \textit{Baselines.} The benchmark's own prompting and parser with the same local model (EB prompt), and
 published numbers for GPT-4o, open 7--8B models, and EMHO~\cite{lee2026emho}.
-\textit{Protocol.} \ours's configuration is frozen on the development split. Test runs are repeated three times;
-we report the mean, bootstrap 95\% CIs, and paired McNemar tests against the same model's baseline.
+\textit{Protocol.} \ours's configuration is frozen on the development split. The Qwen3-VL-4B S2M test run is
+repeated three times (300 episodes each); component and robustness checks are single 300-episode test runs.
+We report descriptive success rates only: the saved artifacts do not provide a pre-registered paired analysis or
+a defensible uncertainty model for all comparisons.
 
 \noindent\textbf{Main results.}
-\Cref{tab:main} \TODO{fill from paper/tables/main\_eb\_nav.tex}.
+\Cref{tab:main} reports all five official subsets. Qwen3-VL-4B S2M obtains 79.7, 79.0, and 80.0\% across
+the three runs (mean 79.6\%), versus 48.0\% for the EB-prompt run. This is a descriptive comparison rather
+than an algorithm-only attribution: S2M consumes RGB-D and pose whereas the EB prompt is passed RGB only.
+For Qwen2.5-VL-3B, S2M reaches 70.0\%, while the EB-prompt run reaches 5.7\%; the latter has 768 JSON decoding
+failures across 255 of 300 episodes and must not be used as clean evidence of an algorithmic gap.
 
 \noindent\textbf{Ablations.}
 \Cref{tab:abl} removes one component at a time: negative evidence, multi-view fusion, tiled search, crop
-verification, look-around, exhaust-on-arrival, and the search index. \TODO{discussion}.
+verification, look-around, exhaust-on-arrival, and the search index. Removing multi-view fusion gives the
+largest observed drop (79.7\% to 69.0\% in these single-run checks). Other differences, including the slightly
+higher scores of some ablations, are not evidence of a reliable benefit or harm without independent reruns.
 
 \noindent\textbf{Robustness.}
-With monocular metric depth (Depth Anything V2, globally calibrated once on development frames) in place of
-sensor depth, and with 5\% / 2$^\circ$ odometry noise per step, \TODO{numbers}.
+\Cref{tab:robust} distinguishes simulator depth from a monocular depth estimate. Replacing depth with the
+estimated signal lowers SR to 45.7\%, while injected 5\% translational and 2$^\circ$ rotational odometry noise
+gives 79.3\%. These checks do not remove the RGB-D/pose input disparity with the RGB-only baseline.
 
 \noindent\textbf{RoboTHOR ObjectNav.}
-\Cref{tab:robothor} \TODO{fill}. Published zero-shot results on the same full val split: SG-Nav (LLaMA-7B) 47.3,
-CogNav 54.6, CoW 27.5 SR~\cite{yin2024online,cao2024cognav,gadre2022cows}.
+\Cref{tab:robothor} gives an additional full-split ObjectNav result: 59.6\% SR and 35.9\% SPL over 1800
+episodes, with 17 logged execution errors. The published rows are retained as reported reference points, not as
+newly reproduced comparisons~\cite{yin2024online,cao2024cognav,gadre2022cows}.
 
-\noindent\textbf{Efficiency.}
-\TODO{VLM calls, tokens and wall-clock per episode: \ours's short yes/no and box queries vs the EB prompt's long
-JSON plans.}
+\noindent\textbf{Efficiency and context.}
+The saved episode records support descriptive call counts but not a matched token accounting: Qwen3 S2M uses
+52.4--53.0 VLM calls per episode across its three runs, and Qwen2.5 S2M uses 98.3; token counts were not logged
+for S2M. For the EB prompt, the records report means of 8.21 calls, 28,766 prompt tokens, and 2,425 completion
+tokens per Qwen3 episode, and 12.10 calls, 43,469 prompt tokens, and 12,280 completion tokens per Qwen2.5 episode.
+The server context limits (Qwen3 EB 8192 / S2M 2048; Qwen2.5 EB 10240 / S2M 2048) are configuration ceilings,
+not measured token consumption.

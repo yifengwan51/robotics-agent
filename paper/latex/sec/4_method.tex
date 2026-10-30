@@ -8,11 +8,36 @@ discrete actions. On EB-Navigation these are four 0.25\,m translations, two 90$^
 tilts, for at most 20 steps; success means ending within 1\,m of the target. The VLM $f$ is a small local model
 (3--4B, 4-bit). No other simulator state is used.
 
+\begin{figure*}[t]
+\centering
+\small
+\fbox{\begin{minipage}{0.94\textwidth}
+\centering
+\textbf{Instruction $\ell$} $\rightarrow$ target phrase $s$
+\quad\quad
+\textbf{RGB $I_t$} $\rightarrow$ presence / box queries
+\quad\quad
+\textbf{RGB-D + pose} $\rightarrow$ 3-D lifting $\rightarrow$ hypothesis set $\mathcal{H}_t$
+\quad\quad
+\textbf{occupancy map} $\rightarrow$ geometric action.
+
+\vspace{0.25em}
+The VLM supplies semantic evidence only. Depth, odometry, hypothesis state, candidate selection, and motion
+planning remain outside the language model.
+\end{minipage}}
+\caption{Conceptual data flow in \ours. The primary EB-Navigation setting uses simulator depth and exact pose;
+the figure is not an input-matched depiction of the RGB-only EB-prompt baseline.}
+\label{fig:pipeline}
+\end{figure*}
+
 \noindent\textbf{Semantic queries.}
 \ours asks $f$ only questions whose answers can be checked against the current image:
 a target specification $s=f(\ell)$ (a category name, or the appearance words when $\ell$ only describes looks);
 a presence probability $\pi_t=P_f(\textit{yes}\mid I_t,s)$ read from first-token log-probabilities;
 and a grounding box $b_t=f(I_t,s)$, or none.
+The specification is queried once at the beginning of an episode. At later steps, the image queries are deliberately
+short and independent of a growing action transcript. This choice reduces the role of long-horizon text generation,
+but does not imply a lower measured token cost: the current S2M artifacts log call counts, not request tokens.
 
 \noindent\textbf{Metric lifting, map and planning.}
 A box is lifted to a 3D point $q_t$ by back-projecting its centre with the median depth of its central half,
@@ -20,6 +45,13 @@ using a pinhole camera with known height and tilt. Depth also builds a 5\,cm top
 over (position, heading) with the benchmark's actions as unit-cost edges. The camera faces forward only, so
 backward and sideways moves must stay inside observed free space, and moves the simulator rejected become
 forbidden edges.
+
+More concretely, for a box centre $(u,v)$ and depth $d$, the implementation applies the calibrated camera
+projection to obtain a camera-frame point, transforms it with the current pose, and retains its horizontal
+coordinates $q_t\in\mathbb{R}^2$. Invalid, out-of-range, and very low-confidence detections are discarded.
+The map does not receive object identity or target position: it contains observed free/occupied evidence and
+failed-motion constraints only. This distinction is important because the oracle ceiling used in
+\cref{sec:diagnosis} injects target position explicitly, whereas S2M does not.
 
 \noindent\textbf{Multi-view evidence fusion.}
 Detections are merged into 3D hypotheses $\{(\mu_k,w_k)\}$ within 0.5\,m.
@@ -30,6 +62,12 @@ adds a quarter of its weight, so confidence grows with view diversity rather tha
 not detected loses $\lambda{=}0.4$.
 \emph{Commitment}: the agent commits when $w_k\ge\tau_c$ and keeps its target while $w_k\ge\tau_k$ (hysteresis).
 \emph{Exhaustion}: a reached hypothesis that does not end the episode is discarded.
+
+For a new lifted observation $q_t$ with weight $a_t$, the nearest compatible hypothesis is updated by an
+evidence-weighted running mean and $w_k\leftarrow w_k+a_t$ (or $0.25a_t$ for a near-duplicate view). If no
+compatible hypothesis exists, a new hypothesis is created. The negative-evidence rule is applied only if the
+existing hypothesis projects inside the current image, lies within range, and is not depth-occluded. Thus, an
+absence outside the camera view is not treated as a negative observation.
 
 \noindent\textbf{Optimal-search selection.}
 Among committed candidates the agent visits
@@ -45,6 +83,13 @@ verification. This is done once per view, and spends VLM calls rather than envir
 \noindent\textbf{Search policy.}
 With nothing committed, the agent finishes a 360$^\circ$ look-around, then inspects the best weak hypothesis,
 then moves to the free cell farthest from all visited positions.
+
+\noindent\textbf{What the ablations change.}
+The fusion ablation does not merely lower a scalar score: it discards non-exhausted hypotheses before adding the
+latest detection, making the controller single-view. The remaining switches remove negative evidence, tiled
+search, crop verification, look-around, exhaustion, or replace the probability-to-cost rule with strongest-first
+selection. These switches are useful for locating dependencies in the implementation; their single-run test
+results should not be read as estimates of a population effect.
 
 \noindent\textbf{Explicit stopping (RoboTHOR).}
 When the benchmark requires a Stop action, the agent stops only after it is within reach of a committed

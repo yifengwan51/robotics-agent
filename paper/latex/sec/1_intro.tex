@@ -10,10 +10,24 @@ models~\cite{lee2026emho,ma2026brainmem,zhou2026enabling}. The largest gains rel
 simulator-rendered bird's-eye view with the target box drawn in~\cite{wang2025seenav}, or on reinforcement
 fine-tuning on the benchmark's scenes~\cite{wang2025seenav,chen2025transforming}.
 
+The difficulty is not merely choosing an action label. A navigation policy has to associate a phrase in an
+instruction with pixels, infer a location in the world, remember hypotheses that disappear from view, and move
+under a short action budget. Asking a small VLM to emit a multi-step action plan makes all of these decisions
+depend on one long, structured generation. In this setting, an incorrect or malformed plan can consume the
+episode budget even when the target was visible in a recent image. We instead investigate a modular division of
+labor: let the VLM provide image-conditioned semantic evidence, and let deterministic geometry represent space,
+route motions, and retain state across views.
+
 We ask whether a small VLM's image-level semantic cues can be made useful to a metric controller. The saved
 artifacts include a diagnostic in which a geometry planner receives the true target position and reaches 91.3\%
 over the 300-episode test set. This is an upper-bound diagnostic rather than an input-matched VLM comparison;
 the raw per-frame probe outputs are retained but not yet aggregated for reporting.
+
+This diagnostic also fixes the scope of our claim. It says that metric planning can succeed when a target location
+is supplied; it does not establish that recognition is solved, nor that the diagnostic is comparable to a
+language-conditioned agent. Likewise, our primary S2M condition receives simulator RGB-D and exact pose, while
+the benchmark-prompt baseline receives RGB only. We report the resulting comparison because it is a useful
+systems measurement, but distinguish it from an input-matched causal baseline throughout the paper.
 
 This motivates \ours (Semantic-to-Metric), a training-free agent that asks the VLM only questions it can answer
 from the current image and leaves every metric decision to geometry. Three mechanisms make this robust with a

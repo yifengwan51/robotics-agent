@@ -15,6 +15,22 @@ repeated three times (300 episodes each); component and robustness checks are si
 We report descriptive success rates only: the saved artifacts do not provide a pre-registered paired analysis or
 a defensible uncertainty model for all comparisons.
 
+\noindent\textbf{Metrics and result integrity.}
+For EB-Navigation, SR is the fraction of episodes satisfying the benchmark success condition; every formal row
+contains five subsets of 60 episodes. For RoboTHOR, we report the runner's saved SR and SPL over 1800 episodes.
+The evaluation runner writes one record per episode, then derives each summary from those records. We use the
+saved summaries as the source of the tables, and distinguish runner exceptions from output-format errors: a
+completed episode with a JSON fallback is not a runner exception. This distinction matters for the Qwen2.5
+baseline. We do not report confidence intervals, paired tests, or significance claims because the available
+artifacts do not provide a prespecified inferential protocol for every comparison.
+
+\noindent\textbf{Comparison scope.}
+The EB-prompt planner uses the benchmark prompt and parser with the same local model, but its adapter forwards an
+RGB image only. S2M uses the same RGB image plus simulator depth and exact pose to build its map. Consequently,
+the ``EB prompt'' rows answer a practical systems question---how the two available controllers performed in their
+recorded configurations---rather than isolating a planner contribution under matched sensing. The oracle row is
+kept only as a diagnostic ceiling and is not compared to either learned controller in the tables.
+
 \noindent\textbf{Main results.}
 \Cref{tab:main} reports all five official subsets. Qwen3-VL-4B S2M obtains 79.7, 79.0, and 80.0\% across
 the three runs (mean 79.6\%), versus 48.0\% for the EB-prompt run. This is a descriptive comparison rather
@@ -22,21 +38,43 @@ than an algorithm-only attribution: S2M consumes RGB-D and pose whereas the EB p
 For Qwen2.5-VL-3B, S2M reaches 70.0\%, while the EB-prompt run reaches 5.7\%; the latter has 768 JSON decoding
 failures across 255 of 300 episodes and must not be used as clean evidence of an algorithmic gap.
 
+The three Qwen3 runs are close in aggregate (a 1.0-point range), but their Visual scores vary from 50.0 to
+56.7\%. The mean row is therefore a compact stability summary, not a replacement for the individual runs. The
+Long-horizon improvement relative to the RGB-only prompt is large in these artifacts, but it is especially exposed
+to the sensing mismatch: persistent metric state is precisely the information unavailable to the prompt baseline.
+
 \noindent\textbf{Ablations.}
 \Cref{tab:abl} removes one component at a time: negative evidence, multi-view fusion, tiled search, crop
 verification, look-around, exhaust-on-arrival, and the search index. Removing multi-view fusion gives the
 largest observed drop (79.7\% to 69.0\% in these single-run checks). Other differences, including the slightly
 higher scores of some ablations, are not evidence of a reliable benefit or harm without independent reruns.
 
+The ablations are most useful for identifying implementation dependencies. The fusion switch is the clearest
+example: it replaces persistent cross-view hypotheses with the latest single-view detection, and its lower score
+is consistent with a benefit from retaining spatial evidence. In contrast, the no-negative and strongest-first
+rows score slightly above the reference in one run. Such reversals are expected under finite test variation and
+test-set reuse; they should guide follow-up experiments rather than be promoted as counterintuitive discoveries.
+
 \noindent\textbf{Robustness.}
 \Cref{tab:robust} distinguishes simulator depth from a monocular depth estimate. Replacing depth with the
 estimated signal lowers SR to 45.7\%, while injected 5\% translational and 2$^\circ$ rotational odometry noise
 gives 79.3\%. These checks do not remove the RGB-D/pose input disparity with the RGB-only baseline.
 
+The depth condition is deliberately a stress test of the metric interface: the RGB image and semantic queries are
+unchanged, while the depth signal is replaced by the configured monocular estimate. The large drop indicates that
+the reported primary result should be read as an RGB-D navigation result, not as evidence that the same controller
+will retain its performance with arbitrary monocular depth. The odometry perturbation is smaller in this one run,
+but it is not an end-to-end real-robot noise model.
+
 \noindent\textbf{RoboTHOR ObjectNav.}
 \Cref{tab:robothor} gives an additional full-split ObjectNav result: 59.6\% SR and 35.9\% SPL over 1800
 episodes, with 17 logged execution errors. The published rows are retained as reported reference points, not as
 newly reproduced comparisons~\cite{yin2024online,cao2024cognav,gadre2022cows}.
+
+RoboTHOR supplies a complementary check because its agent must choose an explicit Stop action rather than relying
+on EB-Navigation's automatic termination. The 17 recorded errors are retained in the saved summary rather than
+silently removed. We do not attribute differences from the published rows to any single design choice because
+their implementations, perception stacks, and compute settings were not reproduced in this project.
 
 \noindent\textbf{Efficiency and context.}
 The saved episode records support descriptive call counts but not a matched token accounting: Qwen3 S2M uses
@@ -45,3 +83,8 @@ for S2M. For the EB prompt, the records report means of 8.21 calls, 28,766 promp
 tokens per Qwen3 episode, and 12.10 calls, 43,469 prompt tokens, and 12,280 completion tokens per Qwen2.5 episode.
 The server context limits (Qwen3 EB 8192 / S2M 2048; Qwen2.5 EB 10240 / S2M 2048) are configuration ceilings,
 not measured token consumption.
+
+The call-count contrast should also be interpreted carefully. S2M makes several narrow semantic queries per
+environment step, while the EB prompt makes fewer, longer structured planning requests. Calls, tokens, and wall
+time are thus different cost measures. A fair efficiency comparison requires request-level tokens and elapsed time
+under a shared serving configuration; this information is only partially available in the current artifacts.

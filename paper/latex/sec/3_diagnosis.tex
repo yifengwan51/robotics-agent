@@ -7,6 +7,14 @@ rooms. We use the benchmark's own generator and instruction files to build a dev
 unused rooms (150 episodes; disjoint from the test rooms by construction). All tuning uses only this split. Every number reported in the paper, including the probes and ceilings below,
 comes from the full official test set (300 episodes), run once each configuration is frozen.
 
+\noindent\textbf{Audit boundary.}
+This section separates what the saved artifacts establish from what they do not. The runner records one JSON
+file per episode, including success, step count, planner-call statistics, and any runner exception. It also logs
+analysis-only target distance and visibility, but these values are never passed to S2M or the EB-prompt planner.
+The artifact audit cannot retroactively prove that every configuration choice was made only on development data;
+moreover, the test set has subsequently been used for several one-run component checks. We consequently treat
+the component table as diagnostic evidence and reserve claims about final model selection for an independent split.
+
 \noindent\textbf{Recognition probe.}
 For every official test episode we render the start view and the three other 90$^\circ$ headings, and ask the
 VLM (i) whether the target is visible (the yes/no first-token probability) and (ii) for its bounding box. We then
@@ -27,3 +35,9 @@ probe aggregation, this pattern should not be attributed to a particular recogni
 \noindent\textbf{Failure taxonomy.}
 Detailed error-taxonomy percentages are intentionally omitted: the analysis script exists, but no saved,
 cross-checked aggregate taxonomy is present in the result artifacts.
+
+\noindent\textbf{Baseline output validity.}
+The Qwen3 EB-prompt run contains no recorded JSON decoding errors. In contrast, Qwen2.5 EB-prompt records 768
+decode failures across 255/300 episodes. The benchmark parser substitutes a random action after a decode failure,
+so the 5.7\% number blends model planning failures with output-format failures. This motivates the parser caveat
+in \cref{tab:main}; a parser-instrumented rerun is needed before treating that row as a model comparison.

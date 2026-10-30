@@ -24,6 +24,9 @@ turning noisy per-frame answers into reliable 3D evidence.
 \noindent\textbf{Uncertainty, verification and visual prompting.}
 Calibrated uncertainty can decide when to ask for help~\cite{ren2023robots} or when to stop
 exploring~\cite{ren2024explore}. Visual marks elicit grounding from VLMs~\cite{yang2023mark,nasiriany2024pivot}. We
-find that for a 4B model the binding constraint on appearance-only goals is \emph{recall}, not the form of
-verification (\cref{sec:diagnosis}), so \ours spends extra calls on magnified search and multi-view evidence
-rather than re-ranking.
+use image-level confidence as a signal for when additional perception is worthwhile. \ours follows this general
+pattern, but uses a deliberately simple operational rule: it invokes magnified tiles only when the full-frame
+evidence is weak and no hypothesis is committed. The saved results show that the Visual subset is harder than the
+named-object subsets; they do not yet isolate whether recall, verification, or metric lifting is the dominant
+cause. We therefore present tiled search and cross-view fusion as design choices supported by component checks,
+not as a claim that either mechanism is novel in isolation.

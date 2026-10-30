@@ -7,10 +7,22 @@ whereas the benchmark-prompt baseline receives RGB only; therefore their gap can
 planning algorithm. Estimated depth reduces SR to 45.7\%, and we do not remove the sensing assumptions.
 EB-Navigation ends an episode automatically on success; the exhaust-on-arrival rule uses that signal, so we report
 its ablation and evaluate on RoboTHOR, where the agent must decide to stop.
-Appearance-only goals remain hard because a 4B model's candidate set often misses the target. Single-room scenes
-and same-category look-alikes limit how far the EB-Navigation results generalize.
+Appearance-only goals remain difficult, but the available probe artifacts do not yet establish whether the cause
+is candidate recall, verification, depth lifting, or planning. Single-room scenes and same-category look-alikes
+limit how far the EB-Navigation results generalize. Finally, the test set has been consulted repeatedly for
+component comparisons; this creates selection pressure and makes an independent final split necessary.
+
+\noindent\textbf{Reproducibility and next steps.}
+The project retains per-episode records, aggregate summaries, queue logs, and a static audit in
+\texttt{docs/experiment\_snapshot\_2026-10-30.md}. The smallest useful next experiment is an input-matched
+comparison: either restrict S2M to RGB or give the comparison controller equivalent depth and pose. Next, a
+parser-instrumented Qwen2.5 baseline should report decoding, schema, and episode-level fallback failures
+separately. Only after selecting a final configuration on development data should the work be evaluated once on a
+fresh held-out split.
 
 \noindent\textbf{Conclusion.}
 Small VLMs can provide semantic cues that a geometric controller can use for navigation. In the present artifacts,
 semantic-to-metric grounding reaches a three-run mean of 79.6\% on EB-Navigation and 59.6\% SR on RoboTHOR;
-independent, input-matched baselines remain necessary before making a causal performance claim.
+these results are useful evidence that a modular controller can run end-to-end with a 3--4B local VLM. They are
+not yet evidence for a causal planner-only gain: independent, input-matched baselines and a final held-out
+evaluation remain necessary.

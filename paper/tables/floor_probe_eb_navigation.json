@@ -1,0 +1,21 @@
+{
+ "global": {
+  "absrel": 0.13378170533105732,
+  "floor_as_obstacle": 0.4247002162275949,
+  "obstacle_as_floor": 0.006194883315816562
+ },
+ "floor": {
+  "absrel": 0.11518876730309179,
+  "floor_as_obstacle": 0.09885292008829534,
+  "obstacle_as_floor": 0.006740660455712517
+ },
+ "oracle": {
+  "absrel": 0.056144975071462495,
+  "floor_as_obstacle": 0.12899338353281542,
+  "obstacle_as_floor": 0.005457471448122374
+ },
+ "frames": 240,
+ "fallback": 63,
+ "model": "DA2-Metric-Indoor-Base",
+ "data": "third_party/EmbodiedBench/embodiedbench/envs/eb_navigation/datasets"
+}

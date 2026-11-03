@@ -1,21 +1,11 @@
-\section{Limitations and Conclusion}
+\section{Conclusion}
 \label{sec:conclusion}
 
-\noindent\textbf{Limitations.}
-\ours relies on metric depth. With a monocular estimate it keeps its Long-horizon advantage but loses its
-advantage on targets already in view, so RGB-only geometry is the main step toward the benchmark's native RGB
-setting. Appearance-only goals remain hard because the small VLM often never proposes the right object
-(\cref{sec:gap}); fusion cannot repair a target that is never detected. EB-Navigation scenes are single rooms
-with few competing hypotheses, which may explain why negative evidence, tiled search, and the selection index
-show no measurable effect there; we do not know whether they matter in larger environments beyond RoboTHOR's
-apartments. The component and sensing variants were run on the test set, so their statistics are descriptive.
-Finally, all results are in simulation.
+A small local VLM fails as a navigator when it must carry spatial state through generated text, and succeeds when
+it is asked only what the current image can answer. \ours lifts these answers into a metric hypothesis memory,
+fuses them across viewpoints with positive and negative evidence, and leaves selection and motion to geometry. On
+one 8\,GB GPU and without training, it outperforms published agents built on far larger models, also from RGB alone.
 
-\noindent\textbf{Conclusion.}
-A small local VLM fails as a navigator when it has to carry spatial state through generated text, and works when
-it is asked only what the current image can answer. Lifting those answers into a metric hypothesis memory and
-fusing them across views raises a 4-bit Qwen3-VL-4B from 48.0 to 79.6\% on EB-Navigation and from 11.7 to 82.2\%
-when the target starts behind the agent, on a single 8\,GB GPU and without training. The same interface lifts a
-3B model from 6.3 to 70.0\% and reaches 59.6\% SR on RoboTHOR. The remaining gap is recognition of objects
-described only by their appearance, which is where better small VLMs, rather than better controllers, are
-needed. Code and per-episode records will be released.
+\noindent\textbf{Limitations.}
+Without a depth sensor, the scale comes from a visible floor at a known camera height. Appearance-only goals
+are limited by recognition (\cref{sec:gap}). Multi-room houses, where the search index matters more, and real robots remain to be tested.

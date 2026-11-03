@@ -10,6 +10,7 @@ import json
 import math
 import os
 import re
+import threading
 
 import numpy as np
 from openai import OpenAI
@@ -46,15 +47,21 @@ class Grounder:
         self.client = OpenAI(base_url=base_url or BASE_URL, api_key="EMPTY", timeout=timeout)
         self.coord_mode = coord_mode or ("abs" if "2.5-VL" in model or "2_5" in model else "rel1000")
         self.extra = {"chat_template_kwargs": {"enable_thinking": False}} if "3.5" in model else {}
-        self.calls = 0
+        self.calls = self.prompt_tokens = self.completion_tokens = 0
+        self._lock = threading.Lock()  # calls run in parallel from the planner's thread pools
 
     def _chat(self, rgb, text, max_tokens=128, **kw):
-        self.calls += 1
         content = [{"type": "image_url", "image_url": {"url": data_url(rgb)}}, {"type": "text", "text": text}] \
             if rgb is not None else [{"type": "text", "text": text}]
-        return self.client.chat.completions.create(
+        r = self.client.chat.completions.create(
             model=self.model, messages=[{"role": "user", "content": content}], temperature=0,
             max_tokens=max_tokens, extra_body=self.extra or None, **kw)
+        u = getattr(r, "usage", None)
+        with self._lock:
+            self.calls += 1
+            self.prompt_tokens += getattr(u, "prompt_tokens", 0) or 0
+            self.completion_tokens += getattr(u, "completion_tokens", 0) or 0
+        return r
 
     def _to_pixels(self, box, h, w):
         x1, y1, x2, y2 = box

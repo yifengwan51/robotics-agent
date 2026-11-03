@@ -1,117 +1,150 @@
 \section{Semantic-to-Metric Navigation}
 \label{sec:method}
 
-\begin{figure*}[t]
-\centering
-\resizebox{\textwidth}{!}{%
-\begin{tikzpicture}[font=\footnotesize, >={Stealth[length=1.8mm]}, node distance=5mm and 7mm,
-  box/.style={rounded corners=2pt, align=center, inner sep=3pt, minimum height=9mm, text width=#1},
-  io/.style={box=#1, draw=black!45, fill=black!3}, io/.default=19mm,
-  vlm/.style={box=#1, draw=orange!75!black, fill=orange!12}, vlm/.default=29mm,
-  geo/.style={box=#1, draw=cvprblue, fill=cvprblue!9}, geo/.default=26mm,
-  lab/.style={font=\scriptsize, text=black!70}]
-\node[io] (ins) {instruction $\ell$};
-\node[io, below=8mm of ins] (rgb) {RGB frame $I_t$};
-\node[io, below=8mm of rgb] (dp) {depth $D_t$, pose $p_t$};
-\node[vlm, right=of ins] (spec) {target phrase $s=f(\ell)$\\(once per episode)};
-\node[vlm, right=of rgb] (ask) {visible? $\pi_t=P_f(\textit{yes}\mid I_t,s)$\\where? box $b_t=f(I_t,s)$};
-\node[vlm, right=of dp] (zoom) {crop check, $3{\times}3$ tiles\\(only if evidence is weak)};
-\node[geo, right=of ask] (lift) {lift $b_t$ with $D_t, p_t$\\to $q_t\in\mathbb{R}^2$, weight $a_t$};
-\node[geo, right=of zoom] (map) {occupancy map\\(5\,cm grid)};
-\node[geo=31mm, right=of lift] (mem) {hypothesis memory $\mathcal{H}_t$:\\fuse across views, negative\\evidence, commit / keep};
-\node[geo, right=of mem] (sel) {look around, select a\\hypothesis, or explore};
-\node[geo=20mm, right=of sel] (plan) {A* over\\(position, heading)};
-\draw[->] (ins) -- (spec);
-\draw[->] (spec) -- node[lab, right] {$s$} (ask);
-\draw[->] (rgb) -- (ask);
-\draw[->] (ask) -- node[lab, above] {$\pi_t, b_t$} (lift);
-\draw[->, dashed] (ask) -- (zoom);
-\draw[->, dashed] (zoom.north east) -- (lift.south west);
-\draw[->] (dp.south) -- ++(0,-3mm) -| (map.south);
-\draw[->] (lift) -- (mem);
-\draw[->] (mem) -- node[lab, above] {$\mathcal{H}_t$} (sel);
-\draw[->] (sel) -- node[lab, above] {goal} (plan);
-\draw[->] (map.east) -| (plan.south);
-\draw[->] (plan.east) -- ++(6mm,0) node[right, lab] {action};
-\begin{scope}[on background layer]
-\node[fit=(spec)(ask)(zoom), fill=orange!4, draw=orange!45, dashed, rounded corners, inner sep=5pt,
-  label={[font=\scriptsize\bfseries, text=orange!60!black]above:small VLM: per-image questions only}] {};
-\node[fit=(lift)(map)(mem)(sel)(plan), fill=cvprblue!3, draw=cvprblue!45, dashed, rounded corners, inner sep=5pt,
-  label={[font=\scriptsize\bfseries, text=cvprblue]above:geometry: all metric state and decisions}] {};
-\end{scope}
-\end{tikzpicture}}
-\caption{\ours. The small VLM (orange) answers only questions about the current image: is the target visible,
-read from its yes/no token probability, and where is it in the frame. A magnified crop check and a tiled search
-are queried only when this evidence is weak. Geometry (blue) lifts each box with depth and pose, fuses the lifted
-points into target hypotheses across views, and plans actions on an occupancy map. The VLM never sees the map,
-a target coordinate, or its own action history.}
-\label{fig:pipeline}
-\end{figure*}
+\ours instantiates the factorization of \cref{eq:factor}. The belief
+$\mathcal{B}_t=(\mathcal{H}_t,M_t)$ consists of a list of target hypotheses $\mathcal{H}_t$ and an occupancy map
+$M_t$; \cref{fig:arch}b shows one step.
 
-\noindent\textbf{Setting.}
-At step $t$ the agent observes an egocentric RGB-D frame $(I_t, D_t)$, its odometry pose $p_t$, and whether its
-last action succeeded; the goal is a language instruction $\ell$ that identifies one object. $f$ is a small
-local VLM. \ours uses no simulator object or target state.
+\subsection{Per-image questions}
+At the start of an episode the VLM $f$ rewrites $\ell$ into a target phrase $s$: the category when the instruction
+names or implies one, and the appearance words when it describes only how the object looks. At every step two
+queries about the current frame run in parallel. The presence probability is read from the first answer token,
+\begin{equation}
+\pi_t=\frac{P_f(\textit{yes}\mid I_t,s)}{P_f(\textit{yes}\mid I_t,s)+P_f(\textit{no}\mid I_t,s)},
+\label{eq:presence}
+\end{equation}
+and the second query returns a box $b_t$ for $s$ or none. Neither query contains the action history, the map,
+or earlier answers, so every answer can be checked against the image alone.
 
-\noindent\textbf{Per-image semantic queries.}
-At the start of an episode, $f$ rewrites $\ell$ into a target phrase $s$: the object's category when the
-instruction implies one, and its appearance words when the instruction describes only how it looks. At every
-step, $f$ answers two questions about the current frame, issued in parallel: a presence probability
-$\pi_t=P_f(\textit{yes}\mid I_t,s)$, normalized over the \textit{yes} and \textit{no} first-token probabilities,
-and a bounding box $b_t$ for $s$, or none. Neither query contains the action history, the map, or earlier
-answers, so each answer can be checked against the image alone.
+\noindent\textbf{Lifting.}
+A box with centre $c(b_t)=(u,v)$ is lifted with the median depth $\tilde d_t$ over its central half (half its width
+and half its height). With focal length $\varphi$ and principal point $(u_0,v_0)$ of the pinhole camera, tilt
+$\phi_t$, and the forward and right unit vectors $e_f(\theta_t),e_r(\theta_t)$ of the heading,
+\begin{equation}
+q_t=x_t+\tilde d_t\Big[\big(\cos\phi_t-\tfrac{v-v_0}{\varphi}\sin\phi_t\big)\,e_f(\theta_t)
++\tfrac{u-u_0}{\varphi}\,e_r(\theta_t)\Big],
+\label{eq:lift}
+\end{equation}
+which we write $q_t=\Pi_{p_t}^{-1}(c(b_t),\tilde d_t)$; lifts with $\tilde d_t>6$\,m are discarded. The same
+back-projection, with the known camera height, labels each depth pixel as floor (height below 0.10\,m) or obstacle
+(0.10--1.9\,m) in a 5\,cm occupancy grid $M_t$.
 
-\noindent\textbf{From boxes to metric evidence.}
-A box is lifted to a floor-plane point $q_t\in\mathbb{R}^2$ by back-projecting its centre with the median
-depth of its central region (half its width and half its height), using a pinhole camera with known field of
-view, height, and tilt, and the pose $p_t$. Lifted points beyond 6\,m are discarded. The weight $a_t$ of the
-observation depends on agreement. If the target is named and $\pi_t\ge0.5$, then $a_t=\pi_t$. Otherwise, either
-because presence disagrees with the box or because the goal is appearance-only, the VLM is asked about a
-\emph{crop check}: a crop 2.5 times the box size, resized to 448\,px. Its presence probability $\pi^z_t$ gives
-$a_t=\pi^z_t$ if $\pi^z_t\ge0.5$ and $a_t=0.2\,\pi^z_t$ otherwise. Depth also updates a 5\,cm occupancy grid of
-observed free and occupied space.
+\noindent\textbf{Observation weight.}
+A lifted box enters the memory with weight
+\begin{equation}
+a_t=\begin{cases}\pi_t & \text{if the target is named and } \pi_t\ge\tfrac12,\\
+\pi^z_t & \text{otherwise, if } \pi^z_t\ge\tfrac12,\\
+0.2\,\pi^z_t & \text{otherwise,}\end{cases}
+\label{eq:weight}
+\end{equation}
+where $\pi^z_t$ is the presence probability of a \emph{crop check}, a square crop of 2.5 times the box's longer
+side resized to 448\,px. The crop is queried only when presence and box disagree or when the goal is
+appearance-only, so the extra cost is paid where the evidence is weak.
 
-\noindent\textbf{Hypothesis memory.}
-The memory $\mathcal{H}_t$ is a short list of target hypotheses, each a floor position $\mu_k$ with evidence
-$w_k$. A new observation merges into the first hypothesis within 0.5\,m: $\mu_k$ becomes the running mean of its
-observations and $w_k\leftarrow w_k+a_t$. If no hypothesis is that close, a new one is created. An observation
-from within 0.2\,m and the same heading as an earlier view of the hypothesis adds only $0.25\,a_t$, so evidence
-grows with the number of distinct viewpoints rather than with the number of frames.
-\emph{Negative evidence}: a hypothesis that should be visible in the current frame, meaning it projects inside
-the image, lies within 6\,m, and is not occluded according to $D_t$, but receives no detection loses
-$\lambda=0.4$; hypotheses that fall below $-1$ are removed. Absence outside the camera view is never counted.
-\emph{Commitment}: the agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while
-$w_k\ge\tau_k=0.4$.
-\emph{Exhaustion}: when the agent reaches a committed hypothesis (within 0.9\,m) and the episode continues, the
-hypothesis is marked exhausted and never selected again. It stays in memory, so later detections of the same
-look-alike merge into it instead of creating a new target.
+\subsection{Metric hypothesis memory}
+Each hypothesis $k$ stores a floor position $\mu_k$, evidence $w_k$, and the poses $V_k$ from which it was seen. An
+observation $(q_t,a_t)$ is associated with the first hypothesis within $r=0.5$\,m. If there is one, then
+\begin{equation}
+\mu_k\leftarrow\frac{n_k\mu_k+q_t}{n_k+1},\qquad w_k\leftarrow w_k+\gamma_t\,a_t ,
+\label{eq:fuse}
+\end{equation}
+with $n_k$ the number of fused observations and $\gamma_t=0.25$ if some $v\in V_k$ has the heading of $p_t$ and a
+position within 0.2\,m of it, else $\gamma_t=1$; otherwise a new hypothesis $(\mu,w)=(q_t,a_t)$ is created. Through $\gamma_t$, evidence grows with the number
+of distinct viewpoints rather than with the number of frames.
 
-\noindent\textbf{Search and selection.}
-With nothing committed, the agent first completes a 360$^\circ$ look-around, then inspects the strongest weak
-hypothesis ($w_k\ge0.35$), and otherwise moves to the observed free cell 0.75--3\,m away that is farthest from all
-visited positions. When it must choose among committed hypotheses, it maximizes $(1-e^{-w_k})/(c_k+1)$, where
-$c_k$ is the straight-line distance to $\mu_k$ in 0.25\,m steps. This is the classical index for sequential
-search with inspection costs; it reduces to nearest-first for equal evidence and to strongest-first for equal
-cost. A held target is kept while its evidence stays above $\tau_k$. Actions come from A* over (position,
-heading) on the occupancy map, with the benchmark's translations and rotations as edges of unit cost plus up to
-0.6 for moving forward into unobserved cells. Because the camera faces forward, backward and sideways moves must
-stay in observed free space, and moves that the simulator rejected become forbidden edges.
+\noindent\textbf{Negative evidence.}
+A hypothesis that the current frame should show but that receives no detection loses evidence:
+\begin{equation}
+\begin{gathered}
+w_k\leftarrow w_k-\lambda\,\mathbb{1}\big[\mathrm{vis}_t(\mu_k)\big],\\
+\mathrm{vis}_t(\mu)\Leftrightarrow \bar u\in\Omega,\ \ d\le6\,\text{m},\ \ D_t(\bar u)+0.3\ge d,
+\end{gathered}
+\label{eq:neg}
+\end{equation}
+for every hypothesis without a detection within $r$, where $(\bar u,d)=\Pi_{p_t}(\mu)$ are the pixel and planar
+depth of $\mu$ in the current image, $\Omega$ is the image shrunk by a 20\,px margin, and $\lambda=0.4$; the last
+condition rules out occlusion by a nearer surface;
+hypotheses with $w_k\le-1$ are removed. Absence outside the camera's view is never counted.
+
+\noindent\textbf{Commitment and exhaustion.}
+The agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while $w_k\ge\tau_k=0.4$; the hysteresis
+prevents one missed detection from abandoning a well-supported target. When the agent stands within 0.9\,m of a
+committed hypothesis and the episode continues, which on EB-Navigation means that it is not the target, the
+hypothesis is marked exhausted. It stays in memory, so later detections of the same look-alike merge into it
+instead of creating a new target.
+
+\subsection{Search and control}
+\noindent\textbf{Selection.}
+Among the committed hypotheses $\mathcal{C}_t$ the agent visits
+\begin{equation}
+k^\star=\arg\max_{k\in\mathcal{C}_t}\ \frac{1-e^{-w_k}}{c_k+1},\qquad c_k=\frac{\lVert\mu_k-x_t\rVert}{0.25\,\text{m}} .
+\label{eq:index}
+\end{equation}
+The numerator maps the evidence to the probability of at least one detection under a Poisson model with mean
+$w_k$, and the denominator counts the steps to reach and check $\mu_k$. For locations with fixed inspection costs,
+inspecting in decreasing order of this probability-to-cost ratio is optimal~\cite{kadane1977optimal}; \ours
+applies the rule greedily, recomputing the cost from the current position. It reduces to nearest-first for equal
+evidence and to strongest-first for equal cost. With nothing committed, the
+agent first completes a 360$^\circ$ look-around, then approaches the strongest hypothesis with $w_k\ge0.35$, and
+otherwise moves to the observed free cell 0.75--3\,m away that is farthest from all visited positions.
+
+\noindent\textbf{Planning.}
+Actions come from A* over (position, heading) on $M_t$, whose edges are the benchmark's translations and turns. An
+edge $e$ costs
+\begin{equation}
+C(e)=1+\frac{0.6}{4}\sum_{j=1}^{4}\mathbb{1}\big[M_t(e_j)\ \text{unobserved}\big],
+\label{eq:astar}
+\end{equation}
+where $e_1,\dots,e_4$ are points sampled along the edge; edges through inflated obstacles are removed, and a move that the simulator has rejected becomes a forbidden edge.
+Because the camera faces forward, backward and sideways moves must stay in observed free space.
 
 \noindent\textbf{Magnified search.}
-Small or distant targets are often missed in the full frame. When a view yields no observation with weight at
-least 0.5 and nothing is committed, the frame is split into $3{\times}3$ overlapping tiles, each upsampled to
-448\,px and queried for a box in parallel. Up to four distinct tile boxes are crop-checked, and those with
-$\pi^z\ge0.5$ enter the memory. This runs once per view and spends VLM calls rather than environment steps.
+Small or distant targets are often missed in the full frame. When a view yields no observation with $a_t\ge0.5$ and
+nothing is committed, the frame is split into $3{\times}3$ overlapping tiles, each upsampled to 448\,px and queried
+for a box in parallel; up to four distinct tile boxes are crop-checked, and those with $\pi^z\ge0.5$ enter the
+memory. This happens once per view and spends VLM calls rather than environment steps.
+
+\input{sec/tab_main}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig/analysis.pdf}
+\caption{EB-Navigation test, Qwen3-VL-4B. \textbf{(a)} Episodes solved within a step budget, averaged over runs.
+\textbf{(b)} Failed episodes by outcome (first matching rule, \cref{sec:diagnosis}; mean over the runs of \ours).
+\textbf{(c)} Lifted range divided by true range for detections within 1\,m of the target, with medians (dashed),
+for \ours with the depth sensor and with monocular depth under a global and a per-frame floor scale
+(\cref{eq:floorscale}).}
+\label{fig:analysis}
+\end{figure*}
+
+\subsection{Without a depth sensor}
+\label{sec:rgbonly}
+Monocular metric depth networks err mostly by a frame-dependent scale. Let $\hat D_t$ be the raw prediction and
+$\kappa(v)=\sin\phi_t+\frac{v-v_0}{\varphi}\cos\phi_t$ the downward component of the ray through row $v$ per unit of
+planar depth. A pixel on the floor satisfies $\sigma\hat D_t(u,v)\,\kappa(v)=h$ for the camera height $h$, and an
+object standing on the floor gives a larger $\sigma$. Over the pixels $\mathcal{F}_t$ whose rays point at least
+15$^\circ$ below the horizontal, \ours takes the mode
+\begin{equation}
+\sigma_t=\operatorname*{mode}_{(u,v)\in\mathcal{F}_t}\ \frac{h}{\hat D_t(u,v)\,\kappa(v)},\qquad D_t=\sigma_t\,\hat D_t ,
+\label{eq:floorscale}
+\end{equation}
+with the mode taken over values in $[\bar\sigma/1.33,\,1.33\,\bar\sigma]$, where $\bar\sigma$ is one global scale
+fitted on development frames; it keeps $\bar\sigma$ when fewer than 10\% of the pixels in $\mathcal{F}_t$ fall in
+this window. This is the ground-plane constraint of monocular visual
+odometry~\cite{song2014robust} applied per frame. Pose comes from dead reckoning over the executed actions,
+\begin{equation}
+\hat x_{t+1}=\hat x_t+0.25\,o_t\big(\alpha_f e_f(\hat\theta_t)+\alpha_r e_r(\hat\theta_t)\big),
+\label{eq:deadreckon}
+\end{equation}
+with $(\alpha_f,\alpha_r)\in\{(\pm1,0),(0,\pm1)\}$ the translation of $u_t$, and heading and tilt advanced by the
+turn or tilt of $u_t$ when $o_t=1$.
 
 \noindent\textbf{Explicit stopping.}
-EB-Navigation ends an episode automatically on success; RoboTHOR requires a Stop action. There, the agent stops
-only when it is within 0.9\,m of a committed hypothesis, has turned within 20$^\circ$ of it and tilted it into
-view, and a fresh presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes
-last up to 500 steps, a missed detection counts as negative evidence only within 3\,m and once per view.
-Exploration goes to the nearest frontier cell more than 1.3\,m away and more than 1\,m from every visited
-position, and when no frontier remains the agent returns to the hypothesis with the highest evidence ever reached.
+EB-Navigation ends an episode on success; RoboTHOR requires a Stop action. There the agent stops only when it is
+within 0.9\,m of a committed hypothesis, has turned within 20$^\circ$ of it and tilted it into view, and a fresh
+presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps,
+negative evidence counts only within 3\,m and once per view, and exploration goes to the nearest frontier.
 
 \noindent\textbf{Information access.}
-The VLM sees only the current image, a crop or tile of it, and the target phrase. The controller sees depth,
-pose, and the executed action with its success flag. The oracle planner used in \cref{sec:diagnosis} keeps the
-same map and A* planner and replaces the hypothesis memory with the true target position.
+The VLM sees only the current image, a crop or tile of it, and $s$; the controller sees depth, pose, and each
+action's success flag. Neither receives the target position or simulator object state.

@@ -2,59 +2,47 @@
 \label{sec:related}
 
 \noindent\textbf{MLLM agents for embodied tasks.}
-EmbodiedBench~\cite{yang2025embodiedbench} evaluates multimodal LLMs on high-level and low-level embodied tasks
-through a standardized action interface; Embodied Agent Interface~\cite{li2024embodied} and
-NavBench~\cite{qiao2025navbench} probe embodied decision making and navigation reasoning. One line of work
-improves such agents by embodied pre-training, online reinforcement learning, or policy-level
-reasoning~\cite{chen2025transforming,wang2025vagen,zhang2025embodiedx,liu2025robogpt,anon2026policy}; another
-improves them at test time with reflection, experience, memory, or
+EmbodiedBench~\cite{yang2025embodiedbench} evaluates multimodal LLMs on high- and low-level embodied tasks through
+a standardized action interface; Embodied Agent Interface~\cite{li2024embodied} and NavBench~\cite{qiao2025navbench}
+probe embodied decision making and navigation reasoning. Agents are improved by embodied pre-training, online
+reinforcement learning, or policy-level reasoning~\cite{chen2025transforming,wang2025vagen,zhang2025embodiedx,liu2025robogpt},
+or at test time with reflection, experience, memory, or
 tools~\cite{shinn2023reflexion,zhao2023expel,chen2024automanual,wang2024agent,lei2025robomemory,ma2026brainmem,lee2026emho,zhou2026enabling,singhi2026think}.
-On EB-Navigation, the strongest reported results draw the ground-truth target box into a simulator-rendered
-bird's-eye view, optionally with reinforcement fine-tuning~\cite{wang2025seenav}, or let an 8B or larger model
-call a library of perception and mapping tools~\cite{zhou2026enabling}. These methods keep the model in charge of
-the plan. \ours instead removes planning from the model: the VLM is a semantic sensor, and state estimation and
-action selection are explicit.
+On EB-Navigation, the strongest reported agents draw the ground-truth target box into a simulator-rendered
+bird's-eye view and add reinforcement fine-tuning~\cite{wang2025seenav}, or let an 8B or larger model call a
+library of perception and mapping tools~\cite{zhou2026enabling}. Both keep the model in charge of the plan. \ours
+removes planning from the model: the VLM is a sensor whose answers feed an explicit estimator and planner.
 
-\noindent\textbf{Zero-shot object navigation with foundation models.}
+\noindent\textbf{Zero-shot object navigation and semantic memory.}
 Modular zero-shot ObjectNav combines open-vocabulary perception, a map of explored space, and a planner.
 CoW~\cite{gadre2022cows} pairs open-vocabulary localization with frontier exploration; later systems build
-vision-language value maps~\cite{yokoyama2023vlfm}, online scene graphs reasoned over by an
-LLM~\cite{yin2024online,huang2025msgnav}, universal goal graphs~\cite{yin2025unigoal}, world
-models~\cite{nie2025wmnav}, cognitive state machines~\cite{cao2024cognav}, or structured representations queried
-by a VLM~\cite{zhu2025strive}. Instruction-following systems similarly ground language in maps and scene
-graphs~\cite{long2024instructnav,rana2023sayplan,werby2024hierarchical}. Closest to our memory, ApexNav fuses
-target-centric detections over time~\cite{zhang2025apexnav}, and AECNav consolidates detections into beliefs that
-treat expected but absent detections as negative evidence~\cite{liu2026aecnav}. \ours shares the view that the
-map must keep evidence outside the current image, but uses a small generative VLM as its only perception model
-and keeps a short list of metric target hypotheses instead of a semantic map or scene graph.
+vision-language value maps~\cite{yokoyama2023vlfm}, scene graphs reasoned over by an
+LLM~\cite{yin2024online,huang2025msgnav}, goal graphs~\cite{yin2025unigoal}, world models~\cite{nie2025wmnav},
+cognitive state machines~\cite{cao2024cognav}, or structured representations queried by a
+VLM~\cite{zhu2025strive}; instruction-following agents ground language in maps and scene
+graphs~\cite{long2024instructnav,rana2023sayplan,werby2024hierarchical}. Open-vocabulary 3D scene
+graphs~\cite{gu2023conceptgraphs,werby2024hierarchicalx}, online semantic maps~\cite{jiang2025dualmap},
+language-embedded fields~\cite{qin2023langsplat,katragadda2025online,lee2026embodiedsplat}, and embodied
+memories~\cite{yang2024scene,anwar2024remembr,ginting2025enter} attach semantics to geometry. Closest to our memory,
+ApexNav fuses target-centric detections over time~\cite{zhang2025apexnav}, and AECNav treats expected but absent
+detections as negative evidence~\cite{liu2026aecnav}. \ours sits at the minimal end of this spectrum: a small
+generative VLM is its only perception model, and its memory is a short list of metric target hypotheses rather
+than a dense semantic map or scene graph.
 
-\noindent\textbf{3D semantic representations and memory.}
-Open-vocabulary 3D scene graphs~\cite{gu2023conceptgraphs,werby2024hierarchicalx}, online semantic
-maps~\cite{jiang2025dualmap}, and language-embedded radiance or Gaussian
-fields~\cite{qin2023langsplat,katragadda2025online,lee2026embodiedsplat} attach semantics to geometry, and
-embodied memory systems keep spatial and temporal context available after it leaves the
-image~\cite{yang2024scene,anwar2024remembr,ginting2025enter}. \ours sits at the minimal end of this spectrum: a
-grounded box is lifted with depth and pose to one metric point, and nearby points are fused. This keeps the
-memory small enough for a single consumer GPU shared with the simulator.
-
-\noindent\textbf{Grounding, verification, and zoom.}
+\noindent\textbf{Verification and search.}
 Set-of-Mark prompting~\cite{yang2023mark} and PIVOT~\cite{nasiriany2024pivot} make VLM decisions spatially
-explicit, and navigation can be cast as visual question answering over depth-derived
-options~\cite{goetting2024navigation}. Verification and test-time computation improve embodied
-decisions~\cite{kwok2025robomonkey,dao2026direct,choi2026scale}, and calibrated uncertainty lets robots defer or
-keep exploring~\cite{ren2023robots,liang2024introspective,ren2024explore}. \ours re-checks an uncertain box on a
-magnified crop and tiles the frame when nothing is found, and spends these extra queries only when the evidence
-is weak.
+explicit, navigation can be posed as visual question answering over depth-derived
+options~\cite{goetting2024navigation}, and verification, test-time computation, and calibrated uncertainty improve
+embodied decisions~\cite{kwok2025robomonkey,dao2026direct,choi2026scale,ren2023robots,liang2024introspective,ren2024explore}.
+\ours spends extra queries, a magnified crop or a tiled view, only where the evidence is weak, and chooses among
+candidate targets with the probability-to-cost index of optimal sequential search~\cite{kadane1977optimal}.
 
 \noindent\textbf{Geometry from images.}
 Learned reconstruction and depth priors recover geometry from
-RGB~\cite{wang2025vggt,murai2024mast,maggio2025vggt,wen2025foundationstereo,yang2024depthv2,lin2025depth}, and
-the choice of sensors can change the conclusions of embodied
-evaluations~\cite{corlito2026sensor,wang2025rethinking,cai2025navdp}. We therefore report \ours both with a depth
-sensor and with a monocular depth estimate.
-
-\noindent\textbf{Concurrent work.}
-Li et al.~\cite{li2026structure} also run Qwen3-VL-4B zero-shot and treat its answers as evidence rather than
-actions, accumulating per-direction scores in a bird's-eye semantic field for vision-language navigation. \ours
-targets object navigation, lifts VLM boxes to metric 3D hypotheses, and is evaluated on the full official splits
-of two object-navigation benchmarks.
+RGB~\cite{wang2025vggt,murai2024mast,maggio2025vggt,wen2025foundationstereo,yang2024depthv2,lin2025depth}, and the
+choice of sensors can change the conclusions of embodied evaluations~\cite{corlito2026sensor,wang2025rethinking,cai2025navdp}.
+Monocular visual odometry fixes its scale from the ground plane and the known camera
+height~\cite{song2014robust}; \ours applies the same constraint to every frame of a monocular metric depth network.
+Concurrently, Li \etal~\cite{li2026structure} run Qwen3-VL-4B zero-shot and accumulate its answers as per-direction
+scores in a bird's-eye field for vision-language navigation; \ours lifts boxes to metric target hypotheses for
+object navigation.

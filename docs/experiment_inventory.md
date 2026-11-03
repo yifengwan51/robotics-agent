@@ -228,3 +228,128 @@ running queue finishes.
   so outputs are unchanged; it had grown the Qwen3 EngineCore to 6.7 GB RSS under S2M (2.5 GB without it).
   Runs before 2026-10-30 13:58 used the default cache.
 - `queues/rgb_only_dev.txt` job 1 left its depth server running (1.3 GB) and blocked job 3; job 1 now stops it.
+
+## Addendum 2026-10-30 (evening): RGB-only S2M on DEV
+
+Queue `queues/rgb_only_dev2.txt` (unit `robotics-rgbonly`), Qwen3-VL-4B, 150 dev episodes, pose by dead reckoning
+from executed actions (`--odom actions`).
+
+| Dev config | SR |
+|---|---|
+| simulator depth, `--odom actions` (`gt_depth_odom_actions`) | 72.7 |
+| DA-V2 Small, global scale (`rgbonly_small`) | 50.0 |
+
+Depth, not pose, causes the drop: the 75th-percentile distance from the target to its closest detection grows from
+0.19 to 0.45 m, lost-after-seen failures from 20 to 38 and approach failures from 10 to 25; the rejected-action rate
+is unchanged (3.1%).
+
+`scripts/probe_floor_scale.py` (120 dev start views, DA-V2 Base): with the single global scale 38.6% of floor
+pixels within 5 m are lifted above the 0.10 m obstacle threshold. A per-frame scale that puts the floor at the known
+camera height (`embagent/depth_est.floor_scale`, mode within x1.33 of the global scale) lowers this to 9.1% with
+obstacle->floor errors 1.0% (global 0.7%), AbsRel 0.117 -> 0.106, median |log scale error| 0.064 -> 0.036.
+Exposed as `--depth est_floor`; job 5 of the queue runs it on dev (`rgbonly_base_floor`).
+
+DA-V2 Base, global scale (`rgbonly_base`): 52.0 on dev. Recall@1 m equals simulator depth (90.7), but 39 of its 72
+failures reach a hypothesis lying within 1 m of the target and exhaust it from just outside the success radius
+(simulator depth: 5 of 41); those hypotheses are 0.42 m off (simulator depth 0.09 m). Target detections are lifted
+at 0.90 of the true range (simulator depth 0.97), 0.87 at 1.5-2.5 m. On the 120 probe frames, the floor scale moves
+the median range ratio of furniture and objects at 1.5-4 m from 0.966/0.961 to 0.997/1.003 (IQR 0.92-1.04 -> 0.97-1.02).
+
+DA-V2 Base + range-weighted fusion (`rgbonly_base_rw`): 49.3 on dev; the bias is systematic (detections at 0.91 of
+the true range), so reweighting does not remove it; same 39 exhausted-short failures. Not adopted.
+
+Pre-registered before it runs: `final_r4` (EB test, main config, repeat 4) is queued to measure tokens per episode on
+the test set. The planner code differs from `runs/frozen/s2m_v5_eb` only by token logging and the opt-in
+`pos_weight` (default reproduces the plain mean), so it is a fourth repeat and is reported with r1-r3 regardless of
+its success rate.
+
+Simulator depth + range-weighted fusion (`gtdepth_rw`, exact pose): 75.3 on dev versus 74.7 for v5 (same depth and
+pose, uniform weights). Not adopted.
+
+DA-V2 Base + per-frame floor scale (`rgbonly_base_floor`): 62.7 on dev (73.3/70.0/73.3/36.7/60.0) versus 52.0
+with the global scale; exhausted-short failures 39 -> 24, rejected actions 2.5% -> 2.0%. Selected and frozen in
+`runs/frozen/s2m_rgbonly_eb`. Queued on EB test after `final_r4`: `rgbonly_floor_r1`, `rgbonly_global_r1`
+(ablation), `rgbonly_floor_r2`. Dev tuning of the RGB-only agent stops here.
+
+`final_r4` (EB test, main config): 79.0 (90.0/83.3/88.3/51.7/81.7), vs r1 -0.7 pp (5/7 discordant, p=0.77). 4-run
+mean 79.4 [75.0, 83.7] (3-run 79.6); paired gain over the EB prompt +31.4 [+24.8, +37.9]. Tokens per episode:
+14,425 prompt / 513 completion over 52.6 calls (274 / 9.7 per call); EB prompt 28,766 / 2,425 over 8.2 calls.
+Paper, tables (tab_main, supp paired and recall tables), scripts/paper_diagnostics.py, make_tables.py and
+make_results_figure.py now use runs 1-4.
+
+`rgbonly_floor_r1` (EB test, RGB only): 76.3 [71.3, 81.0] (85.0/80.0/83.3/55.0/78.3); vs EB prompt +28.3
+[+21.3, +35.0], 111/26, p=1e-13; vs exact-depth final_r1 -3.3 [-7.0, +0.3], 10/20, p=0.099. Failures reaching a
+true-target hypothesis and exhausting it from outside 1 m: 10 (exact depth 0; earlier Small/global/sim-pose
+variant 77). Test start-view probe (240 views): floor->obstacle 42.5% (global) -> 9.9% (floor), AbsRel 0.134 ->
+0.115.
+
+`rgbonly_global_r1` (EB test, RGB only, Base, global scale): 53.0 [47.3, 58.7] (56.7/58.3/60.0/36.7/53.3); vs EB
+prompt +5.0 (74/59, p=0.22; Long +41.7); floor - global +23.3 [+17.3, +29.3], 85/15, p=4.8e-13; 66 exhausted-short
+failures; target range ratio 0.90 (floor 0.94). Paper: Depth paragraph rewritten around the RGB-only pair,
+tab_abl sensing rows (Holm now over eleven variants; fusion 1.9e-4, crop check 0.63), tab_taxonomy, supp paired
+table. Remaining: `rgbonly_floor_r2`, then headline = mean of floor r1/r2.
+
+`rgbonly_floor_r2` (EB test): 76.7 [72.0, 81.3] (85.0/81.7/88.3/50.0/78.3); vs r1 7/6 discordant, p=1; vs EB prompt
+113/27, p=1e-13. RGB-only 2-run mean 76.5 [71.8, 81.0]; vs EB prompt +28.5 [+21.7, +35.2]; vs the 4 depth-sensor
+runs -2.9 [-6.3, +0.3]. Queue `queues/rgb_only_dev2.txt` finished 2026-10-31 00:03 (all jobs exit 0). Paper headline
+uses the 2-run mean; tab_abl and the paired analyses use run 1 like every other variant.
+
+## Addendum 2026-11-02: is the Qwen2.5-VL-3B EB-prompt baseline (6.3%) an artifact of our setup?
+
+Read-only audit: call path, prompt, parser, plan execution, frames and action ids match EmbodiedBench's own code
+(Qwen3-VL-4B scores 48.0 through the same path; S2M + Qwen2.5 70.0 on the same server). Two untested deviations from
+how EmbodiedBench ran open models (unquantized HF checkpoints, lmdeploy/vLLM with the model's default generation
+config): (1) 4-bit AWQ weights; (2) `--generation-config vllm`, which drops Qwen2.5-VL's `repetition_penalty: 1.05`
+(Qwen3-VL's generation_config has none). External references: EmbodiedBench Qwen2.5-VL-7B 20.3, Qwen2-VL-7B 14.0;
+SeeNav-Agent (arXiv 2512.02631, own prompt, 60 tasks) zero-shot Qwen2.5-VL-3B 16.7.
+
+Pre-registered before any run. DEV ladder (150 episodes each, bounded schema as in eb_bounded_r1):
+  D1 AWQ, greedy (current)            exp eb_bounded_dev
+  D2 AWQ, repetition_penalty 1.05      exp eb_bounded_rp105_dev
+  D3 FP8-Dynamic weights (RedHatAI/Qwen2.5-VL-3B-Instruct-FP8-Dynamic), repetition_penalty 1.05
+Decision: the TEST baseline is rerun with the D-config of highest dev SR, ties (within 3 pp) going to the more
+faithful config (D3 > D2 > D1); if that is D1, the existing eb_bounded_r1 stands. The baseline only gains from
+this choice. S2M runs are not rerun. Dev numbers are diagnostics and are not reported as results.
+
+DEV ladder results: D1 AWQ greedy 8.7 (6.7/20.0/3.3/10.0/3.3); D2 AWQ + rp 1.05 9.3; D3 FP8 + rp 1.05 at 126/150
+already 44 successes (>= 29.3 whatever the remaining 24 episodes give; Base 33.3, Common 43.3, Complex 46.7, Visual
+23.3). The cause is the 4-bit AWQ checkpoint of Qwen2.5-VL-3B, not decoding. Per the rule, the TEST baseline is
+rerun as `eb_Qwen2.5-VL-3B-Instruct-FP8-Dynamic_eb_bounded_rp105_r1` (queued as job 5).
+Extension decided now, before any Qwen3 FP8 result: the Qwen3-VL-4B EB baseline (48.0) also used AWQ weights
+(third-party llm-compressor AWQ, int4 group 32), so it is rerun on TEST with Qwen's official FP8 checkpoint
+(Qwen/Qwen3-VL-4B-Instruct-FP8), same schema and decoding as eb_official_r1. The paper's EB baseline rows become the
+FP8 runs whatever they score; the AWQ rows move to the supplement. S2M is not rerun (user instruction), so the
+paper compares S2M with 4-bit weights against the baseline with 8-bit weights, and says so.
+
+TEST `eb_Qwen2.5-VL-3B-Instruct-FP8-Dynamic_eb_bounded_rp105_r1`: 20.3 [16.0, 25.0] (21.7/21.7/28.3/20.0/10.0),
+3,156 calls, 0 decode failures, all finish=stop, completion tokens p50 183. Against the AWQ run eb_bounded_r1 (6.3):
++14.0 [+8.7, +19.3], 58/16, p=9.7e-7. S2M (AWQ, final_r1, 70.0) - EB FP8: +49.7 [+43.0, +56.3], 163/14,
+p=2.3e-33; per subset +56.7/+50.0/+43.3/+33.3/+65.0. Plans at the 20-action cap 3.2% (AWQ 14.8%); action id agrees
+with action name 99.6% / 95.7% for first / later plan items (AWQ 92.6% / 79.3%): the AWQ checkpoint is what produces
+the loops and the id-name inconsistency. 20.3 equals EmbodiedBench's own Qwen2.5-VL-7B result.
+
+Qwen3-VL-4B FP8 TEST (`eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1`), started 15:08: three automatic server attempts
+failed because vLLM picked the DeepGEMM FP8 kernel, which needs nvcc (absent). Test starts then showed: without
+DeepGEMM (CUTLASS block-scaled kernel) the 5.7 GiB weights leave 0.15 GiB of KV cache; with 1 GB offloaded to CPU
+the bf16 KV cache holds 8,960 tokens, enough for the 8192 window. Running with VLLM_USE_DEEP_GEMM=0,
+--cpu-offload-gb 1, --enforce-eager, util 0.84, same prompt/schema/decoding as eb_official_r1. ~78 s/episode.
+
+## 2026-11-02: manuscript rebuilt for submission
+
+Main text only (8 pages), no supplement. Every number in the text, both result tables and all figure data come from
+`scripts/paper_assets.py` (TEST records -> `sec/numbers.tex`, `tab_main.tex`, `tab_abl.tex`,
+`paper/figures/paper_data.json`); figures from `scripts/make_paper_figures.py` and `scripts/make_trajectory_figure.py`
+(which also writes its caption from the records). `scripts/build_paper.sh` runs all of it and compiles. The asset
+script also checks every qualitative statement of the text (e.g. "gain on every subset", "fusion is the only
+significant component") and prints FAIL if a number contradicts it.
+Statistics: repeated configurations enter as per-episode means; bootstrap CIs; sign-flip permutation tests
+(10^6 samples, reported as p<1e-5 at the resolution limit), Holm over the ten rows of the components table; exact
+McNemar for single binary runs. EB-prompt baselines use FP8 weights (S2M AWQ), stated in the setup and table caption.
+Partial Qwen3 FP8 EB (118/300, 18:40): Base 66.7 (AWQ 65.0 on the same episodes), Common 65.5 (65.5).
+
+TEST `eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1` (finished 2026-11-03 00:08): 55.0 [49.3, 60.7]
+(66.7/65.0/65.0/53.3/25.0); 1 of 2,342 replies unparseable. Against its AWQ run (48.0): +7.0 [+0.7, +13.3], 58/37,
+p=0.04, mostly Visual (+15.0) and Long (+13.3). S2M (4-bit, 4 runs) - EB FP8: +24.4 [+18.0, +30.8], p<1e-5; per subset
++22.9/+19.2/+23.3/-0.4/+57.1 -> S2M does not beat the 8-bit EB prompt on Visual (p=1.00); the paper says so. RGB-only:
++21.5; RGB global scale: -2.0 (p=0.65). Qwen2.5: S2M 70.0 vs EB FP8 20.3 (+49.7). Paper rebuilt with
+scripts/build_paper.sh: 8-page body, all 21 claim checks pass, trajectory panels = first matching episode per subset.

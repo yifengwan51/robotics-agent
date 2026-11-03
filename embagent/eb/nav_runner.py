@@ -29,6 +29,7 @@ def _depth_model():
 # settings that change episode outcomes, normalized for comparison (older args.json files lack some keys)
 _RESULT_KEYS = {
     "planner": lambda a: a.get("planner"), "model": lambda a: a.get("model"), "n_shots": lambda a: a.get("n_shots"),
+    "chat_history": lambda a: bool(a.get("chat_history", False)),
     "resolution": lambda a: a.get("resolution"), "data": lambda a: os.path.abspath(a["data"]) if a.get("data") else "",
     "s2m": lambda a: json.loads(a.get("s2m") or "{}"), "depth": lambda a: a.get("depth", "gt"),
     "odom_noise": lambda a: [float(x) for x in a.get("odom_noise", (0.0, 0.0))], "repeat": lambda a: a.get("repeat", 0),
@@ -112,11 +113,17 @@ class Sensors:
         return dict(self.est)
 
     def __call__(self, obs):
+        obs = self._pose(obs)
+        if self.depth != "gt":
+            from embagent.depth_est import estimate
+            # est_floor: per-frame scale from the floor, using the camera tilt of the agent's own pose estimate
+            obs["depth"] = estimate(obs["rgb"], floor_fit=self.depth == "est_floor",
+                                    horizon=obs["pose"].get("horizon", 0.0))
+        return obs
+
+    def _pose(self, obs):
         import math
 
-        if self.depth == "est":
-            from embagent.depth_est import estimate
-            obs["depth"] = estimate(obs["rgb"])
         if self.odom == "actions":
             obs["true_pose"] = obs["pose"]
             obs["pose"] = self._dead_reckon(obs["pose"])
@@ -283,10 +290,14 @@ def main():
     ap.add_argument("--workers", type=int, default=2)
     ap.add_argument("--resolution", type=int, default=500)
     ap.add_argument("--n-shots", type=int, default=3)
+    ap.add_argument("--chat-history", action="store_true",
+                    help="EB prompt: send the previous turns with their images (the EmbodiedBench paper's EB-Navigation "
+                         "setting; the released config file has it off)")
     ap.add_argument("--platform", default="cloud", choices=["cloud", "linux64"])
     ap.add_argument("--data", default="", help="dataset dir (default: official EB test set); e.g. data/eb_nav_dev")
     ap.add_argument("--s2m", default="{}", help='JSON kwargs for the s2m planner, e.g. \'{"commit": 1.2}\'')
-    ap.add_argument("--depth", default="gt", choices=["gt", "est"], help="est: monocular depth (embagent/depth_est.py)")
+    ap.add_argument("--depth", default="gt", choices=["gt", "est", "est_floor"],
+                    help="est: monocular depth (embagent/depth_est.py); est_floor: with per-frame floor scale")
     ap.add_argument("--odom-noise", nargs=2, type=float, default=[0.0, 0.0], metavar=("SIG_T", "SIG_R_DEG"))
     ap.add_argument("--odom", default="sim", choices=["sim", "actions"],
                     help="actions: pose by dead reckoning from executed actions and their success (RGB-only setting)")
@@ -324,8 +335,8 @@ def main():
     record = dict(vars(args), vlm_extra_body=json.loads(os.environ.get("VLM_EXTRA_BODY") or "{}"),
                   vlm_max_tokens=int(os.environ.get("VLM_MAX_TOKENS", "4096")),
                   vlm_schema_bounds=json.loads(os.environ.get("VLM_SCHEMA_BOUNDS") or "{}"),
-                  depth_model=_depth_model() if args.depth == "est" else "",
-                  depth_calib=os.path.basename(os.environ.get("DEPTH_CALIB") or "depth_calib.json") if args.depth == "est" else "")
+                  depth_model=_depth_model() if args.depth != "gt" else "",
+                  depth_calib=os.path.basename(os.environ.get("DEPTH_CALIB") or "depth_calib.json") if args.depth != "gt" else "")
     args_path = os.path.join(out_dir, "args.json")
     if os.path.exists(args_path):
         mismatch = {k: (old, new) for k, (old, new) in
@@ -337,7 +348,7 @@ def main():
         with open(args_path, "w") as f:
             json.dump(record, f, indent=1)
 
-    planner_kw = dict(planner=args.planner, model_name=args.model, n_shots=args.n_shots,
+    planner_kw = dict(planner=args.planner, model_name=args.model, n_shots=args.n_shots, chat_history=args.chat_history,
                       resolution=args.resolution, platform=args.platform,
                       data=os.path.abspath(args.data) if args.data else "", s2m=json.loads(args.s2m),
                       depth=args.depth, odom_noise=args.odom_noise, repeat=args.repeat, odom=args.odom)

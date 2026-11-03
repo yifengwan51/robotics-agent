@@ -97,15 +97,39 @@ def _ray_to_planar(size, fov):
     return f / np.sqrt(f ** 2 + (u - c) ** 2 + (v - c) ** 2)
 
 
-def estimate(rgb, fov=100.0):
-    """Planar metric depth with the global calibration fitted once on DEV frames (scripts/calib_depth.py)."""
+def floor_scale(raw, prior, fov=100.0, horizon=0.0, cam_h=1.576, window=1.33):
+    """Per-frame scale that puts the floor at the known camera height (scripts/probe_floor_scale.py, DEV only).
+    A pixel whose ray points at least 15 deg below the horizontal lies on the floor at scale h / (raw * k), with
+    k the downward ray component per unit planar depth; objects standing on the floor give larger values. The
+    scale is the mode of these values within `window` of the global prior, or the prior if too few support it."""
+    size = raw.shape[0]
+    f = (size / 2) / np.tan(np.radians(fov) / 2)
+    v = (np.arange(size, dtype=np.float32)[:, None] - size / 2) / f
+    h = np.radians(horizon)
+    k = np.broadcast_to(np.sin(h) + v * np.cos(h), raw.shape)
+    m = (k > np.tan(np.radians(15))) & (raw > 0.05)
+    if not m.any():
+        return prior
+    s = np.log(cam_h / (k[m] * raw[m]))
+    s = s[np.abs(s - np.log(prior)) < np.log(window)]
+    if s.size < 0.1 * m.sum():
+        return prior
+    hist, edges = np.histogram(s, bins=40)
+    i = int(np.argmax(hist))
+    return float(np.exp(np.median(s[np.abs(s - (edges[i] + edges[i + 1]) / 2) < 0.05])))
+
+
+def estimate(rgb, fov=100.0, floor_fit=False, horizon=0.0, cam_h=1.576):
+    """Planar metric depth with the global calibration fitted once on DEV frames (scripts/calib_depth.py);
+    floor_fit replaces the global scale by the per-frame floor_scale around it."""
     global _calib
     if _calib is None:
         _calib = json.load(open(CALIB)) if os.path.exists(CALIB) else {"scale": 1.0, "ray": False}
-    d = estimate_raw(rgb) * _calib["scale"]
+    raw = estimate_raw(rgb)
     if _calib.get("ray"):
-        d = d * _ray_to_planar(rgb.shape[0], fov)
-    return d.astype(np.float32)
+        raw = raw * _ray_to_planar(rgb.shape[0], fov)
+    scale = floor_scale(raw, _calib["scale"], fov, horizon, cam_h) if floor_fit else _calib["scale"]
+    return (raw * scale).astype(np.float32)
 
 
 if __name__ == "__main__":

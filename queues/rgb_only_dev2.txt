@@ -1,0 +1,23 @@
+# RGB-only S2M on EB-Navigation DEV (150 episodes): monocular depth + pose from action feedback.
+# Continues queues/rgb_only_dev.txt (interrupted by a reboot) and adds range-weighted fusion for estimated depth.
+# Line format:  MODEL_DIR | MAX_LEN | GPU_UTIL | command
+# 1) resume RGB-only with DA-V2 Small (38/150 done)
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Small && /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_small --data data/eb_nav_dev --workers 2 --depth est --odom actions
+# 2) RGB-only with DA-V2 Base
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_base --data data/eb_nav_dev --workers 2 --depth est --odom actions
+# 3) RGB-only with DA-V2 Base and range-weighted fusion
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_base_rw --data data/eb_nav_dev --workers 2 --depth est --odom actions --s2m '{"pos_weight": "inv_range2"}'
+# 4) range-weighted fusion with simulator depth (does it change the exact-depth agent?)
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh stop; /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp gtdepth_rw --data data/eb_nav_dev --workers 2 --s2m '{"pos_weight": "inv_range2"}'
+none | 0 | 0 | bash scripts/depth_server.sh stop
+# 5) RGB-only with DA-V2 Base and the per-frame floor scale (scripts/probe_floor_scale.py: dev floor->obstacle 38.6% -> 9.1%)
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_base_floor --data data/eb_nav_dev --workers 2 --depth est_floor --odom actions
+none | 0 | 0 | bash scripts/depth_server.sh stop
+# 6) TEST: main config, run 4 (same code path as final_r1-r3; adds per-call token counts). Reported with r1-r3 whatever it scores.
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp final_r4 --workers 2 --repeat 4
+# 9-11) TEST: RGB-only S2M (frozen in runs/frozen/s2m_rgbonly_eb): Base depth, floor scale, pose from actions; then
+# the same with the global scale (ablation); then a second repeat of the selected config
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_floor_r1 --workers 2 --repeat 1 --depth est_floor --odom actions
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_global_r1 --workers 2 --repeat 1 --depth est --odom actions
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.68 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json /home/ht/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp rgbonly_floor_r2 --workers 2 --repeat 2 --depth est_floor --odom actions
+none | 0 | 0 | bash scripts/depth_server.sh stop

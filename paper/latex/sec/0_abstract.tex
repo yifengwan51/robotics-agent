@@ -1,19 +1,18 @@
 \begin{abstract}
-Multimodal LLM agents navigate homes well when the model is a frontier API, but the small open models that fit
-on a robot do not: prompted with the EB-Navigation benchmark's own planning interface, a 4-bit Qwen3-VL-4B
-solves 48.0\% of the test episodes and only 11.7\% when the target starts behind it. We show that the bottleneck
-is not recognition and not motion planning. A geometric planner given the target position succeeds in 91.3\% of
-the same episodes, and the model boxes a visible target named by category in 69--79\% of single views. What fails is
-the interface, which makes the model track the target, the room, and its own progress through generated text.
-We propose \ours (Semantic-to-Metric), a training-free agent that asks the VLM only what it can answer from the
-current image, namely whether the target is visible and where it is in the frame, and leaves every metric
-decision to geometry. Each answer is lifted into a 3D hypothesis with depth and pose, hypotheses accumulate
-evidence across viewpoints, and a map-based search turns them into actions. With the same 4-bit model on one
-8\,GB consumer GPU, \ours raises EB-Navigation success to 79.6\% ($+31.6$\,pp, mean of three runs, each
-significant at $p{<}10^{-15}$ in a paired test) and Long-horizon success to 82.2\%; with Qwen2.5-VL-3B it
-reaches 70.0\% versus 6.3\%.
-Fusing evidence across views is the component that matters most ($-10.7$\,pp without it). On the 1800-episode
-RoboTHOR ObjectNav validation split, which requires an explicit stop decision, \ours reaches 59.6\% SR, above
-published agents built on GPT-4V and LLaMA-7B. Like standard ObjectNav agents, \ours uses depth and odometry;
-we show that its Long-horizon gain persists with monocular depth estimates.
+Small open vision-language models (VLMs) are poor embodied navigators when they must plan in text. Prompted with
+the EB-Navigation benchmark's own planning interface, Qwen3-VL-4B solves \nEBThree\% of the test episodes and
+\nEBThreeLong\% when the target starts behind the agent. The cause is neither recognition nor motion planning: a
+geometric planner given the target position succeeds in \nOracle\% of the same episodes, and the model boxes a
+visible target of a named or implied category in \nProbeThreeCommon--\nProbeThreeBase\% of single views. The failure lies in the
+interface, which makes the model track the target, the room, and its own progress through generated text. We
+propose \ours (Semantic-to-Metric), a training-free agent that asks the VLM only what the current image can
+answer, namely whether the target is visible and where it is in the frame. A metric hypothesis memory lifts
+these answers with depth and pose, accumulates their evidence over distinct viewpoints, discounts hypotheses that
+should be visible but are not detected, and selects targets with an optimal-search index; an occupancy-map
+planner turns the selection into actions. With the model at 4-bit on one 8\,GB GPU, \ours reaches
+\nSThree\% (${+}\nGainThree$\,pp over the benchmark's agent), \nSThreeLong\% on Long-horizon
+episodes, and \nRGBThree\% without a depth sensor or simulator pose, using monocular depth whose scale is fixed
+by the floor in every frame. With Qwen2.5-VL-3B it reaches \nSTwo\% against \nEBTwo\%. On the \nRoboN-episode
+RoboTHOR validation split, which requires an explicit stop decision, \ours reaches \nRoboSR\% success, above
+ten published zero-shot agents.
 \end{abstract}

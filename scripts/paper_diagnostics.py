@@ -4,7 +4,7 @@
 
 1. SR with bootstrap 95% CI for every formal run.
 2. Paired exact McNemar tests on the 300 shared episodes (EB prompt vs S2M; S2M run 1 vs each variant), with a
-   Holm correction over the nine single-switch variants.
+   Holm correction over the eleven single-switch variants.
 3. Failure taxonomy (scripts/analyze_nav_failures.py) per run.
 4. S2M candidate recall: does any logged detection/hypothesis lie within R of the true target (x-z plane)?
    Exact-pose runs only; the perception log covers all <= 20 steps.
@@ -34,14 +34,16 @@ SHORT = {"base": "Base", "common_sense": "Common", "complex_instruction": "Compl
          "visual_appearance": "Visual", "long_horizon": "Long"}
 RUNS = [("EB prompt, Qwen3", f"eb_{Q3}_eb_official_r1"), ("S2M r1, Qwen3", f"s2m_{Q3}_final_r1"),
         ("S2M r2, Qwen3", f"s2m_{Q3}_final_r2"), ("S2M r3, Qwen3", f"s2m_{Q3}_final_r3"),
-        ("EB prompt, Qwen2.5", f"eb_{Q25}_eb_official_r1"), ("S2M, Qwen2.5", f"s2m_{Q25}_final_r1"),
+        ("S2M r4, Qwen3", f"s2m_{Q3}_final_r4"), ("EB prompt, Qwen2.5", f"eb_{Q25}_eb_official_r1"), ("S2M, Qwen2.5", f"s2m_{Q25}_final_r1"),
         ("Oracle geometry", "oracle_geo_none_ceiling"),
-        ("EB prompt, Qwen2.5, bounded schema", f"eb_{Q25}_eb_bounded_r1")]
+        ("EB prompt, Qwen2.5, bounded schema", f"eb_{Q25}_eb_bounded_r1"),
+        ("S2M RGB only floor r2, Qwen3", f"s2m_{Q3}_rgbonly_floor_r2")]
 VARIANTS = [("no negative evidence", "abl_no_negative"), ("no multi-view fusion", "abl_no_fusion"),
             ("no tiled search", "abl_no_tiles"), ("no crop verification", "abl_no_zoom"),
             ("no look-around", "abl_no_scan"), ("no exhaust-on-arrival", "abl_no_exhaust"),
             ("strongest-first", "abl_strongest_first"), ("estimated depth", "depth_est_r1"),
-            ("odometry noise", "odom_noise_r1")]
+            ("odometry noise", "odom_noise_r1"),
+            ("RGB only, global scale", "rgbonly_global_r1"), ("RGB only, floor scale", "rgbonly_floor_r1")]
 CATS = ["success", "never_seen", "lost_after_seen", "approach_fail", "near_miss", "blocked", "oscillation"]
 LINES = []
 
@@ -87,10 +89,14 @@ def paired_row(a, b):
 def success_rates():
     out("## 1. Success rate with bootstrap 95% CI (300 episodes each)\n")
     rows = []
-    reps = [load(os.path.join(TEST, f"s2m_{Q3}_final_r{i}")) for i in (1, 2, 3)]
+    reps = [load(os.path.join(TEST, f"s2m_{Q3}_final_r{i}")) for i in (1, 2, 3, 4)]
     ks = sorted(set.intersection(*[set(d) for d in reps]))
     m, lo, hi = boot_ci([np.mean([d[k] for d in reps]) for k in ks])
-    rows.append(["S2M 3-run mean, Qwen3 (per-episode mean)", len(ks), f"{m:.1f} [{lo:.1f}, {hi:.1f}]"])
+    rows.append(["S2M 4-run mean, Qwen3 (per-episode mean)", len(ks), f"{m:.1f} [{lo:.1f}, {hi:.1f}]"])
+    rgb = [load(os.path.join(TEST, f"s2m_{Q3}_rgbonly_floor_r{i}")) for i in (1, 2)]
+    kr = sorted(set.intersection(*[set(d) for d in rgb]))
+    m, lo, hi = boot_ci([np.mean([d[k] for d in rgb]) for k in kr])
+    rows.append(["S2M RGB only (floor scale) 2-run mean, Qwen3", len(kr), f"{m:.1f} [{lo:.1f}, {hi:.1f}]"])
     for label, run in RUNS + [(f"S2M {v}", f"s2m_{Q3}_{d}") for v, d in VARIANTS]:
         d = load(os.path.join(TEST, run))
         m, lo, hi = boot_ci([d[k] for k in sorted(d)])  # same episode order as stats.py
@@ -105,8 +111,14 @@ def paired_tests():
                         ("Qwen2.5: S2M - EB prompt", f"eb_{Q25}_eb_official_r1", f"s2m_{Q25}_final_r1"),
                         ("Qwen2.5: S2M - EB prompt (bounded schema)", f"eb_{Q25}_eb_bounded_r1", f"s2m_{Q25}_final_r1"),
                         ("Qwen2.5: EB bounded - EB original schema", f"eb_{Q25}_eb_official_r1", f"eb_{Q25}_eb_bounded_r1"),
+                        ("Qwen3: RGB-only S2M (floor) - EB prompt", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_rgbonly_floor_r1"),
+                        ("Qwen3: RGB-only S2M (global) - EB prompt", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_rgbonly_global_r1"),
+                        ("RGB only: floor - global scale", f"s2m_{Q3}_rgbonly_global_r1", f"s2m_{Q3}_rgbonly_floor_r1"),
+                        ("Qwen3: RGB-only S2M (floor) r2 - EB prompt", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_rgbonly_floor_r2"),
+                        ("RGB only floor: r2 - r1", f"s2m_{Q3}_rgbonly_floor_r1", f"s2m_{Q3}_rgbonly_floor_r2"),
                         ("S2M r2 - r1", f"s2m_{Q3}_final_r1", f"s2m_{Q3}_final_r2"),
-                        ("S2M r3 - r1", f"s2m_{Q3}_final_r1", f"s2m_{Q3}_final_r3")]:
+                        ("S2M r3 - r1", f"s2m_{Q3}_final_r1", f"s2m_{Q3}_final_r3"),
+                        ("S2M r4 - r1", f"s2m_{Q3}_final_r1", f"s2m_{Q3}_final_r4")]:
         n, m, lo, hi, n01, n10, p = paired_row(a, b)
         rows.append([label, n, f"{m:+.1f} [{lo:+.1f}, {hi:+.1f}]", f"{n01}/{n10}", f"{p:.2g}"])
     table(["Comparison", "n", "diff pp (95% CI)", "B-only/A-only wins", "McNemar p"], rows)
@@ -115,12 +127,14 @@ def paired_tests():
     adj = holm([r[6] for r in res])
     rows = [[v, f"{m:+.1f} [{lo:+.1f}, {hi:+.1f}]", f"{n01}/{n10}", f"{p:.2g}", f"{q:.2g}"]
             for (v, _), (_, m, lo, hi, n01, n10, p), q in zip(VARIANTS, res, adj)]
-    table(["Variant vs S2M r1", "diff pp (95% CI)", "variant-only/r1-only wins", "McNemar p", "Holm p (9 tests)"],
+    table(["Variant vs S2M r1", "diff pp (95% CI)", "variant-only/r1-only wins", "McNemar p", "Holm p (11 tests)"],
           rows)
 
     out("Per-subset paired differences (pp; McNemar p in parentheses):\n")
     rows = []
-    for label, a, b in [("S2M r1 - EB prompt (Qwen3)", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_final_r1")] + \
+    for label, a, b in [("S2M r1 - EB prompt (Qwen3)", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_final_r1"),
+                        ("RGB-only floor - EB prompt (Qwen3)", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_rgbonly_floor_r1"),
+                        ("RGB-only global - EB prompt (Qwen3)", f"eb_{Q3}_eb_official_r1", f"s2m_{Q3}_rgbonly_global_r1")] + \
             [(v, f"s2m_{Q3}_final_r1", f"s2m_{Q3}_{d}") for v, d in VARIANTS]:
         da, db = load(os.path.join(TEST, a)), load(os.path.join(TEST, b))
         cells = []
@@ -135,9 +149,11 @@ def paired_tests():
 def taxonomy():
     out("## 3. Outcome taxonomy (episodes; scripts/analyze_nav_failures.py)\n")
     rows = []
-    for label, run in RUNS[:2] + RUNS[4:6] + RUNS[7:8] + [("S2M no fusion", f"s2m_{Q3}_abl_no_fusion"),
+    for label, run in RUNS[:2] + RUNS[5:7] + RUNS[8:9] + [("S2M no fusion", f"s2m_{Q3}_abl_no_fusion"),
                                              ("S2M no look-around", f"s2m_{Q3}_abl_no_scan"),
-                                             ("S2M estimated depth", f"s2m_{Q3}_depth_est_r1")]:
+                                             ("S2M estimated depth", f"s2m_{Q3}_depth_est_r1"),
+                                             ("S2M RGB only, global scale", f"s2m_{Q3}_rgbonly_global_r1"),
+                                             ("S2M RGB only, floor scale", f"s2m_{Q3}_rgbonly_floor_r1")]:
         c = collections.Counter(classify(r) for r in records(run).values())
         rows.append([label] + [c[k] for k in CATS] + [sum(c.values()) - sum(c[k] for k in CATS)])
     table(["Run"] + CATS + ["other"], rows)
@@ -153,7 +169,8 @@ def candidate_recall():
     out("## 4. S2M candidate recall (any logged detection or hypothesis within R of the target, x-z plane)\n")
     rows = []
     for label, run in [("S2M r1, Qwen3", f"s2m_{Q3}_final_r1"), ("S2M r2, Qwen3", f"s2m_{Q3}_final_r2"),
-                       ("S2M r3, Qwen3", f"s2m_{Q3}_final_r3"), ("S2M, Qwen2.5", f"s2m_{Q25}_final_r1")]:
+                       ("S2M r3, Qwen3", f"s2m_{Q3}_final_r3"), ("S2M r4, Qwen3", f"s2m_{Q3}_final_r4"),
+                       ("S2M, Qwen2.5", f"s2m_{Q25}_final_r1")]:
         recs = records(run)
         for radius in (0.5, 1.0):
             cells, fail_split, vis_split = [], [0, 0], [0, 0]

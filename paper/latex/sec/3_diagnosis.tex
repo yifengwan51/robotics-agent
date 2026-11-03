@@ -1,53 +1,63 @@
-\section{Why Small VLM Agents Fail}
+\section{Problem and Diagnosis}
 \label{sec:diagnosis}
 
-\noindent\textbf{Benchmark and baseline.}
-EB-Navigation~\cite{yang2025embodiedbench} places an agent in a single AI2-THOR room~\cite{kolve2017ai2thor}
-with a language instruction that identifies one object. Its test set has five subsets of 60 episodes: Base names
-the object category, Common-sense describes it through its use, Complex embeds it in a longer instruction,
-Visual describes only its appearance, and Long-horizon repeats Base with the agent turned away from the target.
-The agent has eight discrete actions (four 0.25\,m translations, two 90$^\circ$ turns, two 30$^\circ$ camera
-tilts), at most 20 steps, and succeeds when it comes within 1\,m of the target. The benchmark's own agent, which
-we call the \emph{EB prompt}, sends the current RGB image, the instruction, examples, and a text history of
-executed actions and their success messages, and parses a JSON reply into a plan of actions; a reply that cannot
-be parsed is replaced by a random action. All design decisions in this paper were made on a development split
-of 150 episodes built in the same way on 30 iTHOR rooms that the test set does not use. Every number reported
-here comes from the full official test set.
+\noindent\textbf{Task.}
+An episode gives an instruction $\ell$ that identifies one object with floor position $x^\star\in\mathbb{R}^2$.
+At step $t$ the agent observes an RGB frame $I_t$, depth $D_t$, a pose $p_t=(x_t,\theta_t,\phi_t)$ of floor
+position, heading, and camera tilt, and the success flag $o_{t-1}$ of its last action, and it chooses
+$u_t\in\mathcal{U}$: four 0.25\,m translations, two 90$^\circ$ turns, and two 30$^\circ$ tilts. The episode is
+successful if
+\begin{equation}
+\exists\, t\le T:\ \lVert x_t-x^\star\rVert\le 1\,\text{m},\qquad T=20 .
+\label{eq:success}
+\end{equation}
+EB-Navigation~\cite{yang2025embodiedbench} poses this task in single AI2-THOR rooms~\cite{kolve2017ai2thor}; its
+test set has five subsets of 60 episodes. \emph{Base} names the category, \emph{Common} describes the object by
+its use, \emph{Complex} embeds it in a longer instruction, \emph{Visual} describes only its appearance, and
+\emph{Long} repeats Base with the agent turned away from the target.
+
+\noindent\textbf{The benchmark's agent.}
+The benchmark's own agent, the \emph{EB prompt}, maps the image and its text history
+$h_t=(u_{0:t-1},o_{0:t-1})$ directly to a plan,
+\begin{equation}
+(u_t,\dots,u_{t+m})=f(I_t,\ell,h_t),
+\label{eq:ebpolicy}
+\end{equation}
+which is executed until an action fails. All spatial state, where the target was, what the room contains, and how
+the agent has turned, must be carried by $h_t$ and the generated reasoning. \ours factorizes the same decision:
+\begin{equation}
+\begin{gathered}
+(\pi_t,b_t)=f(I_t,s),\\
+\mathcal{B}_t=g(\mathcal{B}_{t-1},\pi_t,b_t,D_t,p_t),\qquad u_t=\rho(\mathcal{B}_t,p_t),
+\end{gathered}
+\label{eq:factor}
+\end{equation}
+where $s$ is a target phrase, $f$ answers only questions about $I_t$, and the metric belief $\mathcal{B}_t$ and the
+planner $\rho$ hold all state and every decision (\cref{sec:method}). The configuration of \ours was fixed on a
+development split of 150 episodes that we built with the benchmark's generator on 30 iTHOR rooms not used by the test
+set.
 
 \noindent\textbf{Planning is not the bottleneck.}
-We give a geometric planner (\cref{sec:method}) the true target position and let it build its map from depth.
-It succeeds in 91.3\% of the 300 test episodes (93.3\% on each of the first four subsets, 83.3\% on
-Long-horizon). Within 20 steps, the rooms and the action set leave ample room for success once the agent knows
-where to go.
+Replacing the target belief of \ours by the true $x^\star$, with the same occupancy map and planner, solves
+\nOracle\% of the 300 test episodes (\nOracleBase\% on each of the first four subsets and \nOracleLong\% on Long).
 
 \noindent\textbf{Single views are informative but unreliable.}
-For every test episode of the first four subsets (Long-horizon reuses the Base scenes) we render the start view
-and the three other 90$^\circ$ headings and ask the VLM for a
-presence probability and a box, scoring against the simulator's instance boxes (IoU${\ge}0.3$). Qwen3-VL-4B boxes
-the visible target in 78.7, 69.3, and 77.3\% of cases on Base, Common-sense, and Complex, and in 49.3\% on Visual;
-Qwen2.5-VL-3B does so in 40.0, 33.3, 37.3, and 18.7\% (75 visible instances per subset). One answer is thus
-useful evidence, but not something an agent should act on alone.
+For each test episode of the first four subsets we render the start view and the three other 90$^\circ$ headings
+and query the VLM with the phrase $s$. Qwen3-VL-4B places a box with IoU${\ge}0.3$ on the visible target in
+\nProbeThreeBase, \nProbeThreeCommon, \nProbeThreeComplex, and \nProbeThreeVisual\% of the views on Base, Common,
+Complex, and Visual (75 visible instances each); Qwen2.5-VL-3B does so in \nProbeTwoBase, \nProbeTwoCommon,
+\nProbeTwoComplex, and \nProbeTwoVisual\%. One answer is useful evidence, but not something to act on alone.
 
-\input{sec/tab_taxonomy}
-
-\noindent\textbf{Prompted agents lose spatial state.}
-We assign every episode one outcome category from its logged trajectory with a first-match rule: never seen,
-near miss (final distance ${\le}1.5$\,m), lost after seen (out of view in the last five steps), blocked (at least
-30\% of actions rejected by the simulator), oscillation (at least three immediate reversals), and otherwise
-approach failure. The simulator's target visibility and distance are used only for this analysis. Of the 156
-episodes that the Qwen3 EB prompt fails, 47 lose a target that was in view, 43 are blocked by collisions, and 26
-end within 1.5\,m (\cref{tab:taxonomy}). In 18 Long-horizon episodes the agent never brings the target into
-view at all. These are failures of remembering and acting on spatial information, which a metric controller can
-hold explicitly.
-
-\noindent\textbf{A 3B model also loops.}
-With Qwen2.5-VL-3B, 21.2\% of the EB prompt's planner calls return JSON that cannot be parsed; their token
-counts show that they run to the 4{,}096-token completion budget before the JSON closes. The benchmark's schema bounds neither the length of a string nor the number of actions, so
-greedy decoding can repeat a sentence or an action until the budget ends. When we add length limits to the schema,
-every output parses, yet the success rate stays the same (5.7 versus 6.3\%, $p{=}0.85$; \cref{app:qwen25}). The
-model still repeats itself, but now within the limits; its low score comes from its plans, not from the parser.
+\noindent\textbf{The prompted agent loses spatial state.}
+We label every failed episode by the first matching rule: the target never enters the view; final distance at
+most 1.5\,m (\emph{near miss}); the target is out of view in the last five steps (\emph{lost after seen}); at least
+30\% of the actions are rejected (\emph{blocked}); at least three immediate reversals; otherwise approach failure.
+Of the \nFailEBThree{} episodes that the EB prompt fails with Qwen3-VL-4B, \nLostEBThree{} lose a target that was in
+view, \nBlockedEBThree{} are blocked by collisions, and \nNearEBThree{} end within 1.5\,m (\cref{fig:analysis}b);
+in \nNeverLongEBThree{} Long episodes the agent never brings the target into view. These are failures of keeping
+and acting on spatial state, which a metric controller holds explicitly.
 
 \noindent\textbf{Design principles.}
-These observations lead to three principles. (i) Ask the VLM only what the current image can settle, with no
-transcript to extend. (ii) Keep the target, the map, and the search state in an explicit metric memory.
-(iii) Treat every answer as weak evidence and act on evidence aggregated over views.
+(i)~Ask the VLM only what the current image settles, with no transcript to extend. (ii)~Keep the target, the map,
+and the search state in an explicit metric memory. (iii)~Treat every answer as weak evidence and act on evidence
+aggregated over viewpoints.

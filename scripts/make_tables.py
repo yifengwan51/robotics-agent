@@ -28,12 +28,13 @@ PUBLISHED = [
     ("InternVL3-8B", "EmbodiedBench", None, 29.3),
     ("Qwen3.5-9B + EMHO (held-out)", "EMHO", [66.7, 60.0, 65.0, 40.0, 51.7], None),
 ]
-MODELS = ["Qwen3-VL-4B-Instruct-AWQ", "Qwen2.5-VL-3B-Instruct-AWQ", "Qwen3.5-4B-AWQ"]
+MODELS = ["Qwen3-VL-4B-Instruct-AWQ", "Qwen2.5-VL-3B-Instruct-AWQ"]
 ABLATIONS = [("abl_no_negative", "w/o negative evidence"), ("abl_no_fusion", "w/o multi-view fusion"),
              ("abl_no_tiles", "w/o magnified tiled search"), ("abl_no_zoom", "w/o crop verification"),
              ("abl_no_scan", "w/o look-around"), ("abl_no_exhaust", "w/o exhaust-on-arrival"),
              ("abl_strongest_first", "strongest-first (no search index)"),
-             ("depth_est_r1", "estimated depth (DA-V2)"), ("odom_noise_r1", "noisy odometry (5%, 2 deg)")]
+             ("depth_est_r1", "estimated depth (DA-V2)"), ("odom_noise_r1", "noisy odometry (5%, 2 deg)"),
+             ("rgbonly_global_r1", "RGB only, global depth scale"), ("rgbonly_floor_r1", "RGB only, floor depth scale")]
 
 
 def run_dir(planner, model, exp):
@@ -73,7 +74,7 @@ def main_table():
         rows.append([f"{name} [{src}]"] + cells + [fmt(avg if avg is not None else (np.mean(subs) if subs else None))])
     for m in MODELS:
         eb = per_subset([run_dir("eb", m, "eb_official_r1")])
-        s2m = per_subset([run_dir("s2m", m, f"final_r{i}") for i in (1, 2, 3)])
+        s2m = per_subset([run_dir("s2m", m, f"final_r{i}") for i in (1, 2, 3, 4)])
         for label, r in [(f"{m} + EB prompt", eb), (f"{m} + S2M (ours)", s2m)]:
             if r is None:
                 rows.append([label] + ["--"] * 6)

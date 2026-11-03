@@ -4,15 +4,18 @@
 
 | Run | n | SR (95% CI) |
 |---|---|---|
-| S2M 3-run mean, Qwen3 (per-episode mean) | 300 | 79.6 [75.1, 83.8] |
+| S2M 4-run mean, Qwen3 (per-episode mean) | 300 | 79.4 [75.0, 83.7] |
+| S2M RGB only (floor scale) 2-run mean, Qwen3 | 300 | 76.5 [71.8, 81.0] |
 | EB prompt, Qwen3 | 300 | 48.0 [42.3, 53.7] |
 | S2M r1, Qwen3 | 300 | 79.7 [75.0, 84.0] |
 | S2M r2, Qwen3 | 300 | 79.0 [74.3, 83.7] |
 | S2M r3, Qwen3 | 300 | 80.0 [75.3, 84.3] |
+| S2M r4, Qwen3 | 300 | 79.0 [74.3, 83.3] |
 | EB prompt, Qwen2.5 | 300 | 5.7 [3.3, 8.3] |
 | S2M, Qwen2.5 | 300 | 70.0 [64.7, 75.0] |
 | Oracle geometry | 300 | 91.3 [88.0, 94.3] |
 | EB prompt, Qwen2.5, bounded schema | 300 | 6.3 [3.7, 9.3] |
+| S2M RGB only floor r2, Qwen3 | 300 | 76.7 [72.0, 81.3] |
 | S2M no negative evidence | 300 | 81.0 [76.7, 85.3] |
 | S2M no multi-view fusion | 300 | 69.0 [63.7, 74.0] |
 | S2M no tiled search | 300 | 78.3 [73.7, 83.0] |
@@ -22,6 +25,8 @@
 | S2M strongest-first | 300 | 80.7 [76.0, 85.0] |
 | S2M estimated depth | 300 | 45.7 [40.3, 51.3] |
 | S2M odometry noise | 300 | 79.3 [74.7, 83.7] |
+| S2M RGB only, global scale | 300 | 53.0 [47.3, 58.7] |
+| S2M RGB only, floor scale | 300 | 76.3 [71.3, 81.0] |
 
 ## 2. Paired comparisons (exact McNemar on shared episodes)
 
@@ -31,26 +36,36 @@
 | Qwen2.5: S2M - EB prompt | 300 | +64.3 [+58.3, +70.0] | 199/6 | 3.8e-51 |
 | Qwen2.5: S2M - EB prompt (bounded schema) | 300 | +63.7 [+58.0, +69.3] | 192/1 | 3.1e-56 |
 | Qwen2.5: EB bounded - EB original schema | 300 | +0.7 [-2.7, +4.0] | 15/13 | 0.85 |
+| Qwen3: RGB-only S2M (floor) - EB prompt | 300 | +28.3 [+21.3, +35.0] | 111/26 | 1e-13 |
+| Qwen3: RGB-only S2M (global) - EB prompt | 300 | +5.0 [-2.7, +12.3] | 74/59 | 0.22 |
+| RGB only: floor - global scale | 300 | +23.3 [+17.3, +29.3] | 85/15 | 4.8e-13 |
+| Qwen3: RGB-only S2M (floor) r2 - EB prompt | 300 | +28.7 [+21.7, +35.3] | 113/27 | 1e-13 |
+| RGB only floor: r2 - r1 | 300 | +0.3 [-2.0, +2.7] | 7/6 | 1 |
 | S2M r2 - r1 | 300 | -0.7 [-2.7, +1.0] | 3/5 | 0.73 |
 | S2M r3 - r1 | 300 | +0.3 [-2.3, +3.0] | 8/7 | 1 |
+| S2M r4 - r1 | 300 | -0.7 [-3.0, +1.7] | 5/7 | 0.77 |
 
-| Variant vs S2M r1 | diff pp (95% CI) | variant-only/r1-only wins | McNemar p | Holm p (9 tests) |
+| Variant vs S2M r1 | diff pp (95% CI) | variant-only/r1-only wins | McNemar p | Holm p (11 tests) |
 |---|---|---|---|---|
 | no negative evidence | +1.3 [-2.0, +4.7] | 15/11 | 0.56 | 1 |
-| no multi-view fusion | -10.7 [-15.7, -6.0] | 12/44 | 2.1e-05 | 0.00017 |
+| no multi-view fusion | -10.7 [-15.7, -6.0] | 12/44 | 2.1e-05 | 0.00019 |
 | no tiled search | -1.3 [-5.0, +2.7] | 15/19 | 0.61 | 1 |
-| no crop verification | -3.0 [-6.0, +0.0] | 6/15 | 0.078 | 0.55 |
+| no crop verification | -3.0 [-6.0, +0.0] | 6/15 | 0.078 | 0.63 |
 | no look-around | +0.0 [-4.7, +4.7] | 26/26 | 1 | 1 |
 | no exhaust-on-arrival | -1.3 [-3.3, +0.7] | 3/7 | 0.34 | 1 |
 | strongest-first | +1.0 [-1.0, +3.0] | 6/3 | 0.51 | 1 |
-| estimated depth | -34.0 [-40.3, -27.7] | 14/116 | 3.6e-21 | 3.3e-20 |
+| estimated depth | -34.0 [-40.3, -27.7] | 14/116 | 3.6e-21 | 4e-20 |
 | odometry noise | -0.3 [-4.0, +3.3] | 14/15 | 1 | 1 |
+| RGB only, global scale | -26.7 [-32.7, -20.7] | 16/96 | 4.4e-15 | 4.4e-14 |
+| RGB only, floor scale | -3.3 [-7.0, +0.3] | 10/20 | 0.099 | 0.69 |
 
 Per-subset paired differences (pp; McNemar p in parentheses):
 
 | Comparison | Base | Common | Complex | Visual | Long |
 |---|---|---|---|---|---|
 | S2M r1 - EB prompt (Qwen3) | +23.3 (0.0026) | +20.0 (0.0075) | +28.3 (0.00022) | +18.3 (0.061) | +68.3 (5.9e-11) |
+| RGB-only floor - EB prompt (Qwen3) | +20.0 (0.012) | +15.0 (0.049) | +23.3 (0.0066) | +16.7 (0.11) | +66.7 (1.1e-10) |
+| RGB-only global - EB prompt (Qwen3) | -8.3 (0.42) | -6.7 (0.54) | +0.0 (1) | -1.7 (1) | +41.7 (4.2e-07) |
 | no negative evidence | +5.0 (0.25) | -1.7 (1) | +0.0 (1) | +1.7 (1) | +1.7 (1) |
 | no multi-view fusion | -10.0 (0.11) | -15.0 (0.012) | -13.3 (0.039) | -15.0 (0.035) | +0.0 (1) |
 | no tiled search | -1.7 (1) | -5.0 (0.38) | -3.3 (0.69) | +3.3 (0.73) | +0.0 (1) |
@@ -60,6 +75,8 @@ Per-subset paired differences (pp; McNemar p in parentheses):
 | strongest-first | +1.7 (1) | +0.0 (1) | +1.7 (1) | -1.7 (1) | +3.3 (0.5) |
 | estimated depth | -38.3 (1.5e-05) | -33.3 (0.00018) | -38.3 (5.6e-06) | -28.3 (7.6e-05) | -31.7 (0.00031) |
 | odometry noise | +3.3 (0.62) | -3.3 (0.62) | +1.7 (1) | -6.7 (0.29) | +3.3 (0.73) |
+| RGB only, global scale | -31.7 (0.00016) | -26.7 (0.00086) | -28.3 (0.00022) | -20.0 (0.0075) | -26.7 (0.0025) |
+| RGB only, floor scale | -3.3 (0.62) | -5.0 (0.38) | -5.0 (0.38) | -1.7 (1) | -1.7 (1) |
 
 ## 3. Outcome taxonomy (episodes; scripts/analyze_nav_failures.py)
 
@@ -73,6 +90,8 @@ Per-subset paired differences (pp; McNemar p in parentheses):
 | S2M no fusion | 207 | 0 | 42 | 19 | 20 | 1 | 11 | 0 |
 | S2M no look-around | 239 | 21 | 12 | 9 | 9 | 0 | 10 | 0 |
 | S2M estimated depth | 137 | 1 | 63 | 36 | 43 | 3 | 17 | 0 |
+| S2M RGB only, global scale | 159 | 0 | 62 | 33 | 25 | 3 | 18 | 0 |
+| S2M RGB only, floor scale | 229 | 0 | 23 | 17 | 20 | 1 | 10 | 0 |
 
 Long-horizon subset only:
 
@@ -92,6 +111,8 @@ Long-horizon subset only:
 | S2M r2, Qwen3 | 1.0 | 98.3 | 95.0 | 96.7 | 68.3 | 96.7 | 91.0 | 23/40 | 15/15 |
 | S2M r3, Qwen3 | 0.5 | 98.3 | 93.3 | 96.7 | 66.7 | 95.0 | 90.0 | 25/35 | 15/13 |
 | S2M r3, Qwen3 | 1.0 | 98.3 | 95.0 | 96.7 | 68.3 | 95.0 | 90.7 | 23/37 | 14/14 |
+| S2M r4, Qwen3 | 0.5 | 98.3 | 93.3 | 96.7 | 63.3 | 96.7 | 89.7 | 27/36 | 18/11 |
+| S2M r4, Qwen3 | 1.0 | 98.3 | 95.0 | 96.7 | 65.0 | 96.7 | 90.3 | 25/38 | 17/12 |
 | S2M, Qwen2.5 | 0.5 | 81.7 | 75.0 | 75.0 | 40.0 | 78.3 | 70.0 | 60/30 | 22/6 |
 | S2M, Qwen2.5 | 1.0 | 83.3 | 78.3 | 76.7 | 41.7 | 80.0 | 72.0 | 56/34 | 22/6 |
 

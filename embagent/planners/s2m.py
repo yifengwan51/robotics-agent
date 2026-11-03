@@ -25,10 +25,12 @@ class Hypothesis:
         self.exhausted = False
         self.peak = w  # highest evidence ever reached (logging / RoboTHOR revisit)
 
-    def merge(self, xz, height, w, view, same_view):
-        n = self.hits
-        self.xz = (self.xz * n + np.asarray(xz)) / (n + 1)
-        self.height = (self.height * n + height) / (n + 1)
+    def merge(self, xz, height, w, view, same_view, pw=1.0):
+        """pw: weight of this observation in the position average (1 for every observation = plain mean)."""
+        n = getattr(self, "pw_sum", self.hits)
+        self.xz = (self.xz * n + pw * np.asarray(xz)) / (n + pw)
+        self.height = (self.height * n + pw * height) / (n + pw)
+        self.pw_sum = n + pw
         self.hits += 1
         # repeated looks from (almost) the same pose add little new information
         self.score += 0.25 * w if same_view else w
@@ -43,7 +45,8 @@ class S2MPlanner(Planner):
     def __init__(self, model_name, merge_radius=0.5, commit=0.8, keep=0.4, inspect=0.35, p_present=0.5,
                  zoom_accept=0.5, neg_weight=0.4, tile_grid=3, max_tile_boxes=4, max_range=6.0,
                  use_negative=True, use_scan=True, use_zoom=True, use_tiles=True, use_exhaust=True,
-                 use_fusion=True, nearest_first=True, tie_margin=0.3, fov=100.0, cam_h=None, core=None, use_contrast=False, **kw):
+                 use_fusion=True, nearest_first=True, tie_margin=0.3, fov=100.0, cam_h=None, core=None, use_contrast=False,
+                 pos_weight="uniform", **kw):
         self.g = Grounder(model_name)
         self.core = core or GeoCore()
         self.fov, self.cam_h = fov, cam_h
@@ -54,6 +57,8 @@ class S2MPlanner(Planner):
         self.use_exhaust, self.use_fusion, self.nearest_first = use_exhaust, use_fusion, nearest_first
         self.tie_margin = tie_margin
         self.use_contrast = use_contrast
+        # "inv_range2": weight positions by 1/range^2, for estimated depth whose error grows with range
+        self.pos_weight = pos_weight
         self.pool = cf.ThreadPoolExecutor(2)
         self.tpool = cf.ThreadPoolExecutor(9)
         self.reset("")
@@ -66,7 +71,7 @@ class S2MPlanner(Planner):
         self.visited, self.explore_goal, self._tiled_views = [], None, set()
         self.core.map = None
         self._last_pose = None
-        self.g.calls = 0
+        self.g.calls = self.g.prompt_tokens = self.g.completion_tokens = 0
 
     def _query(self):
         if self.spec is None:
@@ -127,7 +132,7 @@ class S2MPlanner(Planner):
         lifted = lift_box(box, depth, pose, fov=self.fov, cam_h=self.cam_h)
         if lifted is None or lifted[3] > self.max_range or w <= 0.02:
             return None
-        return np.array(lifted[:2]), lifted[2], w
+        return np.array(lifted[:2]), lifted[2], w, lifted[3]
 
     def _tiled_search(self, rgb, depth, pose, q):
         """Magnified tiles for small/distant targets; every tile box must pass a crop presence check."""
@@ -157,18 +162,21 @@ class S2MPlanner(Planner):
         return round(pose["x"], 1), round(pose["z"], 1), snap_yaw(pose["yaw"])
 
     def _add(self, det, pose):
-        xz, hgt, w = det
+        xz, hgt, w = det[:3]
+        pw = 1.0 / max(det[3], 0.5) ** 2 if self.pos_weight == "inv_range2" and len(det) > 3 else 1.0
         view = (pose["x"], pose["z"], snap_yaw(pose["yaw"]))
         if self.use_fusion:
             for h in self.hyps:
                 if np.linalg.norm(h.xz - xz) < self.merge_radius:
                     same = any(abs(v[0] - view[0]) + abs(v[1] - view[1]) < 0.2 and v[2] == view[2] for v in h.views)
-                    h.merge(xz, hgt, w, view, same)
+                    h.merge(xz, hgt, w, view, same, pw)
                     return
         else:  # ablation: trust the latest single-view detection only
             self.hyps = [h for h in self.hyps if h.exhausted]
             self.cur = None
-        self.hyps.append(Hypothesis(xz, hgt, w, view))
+        h = Hypothesis(xz, hgt, w, view)
+        h.pw_sum = pw
+        self.hyps.append(h)
 
     def _negative_evidence(self, depth, pose, dets):
         """A hypothesis that projects into the image, unoccluded, but is not detected loses evidence."""
@@ -302,4 +310,5 @@ class S2MPlanner(Planner):
 
     @property
     def stats(self):
-        return {"vlm_calls": self.g.calls, "spec": self.spec, "perception_log": self.log[-25:]}
+        return {"vlm_calls": self.g.calls, "vlm_prompt_tokens": self.g.prompt_tokens,
+                "vlm_completion_tokens": self.g.completion_tokens, "spec": self.spec, "perception_log": self.log[-25:]}

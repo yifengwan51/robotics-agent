@@ -10,7 +10,7 @@ for _ in $(seq 1 20); do pgrep -f "[e]mbagent.depth_est --serve" >/dev/null || b
 [ "${1:?model name or stop}" == "stop" ] && exit 0
 cd "$ROOT"
 CUDA_VISIBLE_DEVICES= DEPTH_MODEL="$1" DEPTH_PORT="$PORT" nohup bash -c \
-  'echo 1000 > /proc/self/oom_score_adj; exec ~/miniforge3/envs/vlm/bin/python -m embagent.depth_est --serve --device cpu --threads 8' \
+  'echo 1000 > /proc/self/oom_score_adj; exec nice -n 10 ~/miniforge3/envs/vlm/bin/python -m embagent.depth_est --serve --device cpu --threads ${DEPTH_THREADS:-6}' \
   > "logs/depth_server_$1.log" 2>&1 &
 for _ in $(seq 1 60); do
   sleep 2

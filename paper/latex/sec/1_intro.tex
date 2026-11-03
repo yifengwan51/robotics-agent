@@ -4,11 +4,9 @@
 Multimodal LLM agents now follow open-ended navigation instructions in simulated homes, but the strongest results
 come from frontier models behind an API. On EB-Navigation~\cite{yang2025embodiedbench}, GPT-4o succeeds in
 57.7\% of the episodes, while the open models with at most 8B parameters reach 14.0--29.3\% overall and 0--5\%
-on the Long-horizon subset, in which the target starts behind the agent. Robotics needs exactly these small
-models, because the model has to run on the robot or on a consumer GPU. The training-free improvements reported
-on this benchmark rely on 9B and larger models with experience or memory~\cite{lee2026emho,ma2026brainmem}, on
-libraries of external perception and planning tools~\cite{zhou2026enabling}, or on a simulator-rendered view
-with the ground-truth target box~\cite{wang2025seenav}.
+on the Long-horizon subset, in which the target starts behind the agent. Robots need such small models, which run
+on board or on a consumer GPU; the training-free gains reported on this benchmark use 8B and larger models with
+memory, harnesses, or tool libraries~\cite{lee2026emho,ma2026brainmem,zhou2026enabling}.
 
 \input{sec/fig_arch}
 
@@ -24,11 +22,9 @@ furniture, and in Long-horizon episodes sometimes never turn toward the target (
 These findings suggest a different division of labor. A small VLM should answer only questions that the current
 image can settle, and the spatial state of the agent should live outside the model. \ours (Semantic-to-Metric,
 \cref{fig:arch}b) asks the VLM two things per frame: is the target visible, and where is it. Each answer is
-lifted into a metric target hypothesis with depth and pose. Hypotheses gain evidence from distinct viewpoints,
-lose it when they should be visible but are not detected, and are committed to only once well supported. A
-classical index for sequential search chooses which hypothesis to visit, and an occupancy-map planner computes
-the motion. The agent never acts on one answer of a 4B model; it acts on many cheap answers aggregated in metric
-space.
+lifted into a metric target hypothesis with depth and pose. Hypotheses gain evidence from distinct viewpoints and
+lose it when they should be visible but are not detected; a search index picks which one to visit, and an
+occupancy-map planner computes the motion.
 
 \begin{figure}[t]
 \centering
@@ -43,8 +39,7 @@ Changing the interface changes the outcome (\cref{fig:results}). With Qwen3-VL-4
 \nSThree\% of the EB-Navigation test episodes, ${+}\nGainThree$\,pp over the benchmark's agent with the same
 model, and in \nSThreeLong\% of the Long-horizon episodes, \nOracleGapLong\,pp below the oracle. With
 Qwen2.5-VL-3B~\cite{bai2025qwen25vl} the gain is ${+}\nGainTwo$\,pp. \ours needs \nStepRed\% fewer steps on the
-episodes that both agents solve and \nTokS{}k instead of \nTokEB{}k prompt tokens per episode. Removing multi-view fusion is the costliest
-single ablation. On the RoboTHOR ObjectNav validation split~\cite{deitke2020robothor}, where the agent must decide
+episodes that both agents solve. On the RoboTHOR ObjectNav validation split~\cite{deitke2020robothor}, where the agent must decide
 when to stop, \ours reaches \nRoboSR\% success.
 
 From RGB alone, with monocular depth scaled in every frame by the floor and pose from the executed actions,
@@ -56,5 +51,4 @@ state through text rather than at recognition or motion planning.
 (2)~\ours, a training-free semantic-to-metric interface: per-image presence and box queries, metric target
 hypotheses fused across viewpoints with positive and negative evidence, an optimal-search selection rule, and a
 per-frame ground-plane scale that lets it run from RGB alone.
-(3)~Full-split evaluations on EB-Navigation and RoboTHOR with two model generations and episode-level paired
-statistics, with component, sensing, and failure analyses.
+(3)~Full-split evaluations on EB-Navigation and RoboTHOR with two model generations and paired statistics.

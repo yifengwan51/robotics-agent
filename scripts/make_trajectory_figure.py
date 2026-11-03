@@ -70,7 +70,7 @@ def main():
     plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"],
                          "mathtext.fontset": "stix", "font.size": 7, "axes.titlesize": 7.5})
     floors = json.load(open(os.path.join(ROOT, "paper", "figures", "reachable_positions.json")))
-    fig, axes = plt.subplots(1, 3, figsize=(6.9, 2.3))
+    fig, axes = plt.subplots(1, 3, figsize=(6.9, 2.05))
     facts = []
     for ax, (sub, want, prefer, title) in zip(axes, PANELS):
         ep = pick(sub, want, prefer)

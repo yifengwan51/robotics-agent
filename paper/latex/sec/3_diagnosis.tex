@@ -45,8 +45,7 @@ Replacing the target belief of \ours by the true $x^\star$, with the same occupa
 For each test episode of the first four subsets we render the start view and the three other 90$^\circ$ headings
 and query the VLM with the phrase $s$. Qwen3-VL-4B places a box with IoU${\ge}0.3$ on the visible target in
 \nProbeThreeBase, \nProbeThreeCommon, \nProbeThreeComplex, and \nProbeThreeVisual\% of the views on Base, Common,
-Complex, and Visual (75 visible instances each); Qwen2.5-VL-3B does so in \nProbeTwoBase, \nProbeTwoCommon,
-\nProbeTwoComplex, and \nProbeTwoVisual\%. One answer is useful evidence, but not something to act on alone.
+Complex, and Visual (75 visible instances each). One answer is useful evidence, but not something to act on alone.
 
 \noindent\textbf{The prompted agent loses spatial state.}
 We label every failed episode by the first matching rule: the target never enters the view; final distance at
@@ -54,8 +53,7 @@ most 1.5\,m (\emph{near miss}); the target is out of view in the last five steps
 30\% of the actions are rejected (\emph{blocked}); at least three immediate reversals; otherwise approach failure.
 Of the \nFailEBThree{} episodes that the EB prompt fails with Qwen3-VL-4B, \nLostEBThree{} lose a target that was in
 view, \nBlockedEBThree{} are blocked by collisions, and \nNearEBThree{} end within 1.5\,m (\cref{fig:analysis}b);
-in \nNeverLongEBThree{} Long episodes the agent never brings the target into view. These are failures of keeping
-and acting on spatial state, which a metric controller holds explicitly.
+in \nNeverLongEBThree{} Long episodes the agent never brings the target into view.
 
 \noindent\textbf{Design principles.}
 (i)~Ask the VLM only what the current image settles, with no transcript to extend. (ii)~Keep the target, the map,

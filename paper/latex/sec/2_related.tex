@@ -3,15 +3,13 @@
 
 \noindent\textbf{MLLM agents for embodied tasks.}
 EmbodiedBench~\cite{yang2025embodiedbench} evaluates multimodal LLMs on high- and low-level embodied tasks through
-a standardized action interface; Embodied Agent Interface~\cite{li2024embodied} and NavBench~\cite{qiao2025navbench}
-probe embodied decision making and navigation reasoning. Agents are improved by embodied pre-training, online
+a standardized action interface~\cite{li2024embodied,qiao2025navbench}. Agents are improved by embodied pre-training, online
 reinforcement learning, or policy-level reasoning~\cite{chen2025transforming,wang2025vagen,zhang2025embodiedx,liu2025robogpt},
 or at test time with reflection, experience, memory, or
 tools~\cite{shinn2023reflexion,zhao2023expel,chen2024automanual,wang2024agent,lei2025robomemory,ma2026brainmem,lee2026emho,zhou2026enabling,singhi2026think}.
-On EB-Navigation, the strongest reported agents draw the ground-truth target box into a simulator-rendered
-bird's-eye view and add reinforcement fine-tuning~\cite{wang2025seenav}, or let an 8B or larger model call a
-library of perception and mapping tools~\cite{zhou2026enabling}. Both keep the model in charge of the plan. \ours
-removes planning from the model: the VLM is a sensor whose answers feed an explicit estimator and planner.
+On EB-Navigation, the strongest agents let an 8B or larger model call perception and mapping
+tools~\cite{zhou2026enabling} or render the target into a bird's-eye view~\cite{wang2025seenav}, and keep the model in
+charge of the plan. \ours removes planning from the model: the VLM is a sensor whose answers feed an explicit estimator and planner.
 
 \noindent\textbf{Zero-shot object navigation and semantic memory.}
 Modular zero-shot ObjectNav combines open-vocabulary perception, a map of explored space, and a planner.

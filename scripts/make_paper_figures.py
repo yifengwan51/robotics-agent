@@ -176,8 +176,93 @@ def analysis():
     fig.savefig(os.path.join(FIG, "analysis.pdf"))
 
 
+# backbone size (B parameters) of the open models in tab:main; closed models go to the API column
+SIZE = {"InternVL3-78B": 78, "Qwen2.5-VL-72B": 72, "InternVL3-8B": 8, "Qwen2.5-VL-7B": 7, "Qwen3-VL-8B": 8,
+        "Qwen3-VL-32B": 32, "Qwen3.6-35B-A3B": 35, "Qwen3.8-27B": 27, "Qwen3.5-4B": 4, "Qwen3-VL-4B": 4}
+API = 170
+
+
+def landscape():
+    fig, ax = plt.subplots(figsize=(3.35, 2.45))
+    marks = {"Prompted MLLMs (EmbodiedBench)": ("o", MUTED, MUTED, "prompted MLLM (reported)"),
+             "Training-free agents": ("s", "white", INK2, "training-free agent (reported)"),
+             "Fine-tuned": ("^", "white", INK2, "fine-tuned agent (reported)")}
+    shift = {"Prompted MLLMs (EmbodiedBench)": 0.93, "Training-free agents": 1.07, "Fine-tuned": 0.93}
+    seen = set()
+    for group, name, model, avg in DATA["published"]:
+        m, fc, ec, lab = marks[group]
+        x = SIZE.get(model, API) * shift[group]
+        ax.scatter(x, avg, s=16, marker=m, facecolor=fc, edgecolor=ec, linewidth=0.7, zorder=3,
+                   label=lab if group not in seen else None)
+        seen.add(group)
+    b = DATA["bars"]
+    for eb, s2m, size in (("eb3", "s2m3", 4), ("eb25", "s2m25", 3)):
+        x = size * 1.07
+        ax.annotate("", xy=(x, b[s2m][-1] - 2.2), xytext=(x, b[eb][-1] + 2.2),
+                    arrowprops=dict(arrowstyle="-|>", color=S2M, lw=0.9, mutation_scale=7), zorder=2)
+        ax.scatter(x, b[eb][-1], s=16, marker="o", facecolor="white", edgecolor=EB, linewidth=0.9, zorder=3,
+                   label="EB prompt (our run)" if size == 4 else None)
+        ax.scatter(x, b[s2m][-1], s=46, marker="*", color=S2M, edgecolor="white", linewidth=0.3, zorder=4,
+                   label="S2M (ours)" if size == 4 else None)
+        ax.text(x * 1.12, (b[eb][-1] + b[s2m][-1]) / 2, f"+{b[s2m][-1] - b[eb][-1]:.1f}", color=S2M,
+                fontsize=6.6, va="center", ha="left")
+    for name, model, dx, dy, ha in (("Tool library", "Qwen3-VL-8B", 1.12, 0, "left"),
+                                    ("EMHO", "Qwen3.8-27B", 1.18, 0, "left")):
+        avg = next(a for g, n, mo, a in DATA["published"] if n.startswith(name) and mo == model)
+        ax.text(SIZE[model] * (0.93 if ha == "right" else 1.07) * dx, avg + dy, name, fontsize=6.4, color=INK2,
+                va="center", ha=ha)
+    ax.axvline(115, color=GRID, lw=0.8, ls=(0, (3, 2)), zorder=0)
+    ax.set_xscale("log")
+    ax.set_xlim(2.4, 230)
+    ax.set_xticks([3, 10, 30, 80, API])
+    ax.set_xticklabels(["3B", "10B", "30B", "80B", "API"])
+    ax.minorticks_off()
+    ax.set_ylim(10, 95)
+    ax.set_xlabel("size of the model (parameters)")
+    ax.set_ylabel("EB-Navigation success (%)")
+    style(ax, grid="y")
+    h, lab = ax.get_legend_handles_labels()
+    order = [lab.index(x) for x in ("S2M (ours)", "EB prompt (our run)", "prompted MLLM (reported)",
+                                    "training-free agent (reported)", "fine-tuned agent (reported)")]
+    fig.legend([h[i] for i in order], [lab[i] for i in order], loc="upper center", ncol=2, frameon=False,
+               handlelength=1.0, columnspacing=0.9, handletextpad=0.4, bbox_to_anchor=(0.54, 1.01))
+    fig.subplots_adjust(left=0.135, right=0.99, top=0.77, bottom=0.15)
+    check(fig, "landscape")
+    fig.savefig(os.path.join(FIG, "landscape.pdf"))
+
+
+def robothor_cats():
+    cats = sorted(DATA["robothor_cats"].items(), key=lambda kv: kv[1][0])
+    names = [{"BasketBall": "basketball", "BaseballBat": "baseball bat"}.get(k, "".join(
+        " " + c.lower() if c.isupper() and i else c.lower() for i, c in enumerate(k))) for k, _ in cats]
+    sr = [v[0] for _, v in cats]
+    spl = [v[1] for _, v in cats]
+    fig, ax = plt.subplots(figsize=(3.35, 2.05))
+    y = np.arange(len(cats))
+    ax.barh(y, sr, 0.62, color=S2M, zorder=2, label="SR")
+    ax.scatter(spl, y, marker="|", s=40, color=INK, linewidth=1.3, zorder=3, label="SPL")
+    for yy, v in zip(y, sr):
+        ax.text(v + 1.2, yy, f"{v:.0f}", va="center", ha="left", fontsize=6.4, color=INK)
+    ax.axvline(DATA["robothor_sr"], color=INK2, lw=0.7, ls=(0, (3, 2)), zorder=1)
+    ax.text(DATA["robothor_sr"] + 1, len(cats) - 0.35, f"all {DATA['robothor_sr']:.1f}", fontsize=6.4,
+            color=INK2, va="bottom", ha="left")
+    ax.set_yticks(y)
+    ax.set_yticklabels(names)
+    ax.set_xlim(0, 100)
+    ax.set_xticks([0, 25, 50, 75, 100])
+    ax.set_ylim(-0.6, len(cats) + 0.5)
+    ax.set_xlabel("RoboTHOR validation (%)")
+    style(ax, grid="x")
+    ax.legend(loc="lower right", frameon=False, handlelength=1.0, borderaxespad=0.1)
+    fig.subplots_adjust(left=0.22, right=0.965, top=0.98, bottom=0.17)
+    check(fig, "robothor_cats")
+    fig.savefig(os.path.join(FIG, "robothor_cats.pdf"))
+
+
 if __name__ == "__main__":
     if DATA.get("draft"):
         print("NOTE: figure data is a DRAFT (FP8 Qwen3 baseline missing)")
     teaser()
     analysis()  # the architecture figure: scripts/make_arch_figure.py
+    landscape()
+    robothor_cats()

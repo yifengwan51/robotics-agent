@@ -80,11 +80,9 @@ Among the committed hypotheses $\mathcal{C}_t$ the agent visits
 k^\star=\arg\max_{k\in\mathcal{C}_t}\ \frac{1-e^{-w_k}}{c_k+1},\qquad c_k=\frac{\lVert\mu_k-x_t\rVert}{0.25\,\text{m}} .
 \label{eq:index}
 \end{equation}
-The numerator maps the evidence to the probability of at least one detection under a Poisson model with mean
-$w_k$, and the denominator counts the steps to reach and check $\mu_k$. For locations with fixed inspection costs,
-inspecting in decreasing order of this probability-to-cost ratio is optimal~\cite{kadane1977optimal}; \ours
-applies the rule greedily, recomputing the cost from the current position. It reduces to nearest-first for equal
-evidence and to strongest-first for equal cost. With nothing committed, the
+The numerator is the probability of at least one detection under a Poisson model with mean $w_k$, and the
+denominator counts the steps to reach and check $\mu_k$; inspecting in decreasing order of this ratio is optimal
+for fixed costs~\cite{kadane1977optimal}, and \ours applies it greedily from the current position. With nothing committed, the
 agent first completes a 360$^\circ$ look-around, then approaches the strongest hypothesis with $w_k\ge0.35$, and
 otherwise moves to the observed free cell 0.75--3\,m away that is farthest from all visited positions.
 
@@ -94,10 +92,10 @@ An edge costs 1 plus 0.15 for each of four sampled points on it that is unobserv
 obstacles are removed, and a move that the simulator has rejected becomes a forbidden edge.
 
 \noindent\textbf{Magnified search.}
-Small or distant targets are often missed in the full frame. When a view yields no observation with $a_t\ge0.5$ and
-nothing is committed, the frame is split into $3{\times}3$ overlapping tiles, each upsampled to 448\,px and queried
-for a box in parallel; up to four distinct tile boxes are crop-checked, and those with $\pi^z\ge0.5$ enter the
-memory. This happens once per view and spends VLM calls rather than environment steps.
+When a view yields no observation with $a_t\ge0.5$ and nothing is committed, the frame is split into
+$3{\times}3$ overlapping tiles, each upsampled to 448\,px and queried for a box; up to four tile boxes are
+crop-checked, and those with $\pi^z\ge0.5$ enter the memory. This finds small or distant targets once per view,
+at the cost of VLM calls rather than environment steps.
 
 \input{sec/tab_main}
 
@@ -139,6 +137,3 @@ EB-Navigation ends an episode on success; RoboTHOR requires a Stop action. There
 within 0.9\,m of a committed hypothesis, has turned within 20$^\circ$ of it and tilted it into view, and a fresh
 presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps,
 negative evidence counts only within 3\,m and once per view, and exploration goes to the nearest frontier.
-
-\noindent\textbf{Information access.}
-The VLM sees the current image, a crop or tile of it, and $s$; the controller sees depth, pose, and action success.

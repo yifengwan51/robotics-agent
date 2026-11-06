@@ -10,8 +10,8 @@ and Qwen2.5-VL-3B-Instruct, served with vLLM~\cite{kwon2023vllm} at temperature 
 renders the simulator; \ours uses their 4-bit AWQ checkpoints. The EB prompt uses the benchmark's prompts, three
 examples, parser, and plan execution. Monocular depth comes from Depth
 Anything V2 Metric-Indoor-Base~\cite{yang2024depthv2} on the CPU.
-\textit{Protocol.} \ours was run four times on the test set and the RGB-only configuration twice, each entering
-with its per-episode mean. All comparisons are paired over the 300 episodes, with bootstrap 95\% CIs and sign-flip
+\textit{Protocol.} \ours was run four times and the RGB-only configuration twice, each entering with its
+per-episode mean. All comparisons are paired over the 300 episodes, with bootstrap 95\% CIs and sign-flip
 permutation tests, Holm-corrected over the ten variants of \cref{sec:abl}.
 
 \subsection{Main results}
@@ -41,24 +41,26 @@ On the \nStepN{} episodes that both agents solve in every run, \ours needs \nSte
 \end{figure}
 
 \noindent\textbf{Comparison with published agents.}
-With a 4B model and no training, \ours exceeds every prompted MLLM up to GPT-4o and the scene-graph,
-module-graph, skill, memory, harness, and self-evolving agents built on GPT-4o and 8--35B
-models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,chen2026hodagent,ma2026brainmem,lee2026emho,liang2026robofoundry}, and
+With a 4B model, no training, and RGB alone (\nRGBThree\%), \ours exceeds every prompted MLLM up to GPT-4o and
+the training-free agents built on GPT-4o and 8--35B models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,chen2026hodagent,ma2026brainmem,lee2026emho,liang2026robofoundry}, and
 MuSix and SVA, which train extra models around a 4B policy~\cite{jang2026musix,xie2026sva}. Only the tool-library
 agents~\cite{zhou2026enabling} and RoboFoundry on GPT-6 Astra score higher (\cref{fig:landscape}).
 
 \noindent\textbf{Where the gain comes from.}
 The diagnosed failure modes largely disappear (i). Per run, \ours never sees the target in \nNeverSThree{} episodes (EB
 prompt: \nNeverEBThree), is blocked in \nBlockedSThree{} (\nBlockedEBThree), loses a seen target in \nLostSThree{}
-(\nLostEBThree), and ends near it in \nNearSThree{} (\nNearEBThree) (\cref{fig:analysis}b, \cref{fig:traj}): the
-look-around, the occupancy map, and the memory of the target remove these failure modes.
+(\nLostEBThree), and ends near it in \nNearSThree{} (\nNearEBThree) (\cref{fig:analysis}b, \cref{fig:traj}).
 
 \subsection{Components}
 \label{sec:abl}
+\noindent\textbf{Generic modular agent.}
+The same model in a generic modular agent, which acts on single-view detections with the same map, planner,
+look-around, and exploration, reaches \nModThree\% (\cref{tab:main}): ${+}\nModOverEB$\,pp over the EB prompt
+($p\nModOverEBP$), but \nSOverMod\,pp below \ours (CI [${+}\nSOverModLo$, ${+}\nSOverModHi$], $p\nSOverModP$).
+Moving the state out of the model gives part of the gain, and the evidence design for a generative sensor the rest.
 \Cref{tab:abl} changes one element at a time. Disabling multi-view fusion, so that each detection replaces the
-earlier hypotheses, lowers success by \nAblFusionAbs\,pp (CI $[\nAblFusionLo, \nAblFusionHi]$, Holm $p\nAblFusionP$),
-the only component whose removal survives the correction; the loss falls on the four subsets in which the agent
-starts facing the target. Fusion does not help the agent find the target;
+earlier hypotheses, lowers success by \nAblFusionAbs\,pp (Holm $p\nAblFusionP$),
+the only component whose removal survives the correction. Fusion does not help the agent find the target;
 it keeps the target once found: \nDetPrec\% of single lifted detections lie
 within 0.5\,m of it, and a hypothesis there reaches commitment in \nHoldNF{} episodes without fusion and \nHoldS{}
 with it. Without fusion, each detection, including the false boxes of
@@ -66,10 +68,7 @@ with it. Without fusion, each detection, including the false boxes of
 episodes and near misses from \nNearSThree{} to \nNearNF.
 Removing the look-around leaves the average unchanged ($\nAblScan$\,pp) but trades one subset against the others:
 Long changes by $\nAblScanLong$\,pp because the agent no longer turns to find a target behind it, while the other
-subsets gain the steps that the turn no longer costs ($\nAblScanOtherMin$ to $\nAblScanOtherMax$\,pp). Removing exhaustion
-on arrival changes Visual by $\nAblExhaustVisual$\,pp, where appearance-only goals produce look-alikes that must be
-ruled out once visited.
-Negative evidence, tiled search, the crop check, and the search index each change success by less than 3\,pp,
+subsets gain the steps that the turn no longer costs ($\nAblScanOtherMin$ to $\nAblScanOtherMax$\,pp). Negative evidence, tiled search, the crop check, and the search index each change success by less than 3\,pp,
 none significantly. They cost no environment steps and matter when candidates compete, which EB-Navigation's
 single rooms rarely produce.
 

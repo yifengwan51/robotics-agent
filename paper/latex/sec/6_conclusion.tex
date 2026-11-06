@@ -1,6 +1,6 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-Small VLMs fail as navigators because agents make them keep spatial state in text, not because they cannot see.
-\ours makes the model a semantic sensor and keeps the state in metric form; on one 8\,GB GPU, a training-free
-4B model matches agents built on far larger ones. Appearance-only goals (\cref{sec:gap}), whole houses, and real robots remain open.
+Small VLMs fail as navigators when agents make them keep spatial state in text. Used as a semantic sensor whose
+answers enter a metric memory, a training-free 4B model on one 8\,GB GPU matches agents built on far larger ones.
+The controller is specific to reaching one object; appearance-only goals, whole houses, and real robots remain open.

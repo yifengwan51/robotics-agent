@@ -9,9 +9,9 @@ spatial state in generated text. We therefore recast the VLM from planner to sen
 a training-free navigation agent that asks the VLM only what the current image can answer, whether the target is
 visible and where, and keeps all state in metric form. Its hypothesis memory lifts each answer with depth and pose,
 accumulates evidence across distinct viewpoints, and withdraws it when a hypothesis should be visible but is not
-detected; a search policy and an occupancy-map planner turn the memory into actions. With the same 4-bit model on
+detected; a search policy and an occupancy-map planner turn the memory into actions. With this model at 4-bit on
 one 8\,GB GPU, \ours reaches \nSThree\% (${+}\nGainThree$\,pp), \nSThreeLong\% on Long-horizon episodes, and
-\nRGBThree\% from RGB alone, above both fine-tuned 4B agents and seven of ten training-free agents built on larger
-models. With Qwen2.5-VL-3B it lifts success from \nEBTwo\% to \nSTwo\%. On RoboTHOR ObjectNav, which requires an
+\nRGBThree\% from RGB alone, which is still above both fine-tuned 4B agents and seven of ten training-free agents
+built on larger models. With Qwen2.5-VL-3B it lifts success from \nEBTwo\% to \nSTwo\%. On RoboTHOR ObjectNav, which requires an
 explicit stop, it reaches \nRoboSR\%, above ten published zero-shot agents.
 \end{abstract}

@@ -37,6 +37,8 @@ RUN = {
     "eb25": [f"eb_{Q25}-FP8-Dynamic_eb_bounded_rp105_r1"], "eb25_awq": [f"eb_{Q25}-AWQ_eb_bounded_r1"],
     "eb25_awq_raw": [f"eb_{Q25}-AWQ_eb_official_r1"], "s2m25": [f"s2m_{Q25}-AWQ_final_r1"],
     "oracle": ["oracle_geo_none_ceiling"],
+    # same model, single-frame detection + map + A*: no fusion, negative evidence, crop check, or tiled search
+    "mod3": [f"s2m_{Q3}-AWQ_modular_baseline_r1"],
 }
 VARIANTS = [  # (key, table label, run dirs)
     ("fusion", "w/o fusion", [f"s2m_{Q3}-AWQ_abl_no_fusion"]),
@@ -250,7 +252,7 @@ def main():
 
     for key, name in (("eb3", "EBThree"), ("eb3_awq", "EBThreeAWQ"), ("s2m3", "SThree"), ("rgb3", "RGBThree"),
                       ("eb25", "EBTwo"), ("eb25_awq", "EBTwoAWQ"), ("eb25_awq_raw", "EBTwoAWQraw"),
-                      ("s2m25", "STwo"), ("oracle", "Oracle")):
+                      ("s2m25", "STwo"), ("oracle", "Oracle"), ("mod3", "ModThree")):
         subs = per_subset(O[key], ks)
         m, lo, hi = boot_ci([O[key][k] for k in ks])
         macro(name, m); macro(name + "Lo", lo); macro(name + "Hi", hi)
@@ -259,7 +261,8 @@ def main():
     for name, a, b in (("GainThree", "eb3", "s2m3"), ("GainTwo", "eb25", "s2m25"), ("GainRGB", "eb3", "rgb3"),
                        ("GainThreeAWQ", "eb3_awq", "s2m3"), ("GainTwoAWQ", "eb25_awq", "s2m25"),
                        ("QuantThree", "eb3_awq", "eb3"), ("QuantTwo", "eb25_awq", "eb25"),
-                       ("GapRGB", "s2m3", "rgb3"), ("GapOracle", "s2m3", "oracle")):
+                       ("GapRGB", "s2m3", "rgb3"), ("GapOracle", "s2m3", "oracle"),
+                       ("ModOverEB", "eb3", "mod3"), ("SOverMod", "mod3", "s2m3")):
         d = [O[b][k] - O[a][k] for k in ks]
         m, lo, hi = boot_ci(d)
         macro(name, m); macro(name + "Lo", lo); macro(name + "Hi", hi)
@@ -518,7 +521,7 @@ def main():
         return f"{method} & {model} & {' & '.join(cells)} & [{lo:.1f}, {hi:.1f}]\\\\\n"
 
     with open(os.path.join(SEC, "tab_main.tex"), "w") as f:
-        f.write("\\begin{table*}[t]\n\\centering\\small\n\\setlength{\\tabcolsep}{5pt}\n")
+        f.write("\\begin{table*}[t]\n\\centering\\small\n\\setlength{\\tabcolsep}{5pt}\\renewcommand{\\arraystretch}{0.92}\n")
         f.write("\\caption{Success rate (\\%) on EB-Navigation test. Top: reported results. Bottom: our runs on one "
                 "8\\,GB GPU, with \\ours at 4-bit. $\\pm$: std.\\ over test runs. Bold: best per model.}\n\\label{tab:main}\n")
         f.write("\\begin{tabular}{@{}llrrrrrrc@{}}\n\\toprule\n"
@@ -529,17 +532,19 @@ def main():
                 cells = " & ".join(f"{v:.1f}" for v in subs) if subs else " & ".join(["--"] * 5)
                 f.write(f"{name}~\\cite{{{cite}}} & {size} & {cells} & {avg:.1f} & --\\\\\n")
         f.write("\\midrule\n\\multicolumn{9}{@{}l}{\\textit{Ours (one 8\\,GB GPU)}}\\\\\n")
-        q3, q25 = ("eb3", "s2m3", "rgb3"), ("eb25", "s2m25")
+        q3, q25 = ("eb3", "mod3", "s2m3", "rgb3"), ("eb25", "s2m25")
         f.write(ours("eb3", "EB prompt", "Qwen3-VL-4B", block=q3))
-        f.write(ours("s2m3", "\\ours", "Qwen3-VL-4B", sd_runs(RUN["s2m3"]), block=q3))
+        f.write(ours("mod3", "Modular, single view$^\\S$", "Qwen3-VL-4B", block=q3))
+        f.write(ours("s2m3", "\\ours$^\\S$", "Qwen3-VL-4B", sd_runs(RUN["s2m3"]), block=q3))
         f.write(ours("rgb3", "\\ours, RGB only$^\\dagger$", "Qwen3-VL-4B", sd_runs(RUN["rgb3"]), block=q3))
         f.write("\\midrule\n")
         f.write(ours("eb25", "EB prompt", "Qwen2.5-VL-3B", block=q25))
-        f.write(ours("s2m25", "\\ours", "Qwen2.5-VL-3B", block=q25))
+        f.write(ours("s2m25", "\\ours$^\\S$", "Qwen2.5-VL-3B", block=q25))
         f.write("\\midrule\n")
         f.write(ours("oracle", "Oracle target$^\\ddagger$", "--"))
         f.write("\\bottomrule\n\\end{tabular}\n\n\\vspace{0.2em}\\footnotesize "
-                "$^\\dagger$No depth sensor and no simulator pose (\\cref{sec:sensing}). "
+                "$^\\S$Depth sensor and simulator pose. $^\\dagger$RGB only: monocular depth and pose from the executed "
+                "actions (\\cref{sec:sensing}); the comparisons with reported results use this row. "
                 "$^\\ddagger$Geometric planner given the true target position: an upper bound.\n\\end{table*}\n")
 
     # ---------------- figure data ----------------
@@ -597,6 +602,11 @@ def main():
             (26.7, 35.0, 38.1, 41.2, 42.3, 44.1, 47.5, 48.0, 54.6, 57.5)) and num("RoboSR") < min(62.5, 68.1),
         "RoboTHOR: S2M SPL above every method but STRIVE": all(num("RoboSPL") > v for v in
             (16.9, 21.9, 22.2, 22.5, 23.0, 23.3, 24.0, 24.2, 24.3, 26.8, 27.4, 32.9)) and num("RoboSPL") < 36.3,
+        "RGB-only S2M above every published agent but the tool library and RoboFoundry (GPT-6 Astra)": all(
+            num("RGBThree") > r[4] for g in PUBLISHED for r in g[1]
+            if r[0] != "Tool library" and r[1] != "GPT-6 Astra"),
+        "modular baseline: above EB prompt, below S2M, S2M gain over it significant": (num("ModThree") > num("EBThree")
+            and num("ModThree") < num("SThree") and "10^{-" in M["SOverModP"]),
         "stop-short failures: 0 with sensor, fewer with floor than global": num("ShortSensorMax") == 0 and num("ShortFloor") < num("ShortGlobal"),
         "floor scale reduces blocked floor and range bias": num("BlockFloor") < num("BlockGlobal") and abs(1 - num("RangeFloor")) < abs(1 - num("RangeGlobal")),
     }

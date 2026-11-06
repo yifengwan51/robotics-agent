@@ -44,17 +44,23 @@ planner given the true target position.}
 
 Changing the model's role changes the outcome (\cref{fig:results}), with the profile that the diagnosis predicts.
 With Qwen3-VL-4B at 4-bit, \ours succeeds in \nSThree\% of the EB-Navigation test episodes, ${+}\nGainThree$\,pp
-over the benchmark's agent with the same model, and in \nSThreeLong\% of the Long-horizon episodes. Its average
-exceeds both fine-tuned 4B agents and seven of ten training-free agents built on 8B to frontier-scale models. With
-Qwen2.5-VL-3B~\cite{bai2025qwen25vl} the gain grows to ${+}\nGainTwo$\,pp, so the agent depends far less on the size
-of the model. From RGB alone \ours reaches \nRGBThree\%, and on RoboTHOR ObjectNav~\cite{deitke2020robothor}, which
-requires an explicit stop, \nRoboSR\%.
+over the benchmark's agent with the same model, and in \nSThreeLong\% of the Long-horizon episodes. With
+Qwen2.5-VL-3B~\cite{bai2025qwen25vl} the gain grows to ${+}\nGainTwo$\,pp. On RoboTHOR
+ObjectNav~\cite{deitke2020robothor}, which requires an explicit stop, \ours reaches \nRoboSR\%.
 
 \noindent\textbf{Contributions.}
-(1)~A controlled diagnosis of small-VLM navigators, showing that they fail at keeping spatial state in text rather
-than at recognition or motion planning, and the principle it yields: ask the model only what the current image can
-answer, and keep the state in metric form.
-(2)~\ours, a training-free agent built on this principle, whose metric hypothesis memory fuses per-image answers
-across viewpoints with positive and negative evidence, and whose per-frame floor scale lets it run from RGB alone.
-(3)~Evidence on the full EB-Navigation and RoboTHOR splits, with two model generations, that \ours removes the
-diagnosed failures and lets a 4-bit 4B model match agents built on far larger models.
+\begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}\setlength{\leftmargin}{1em}
+\item \textbf{Diagnosis.} Small VLMs fail as navigation agents because they must keep spatial state in text, not
+because they cannot recognize the target or plan a path.
+\item \textbf{The VLM as a sensor, not a planner.} \ours inverts the control of MLLM agents: a metric controller
+asks the VLM only questions that the current image can settle, and the VLM never sees the history, the map, or the
+plan.
+\item \textbf{Evidence fusion for a generative sensor.} A metric hypothesis memory accumulates the model's
+presence and box answers over distinct viewpoints and withdraws them under negative evidence, turning unreliable
+single answers into a stable target; a generic modular agent with the same model trails \ours by \nSOverMod\,pp.
+\item \textbf{RGB-only operation.} A per-frame ground-plane scale for monocular depth raises RGB-only success from
+\nRGBGlobal\% to \nRGBThree\%, within \nGapRGBAbs\,pp of a depth sensor.
+\item \textbf{Results.} On the full EB-Navigation and RoboTHOR splits, a 4-bit 4B model without training and from RGB
+alone outperforms both fine-tuned 4B agents and seven of ten training-free agents built on 8B to frontier-scale models, and the
+agent loses far less than the benchmark's agent when the model shrinks.
+\end{itemize}

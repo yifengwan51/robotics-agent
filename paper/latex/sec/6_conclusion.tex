@@ -1,10 +1,6 @@
 \section{Conclusion}
 \label{sec:conclusion}
 
-A small local VLM fails as a navigator when it must carry spatial state through text, and succeeds when it is asked
-only what the current image can answer. On
-one 8\,GB GPU and without training, it outperforms published agents built on far larger models, also from RGB alone.
-
-\noindent\textbf{Limitations.}
-Without a depth sensor, the scale comes from a visible floor at a known camera height. Appearance-only goals
-are limited by recognition (\cref{sec:gap}). Multi-room houses, where the search index matters more, and real robots remain to be tested.
+Small VLMs fail as navigators because agents make them keep spatial state in text, not because they cannot see.
+\ours makes the model a semantic sensor and keeps the state in metric form; on one 8\,GB GPU, a training-free
+4B model matches agents built on far larger ones. Appearance-only goals (\cref{sec:gap}), whole houses, and real robots remain open.

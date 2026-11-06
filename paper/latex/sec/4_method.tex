@@ -1,9 +1,10 @@
 \section{Semantic-to-Metric Navigation}
 \label{sec:method}
 
-\ours instantiates the factorization of \cref{eq:factor}. The belief
+\ours is a navigation agent that instantiates the factorization of \cref{eq:factor}: the VLM is its semantic
+sensor, and the agent owns all state and every decision. The belief
 $\mathcal{B}_t=(\mathcal{H}_t,M_t)$ consists of a list of target hypotheses $\mathcal{H}_t$ and an occupancy map
-$M_t$; \cref{fig:arch}b shows one step.
+$M_t$; \cref{fig:mech} shows one step in full.
 
 \subsection{Per-image questions}
 At the start of an episode the VLM $f$ rewrites $\ell$ into a target phrase $s$: the category when the instruction
@@ -61,10 +62,9 @@ w_k\leftarrow w_k-\lambda\,\mathbb{1}\big[\mathrm{vis}_t(\mu_k)\big],\\
 \end{gathered}
 \label{eq:neg}
 \end{equation}
-for every hypothesis without a detection within $r$, where $(\bar u,d)=\Pi_{p_t}(\mu)$ are the pixel and planar
-depth of $\mu$ in the current image, $\Omega$ is the image shrunk by a 20\,px margin, and $\lambda=0.4$; the last
-condition rules out occlusion by a nearer surface;
-hypotheses with $w_k\le-1$ are removed. Absence outside the camera's view is never counted.
+for every hypothesis without a detection within $r$, where $(\bar u,d)=\Pi_{p_t}(\mu)$ are its pixel and planar
+depth, $\Omega$ is the image shrunk by 20\,px, and $\lambda=0.4$; the last condition rules out occlusion.
+Hypotheses with $w_k\le-1$ are removed; absence outside the view is never counted.
 
 \noindent\textbf{Commitment and exhaustion.}
 The agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while $w_k\ge\tau_k=0.4$; the hysteresis
@@ -89,13 +89,9 @@ agent first completes a 360$^\circ$ look-around, then approaches the strongest h
 otherwise moves to the observed free cell 0.75--3\,m away that is farthest from all visited positions.
 
 \noindent\textbf{Planning.}
-Actions come from A* over (position, heading) on $M_t$, whose edges are the benchmark's translations and turns. An
-edge $e$ costs
-\begin{equation}
-C(e)=1+\frac{0.6}{4}\sum_{j=1}^{4}\mathbb{1}\big[M_t(e_j)\ \text{unobserved}\big],
-\label{eq:astar}
-\end{equation}
-where $e_1,\dots,e_4$ are points sampled along the edge; edges through inflated obstacles are removed, and a move that the simulator has rejected becomes a forbidden edge.
+Actions come from A* over (position, heading) on $M_t$, whose edges are the benchmark's translations and turns.
+An edge costs 1 plus 0.15 for each of four sampled points on it that is unobserved; edges through inflated
+obstacles are removed, and a move that the simulator has rejected becomes a forbidden edge.
 
 \noindent\textbf{Magnified search.}
 Small or distant targets are often missed in the full frame. When a view yields no observation with $a_t\ge0.5$ and
@@ -116,7 +112,7 @@ for \ours with the depth sensor and with monocular depth under a global and a pe
 \label{fig:analysis}
 \end{figure*}
 
-\subsection{Without a depth sensor}
+\subsection{RGB-only and explicit-stop variants}
 \label{sec:rgbonly}
 Monocular metric depth networks err mostly by a frame-dependent scale. Let $\hat D_t$ be the raw prediction and
 $\kappa(v)=\sin\phi_t+\frac{v-v_0}{\varphi}\cos\phi_t$ the downward component of the ray through row $v$ per unit of
@@ -145,5 +141,4 @@ presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboT
 negative evidence counts only within 3\,m and once per view, and exploration goes to the nearest frontier.
 
 \noindent\textbf{Information access.}
-The VLM sees only the current image, a crop or tile of it, and $s$; the controller sees depth, pose, and each
-action's success flag. Neither receives the target position or simulator object state.
+The VLM sees the current image, a crop or tile of it, and $s$; the controller sees depth, pose, and action success.

@@ -1,30 +1,37 @@
 \section{Introduction}
 \label{sec:intro}
 
-Multimodal LLM agents now follow open-ended navigation instructions in simulated homes, but the strongest results
-come from frontier models behind an API. On EB-Navigation~\cite{yang2025embodiedbench}, GPT-4o succeeds in
-57.7\% of the episodes, while the open models with at most 8B parameters reach 14.0--29.3\% overall and 0--5\%
-on the Long-horizon subset, in which the target starts behind the agent. Robots need such small models, which run
-on board or on a consumer GPU; the training-free gains reported on this benchmark use 8B and larger models with
-memory, harnesses, or tool libraries~\cite{lee2026emho,ma2026brainmem,zhou2026enabling}.
+Multimodal LLM (MLLM) agents follow open navigation instructions by giving one model every role: at each step it
+reads the image and the text history, infers where the target is, and writes the next
+actions~\cite{yang2025embodiedbench}. This design works at frontier scale. On EB-Navigation, GPT-4o succeeds in
+57.7\% of the episodes, while open models with at most 8B parameters reach 14.0--29.3\% overall and 0--5\% on the
+Long-horizon subset, in which the target starts behind the agent. Yet these small models are the ones a robot can
+run on board or on a consumer GPU.
+
+Existing remedies leave the model in charge. Training-free agents surround it with memory, reflection, skill
+libraries, scene graphs, or tools~\cite{lee2026emho,ma2026brainmem,zhou2026enabling,huang2025esca,ju2026embodiskill},
+but the model still writes the plan, and the reported gains rely on 8B to frontier-scale models. Fine-tuned 4B
+agents~\cite{xie2026sva,jang2026musix} require training and remain below 60\%. Modular object-navigation systems keep
+a metric map~\cite{gadre2022cows,yokoyama2023vlfm,yin2024online} but depend on dedicated detectors.
 
 \input{sec/fig_arch}
 
-We first ask what breaks when a small VLM drives the agent. Motion planning does not: a geometric planner given
-the target position solves \nOracle\% of the test episodes. Recognition is imperfect but usable: from a single
-view, Qwen3-VL-4B boxes a visible target whose category the instruction names or implies in
-\nProbeThreeCommon--\nProbeThreeBase\% of cases.
-The failure sits in between. The benchmark's agent asks the VLM for a multi-step JSON plan at every replanning
-step, so the model must track where the target was, what the room looks like, and which way it faces, all
-through generated text (\cref{fig:arch}a). Prompted agents lose targets they have already seen, collide with
-furniture, and in Long-horizon episodes sometimes never turn toward the target (\cref{sec:diagnosis}).
+We first ask what breaks when a small VLM drives the agent. Motion planning does not: a geometric planner given the
+target position solves \nOracle\% of the test episodes. Recognition is imperfect but usable: Qwen3-VL-4B boxes a
+visible target in \nProbeThreeCommon--\nProbeThreeBase\% of single views. The failure lies in the role the model is
+given. Asked for a plan at every step, it must carry where the target was and which way it faces through generated
+text (\cref{fig:arch}a), and nothing checks this text against the world. Prompted agents therefore lose targets
+they have seen, collide with furniture, and never turn toward a target behind them (\cref{sec:diagnosis}).
 
-These findings suggest a different division of labor. A small VLM should answer only questions that the current
-image can settle, and the spatial state of the agent should live outside the model. \ours (Semantic-to-Metric,
-\cref{fig:arch}b) asks the VLM two things per frame: is the target visible, and where is it. Each answer is
-lifted into a metric target hypothesis with depth and pose. Hypotheses gain evidence from distinct viewpoints and
-lose it when they should be visible but are not detected; a search index picks which one to visit, and an
-occupancy-map planner computes the motion.
+A small VLM is thus a good semantic sensor and a poor state keeper, so we build the agent around the model rather
+than inside it. \ours (Semantic-to-Metric, \cref{fig:arch}b) is a training-free navigation agent with three parts.
+\emph{Perception} asks the VLM two questions per frame, whether the target is visible and where it is in the image,
+and spends a magnified crop or a tiled view only when the answer is weak. \emph{Memory} lifts each answer with depth
+and pose into a metric target hypothesis, accumulates evidence only from distinct viewpoints, and withdraws it when
+a hypothesis should be visible but is not detected. \emph{Action} commits to a confident hypothesis or otherwise
+searches in the order of an optimal-search index, and an occupancy-map planner computes every move. Each part
+removes one diagnosed failure: the memory keeps a seen target, the map prevents collisions, and the look-around
+finds a target behind the agent.
 
 \begin{figure}[t]
 \centering
@@ -35,20 +42,19 @@ planner given the true target position.}
 \label{fig:results}
 \end{figure}
 
-Changing the interface changes the outcome (\cref{fig:results}). With Qwen3-VL-4B at 4-bit, \ours succeeds in
-\nSThree\% of the EB-Navigation test episodes, ${+}\nGainThree$\,pp over the benchmark's agent with the same
-model, and in \nSThreeLong\% of the Long-horizon episodes, \nOracleGapLong\,pp below the oracle. With
-Qwen2.5-VL-3B~\cite{bai2025qwen25vl} the gain is ${+}\nGainTwo$\,pp. \ours needs \nStepRed\% fewer steps on the
-episodes that both agents solve. On the RoboTHOR ObjectNav validation split~\cite{deitke2020robothor}, where the agent must decide
-when to stop, \ours reaches \nRoboSR\% success.
-
-From RGB alone, with monocular depth scaled in every frame by the floor and pose from the executed actions,
-\ours reaches \nRGBThree\%, ${+}\nGainRGB$\,pp over the benchmark's agent (\cref{sec:sensing}).
+Changing the model's role changes the outcome (\cref{fig:results}), with the profile that the diagnosis predicts.
+With Qwen3-VL-4B at 4-bit, \ours succeeds in \nSThree\% of the EB-Navigation test episodes, ${+}\nGainThree$\,pp
+over the benchmark's agent with the same model, and in \nSThreeLong\% of the Long-horizon episodes. Its average
+exceeds both fine-tuned 4B agents and seven of ten training-free agents built on 8B to frontier-scale models. With
+Qwen2.5-VL-3B~\cite{bai2025qwen25vl} the gain grows to ${+}\nGainTwo$\,pp, so the agent depends far less on the size
+of the model. From RGB alone \ours reaches \nRGBThree\%, and on RoboTHOR ObjectNav~\cite{deitke2020robothor}, which
+requires an explicit stop, \nRoboSR\%.
 
 \noindent\textbf{Contributions.}
-(1)~A controlled diagnosis of small-VLM navigators on EB-Navigation, showing that they fail at carrying spatial
-state through text rather than at recognition or motion planning.
-(2)~\ours, a training-free semantic-to-metric interface: per-image presence and box queries, metric target
-hypotheses fused across viewpoints with positive and negative evidence, an optimal-search selection rule, and a
-per-frame ground-plane scale that lets it run from RGB alone.
-(3)~Full-split evaluations on EB-Navigation and RoboTHOR with two model generations and paired statistics.
+(1)~A controlled diagnosis of small-VLM navigators, showing that they fail at keeping spatial state in text rather
+than at recognition or motion planning, and the principle it yields: ask the model only what the current image can
+answer, and keep the state in metric form.
+(2)~\ours, a training-free agent built on this principle, whose metric hypothesis memory fuses per-image answers
+across viewpoints with positive and negative evidence, and whose per-frame floor scale lets it run from RGB alone.
+(3)~Evidence on the full EB-Navigation and RoboTHOR splits, with two model generations, that \ours removes the
+diagnosed failures and lets a 4-bit 4B model match agents built on far larger models.

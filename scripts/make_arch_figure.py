@@ -237,7 +237,7 @@ def font(size, bold=False, italic=False):
 def tikz():
     out = ["\\begin{tikzpicture}[x=1mm, y=1mm, >={Stealth[length=1.4mm, width=1.3mm]}]",
            f"\\useasboundingbox (0,0) rectangle {p(W, H)};"]
-    for e in EL:
+    for e in sorted(EL, key=lambda e: e["kind"] != "container"):
         x0, y0, x1, y1 = e["rect"]
         cx, cy = mid(e["rect"])
         if e["kind"] == "container":
@@ -265,27 +265,60 @@ def tikz():
     for a in ARROWS:
         path = " -- ".join(p(x, y) for x, y in a["pts"])
         arrows.append(f"\\draw[->, line width=0.6pt, draw={a.get('color', 'black')}] {path};")
-    out[2:2] = arrows  # arrows below everything, so that label patches sit on top of their wires
+    n_cont = 2 + sum(1 for e in EL if e["kind"] == "container")  # containers are listed first in EL
+    out[n_cont:n_cont] = arrows  # above the stage containers, below boxes and label patches
     out.append("\\end{tikzpicture}")
     return "\n".join(out)
 
 
 COLORS = "".join(f"\\definecolor{{{k}}}{{HTML}}{{{v}}}" for k, v in OFFICE.items())
 CAPTION = (
-    "\\ours moves the agent's spatial state out of generated text into an explicit metric memory. "
-    "\\textbf{(a)}~The EB prompt maps $I_t$, the instruction $\\ell$, and the action log $h_t$ to a text plan "
-    "$u_{t:t+m}$ with the VLM $f$. \\textbf{(b)}~\\ours asks $f$ only for the presence $\\pi_t$ and the box "
-    "$b_t$ of the phrase $s$, lifts boxes with depth $D_t$ and pose $p_t$ into hypotheses $\\mu_k$ with evidence $w_k$ "
-    "(\\cref{eq:lift,eq:fuse,eq:neg}), selects $k^\\star$ (\\cref{eq:index}), and plans the action $u_t$ with A* on "
-    "the map $M_t$. Blue: frozen VLM; orange: \\ours; green: actions; grey: inputs and inherited parts. Thumbnails "
-    "from a Long-horizon test episode: the target (orange) passes the commit threshold (dashed), and two look-alikes "
-    "(grey) fall below zero.")
+    "\\textbf{(a)}~The EB prompt maps $I_t$, the instruction $\\ell$, and the history $h_t$ to a text plan "
+    "$u_{t:t+m}$ with the VLM $f$. \\textbf{(b)}~\\ours asks $f$ for the presence $\\pi_t$ and box $b_t$ of the "
+    "phrase $s$, lifts them with depth $D_t$ and pose $p_t$ into hypotheses $\\mu_k$ with evidence $w_k$, selects "
+    "$k^\\star$, and plans $u_t$ on the map $M_t$. Thumbnails: a Long-horizon test episode; the target (orange) passes "
+    "the commit threshold (dashed) and two look-alikes (grey) fall below zero.")
 
 # ------------------------------------------------------------------------------------------------ audit
 
 
 def inside(r, x, y, m=0.0):
     return r[0] + m <= x <= r[2] - m and r[1] + m <= y <= r[3] - m
+
+
+def raster_check(pdf, elements, arrows, name, dpi=600):
+    """Render the compiled figure and check that what should be visible is: the fill of every box at an interior
+    point clear of its text, and the colour of every arrow at the middle of each of its segments."""
+    out = pdf[:-4] + "_ras"
+    subprocess.run(["pdftoppm", "-r", str(dpi), "-png", "-singlefile", pdf, out], check=True)
+    img = np.asarray(Image.open(out + ".png").convert("RGB")).astype(int)
+    px = lambda x, y: img[min(img.shape[0] - 1, int(round(y / 25.4 * dpi))), min(img.shape[1] - 1, int(round(x / 25.4 * dpi)))]
+    rgb = lambda c: np.array([255, 255, 255]) if c == "white" else (
+        np.array([0, 0, 0]) if c == "black" else np.array([int(OFFICE[c][i:i + 2], 16) for i in (0, 2, 4)]))
+    bad = []
+    for e in elements:
+        if e["kind"] not in ("box", "dia") or e.get("fill") is None:
+            continue
+        x0, y0, x1, y1 = e["rect"]
+        # boxes: just inside the left edge; diamonds: near the left tip, both clear of the centred text
+        x, y = (x0 + 0.9, (y0 + y1) / 2) if e["kind"] == "box" else (x0 + 0.12 * (x1 - x0), (y0 + y1) / 2)
+        got = px(x, y)
+        if np.abs(got - rgb(e["fill"])).max() > 14:
+            bad.append(f"{name}: {e['name']} is covered (fill {e['fill']}, pixel {tuple(got)})")
+    for a in arrows:
+        col = rgb(a.get("color", "black"))
+        for (xa, ya), (xb, yb) in zip(a["pts"], a["pts"][1:]):
+            if np.hypot(xb - xa, yb - ya) < 2.0:
+                continue
+            x, y = (xa + xb) / 2, (ya + yb) / 2
+            if any(e["name"] in a.get("under", []) and e["rect"][0] <= x <= e["rect"][2] and e["rect"][1] <= y <= e["rect"][3]
+                   for e in elements):
+                continue
+            got = px(x, y)
+            if np.abs(got - col).max() > 40:
+                bad.append(f"{name}: arrow at ({x:.1f}, {y:.1f}) is hidden (colour {a.get('color', 'black')}, pixel {tuple(got)})")
+                break
+    return bad
 
 
 def audit(body):
@@ -399,6 +432,7 @@ def audit(body):
                 if hit:
                     bad.append(f"edge-crosses-node: arrow {a['pts'][0]} -> {a['pts'][-1]} through {hit[0]}")
                     break
+    bad += raster_check(os.path.join(test, "arch_test.pdf"), EL, ARROWS, "arch")
     bad = sorted(set(bad))
     if bad:
         raise SystemExit("arch figure audit failed:\n  " + "\n  ".join(bad))
@@ -410,7 +444,7 @@ def main():
     thumbnails()
     body = tikz()
     audit(body)
-    tex = ("% generated by scripts/make_arch_figure.py -- do not edit\n\\begin{figure*}[t]\n\\centering\n"
+    tex = ("\\begin{figure*}[t]\n\\centering\n"
            f"{COLORS}\n{body}\n\\caption{{{CAPTION}}}\n\\label{{fig:arch}}\n\\end{{figure*}}\n")
     open(os.path.join(LATEX, "sec", "fig_arch.tex"), "w").write(tex)
     print("wrote sec/fig_arch.tex")

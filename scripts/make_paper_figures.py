@@ -45,6 +45,36 @@ def style(ax, grid="y"):
         ax.set_axisbelow(True)
 
 
+def legend_covers(lg, ax, r):
+    """True if the legend box contains any point of a line, histogram, bar, or marker of `ax`."""
+    box = lg.get_window_extent(r)
+    pts = [ln.get_transform().transform(np.column_stack(ln.get_data())) for ln in ax.lines]
+    pts += [p.get_path().transformed(p.get_transform()).vertices for p in ax.patches]
+    pts += [c.get_offset_transform().transform(c.get_offsets()) for c in ax.collections if len(c.get_offsets())]
+    for xy in pts:
+        xy = np.asarray(xy, float)
+        if len(xy) > 1:  # densify segments so a thin peak crossing the box is caught
+            t = np.linspace(0, 1, 12)[:, None, None]
+            xy = (xy[:-1] * (1 - t) + xy[1:] * t).reshape(-1, 2)
+        if ((xy[:, 0] > box.x0 + 1) & (xy[:, 0] < box.x1 - 1) & (xy[:, 1] > box.y0 + 1) & (xy[:, 1] < box.y1 - 1)).any():
+            return True
+    return False
+
+
+def fit_legend(fig, ax, locs, headroom=(1.0,), **kw):
+    """Place the legend at the first location (with the least extra y headroom) where it covers no data."""
+    y0, y1 = ax.get_ylim()
+    for h in headroom:
+        ax.set_ylim(y0, y0 + (y1 - y0) * h)
+        for loc in locs:
+            loc, extra = loc if isinstance(loc, tuple) else (loc, {})
+            lg = ax.legend(loc=loc, **{**kw, **extra})
+            fig.canvas.draw()
+            if not legend_covers(lg, ax, fig.canvas.get_renderer()):
+                return
+    raise SystemExit(f"no legend position free of data in '{ax.get_title(loc='left')}'")
+
+
 def check(fig, name):
     """Fail on overlapping text or text outside the figure."""
     fig.canvas.draw()
@@ -63,6 +93,10 @@ def check(fig, name):
         items.append(("legend", lg.get_window_extent(r)))
     W, H = fig.bbox.width, fig.bbox.height
     bad = []
+    for lg in fig.legends + [ax.get_legend() for ax in fig.axes if ax.get_legend()]:
+        for ax in fig.axes:
+            if legend_covers(lg, ax, r):
+                bad.append(f"legend covers data in '{ax.get_title(loc='left')}'")
     for i, (a, ba) in enumerate(items):
         if ba.x0 < -1 or ba.y0 < -1 or ba.x1 > W + 1 or ba.y1 > H + 1:
             bad.append(f"clipped: {a}")
@@ -84,7 +118,7 @@ def teaser():
     panels = [("Qwen3-VL-4B", [(b["eb3"], EB, "EB prompt"), (b["s2m3"], S2M, "S2M (ours)"),
                                (b["rgb3"], RGBO, "S2M, RGB only")]),
               ("Qwen2.5-VL-3B", [(b["eb25"], EB, "EB prompt"), (b["s2m25"], S2M, "S2M (ours)")])]
-    fig, axes = plt.subplots(2, 1, figsize=(3.35, 2.8), sharex=True)
+    fig, axes = plt.subplots(2, 1, figsize=(3.35, 2.45), sharex=True)
     w, x = 0.3, np.arange(len(subsets))
     for ax, (title, series) in zip(axes, panels):
         off = [(k - (len(series) - 1) / 2) * w for k in range(len(series))]
@@ -112,13 +146,13 @@ def teaser():
     h, lab = axes[0].get_legend_handles_labels()
     fig.legend(h[1:] + h[:1], lab[1:] + lab[:1], loc="upper center", ncol=2, frameon=False, handlelength=1.3,
                columnspacing=1.2, bbox_to_anchor=(0.55, 1.01))
-    fig.subplots_adjust(left=0.13, right=0.995, top=0.83, bottom=0.09, hspace=0.38)
+    fig.subplots_adjust(left=0.13, right=0.995, top=0.8, bottom=0.1, hspace=0.42)
     check(fig, "results")
     fig.savefig(os.path.join(FIG, "results.pdf"))
 
 
 def analysis():
-    fig, axes = plt.subplots(1, 3, figsize=(7.0, 2.05), gridspec_kw=dict(width_ratios=[1.0, 1.15, 1.0]))
+    fig, axes = plt.subplots(1, 3, figsize=(7.0, 1.85), gridspec_kw=dict(width_ratios=[1.0, 1.15, 1.0]))
     # (a) success within a step budget
     ax = axes[0]
     t = np.arange(21)
@@ -132,8 +166,11 @@ def analysis():
     ax.set_xlabel("step budget")
     ax.set_ylabel("episodes solved (%)")
     style(ax, grid="both")
-    ax.legend(loc="upper left", frameon=False, handlelength=1.6, borderaxespad=0.2)
     ax.set_title("(a) success within a step budget", loc="left", pad=3)
+    fig.subplots_adjust(left=0.065, right=0.995, top=0.88, bottom=0.2, wspace=0.42)
+    fit_legend(fig, ax, ["lower right", ("lower right", {"ncol": 2, "columnspacing": 0.8}), "upper left",
+                         ("upper left", {"ncol": 2, "columnspacing": 0.8})],
+               headroom=(1.0, 1.15, 1.3, 1.45), frameon=False, handlelength=1.6, borderaxespad=0.2)
     # (b) failure modes, EB prompt vs S2M (episodes of 300)
     ax = axes[1]
     cats = [("never_seen", "never seen"), ("lost_after_seen", "lost after seen"), ("near_miss", "near miss"),
@@ -158,8 +195,8 @@ def analysis():
     # (c) lifted range / true range of target detections
     ax = axes[2]
     bins = np.linspace(0.4, 1.6, 49)
-    for key, c, lab, ls in (("global", EB, "mono., global scale", (0, (1, 1.5))),
-                            ("floor", S2M, "mono., floor scale", (0, (4, 2))), ("depth", S2M, "depth sensor", "-")):
+    for key, c, lab, ls in (("depth", S2M, "depth sensor", "-"), ("floor", S2M, "floor scale", (0, (4, 2))),
+                            ("global", EB, "global scale", (0, (1, 1.5)))):
         v = np.asarray(DATA["range_ratio"][key])
         ax.hist(v, bins=bins, density=True, histtype="step", color=c, lw=1.3, ls=ls, label=lab, zorder=3)
         ax.axvline(np.median(v), color=c, lw=0.8, ls=(0, (2, 1.5)), zorder=2)
@@ -169,8 +206,10 @@ def analysis():
     ax.set_xlabel("lifted range / true range")
     ax.set_ylabel("density")
     style(ax, grid="y")
-    ax.legend(loc="upper right", frameon=False, handlelength=1.4, borderaxespad=0.2)
     ax.set_title("(c) range of lifted target boxes", loc="left", pad=3)
+    fig.subplots_adjust(left=0.065, right=0.995, top=0.88, bottom=0.2, wspace=0.42)
+    fit_legend(fig, ax, ["upper right"], headroom=(1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.8, 2.0, 2.2), ncol=1,
+               frameon=False, handlelength=1.3, handletextpad=0.4, labelspacing=0.25, borderaxespad=0.15)
     fig.subplots_adjust(left=0.065, right=0.995, top=0.88, bottom=0.2, wspace=0.42)
     check(fig, "analysis")
     fig.savefig(os.path.join(FIG, "analysis.pdf"))
@@ -183,7 +222,7 @@ API = 170
 
 
 def landscape():
-    fig, ax = plt.subplots(figsize=(3.35, 2.45))
+    fig, ax = plt.subplots(figsize=(3.35, 2.15))
     marks = {"Prompted MLLMs (EmbodiedBench)": ("o", MUTED, MUTED, "prompted MLLM (reported)"),
              "Training-free agents": ("s", "white", INK2, "training-free agent (reported)"),
              "Fine-tuned": ("^", "white", INK2, "fine-tuned agent (reported)")}
@@ -237,7 +276,7 @@ def robothor_cats():
         " " + c.lower() if c.isupper() and i else c.lower() for i, c in enumerate(k))) for k, _ in cats]
     sr = [v[0] for _, v in cats]
     spl = [v[1] for _, v in cats]
-    fig, ax = plt.subplots(figsize=(3.35, 2.05))
+    fig, ax = plt.subplots(figsize=(3.35, 1.55))
     y = np.arange(len(cats))
     ax.barh(y, sr, 0.62, color=S2M, zorder=2, label="SR")
     ax.scatter(spl, y, marker="|", s=40, color=INK, linewidth=1.3, zorder=3, label="SPL")
@@ -254,7 +293,7 @@ def robothor_cats():
     ax.set_xlabel("RoboTHOR validation (%)")
     style(ax, grid="x")
     ax.legend(loc="lower right", frameon=False, handlelength=1.0, borderaxespad=0.1)
-    fig.subplots_adjust(left=0.22, right=0.965, top=0.98, bottom=0.17)
+    fig.subplots_adjust(left=0.22, right=0.965, top=0.99, bottom=0.215)
     check(fig, "robothor_cats")
     fig.savefig(os.path.join(FIG, "robothor_cats.pdf"))
 

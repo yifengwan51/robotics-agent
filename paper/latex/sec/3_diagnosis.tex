@@ -16,6 +16,7 @@ test set has five subsets of 60 episodes. \emph{Base} names the category, \emph{
 its use, \emph{Complex} embeds it in a longer instruction, \emph{Visual} describes only its appearance, and
 \emph{Long} repeats Base with the agent turned away from the target.
 
+\input{sec/fig_mech}
 \noindent\textbf{The benchmark's agent.}
 The benchmark's own agent, the \emph{EB prompt}, maps the image and its text history
 $h_t=(u_{0:t-1},o_{0:t-1})$ directly to a plan,
@@ -33,7 +34,7 @@ the agent has turned, must be carried by $h_t$ and the generated reasoning. \our
 \label{eq:factor}
 \end{equation}
 where $s$ is a target phrase, $f$ answers only questions about $I_t$, and the metric belief $\mathcal{B}_t$ and the
-planner $\rho$ hold all state and every decision (\cref{sec:method}). The configuration of \ours was fixed on a
+planner $\rho$ hold all state and every decision (\cref{sec:method,fig:mech}). The configuration of \ours was fixed on a
 development split of 150 episodes that we built with the benchmark's generator on 30 iTHOR rooms not used by the test
 set.
 
@@ -45,17 +46,21 @@ Replacing the target belief of \ours by the true $x^\star$, with the same occupa
 For each test episode of the first four subsets we render the start view and the three other 90$^\circ$ headings
 and query the VLM with the phrase $s$. Qwen3-VL-4B places a box with IoU${\ge}0.3$ on the visible target in
 \nProbeThreeBase, \nProbeThreeCommon, \nProbeThreeComplex, and \nProbeThreeVisual\% of the views on Base, Common,
-Complex, and Visual (75 visible instances each). One answer is useful evidence, but not something to act on alone.
+Complex, and Visual (75 visible instances each). It also errs the other way: on views that do not show the target it
+still places a box in \nFalseBoxNamedLo--\nFalseBoxNamedHi\% of the cases for named categories and in
+\nFalseBoxVisual\% for appearance-only phrases. A single answer is therefore evidence, not a decision.
 
 \noindent\textbf{The prompted agent loses spatial state.}
-We label every failed episode by the first matching rule: the target never enters the view; final distance at
-most 1.5\,m (\emph{near miss}); the target is out of view in the last five steps (\emph{lost after seen}); at least
-30\% of the actions are rejected (\emph{blocked}); at least three immediate reversals; otherwise approach failure.
+We label each failed episode by its first matching outcome: \emph{never seen}, \emph{near miss} (within 1.5\,m),
+\emph{lost after seen} (out of view in the last five steps), \emph{blocked} (30\% of actions rejected), oscillation, or
+approach failure.
 Of the \nFailEBThree{} episodes that the EB prompt fails with Qwen3-VL-4B, \nLostEBThree{} lose a target that was in
 view, \nBlockedEBThree{} are blocked by collisions, and \nNearEBThree{} end within 1.5\,m (\cref{fig:analysis}b);
 in \nNeverLongEBThree{} Long episodes the agent never brings the target into view.
 
-\noindent\textbf{Design principles.}
-(i)~Ask the VLM only what the current image settles, with no transcript to extend. (ii)~Keep the target, the map,
-and the search state in an explicit metric memory. (iii)~Treat every answer as weak evidence and act on evidence
-aggregated over viewpoints.
+\noindent\textbf{What the diagnosis predicts.}
+If small VLMs fail because their role makes them carry spatial state through text, an agent that keeps this
+state outside the model, with the same model and the same actions, should (i)~remove the never-seen and blocked failures
+and reduce the lost-after-seen ones; (ii)~gain most on Long, where the target must be remembered across turns;
+(iii)~gain least on Visual, where single-view recognition is weakest and stays the limit; and (iv)~depend far less
+on the size of the model, which no longer plans (\cref{sec:exp}).

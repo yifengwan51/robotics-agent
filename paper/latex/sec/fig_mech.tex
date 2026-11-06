@@ -1,0 +1,66 @@
+\begin{figure*}[t]
+\centering
+\definecolor{oBlueL}{HTML}{DEEBF7}\definecolor{oBlueD}{HTML}{2E75B6}\definecolor{oOrangeP}{HTML}{FDF2E9}\definecolor{oOrangeL}{HTML}{FBE5D6}\definecolor{oOrangeD}{HTML}{C55A11}\definecolor{oOrangeS}{HTML}{ED7D31}\definecolor{oGreenS}{HTML}{C5E0B4}\definecolor{oGreyP}{HTML}{F2F2F2}\definecolor{oGreyL}{HTML}{E7E6E6}\definecolor{oGreyM}{HTML}{BFBFBF}\definecolor{oGreyS}{HTML}{A6A6A6}\definecolor{oGreyK}{HTML}{7F7F7F}\definecolor{oGreyD}{HTML}{595959}
+\begin{tikzpicture}[x=1mm, y=1mm, >={Stealth[length=1.4mm, width=1.3mm]}]
+\useasboundingbox (0,0) rectangle (174.00,-45.96);
+\draw[draw=oGreyK, line width=0.36pt, dash pattern=on 3.2pt off 2.2pt, rounded corners=5pt] (12.06,-4.40) rectangle (50.33,-42.66);
+\draw[fill=oOrangeP, draw=oOrangeD, line width=0.8pt, dash pattern=on 3.2pt off 2.2pt, rounded corners=5pt] (53.53,-4.40) rectangle (109.89,-42.66);
+\draw[draw=oGreyK, line width=0.36pt, dash pattern=on 3.2pt off 2.2pt, rounded corners=5pt] (113.09,-4.40) rectangle (159.27,-42.66);
+\draw[->, line width=0.6pt, draw=black] (8.86,-10.66) -- (15.12,-10.66);
+\draw[->, line width=0.6pt, draw=oBlueD] (20.96,-15.31) -- (20.96,-18.14);
+\draw[->, line width=0.6pt, draw=oBlueD] (28.27,-22.74) -- (32.87,-22.74);
+\draw[->, line width=0.6pt, draw=oBlueD] (20.96,-27.34) -- (20.96,-30.16);
+\draw[->, line width=0.6pt, draw=oBlueD] (40.80,-27.39) -- (40.80,-31.76) -- (28.00,-31.76);
+\draw[->, line width=0.6pt, draw=black] (28.00,-34.70) -- (51.93,-34.70) -- (51.93,-9.07) -- (55.95,-9.07);
+\draw[->, line width=0.6pt, draw=oOrangeD] (67.20,-12.14) -- (67.20,-14.96);
+\draw[->, line width=0.6pt, draw=oOrangeD] (78.46,-9.07) -- (96.09,-9.07) -- (96.09,-14.96);
+\draw[->, line width=0.6pt, draw=oOrangeD] (67.20,-24.27) -- (67.20,-27.10);
+\draw[->, line width=0.6pt, draw=oOrangeD] (96.09,-24.27) -- (96.09,-27.10);
+\draw[->, line width=0.6pt, draw=black] (108.29,-31.75) -- (110.69,-31.75) -- (110.69,-10.60) -- (114.69,-10.60);
+\draw[->, line width=0.6pt, draw=oGreyD] (137.82,-10.60) -- (142.42,-10.60);
+\draw[->, line width=0.6pt, draw=oGreyD] (126.26,-15.20) -- (126.26,-18.02);
+\draw[->, line width=0.6pt, draw=oGreyD] (150.05,-18.49) -- (150.05,-33.33);
+\draw[->, line width=0.6pt, draw=oGreyD] (126.26,-30.51) -- (126.26,-36.40) -- (142.72,-36.40);
+\draw[->, line width=0.6pt, draw=black] (157.37,-36.40) -- (162.47,-36.40);
+\draw[->, line width=0.6pt, draw=black] (167.59,-41.06) -- (167.59,-44.66) -- (4.43,-44.66) -- (4.43,-13.73);
+\filldraw[fill=oGreyL, draw=black, line width=0.36pt, rounded corners=2.6pt] (0.00,-7.59) rectangle (8.86,-13.73);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (4.43,-10.66) {$I_t$, $s$};
+\filldraw[fill=oBlueL, draw=black, line width=0.36pt, rounded corners=2.6pt] (15.12,-6.00) rectangle (26.80,-15.31);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (20.96,-10.66) {VLM $f$\\$\pi_t$, $b_t$};
+\filldraw[fill=white, draw=black, line width=0.36pt] (20.96,-18.14) -- (28.27,-22.74) -- (20.96,-27.34) -- (13.66,-22.74) -- cycle;
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (20.96,-22.74) {weak?};
+\filldraw[fill=oBlueL, draw=black, line width=0.36pt, rounded corners=2.6pt] (32.87,-18.08) rectangle (48.73,-27.39);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (40.80,-22.74) {crop check,\\tiles};
+\filldraw[fill=oGreyP, draw=black, line width=0.36pt, rounded corners=2.6pt] (13.93,-30.16) rectangle (28.00,-36.30);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (20.96,-33.23) {weight $a_t$};
+\filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (55.95,-6.00) rectangle (78.46,-12.14);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (67.20,-9.07) {lift to $q_t$ ($D_t$, $p_t$)};
+\filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (55.13,-14.96) rectangle (79.28,-24.27);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (67.20,-19.62) {\textit{within $r$ of $\mu_k$:}\\fuse, $w_k \mathrel{+}= \gamma_t a_t$};
+\filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (83.88,-14.96) rectangle (108.29,-24.27);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (96.09,-19.62) {\textit{otherwise:}\\$\mu_k=q_t$, $w_k=a_t$};
+\filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (55.13,-27.10) rectangle (108.29,-36.41);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (81.71,-31.75) {\textit{in view, undetected:}\\$w_k \mathrel{-}= \lambda$; drop at $w_k\le-1$};
+\filldraw[fill=white, draw=black, line width=0.36pt] (126.26,-6.00) -- (137.82,-10.60) -- (126.26,-15.20) -- (114.69,-10.60) -- cycle;
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (126.26,-10.60) {$w_k\ge\tau_c$?};
+\filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (142.42,-6.00) rectangle (157.67,-18.49);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (150.05,-12.24) {go to $\mu_{k^\star}$;\\exhaust it\\on arrival};
+\filldraw[fill=oGreyL, draw=black, line width=0.36pt, rounded corners=2.6pt] (117.69,-18.02) rectangle (134.82,-30.51);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (126.26,-24.27) {look around,\\inspect,\\or explore};
+\filldraw[fill=oGreyL, draw=black, line width=0.36pt, rounded corners=2.6pt] (142.72,-33.33) rectangle (157.37,-39.47);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (150.05,-36.40) {A* on $M_t$};
+\filldraw[fill=oGreenS, draw=black, line width=0.36pt, rounded corners=2.6pt] (162.47,-31.75) rectangle (172.71,-41.06);
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, align=center, inner sep=0, anchor=center] at (167.59,-36.40) {action\\$u_t$};
+\node[font=\rmfamily\fontsize{8.5}{10.20}\selectfont\bfseries\itshape, text width=37.67mm, align=left, inner sep=0, anchor=west] at (12.66,-2.20) {Per-image questions};
+\node[font=\rmfamily\fontsize{8.5}{10.20}\selectfont\bfseries\itshape, text width=55.77mm, align=left, inner sep=0, anchor=west] at (54.13,-2.20) {Metric hypothesis memory};
+\node[font=\rmfamily\fontsize{8.5}{10.20}\selectfont\bfseries\itshape, text width=45.58mm, align=left, inner sep=0, anchor=west] at (113.69,-2.20) {Search and control};
+\node[font=\rmfamily\fontsize{6.5}{7.80}\selectfont\itshape, text width=3.60mm, align=center, inner sep=0, anchor=center] at (30.57,-20.94) {yes};
+\node[font=\rmfamily\fontsize{6.5}{7.80}\selectfont\itshape, text width=4.40mm, align=left, inner sep=0, anchor=west] at (21.56,-28.75) {no};
+\node[font=\rmfamily\fontsize{6.5}{7.80}\selectfont\itshape, text width=3.60mm, align=center, inner sep=0, anchor=center] at (140.12,-8.80) {yes};
+\node[font=\rmfamily\fontsize{6.5}{7.80}\selectfont\itshape, text width=4.40mm, align=left, inner sep=0, anchor=west] at (126.86,-16.61) {no};
+\fill[white] (78.00,-43.41) rectangle (96.00,-45.91);
+\node[font=\rmfamily\fontsize{7.0}{8.40}\selectfont, text width=18.00mm, align=center, inner sep=0, anchor=center] at (87.00,-44.66) {next frame};
+\end{tikzpicture}
+\caption{One step of \ours. The frozen VLM $f$ gives the presence $\pi_t$ and box $b_t$ of the phrase $s$ on the frame $I_t$; a weak answer is checked on a crop or on tiles, which sets its weight $a_t$. The box is lifted to a floor point $q_t$ with depth $D_t$ and pose $p_t$ and fused into a hypothesis $\mu_k$ within $r$, or starts one; $\gamma_t<1$ discounts a repeated view, and a hypothesis that should be seen but is not loses $\lambda$ of its evidence $w_k$. Above $\tau_c$ a hypothesis is committed, and the agent goes to $\mu_{k^\star}$; A* on the map $M_t$ gives the action $u_t$.}
+\label{fig:mech}
+\end{figure*}

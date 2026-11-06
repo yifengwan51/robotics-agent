@@ -1,0 +1,180 @@
+\documentclass[10pt,twocolumn,letterpaper]{article}
+\usepackage[review]{cvpr}
+\input{preamble}
+\usepackage{iftex}
+\ifXeTeX\usepackage{fontspec}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\setmonofont{texgyrecursor}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic]
+\fi
+\usepackage{booktabs,amsmath,amssymb,graphicx,xspace,makecell}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\usepackage[breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+\raggedbottom
+
+\def\paperID{*****}
+\def\confName{ICCV}
+\def\confYear{2027}
+\newcommand{\ours}{S2M\xspace}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\input{sec/numbers}
+
+\title{Ask Small VLMs Only What They Can See:\\A Semantic-to-Metric Agent for Embodied Navigation\\[0.3em]
+\large Supplementary Material}
+\author{Anonymous submission}
+
+\begin{document}
+\maketitle
+
+\section{Implementation details}
+\label{sec:s-impl}
+
+\noindent\textbf{Parameters.}
+\Cref{tab:s-params} lists every parameter of \ours. All were fixed on the development split (\cref{sec:s-protocol})
+and are the same for both models and for the RGB-only configuration; RoboTHOR changes only the items of the
+explicit-stopping paragraph of Sec.~4.4 of the main paper.
+
+\begin{table}[t]
+\centering\small
+\caption{Parameters of \ours on EB-Navigation.}
+\label{tab:s-params}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llr@{}}
+\toprule
+Group & Parameter & Value\\
+\midrule
+Questions & presence threshold for named targets & 0.5\\
+ & crop side (times the box's longer side) & 2.5\\
+ & crop and tile resolution & 448\,px\\
+ & crop acceptance & 0.5\\
+ & weight of a rejected crop & $0.2\,\pi^z_t$\\
+Lifting & depth window (fraction of the box) & 0.5\\
+ & maximum range & 6\,m\\
+ & floor / obstacle height & 0.10 / 0.1--1.9\,m\\
+ & occupancy grid & 5\,cm\\
+Memory & association radius $r$ & 0.5\,m\\
+ & repeated-view discount $\gamma$ & 0.25\\
+ & same view: position, heading & 0.2\,m, equal\\
+ & negative evidence $\lambda$ & 0.4\\
+ & image margin, occlusion tolerance & 20\,px, 0.3\,m\\
+ & removal threshold & $w_k\le-1$\\
+Search & commit $\tau_c$ / keep $\tau_k$ & 0.8 / 0.4\\
+ & approach a weak hypothesis & $w_k\ge0.35$\\
+ & exhaustion radius & 0.9\,m\\
+ & exploration goal distance & 0.75--3\,m\\
+ & tiles, overlap, boxes checked & $3{\times}3$, 20\%, 4\\
+Planning & cost of an unobserved edge point & 0.15\\
+ & obstacle inflation (fallback) & 0.20 (0.10)\,m\\
+ & goal tolerance & 0.55\,m\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent\textbf{Prompts.}
+The target phrase $s$ comes from one text-only query per episode:
+\begin{quote}\small\ttfamily
+A robot must navigate to one object in a house. Instruction: "$\langle\ell\rangle$"
+Reply with JSON \{"name": "...", "appearance\_only": true or false, "looks": "..."\} where
+- name: the most likely specific household object, as its common name in 1-2 words (e.g. "toaster", "trash can",
+"laptop"; never a vague word like "device" or "object").
+- appearance\_only: true if the instruction describes the object only by colour, shape, material or texture,
+without saying what it is or what it is used for.
+- looks: the appearance words from the instruction (colour, shape, material), empty if none.
+\end{quote}
+$s$ is the name, or the appearance words when \texttt{appearance\_only} is true. The two per-frame queries are
+\begin{quote}\small\ttfamily
+Does this image show $\langle s\rangle$? Answer yes or no.\\[0.3em]
+Locate the $\langle s\rangle$ in the image and output its bounding box as JSON: [\{"bbox\_2d": [x1, y1, x2, y2],
+"label": "$\langle s\rangle$"\}]. If it is not in the image, output [].
+\end{quote}
+The presence query generates one token and reads $P(\textit{yes})$ and $P(\textit{no})$ from the ten most likely
+first tokens (\cref{eq:s-presence}). The crop check asks the presence query and each tile the box query, both on
+the magnified image. Box replies are parsed with one regular expression; a box narrower than 2\,px counts as no box.
+\begin{equation}
+\pi_t=\frac{\sum_{y\in\textit{yes}}P(y)}{\sum_{y\in\textit{yes}}P(y)+\sum_{n\in\textit{no}}P(n)} ,
+\label{eq:s-presence}
+\end{equation}
+where the sums run over the case variants of each answer among the ten tokens; $\pi_t=0.5$ if neither appears.
+
+\noindent\textbf{Serving.}
+Both models run in vLLM with their 4-bit AWQ checkpoints, temperature 0, and at most 96 generated tokens for a box
+and one for a presence answer. Qwen2.5-VL receives frames resized to at most 409{,}600 pixels; Qwen3-VL uses its
+default processor. The two per-frame queries are sent in parallel.
+
+\section{Protocol}
+\label{sec:s-protocol}
+
+\noindent\textbf{Development split.}
+EmbodiedBench provides target objects and the three instruction variants for 90 iTHOR rooms, and its test set uses
+60 of them (FloorPlan11--30, 211--230, 311--330). We rerun the benchmark's own generator on the other 30
+(FloorPlan1--10, 201--210, 301--310): a start pose 2.5--3.0\,m from the first instance of the target with the camera
+level, Common, Complex, and Visual from the same targets with the benchmark's instruction variants, and Long as Base
+with the start heading rotated by 180$^\circ$. This yields five subsets of 30 episodes. Every parameter of
+\cref{tab:s-params} and every design choice of Sec.~4 was selected on this split, and the configuration was
+frozen before the first test run.
+
+\noindent\textbf{Statistics.}
+All agents run on the same 300 test episodes, so each comparison uses per-episode differences. A configuration run
+several times enters with its per-episode mean success. Confidence intervals are percentile intervals of $10^4$
+episode-level bootstrap resamples. $p$-values are two-sided sign-flip permutation tests with $10^6$ random sign
+assignments; the ten variants of Tab.~2 of the main paper are Holm-corrected together. Comparisons of two single
+binary runs use the exact McNemar test.
+
+\noindent\textbf{Outcome categories.}
+A failed episode takes the first matching category: the target never enters the view; the final distance is at most
+1.5\,m (near miss); the target is out of view in the last five steps (lost after seen); at least 30\% of the actions
+are rejected (blocked); at least three immediate reversals (oscillation); otherwise approach failure. Visibility
+comes from the simulator's object metadata.
+
+\noindent\textbf{RoboTHOR.}
+\nRoboErr{} of the \nRoboN{} validation episodes end because the simulator rejects the start pose
+(\texttt{teleport failed}); they are counted as failures.
+
+\section{Additional results}
+\label{sec:s-results}
+
+\noindent\textbf{Single views.}
+\Cref{tab:s-probe} extends the probe of Sec.~3 of the main paper to both models and to the views that do not show
+the target. Qwen3-VL-4B finds the target more often than Qwen2.5-VL-3B but also places more boxes where there is
+nothing to find, most of all for appearance-only phrases. Both kinds of error enter the memory, and both are what
+multi-view fusion and negative evidence act on.
+
+\begin{table*}[t]
+\centering\small
+\caption{Single-view probe on the test episodes of the first four subsets (start view and the three other 90$^\circ$
+headings; 75 views with the target visible per subset).}
+\label{tab:s-probe}
+\input{sec/supp_tab_probe}
+\end{table*}
+
+\noindent\textbf{Outcomes.}
+\Cref{tab:s-taxonomy} gives the outcome of every agent on the 300 test episodes. \ours removes almost all
+never-seen and blocked episodes with both models. With Qwen2.5-VL-3B the EB prompt loses a target it has seen in
+\nLostEBTwo{} episodes; \ours does so in \nLostSTwo, its largest remaining failure mode with the smaller model.
+
+\begin{table}[t]
+\centering\small
+\caption{Outcomes on EB-Navigation test (episodes of 300; mean over runs where a configuration was run
+repeatedly).}
+\label{tab:s-taxonomy}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\input{sec/supp_tab_taxonomy}
+\end{table}
+
+\noindent\textbf{Cost.}
+Per episode, \ours makes \nCallsS{} VLM calls against \nCallsEB{} for the EB prompt, but each call asks one short
+question: it reads \nTokS{}k prompt tokens and generates \nTokSc{} tokens, against \nTokEB{}k and \nTokEBc{}k for the EB
+prompt, whose plans and reasoning dominate its generation.
+
+\noindent\textbf{RoboTHOR by category.}
+\Cref{tab:s-robothor} lists success and SPL for each of the twelve categories.
+
+\begin{table}[t]
+\centering\small
+\caption{\ours on RoboTHOR validation by target category.}
+\label{tab:s-robothor}
+\input{sec/supp_tab_robothor}
+\end{table}
+
+\end{document}

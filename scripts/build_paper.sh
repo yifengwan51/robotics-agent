@@ -8,8 +8,12 @@ cd "$ROOT"
 ~/miniforge3/envs/embnav/bin/python scripts/make_paper_figures.py
 ~/miniforge3/envs/embnav/bin/python scripts/make_arch_figure.py
 ~/miniforge3/envs/embnav/bin/python scripts/make_trajectory_figure.py
+~/miniforge3/envs/embnav/bin/python scripts/make_flow_figure.py
 cd paper/latex
 ~/miniforge3/envs/tex/bin/tectonic -X compile main.tex --keep-logs --outdir /tmp/s2m_build > /tmp/s2m_build.log 2>&1
 grep -iE "undefined|Overfull" /tmp/s2m_build.log | grep -v lineno | sort -u || true
 cp /tmp/s2m_build/main.pdf paper.pdf
-echo "paper.pdf: $(pdfinfo paper.pdf | awk '/Pages/{print $2}') pages"
+~/miniforge3/envs/tex/bin/tectonic -X compile supp.tex --keep-logs --outdir /tmp/s2m_build > /tmp/s2m_supp.log 2>&1
+grep -iE "undefined|Overfull" /tmp/s2m_supp.log | grep -v lineno | sort -u || true
+cp /tmp/s2m_build/supp.pdf supp.pdf
+echo "paper.pdf: $(pdfinfo paper.pdf | awk '/Pages/{print $2}') pages; supp.pdf: $(pdfinfo supp.pdf | awk '/Pages/{print $2}') pages"

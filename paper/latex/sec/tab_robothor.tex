@@ -1,31 +1,30 @@
-% RoboTHOR table (hand-written; numbers as reported, ours from sec/numbers.tex)
-\begin{table}[t]
-\centering\small
-\caption{RoboTHOR ObjectNav validation (\nRoboN{} episodes). Bold: best; underlined: second best.
-$^\S$As reported by SG-Nav~\cite{yin2024online}.}
+\begin{table}[!tb]
+\centering\footnotesize
+\caption{RoboTHOR ObjectNav validation (\nRoboN{} episodes). Bold: best; underlined: second.
+$^\S$From SG-Nav~\cite{yin2024online}.}
 \label{tab:robothor}
-\setlength{\tabcolsep}{10pt}
-\begin{tabular}{@{}lrr@{}}
+\setlength{\tabcolsep}{6pt}\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{@{}llcrr@{}}
 \toprule
-Method & SR & SPL \\
+Method & Input & Year & SR & SPL \\
 \midrule
-\multicolumn{3}{@{}l}{\textit{Zero-shot}}\\
-CoW~\cite{gadre2022cows} & 26.7 & 16.9 \\
-LGX~\cite{dorbala2024lgx} & 35.0 & 21.9 \\
-ESC~\cite{zhou2023esc} & 38.1 & 22.2 \\
-L3MVN$^\S$~\cite{yu2023l3mvn} & 41.2 & 22.5 \\
-VLFM$^\S$~\cite{yokoyama2023vlfm} & 42.3 & 23.0 \\
-OpenFMNav$^\S$~\cite{kuang2024openfmnav} & 44.1 & 23.3 \\
-SG-Nav~\cite{yin2024online} & 47.5 & 24.0 \\
-UniGoal~\cite{yin2025unigoal} & 48.0 & 24.2 \\
-CogNav~\cite{cao2024cognav} & 54.6 & 24.3 \\
-MVP-Nav~\cite{xie2026mvpnav} & 57.5 & 26.8 \\
-ForesightNav~\cite{liu2026foresightnav} & 62.5 & 32.9 \\
-STRIVE~\cite{zhu2025strive} & \textbf{68.1} & \textbf{36.3} \\
-\multicolumn{3}{@{}l}{\textit{Trained for the task}}\\
-ProcTHOR~\cite{deitke2022procthor,gadre2022cows} & \underline{66.4} & 27.4 \\
+\multicolumn{5}{@{}l}{\textit{Zero-shot}}\\
+CoW~\cite{gadre2022cows} & RGB-D & 2022 & 26.7 & 16.9 \\
+LGX~\cite{dorbala2024lgx} & RGB-D & 2024 & 35.0 & 21.9 \\
+ESC~\cite{zhou2023esc} & RGB-D & 2023 & 38.1 & 22.2 \\
+L3MVN$^\S$~\cite{yu2023l3mvn} & RGB-D & 2023 & 41.2 & 22.5 \\
+VLFM$^\S$~\cite{yokoyama2023vlfm} & RGB-D & 2023 & 42.3 & 23.0 \\
+OpenFMNav$^\S$~\cite{kuang2024openfmnav} & RGB-D & 2024 & 44.1 & 23.3 \\
+SG-Nav~\cite{yin2024online} & RGB-D & 2024 & 47.5 & 24.0 \\
+UniGoal~\cite{yin2025unigoal} & RGB-D & 2025 & 48.0 & 24.2 \\
+CogNav~\cite{cao2024cognav} & RGB-D & 2024 & 54.6 & 24.3 \\
+MVP-Nav~\cite{xie2026mvpnav} & RGB & 2026 & 57.5 & 26.8 \\
+ForesightNav~\cite{liu2026foresightnav} & RGB-D & 2026 & 62.5 & 32.9 \\
+STRIVE~\cite{zhu2025strive} & RGB-D & 2025 & \textbf{68.1} & \textbf{36.3} \\
+\multicolumn{5}{@{}l}{\textit{Trained for the task}}\\
+ProcTHOR~\cite{deitke2022procthor,gadre2022cows} & RGB & 2022 & \underline{66.4} & 27.4 \\
 \midrule
-\ours (Qwen3-VL-4B) & \nRoboSR & \underline{\nRoboSPL} \\
+\ours (Qwen3-VL-4B) & RGB-D & -- & \nRoboSR & \underline{\nRoboSPL} \\
 \bottomrule
 \end{tabular}
 \end{table}

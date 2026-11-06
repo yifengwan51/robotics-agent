@@ -1,0 +1,15 @@
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{Qwen3-VL-4B} & \multicolumn{2}{c}{Qwen2.5-VL-3B}\\
+\cmidrule(lr){2-4}\cmidrule(l){5-6}
+Outcome & EB prompt & \ours & \ours, RGB & EB prompt & \ours\\
+\midrule
+success & 165 & 238.2 & 229.5 & 61 & 210\\
+never seen & 12 & 0.8 & 0 & 14 & 0\\
+lost after seen & 43 & 28.5 & 24.5 & 104 & 48\\
+near miss & 34 & 9.8 & 20.5 & 26 & 20\\
+blocked & 26 & 0.5 & 1 & 51 & 3\\
+oscillation & 1 & 10.2 & 9 & 1 & 2\\
+approach failure & 19 & 12 & 15.5 & 43 & 17\\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,20 @@
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}rlcccrll@{}}
+\toprule
+Step & Observation & $\pi_t$ & $\pi^z_t$ & $a_t$ & $w$ (target) & $w$ (look-alikes) & Action\\
+\midrule
+0 & no box & 0.00 & not asked & 0 & none & none & turn right\\
+1 & no box & 0.00 & not asked & 0 & none & none & turn right\\
+2 & box on target & 0.82 & not asked & 0.82 & \textbf{0.82} & none & forward\\
+3 & box on target & 1.00 & not asked & 1.00 & \textbf{1.82} & none & forward\\
+4 & box on target & 0.50 & not asked & 0.50 & \textbf{2.32} & none & forward\\
+5 & box on target & 0.01 & 1.00 & 1.00 & \textbf{3.32} & none & forward\\
+6 & box on target & 0.91 & not asked & 0.90 & \textbf{4.22} & none & forward\\
+7 & box on look-alike & 0.01 & 0.27 & 0.05 & \textbf{3.82} & 0.05 & forward\\
+8 & box on target & 0.22 & 1.00 & 1.00 & \textbf{4.82} & -0.35 & forward\\
+9 & box, rejected & 0.32 & 0.10 & 0 & \textbf{4.82} & -0.75 & right\\
+10 & box on target & 0.85 & not asked & 0.85 & \textbf{5.67} & none & forward\\
+11 & box on look-alike & 0.15 & 0.22 & 0.04 & \textbf{5.67} & 0.04 & right\\
+12 & box on target & 0.99 & not asked & 0.99 & \textbf{6.66} & -0.36 & right\\
+13 & box on target & 0.99 & not asked & 0.99 & \textbf{7.66} & -0.76 & forward\\
+\bottomrule
+\end{tabular*}

@@ -1,0 +1,171 @@
+\label{chap:literature}
+This chapter reviews the work on which the thesis builds and against which it is measured. It moves from the
+navigation problem itself (\cref{sec:lit-nav,sec:lit-objnav}) to the use of foundation models as embodied agents
+(\cref{sec:lit-agents}), and then to three ingredients of \ours: memory that attaches semantics to geometry
+(\cref{sec:lit-memory}), verification and search with VLM queries (\cref{sec:lit-verify}), and geometry from images
+(\cref{sec:lit-geometry}). \Cref{sec:lit-gap} states the gap that the thesis addresses.
+
+\section{Embodied navigation}
+\label{sec:lit-nav}
+\subsection{Classical navigation}
+Classical mobile robots separate mapping, localization, and planning. Occupancy grids represent free and occupied
+space as a probabilistic grid built from range measurements~\cite{elfes1989occupancy}; frontier-based exploration
+drives the robot to the boundary between known free space and unknown space until the map is complete~\cite{yamauchi1997frontier};
+and graph search such as A*~\cite{hart1968astar} computes collision-free paths on the map. These components are
+reliable, interpretable, and require no learning, and they form the geometric core of most modular navigation
+systems~\cite{thrun2005probabilistic}. What they lack is semantics: a classical map records where the robot can go,
+not where a ``kettle'' or ``something to sit on'' is.
+
+\subsection{Benchmarks for embodied navigation}
+Simulators of indoor scenes, such as AI2-THOR~\cite{kolve2017ai2thor} and Habitat~\cite{savva2019habitat}, made
+large-scale evaluation of embodied agents possible. Anderson~\etal{} proposed the evaluation framework that most
+benchmarks follow, including success weighted by path length (SPL)~\cite{anderson2018evaluation}. Object-goal
+navigation (ObjectNav) asks the agent to reach an instance of a named category~\cite{batra2020objectnav};
+RoboTHOR~\cite{deitke2020robothor} poses it in apartments built both in simulation and in the real world.
+Vision-and-language navigation (VLN) asks the agent to follow route instructions~\cite{anderson2018vln}.
+EmbodiedBench~\cite{yang2025embodiedbench} evaluates multimodal LLMs on high- and low-level embodied tasks through a
+standardized action interface, and its EB-Navigation benchmark is the main testbed of this thesis. Related benchmarks
+probe embodied decision making and navigation reasoning of language models~\cite{li2024embodied,qiao2025navbench}.
+
+\subsection{Learned navigation policies}
+End-to-end learning maps observations directly to actions. Policies trained for ObjectNav in large procedurally
+generated houses reach strong results on RoboTHOR~\cite{deitke2022procthor}. Semantic exploration learns where a
+category is likely to be and builds an explicit semantic map~\cite{chaplot2020object}. More recently,
+vision-language-action models fine-tune a VLM to output navigation actions from video~\cite{zhang2024navid,cheng2024navila,wei2025streamvln},
+and diffusion policies and world models generate trajectories or predict future views for planning~\cite{sridhar2023nomad,cai2025navdp,bar2024navigation}.
+Learned policies capture regularities of indoor scenes that hand-written rules miss, such as where kitchens tend
+to be. They pay for this with task-specific data, long training on large simulated datasets, and sensitivity to the
+gap between the training scenes and the deployment scenes. \ours uses a frozen model without training and keeps the
+navigation itself in classical geometry, which transfers without retraining.
+
+\subsection{Compact vision-language models}
+The VLMs that a robot can run locally are the small members of open model families. Qwen2.5-VL and Qwen3-VL provide
+models of 3--8B parameters that answer questions about images and return bounding boxes for objects named in
+text~\cite{bai2025qwen25vl,bai2025qwen3vl}. Weight quantization such as AWQ stores the weights in 4 bits with a small
+loss in accuracy~\cite{lin2024awq}, and serving engines with paged attention run such models efficiently on a single
+GPU~\cite{kwon2023vllm}. Together they make it possible to run a 4B model next to a simulator on one 8\,GB consumer
+GPU, the setting of this thesis. On embodied benchmarks, however, these models lag far behind frontier models when
+they are used as agents~\cite{yang2025embodiedbench}; the thesis asks whether this gap reflects their perception or
+their role.
+
+\section{Zero-shot object navigation}
+\label{sec:lit-objnav}
+Zero-shot ObjectNav removes task-specific training by combining an open-vocabulary perception model with a map and a
+planner. CoW pairs open-vocabulary localization with frontier exploration~\cite{gadre2022cows}. Later systems add
+semantic reasoning about where to search. ESC and L3MVN ask a language model which frontier is likely to lead to
+the target~\cite{zhou2023esc,yu2023l3mvn}; VLFM builds a value map from vision-language similarity~\cite{yokoyama2023vlfm};
+OpenFMNav and LGX use foundation models to propose and select goals~\cite{kuang2024openfmnav,dorbala2024lgx};
+SG-Nav, MSGNav, and UniGoal reason over scene or goal graphs with an LLM~\cite{yin2024online,huang2025msgnav,yin2025unigoal};
+WMNav uses a world model~\cite{nie2025wmnav}; CogNav models navigation as a cognitive state machine~\cite{cao2024cognav};
+STRIVE queries a VLM over a structured representation~\cite{zhu2025strive}; and MVP-Nav and ForesightNav plan over
+multi-layer value maps and semantic-geometric predictions~\cite{xie2026mvpnav,liu2026foresightnav}.
+Instruction-following agents extend this structure from categories to free-form instructions by grounding
+language in maps and scene graphs~\cite{long2024instructnav,rana2023sayplan,werby2024hierarchical,huang2023vlmaps,shah2022lmnav}.
+
+These systems share the modular structure of \ours: perception produces detections, a map stores them, and a
+planner acts. They differ from \ours in three respects. First, most use dedicated open-vocabulary detectors such as
+OWL-ViT or Grounding DINO~\cite{minderer2022owlvit,liu2024groundingdino}, often together with a large language model
+for reasoning; \ours uses one small generative VLM as its only perception model, which reads open instructions
+directly. Second, many ask a language model where to explore; \ours never asks the model where to go, and its
+exploration follows geometric rules. Third, a detector returns calibrated scores for a fixed vocabulary, whereas a
+generative VLM writes its boxes as text and places boxes in views that do not show the target
+(\cref{sec:diag-probe}). The memory of \ours is designed for this error profile.
+
+\section{Multimodal LLMs as embodied agents}
+\label{sec:lit-agents}
+A second line of work uses a multimodal LLM as the whole agent. SayCan grounds an LLM's plans in the affordances
+of learned skills~\cite{ahn2022saycan}. In EmbodiedBench, the model maps the image, the instruction, and the text
+history directly to a plan of actions~\cite{yang2025embodiedbench}. Agents are improved by embodied pre-training,
+online reinforcement learning, or policy-level reasoning~\cite{chen2025transforming,wang2025vagen,zhang2025embodiedx,liu2025robogpt},
+or at test time with reflection, experience, workflow memory, multi-memory architectures, and
+verifiers~\cite{shinn2023reflexion,zhao2023expel,chen2024automanual,wang2024agent,lei2025robomemory,singhi2026think}.
+
+On EB-Navigation specifically, training-free agents add a scene graph~\cite{huang2025esca}, a module graph~\cite{wang2026mosaic},
+a skill library~\cite{ju2026embodiskill}, an agent loop~\cite{chen2026hodagent}, brain-inspired memory~\cite{ma2026brainmem},
+an optimized harness~\cite{lee2026emho}, self-evolution~\cite{liang2026robofoundry}, or a library of perception and
+mapping tools~\cite{zhou2026enabling}, and SeeNav-Agent renders the target into a bird's-eye view~\cite{wang2025seenav}.
+Fine-tuned agents train world models or a Q-model around a 4B policy~\cite{jang2026musix,xie2026sva}.
+All of these agents keep the model as the planner and as the reader of its own memory. Whatever is added, a
+scene graph, a skill, or a tool output, enters the model's context as text or as an image, and the model must
+interpret it and decide. This places the hardest part of the task, integrating observations over time into a
+decision, on the model. The reported gains therefore grow with model size: the training-free agents on
+EB-Navigation use models of 8B parameters up to frontier scale, and the agents that work with 4B models require
+training. \ours takes the opposite position: the VLM is only a sensor, and its answers feed an explicit metric
+estimator and planner.
+
+\Cref{tab:lit-compare} contrasts the main families of approaches along the dimensions that matter for this thesis.
+
+\begin{table}[htbp]
+\centering\small
+\caption[Families of approaches to instruction-following navigation]{Families of approaches to instruction-following
+navigation. ``Open'' instructions describe the target by use or appearance as well as by name.}
+\label{tab:lit-compare}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{@{}lllllc@{}}
+\toprule
+Family & Who decides & Perception & Spatial state & Training & Open instructions\\
+\midrule
+Prompted MLLM agent~\cite{yang2025embodiedbench} & the model & the model & text history & none & yes\\
+Training-free MLLM agents~\cite{lee2026emho,ma2026brainmem,zhou2026enabling} & the model & model, tools & text, graphs, tool state & none & yes\\
+Fine-tuned VLM agents~\cite{xie2026sva,jang2026musix} & the model & the model & learned & task-specific & yes\\
+Modular zero-shot ObjectNav~\cite{gadre2022cows,yokoyama2023vlfm,yin2024online} & map, planner, often an LLM & detector & metric map & none & mostly categories\\
+Learned ObjectNav policies~\cite{deitke2022procthor,chaplot2020object} & the policy & learned & learned or map & task-specific & categories\\
+\midrule
+\ours (this thesis) & metric controller & one small VLM & metric hypotheses, map & none & yes\\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{Semantic memory for embodied agents}
+\label{sec:lit-memory}
+Embodied agents attach semantics to geometry in many forms: open-vocabulary 3D scene graphs~\cite{gu2023conceptgraphs},
+online semantic maps for changing scenes~\cite{jiang2025dualmap}, language fields and semantic Gaussian
+splatting~\cite{katragadda2025online,lee2026embodiedsplat}, and long-horizon spatio-temporal memories for exploration,
+question answering, and navigation~\cite{yang2024scene,anwar2024remembr,ginting2025enter}. These representations
+are rich and general. They are built with dedicated encoders or large models, and they store far more than a
+navigation agent needs to reach one object: a full scene graph or language field must be constructed and queried
+at every step, which is costly on a small GPU and adds failure modes of its own. A navigation agent needs to know
+where the target might be, how much evidence supports each candidate, and where it can move.
+
+Closest to the memory of \ours are two object-navigation systems. ApexNav fuses target-centric detections over time
+to suppress false positives~\cite{zhang2025apexnav}, and AECNav treats expected but absent detections as negative
+evidence~\cite{liu2026aecnav}. \ours shares both ideas and applies them at the minimal end of the spectrum: its memory
+is a short list of metric target hypotheses whose evidence grows only with distinct viewpoints, a choice that
+matters for a generative sensor whose repeated answers from the same view are not independent.
+
+\section{Verification, uncertainty, and search}
+\label{sec:lit-verify}
+Spatially explicit prompting, such as marking candidate regions or actions in the image, improves the spatial
+decisions of VLMs~\cite{yang2023mark,nasiriany2024pivot,goetting2024navigation}. Test-time sampling and verification,
+adaptive allocation of test-time compute, and uncertainty-conditioned execution improve vision-language-action
+models and embodied planners~\cite{kwok2025robomonkey,dao2026direct,choi2026scale}, and calibrated uncertainty lets
+robots ask for help or explore until confident~\cite{ren2023robots,liang2024introspective,ren2024explore}.
+These methods share one insight with \ours: a model's answer is more useful when the agent knows how much to
+trust it. They differ in where the trust comes from. Sampling and verification spend more model calls on the same
+decision; calibrated uncertainty asks the model how sure it is. \ours obtains trust from geometry: an answer gains
+weight when the same location is confirmed from a different viewpoint and loses weight when the location is in view
+but the model does not detect it. It spends extra queries, a magnified crop or a tiled view, only where the evidence
+is weak. To choose among
+candidate targets it uses the probability-to-cost index of optimal sequential search~\cite{kadane1977optimal}, which
+orders inspections by the probability of finding the target divided by the cost of checking.
+
+\section{Geometry from images}
+\label{sec:lit-geometry}
+Learned reconstruction and depth networks recover metric geometry from RGB images: feed-forward reconstruction and
+dense SLAM with learned priors~\cite{wang2025vggt,murai2024mast,maggio2025vggt}, zero-shot stereo~\cite{wen2025foundationstereo},
+and monocular metric depth~\cite{yang2024depthv2,lin2025depth}. Sensor choices can change the conclusions of embodied
+evaluations~\cite{corlito2026sensor,wang2025rethinking}, so an agent that claims to work from RGB must be evaluated
+without privileged depth or pose. Monocular visual odometry fixes its unknown scale from the ground plane and the
+known camera height~\cite{song2014robust}; \ours applies the same constraint to every frame of a monocular metric
+depth network. Concurrently with this work, Li~\etal{} run Qwen3-VL-4B zero-shot and accumulate its answers as
+per-direction scores in a bird's-eye field for vision-language navigation~\cite{li2026structure}; \ours instead lifts
+boxes to metric target hypotheses for object navigation.
+
+\section{Summary and research gap}
+\label{sec:lit-gap}
+Two lines of work meet in this thesis. MLLM agents follow open instructions but keep the model in charge of the plan,
+and their gains depend on large models or training. Modular object-navigation systems keep a metric map and a
+planner but rely on dedicated detectors, fixed vocabularies, and often large language models for exploration. No
+existing agent lets a small generative VLM drive open-instruction navigation, and no study has isolated why such a
+model fails when it is used as the agent. The thesis addresses both gaps: it diagnoses the failure
+(\cref{chap:diagnosis}) and builds an agent in which the small VLM is only a semantic sensor (\cref{chap:method}).

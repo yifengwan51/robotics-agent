@@ -1,0 +1,77 @@
+\label{app:impl}
+This appendix lists every parameter of \ours, the exact prompts, and the serving settings.
+
+\section{Parameters}
+\label{sec:appA-params}
+\Cref{tab:s-params} lists every parameter of \ours. All were fixed on the development split (\cref{sec:appB-dev})
+and are the same for both models and for the RGB-only configuration; RoboTHOR changes only the items of the
+explicit-stopping rule of \cref{sec:method-stop}.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Parameters of \ours on EB-Navigation.}
+\label{tab:s-params}
+\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llr@{}}
+\toprule
+Group & Parameter & Value\\
+\midrule
+Questions & presence threshold for named targets & 0.5\\
+ & crop side (times the box's longer side) & 2.5\\
+ & crop and tile resolution & 448\,px\\
+ & crop acceptance & 0.5\\
+ & weight of a rejected crop & $0.2\,\pi^z_t$\\
+Lifting & depth window (fraction of the box) & 0.5\\
+ & maximum range & 6\,m\\
+ & floor / obstacle height & 0.10 / 0.1--1.9\,m\\
+ & occupancy grid & 5\,cm\\
+Memory & association radius $r$ & 0.5\,m\\
+ & repeated-view discount $\gamma$ & 0.25\\
+ & same view: position, heading & 0.2\,m, equal\\
+ & negative evidence $\lambda$ & 0.4\\
+ & image margin, occlusion tolerance & 20\,px, 0.3\,m\\
+ & removal threshold & $w_k\le-1$\\
+Search & commit $\tau_c$ / keep $\tau_k$ & 0.8 / 0.4\\
+ & approach a weak hypothesis & $w_k\ge0.35$\\
+ & exhaustion radius & 0.9\,m\\
+ & exploration goal distance & 0.75--3\,m\\
+ & tiles, overlap, boxes checked & $3{\times}3$, 20\%, 4\\
+Planning & cost of an unobserved edge point & 0.15\\
+ & obstacle inflation (fallback) & 0.20 (0.10)\,m\\
+ & goal tolerance & 0.55\,m\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\section{Prompts}
+\label{sec:appA-prompts}
+The target phrase $s$ comes from one text-only query per episode:
+\begin{quote}\small\ttfamily
+A robot must navigate to one object in a house. Instruction: "$\langle\ell\rangle$"
+Reply with JSON \{"name": "...", "appearance\_only": true or false, "looks": "..."\} where
+- name: the most likely specific household object, as its common name in 1-2 words (e.g. "toaster", "trash can",
+"laptop"; never a vague word like "device" or "object").
+- appearance\_only: true if the instruction describes the object only by colour, shape, material or texture,
+without saying what it is or what it is used for.
+- looks: the appearance words from the instruction (colour, shape, material), empty if none.
+\end{quote}
+$s$ is the name, or the appearance words when \texttt{appearance\_only} is true. The two per-frame queries are
+\begin{quote}\small\ttfamily
+Does this image show $\langle s\rangle$? Answer yes or no.\\[0.3em]
+Locate the $\langle s\rangle$ in the image and output its bounding box as JSON: [\{"bbox\_2d": [x1, y1, x2, y2],
+"label": "$\langle s\rangle$"\}]. If it is not in the image, output [].
+\end{quote}
+The presence query generates one token and reads $P(\textit{yes})$ and $P(\textit{no})$ from the ten most likely
+first tokens (\cref{eq:s-presence}). The crop check asks the presence query and each tile the box query, both on
+the magnified image. Box replies are parsed with one regular expression; a box narrower than 2\,px counts as no box.
+\begin{equation}
+\pi_t=\frac{\sum_{y\in\textit{yes}}P(y)}{\sum_{y\in\textit{yes}}P(y)+\sum_{n\in\textit{no}}P(n)} ,
+\label{eq:s-presence}
+\end{equation}
+where the sums run over the case variants of each answer among the ten tokens; $\pi_t=0.5$ if neither appears.
+
+\section{Serving}
+\label{sec:appA-serving}
+Both models run in vLLM with their 4-bit AWQ checkpoints, temperature 0, and at most 96 generated tokens for a box
+and one for a presence answer. Qwen2.5-VL receives frames resized to at most 409{,}600 pixels; Qwen3-VL uses its
+default processor. The two per-frame queries are sent in parallel.

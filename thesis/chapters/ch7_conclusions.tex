@@ -1,0 +1,80 @@
+\label{chap:conclusions}
+
+\section{Answers to the research questions}
+\noindent\textbf{RQ1: Why do small VLMs fail as navigation agents?} Because the agents they are placed in make them
+keep spatial state in generated text. Controlled experiments on the same episodes ruled out the two other causes: a
+geometric planner given the target position solves \nOracle\% of the EB-Navigation test episodes, and Qwen3-VL-4B
+places a correct box on a visible named target in \nProbeThreeCommon--\nProbeThreeBase\% of single views. The
+failures of the prompted agent are failures of state: it loses seen targets, collides with furniture, and does not
+turn toward a target behind it (\cref{chap:diagnosis}).
+
+\noindent\textbf{RQ2: What should an agent built around a small VLM look like?} It should ask the model only what
+the current image can settle and keep everything else in metric form. \ours does so with two per-image questions, a
+hypothesis memory, a search rule, and an occupancy-map planner (\cref{chap:method}). Of its components, multi-view
+evidence fusion carries the gain: a generic modular agent that acts on single-view answers trails \ours by
+\nSOverMod{} percentage points, and removing fusion alone costs \nAblFusionAbs{} (\cref{sec:exp-modular,sec:exp-ablation}).
+
+\noindent\textbf{RQ3: How far does this agent close the gap to larger models?} With a 4-bit 4B model on one 8\,GB GPU
+and without training, \ours succeeds in \nSThree\% of the EB-Navigation test episodes, \nGainThree{} percentage
+points more than the benchmark's agent with the same model. From RGB alone it reaches \nRGBThree\%, which is above
+both fine-tuned 4B agents and seven of ten training-free agents built on 8B to frontier-scale models. With a smaller
+3B model the gain grows to \nGainTwo{} percentage points, and on RoboTHOR \ours reaches \nRoboSR\% success, above ten
+published zero-shot methods (\cref{chap:experiments}).
+
+\section{Discussion}
+The central finding of the thesis is that, for small models, the role matters more than the model. Agents designed
+around frontier models ask the model to perceive, remember, and plan, and they degrade quickly as the model shrinks.
+An agent that asks the same model only what it can see loses far less: replacing the 4B model by a 3B model costs
+\ours \nScaleDrop{} percentage points and the benchmark's agent \nScaleDropEB. The division of labor between a
+semantic sensor and a metric controller is old in robotics, but the thesis shows that a generative VLM needs more
+than this division: because its single answers are unreliable, the controller must treat them as evidence and
+accumulate them over distinct viewpoints.
+
+\subsection{Implications for the design of robot agents}
+Three lessons from this thesis apply beyond EB-Navigation.
+
+\noindent\textbf{Match the question to the model.} A question about the current image is one a small model can
+answer and an agent can check. A question about the room, the history, or the plan is one it cannot. Agent designs
+that pass the whole problem to the model test the model's ability to plan, not its ability to see. For small models
+the second is far stronger than the first.
+
+\noindent\textbf{Treat a generative model as a noisy sensor.} A generative VLM places boxes in views that do not
+show the target and repeats its answers from the same viewpoint. An agent should therefore weigh its answers, combine
+them across viewpoints, and lower them when the expected detection does not appear, as one would with any other
+noisy sensor. Of all components of \ours, this evidence fusion is the one whose removal costs most.
+
+\noindent\textbf{Keep geometry in geometry.} Distances, free space, and directions already looked at are exact
+quantities that classical methods compute reliably from depth and pose, or from RGB alone with a ground-plane scale.
+There is no reason to ask a language model to estimate them in words.
+
+\section{Limitations}
+\noindent\textbf{Task scope.} The controller of \ours is written for one task, reaching one object. A prompted agent
+can be redirected to a new task by changing its prompt; \ours needs a new controller.
+
+\noindent\textbf{Scene scale.} EB-Navigation episodes take place in single rooms with at most 20 steps. On the
+multi-room RoboTHOR apartments \ours remains below two zero-shot methods (\cref{tab:robothor}). Its exploration
+follows geometric rules and does not use semantic priors about where objects tend to be, which matter more in larger
+scenes. The components designed for competing candidates showed no significant effect in single rooms and remain
+untested at a larger scale.
+
+\noindent\textbf{Recognition.} Visual is the only subset on which \ours does not exceed the benchmark's agent. When the
+instruction describes only appearance, the small model rarely proposes the target, and no memory can recover a target
+that is never detected (\cref{sec:exp-gap}).
+
+\noindent\textbf{Simulation only.} All results come from AI2-THOR. The RGB-only configuration removes the depth sensor
+and the simulator pose, but its dead reckoning benefits from the simulator's discrete actions; real actuation noise,
+motion blur, and lighting have not been tested.
+
+\section{Future work}
+\noindent\textbf{Deployment on a robot.} The agent needs only an RGB camera, odometry, and a 4B model on a consumer
+GPU, which makes on-board deployment on a mobile or legged robot the most direct next step.
+
+\noindent\textbf{Semantic exploration.} The VLM could also answer questions that the current image can settle about
+where to search, for example which visible doorway leads toward a kitchen, without being asked to plan.
+
+\noindent\textbf{Larger scenes and other tasks.} Multi-room benchmarks would test the memory and the search index at
+a larger scale, and controllers for multi-step tasks, such as finding an object and then a receptacle, would test how
+far the division of labor between a semantic sensor and a metric controller extends.
+
+\noindent\textbf{Appearance-only goals.} Comparing several candidates within one image, rather than judging each
+alone, may help a small model recognize objects described only by how they look.

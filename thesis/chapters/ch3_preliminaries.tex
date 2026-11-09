@@ -1,0 +1,200 @@
+\label{chap:prelim}
+This chapter fixes the notation and the experimental ground on which the rest of the thesis stands: the navigation
+task (\cref{sec:pre-task}), the two benchmarks (\cref{sec:pre-bench}), the metrics (\cref{sec:pre-metrics}), the
+models and their deployment (\cref{sec:pre-models}), and the protocol and statistics used for every comparison
+(\cref{sec:pre-protocol}).
+
+\section{Task definition}
+\label{sec:pre-task}
+An episode gives an instruction $\ell$ that identifies one object with floor position $x^\star\in\mathbb{R}^2$. At
+step $t$ the agent observes an RGB frame $I_t$, a depth image $D_t$, a pose $p_t=(x_t,\theta_t,\phi_t)$ consisting of
+floor position, heading, and camera tilt, and the success flag $o_{t-1}$ of its last action. It chooses an action
+$u_t\in\mathcal{U}$, where $\mathcal{U}$ contains four 0.25\,m translations (forward, backward, left, right), two
+90$^\circ$ turns, and two 30$^\circ$ camera tilts. The episode is successful if
+\begin{equation}
+\exists\, t\le T:\ \lVert x_t-x^\star\rVert\le 1\,\text{m},\qquad T=20 .
+\label{eq:success}
+\end{equation}
+A rejected action, for instance a translation into furniture, leaves the pose unchanged and sets $o_t=0$. The agent
+never observes $x^\star$; it observes only the instruction and its own sensors.
+
+\Cref{tab:notation} collects the symbols used in the rest of the thesis.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Notation.}
+\label{tab:notation}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ll@{}}
+\toprule
+Symbol & Meaning\\
+\midrule
+$\ell$, $s$ & instruction; target phrase extracted from it\\
+$I_t$, $D_t$, $p_t$ & RGB frame, depth image, and pose $(x_t,\theta_t,\phi_t)$ at step $t$\\
+$u_t$, $o_t$ & action and its success flag\\
+$f$ & the frozen VLM\\
+$\pi_t$, $b_t$ & presence probability and box returned by $f$ for $s$ on $I_t$\\
+$a_t$ & weight of the observation of step $t$\\
+$q_t$ & floor point to which a box is lifted\\
+$\mu_k$, $w_k$, $V_k$ & position, evidence, and viewing poses of hypothesis $k$\\
+$M_t$ & occupancy map\\
+$\mathcal{B}_t$ & belief, the hypotheses together with the map\\
+$\tau_c$, $\tau_k$ & commit and keep thresholds\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\section{Benchmarks}
+\label{sec:pre-bench}
+\subsection{EB-Navigation}
+EB-Navigation~\cite{yang2025embodiedbench} poses the task of \cref{sec:pre-task} in single AI2-THOR
+rooms~\cite{kolve2017ai2thor}. Its test set has 300 episodes in five subsets of 60, which differ only in how the
+target is described or where the agent starts.
+\begin{description}
+\item[Base] names the target category, e.g.\ ``navigate to the AlarmClock in the room''.
+\item[Common] describes the object by its use or by common sense instead of its name.
+\item[Complex] embeds the target in a longer instruction with irrelevant context.
+\item[Visual] describes only the appearance of the object: colour, shape, or material.
+\item[Long] repeats Base with the agent turned away from the target, so the target starts behind the agent.
+\end{description}
+\Cref{tab:subsets} shows the five instructions of one test scene, FloorPlan13, in which the target is a toaster. The
+same object is named directly, described by its use, buried in an unrelated description of the room, described only
+by its colour and shape, and named again with the agent facing away from it.
+
+\begin{table}[htbp]
+\centering\small
+\caption[The five EB-Navigation subsets]{The five EB-Navigation subsets, illustrated by the test instructions of
+scene FloorPlan13 (target: a toaster).}
+\label{tab:subsets}
+\begin{tabular}{@{}lp{0.74\linewidth}@{}}
+\toprule
+Subset & Instruction\\
+\midrule
+Base & ``navigate to the Toaster in the room and be as close as possible to it''\\
+Common & ``I'd like a machine that could toast some slices of bread until they are crisp. Can you navigate to that
+object and stay close?''\\
+Complex & ``The room is filled with the golden glow of the late afternoon sun, making it feel warm and inviting.
+There's a fruit basket nearby, with bananas and apples spilling out. Please move towards the toaster. Everything feels
+so peaceful right now.''\\
+Visual & ``Approach the red rectangular item with black edges around the sides.''\\
+Long & ``navigate to the Toaster in the room and be as close as possible to it'' (start heading rotated by
+180$^\circ$)\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The benchmark ends an episode as soon as the agent is within 1\,m of the target, so on EB-Navigation an agent never
+has to decide when to stop. All experiments use the official environment, action set, and success test. The camera
+renders $500{\times}500$ RGB and depth images with a 100$^\circ$ field of view at 1.576\,m above the floor, and the
+agent body is modelled as a disc of 0.2\,m radius. Translations snap to the simulator's grid, so a 0.25\,m move may
+end up to a few centimetres away from its nominal position.
+
+\subsection{RoboTHOR ObjectNav}
+RoboTHOR~\cite{deitke2020robothor} poses object-goal navigation in apartments with several rooms. The validation
+split used here has \nRoboN{} episodes in 15 apartments with 12 target categories. The agent uses LoCoBot actuation
+with stochastic motion, 30$^\circ$ turns, and at most 500 steps. Unlike EB-Navigation, it must issue a Stop action;
+an episode succeeds only if Stop is issued within 1\,m of a visible object of the target category. RoboTHOR therefore
+tests two things that EB-Navigation does not: larger scenes and an explicit stop decision. Its camera renders
+$640{\times}480$ images with a 63.5$^\circ$ field of view, which shows less of the room per frame than the wide
+camera of EB-Navigation. \Cref{tab:bench-compare} summarizes the differences between the two benchmarks.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The two benchmarks.}
+\label{tab:bench-compare}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lll@{}}
+\toprule
+ & EB-Navigation & RoboTHOR ObjectNav\\
+\midrule
+Scenes & single iTHOR rooms & 15 multi-room apartments\\
+Episodes evaluated & 300 (test) & \nRoboN{} (validation)\\
+Goal description & five instruction types & 12 object categories\\
+Step budget & 20 & 500\\
+Translations & 0.25\,m, four directions & 0.25\,m forward, stochastic\\
+Turns, tilts & 90$^\circ$, 30$^\circ$ & 30$^\circ$, 30$^\circ$\\
+Camera & $500{\times}500$, 100$^\circ$ & $640{\times}480$, 63.5$^\circ$\\
+End of episode & automatic on success & agent issues Stop\\
+Metrics & SR & SR, SPL\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\section{Evaluation metrics}
+\label{sec:pre-metrics}
+The main metric is the \emph{success rate} (SR), the fraction of episodes that satisfy the success condition. On
+RoboTHOR, \emph{success weighted by path length} (SPL)~\cite{anderson2018evaluation} additionally rewards short paths,
+\begin{equation}
+\mathrm{SPL}=\frac{1}{N}\sum_{i=1}^{N} S_i\,\frac{L_i^\star}{\max(L_i,L_i^\star)},
+\label{eq:spl}
+\end{equation}
+where $S_i$ is the success indicator of episode $i$, $L_i$ the length of the agent's path, and $L_i^\star$ the
+length of the shortest path to the target. On EB-Navigation the thesis also reports the number of steps to success,
+success within a step budget, and the number of VLM calls and tokens per episode.
+
+To explain failures, each failed EB-Navigation episode is assigned the first matching outcome of a fixed taxonomy:
+the target never enters the view (\emph{never seen}); the final distance is at most 1.5\,m (\emph{near miss}); the
+target is out of view in the last five steps (\emph{lost after seen}); at least 30\% of the actions are rejected
+(\emph{blocked}); at least three immediate reversals (\emph{oscillation}); otherwise \emph{approach failure}.
+Visibility comes from the simulator's object metadata, which is used for analysis only and never given to an agent.
+
+\section{Models and deployment}
+\label{sec:pre-models}
+Two open VLMs of different generations serve as the agent's model: Qwen3-VL-4B-Instruct~\cite{bai2025qwen3vl} and
+Qwen2.5-VL-3B-Instruct~\cite{bai2025qwen25vl}. Both are served locally with vLLM~\cite{kwon2023vllm} at temperature 0
+on one consumer GPU with 8\,GB of memory (an NVIDIA RTX~5060), which also renders the simulator. \ours uses the 4-bit
+AWQ checkpoints of both models~\cite{lin2024awq}. Monocular depth for the RGB-only configuration comes from Depth
+Anything V2 Metric-Indoor-Base~\cite{yang2024depthv2}, which runs on the CPU. No model is fine-tuned at any point. \Cref{tab:system} lists the hardware and software. The GPU is shared by the
+VLM server and the simulator's renderer, so the model server is limited to a fraction of the 8\,GB of GPU memory.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Hardware and software used for all experiments.}
+\label{tab:system}
+\begin{tabular}{@{}lp{0.68\linewidth}@{}}
+\toprule
+Component & Setting\\
+\midrule
+GPU & one NVIDIA GeForce RTX 5060, 8\,GB, shared by the VLM server and the renderer\\
+CPU and memory & 28 hardware threads, 32\,GB RAM\\
+Operating system & Ubuntu 20.04\\
+Simulator & AI2-THOR 5.0 with cloud rendering\\
+VLM serving & vLLM 0.32, temperature 0, 4-bit AWQ weights for \ours\\
+Models & Qwen3-VL-4B-Instruct, Qwen2.5-VL-3B-Instruct\\
+Monocular depth & Depth Anything V2 Metric-Indoor-Base, on the CPU\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Protocol and statistics}
+\label{sec:pre-protocol}
+\subsection{Development and test splits}
+All design choices and parameters of \ours were selected on a separate development split and frozen before the
+first test run. EmbodiedBench provides targets and instruction variants for 90 iTHOR rooms, and its test set uses 60
+of them. Rerunning the benchmark's own generator on the other 30 rooms gives a development split of 150 episodes in
+five subsets of 30 (\cref{sec:appB-dev}). Test results are reported only on the complete official splits.
+
+\subsection{Statistical tests}
+All agents run on the same 300 test episodes, so each comparison uses per-episode differences. \ours was run four
+times on the EB-Navigation test set and the RGB-only configuration twice; a configuration run several times enters
+with its per-episode mean success. Confidence intervals are percentile intervals of $10^4$ episode-level bootstrap
+resamples~\cite{efron1993bootstrap}. $p$-values are two-sided sign-flip permutation tests with $10^6$ random sign
+assignments. The ten ablation variants of \cref{sec:exp-ablation} are corrected together with the Holm
+procedure~\cite{holm1979simple}, and comparisons of two single binary runs use the exact McNemar
+test~\cite{mcnemar1947note}.
+
+\subsection{Why paired tests}
+All agents are evaluated on the same 300 episodes, and episodes differ greatly in difficulty: a target in plain
+view at the start is solved by almost every agent, while a small target behind furniture is solved by few. An
+unpaired comparison of two success rates treats this variation as noise and needs large differences to reach
+significance. A paired comparison removes it: for each episode it takes the difference between the two agents'
+outcomes, so only episodes on which the agents disagree carry information. The bootstrap resamples these
+per-episode differences, and the sign-flip test asks how often a random assignment of signs to them produces a mean
+difference as large as the observed one. When one agent was run several times, its per-episode mean success
+enters the comparison, which uses all runs without counting the same episode twice. The Holm procedure controls the
+probability of any false positive among the ten ablation variants at 5\%, which is stricter than testing each
+variant on its own.
+
+\section{Summary}
+This chapter defined a navigation task with a 20-step budget and eight discrete actions, two benchmarks that test it
+in single rooms and in apartments with an explicit stop, and a protocol in which every comparison is paired over the
+same episodes and every parameter is fixed on a separate development split. The next chapter uses this setting to
+diagnose why a small VLM fails when it is prompted as the agent.

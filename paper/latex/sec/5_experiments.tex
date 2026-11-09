@@ -4,7 +4,7 @@
 \noindent\textbf{Setup.}
 We evaluate on the full EB-Navigation test set (300 episodes, official environment, actions, and success test) and
 on the full RoboTHOR ObjectNav validation split~\cite{deitke2020robothor} (\nRoboN{} episodes, 15 apartments, 12
-categories; stochastic LoCoBot actuation, 30$^\circ$ turns, 500 steps, and a Stop that succeeds within 1\,m of a
+categories; stochastic \mbox{LoCoBot} actuation, 30$^\circ$ turns, 500 steps, and a Stop that succeeds within 1\,m of a
 visible target-category object). The models are Qwen3-VL-4B-Instruct~\cite{bai2025qwen3vl}
 and Qwen2.5-VL-3B-Instruct, served with vLLM~\cite{kwon2023vllm} at temperature 0 on one 8\,GB RTX~5060 that also
 renders the simulator; \ours uses their 4-bit AWQ checkpoints. The EB prompt uses the benchmark's prompts, three
@@ -14,7 +14,7 @@ Anything V2 Metric-Indoor-Base~\cite{yang2024depthv2} on the CPU.
 per-episode mean. All comparisons are paired over the 300 episodes, with bootstrap 95\% CIs and sign-flip
 permutation tests, Holm-corrected over the ten variants of \cref{sec:abl}.
 
-\subsection{Main results}
+\subsection{The gain follows the diagnosis}
 \label{sec:main}
 \input{sec/tab_abl}
 \input{sec/fig_traj}
@@ -29,31 +29,32 @@ $[\nVisDiffLo, \nVisDiffHi]$, $p\nVisDiffP$; \cref{sec:gap}). With Qwen2.5-VL-3B
 [${+}\nGainTwoLo$, ${+}\nGainTwoHi$]): the smaller model costs \ours \nScaleDrop\,pp and the EB prompt
 \nScaleDropEB\,pp (iv).
 
-\noindent\textbf{Efficiency.}
+\noindent\textbf{Fewer steps.}
 On the \nStepN{} episodes that both agents solve in every run, \ours needs \nStepS{} steps against \nStepEB{}
 ($p\nStepP$); within ten steps it solves \nBudSTen\% of the episodes against \nBudEBTen\% (\cref{fig:analysis}a).
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig/landscape.pdf}
-\caption{EB-Navigation success against model size (\cref{tab:main}). Arrows: gain of \ours over the EB prompt.}
+\caption{EB-Navigation success against model size (\cref{tab:main}). Arrows: gain of \ours over the EB prompt
+with the same model; closed models share the API column.}
 \label{fig:landscape}
 \end{figure}
 
-\noindent\textbf{Comparison with published agents.}
+\noindent\textbf{A 4B model rivals far larger ones.}
 With a 4B model, no training, and RGB alone (\nRGBThree\%), \ours exceeds every prompted MLLM up to GPT-4o and
 the training-free agents built on GPT-4o and 8--35B models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,chen2026hodagent,ma2026brainmem,lee2026emho,liang2026robofoundry}, and
 MuSix and SVA, which train extra models around a 4B policy~\cite{jang2026musix,xie2026sva}. Only the tool-library
 agents~\cite{zhou2026enabling} and RoboFoundry on GPT-6 Astra score higher (\cref{fig:landscape}).
 
-\noindent\textbf{Where the gain comes from.}
+\noindent\textbf{The diagnosed failures disappear.}
 The diagnosed failure modes largely disappear (i). Per run, \ours never sees the target in \nNeverSThree{} episodes (EB
 prompt: \nNeverEBThree), is blocked in \nBlockedSThree{} (\nBlockedEBThree), loses a seen target in \nLostSThree{}
 (\nLostEBThree), and ends near it in \nNearSThree{} (\nNearEBThree) (\cref{fig:analysis}b, \cref{fig:traj}).
 
-\subsection{Components}
+\subsection{Evidence fusion carries the gain}
 \label{sec:abl}
-\noindent\textbf{Generic modular agent.}
+\noindent\textbf{Modularity alone is not enough.}
 The same model in a generic modular agent, which acts on single-view detections with the same map, planner,
 look-around, and exploration, reaches \nModThree\% (\cref{tab:main}): ${+}\nModOverEB$\,pp over the EB prompt
 ($p\nModOverEBP$), but \nSOverMod\,pp below \ours (CI [${+}\nSOverModLo$, ${+}\nSOverModHi$], $p\nSOverModP$).
@@ -75,11 +76,11 @@ single rooms rarely produce.
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=\linewidth]{fig/robothor_cats.pdf}
-\caption{\ours on RoboTHOR validation by target category.}
+\caption{\ours on RoboTHOR validation by target category (150 episodes each) and over all 1800 episodes (top).}
 \label{fig:robothor}
 \end{figure}
 
-\subsection{Sensing}
+\subsection{No depth sensor is needed}
 \label{sec:sensing}
 \noindent\textbf{Pose.}
 Dead reckoning (\cref{eq:deadreckon}) is exact in heading and tilt and errs by \nDRmean\,m in position on
@@ -87,23 +88,23 @@ average, from the simulator's grid snapping. Accumulated odometry noise of 5\% p
 by $\nAblOdom$\,pp (\cref{tab:abl}).
 
 \noindent\textbf{Depth.}
-Monocular depth with one global scale $\bar\sigma$ is not enough: with pose from the executed actions, \ours reaches \nRGBGlobal\%, level with the EB prompt ($\nGainGlobal$\,pp,
+With one global depth scale $\bar\sigma$ and pose from the executed actions, \ours reaches \nRGBGlobal\%, level with the EB prompt ($\nGainGlobal$\,pp,
 $p\nDiscGlobalP$). The global scale places target detections at a median \nRangeGlobal{} of their true range
 (\cref{fig:analysis}c) and lifts \nBlockGlobal\% of the nearby floor above the obstacle threshold, so the agent
-walks to a point short of the target: \nShortGlobal{} failures exhaust a hypothesis within 1\,m of it, none with
+stops short of the target: \nShortGlobal{} failures exhaust a hypothesis within 1\,m of it, none with
 the sensor. The per-frame floor scale (\cref{eq:floorscale}) lowers the falsely blocked floor to \nBlockFloor\% and
 moves the range ratio to \nRangeFloor{} (sensor: \nRangeSensor); success rises to \nRGBThree\%, ${+}\nGainRGB$\,pp
 over the EB prompt ($p\nGainRGBP$) and \nGapRGBAbs\,pp below the depth sensor (Holm $p\nAblRgbfloorP$).
 
 \input{sec/tab_robothor}
-\subsection{Remaining gap: appearance-only goals}
+\subsection{Recognition limits appearance-only goals}
 \label{sec:gap}
 Visual accounts for \nVisGapShare\% of the gap to the oracle and is the only subset on which \ours does not exceed
 the EB prompt. The failure is recognition: a candidate comes within 0.5\,m of the target in
 \nRecallOtherLo--\nRecallOtherHi\% of the episodes of every other subset but in \nRecallVisLo--\nRecallVisHi\% of the
 Visual ones, and \nVisFailNoCand{} of the \nVisFail{} Visual failures never produce one.
 
-\subsection{RoboTHOR ObjectNav}
+\subsection{The agent transfers to RoboTHOR}
 \label{sec:robothor}
 On the full RoboTHOR validation split, \ours reaches \nRoboSR\% success and \nRoboSPL\% SPL. Among zero-shot
 methods (\cref{tab:robothor}) its SR is below only ForesightNav (12B~\cite{liu2026foresightnav}) and STRIVE

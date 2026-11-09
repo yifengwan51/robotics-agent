@@ -56,19 +56,28 @@ def thumbnails():
     frames = {f["step"]: f for f in man["frames"]}
     frame = lambda s: np.asarray(Image.open(os.path.join(REPLAY, frames[s]["rgb"])).convert("RGB"))
 
-    def save(img, name, size_mm, box=None):
+    def save(img, name, size_mm, box=None, crop=None):
+        if crop is not None:  # square crop (x0, y0, side) so a small box stays visible at thumbnail size
+            cx, cy, side = crop
+            img = img[cy:cy + side, cx:cx + side]
+            if box is not None:
+                box = [box[0] - cx, box[1] - cy, box[2] - cx, box[3] - cy]
         fig = plt.figure(figsize=(size_mm * MM, size_mm * MM), dpi=600)
         ax = fig.add_axes([0, 0, 1, 1])
         ax.imshow(img, interpolation="lanczos")
         if box is not None:
             x0, y0, x1, y1 = box
-            ax.add_patch(plt.Rectangle((x0, y0), x1 - x0, y1 - y0, fill=False, ec=HEX["oOrangeD"], lw=1.0))
+            ax.add_patch(plt.Rectangle((x0, y0), x1 - x0, y1 - y0, fill=False, ec=HEX["oOrangeD"], lw=1.4))
         ax.set_axis_off()
         fig.savefig(os.path.join(FIG, f"arch_{name}.png"), dpi=600)
         plt.close(fig)
 
-    save(frame(6), "frame", 22, log[6]["box"])  # the alarm clock in view, boxed by the VLM (presence 0.91)
-    save(frame(0), "ebframe", 11)
+    b6 = log[6]["box"]  # the alarm clock in view, boxed by the VLM (presence 0.91); crop 2x around it
+    side = 250
+    cx = int(min(max((b6[0] + b6[2]) / 2 - side / 2, 0), 500 - side))
+    cy = int(min(max((b6[1] + b6[3]) / 2 - side / 2, 0), 500 - side))
+    save(frame(6), "frame", 22, b6, crop=(cx, cy, side))
+    save(frame(6), "ebframe", 11)  # the same input frame I_t as in (b)
 
     # bird's-eye view: occupancy from the replayed depth along the logged poses, the path, every hypothesis
     traj = ep["trajectory"]
@@ -82,7 +91,7 @@ def thumbnails():
     seen = {}
     for e in ep["perception_log"]:
         for hx, hz, w, _ in e["hyps"]:
-            k = next((q for q in seen if np.hypot(q[0] - hx, q[1] - hz) < 0.5), (hx, hz))
+            k = next((q for q in seen if np.hypot(q[0] - hx, q[1] - hz) < 0.15), (hx, hz))  # each track drifts < 0.05 m
             seen[k] = w
     xs, zs = [p["x"] for p in traj], [p["z"] for p in traj]
     allx, allz = xs + [k[0] for k in seen], zs + [k[1] for k in seen]
@@ -112,17 +121,18 @@ def thumbnails():
     def track(xz):
         return [(e["step"], next((h[2] for h in e["hyps"] if np.hypot(h[0] - xz[0], h[1] - xz[1]) < 0.5), np.nan))
                 for e in ep["perception_log"]]
-    plt.rcParams.update({"font.size": SIZES["annot"]})
+    plt.rcParams.update({"font.size": 7.0})
     fig = plt.figure(figsize=(27 * MM, 16.0 * MM))
-    ax = fig.add_axes([0.2, 0.36, 0.76, 0.6])
+    ax = fig.add_axes([0.2, 0.4, 0.77, 0.56])
     for xz, c in (((0.33, -1.68), HEX["oOrangeD"]), ((1.52, -1.65), HEX["oGreyS"]), ((1.82, -1.82), HEX["oGreyS"])):
         tr = [(s, w) for s, w in track(xz) if not np.isnan(w)]
         ax.plot([s for s, _ in tr], [w for _, w in tr], color=c, lw=1.0, marker="o", ms=1.5, zorder=3)
-    ax.axhline(0.8, color=HEX["oGreyD"], lw=0.5, ls=(0, (3.2, 2.2)), zorder=1)
+    ax.axhline(0.8, color=HEX["oGreyD"], lw=0.6, ls=(0, (3.2, 2.2)), zorder=1)
+    ax.text(0.2, 1.1, r"$\tau_c$", fontsize=7.0, color="black", ha="left", va="bottom")
     ax.set_xlim(0, 13.6)
     ax.set_ylim(-1.6, 8.6)
-    ax.set_xticks([0, 6, 12])
-    ax.set_yticks([0, 4, 8])
+    ax.set_xticks([0, 12])
+    ax.set_yticks([0, 8])
     ax.set_xlabel("step", labelpad=1.2)
     ax.set_ylabel("$w_k$", labelpad=1.0)
     ax.tick_params(length=1.6, pad=1.2, width=0.36, colors="black")
@@ -276,8 +286,10 @@ CAPTION = (
     "\\textbf{(a)}~The EB prompt maps $I_t$, the instruction $\\ell$, and the history $h_t$ to a text plan "
     "$u_{t:t+m}$ with the VLM $f$. \\textbf{(b)}~\\ours asks $f$ for the presence $\\pi_t$ and box $b_t$ of the "
     "phrase $s$, lifts them with depth $D_t$ and pose $p_t$ into hypotheses $\\mu_k$ with evidence $w_k$, selects "
-    "$k^\\star$, and plans $u_t$ on the map $M_t$. Thumbnails: a Long-horizon test episode; the target (orange) passes "
-    "the commit threshold (dashed) and two look-alikes (grey) fall below zero.")
+    "$k^\\star$, and plans $u_t$ on the map $M_t$. Blue: the frozen VLM; orange: \\ours's memory. Thumbnails: one "
+    "Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) passing the "
+    "commit threshold $\\tau_c$ while two look-alikes (grey) fall below zero, and the map with the path, the target "
+    "(orange), and the look-alikes ($\\times$).")
 
 # ------------------------------------------------------------------------------------------------ audit
 

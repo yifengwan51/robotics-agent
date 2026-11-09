@@ -44,7 +44,7 @@ appearance-only, so the extra cost is paid where the evidence is weak.
 
 \subsection{Metric hypothesis memory}
 Each hypothesis $k$ stores a floor position $\mu_k$, evidence $w_k$, and the poses $V_k$ from which it was seen. An
-observation $(q_t,a_t)$ is associated with the first hypothesis within $r=0.5$\,m. If there is one, then
+observation $(q_t,a_t)$ is associated with the first hypothesis within \mbox{$r=0.5$\,m}. If there is one, then
 \begin{equation}
 \mu_k\leftarrow\frac{n_k\mu_k+q_t}{n_k+1},\qquad w_k\leftarrow w_k+\gamma_t\,a_t ,
 \label{eq:fuse}
@@ -104,9 +104,9 @@ at the cost of VLM calls rather than environment steps.
 \includegraphics[width=\textwidth]{fig/analysis.pdf}
 \caption{EB-Navigation test, Qwen3-VL-4B. \textbf{(a)} Episodes solved within a step budget, averaged over runs.
 \textbf{(b)} Failed episodes by outcome (first matching rule, \cref{sec:diagnosis}; mean over the runs of \ours).
-\textbf{(c)} Lifted range divided by true range for detections within 1\,m of the target, with medians (dashed),
-for \ours with the depth sensor and with monocular depth under a global and a per-frame floor scale
-(\cref{eq:floorscale}).}
+\textbf{(c)} Cumulative distribution of lifted over true range for detections within 1\,m of the target (dashed:
+median), with the depth sensor and with monocular depth under a per-frame floor scale (\cref{eq:floorscale}) or a
+global scale.}
 \label{fig:analysis}
 \end{figure*}
 

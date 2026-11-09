@@ -1,0 +1,22 @@
+Robots that follow natural-language instructions need vision-language models (VLMs) small enough to run on board,
+yet multimodal language-model agents navigate well only with frontier-scale models. These agents give one model
+every role: it reads the image and its own history, keeps track of the room, and writes the plan.
+
+A controlled diagnosis on the EB-Navigation benchmark shows that small VLMs fail because of this role, not
+because of perception. Prompted as the benchmark's agent, Qwen3-VL-4B solves \nEBThree\% of the test episodes, whereas a
+geometric planner given the target position solves \nOracle\% of the same episodes, and the model boxes a visible
+target in \nProbeThreeCommon--\nProbeThreeBase\% of single views. What fails is keeping spatial state in generated
+text.
+
+The thesis therefore proposes the Semantic-to-Metric (\ours) agent, which uses the VLM as a sensor rather than a
+planner. \ours asks the model only what the current image can answer, whether the target is
+visible and where, and keeps all state in metric form. A hypothesis memory lifts each answer with depth and pose,
+accumulates evidence across distinct viewpoints, and withdraws it when a hypothesis should be visible but is not
+detected; a search policy and an occupancy-map planner compute every move.
+
+Without training and with the model at 4-bit on one 8\,GB GPU, \ours succeeds in \nSThree\% of the EB-Navigation
+test episodes, \nGainThree{} percentage points more than the benchmark's agent and \nSOverMod{} more than a generic
+modular agent with the same model. From RGB alone, with a per-frame ground-plane scale for monocular depth, it
+reaches \nRGBThree\%, above both fine-tuned 4B agents and seven of ten training-free agents built on larger models.
+With Qwen2.5-VL-3B, success rises from \nEBTwo\% to \nSTwo\%, and on RoboTHOR object navigation \ours reaches
+\nRoboSR\%.

@@ -1,0 +1,39 @@
+\label{app:results}
+This appendix details the evaluation protocol and the RoboTHOR results by category.
+
+\section{Development split}
+\label{sec:appB-dev}
+EmbodiedBench provides target objects and the three instruction variants for 90 iTHOR rooms, and its test set uses
+60 of them (FloorPlan11--30, 211--230, 311--330). We rerun the benchmark's own generator on the other 30
+(FloorPlan1--10, 201--210, 301--310): a start pose 2.5--3.0\,m from the first instance of the target with the camera
+level, Common, Complex, and Visual from the same targets with the benchmark's instruction variants, and Long as Base
+with the start heading rotated by 180$^\circ$. This yields five subsets of 30 episodes. Every parameter of
+\cref{tab:s-params} and every design choice of \cref{chap:method} was selected on this split, and the configuration was
+frozen before the first test run.
+
+\section{Statistics}
+All agents run on the same 300 test episodes, so each comparison uses per-episode differences. A configuration run
+several times enters with its per-episode mean success. Confidence intervals are percentile intervals of $10^4$
+episode-level bootstrap resamples. $p$-values are two-sided sign-flip permutation tests with $10^6$ random sign
+assignments; the ten variants of \cref{tab:abl} are Holm-corrected together. Comparisons of two single
+binary runs use the exact McNemar test.
+
+\section{Outcome categories}
+A failed episode takes the first matching category: the target never enters the view; the final distance is at most
+1.5\,m (near miss); the target is out of view in the last five steps (lost after seen); at least 30\% of the actions
+are rejected (blocked); at least three immediate reversals (oscillation); otherwise approach failure. Visibility
+comes from the simulator's object metadata.
+
+\section{RoboTHOR episodes}
+\nRoboErr{} of the \nRoboN{} validation episodes end because the simulator rejects the start pose
+(\texttt{teleport failed}); they are counted as failures.
+
+\section{RoboTHOR by category}
+\Cref{tab:s-robothor} lists success and SPL for each of the twelve categories.
+
+\begin{table}[htbp]
+\centering\small
+\caption{\ours on RoboTHOR validation by target category (150 episodes each).}
+\label{tab:s-robothor}
+\input{chapters/generated/supp_tab_robothor}
+\end{table}

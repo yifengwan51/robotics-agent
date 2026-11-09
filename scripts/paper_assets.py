@@ -516,36 +516,35 @@ def main():
         m, lo, hi = boot_ci([o[k] for k in ks])
         cells = [(f"\\textbf{{{v:.1f}}}" if best[i] is not None and round(v, 1) >= round(best[i], 1) else f"{v:.1f}")
                  for i, v in enumerate(cols)]
-        if sd is not None:
-            cells[5] += f"\\,{{\\scriptsize$\\pm${sd:.1f}}}"
-        return f"{method} & {model} & {' & '.join(cells)} & [{lo:.1f}, {hi:.1f}]\\\\\n"
+        pm = f"{{\\scriptsize$\\pm${sd:.1f}}}" if sd is not None else ""
+        return f"{method} & {model} & {' & '.join(cells)} & {pm} & [{lo:.1f}, {hi:.1f}]\\\\\n"
 
     with open(os.path.join(SEC, "tab_main.tex"), "w") as f:
         f.write("\\begin{table*}[t]\n\\centering\\small\n\\setlength{\\tabcolsep}{5pt}\\renewcommand{\\arraystretch}{0.92}\n")
         f.write("\\caption{Success rate (\\%) on EB-Navigation test. Top: reported results. Bottom: our runs on one "
-                "8\\,GB GPU, with \\ours at 4-bit. $\\pm$: std.\\ over test runs. Bold: best per model.}\n\\label{tab:main}\n")
-        f.write("\\begin{tabular}{@{}llrrrrrrc@{}}\n\\toprule\n"
-                "Method & Model & Base & Common & Complex & Visual & Long & Avg. & 95\\% CI\\\\\n\\midrule\n")
+                "8\\,GB GPU, with \\ours at 4-bit. $\\pm$: std.\\ over test runs. Bold: best of our runs per model.}\n\\label{tab:main}\n")
+        f.write("\\sbox0{\\begin{tabular}{@{}llrrrrrr@{\\,}lc@{}}\n\\toprule\n"
+                "Method & Model & Base & Common & Complex & Visual & Long & Avg. & & 95\\% CI\\\\\n\\midrule\n")
         for group, rows in PUBLISHED:
-            f.write(f"\\multicolumn{{9}}{{@{{}}l}}{{\\textit{{{group}}}}}\\\\\n")
+            f.write(f"\\multicolumn{{10}}{{@{{}}l}}{{\\textit{{{group}}}}}\\\\\n")
             for name, size, cite, subs, avg in rows:
                 cells = " & ".join(f"{v:.1f}" for v in subs) if subs else " & ".join(["--"] * 5)
-                f.write(f"{name}~\\cite{{{cite}}} & {size} & {cells} & {avg:.1f} & --\\\\\n")
-        f.write("\\midrule\n\\multicolumn{9}{@{}l}{\\textit{Ours (one 8\\,GB GPU)}}\\\\\n")
+                f.write(f"{name}~\\cite{{{cite}}} & {size} & {cells} & {avg:.1f} & & --\\\\\n")
+        f.write("\\midrule\n\\multicolumn{10}{@{}l}{\\textit{Ours (one 8\\,GB GPU)}}\\\\\n")
         q3, q25 = ("eb3", "mod3", "s2m3", "rgb3"), ("eb25", "s2m25")
         f.write(ours("eb3", "EB prompt", "Qwen3-VL-4B", block=q3))
         f.write(ours("mod3", "Modular, single view$^\\S$", "Qwen3-VL-4B", block=q3))
-        f.write(ours("s2m3", "\\ours$^\\S$", "Qwen3-VL-4B", sd_runs(RUN["s2m3"]), block=q3))
+        f.write(ours("s2m3", "\\ours{}$^\\S$", "Qwen3-VL-4B", sd_runs(RUN["s2m3"]), block=q3))
         f.write(ours("rgb3", "\\ours, RGB only$^\\dagger$", "Qwen3-VL-4B", sd_runs(RUN["rgb3"]), block=q3))
         f.write("\\midrule\n")
         f.write(ours("eb25", "EB prompt", "Qwen2.5-VL-3B", block=q25))
-        f.write(ours("s2m25", "\\ours$^\\S$", "Qwen2.5-VL-3B", block=q25))
+        f.write(ours("s2m25", "\\ours{}$^\\S$", "Qwen2.5-VL-3B", block=q25))
         f.write("\\midrule\n")
         f.write(ours("oracle", "Oracle target$^\\ddagger$", "--"))
-        f.write("\\bottomrule\n\\end{tabular}\n\n\\vspace{0.2em}\\footnotesize "
+        f.write("\\bottomrule\n\\end{tabular}}\\usebox0\n\n\\vspace{0.2em}\\parbox{\\wd0}{\\footnotesize "
                 "$^\\S$Depth sensor and simulator pose. $^\\dagger$RGB only: monocular depth and pose from the executed "
                 "actions (\\cref{sec:sensing}); the comparisons with reported results use this row. "
-                "$^\\ddagger$Geometric planner given the true target position: an upper bound.\n\\end{table*}\n")
+                "$^\\ddagger$Geometric planner given the true target position: an upper bound.}\n\\end{table*}\n")
 
     # ---------------- figure data ----------------
     budget = {}

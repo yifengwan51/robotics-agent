@@ -1,0 +1,336 @@
+\label{chap:experiments}
+This chapter answers the third research question and tests the four predictions of \cref{sec:diag-predictions}.
+\Cref{sec:exp-setup} describes the agents that are compared. \Cref{sec:exp-main} reports the main results and checks
+each prediction, \cref{sec:exp-published} compares \ours with published agents, and \cref{sec:exp-modular,sec:exp-ablation}
+isolate which parts of \ours carry the gain. \Cref{sec:exp-sensing} removes the depth sensor and the simulator pose,
+\cref{sec:exp-efficiency} measures cost, \cref{sec:exp-qualitative,sec:exp-gap} analyse individual episodes and the
+remaining failures, and \cref{sec:exp-robothor} evaluates \ours on RoboTHOR.
+
+\section{Experimental setup}
+\label{sec:exp-setup}
+All results use the full EB-Navigation test set (300 episodes) and the full RoboTHOR validation split (\nRoboN{}
+episodes), the models and deployment of \cref{sec:pre-models}, and the protocol of \cref{sec:pre-protocol}. On
+EB-Navigation the following agents are compared, all with the same model in each comparison:
+\begin{description}
+\item[EB prompt] the benchmark's own agent (\cref{sec:diag-eb}), with its prompts, examples, parser, and plan
+execution.
+\item[Modular, single view] a generic modular agent with the same occupancy map, A* planner, look-around, and
+exploration as \ours, which acts on single-view detections: it has no multi-view fusion, negative evidence, crop
+check, or tiled search, and each box replaces the earlier target.
+\item[\ours] the full agent of \cref{chap:method}, with a depth sensor and simulator pose.
+\item[\ours, RGB only] \ours with monocular depth scaled per frame (\cref{eq:floorscale}) and pose from the executed
+actions (\cref{eq:deadreckon}).
+\item[Oracle target] the planner of \ours given the true target position, an upper bound (\cref{sec:diag-oracle}).
+\end{description}
+
+\section{Main results}
+\label{sec:exp-main}
+\Cref{tab:main} reports the success rate of every agent on each subset, together with the results reported for
+published agents, and \cref{fig:results} summarizes the comparison with the same model.
+
+\input{chapters/generated/tab_main}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/results.pdf}
+\caption[Success with the same local model]{EB-Navigation test success with the same local model (60 episodes per
+subset). Black line: geometric planner given the true target position (oracle target). The RGB-only configuration
+was run with Qwen3-VL-4B.}
+\label{fig:results}
+\end{figure}
+
+With Qwen3-VL-4B, \ours succeeds in \nSThree\% of the episodes against \nEBThree\% for the EB prompt, a paired gain of
+\nGainThree{} percentage points (95\% CI [${+}\nGainThreeLo$, ${+}\nGainThreeHi$], $p\nGainThreeP$). Over four test
+runs its average success ranges from \nSThreeMin\% to \nSThreeMax\% (standard deviation \nSThreeSD{} percentage
+points), and the two RGB-only runs differ by a similar amount. Per episode, compared with the first run of \ours, the
+EB prompt solves \nDiscThreeLosses{} episodes that \ours fails and fails \nDiscThreeWins{} that \ours solves; with
+Qwen2.5-VL-3B the counts are \nDiscTwoLosses{} and \nDiscTwoWins. Every single run of \ours is significantly better
+than the EB prompt (exact McNemar test, largest $p\nMcNThreeWorst$).
+With Qwen2.5-VL-3B, \ours reaches \nSTwo\% against \nEBTwo\% (${+}\nGainTwo$\,pp, CI [${+}\nGainTwoLo$,
+${+}\nGainTwoHi$]). \Cref{fig:subsets} shows the
+success of every configuration on each subset, from the prompted agent to the oracle, and \cref{tab:ci} gives the
+confidence interval of every configuration run on EB-Navigation and of the paired differences on which the
+conclusions rest. The gain follows each of the four predictions.
+
+\begin{table}[htbp]
+\centering\small
+\caption[Confidence intervals of the EB-Navigation results]{EB-Navigation test success of the configurations run
+in this thesis, and paired differences, with 95\% bootstrap confidence intervals and sign-flip permutation
+$p$-values (\cref{sec:pre-protocol}).}
+\label{tab:ci}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}llrcl@{}}
+\toprule
+Configuration & Model & Success (\%) & 95\% CI & \\
+\midrule
+EB prompt & Qwen3-VL-4B & \nEBThree & [\nEBThreeLo, \nEBThreeHi] & \\
+Modular, single view & Qwen3-VL-4B & \nModThree & [\nModThreeLo, \nModThreeHi] & \\
+\ours & Qwen3-VL-4B & \nSThree & [\nSThreeLo, \nSThreeHi] & \\
+\ours, RGB only & Qwen3-VL-4B & \nRGBThree & [\nRGBThreeLo, \nRGBThreeHi] & \\
+EB prompt & Qwen2.5-VL-3B & \nEBTwo & [\nEBTwoLo, \nEBTwoHi] & \\
+\ours & Qwen2.5-VL-3B & \nSTwo & [\nSTwoLo, \nSTwoHi] & \\
+Oracle target & true position & \nOracle & [\nOracleLo, \nOracleHi] & \\
+\midrule
+Paired difference & Model & $\Delta$ (pp) & 95\% CI & $p$\\
+\midrule
+\ours $-$ EB prompt & Qwen3-VL-4B & ${+}\nGainThree$ & [${+}\nGainThreeLo$, ${+}\nGainThreeHi$] & $\nGainThreeP$\\
+\ours $-$ modular, single view & Qwen3-VL-4B & ${+}\nSOverMod$ & [${+}\nSOverModLo$, ${+}\nSOverModHi$] & $\nSOverModP$\\
+Modular, single view $-$ EB prompt & Qwen3-VL-4B & ${+}\nModOverEB$ & [${+}\nModOverEBLo$, ${+}\nModOverEBHi$] & $\nModOverEBP$\\
+\ours, RGB only $-$ EB prompt & Qwen3-VL-4B & ${+}\nGainRGB$ & [${+}\nGainRGBLo$, ${+}\nGainRGBHi$] & $\nGainRGBP$\\
+\ours, RGB only $-$ \ours & Qwen3-VL-4B & $\nGapRGB$ & [$\nGapRGBLo$, ${+}\nGapRGBHi$] & $\nGapRGBP$\\
+\ours $-$ EB prompt & Qwen2.5-VL-3B & ${+}\nGainTwo$ & [${+}\nGainTwoLo$, ${+}\nGainTwoHi$] & $\nGainTwoP$\\
+Oracle $-$ \ours & Qwen3-VL-4B & ${+}\nGapOracle$ & [${+}\nGapOracleLo$, ${+}\nGapOracleHi$] & $\nGapOracleP$\\
+\bottomrule
+\end{tabular*}
+\end{table}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/th_subsets.pdf}
+\caption[Success per subset]{EB-Navigation test success per subset with Qwen3-VL-4B, from the benchmark's agent to
+the oracle. \ours closes most of the gap to the oracle on every subset except Visual.}
+\label{fig:subsets}
+\end{figure}
+
+\subsection{Prediction (i): the diagnosed failures disappear}
+\Cref{fig:analysis}b breaks the failures down by outcome. Per run, \ours never sees the target in \nNeverSThree{}
+episodes (EB prompt: \nNeverEBThree), is blocked in \nBlockedSThree{} (\nBlockedEBThree), loses a seen target in
+\nLostSThree{} (\nLostEBThree), and ends near it in \nNearSThree{} (\nNearEBThree). The look-around, the occupancy map,
+and the memory remove the never-seen and blocked failures almost entirely and reduce the lost-after-seen ones, as
+predicted. \Cref{tab:taxonomy,fig:outcomes} give the full taxonomy for both models. The change is the same
+for both: the EB prompt spreads its failures over every category, while the failures of \ours collapse into
+lost-after-seen and approach failures, most of which come from look-alikes (\cref{sec:exp-failures}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/th_outcomes.pdf}
+\caption[Outcome of every episode]{Outcome of every EB-Navigation test episode by agent and model (first matching
+rule of \cref{sec:pre-metrics}; mean over runs where a configuration was run repeatedly).}
+\label{fig:outcomes}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/analysis_thesis.pdf}
+\caption[Step budget, failure outcomes, and range accuracy]{EB-Navigation test, Qwen3-VL-4B. \textbf{(a)}~Episodes
+solved within a step budget, averaged over runs. \textbf{(b)}~Failed episodes by outcome (first matching rule,
+\cref{sec:pre-metrics}; mean over the runs of \ours). \textbf{(c)}~Cumulative distribution of lifted over true range for
+detections within 1\,m of the target (dashed: median), with the depth sensor and with monocular depth under a
+per-frame floor scale (\cref{eq:floorscale}) or a global scale.}
+\label{fig:analysis}
+\end{figure}
+
+\begin{table}[htbp]
+\centering\small
+\caption[Outcomes on EB-Navigation]{Outcomes on EB-Navigation test (episodes of 300; mean over runs where a
+configuration was run repeatedly).}
+\label{tab:taxonomy}
+\input{chapters/generated/supp_tab_taxonomy}
+\end{table}
+
+\subsection{Prediction (ii): the largest gain on Long}
+The gain is largest where the target starts behind the agent. On Long, \ours succeeds in \nSThreeLong\% against
+\nEBThreeLong\%, only \nOracleGapLong{} percentage points below the oracle. On Base, Common, and Complex the gain is
+$\nGainThreeBase$, $\nGainThreeCommon$, and $\nGainThreeComplex$ percentage points.
+
+\subsection{Prediction (iii): the smallest gain on Visual}
+On Visual the two agents are level with Qwen3-VL-4B ($\nGainThreeVisual$\,pp, CI $[\nVisDiffLo, \nVisDiffHi]$,
+$p\nVisDiffP$), and Visual is also the subset with the smallest gain with Qwen2.5-VL-3B ($\nGainTwoVisual$\,pp). This
+is the subset on which single-view recognition was weakest (\cref{sec:diag-probe}); \cref{sec:exp-gap} examines it.
+
+\subsection{Prediction (iv): far less dependence on model size}
+Replacing Qwen3-VL-4B by Qwen2.5-VL-3B costs \ours \nScaleDrop{} percentage points and the EB prompt \nScaleDropEB.
+The smaller model loses much of its ability to plan in text, but its answers to per-image questions remain good
+enough for the memory to use.
+
+\section{Comparison with published agents}
+\label{sec:exp-published}
+\Cref{fig:landscape} places \ours among the agents of \cref{tab:main} by the size of their model. Even from RGB alone
+(\nRGBThree\%), with a 4B model and no training, \ours exceeds every prompted MLLM up to GPT-4o and the training-free
+agents built on GPT-4o and 8--35B models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,chen2026hodagent,ma2026brainmem,lee2026emho,liang2026robofoundry},
+as well as MuSix and SVA, which train extra models around a 4B policy~\cite{jang2026musix,xie2026sva}. Only the
+tool-library agents~\cite{zhou2026enabling} and RoboFoundry on GPT-6 Astra score higher. These comparisons use the
+results reported by the respective authors on the same test set.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/landscape.pdf}
+\caption[Success against model size]{EB-Navigation success against model size (\cref{tab:main}). Arrows: gain of
+\ours over the EB prompt with the same model; closed models share the API column.}
+\label{fig:landscape}
+\end{figure}
+
+\section{Modularity alone is not enough}
+\label{sec:exp-modular}
+A modular structure removes the model from planning, but it does not by itself make the model's answers reliable.
+The generic modular agent of \cref{sec:exp-setup} uses the same model, map, planner, look-around, and exploration as
+\ours and acts on single-view detections. It reaches \nModThree\%, \nModOverEB{} percentage points above the EB prompt
+($p\nModOverEBP$) but \nSOverMod{} below \ours (CI [${+}\nSOverModLo$, ${+}\nSOverModHi$], $p\nSOverModP$). Its gain
+over the EB prompt falls almost entirely on Long ($\nModOverEBLong$\,pp), where the look-around alone finds the target;
+on the other subsets it is level with the EB prompt. On Base, Common, and Complex, \ours exceeds the modular agent by $\nSOverModBase$,
+$\nSOverModCommon$, and $\nSOverModComplex$ percentage points: these are the subsets in which the agent starts facing
+the target and must hold on to it while approaching, which a single-view agent cannot do when the model places a
+false box. Moving the state out of the model therefore gives part of the gain, and the evidence design for a
+generative sensor gives the rest.
+
+\section{Ablation of components}
+\label{sec:exp-ablation}
+\Cref{tab:abl} changes one element of \ours at a time and compares each variant with the full model over the same
+episodes.
+
+\input{chapters/generated/tab_abl}
+
+\Cref{fig:forest} shows the same differences with their confidence intervals. Two variants stand apart from the
+rest: removing fusion and replacing the per-frame floor scale by a global one. The intervals of all other variants
+include zero.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/th_forest.pdf}
+\caption[Ablations with confidence intervals]{Paired difference in EB-Navigation success between each variant and
+the full agent (Qwen3-VL-4B), with 95\% bootstrap intervals. Orange and $*$: significant after Holm correction.}
+\label{fig:forest}
+\end{figure}
+
+\subsection{Fusion keeps a found target}
+Disabling multi-view fusion, so that each detection replaces the earlier hypotheses, lowers success by
+\nAblFusionAbs{} percentage points (Holm $p\nAblFusionP$). It is the only component whose removal survives the
+correction. Fusion does not help the agent find the target: \nDetPrec\% of single lifted detections lie within
+0.5\,m of it, and a hypothesis there reaches commitment in \nHoldNF{} episodes without fusion and \nHoldS{} with it.
+Fusion keeps the target once found. Without it, each detection, including the false boxes of \cref{sec:diag-probe},
+replaces the committed hypothesis, and lost targets rise from \nLostSThree{} to \nLostNF{} episodes and near misses
+from \nNearSThree{} to \nNearNF.
+
+\subsection{The look-around trades Long against the other subsets}
+Removing the look-around leaves the average unchanged ($\nAblScan$\,pp) but changes Long by $\nAblScanLong$\,pp,
+because the agent no longer turns to find a target behind it. The other subsets gain $\nAblScanOtherMin$ to
+$\nAblScanOtherMax$\,pp, the steps that the turn no longer costs. The look-around is therefore what makes the agent
+robust to where it starts.
+
+\subsection{Components for competing candidates}
+Negative evidence, tiled search, the crop check, exhaustion on arrival, and the search index each change success by
+less than 3 percentage points, none significantly. Removing exhaustion changes Visual by $\nAblExhaustVisual$\,pp,
+where appearance-only goals produce look-alikes that must be ruled out once visited. These components cost no
+environment steps and matter when several candidates compete, which EB-Navigation's single rooms rarely produce;
+they are kept because they address failure modes that larger scenes make more frequent.
+
+\section{Operating without a depth sensor}
+\label{sec:exp-sensing}
+\label{sec:sensing}
+\subsection{Pose}
+Dead reckoning (\cref{eq:deadreckon}) is exact in heading and tilt. Its position error along the test trajectories,
+caused by the simulator's grid snapping, averages \nDRmean\,m. Accumulated odometry noise of 5\% per translation and
+2$^\circ$ per turn changes success by $\nAblOdom$ percentage points (\cref{tab:abl}).
+
+\subsection{Depth}
+Monocular depth with one global scale $\bar\sigma$ is not enough. With pose from the executed actions, \ours then
+reaches \nRGBGlobal\%, level with the EB prompt ($\nGainGlobal$\,pp, $p\nDiscGlobalP$). The global scale places target
+detections at a median \nRangeGlobal{} of their true range (\cref{fig:analysis}c) and lifts \nBlockGlobal\% of the
+nearby floor above the obstacle threshold, so the agent walks to a point short of the target: \nShortGlobal{} failures
+exhaust a hypothesis within 1\,m of it, none with the sensor. The per-frame floor scale (\cref{eq:floorscale}) lowers
+the falsely blocked floor to \nBlockFloor\% and moves the range ratio to \nRangeFloor{} (sensor: \nRangeSensor).
+Success rises to \nRGBThree\%, \nGainRGB{} percentage points above the EB prompt ($p\nGainRGBP$) and \nGapRGBAbs{}
+below the depth sensor (Holm $p\nAblRgbfloorP$). \ours therefore does not depend on privileged sensing.
+
+\section{Efficiency and cost}
+\label{sec:exp-efficiency}
+\ours also reaches the target in fewer steps. On the \nStepN{} episodes that both agents solve in every run, it needs
+\nStepS{} steps against \nStepEB{} ($p\nStepP$). Within ten and fifteen steps it solves \nBudSTen{} and \nBudSFifteen\%
+of the episodes against \nBudEBTen{} and \nBudEBFifteen\% for the EB prompt (\cref{fig:analysis}a).
+
+The cost of an episode is spent differently. \ours makes \nCallsS{} VLM calls per episode against \nCallsEB{} for the
+EB prompt, but each call asks one short question: it reads \nTokS{}k prompt tokens and generates \nTokSc{} tokens per
+episode, against \nTokEB{}k and \nTokEBc{}k for the EB prompt, whose plans and reasoning dominate its generation.
+Because generation is the slow part of decoding, many short questions are cheaper than a few long plans on a small
+GPU. On the RTX 5060, which also renders the simulator, \ours takes \tTimeStepS\,s per step and \tTimeEpS\,s per
+episode on average, including rendering, all VLM calls, mapping, and planning. This is fast enough for a robot that
+moves 0.25\,m per step.
+
+\section{Qualitative analysis}
+\label{sec:exp-qualitative}
+\Cref{fig:traj} shows three test episodes chosen by fixed rules, the first matching episode in index order of each
+subset. In the Long episode (a), the EB prompt never turns toward the target, while \ours completes its look-around,
+finds the target, and reaches it. In the Base episode (b), furniture blocks the EB prompt, which repeats rejected
+moves; \ours plans around the obstacle on its map. In the Visual episode (c), \ours proposes only look-alikes and
+fails while the EB prompt succeeds, an example of the recognition limit discussed next.
+
+\input{chapters/generated/fig_traj}
+
+\Cref{fig:episode} looks inside one successful episode, the Long-horizon episode of \cref{fig:arch,tab:trace}. The
+camera frames show what the VLM sees and where it places its box, and the plot below shows how the evidence of each
+hypothesis develops. The agent turns away from an empty wall (step 0), sees the alarm clock and commits to it as
+soon as it appears (step 2), keeps it while the model briefly boxes a look-alike (step 7), and reaches it with high
+evidence (step 13). The look-alikes never approach the commit threshold.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/th_episode.pdf}
+\caption[Inside one episode]{Inside one Long-horizon test episode of \ours (Qwen3-VL-4B, target: alarm clock).
+Top: camera frames at four steps, re-rendered from the saved trajectory, with the VLM's box (orange solid: on the
+target; blue dashed: on a look-alike). Bottom: evidence of every hypothesis over the episode; grey bands mark the
+steps shown above.}
+\label{fig:episode}
+\end{figure}
+
+\section{The remaining failures of \ours}
+\label{sec:exp-failures}
+The failures that remain are of a different kind from those of the EB prompt. \Cref{tab:taxonomy} shows that \ours
+almost never fails to see the target or gets blocked; its largest remaining category is \emph{lost after seen}, with
+\tLostSAll{} episodes per run. Of these, \tLostSVisual{} fall on Visual, where the agent ``sees'' a look-alike that it
+has proposed in place of the target and the true target is visible only in passing. Outside Visual, \ours loses a seen
+target in a few episodes per subset. Near misses (\nNearSThree{} per run) and approach failures are also concentrated on Visual,
+where the agent approaches a candidate that is not the target. With Qwen2.5-VL-3B, lost-after-seen is the largest failure mode for both agents, but \ours reduces it
+from \nLostEBTwo{} to \nLostSTwo{} episodes.
+
+\section{The remaining gap: appearance-only goals}
+\label{sec:exp-gap}
+Visual is the weakest subset in every run of \ours (\nVisSRLo--\nVisSRHi\%), accounts for \nVisGapShare\% of the gap to
+the oracle, and is the only subset on which \ours does not exceed the EB prompt. The failure is recognition. A
+candidate comes within 0.5\,m of the target in \nRecallOtherLo--\nRecallOtherHi\% of the episodes of every other subset
+but in only \nRecallVisLo--\nRecallVisHi\% of the Visual ones, and \nVisFailNoCand{} of the \nVisFail{} Visual failures
+never produce one. No memory can recover a target that the sensor never proposes; this limit lies in the model.
+
+\section{RoboTHOR ObjectNav}
+\label{sec:exp-robothor}
+On the full RoboTHOR validation split, \ours reaches \nRoboSR\% success (CI [\nRoboSRLo, \nRoboSRHi]) and \nRoboSPL\%
+SPL. \Cref{tab:robothor} compares it with published methods. Among zero-shot methods its success rate is below only
+ForesightNav, which uses a 12B model~\cite{liu2026foresightnav}, and STRIVE, which uses Gemini-2.0-flash with a
+detector~\cite{zhu2025strive}; its SPL is second only to STRIVE and above that of the ProcTHOR policy trained for the
+task~\cite{deitke2022procthor}. Success ranges from \nRoboWorst\% (vases) to \nRoboBest\% (basketballs) by category
+(\cref{fig:robothor}). \nRoboErr{} of the episodes end because the simulator rejects the start pose and are counted as
+failures.
+
+\subsection{How RoboTHOR episodes end}
+RoboTHOR adds the decision to stop, so failures can come from stopping at the wrong place or from never stopping.
+\Cref{fig:robothor-outcomes} separates the two. The agent issues Stop in \tRStop{} episodes, and \tRStopOk{} of these
+succeed, a stop precision of \tRStopPrec\%. Of the \tRWrong{} wrong stops, \tRWrongNear{} end within 1.5\,m of the
+target and the median one ends \tRWrongDist\,m away, so most wrong stops are at a look-alike rather than just short of
+the target. In \tRLimit{} episodes the agent uses all 500 steps without stopping. In \tRLimitAppr{} of them it does
+commit to and approach a candidate, but the stop check of \cref{sec:method-stop} rejects it (\tRLimitRej{} rejections
+in total), so the agent exhausts the candidate and keeps searching; on average it spends \tRLimitExpl\% of these
+episodes exploring. The stop check therefore trades wrong stops for unfinished episodes. Both failure types trace back to recognition: a look-alike that passes the stop check produces a wrong stop,
+and a target that fails it produces an unfinished episode. With a model that tells targets from look-alikes more
+reliably, the same agent would convert both into successes. Successful episodes take \tRStepsSucc{} steps at the median, and the agent runs at
+\tRTimeStep\,s per step with \tRCallsEp{} VLM calls per episode.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\linewidth]{figures/th_robothor_outcomes.pdf}
+\caption[How RoboTHOR episodes end]{How the \nRoboN{} RoboTHOR validation episodes of \ours end.}
+\label{fig:robothor-outcomes}
+\end{figure}
+
+\input{chapters/generated/tab_robothor}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/robothor_cats.pdf}
+\caption{\ours on RoboTHOR validation by target category.}
+\label{fig:robothor}
+\end{figure}
+
+\section{Summary}
+The experiments confirm all four predictions of the diagnosis. With the same model, \ours removes the never-seen and
+blocked failures and reduces lost targets, gains most on Long and least on Visual, and loses far less when the model
+shrinks. A generic modular agent recovers only part of the gain; multi-view fusion supplies most of the rest. The
+agent works from RGB alone, uses fewer steps, and transfers to RoboTHOR. Its main remaining limit is the recognition
+of objects described only by appearance.

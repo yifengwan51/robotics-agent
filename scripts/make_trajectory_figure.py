@@ -57,9 +57,11 @@ PANELS = [
      "(c) Visual: only look-alikes proposed"),
 ]
 # reference palette (validated light mode): series 1 blue, series 2 orange; neutrals for everything else
-C_S2M, C_EB = "#C55A11", "#7F7F7F"  # the colours of these agents in every figure of the paper
-INK, INK2, FLOOR, WALL, SURFACE = "#0b0b0b", "#595959", "#EEEDEB", "#BFBFBF", "#ffffff"
-OUT = os.path.join(ROOT, "paper", "latex", "fig", "trajectories.pdf")
+C_S2M, C_EB = "#C55A11", "#4D4D4D"  # the colours of these agents in every figure of the paper
+INK, INK2, FLOOR, WALL, SURFACE = "#0b0b0b", "#404040", "#EBEAE7", "#8C8C8C", "#ffffff"
+THESIS = os.environ.get("THESIS") == "1"  # thesis variant: thesis text width, text scaled by K, *_thesis outputs
+K = 1.25 if THESIS else 1.0
+OUT = os.path.join(ROOT, "paper", "latex", "fig", "trajectories_thesis.pdf" if THESIS else "trajectories.pdf")
 
 
 def path(rec):
@@ -87,9 +89,10 @@ def outcome(rec):
 
 def main():
     plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"],
-                         "mathtext.fontset": "stix", "font.size": 7, "axes.titlesize": 7.5})
+                         "mathtext.fontset": "stix", "font.size": 7 * K, "axes.titlesize": 7.5 * K})
     floors = json.load(open(os.path.join(ROOT, "paper", "figures", "reachable_positions.json")))
-    fig, axes = plt.subplots(1, 3, figsize=(6.9, 2.1))
+    fig, axes = plt.subplots(1, 3, figsize=(6.3, 2.75) if THESIS else (6.9, 2.1))
+    heads = []
     facts = []
     for ax, (sub, want, prefer, title) in zip(axes, PANELS):
         ep = pick(sub, want, prefer)
@@ -100,50 +103,51 @@ def main():
                   interpolation="nearest", zorder=0)
         gx = np.linspace(ext[0], ext[1], img.shape[1] + 1)[:-1] + (ext[1] - ext[0]) / img.shape[1] / 2
         gz = np.linspace(ext[2], ext[3], img.shape[0] + 1)[:-1] + (ext[3] - ext[2]) / img.shape[0] / 2
-        ax.contour(gx, gz, img, levels=[0.5], colors=WALL, linewidths=0.7, zorder=1)
-        for rec, col, ls, z in [(eb, C_EB, (0, (3.2, 1.6)), 2), (s2m, C_S2M, "-", 3)]:
+        from scipy.ndimage import gaussian_filter
+        ax.contour(gx, gz, gaussian_filter(img.astype(float), 0.8), levels=[0.5], colors=WALL, linewidths=0.8, zorder=1)
+        for rec, col, ls, z in [(eb, C_EB, (0, (4.0, 1.8)), 2), (s2m, C_S2M, "-", 3)]:
             xs, zs = path(rec)
             ax.plot(xs, zs, color=col, lw=1.5, ls=ls, solid_joinstyle="round", solid_capstyle="round",
                     dash_capstyle="round", zorder=z)
-            ax.scatter([xs[-1]], [zs[-1]], s=12, marker="o", facecolor=col, edgecolor=SURFACE, lw=0.5, zorder=z + 5)
-            rej = {}
+            ax.scatter([xs[-1]], [zs[-1]], s=20, marker="o", c=col, lw=0, zorder=z + 6)
+            rej = []  # [x, z, count]: rejections within 0.45 m of each other are one place
             for t in rec["trajectory"][1:]:
                 if not t["ok"]:
-                    k = (round(t["x"], 2), round(t["z"], 2))
-                    rej[k] = rej.get(k, 0) + 1
-            for (rx, rz), n in rej.items():
-                ax.scatter([rx], [rz], s=20, marker="x", c=col, lw=1.0, zorder=z + 5)
-                if n > 1:
-                    ax.text(rx + 0.12, rz + 0.08, f"{n}$\\times$", color=INK2, fontsize=6.5, zorder=9)
+                    c = next((c for c in rej if math.hypot(c[0] - t["x"], c[1] - t["z"]) < 0.45), None)
+                    if c:
+                        c[2] += 1
+                    else:
+                        rej.append([t["x"], t["z"], 1])
+            for rx, rz, n in rej:
+                ax.scatter([rx], [rz], s=22, marker="x", c=col, lw=1.1, zorder=z + 5)
+                if n > 1:  # count beside the mark, on the side toward the middle of the room
+                    # count above the mark, on the side toward the middle of the room, clear of the start marker
+                    dx = 0.25 if rx < (ext[0] + ext[1]) / 2 else -0.25
+                    ax.text(rx + dx, rz + 0.3, f"{n}$\\times$", color=INK, fontsize=6.8 * K, zorder=9, va="bottom",
+                            ha="left" if dx > 0 else "right")
         hyps = s2m["perception_log"][-1]["hyps"]
         for hx, hz, w, exhausted in hyps:
-            size = 14 + 22 * min(max(w, 0.0), 2.0)
-            ax.scatter([hx], [hz], s=size, marker="o", zorder=4, lw=1.0,
-                       facecolor=SURFACE if exhausted else C_S2M, edgecolor=C_S2M if exhausted else SURFACE)
+            ax.scatter([hx], [hz], s=125, marker="o", zorder=8, lw=1.1,
+                       facecolor="none", edgecolor=C_EB if exhausted else C_S2M)
         t0 = s2m["trajectory"][0]
         y = math.radians(t0["yaw"])
-        ax.annotate("", xy=(t0["x"] + 0.45 * math.sin(y), t0["z"] + 0.45 * math.cos(y)), xytext=(t0["x"], t0["z"]),
-                    arrowprops=dict(arrowstyle="-|>", color=INK, lw=0.8, mutation_scale=6), zorder=5)
-        ax.scatter([t0["x"]], [t0["z"]], s=18, c=INK, zorder=6, lw=0)
-        ax.scatter([s2m["target"]["x"]], [s2m["target"]["z"]], s=70, marker="*", c=INK, edgecolor=SURFACE,
-                   lw=0.6, zorder=7)
-        px = [ext[0], ext[1], s2m["target"]["x"]] + [h[0] for h in hyps]
-        pz = [ext[2], ext[3], s2m["target"]["z"]] + [h[1] for h in hyps]
-        x0, x1, z0, z1 = min(px) - 0.25, max(px) + 0.25, min(pz) - 0.25, max(pz) + 0.25
+        ax.scatter([t0["x"]], [t0["z"]], s=42, marker=(3, 0, -math.degrees(y)), c=INK, zorder=6, lw=0)
+        ax.scatter([s2m["target"]["x"]], [s2m["target"]["z"]], s=46, marker="*", c=INK, lw=0, zorder=7)
+        px = path(eb)[0] + path(s2m)[0] + [s2m["target"]["x"]] + [h[0] for h in hyps]
+        pz = path(eb)[1] + path(s2m)[1] + [s2m["target"]["z"]] + [h[1] for h in hyps]
+        x0, x1 = min(ext[0], min(px) - 0.3) - 0.05, max(ext[1], max(px) + 0.3) + 0.05
+        z0, z1 = min(ext[2], min(pz) - 0.3) - 0.32, max(ext[3], max(pz) + 0.3) + 0.05
         ax.set_xlim(x0, x1)
         ax.set_ylim(z0, z1)
         ax.set_aspect("equal")
-        ax.plot([x0 + 0.15, x0 + 1.15], [z0 + 0.12] * 2, color=INK2, lw=1.0, solid_capstyle="butt")
-        ax.text(x0 + 0.65, z0 + 0.2, "1 m", color=INK2, ha="center", va="bottom", fontsize=6.5)
+        ax.plot([x1 - 1.2, x1 - 0.2], [z0 + 0.06] * 2, color=INK, lw=1.1, solid_capstyle="butt", zorder=9)
+        ax.text(x1 - 1.27, z0 + 0.06, "1 m", color=INK, ha="right", va="center", fontsize=6.6 * K, zorder=9)
         ax.set_xticks([])
         ax.set_yticks([])
         for sp in ax.spines.values():
             sp.set_visible(False)
-        ax.set_title(title, color=INK, loc="left", pad=19)
-        ax.text(0.0, 1.075, "S2M: " + outcome(s2m), transform=ax.transAxes, color=C_S2M, fontsize=6.5,
-                ha="left", va="bottom")
-        ax.text(0.0, 1.01, "EB prompt: " + outcome(eb), transform=ax.transAxes, color=INK2, fontsize=6.5,
-                ha="left", va="bottom")
+        # thesis: the descriptive part of each title is in the caption, so the short title fits the narrower panel
+        heads.append((ax, title.split(":")[0] if THESIS else title, "S2M: " + outcome(s2m), "EB prompt: " + outcome(eb)))
         facts.append(dict(sub=sub, ep=ep, instruction=s2m["instruction"], eb=classify(eb), eb_steps=eb["num_steps"],
                           eb_rej=sum(not t["ok"] for t in eb["trajectory"][1:]), s2m=classify(s2m),
                           s2m_steps=s2m["num_steps"], nh=len(hyps)))
@@ -151,24 +155,36 @@ def main():
               f"S2M {classify(s2m)} ({s2m['num_steps']} steps); hypotheses {len(hyps)}")
     handles = [Line2D([], [], color=C_S2M, lw=1.5, label="S2M"),
                Line2D([], [], color=C_EB, lw=1.5, ls=(0, (3.2, 1.6)), label="EB prompt"),
-               Line2D([], [], color=INK, marker="o", ls="", ms=4, label="start"),
+               Line2D([], [], color=INK, marker=">", ls="", ms=5, label="start and heading"),
                Line2D([], [], color=INK, marker="*", ls="", ms=7, label="target"),
-               Line2D([], [], color=INK2, marker="x", ls="", ms=4, label="rejected move"),
-               Line2D([], [], marker="o", ls="", ms=5, mfc=C_S2M, mec=SURFACE, label="hypothesis"),
-               Line2D([], [], marker="o", ls="", ms=5, mfc=SURFACE, mec=C_S2M, label="exhausted hypothesis")]
-    fig.legend(handles=handles, loc="lower center", ncol=7, frameon=False, fontsize=7, handletextpad=0.35,
-               columnspacing=1.1, labelcolor=INK)
-    fig.subplots_adjust(left=0.005, right=0.995, top=0.78, bottom=0.09, wspace=0.06)
+               Line2D([], [], color=INK2, marker="x", ls="", ms=4.5, mew=1.1, label="rejected moves ($n\\times$)"),
+               (Line2D([], [], color=C_S2M, marker="o", ls="", ms=4), Line2D([], [], color=C_EB, marker="o", ls="", ms=4)),
+               Line2D([], [], marker="o", ls="", ms=7, mfc="none", mec=C_S2M, mew=1.3, label="S2M hypothesis at the end")]
+    from matplotlib.legend_handler import HandlerTuple
+    labels = [h.get_label() if not isinstance(h, tuple) else "end of path" for h in handles]
+    fig.legend(handles, labels, loc="lower center", ncol=4 if THESIS else 7, frameon=False, fontsize=7 * K, handletextpad=0.35,
+               columnspacing=1.0, labelcolor=INK, handler_map={tuple: HandlerTuple(ndivide=None, pad=0.2)})
+    fig.subplots_adjust(left=0.003, right=0.997, top=0.76 if THESIS else 0.77, bottom=0.2 if THESIS else 0.15, wspace=0.03)
+    # panel headers at one height for all panels (panels differ in height because each map keeps its aspect)
+    fig.canvas.draw()
+    top = max(a.get_position().y1 for a, *_ in heads)
+    lh = 9.0 * K / 72 / fig.get_figheight()  # one text line in figure units
+    for a, t, l1, l2 in heads:
+        x0 = a.get_position().x0
+        fig.text(x0, top + 0.012 + 2 * lh, t, color=INK, fontsize=7.5 * K, ha="left", va="bottom")
+        fig.text(x0, top + 0.012 + lh, l1, color=C_S2M, fontsize=6.8 * K, ha="left", va="bottom")
+        fig.text(x0, top + 0.012, l2, color=C_EB, fontsize=6.8 * K, ha="left", va="bottom")
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     sys.path.insert(0, os.path.join(ROOT, "scripts"))
     from make_paper_figures import check
     check(fig, "trajectories")
     fig.savefig(OUT)
     cap = ("\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=\\textwidth]{fig/trajectories.pdf}\n"
-           "\\caption{Trajectories on three EB-Navigation test episodes (Qwen3-VL-4B), with the hypotheses of \\ours at "
-           "the end of the episode sized by evidence. Grey: reachable floor.}\n"
+           "\\caption{Trajectories on three EB-Navigation test episodes (Qwen3-VL-4B) and the hypotheses of \\ours at the end "
+           "of each. Grey: reachable floor; targets on furniture lie outside it. $n\\times$: rejected moves at one spot.}\n"
            "\\label{fig:traj}\n\\end{figure*}\n")
-    open(CAPTION, "w").write(cap)
+    if not THESIS:  # the thesis keeps its own copy of the caption file
+        open(CAPTION, "w").write(cap)
     print("wrote", OUT, "and", CAPTION)
 
 

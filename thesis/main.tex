@@ -1,0 +1,89 @@
+% ============================================================
+% MPhil thesis, Robotics and Autonomous Systems Thrust, HKUST(GZ)
+% Template: github.com/crimson-and-clover/hkustgz-thesis-template (MIT), adjusted to the
+% FYTGS(GZ) Guidelines on Thesis Preparation (22 Jan 2024) and the MPhil sample pages (Mar 2024):
+% page order, 12 pt, one-and-a-half spacing, 25 mm margins, centred page numbers, abstract <= 300 words.
+% Build:  bash sync_from_paper.sh && tectonic -X compile main.tex
+% ============================================================
+\documentclass[a4paper]{template/hkustgz-thesis}
+\usepackage{xspace}
+\usepackage{enumitem}
+\newcommand{\ours}{S2M\xspace}
+\newcommand{\checkme}[1]{\textcolor{red}{#1}}  % fields the author must confirm before submission
+\input{chapters/generated/numbers}
+\input{chapters/generated/thesis_numbers}
+\input{chapters/generated/thesis_numbers_fig}
+
+\title{Ask Small VLMs Only What They Can See: A Semantic-to-Metric Agent for Embodied Navigation}
+\author{WAN Yifeng}
+\degree[\MPhilabbr]{\MPhil}
+\department{Robotics and Autonomous Systems Thrust}
+\subject{Robotics and Autonomous Systems}
+\advisor{Prof. HUANG Qiang}
+\depthead{\checkme{Prof. [Head of Thrust]}}{Robotics and Autonomous Systems Thrust}
+\titlepagedate{\checkme{[Month Year]}}
+\authdate{\checkme{[DD Month YYYY]}}
+
+\addbibresource{references.bib}
+\addbibresource{references_thesis.bib}
+
+\begin{document}
+
+% ---- preliminary pages, numbered in lowercase Roman (i is not shown on the title page) ----
+\maketitle
+\setcounter{page}{2}  % the title page is page i (not shown); the authorization page is ii
+\makeauthorization
+\makesignature
+
+\begin{acknowledgments}
+\input{chapters/acknowledgments}
+\end{acknowledgments}
+
+\clearpage
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+\clearpage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\clearpage
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\begin{abstract}
+\input{chapters/abstract}
+\end{abstract}
+
+% ---- thesis body, numbered in Arabic from the first page of Chapter 1 ----
+\mainmatter
+
+\chapter{Introduction}
+\input{chapters/ch1_introduction}
+
+\chapter{Literature Review}
+\input{chapters/ch2_literature}
+
+\chapter{Preliminaries}
+\input{chapters/ch3_preliminaries}
+
+\chapter{Why Small VLMs Fail as Navigation Agents}
+\input{chapters/ch4_diagnosis}
+
+\chapter{The Semantic-to-Metric Agent}
+\input{chapters/ch5_method}
+
+\chapter{Experiments}
+\input{chapters/ch6_experiments}
+
+\chapter{Conclusions}
+\input{chapters/ch7_conclusions}
+
+\printthebibliography
+
+\appendix
+\chapter{Prompts, Parameters, and Serving}
+\input{chapters/appA_implementation}
+
+\chapter{Evaluation Protocol and Additional Results}
+\input{chapters/appB_results}
+
+\end{document}

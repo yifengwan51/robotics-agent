@@ -22,7 +22,7 @@ sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from analyze_nav_failures import classify  # noqa: E402
 
 TEST = os.path.join(ROOT, "runs", "eb_nav", "test")
-EB, S2M = "eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1", "s2m_Qwen3-VL-4B-Instruct-AWQ_final_r1"
+EB, S2M = "eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1", "s2m_Qwen3-VL-4B-Instruct-AWQ_simp4_r1"
 CAPTION = os.path.join(ROOT, "paper", "latex", "sec", "fig_traj.tex")
 
 
@@ -105,6 +105,7 @@ def main():
         gz = np.linspace(ext[2], ext[3], img.shape[0] + 1)[:-1] + (ext[3] - ext[2]) / img.shape[0] / 2
         from scipy.ndimage import gaussian_filter
         ax.contour(gx, gz, gaussian_filter(img.astype(float), 0.8), levels=[0.5], colors=WALL, linewidths=0.8, zorder=1)
+        placed = []  # positions of the n-times counts in this panel
         for rec, col, ls, z in [(eb, C_EB, (0, (4.0, 1.8)), 2), (s2m, C_S2M, "-", 3)]:
             xs, zs = path(rec)
             ax.plot(xs, zs, color=col, lw=1.5, ls=ls, solid_joinstyle="round", solid_capstyle="round",
@@ -123,8 +124,14 @@ def main():
                 if n > 1:  # count beside the mark, on the side toward the middle of the room
                     # count above the mark, on the side toward the middle of the room, clear of the start marker
                     dx = 0.25 if rx < (ext[0] + ext[1]) / 2 else -0.25
-                    ax.text(rx + dx, rz + 0.3, f"{n}$\\times$", color=INK, fontsize=6.8 * K, zorder=9, va="bottom",
-                            ha="left" if dx > 0 else "right")
+                    dz = 0.3
+                    for qx, qz in placed:  # a second count near the first goes below its mark instead
+                        if abs(qx - (rx + dx)) < 0.9 and abs(qz - (rz + dz)) < 0.45:
+                            dz = -0.55
+                    placed.append((rx + dx, rz + dz))
+                    ax.text(rx + dx, rz + dz, f"{n}$\\times$", color=col, fontsize=6.8 * K, zorder=11, fontweight="bold", va="bottom",
+                            ha="left" if dx > 0 else "right",
+                            bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.9))
         hyps = s2m["perception_log"][-1]["hyps"]
         for hx, hz, w, exhausted in hyps:
             ax.scatter([hx], [hz], s=125, marker="o", zorder=8, lw=1.1,

@@ -56,14 +56,12 @@ Lifting & depth window (fraction of the box) & 0.5\\
 Memory & association radius $r$ & 0.5\,m\\
  & repeated-view discount $\gamma$ & 0.25\\
  & same view: position, heading & 0.2\,m, equal\\
- & negative evidence $\lambda$ & 0.4\\
- & image margin, occlusion tolerance & 20\,px, 0.3\,m\\
- & removal threshold & $w_k\le-1$\\
+ & RoboTHOR only: negative evidence, range & 0.4, 3\,m\\
 Search & commit $\tau_c$ / keep $\tau_k$ & 0.8 / 0.4\\
  & approach a weak hypothesis & $w_k\ge0.35$\\
  & exhaustion radius & 0.9\,m\\
  & exploration goal distance & 0.75--3\,m\\
- & tiles, overlap, boxes checked & $3{\times}3$, 20\%, 4\\
+ & RoboTHOR only: tiles, boxes checked & $3{\times}3$, 4\\
 Planning & cost of an unobserved edge point & 0.15\\
  & obstacle inflation (fallback) & 0.20 (0.10)\,m\\
  & goal tolerance & 0.55\,m\\
@@ -138,7 +136,7 @@ comes from the simulator's object metadata.
 \Cref{tab:s-probe} extends the probe of Sec.~3 of the main paper to both models and to the views that do not show
 the target. Qwen3-VL-4B finds the target more often than Qwen2.5-VL-3B but also places more boxes where there is
 nothing to find, most of all for appearance-only phrases. Both kinds of error enter the memory, and both are what
-multi-view fusion and negative evidence act on.
+multi-view fusion and exhaustion act on.
 
 \begin{table*}[t]
 \centering\small

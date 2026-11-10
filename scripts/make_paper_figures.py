@@ -207,9 +207,9 @@ def analysis():
         v = [tx[key][cname] for cname, _ in cats]
         yy = y + (h / 2 if k == 0 else -h / 2)
         ax.barh(yy, v, h * 0.92, color=c, label=lab, zorder=2, lw=0)
-        for y0, vv in zip(yy, v):
-            ax.text(vv + 0.9, y0, f"{vv:.0f}" if float(vv).is_integer() else f"{vv:.1f}", va="center", ha="left",
-                    fontsize=6.4 * K, color=INK)
+    for y0, (cname, _) in zip(y, cats):  # one label per row, EB prompt / S2M (run means rounded)
+        e, m = tx["eb3"][cname], tx["s2m3"][cname]
+        ax.text(max(e, m) + 0.9, y0, f"{e:.0f} / {m:.0f}", va="center", ha="left", fontsize=6.4 * K, color=INK)
     ax.set_yticks(y)
     ax.set_yticklabels([lab for _, lab in cats])
     ax.set_xlabel("failed episodes (of 300)")
@@ -323,10 +323,8 @@ def robothor_cats():
     fig, ax = plt.subplots(figsize=(3.35, 1.5))
     y = list(np.arange(len(cats))) + [len(cats) + 0.35]  # the pooled row sits apart, on top
     sr, spl, names = sr + [sr_all], spl + [spl_all], names + ["all"]
-    light = ["#F4B183"] * len(cats) + ["#BFBFBF"]
-    dark = [S2M] * len(cats) + [INK2]
-    ax.barh(y, sr, 0.78, color=light, zorder=2, lw=0)
-    ax.barh(y, spl, 0.38, color=dark, zorder=3, lw=0)
+    ax.barh(y, sr, 0.78, color="#F4B183", zorder=2, lw=0)
+    ax.barh(y, spl, 0.38, color=S2M, zorder=3, lw=0)
     for yy, a, p in zip(y, sr, spl):
         ax.text(a + 1.2, yy, f"{a:.0f} / {p:.0f}" if yy < len(cats) else f"{a:.1f} / {p:.1f}", va="center",
                 ha="left", fontsize=6.3 * K, color=INK, zorder=5,

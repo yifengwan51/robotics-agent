@@ -8,8 +8,7 @@ model boxes a visible target in \nProbeThreeCommon--\nProbeThreeBase\% of single
 spatial state in generated text. We therefore recast the VLM from planner to sensor. \ours (Semantic-to-Metric) is
 a training-free navigation agent that asks the VLM only what the current image can answer, whether the target is
 visible and where, and keeps all state in metric form: a hypothesis memory lifts each answer with depth and pose,
-accumulates evidence across distinct viewpoints, and withdraws it when a hypothesis should be visible but is not
-detected. With the model at 4-bit on one 8\,GB GPU, \ours reaches \nSThree\%, ${+}\nGainThree$\,pp over the
+accumulates evidence across distinct viewpoints, and discards a candidate once reaching it does not end the task. With the model at 4-bit on one 8\,GB GPU, \ours reaches \nSThree\%, ${+}\nGainThree$\,pp over the
 benchmark's agent and ${+}\nSOverMod$\,pp over a generic modular agent with the same model, and \nRGBThree\% from
 RGB alone, above both fine-tuned 4B agents and seven of ten training-free agents built on larger models. With
 Qwen2.5-VL-3B it lifts success from \nEBTwo\% to \nSTwo\%, and on RoboTHOR ObjectNav it reaches \nRoboSR\%. Asking a

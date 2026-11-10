@@ -1,0 +1,7 @@
+# DEV split only (data/eb_nav_dev, 150 eps). Diagnosis 2026-11-09: look-around turns away from a weak in-view target
+# to a look-alike; negative evidence penalises unboxed hypotheses on frames whose single box went to another object.
+# Candidate fixes (defaults unchanged): neg_mode=empty, scan_mode=gated. Paired against a rerun of the current code.
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.72 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp fixdev_base --data data/eb_nav_dev --workers 2
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.72 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp fixdev_neg --data data/eb_nav_dev --workers 2 --s2m '{"neg_mode": "empty"}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.72 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp fixdev_scan --data data/eb_nav_dev --workers 2 --s2m '{"scan_mode": "gated"}'
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.72 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --model Qwen3-VL-4B-Instruct-AWQ --exp fixdev_both --data data/eb_nav_dev --workers 2 --s2m '{"neg_mode": "empty", "scan_mode": "gated"}'

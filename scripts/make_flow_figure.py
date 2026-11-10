@@ -29,24 +29,24 @@ T = {  # node text; every symbol is defined in the caption
     "in": "$I_t$, $s$",
     "vlm": "VLM $f$\\\\$\\pi_t$, $b_t$",
     "weak": "weak?",
-    "crop": "crop check,\\\\tiles",
+    "crop": "crop check\\\\on a zoom",
     "weight": "weight $a_t$",
     "lift": "lift to $q_t$ ($D_t$, $p_t$)",
     "new": "\\textit{otherwise:}\\\\new $\\mu_k=q_t$",
     "fuse": "\\textit{within $r$ of $\\mu_k$:}\\\\fuse, $w_k \\mathrel{+}= \\gamma_t a_t$",
-    "neg": "\\textit{others in view, undetected:}\\\\$w_k \\mathrel{-}= \\lambda$; drop at $w_k\\le-1$",
+    "neg": "\\textit{reached, task not done:}\\\\exhaust $\\mu_k$, keep it in memory",
     "commit": "$w_k\\ge\\tau_c$?",
-    "goto": "go to $\\mu_{k^\\star}$;\\\\exhaust it\\\\on arrival",
-    "else": "look around,\\\\inspect,\\\\or explore",
+    "goto": "go to the\\\\strongest\\\\committed $\\mu_k$",
+    "else": "inspect one in\\\\view, else look\\\\around, explore",
     "astar": "A* on $M_t$",
     "out": "action\\\\$u_t$",
 }
 CAPTION = ("One step of \\ours. The frozen VLM $f$ gives the presence $\\pi_t$ and box $b_t$ of the phrase $s$ on the "
-           "frame $I_t$; a weak answer is checked on a crop or on tiles, which sets its weight $a_t$. The box is lifted to "
+           "frame $I_t$; a weak answer is checked on a magnified crop, which sets its weight $a_t$. The box is lifted to "
            "a floor point $q_t$ with depth $D_t$ and pose $p_t$ and fused into a hypothesis $\\mu_k$ within $r$, or starts "
-           "one; $\\gamma_t<1$ discounts a repeated view, and a hypothesis that should be seen but is not loses "
-           "$\\lambda$ of its evidence $w_k$. Above $\\tau_c$ a hypothesis is committed, and the agent goes to "
-           "$\\mu_{k^\\star}$; A* on the map $M_t$ gives the action $u_t$.")
+           "one; $\\gamma_t<1$ discounts a repeated view, and a hypothesis reached without ending the task is exhausted. "
+           "Above $\\tau_c$ a hypothesis $\\mu_k$ with evidence $w_k$ is committed; A* on the map $M_t$ gives the "
+           "action $u_t$.")
 EL, ARROWS = [], []
 
 

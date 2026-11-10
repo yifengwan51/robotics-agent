@@ -53,19 +53,6 @@ with $n_k$ the number of fused observations and $\gamma_t=0.25$ if some $v\in V_
 position within 0.2\,m of it, else $\gamma_t=1$; otherwise a new hypothesis $(\mu,w)=(q_t,a_t)$ is created. Through $\gamma_t$, evidence grows with the number
 of distinct viewpoints rather than with the number of frames.
 
-\noindent\textbf{Negative evidence.}
-A hypothesis that the current frame should show but that receives no detection loses evidence:
-\begin{equation}
-\begin{gathered}
-w_k\leftarrow w_k-\lambda\,\mathbb{1}\big[\mathrm{vis}_t(\mu_k)\big],\\
-\mathrm{vis}_t(\mu)\Leftrightarrow \bar u\in\Omega,\ \ d\le6\,\text{m},\ \ D_t(\bar u)+0.3\ge d,
-\end{gathered}
-\label{eq:neg}
-\end{equation}
-for every hypothesis without a detection within $r$, where $(\bar u,d)=\Pi_{p_t}(\mu)$ are its pixel and planar
-depth, $\Omega$ is the image shrunk by 20\,px, and $\lambda=0.4$; the last condition rules out occlusion.
-Hypotheses with $w_k\le-1$ are removed; absence outside the view is never counted.
-
 \noindent\textbf{Commitment and exhaustion.}
 The agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while $w_k\ge\tau_k=0.4$; the hysteresis
 prevents one missed detection from abandoning a well-supported target. When the agent stands within 0.9\,m of a
@@ -74,28 +61,18 @@ hypothesis is marked exhausted. It stays in memory, so later detections of the s
 instead of creating a new target.
 
 \subsection{Search and control}
-\noindent\textbf{Selection.}
-Among the committed hypotheses $\mathcal{C}_t$ the agent visits
-\begin{equation}
-k^\star=\arg\max_{k\in\mathcal{C}_t}\ \frac{1-e^{-w_k}}{c_k+1},\qquad c_k=\frac{\lVert\mu_k-x_t\rVert}{0.25\,\text{m}} .
-\label{eq:index}
-\end{equation}
-The numerator is the probability of at least one detection under a Poisson model with mean $w_k$, and the
-denominator counts the steps to reach and check $\mu_k$; inspecting in decreasing order of this ratio is optimal
-for fixed costs~\cite{kadane1977optimal}, and \ours applies it greedily from the current position. With nothing committed, the
-agent first completes a 360$^\circ$ look-around, then approaches the strongest hypothesis with $w_k\ge0.35$, and
-otherwise moves to the observed free cell 0.75--3\,m away that is farthest from all visited positions.
+\noindent\textbf{Selection and look-around.}
+The agent heads for the committed hypothesis with the largest evidence. With nothing committed, it approaches the
+strongest hypothesis with $w_k\ge0.35$ when that hypothesis is detected in the current frame. Otherwise it turns
+through the three remaining headings, so that a target behind it enters the view, then approaches the strongest
+hypothesis with $w_k\ge0.35$, and otherwise moves to the observed free cell 0.75--3\,m away that is farthest from
+all visited positions and looks around again. A weak target already in view is thus inspected before the agent
+turns away from it.
 
 \noindent\textbf{Planning.}
 Actions come from A* over (position, heading) on $M_t$, whose edges are the benchmark's translations and turns.
 An edge costs 1 plus 0.15 for each of four sampled points on it that is unobserved; edges through inflated
 obstacles are removed, and a move that the simulator has rejected becomes a forbidden edge.
-
-\noindent\textbf{Magnified search.}
-When a view yields no observation with $a_t\ge0.5$ and nothing is committed, the frame is split into
-$3{\times}3$ overlapping tiles, each upsampled to 448\,px and queried for a box; up to four tile boxes are
-crop-checked, and those with $\pi^z\ge0.5$ enter the memory. This finds small or distant targets once per view,
-at the cost of VLM calls rather than environment steps.
 
 \input{sec/tab_main}
 
@@ -135,5 +112,7 @@ turn or tilt of $u_t$ when $o_t=1$.
 \noindent\textbf{Explicit stopping.}
 EB-Navigation ends an episode on success; RoboTHOR requires a Stop action. There the agent stops only when it is
 within 0.9\,m of a committed hypothesis, has turned within 20$^\circ$ of it and tilted it into view, and a fresh
-presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps,
-negative evidence counts only within 3\,m and once per view, and exploration goes to the nearest frontier.
+presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps
+and a stop is final, the RoboTHOR agent, frozen before the EB-Navigation agent was simplified, also lowers the
+evidence of a hypothesis that a frame within 3\,m shows but does not detect, searches magnified tiles when a view
+yields nothing, and explores toward the nearest frontier (supplement).

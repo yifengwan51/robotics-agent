@@ -87,7 +87,7 @@ Oracle $-$ \ours & Qwen3-VL-4B & ${+}\nGapOracle$ & [${+}\nGapOracleLo$, ${+}\nG
 \centering
 \includegraphics[width=\linewidth]{figures/th_subsets.pdf}
 \caption[Success per subset]{EB-Navigation test success per subset with Qwen3-VL-4B, from the benchmark's agent to
-the oracle. \ours closes most of the gap to the oracle on every subset except Visual.}
+the oracle (black line). \ours closes most of the gap to the oracle on every subset except Visual.}
 \label{fig:subsets}
 \end{figure}
 
@@ -104,7 +104,8 @@ lost-after-seen and approach failures, most of which come from look-alikes (\cre
 \centering
 \includegraphics[width=\linewidth]{figures/th_outcomes.pdf}
 \caption[Outcome of every episode]{Outcome of every EB-Navigation test episode by agent and model (first matching
-rule of \cref{sec:pre-metrics}; mean over runs where a configuration was run repeatedly).}
+rule of \cref{sec:pre-metrics}; mean over runs where a configuration was run repeatedly). Segments of fewer than
+12 episodes are not labelled.}
 \label{fig:outcomes}
 \end{figure}
 
@@ -187,7 +188,8 @@ include zero.
 \centering
 \includegraphics[width=\linewidth]{figures/th_forest.pdf}
 \caption[Ablations with confidence intervals]{Paired difference in EB-Navigation success between each variant and
-the full agent (Qwen3-VL-4B), with 95\% bootstrap intervals. Orange and $*$: significant after Holm correction.}
+the full agent (Qwen3-VL-4B), with 95\% bootstrap intervals. Filled marker: significant after Holm correction ($p<0.05$); open marker: not
+significant.}
 \label{fig:forest}
 \end{figure}
 
@@ -266,8 +268,9 @@ evidence (step 13). The look-alikes never approach the commit threshold.
 \includegraphics[width=\linewidth]{figures/th_episode.pdf}
 \caption[Inside one episode]{Inside one Long-horizon test episode of \ours (Qwen3-VL-4B, target: alarm clock).
 Top: camera frames at four steps, re-rendered from the saved trajectory, with the VLM's box (orange solid: on the
-target; blue dashed: on a look-alike). Bottom: evidence of every hypothesis over the episode; grey bands mark the
-steps shown above.}
+target; white: on a look-alike). Bottom: evidence of every hypothesis over the episode; grey bands and bold
+step numbers mark the frames shown above. The episode ends in success after step 13, before either look-alike reaches
+the removal line.}
 \label{fig:episode}
 \end{figure}
 

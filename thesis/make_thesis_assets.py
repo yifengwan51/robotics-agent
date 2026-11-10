@@ -13,7 +13,7 @@ import statistics as st
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST = os.path.join(ROOT, "runs", "eb_nav", "test")
 OUT = os.path.join(ROOT, "thesis", "chapters", "generated")
-S2M, EB, MOD = ("s2m_Qwen3-VL-4B-Instruct-AWQ_final_r1", "eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1",
+S2M, EB, MOD = ("s2m_Qwen3-VL-4B-Instruct-AWQ_simp4_r1", "eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1",
                 "s2m_Qwen3-VL-4B-Instruct-AWQ_modular_baseline_r1")
 M = {}
 
@@ -95,13 +95,13 @@ import sys
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from analyze_nav_failures import classify  # noqa: E402
 lost = {"all": 0, "visual_appearance": 0}
-for i in (1, 2, 3, 4):
-    for x in recs(f"s2m_Qwen3-VL-4B-Instruct-AWQ_final_r{i}"):
+for i in (1, 2, 3):
+    for x in recs(f"s2m_Qwen3-VL-4B-Instruct-AWQ_simp4_r{i}"):
         if classify(x) == "lost_after_seen":
             lost["all"] += 1
             lost["visual_appearance"] += x["eval_set"] == "visual_appearance"
-M["LostSVisual"] = f"{lost['visual_appearance'] / 4:.1f}"
-M["LostSAll"] = f"{lost['all'] / 4:.1f}"
+M["LostSVisual"] = f"{lost['visual_appearance'] / 3:.1f}"
+M["LostSAll"] = f"{lost['all'] / 3:.1f}"
 
 with open(os.path.join(OUT, "thesis_numbers.tex"), "w") as f:
     for k, v in M.items():

@@ -46,7 +46,7 @@ class S2MPlanner(Planner):
                  zoom_accept=0.5, neg_weight=0.4, tile_grid=3, max_tile_boxes=4, max_range=6.0,
                  use_negative=True, use_scan=True, use_zoom=True, use_tiles=True, use_exhaust=True,
                  use_fusion=True, nearest_first=True, tie_margin=0.3, fov=100.0, cam_h=None, core=None, use_contrast=False,
-                 pos_weight="uniform", **kw):
+                 pos_weight="uniform", neg_mode="any_miss", scan_mode="always", tile_cap=None, neg_protect=False, tile_mode="always", **kw):
         self.g = Grounder(model_name)
         self.core = core or GeoCore()
         self.fov, self.cam_h = fov, cam_h
@@ -59,6 +59,20 @@ class S2MPlanner(Planner):
         self.use_contrast = use_contrast
         # "inv_range2": weight positions by 1/range^2, for estimated depth whose error grows with range
         self.pos_weight = pos_weight
+        # neg_mode "empty": a hypothesis loses evidence only on frames where the sensor reports nothing. The VLM boxes
+        # one object per frame, so a frame that boxes something else says nothing about an unboxed hypothesis.
+        # scan_mode "gated": look around only when the current view holds no hypothesis worth inspecting.
+        assert neg_mode in ("any_miss", "empty") and scan_mode in ("always", "gated")
+        self.neg_mode, self.scan_mode = neg_mode, scan_mode
+        # tile_cap: evidence of a magnified-tile hit is capped below the commit threshold, so tiles only propose a
+        # candidate (the agent walks closer to inspect it) and a full-frame view must confirm it
+        self.tile_cap = tile_cap
+        # neg_protect: the hypothesis being approached is resolved on arrival (exhaustion), not by negative evidence;
+        # negative evidence prunes the alternatives. tile_mode "last": magnified tiles only when the look-around of
+        # this vantage point is complete and holds nothing worth inspecting.
+        assert tile_mode in ("always", "last")
+        self.neg_protect, self.tile_mode = neg_protect, tile_mode
+        self._in_view = []
         self.pool = cf.ThreadPoolExecutor(2)
         self.tpool = cf.ThreadPoolExecutor(9)
         self.reset("")
@@ -112,13 +126,17 @@ class S2MPlanner(Planner):
             d = self._lift(box, depth, pose, w)
             if d is not None:
                 dets.append(d)
-        if self.use_tiles and not any(d[2] >= self.zoom_accept for d in dets) and self._committed() is None:
+        last_resort = self.tile_mode == "always" or (
+            (not self.use_scan or len(self.seen_headings | {snap_yaw(pose["yaw"])}) >= 4)
+            and not any(h.score >= self.inspect_th for h in self._live()))
+        if self.use_tiles and last_resort and not any(d[2] >= self.zoom_accept for d in dets) and self._committed() is None:
             tiled_dets = self._tiled_search(rgb, depth, pose, q)
             tiled = len(tiled_dets)
             dets += tiled_dets
         for d in dets:
             self._add(d, pose)
-        if self.use_negative:
+        self._in_view = [d[0] for d in dets]
+        if self.use_negative and (self.neg_mode == "any_miss" or not dets):
             self._negative_evidence(depth, pose, dets)
         self.seen_headings.add(snap_yaw(pose["yaw"]))
         self.log.append({"step": obs["step"], "p_vis": round(p_vis, 3),
@@ -152,7 +170,7 @@ class S2MPlanner(Planner):
         out = []
         for b, pz in zip(uniq, scores):
             if pz >= self.zoom_accept:
-                d = self._lift(b, depth, pose, pz)
+                d = self._lift(b, depth, pose, pz if self.tile_cap is None else min(pz, self.tile_cap))
                 if d is not None:
                     out.append(d)
         return out
@@ -183,6 +201,8 @@ class S2MPlanner(Planner):
         H, W = depth.shape
         for h in self.hyps:
             if any(np.linalg.norm(h.xz - d[0]) < self.merge_radius for d in dets):
+                continue
+            if self.neg_protect and h is self.cur:
                 continue
             kw = {} if self.cam_h is None else {"cam_h": self.cam_h}
             px = world_to_pixel(h.xz[0], h.xz[1], h.height, pose, fov=self.fov, img_w=W, img_h=H, **kw)
@@ -250,7 +270,12 @@ class S2MPlanner(Planner):
                 self.core.plan = []
                 continue
             return [self.core.push_action(pose, h.xz)], self._info("push", h)
-        if self.use_scan:  # finish the cheap look-around before chasing weak evidence
+        live = self._live()
+        h = max(live, key=lambda x: x.score) if live else None
+        weak_in_view = h is not None and h.score >= self.inspect_th and \
+            any(np.linalg.norm(h.xz - xz) < self.merge_radius for xz in self._in_view)
+        if self.use_scan and not (self.scan_mode == "gated" and weak_in_view):
+            # finish the cheap look-around before chasing weak evidence
             yaw = snap_yaw(pose["yaw"])
             unseen = [d for d in (90, 270, 180) if (yaw + d) % 360 not in self.seen_headings]
             if unseen:

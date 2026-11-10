@@ -26,10 +26,10 @@ they have seen, collide with furniture, and never turn toward a target behind th
 A small VLM is thus a good semantic sensor and a poor state keeper, so we build the agent around the model rather
 than inside it. \ours (Semantic-to-Metric, \cref{fig:arch}b) is a training-free navigation agent with three parts.
 \emph{Perception} asks the VLM two questions per frame, whether the target is visible and where it is in the image,
-and spends a magnified crop or a tiled view only when the answer is weak. \emph{Memory} lifts each answer with depth
-and pose into a metric target hypothesis, accumulates evidence only from distinct viewpoints, and withdraws it when
-a hypothesis should be visible but is not detected. \emph{Action} commits to a confident hypothesis or otherwise
-searches in the order of an optimal-search index, and an occupancy-map planner computes every move. Each part
+and checks a magnified crop only when the answer is weak. \emph{Memory} lifts each answer with depth and pose into
+a metric target hypothesis, accumulates evidence only from distinct viewpoints, and discards a hypothesis that
+reaching it shows to be a look-alike. \emph{Action} commits to a confident hypothesis, inspects a weak one in view,
+and otherwise looks around and explores; an occupancy-map planner computes every move. Each part
 removes one diagnosed failure: the memory keeps a seen target, the map prevents collisions, and the look-around
 finds a target behind the agent.
 
@@ -56,7 +56,7 @@ because they cannot recognize the target or plan a path.
 asks the VLM only questions that the current image can settle, and the VLM never sees the history, the map, or the
 plan.
 \item \textbf{Evidence fusion for a generative sensor.} A metric hypothesis memory accumulates the model's
-presence and box answers over distinct viewpoints and withdraws them under negative evidence, turning unreliable
+presence and box answers over distinct viewpoints and discards look-alikes on arrival, turning unreliable
 single answers into a stable target; a generic modular agent that acts on single-view answers trails \ours by
 \nSOverMod\,pp.
 \item \textbf{RGB-only operation.} A per-frame ground-plane scale for monocular depth raises RGB-only success from

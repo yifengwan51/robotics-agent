@@ -1,8 +1,10 @@
 """Figures used only by the thesis, drawn from the generated numbers and the saved test records.
 
   ~/miniforge3/envs/embnav/bin/python thesis/make_thesis_figures.py   -> thesis/figures/th_*.pdf
-Palette: the paper's (S2M orange, RGB-only light orange, EB prompt grey) plus blue for the generic modular agent;
-the light and grey series carry hatching and direct labels so identity never rests on colour alone.
+Palette: agents keep the paper's colours (S2M orange, RGB-only light orange, EB prompt grey, oracle as a black line)
+plus slate for the generic modular agent; orange never means anything but S2M. Episode outcomes use their own
+categorical set (validated for colour-vision deficiency with the dataviz validator), and significance is shown by filled
+vs open markers, so no colour carries two meanings across the thesis figures.
 """
 import glob
 import json
@@ -13,6 +15,7 @@ import sys
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
+import matplotlib.patheffects as pe  # noqa: E402
 import numpy as np  # noqa: E402
 from PIL import Image  # noqa: E402
 
@@ -23,7 +26,10 @@ TEST = os.path.join(ROOT, "runs", "eb_nav", "test")
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 from make_paper_figures import check  # noqa: E402
 
-S2M, RGBO, EB, MOD, ORC = "#C55A11", "#F4B183", "#8C8C8C", "#2E75B6", "#404040"
+S2M, RGBO, EB, MOD, ORC = "#C55A11", "#F4B183", "#8C8C8C", "#44546A", "#0b0b0b"
+# outcomes: success aqua; failures blue, magenta, violet, yellow, red (adjacent CVD dE >= 9.6, all checks pass)
+OUT = {"success": "#1baf7a", "never seen": "#2a78d6", "lost after seen": "#e87ba4", "near miss": "#6250d6",
+       "blocked": "#eda100", "oscillation": "#e34948", "approach failure": "#BFBFBF"}
 INK, INK2, GRID = "#0b0b0b", "#595959", "#E7E6E6"
 plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix",
                      "font.size": 9, "axes.titlesize": 9, "axes.labelsize": 9, "legend.fontsize": 8,
@@ -74,44 +80,51 @@ def save(fig, name):
 # 1. success per subset: the ladder from the prompted agent to the oracle
 def subsets():
     series = [("EB prompt", "EBThree", EB, ""), ("Modular, single view", "ModThree", MOD, ""),
-              ("S2M", "SThree", S2M, ""), ("S2M, RGB only", "RGBThree", RGBO, "////"), ("Oracle target", "Oracle", ORC, "")]
+              ("S2M", "SThree", S2M, ""), ("S2M, RGB only", "RGBThree", RGBO, "////")]
     fig, ax = plt.subplots(figsize=(6.3, 2.6))
-    x, w = np.arange(len(SUBS)), 0.16
+    x, w = np.arange(len(SUBS)), 0.19
     for i, (lab, key, c, h) in enumerate(series):
         v = [num(key + s) for s in SUBS]
-        ax.bar(x + (i - 2) * w, v, w * 0.92, color=c, label=lab, hatch=h, edgecolor="white" if not h else S2M, lw=0.4)
+        ax.bar(x + (i - 1.5) * w, v, w * 0.92, color=c, label=lab, hatch=h, edgecolor="white" if not h else S2M, lw=0.4)
+    for i, s in enumerate(SUBS):  # the oracle as a line over each group, as in the paper's Figure 2
+        ax.plot([x[i] - 2.1 * w, x[i] + 2.1 * w], [num("Oracle" + s)] * 2, color=ORC, lw=1.2, solid_capstyle="butt",
+                label="Oracle target" if i == 0 else None, zorder=3,
+                path_effects=[pe.Stroke(linewidth=2.6, foreground="white"), pe.Normal()])
     ax.set_xticks(x)
     ax.set_xticklabels(SUBS)
     ax.set_ylabel("Success (%)")
-    ax.set_ylim(0, 112)
+    ax.set_ylim(0, 100)
     ax.set_yticks([0, 25, 50, 75, 100])
     style(ax)
-    ax.legend(ncol=5, loc="upper center", bbox_to_anchor=(0.5, 1.13), frameon=False, handlelength=1.2, columnspacing=1.0)
-    fig.subplots_adjust(left=0.08, right=0.995, top=0.86, bottom=0.12)
+    ax.legend(ncol=5, loc="lower center", bbox_to_anchor=(0.5, 1.0), frameon=False, handlelength=1.2, columnspacing=1.0)
+    fig.subplots_adjust(left=0.08, right=0.995, top=0.88, bottom=0.12)
     save(fig, "th_subsets")
 
 
-# 2. single-view probe: recall on views with the target against boxes on views without it
+# 2. single-view probe: recall on views with the target against boxes on views without it (model identity: grey pair,
+#    since orange means S2M elsewhere)
 def probe():
     t = open(os.path.join(GEN, "supp_tab_probe.tex")).read()
     rows = {m.group(1): [float(v) for v in m.group(2).split("&")] for m in
             re.finditer(r"^(Qwen[\w.-]+) & ([\d. &]+)\\\\", t, re.M)}
-    fig, axes = plt.subplots(1, 2, figsize=(6.3, 2.3), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(6.3, 2.4), sharey=True)
     for ax, (title, sl) in zip(axes, (("Box on the visible target", slice(0, 4)), ("Box on a view without the target", slice(4, 8)))):
         x = np.arange(4)
-        for i, (m, c, h) in enumerate((("Qwen3-VL-4B", S2M, ""), ("Qwen2.5-VL-3B", RGBO, "////"))):
+        for i, (m, fc) in enumerate((("Qwen3-VL-4B", "#262626"), ("Qwen2.5-VL-3B", "white"))):
             v = rows[m][sl]
-            b = ax.bar(x + (i - 0.5) * 0.36, v, 0.33, color=c, label=m, hatch=h, edgecolor="white" if not h else S2M, lw=0.4)
+            ax.bar(x + (i - 0.5) * 0.36, v, 0.31, color=fc, label=m, edgecolor="#262626", lw=0.8)
             for xi, vi in zip(x + (i - 0.5) * 0.36, v):
-                ax.text(xi, vi + 1.5, f"{vi:.0f}", ha="center", va="bottom", fontsize=7, color=INK2)
+                ax.text(xi, vi + 1.5, f"{vi:.1f}", ha="center", va="bottom", fontsize=6.5, color=INK)
         ax.set_xticks(x)
         ax.set_xticklabels(SUBS[:4])
         ax.set_title(title, color=INK)
         ax.set_ylim(0, 95)
         style(ax)
+    axes[1].tick_params(labelleft=False, length=0, axis="y")
     axes[0].set_ylabel("Views (%)")
-    axes[1].legend(loc="upper left", frameon=False)
-    fig.subplots_adjust(left=0.08, right=0.995, top=0.88, bottom=0.12, wspace=0.06)
+    h, l = axes[0].get_legend_handles_labels()
+    fig.legend(h, l, ncol=2, loc="upper center", bbox_to_anchor=(0.5, 1.0), frameon=False)
+    fig.subplots_adjust(left=0.08, right=0.995, top=0.8, bottom=0.12, wspace=0.06)
     save(fig, "th_probe")
 
 
@@ -121,52 +134,62 @@ def outcomes():
     rows = [(m.group(1), [float(v) for v in m.group(2).split("&")]) for m in
             re.finditer(r"^([a-z ]+) & ([\d. &]+)\\\\", t, re.M)]
     agents = ["EB prompt\n(Qwen3)", "S2M\n(Qwen3)", "S2M, RGB\n(Qwen3)", "EB prompt\n(Qwen2.5)", "S2M\n(Qwen2.5)"]
-    cols = {"success": S2M, "never seen": "#7F7F7F", "lost after seen": "#2E75B6", "near miss": "#9DC3E6",
-            "blocked": "#404040", "oscillation": "#BFBFBF", "approach failure": "#DEEBF7"}
-    fig, ax = plt.subplots(figsize=(6.3, 2.7))
+    fig, ax = plt.subplots(figsize=(6.3, 2.8))
     left = np.zeros(len(agents))
     y = np.arange(len(agents))[::-1]
     for name, v in rows:
         v = np.array(v)
-        ax.barh(y, v, 0.62, left=left, color=cols[name], label=name, edgecolor="white", lw=0.8)
+        ax.barh(y, v, 0.62, left=left, color=OUT[name], label=name, edgecolor="white", lw=0.6)
         for yi, li, vi in zip(y, left, v):
-            if vi >= 18:
+            if vi >= 12:
                 ax.text(li + vi / 2, yi, f"{vi:.0f}", ha="center", va="center", fontsize=7,
-                        color="white" if name in ("success", "lost after seen", "blocked") else INK)
+                        color="white" if name in ("never seen", "near miss", "oscillation") else INK)
         left += v
     ax.set_yticks(y)
     ax.set_yticklabels(agents, fontsize=8)
     ax.set_xlim(0, 300)
-    ax.set_xticks([0, 50, 100, 150, 200, 250])
+    ax.set_xticks([0, 50, 100, 150, 200, 250, 300])
     ax.set_xlabel("Episodes (of 300)")
     style(ax, ygrid=False)
     ax.xaxis.grid(True, color=GRID, lw=0.6)
     ax.set_axisbelow(True)
-    ax.legend(ncol=4, loc="upper center", bbox_to_anchor=(0.45, 1.25), frameon=False, handlelength=1.0, columnspacing=0.9)
-    fig.subplots_adjust(left=0.15, right=0.97, top=0.80, bottom=0.16)
+    h, l = ax.get_legend_handles_labels()  # legend in stack order, read left to right
+    ax.legend(h, l, ncol=len(l), loc="lower center", bbox_to_anchor=(0.43, 1.0), frameon=False, handlelength=0.9,
+              columnspacing=0.7, handletextpad=0.3, fontsize=7.5)
+    fig.subplots_adjust(left=0.15, right=0.98, top=0.88, bottom=0.17)
     save(fig, "th_outcomes")
 
 
 # 4. ablation forest plot: paired difference from the full agent with 95% CI
 def forest():
-    items = [("w/o fusion", "Fusion"), ("w/o look-around", "Scan"), ("w/o exhaustion", "Exhaust"),
-             ("w/o neg. evidence", "Negative"), ("w/o tiled search", "Tiles"), ("w/o crop check", "Zoom"),
-             ("strongest first", "Strongest"), ("odometry noise", "Odom"), ("RGB only, global scale", "Rgbglobal"),
-             ("RGB only, floor scale", "Rgbfloor")]
-    fig, ax = plt.subplots(figsize=(6.3, 2.9))
-    y = np.arange(len(items))[::-1]
-    for yi, (lab, k) in zip(y, items):
-        m, lo, hi = num(f"Abl{k}"), num(f"Abl{k}Lo"), num(f"Abl{k}Hi")
-        sig = p_value(N[f"Abl{k}P"]) < 0.05
-        c = S2M if sig else INK2
-        ax.plot([lo, hi], [yi, yi], color=c, lw=1.6, solid_capstyle="round")
-        ax.plot([m], [yi], "o", color=c, ms=5, mec="white", mew=0.8)
-        ax.text(max(hi, 0) + 1.0, yi, f"{m:+.1f}" + (" *" if sig else ""), va="center", fontsize=7.5, color=c)
+    groups = [("Components removed", [("w/o fusion", "Fusion"), ("w/o look-around", "Scan"), ("w/o exhaustion", "Exhaust"),
+                                      ("w/o crop check", "Zoom")]),
+              ("Sensing changed", [("odometry noise", "Odom"), ("RGB only, global scale", "Rgbglobal"),
+                                   ("RGB only, floor scale", "Rgbfloor")])]
+    fig, ax = plt.subplots(figsize=(6.3, 3.2))
+    yi, ticks, labels = 0.0, [], []
+    for g, items in groups:
+        ax.text(-37.5, yi, g, fontsize=7.5, color=INK2, style="italic", va="center", ha="left")
+        yi -= 1.0
+        for lab, k in items:
+            m, lo, hi = num(f"Abl{k}"), num(f"Abl{k}Lo"), num(f"Abl{k}Hi")
+            sig = p_value(N[f"Abl{k}P"]) < 0.05
+            ax.plot([lo, hi], [yi, yi], color=INK, lw=1.4, solid_capstyle="round", zorder=2)
+            ax.plot([m], [yi], "o", ms=5.5, mfc=INK if sig else "white", mec=INK, mew=1.1, zorder=3,
+                    label=("Holm-corrected $p<0.05$" if sig else "not significant") if lab in ("w/o fusion", "w/o look-around") else None)
+            ax.text(hi + 0.8, yi, f"{m:+.1f}".replace("-", "\u2212"), va="center", fontsize=7.5, color=INK)
+            ticks.append(yi)
+            labels.append(lab)
+            yi -= 1.0
+        yi -= 0.3
     ax.axvline(0, color=INK2, lw=0.8)
-    ax.set_yticks(y)
-    ax.set_yticklabels([i[0] for i in items])
+    ax.set_yticks(ticks)
+    ax.set_yticklabels(labels)
+    ax.set_ylim(yi + 0.6, 0.6)
     ax.set_xlabel("Paired difference from the full agent (pp), 95% CI")
-    ax.set_xlim(-36, 14)
+    ax.set_xlim(-38, 8)
+    ax.xaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:.0f}".replace("-", "\u2212")))
+    ax.legend(loc="upper left", bbox_to_anchor=(0.0, 0.9), frameon=True, facecolor="white", edgecolor="none", framealpha=1, handletextpad=0.3, borderaxespad=0.2)
     style(ax, ygrid=False)
     ax.xaxis.grid(True, color=GRID, lw=0.6)
     ax.set_axisbelow(True)
@@ -176,7 +199,7 @@ def forest():
 
 # 5. one episode: camera frames with the VLM's box, and the evidence of every hypothesis over the steps
 def episode():
-    run = "s2m_Qwen3-VL-4B-Instruct-AWQ_final_r1"
+    run = "s2m_Qwen3-VL-4B-Instruct-AWQ_simp4_r1"
     ep = json.load(open(os.path.join(TEST, run, "long_horizon", "episode_42.json")))
     rep = os.path.join(ROOT, "paper", "figures", "scene_replay", "s2m_qwen3_r1_long_42")
     man = json.load(open(os.path.join(rep, "manifest.json")))
@@ -185,18 +208,26 @@ def episode():
     near = lambda x, z: np.hypot(x - t["x"], z - t["z"]) < 0.5
     log = {e["step"]: e for e in ep["perception_log"]}
     show = [0, 2, 7, 13]
-    fig = plt.figure(figsize=(6.3, 3.9))
-    gs = fig.add_gridspec(2, 4, height_ratios=[1.0, 1.05], hspace=0.5, wspace=0.05)
+    fig = plt.figure(figsize=(6.3, 3.8))
+    gs = fig.add_gridspec(2, 4, height_ratios=[1.0, 1.05], hspace=0.38, wspace=0.05)
     for i, s in enumerate(show):
         ax = fig.add_subplot(gs[0, i])
-        ax.imshow(Image.open(os.path.join(rep, frames[s])))
+        img = np.asarray(Image.open(os.path.join(rep, frames[s])).convert("RGB"))
         e = log[s]
+        cx = cy = 0
+        if e.get("box") is not None and e["box"][2] - e["box"][0] < 40:  # small box: 2.5x crop around it
+            b, side = e["box"], 200
+            cx = int(min(max((b[0] + b[2]) / 2 - side / 2, 0), img.shape[1] - side))
+            cy = int(min(max((b[1] + b[3]) / 2 - side / 2, 0), img.shape[0] - side))
+            img = img[cy:cy + side, cx:cx + side]
+        ax.imshow(img, interpolation="lanczos")
         if e.get("box") is not None:
-            x0, y0, x1, y1 = e["box"]
+            x0, y0, x1, y1 = e["box"][0] - cx, e["box"][1] - cy, e["box"][2] - cx, e["box"][3] - cy
             on = e["dets"] and near(*e["dets"][0][:2])
-            ax.add_patch(plt.Rectangle((x0, y0), x1 - x0, y1 - y0, fill=False, lw=1.4,
-                                       ec=S2M if on else "#2E75B6", ls="-" if on else (0, (3, 1.5))))
-        ax.set_title(f"step {s}", fontsize=8, color=INK)
+            ax.add_patch(plt.Rectangle((x0, y0), x1 - x0, y1 - y0, fill=False, lw=2.0,
+                                       ec=S2M if on else "white",
+                                       path_effects=[pe.Stroke(linewidth=3.6, foreground="white" if on else INK), pe.Normal()]))
+        ax.set_title(f"step {s}" + (" (2.5$\\times$ crop)" if cx or cy else ""), fontsize=8, color=INK)
         ax.set_xticks([])
         ax.set_yticks([])
         for sp in ax.spines.values():
@@ -212,21 +243,25 @@ def episode():
                 k = next((q for q in look if np.hypot(q[0] - hx, q[1] - hz) < 0.25), (hx, hz))
                 look.setdefault(k, []).append((e["step"], w))
     for j, tr in enumerate(look.values()):
-        ax.plot([a for a, _ in tr], [b for _, b in tr], "--s", color="#2E75B6", ms=3, lw=1.2,
-                label="look-alikes" if j == 0 else None)
+        ax.plot([a for a, _ in tr], [b for _, b in tr], "--s", color=EB, ms=3, lw=1.2,
+                label="look-alikes (two)" if j == 0 else None)
     ax.axhline(0.8, color=INK2, lw=0.8, ls=(0, (4, 2)))
-    ax.text(-0.2, 0.95, r"commit $\tau_c$", fontsize=7.5, color=INK2, ha="left", va="bottom")
+    ax.text(13.75, 0.8, r"commit $\tau_c$", fontsize=7.5, color=INK2, ha="left", va="center")
     ax.axhline(-1.0, color=INK2, lw=0.6, ls=":")
-    ax.text(-0.2, -0.92, "removal", fontsize=7.5, color=INK2, ha="left", va="bottom")
-    for s in show:
+    ax.text(13.75, -1.0, "removal", fontsize=7.5, color=INK2, ha="left", va="center")
+    for s in show:  # the steps of the frames above
         ax.axvline(s, color=GRID, lw=3, zorder=0)
     ax.set_xlim(-0.3, 13.6)
-    ax.set_ylim(-1.3, 8.4)
+    ax.set_ylim(-1.7, 8.4)
+    ax.set_xticks(range(0, 14))
+    for st, lab in zip(range(0, 14), ax.get_xticklabels()):
+        if st in show:
+            lab.set_fontweight("bold")
     ax.set_xlabel("Step")
     ax.set_ylabel("Evidence $w$")
     style(ax)
     ax.legend(loc="lower right", bbox_to_anchor=(1.0, 1.0), ncol=2, frameon=False, borderaxespad=0.1)
-    fig.subplots_adjust(left=0.09, right=0.995, top=0.95, bottom=0.11)
+    fig.subplots_adjust(left=0.09, right=0.88, top=0.95, bottom=0.11)
     save(fig, "th_episode")
 
 
@@ -236,27 +271,33 @@ def robothor():
                                                           "s2m_Qwen3-VL-4B-Instruct-AWQ_final", "*.json"))]
     ok = [r for r in R if not r.get("error")]
     stop = [r for r in ok if r["modes"].endswith("S")]
-    parts = [("success (Stop at the target)", sum(r["success"] >= 1 for r in stop), S2M),
-             ("Stop away from the target", sum(r["success"] < 1 for r in stop), "#2E75B6"),
-             ("step limit (500)", sum(r["steps"] >= 500 for r in ok), "#BFBFBF"),
-             ("start pose rejected", len(R) - len(ok), "#404040")]
+    parts = [("success: Stop at the target", sum(r["success"] >= 1 for r in stop), OUT["success"], ""),
+             ("failure: Stop away from the target", sum(r["success"] < 1 for r in stop), "#595959", ""),
+             ("failure: step limit (500)", sum(r["steps"] >= 500 for r in ok), "white", "////"),
+             ("start pose rejected by the simulator", len(R) - len(ok), "white", "")]
     fig, ax = plt.subplots(figsize=(6.3, 1.9))
     left = 0
-    for lab, v, c in parts:
-        ax.barh([0], [v], 0.55, left=left, color=c, edgecolor="white", lw=1.0, label=f"{lab}: {v}")
+    for lab, v, c, h in parts:
+        ax.barh([0], [v], 0.55, left=left, color=c, hatch=h, edgecolor="#595959" if c == "white" else "white", lw=0.7,
+                label=lab)
         if v > 60:
-            ax.text(left + v / 2, 0, f"{v}", ha="center", va="center", fontsize=8, color="white" if c != "#BFBFBF" else INK)
+            ax.text(left + v / 2, 0, f"{v}", ha="center", va="center", fontsize=8, color="white" if c == "#595959" else INK,
+                    bbox=dict(boxstyle="square,pad=0.3", fc="white", ec="none") if h else None)
+        else:  # a sliver: its count beside the bar end
+            ax.annotate(f"{v}", (left + v / 2, 0.3), (left + v / 2, 0.52), ha="center", va="bottom", fontsize=8, color=INK,
+                        arrowprops=dict(arrowstyle="-", color=INK2, lw=0.6))
         left += v
     ax.set_xlim(0, len(R))
-    ax.set_xticks([0, 300, 600, 900, 1200, 1500])
-    ax.set_ylim(-0.4, 0.4)
+    ax.set_xticks([0, 300, 600, 900, 1200, 1500, len(R)])
+    ax.set_ylim(-0.4, 0.75)
     ax.set_yticks([])
     ax.set_xlabel(f"RoboTHOR validation episodes (of {len(R)})")
     style(ax, ygrid=False)
     ax.spines["left"].set_visible(False)
-    fig.legend(*ax.get_legend_handles_labels(), ncol=2, loc="upper center", bbox_to_anchor=(0.5, 0.99),
-               frameon=False, handlelength=1.0)
-    fig.subplots_adjust(left=0.02, right=0.97, top=0.62, bottom=0.27)
+    h, l = ax.get_legend_handles_labels()  # row-wise in bar order
+    fig.legend([h[0], h[2], h[1], h[3]], [l[0], l[2], l[1], l[3]], ncol=2, loc="upper center", bbox_to_anchor=(0.5, 0.99),
+               frameon=False, handlelength=1.4)
+    fig.subplots_adjust(left=0.02, right=0.97, top=0.72, bottom=0.27)
     save(fig, "th_robothor_outcomes")
     fs = [r for r in stop if r["success"] < 1]
     lim = [r for r in ok if r["steps"] >= 500]

@@ -11,8 +11,7 @@ text.
 The thesis therefore proposes the Semantic-to-Metric (\ours) agent, which uses the VLM as a sensor rather than a
 planner. \ours asks the model only what the current image can answer, whether the target is
 visible and where, and keeps all state in metric form. A hypothesis memory lifts each answer with depth and pose,
-accumulates evidence across distinct viewpoints, and withdraws it when a hypothesis should be visible but is not
-detected; a search policy and an occupancy-map planner compute every move.
+accumulates evidence across distinct viewpoints, and discards a candidate once reaching it does not end the task; a search policy and an occupancy-map planner compute every move.
 
 Without training and with the model at 4-bit on one 8\,GB GPU, \ours succeeds in \nSThree\% of the EB-Navigation
 test episodes, \nGainThree{} percentage points more than the benchmark's agent and \nSOverMod{} more than a generic

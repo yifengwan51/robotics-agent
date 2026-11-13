@@ -28,14 +28,12 @@ Lifting & depth window (fraction of the box) & 0.5\\
 Memory & association radius $r$ & 0.5\,m\\
  & repeated-view discount $\gamma$ & 0.25\\
  & same view: position, heading & 0.2\,m, equal\\
- & negative evidence $\lambda$ & 0.4\\
- & image margin, occlusion tolerance & 20\,px, 0.3\,m\\
- & removal threshold & $w_k\le-1$\\
+ & RoboTHOR only: negative evidence, range & 0.4, 3\,m\\
 Search & commit $\tau_c$ / keep $\tau_k$ & 0.8 / 0.4\\
  & approach a weak hypothesis & $w_k\ge0.35$\\
  & exhaustion radius & 0.9\,m\\
  & exploration goal distance & 0.75--3\,m\\
- & tiles, overlap, boxes checked & $3{\times}3$, 20\%, 4\\
+ & RoboTHOR only: tiles, boxes checked & $3{\times}3$, 4\\
 Planning & cost of an unobserved edge point & 0.15\\
  & obstacle inflation (fallback) & 0.20 (0.10)\,m\\
  & goal tolerance & 0.55\,m\\

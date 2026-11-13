@@ -95,11 +95,11 @@ and never turn toward a target behind them.
 This diagnosis points to a different division of labor: a small VLM is a good semantic sensor and a poor state
 keeper. The thesis therefore builds the agent around the model rather than inside it (\cref{fig:arch}). The
 Semantic-to-Metric (\ours) agent has three parts. \emph{Perception} asks the VLM two questions per frame, whether the
-target is visible and where it is in the image, and spends a magnified crop or a tiled view only when the answer is
-weak. \emph{Memory} lifts each answer with depth and pose into a metric target hypothesis, accumulates evidence only
-from distinct viewpoints, and withdraws it when a hypothesis should be visible but is not detected. \emph{Action}
-commits to a confident hypothesis and otherwise searches in the order of an optimal-search index, while an
-occupancy-map planner computes every move. Each part removes one diagnosed failure: the memory keeps a seen target,
+target is visible and where it is in the image, and checks a magnified crop only when the answer is weak.
+\emph{Memory} lifts each answer with depth and pose into a metric target hypothesis, accumulates evidence only from
+distinct viewpoints, and discards a hypothesis that reaching it shows to be a look-alike. \emph{Action} commits to a
+confident hypothesis, inspects a weak one in view, and otherwise looks around and explores, while an occupancy-map
+planner computes every move. Each part removes one diagnosed failure: the memory keeps a seen target,
 the map prevents collisions, and the look-around finds a target behind the agent. The model never plans and never
 sees the history.
 
@@ -130,7 +130,7 @@ recognize the target or plan a path. The diagnosis yields four predictions, all 
 \item \textbf{The VLM as a sensor, not a planner.} \ours inverts the control of MLLM agents: a metric controller asks
 the VLM only questions that the current image can settle, and the VLM never sees the history, the map, or the plan.
 \item \textbf{Evidence fusion for a generative sensor.} A metric hypothesis memory accumulates the model's presence
-and box answers over distinct viewpoints and withdraws them under negative evidence, which turns unreliable single
+and box answers over distinct viewpoints and discards look-alikes on arrival, which turns unreliable single
 answers into a stable target. A generic modular agent that acts on single-view answers with the same model and the
 same planner trails \ours by \nSOverMod{} percentage points.
 \item \textbf{Navigation from RGB alone.} A per-frame ground-plane scale for monocular depth raises RGB-only success

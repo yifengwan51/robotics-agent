@@ -16,8 +16,8 @@ be checked against the image alone.
 \item \textbf{Keep the state in metric form.} Where the target may be, which space is free, and which directions have
 been looked at are stored as positions, evidence values, and grid cells, and are updated by explicit rules.
 \item \textbf{Treat answers as evidence.} Because single answers are unreliable (\cref{sec:diag-probe}), no single
-box decides the target. Evidence accumulates over distinct viewpoints and is withdrawn when an expected detection
-does not appear.
+box decides the target. Evidence accumulates over distinct viewpoints, and a candidate that reaching it shows to be
+a look-alike is discarded.
 \end{enumerate}
 \Cref{tab:design-map} maps each part of \ours to the failure mode of \cref{sec:diag-state} that it addresses.
 
@@ -32,7 +32,7 @@ Part & Section & Failure mode addressed\\
 Hypothesis memory with fusion & \cref{sec:method-memory} & lost after seen; acting on false boxes\\
 Occupancy map and A* planner & \cref{sec:method-planning} & blocked by collisions\\
 Look-around and exploration & \cref{sec:method-search} & target never seen (Long)\\
-Crop check and tiled search & \cref{sec:method-questions} & weak or missed detections\\
+Crop check & \cref{sec:method-questions} & weak detections\\
 Exhaustion on arrival & \cref{sec:method-commit} & committing to a look-alike\\
 \bottomrule
 \end{tabular*}
@@ -47,11 +47,10 @@ occupancy map $M_t$. \Cref{fig:mech} shows one step as a flowchart, and \cref{al
 \centering
 \includegraphics[width=\linewidth]{figures/fig_mech.pdf}
 \caption[One step of \ours]{One step of \ours. The frozen VLM $f$ gives the presence $\pi_t$ and box $b_t$ of the
-phrase $s$ on the frame $I_t$; a weak answer is checked on a crop or on tiles, which sets its weight $a_t$. The box is
+phrase $s$ on the frame $I_t$; a weak answer is checked on a magnified crop, which sets its weight $a_t$. The box is
 lifted to a floor point $q_t$ with depth $D_t$ and pose $p_t$ and fused into a hypothesis $\mu_k$ within $r$, or
-starts one; $\gamma_t<1$ discounts a repeated view, and a hypothesis that should be seen but is not loses $\lambda$ of
-its evidence $w_k$. Above $\tau_c$ a hypothesis is committed, and the agent goes to $\mu_{k^\star}$; A* on the map
-$M_t$ gives the action $u_t$.}
+starts one; $\gamma_t<1$ discounts a repeated view, and a hypothesis reached without ending the task is exhausted.
+Above $\tau_c$ a hypothesis $\mu_k$ with evidence $w_k$ is committed; A* on the map $M_t$ gives the action $u_t$.}
 \label{fig:mech}
 \end{figure}
 
@@ -66,18 +65,15 @@ $(\pi_t,b_t)\leftarrow$ presence and box queries of $f$ on $(I_t,s)$, in paralle
   $a_t\leftarrow$ observation weight (\cref{eq:weight}), with a crop check if the answer is weak\;
   $q_t\leftarrow$ lift $b_t$ with $D_t$ and $p_t$ (\cref{eq:lift})\;
 }
-\If{no observation has $a_t\ge0.5$ and no hypothesis is committed}{
-  add the crop-checked boxes of a $3{\times}3$ tiled search\;
-}
 \ForEach{observation $(q_t,a_t)$}{
   fuse into the first $\mu_k$ within $r$ (\cref{eq:fuse}), else create a new hypothesis $(q_t,a_t)$\;
 }
-lower every visible, undetected hypothesis by $\lambda$ (\cref{eq:neg}); remove those with $w_k\le-1$\;
 \uIf{some hypothesis is committed ($w_k\ge\tau_c$, kept while $w_k\ge\tau_k$)}{
-  $k^\star\leftarrow$ the committed hypothesis with the largest search index (\cref{eq:index})\;
+  $k^\star\leftarrow$ the committed hypothesis with the largest evidence\;
   \lIf{the agent is within 0.9\,m of $\mu_{k^\star}$}{mark $k^\star$ exhausted and select again}
   \Return{the first action of A* from $p_t$ to $\mu_{k^\star}$ on $M$}\;
 }
+\uElseIf{the strongest hypothesis has $w_k\ge0.35$ and is detected in $I_t$}{\Return{the first action of A* toward it}\;}
 \uElseIf{the 360$^\circ$ look-around is incomplete}{\Return{a turn toward an unseen heading}\;}
 \uElseIf{the strongest hypothesis has $w_k\ge0.35$}{\Return{the first action of A* toward it}\;}
 \Else{\Return{the first action of A* toward the free cell 0.75--3\,m away that is farthest from all visited positions}\;}
@@ -132,13 +128,6 @@ times the box's longer side, resized to 448\,px and queried with the presence qu
 presence and box disagree or when the goal is appearance-only, so its extra cost is paid only where the evidence is
 weak. A rejected crop does not delete the box; it enters with a small weight that later views can confirm or refute.
 
-\subsection{Magnified search}
-\label{sec:method-tiles}
-Small or distant targets are often missed in the full frame. When a view yields no observation with $a_t\ge0.5$ and
-no hypothesis is committed, the frame is split into $3{\times}3$ tiles with 20\% overlap, each upsampled to 448\,px and
-queried for a box in parallel. Up to four distinct tile boxes are crop-checked, and those with $\pi^z\ge0.5$ enter the
-memory. The tiled search runs at most once per view and spends VLM calls rather than environment steps.
-
 \section{Metric hypothesis memory}
 \label{sec:method-memory}
 \subsection{Association and fusion}
@@ -157,21 +146,6 @@ model sees nearly the same image and tends to repeat itself, including its error
 with the number of distinct viewpoints rather than with the number of frames, so a look-alike that the model boxes
 repeatedly from one place cannot accumulate the evidence of a target confirmed from several places.
 
-\subsection{Negative evidence}
-\label{sec:method-neg}
-A hypothesis that the current frame should show but that receives no detection loses evidence:
-\begin{equation}
-\begin{gathered}
-w_k\leftarrow w_k-\lambda\,\mathbb{1}\big[\mathrm{vis}_t(\mu_k)\big],\\
-\mathrm{vis}_t(\mu)\Leftrightarrow \bar u\in\Omega,\ \ d\le6\,\text{m},\ \ D_t(\bar u)+0.3\ge d,
-\end{gathered}
-\label{eq:neg}
-\end{equation}
-for every hypothesis without a detection within $r$, where $(\bar u,d)=\Pi_{p_t}(\mu)$ are its projected pixel and
-planar depth, $\Omega$ is the image shrunk by 20\,px, and $\lambda=0.4$. The last condition rules out occlusion: a
-hypothesis behind a nearer surface is not expected to be seen. Hypotheses with $w_k\le-1$ are removed. Absence
-outside the view is never counted, so turning away from a hypothesis does not erase it.
-
 \subsection{Commitment, hysteresis, and exhaustion}
 \label{sec:method-commit}
 The agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while $w_k\ge\tau_k=0.4$. The hysteresis
@@ -183,22 +157,18 @@ of creating a new target.
 \section{Search and control}
 \label{sec:method-control}
 \subsection{Selection among committed hypotheses}
-Among the committed hypotheses $\mathcal{C}_t$ the agent visits
-\begin{equation}
-k^\star=\arg\max_{k\in\mathcal{C}_t}\ \frac{1-e^{-w_k}}{c_k+1},\qquad c_k=\frac{\lVert\mu_k-x_t\rVert}{0.25\,\text{m}} .
-\label{eq:index}
-\end{equation}
-The numerator maps the evidence to the probability of at least one detection under a Poisson model with mean $w_k$,
-and the denominator counts the steps to reach and check $\mu_k$. For locations with fixed inspection costs,
-inspecting in decreasing order of this probability-to-cost ratio is optimal~\cite{kadane1977optimal}; \ours applies
-the rule greedily and recomputes the cost from the current position at every step. The index reduces to nearest-first
-for equal evidence and to strongest-first for equal cost.
+Among the committed hypotheses the agent heads for the one with the largest evidence. The search index of optimal
+sequential search~\cite{kadane1977optimal}, which divides a detection probability by the cost to reach a candidate,
+changed success by less than one percentage point on the development split and is not used.
 
 \subsection{Search without a committed target}
 \label{sec:method-search}
-With nothing committed, the agent first completes a 360$^\circ$ look-around by turning toward headings it has not yet
-observed. It then approaches the strongest hypothesis if $w_k\ge0.35$, so that a weak detection can be confirmed or
-refuted from closer. Otherwise it explores: it moves to the observed free cell 0.75--3\,m away that is farthest from
+With nothing committed, the agent first looks at what is in front of it: if the strongest hypothesis has
+$w_k\ge0.35$ and is detected in the current frame, the agent approaches it, so that a weak detection can be confirmed
+or refuted from closer. Otherwise it completes a 360$^\circ$ look-around by turning toward headings it has not yet
+observed, so that a target behind it enters the view, and then approaches the strongest hypothesis if $w_k\ge0.35$.
+Turning away from a weak target in view lets a look-alike behind the agent compete with it; inspecting first avoids
+this. Otherwise it explores: it moves to the observed free cell 0.75--3\,m away that is farthest from
 all positions it has visited, and repeats the look-around on arrival while enough steps remain. This rule is a
 simple form of frontier exploration~\cite{yamauchi1997frontier} that never queries the model.
 
@@ -222,15 +192,14 @@ that the 0.25\,m action grid cannot plan.
 \label{sec:method-example}
 \Cref{tab:trace} follows the memory of \ours through the Long-horizon test episode of \cref{fig:arch}, in which
 the target is an alarm clock behind the agent. In the first two steps the agent turns and sees nothing ($\pi_t\approx0$).
-At step 2 the alarm clock enters the view; the box is lifted and creates a hypothesis whose evidence $0.82$ already
-exceeds $\tau_c$, so the agent commits and starts to approach. The evidence then grows with each new viewpoint. At
-steps 5 and 8 the full-frame presence answer is low although a box is returned, the crop check confirms the target,
-and the evidence increases by the crop's presence. At step 7 the model boxes a look-alike instead, the target is in view
-but not detected, and negative evidence lowers the target by $\lambda=0.4$; the hysteresis keeps the commitment. At
-step 9 the crop check rejects the box, so the step adds no evidence. Two look-alikes appear briefly with weights
-below 0.1; each loses $\lambda$ at every following view in which it is visible but not detected, and neither ever
-comes close to commitment. The episode ends successfully at step
-\tTraceSteps{} with the target hypothesis at $w=\tTraceFinalW$.
+At step 2 the alarm clock enters the view; the box is lifted and creates a hypothesis with evidence $0.78$, just
+below $\tau_c$. The hypothesis is in view, so the agent walks toward it instead of turning away, and the next view
+commits it. The evidence then grows with each new viewpoint. At steps 5 and 8 the full-frame presence answer is low
+although a box is returned, the crop check confirms the target, and the evidence increases by the crop's presence. At
+step 7 the model boxes a look-alike instead; the crop check gives it a weight of 0.06, and the commitment to the
+target is unaffected. At step 9 the crop check rejects the box, so the step adds no evidence. At step 11 a second
+look-alike reaches 0.95, but the agent keeps its committed target, whose evidence is above $\tau_k$ and far larger.
+The episode ends successfully at step \tTraceSteps{} with the target hypothesis at $w=\tTraceFinalW$.
 
 \begin{table}[htbp]
 \centering\small
@@ -242,9 +211,9 @@ evidence after the step; Action: the action taken. Bold: the target hypothesis i
 \input{chapters/generated/tab_trace}
 \end{table}
 
-The example shows the three mechanisms of the memory at work. Fusion turns a sequence of individually uncertain
-answers into a hypothesis with high evidence. Negative evidence removes the look-alikes without ever committing to
-them. Hysteresis keeps the agent on its target through one missed detection.
+The example shows the mechanisms of the memory at work. Fusion turns a sequence of individually uncertain answers
+into a hypothesis with high evidence. The crop check keeps a weak box on a look-alike from adding much evidence, and
+hysteresis keeps the agent on its target when another candidate appears.
 
 \section{Choice of parameters}
 \label{sec:method-params}
@@ -252,10 +221,9 @@ The parameters of \ours (\cref{tab:s-params}) follow from the geometry of the ta
 split. The association radius $r=0.5$\,m is half the success radius, so two detections of one object fall into one
 hypothesis while two objects on different pieces of furniture stay apart. The commit threshold $\tau_c=0.8$ is
 reached by one confident answer from a named target ($\pi_t\ge0.8$) or by two moderate answers from different
-viewpoints, and the keep threshold $\tau_k=0.4$ tolerates one missed detection, since one negative update subtracts
-$\lambda=0.4$. The repeated-view discount $\gamma=0.25$ allows four looks from the same place to add as much as one
-look from a new place. The removal threshold $w_k\le-1$ requires several unexplained misses before a hypothesis is
-forgotten, so a target that was briefly occluded survives.
+viewpoints, and the keep threshold $\tau_k=0.4$ keeps a committed target unless its evidence was low to begin with.
+The repeated-view discount $\gamma=0.25$ allows four looks from the same place to add as much as one look from a new
+place.
 
 \section{Operating without a depth sensor}
 \label{sec:method-rgb}
@@ -287,20 +255,34 @@ access to the simulator's depth or pose.
 \label{sec:method-stop}
 EB-Navigation ends an episode on success, whereas RoboTHOR requires a Stop action. There the agent stops only when it
 is within 0.9\,m of a committed hypothesis, has turned within 20$^\circ$ of it and tilted it into view, and a fresh
-presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps,
-negative evidence counts only within 3\,m and once per view, and exploration goes to the nearest frontier. These are
-the only changes between the two benchmarks.
+presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps
+and a stop is final, the RoboTHOR agent, frozen before the EB-Navigation agent was simplified
+(\cref{sec:method-simplify}), also lowers by 0.4 the evidence of a hypothesis that a frame within 3\,m shows but
+does not detect, searches $3{\times}3$ magnified tiles when a view yields nothing, and explores toward the nearest
+frontier.
 
 \section{Information access and implementation}
 \label{sec:method-impl}
-The VLM sees the current image, a crop or tile of it, and $s$; the controller sees depth, pose, and action success,
+The VLM sees the current image, a crop of it, and $s$; the controller sees depth, pose, and action success,
 but never the target position or any simulator metadata. \ours is implemented in Python on top of the benchmark's
-environment; the VLM queries are sent to a local vLLM server, and the presence and box queries of a step, as well as
-the queries of the tiles, run in parallel. All parameters are listed in \cref{tab:s-params} and were fixed on the
+environment; the VLM queries are sent to a local vLLM server, and the presence and box queries of a step run in parallel. All parameters are listed in \cref{tab:s-params} and were fixed on the
 development split.
+
+\section{How the agent was simplified}
+\label{sec:method-simplify}
+An earlier version of \ours had three further parts: negative evidence, which lowered a hypothesis that the frame
+should show but did not detect; a magnified $3{\times}3$ tiled search when a view yielded nothing; and the search index
+above. In its test ablations none of the three changed success significantly, and the look-around helped Long while
+costing the other subsets as much. An analysis of the failures showed why: the look-around turned the agent away from a
+weak target in view toward a look-alike behind it, negative evidence also penalised the true target when the single
+box of a frame went to another object, and most tile hits fell on look-alikes. On a development set of 450 episodes
+in the 30 iTHOR rooms that the test set does not use, inspecting a weak target in view before looking around raised
+success, and removing the three parts left it unchanged. Before the test runs, a rule fixed in advance required each
+remaining part to lower development success significantly when removed (paired McNemar test, Holm-corrected); all four
+did. The configuration was then frozen and run once on the test set (\cref{chap:experiments}).
 
 \section{Summary}
 \ours replaces the model's role, not the model. The VLM answers two questions per frame, and a metric memory, a
 search rule, and a planner turn these answers into actions. The memory is built for a generative sensor whose single
-answers are unreliable: evidence grows only with distinct viewpoints and is withdrawn when an expected detection does
-not appear. The next chapter tests whether this design removes the failures diagnosed in \cref{chap:diagnosis}.
+answers are unreliable: evidence grows only with distinct viewpoints, and a candidate that reaching it shows to be a
+look-alike is discarded. The next chapter tests whether this design removes the failures diagnosed in \cref{chap:diagnosis}.

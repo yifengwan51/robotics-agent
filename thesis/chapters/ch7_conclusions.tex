@@ -57,7 +57,8 @@ follows geometric rules and does not use semantic priors about where objects ten
 scenes. The components designed for competing candidates showed no significant effect in single rooms and remain
 untested at a larger scale.
 
-\noindent\textbf{Recognition.} Visual is the only subset on which \ours does not exceed the benchmark's agent. When the
+\noindent\textbf{Recognition.} Visual is the only subset on which the gain over the benchmark's agent is not
+significant. When the
 instruction describes only appearance, the small model rarely proposes the target, and no memory can recover a target
 that is never detected (\cref{sec:exp-gap}).
 
@@ -72,8 +73,7 @@ GPU, which makes on-board deployment on a mobile or legged robot the most direct
 \noindent\textbf{Semantic exploration.} The VLM could also answer questions that the current image can settle about
 where to search, for example which visible doorway leads toward a kitchen, without being asked to plan.
 
-\noindent\textbf{Larger scenes and other tasks.} Multi-room benchmarks would test the memory and the search index at
-a larger scale, and controllers for multi-step tasks, such as finding an object and then a receptacle, would test how
+\noindent\textbf{Larger scenes and other tasks.} Multi-room benchmarks would test the memory and exhaustion at a larger scale, and controllers for multi-step tasks, such as finding an object and then a receptacle, would test how
 far the division of labor between a semantic sensor and a metric controller extends.
 
 \noindent\textbf{Appearance-only goals.} Comparing several candidates within one image, rather than judging each

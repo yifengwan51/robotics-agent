@@ -143,11 +143,8 @@ robots ask for help or explore until confident~\cite{ren2023robots,liang2024intr
 These methods share one insight with \ours: a model's answer is more useful when the agent knows how much to
 trust it. They differ in where the trust comes from. Sampling and verification spend more model calls on the same
 decision; calibrated uncertainty asks the model how sure it is. \ours obtains trust from geometry: an answer gains
-weight when the same location is confirmed from a different viewpoint and loses weight when the location is in view
-but the model does not detect it. It spends extra queries, a magnified crop or a tiled view, only where the evidence
-is weak. To choose among
-candidate targets it uses the probability-to-cost index of optimal sequential search~\cite{kadane1977optimal}, which
-orders inspections by the probability of finding the target divided by the cost of checking.
+weight when the same location is confirmed from a different viewpoint, and a candidate is ruled out once the agent
+reaches it without ending the task. It spends an extra query, a magnified crop, only where the evidence is weak.
 
 \section{Geometry from images}
 \label{sec:lit-geometry}

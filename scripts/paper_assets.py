@@ -300,7 +300,7 @@ def main():
             macro(name + sn, 100 * np.mean([O[b][k] - O[a][k] for k in ks if k[0] == s]), "{:+.1f}")
     # ---------------- model size (Qwen3-VL-2B) and parameter sensitivity, written only when the runs are complete --
     Q2 = "Qwen3-VL-2B-Instruct"
-    two = {"eb2": [f"eb_{Q2}-FP8_eb_official_r1"], "s2m2": [f"s2m_{Q2}-AWQ_simp4_r1"]}
+    two = {"eb2": [f"eb_{Q2}-FP8_eb_bounded_r1"], "s2m2": [f"s2m_{Q2}-AWQ_simp4_r1"]}  # bounded schema: DEV gate 2026-11-24
     HAVE2B = all(exists(v) for v in two.values())
     macro("HaveTwoB", "1" if HAVE2B else "0", "{}")
     if HAVE2B:

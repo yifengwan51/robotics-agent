@@ -364,3 +364,7 @@ unterminated string inside a reasoning field, 0 with finish=length; replies aver
 These are the Qwen2.5-VL-3B repetition loops again. Rule fixed before any 2B EB TEST result (queues/qwen3_2b_eb_dev.txt):
 DEV 150 episodes, official vs length-bounded schema; TEST runs once with the higher-DEV config, ties within 3 pp to
 the official one. The partial TEST episodes are not used for the decision.
+DEV gate result (2026-11-24, 150 DEV episodes each): official schema 20.0 (26.7/23.3/20.0/16.7/13.3), 827 of 1,683
+replies unparseable; length-bounded schema 34.7 (43.3/30.0/46.7/43.3/10.0), 0 of 1,430; 31 vs 9 discordant, McNemar
+p = 6.8e-4. Per the rule the TEST baseline runs once with the bounded schema (`eb_Qwen3-VL-2B-Instruct-FP8_eb_bounded_r1`,
+queues/qwen3_2b_eb_test.txt), after the 2B RGB-only S2M run.

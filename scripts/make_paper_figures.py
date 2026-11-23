@@ -146,10 +146,11 @@ def teaser():
         i = len(subsets) - 1
         for (key, c, _), o in zip(series, off):  # values of the average, above the CI whisker of each bar
             v, hi = b[key][i], DATA["bars_ci"][key][i][1]
-            ax.text(x[i] + o, hi + 1.5, f"{v:.1f}", rotation=90, ha="center", va="bottom", fontsize=6.6 * K, zorder=4,
+            top = max(hi, b["oracle"][i] + 1.0) if hi > b["oracle"][i] - 12 else hi
+            ax.text(x[i] + o, top + 1.5, f"{v:.1f}", rotation=90, ha="center", va="bottom", fontsize=6.6 * K, zorder=4,
                     color=INK)
         ax.axvspan(x[-1] - 0.55, x[-1] + 0.55, color="#F5F5F4", zorder=0, lw=0)
-        ax.set_ylim(0, 112)
+        ax.set_ylim(0, 118)
         ax.set_yticks([0, 25, 50, 75, 100])
         style(ax)
         ax.set_title(title, loc="left", color=INK, pad=3, fontsize=7.4 * K)
@@ -243,7 +244,7 @@ def analysis():
         ax.legend(loc="center left", bbox_to_anchor=(1.04, 0.5), ncol=1, frameon=False, handlelength=1.6,
                   handletextpad=0.4, labelspacing=0.4, fontsize=6.4 * K)
     else:
-        fit_legend(fig, ax, ["upper left", "lower right", ("lower right", {"borderaxespad": 0.0}),
+        fit_legend(fig, ax, ["upper left", ("upper left", {"fontsize": 6.4 * K * 0.9}), "lower right", ("lower right", {"borderaxespad": 0.0}),
                              ("center right", {"bbox_to_anchor": (1.0, 0.3)}), ("lower right", {"fontsize": 6.4 * K * 0.85}),
                              ("center left", {"bbox_to_anchor": (0.0, 0.62), "fontsize": 6.4 * K * 0.9})],
                    headroom=(1.0,), ncol=1, frameon=False,
@@ -326,8 +327,8 @@ def robothor_cats():
     fig, ax = plt.subplots(figsize=(3.35, 2.05))
     y = list(np.arange(len(cats))) + [len(cats) + 0.35]  # the pooled row sits apart, on top
     sr, spl, names = sr + [sr_all], spl + [spl_all], names + ["all"]
-    ax.barh(y, sr, 0.78, color="#F4B183", zorder=2, lw=0)
-    ax.barh(y, spl, 0.38, color=S2M, zorder=3, lw=0)
+    ax.barh(y, sr, 0.78, color=S2M, zorder=2, lw=0)
+    ax.barh(y, spl, 0.38, color="#404040", zorder=3, lw=0)
     for yy, a, p in zip(y, sr, spl):
         ax.text(a + 1.2, yy, f"{a:.0f} / {p:.0f}" if yy < len(cats) else f"{a:.1f} / {p:.1f}", va="center",
                 ha="left", fontsize=6.3 * K, color=INK, zorder=5,
@@ -342,7 +343,7 @@ def robothor_cats():
     ax.set_xlabel("RoboTHOR validation (%)")
     style(ax, grid="x")
     from matplotlib.patches import Patch
-    ax.legend([Patch(color="#F4B183", lw=0), Patch(color=S2M, lw=0)], ["SR (first value)", "SPL (second value)"],
+    ax.legend([Patch(color=S2M, lw=0), Patch(color="#404040", lw=0)], ["SR (first value)", "SPL (second value)"],
               loc="lower right", frameon=False, handlelength=1.0, borderaxespad=0.1, fontsize=6.4 * K)
     fig.subplots_adjust(left=0.2, right=0.975, top=0.99, bottom=0.16)
     check(fig, "robothor_cats")

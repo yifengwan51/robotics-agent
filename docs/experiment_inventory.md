@@ -353,3 +353,14 @@ p=0.04, mostly Visual (+15.0) and Long (+13.3). S2M (4-bit, 4 runs) - EB FP8: +2
 +22.9/+19.2/+23.3/-0.4/+57.1 -> S2M does not beat the 8-bit EB prompt on Visual (p=1.00); the paper says so. RGB-only:
 +21.5; RGB global scale: -2.0 (p=0.65). Qwen2.5: S2M 70.0 vs EB FP8 20.3 (+49.7). Paper rebuilt with
 scripts/build_paper.sh: 8-page body, all 21 claim checks pass, trajectory panels = first matching episode per subset.
+
+### Qwen3-VL-2B (2026-11-23)
+
+S2M TEST `s2m_Qwen3-VL-2B-Instruct-AWQ_simp4_r1` (frozen simp4 agent, cyankiwi AWQ-4bit, int4 group 32, the same
+recipe as the 4B AWQ): 77.0 (86.7/76.7/81.7/60.0/80.0); against S2M 4B (3-run mean 79.2): -2.2 [-7.1, +2.7].
+EB prompt, official schema, Qwen3-VL-2B FP8 (`--workers 2`, GPU 0.62; at 0.80 the THOR renderer died on start):
+stopped at 72/300 TEST episodes, moved to runs/discarded/. On its first 34 episodes 156 of 341 replies (46%) end in an
+unterminated string inside a reasoning field, 0 with finish=length; replies average 2,033 completion tokens (4B: 297).
+These are the Qwen2.5-VL-3B repetition loops again. Rule fixed before any 2B EB TEST result (queues/qwen3_2b_eb_dev.txt):
+DEV 150 episodes, official vs length-bounded schema; TEST runs once with the higher-DEV config, ties within 3 pp to
+the official one. The partial TEST episodes are not used for the decision.

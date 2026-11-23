@@ -1,0 +1,5 @@
+# Pre-registered 2026-11-23: S2M RGB-only (monocular depth with the per-frame floor scale, pose from the executed
+# actions) with Qwen3-VL-2B at 4-bit, the frozen simplified agent unchanged, one run on the full EB-Navigation TEST set.
+# Reported whatever it scores; it is the 2B counterpart of the RGB-only row used for comparisons with published agents.
+models/Qwen3-VL-2B-Instruct-AWQ | 2048 | 0.62 | bash scripts/depth_server.sh DA2-Metric-Indoor-Base && DEPTH_CALIB=data/depth_calib_da2_base.json ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --workers 2 --model Qwen3-VL-2B-Instruct-AWQ --exp simp4_rgbonly_r1 --repeat 1 --retry-errors --depth est_floor --odom actions --s2m '{"scan_mode": "gated", "use_negative": false, "use_tiles": false, "nearest_first": false}'
+none | 0 | 0 | bash scripts/depth_server.sh stop

@@ -5,4 +5,4 @@
 models/Qwen3-VL-2B-Instruct-AWQ | 2048 | 0.62 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --workers 2 --model Qwen3-VL-2B-Instruct-AWQ --exp simp4_r1 --repeat 1 --retry-errors --s2m '{"scan_mode": "gated", "use_negative": false, "use_tiles": false, "nearest_first": false}'
 # EB prompt: the benchmark's agent with Qwen's official FP8 checkpoint, as for the 4B baseline (same prompt, schema,
 # decoding at temperature 0 and 8192-token window; two workers, which does not change any episode).
-models/Qwen3-VL-2B-Instruct-FP8 | 8192 | 0.80 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-2B-Instruct-FP8 --exp eb_official_r1 --workers 2 --retry-errors
+models/Qwen3-VL-2B-Instruct-FP8 | 8192 | 0.62 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner eb --model Qwen3-VL-2B-Instruct-FP8 --exp eb_official_r1 --workers 2 --retry-errors

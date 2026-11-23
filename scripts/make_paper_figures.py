@@ -278,7 +278,10 @@ def landscape():
                    label=lab + " (reported)" if group not in seen else None)
         seen.add(group)
     b = DATA["bars"]
-    for eb, s2m, size, tag, side in (("eb3", "s2m3", 4, "4B", "right"), ("eb25", "s2m25", 3, "3B", "left")):
+    pairs = [("eb3", "s2m3", 4, "4B", "right"), ("eb25", "s2m25", 3, "3B", "left")]
+    if "s2m2" in b:  # Qwen3-VL-2B, once both of its test runs are complete
+        pairs.append(("eb2", "s2m2", 2.2, "2B", "left"))
+    for eb, s2m, size, tag, side in pairs:
         xx = size * (1.1 if side == "right" else 0.92)
         lo, hi = b[eb][-1], b[s2m][-1]
         ax.annotate("", xy=(xx, hi - 2.4), xytext=(xx, lo + 2.4),
@@ -295,9 +298,9 @@ def landscape():
         ax.text(SIZE[model] * 1.12 * 1.24, avg, name, fontsize=6.4 * K, color=INK2, va="center", ha="left")
     ax.axvline(120, color=MUTED, lw=0.7, zorder=0)
     ax.set_xscale("log")
-    ax.set_xlim(2.0, 290)
-    ax.set_xticks([3, 10, 30, 80, API])
-    ax.set_xticklabels(["3B", "10B", "30B", "80B", "API"])
+    ax.set_xlim(1.6 if "s2m2" in b else 2.0, 290)
+    ax.set_xticks(([2] if "s2m2" in b else []) + [3, 10, 30, 80, API])
+    ax.set_xticklabels((["2B"] if "s2m2" in b else []) + ["3B", "10B", "30B", "80B", "API"])
     ax.set_yticks([20, 40, 60, 80])
     ax.minorticks_off()
     ax.set_ylim(8, 90)

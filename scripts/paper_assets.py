@@ -795,7 +795,7 @@ def main():
             "robothor_cats": {c: [100 * np.mean(v[0]), 100 * np.mean(v[1]), len(v[0])] for c, v in cats.items()},
             "robothor_sr": srm,
             "bars": {k: per_subset(O[k], ks) + [100 * np.mean([O[k][x] for x in ks])]
-                     for k in ("eb3", "s2m3", "rgb3", "eb25", "s2m25", "oracle")},
+                     for k in ("eb3", "s2m3", "rgb3", "eb25", "s2m25", "oracle") + (("eb2", "s2m2") if HAVE2B else ())},
             # 95% bootstrap CI of each bar (per subset over its 60 episodes, Avg. over all 300)
             "bars_ci": {k: [list(boot_ci([O[k][x] for x in ks if x[0] == s_])[1:]) for s_ in SUBSETS]
                         + [list(boot_ci([O[k][x] for x in ks])[1:])]

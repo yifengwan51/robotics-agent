@@ -192,8 +192,8 @@ def main():
     fig.savefig(OUT)
     cap = ("\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=\\textwidth]{fig/trajectories.pdf}\n"
            "\\caption{Trajectories on three EB-Navigation test episodes (Qwen3-VL-4B) and the hypotheses of \\ours at the end "
-           "of each. Grey: reachable floor; targets on furniture lie outside it. $n\\times$: rejected moves at one spot. "
-           "In (c) the only hypothesis is a look-alike. Each map has its own scale.}\n"
+           "of each. Grey: reachable floor; targets on furniture lie outside it. $n\\times$: rejected moves at one spot; "
+           "in (c) the only hypothesis is a look-alike.}\n"
            "\\label{fig:traj}\n\\end{figure*}\n")
     if not THESIS:  # the thesis keeps its own copy of the caption file
         open(CAPTION, "w").write(cap)

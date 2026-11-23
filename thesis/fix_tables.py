@@ -49,8 +49,8 @@ def traj_caption(s):
     if "(a)~the target starts behind" in s:
         return s
     s = s.replace("\\label{fig:traj}", "", 1).replace("}\n\n", "}\n", 1)
-    return s.replace("Each map has its own scale.}", "Each map has its own scale. (a)~the target starts behind the agent; "
-                     "(b)~furniture blocks the EB prompt; (c)~\\ours proposes only look-alikes.}\n\\label{fig:traj}", 1)
+    return s.replace("is a look-alike.}", "is a look-alike. Each map has its own scale. (a)~the target starts behind "
+                     "the agent; (b)~furniture blocks the EB prompt; (c)~\\ours proposes only look-alikes.}\n\\label{fig:traj}", 1)
 
 
 edit("fig_traj.tex", traj_caption)

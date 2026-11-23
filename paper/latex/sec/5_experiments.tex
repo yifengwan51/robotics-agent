@@ -77,7 +77,8 @@ Removing the look-around leaves the average unchanged ($\nAblScan$\,pp) but trad
 Long changes by $\nAblScanLong$\,pp because the agent no longer turns to find a target behind it, while the other
 subsets gain the steps that the turn no longer costs ($\nAblScanOtherMin$ to $\nAblScanOtherMax$\,pp); on Long,
 \nScanLongFull{} episodes succeed only with the look-around and \nScanLongAbl{} only without it (McNemar
-$p\nScanLongP$). The crop check adds \nAblZoomAbs\,pp (Holm $p\nAblZoomP$) at the cost of VLM calls, not steps.
+$p\nScanLongP$). The crop check adds \nAblZoomAbs\,pp (Holm $p\nAblZoomP$). Setting the commit threshold to 0.5 or 1.2 or the
+repeated-view weight to 0 or 1 moves success by at most \nSensMaxAbs\,pp (supplement).
 Exhaustion changes success by $\nAblExhaust$\,pp ($p\nAblExhaustP$); it acts only after the agent reaches a
 look-alike, which happens in \nExhVisLo--\nExhVisHi{} Visual episodes per run and \nExhOtherLo--\nExhOtherHi{} on each
 other subset.

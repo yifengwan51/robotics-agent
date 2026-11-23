@@ -122,21 +122,21 @@ def thumbnails():
     def track(xz):
         return [(e["step"], next((h[2] for h in e["hyps"] if np.hypot(h[0] - xz[0], h[1] - xz[1]) < 0.12), np.nan))
                 for e in ep["perception_log"]]
-    plt.rcParams.update({"font.size": 7.5})
+    plt.rcParams.update({"font.size": 8.0})
     fig = plt.figure(figsize=(27 * MM, 16.0 * MM))
     ax = fig.add_axes([0.22, 0.42, 0.75, 0.54])
     for xz, c in (((0.33, -1.68), HEX["oOrangeD"]), ((1.51, -1.65), HEX["oGreyS"]), ((1.67, -1.74), HEX["oGreyS"])):
         tr = [(s, w) for s, w in track(xz) if not np.isnan(w)]
-        ax.plot([s for s, _ in tr], [w for _, w in tr], color=c, lw=1.0, marker="o", ms=1.5, zorder=3)
+        ax.plot([s for s, _ in tr], [w for _, w in tr], color=c, lw=1.3, marker="o", ms=1.8, zorder=3)
     ax.axhline(0.8, color=HEX["oGreyD"], lw=0.6, ls=(0, (3.2, 2.2)), zorder=1)
-    ax.text(0.2, 1.1, r"$\tau_\mathrm{c}$", fontsize=7.5, color="black", ha="left", va="bottom")
+    ax.text(0.2, 1.1, r"$\tau_\mathrm{c}$", fontsize=8.0, color="black", ha="left", va="bottom")
     ax.set_xlim(0, 13.6)
     ax.set_ylim(-0.6, 8.8)
     ax.set_xticks([0, 12])
     ax.set_yticks([0, 8])
     ax.set_xlabel("step", labelpad=1.2)
     ax.set_ylabel("$w_k$", labelpad=1.0)
-    ax.tick_params(length=1.6, pad=1.2, width=0.36, colors="black")
+    ax.tick_params(length=1.6, pad=1.0, width=0.4, colors="black", labelsize=8.0)
     for sp in ("top", "right"):
         ax.spines[sp].set_visible(False)
     for sp in ("left", "bottom"):

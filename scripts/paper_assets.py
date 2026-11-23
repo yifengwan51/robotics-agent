@@ -597,6 +597,51 @@ def main():
         budget[key] = np.mean(curves, axis=0).tolist()
     for key, n in (("eb3", "EB"), ("s2m3", "S"), ("rgb3", "RGB"), ("oracle", "Oracle")):
         macro(f"Bud{n}Ten", budget[key][10]); macro(f"Bud{n}Fifteen", budget[key][15])
+    # ---------------- model size (Qwen3-VL-2B) and parameter sensitivity, written only when the runs are complete --
+    Q2 = "Qwen3-VL-2B-Instruct"
+    two = {"eb2": [f"eb_{Q2}-FP8_eb_official_r1"], "s2m2": [f"s2m_{Q2}-AWQ_simp4_r1"]}
+    HAVE2B = all(exists(v) for v in two.values())
+    macro("HaveTwoB", "1" if HAVE2B else "0", "{}")
+    if HAVE2B:
+        o2 = {k: outcome(v) for k, v in two.items()}
+        for key, name in (("eb2", "EBQTwo"), ("s2m2", "SQTwo")):
+            m, lo, hi = boot_ci([o2[key][k] for k in ks])
+            macro(name, m); macro(name + "Lo", lo); macro(name + "Hi", hi)
+            for s_, v in zip(SHORT, per_subset(o2[key], ks)):
+                macro(name + s_, v)
+        d = [o2["s2m2"][k] - o2["eb2"][k] for k in ks]
+        m, lo, hi = boot_ci(d)
+        macro("GainQTwo", m); macro("GainQTwoLo", lo); macro("GainQTwoHi", hi); macro("GainQTwoP", rel_p(perm_test(d)))
+        macro("DropSQTwo", 100 * np.mean([O["s2m3"][k] for k in ks]) - 100 * np.mean([o2["s2m2"][k] for k in ks]))
+        macro("DropEBQTwo", 100 * np.mean([O["eb3"][k] for k in ks]) - 100 * np.mean([o2["eb2"][k] for k in ks]))
+        TWO = o2
+    SENS = [("commit", "0.5", "commit threshold $\\tau_\\mathrm{c}=0.5$"), ("commit", "1.2", "commit threshold $\\tau_\\mathrm{c}=1.2$"),
+            ("same_view_w", "0.0", "repeated view ignored, $\\gamma=0$"), ("same_view_w", "1.0", "repeated view counted fully, $\\gamma=1$")]
+    sens_runs = {f"{k}_{v}": [f"s2m_{Q3}-AWQ_simp4sens_{k}_{v}"] for k, v, _ in SENS}
+    HAVESENS = all(exists(v) for v in sens_runs.values())
+    macro("HaveSens", "1" if HAVESENS else "0", "{}")
+    if HAVESENS:
+        rows = []
+        for (k, v, lab), name in zip(SENS, ("CommitLo", "CommitHi", "GammaZero", "GammaOne")):
+            o_ = outcome(sens_runs[f"{k}_{v}"])
+            d = [o_[x] - O["s2m3"][x] for x in ks]
+            m, lo, hi = boot_ci(d)
+            p_ = perm_test(d)
+            macro(f"Sens{name}", 100 * np.mean([o_[x] for x in ks])); macro(f"Sens{name}D", m, "{:+.1f}")
+            rows.append((lab, per_subset(o_, ks), 100 * np.mean([o_[x] for x in ks]), m, lo, hi, p_))
+        sens_holm = holm([r[6] for r in rows])  # Holm over the four settings
+        macro("SensMaxAbs", max(abs(r[3]) for r in rows))
+        macro("SensMinHolm", rel_p(min(sens_holm)))
+        with open(os.path.join(SEC, "tab_sens.tex"), "w") as f:
+            f.write("\\begin{tabular}{@{}lrrrrrrlr@{}}\n\\toprule\n"
+                    "Setting & Base & Common & Complex & Visual & Long & Avg. & $\\Delta$ (95\\% CI) & Holm $p$\\\\\n\\midrule\n")
+            f.write("frozen ($\\tau_\\mathrm{c}=0.8$, $\\gamma=0.25$) & " + " & ".join(f"{v:.1f}" for v in per_subset(O["s2m3"], ks))
+                    + f" & {100 * np.mean([O['s2m3'][x] for x in ks]):.1f} & -- & --\\\\\n")
+            for (lab, subs, avg, m, lo, hi, _), hp in zip(rows, sens_holm):
+                f.write(f"{lab} & " + " & ".join(f"{v:.1f}" for v in subs) + f" & {avg:.1f} & ${m:+.1f}$ "
+                        f"{{\\footnotesize[${lo:+.1f}$, ${hi:+.1f}$]}} & {hp:.2f}\\\\\n")
+            f.write("\\bottomrule\n\\end{tabular}\n")
+
     # ---------------- story numbers ----------------
     pub = {(r[0], r[1]): r for g, rows in PUBLISHED for r in rows}
     eb_avg = lambda model: pub[("EB prompt", model)][4]
@@ -718,6 +763,10 @@ def main():
             "robothor_sr": srm,
             "bars": {k: per_subset(O[k], ks) + [100 * np.mean([O[k][x] for x in ks])]
                      for k in ("eb3", "s2m3", "rgb3", "eb25", "s2m25", "oracle")},
+            # 95% bootstrap CI of each bar (per subset over its 60 episodes, Avg. over all 300)
+            "bars_ci": {k: [list(boot_ci([O[k][x] for x in ks if x[0] == s_])[1:]) for s_ in SUBSETS]
+                        + [list(boot_ci([O[k][x] for x in ks])[1:])]
+                        for k in ("eb3", "s2m3", "rgb3", "eb25", "s2m25")},
             "range_ratio": rr, "draft": "eb3" in missing}
     # supplementary: outcome categories of every agent, and RoboTHOR per category
     with open(os.path.join(SEC, "supp_tab_taxonomy.tex"), "w") as f:

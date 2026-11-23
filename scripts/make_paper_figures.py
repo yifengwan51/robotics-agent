@@ -136,31 +136,33 @@ def teaser():
         for (key, c, lab), o in zip(series, off):
             ax.bar(x + o, b[key], w * 0.94, color=c, label=lab, zorder=2,
                    edgecolor=S2M if c == RGBO else "none", linewidth=0.6 if c == RGBO else 0)
+            ci = np.asarray(DATA["bars_ci"][key])  # 95% bootstrap CI over the episodes of each bar
+            ax.errorbar(x + o, b[key], yerr=[np.asarray(b[key]) - ci[:, 0], ci[:, 1] - np.asarray(b[key])], fmt="none",
+                        ecolor=INK2, elinewidth=0.5, capsize=0, zorder=3.5)
         for i, o in enumerate(b["oracle"]):  # same width in both panels
             ax.plot([x[i] - 1.5 * w, x[i] + 1.5 * w], [o, o], color=INK, lw=1.0, solid_capstyle="butt", zorder=3,
                     label="oracle target" if i == 0 else None,
                     path_effects=[pe.Stroke(linewidth=2.4, foreground="white"), pe.Normal()])  # stays visible on a bar top
         i = len(subsets) - 1
-        for (key, c, _), o in zip(series, off):  # values of the average, inside tall bars and above short ones
-            v = b[key][i]
-            inside = v > 32
-            ax.text(x[i] + o, v - 4 if inside else v + 3, f"{v:.1f}", rotation=90, ha="center",
-                    va="top" if inside else "bottom", fontsize=6.6 * K, zorder=4,
-                    color="white" if inside and c != RGBO else INK)
+        for (key, c, _), o in zip(series, off):  # values of the average, above the CI whisker of each bar
+            v, hi = b[key][i], DATA["bars_ci"][key][i][1]
+            ax.text(x[i] + o, hi + 1.5, f"{v:.1f}", rotation=90, ha="center", va="bottom", fontsize=6.6 * K, zorder=4,
+                    color=INK)
         ax.axvspan(x[-1] - 0.55, x[-1] + 0.55, color="#F5F5F4", zorder=0, lw=0)
-        ax.set_ylim(0, 104)
+        ax.set_ylim(0, 112)
         ax.set_yticks([0, 25, 50, 75, 100])
         style(ax)
         ax.set_title(title, loc="left", color=INK, pad=3, fontsize=7.4 * K)
     axes[-1].set_xticks(x)
     axes[-1].set_xticklabels(subsets)
     axes[-1].set_xlim(x[0] - 0.6, x[-1] + 0.6)
-    fig.text(0.012, (0.86 + 0.09) / 2, "success (%)", rotation=90, va="center", ha="left", color=INK2, fontsize=7.2 * K)
+    for ax in axes:
+        ax.set_ylabel("success (%)", color=INK, labelpad=2)
     h, lab = axes[0].get_legend_handles_labels()
     order = [lab.index(k) for k in ("S2M (ours)", "S2M, RGB only", "EB prompt", "oracle target")]
     fig.legend([h[k] for k in order], [lab[k] for k in order], loc="upper center", ncol=4, frameon=False,
                handlelength=1.1, columnspacing=0.8, handletextpad=0.35, bbox_to_anchor=(0.55, 1.01))
-    fig.subplots_adjust(left=0.11, right=0.995, top=0.86, bottom=0.09, hspace=0.38)
+    fig.subplots_adjust(left=0.125, right=0.995, top=0.86, bottom=0.09, hspace=0.38)
     check(fig, "results")
     fig.savefig(os.path.join(FIG, "results.pdf"))
 
@@ -176,25 +178,25 @@ def analysis():
     ax = axes[0]
     t = np.arange(21)
     bud = DATA["budget"]
-    for key, c, lab, ls, lw in (("oracle", INK, "oracle target", (0, (3, 1.6)), 1.0), ("s2m3", S2M, "S2M", "-", 1.5),
-                                ("rgb3", S2M, "S2M, RGB only", (0, (1.2, 1.2)), 1.5), ("eb3", EB, "EB prompt", "-", 1.5)):
+    for key, c, lab, ls, lw in (("oracle", INK, "oracle target", "-", 1.0), ("s2m3", S2M, "S2M", "-", 1.5),
+                                ("rgb3", RGBO, "S2M, RGB only", "-", 1.5), ("eb3", EB, "EB prompt", "-", 1.5)):
         ax.plot(t, bud[key], color=c, lw=lw, ls=ls, label=lab, zorder=3)
     ax.set_xlim(0, 20.5)
     ax.set_ylim(0, 100)
     ax.set_xticks([0, 5, 10, 15, 20])
     ax.set_yticks([0, 25, 50, 75, 100])
     ax.set_xlabel("step budget")
-    ax.set_ylabel("episodes solved (%)")
+    ax.set_ylabel("success (%)")
     style(ax, grid="both")
     ax.set_title("(a) success within a step budget", loc="left", pad=3)
     if THESIS:
         fig.subplots_adjust(left=0.085, right=0.985, top=0.95, bottom=0.1)
     else:
         fig.subplots_adjust(left=0.06, right=0.985, top=0.88, bottom=0.21, wspace=0.62)
-    # no episode is solved before step 7, so the upper left of the panel is free for the legend
     fit_legend(fig, ax, ["upper left", ("upper left", {"borderaxespad": 0.0}), ("upper left", {"ncol": 2, "columnspacing": 0.6}),
-                         ("lower right", {"bbox_to_anchor": (1.0, 0.02)})],
-               headroom=(1.0, 1.12, 1.25) if THESIS else (1.0,),
+                         ("lower right", {"bbox_to_anchor": (1.0, 0.02)}), ("lower right", {"bbox_to_anchor": (1.03, 0.0)}),
+                         ("upper left", {"bbox_to_anchor": (0.0, 1.0), "fontsize": 6.4 * K * 0.92, "labelspacing": 0.12})],
+               headroom=(1.0, 1.05, 1.12),
                frameon=False, handlelength=1.4, labelspacing=0.2, borderaxespad=0.2, handletextpad=0.4, fontsize=6.4 * K)
     # (b) failure modes, EB prompt vs S2M (episodes of 300)
     ax = axes[1]
@@ -212,7 +214,7 @@ def analysis():
         ax.text(max(e, m) + 0.9, y0, f"{e:.0f} / {m:.0f}", va="center", ha="left", fontsize=6.4 * K, color=INK)
     ax.set_yticks(y)
     ax.set_yticklabels([lab for _, lab in cats])
-    ax.set_xlabel("failed episodes (of 300)")
+    ax.set_xlabel("failed episodes of 300 (EB prompt / S2M)")
     ax.set_xlim(0, max(max(tx["eb3"][c] for c, _ in cats), max(tx["s2m3"][c] for c, _ in cats)) * 1.25)
     style(ax, grid="x")
     fit_legend(fig, ax, ["lower right", "center right"], frameon=False, handlelength=1.0, handletextpad=0.35,
@@ -220,8 +222,8 @@ def analysis():
     ax.set_title("(b) why episodes fail", loc="left", pad=3)
     # (c) lifted range / true range of target detections, as cumulative distributions
     ax = axes[2]
-    for key, c, lab, ls in (("depth", S2M, "depth sensor", "-"), ("floor", S2M, "floor scale", (0, (1.2, 1.2))),
-                            ("global", EB, "global scale", "-")):
+    for key, c, lab, ls in (("depth", S2M, "depth sensor", "-"), ("floor", RGBO, "RGB, floor scale", "-"),
+                            ("global", RGBO, "RGB, global scale", (0, (1.2, 1.2)))):
         v = np.sort(np.asarray(DATA["range_ratio"][key]))
         ax.plot(v, np.arange(1, len(v) + 1) / len(v), color=c, lw=1.5, ls=ls, label=lab, zorder=3)
     ax.axvline(1.0, color=INK, lw=0.6, zorder=1)
@@ -236,13 +238,14 @@ def analysis():
     ax.set_xlabel("lifted range / true range")
     ax.set_ylabel("fraction of detections")
     style(ax, grid="both")
-    ax.set_title("(c) range of lifted target boxes", loc="left", pad=3)
+    ax.set_title("(c) range error of target detections", loc="left", pad=3)
     if THESIS:  # (c) has the space to its right for its legend
         ax.legend(loc="center left", bbox_to_anchor=(1.04, 0.5), ncol=1, frameon=False, handlelength=1.6,
                   handletextpad=0.4, labelspacing=0.4, fontsize=6.4 * K)
     else:
         fit_legend(fig, ax, ["upper left", "lower right", ("lower right", {"borderaxespad": 0.0}),
-                             ("center right", {"bbox_to_anchor": (1.0, 0.3)}), ("lower right", {"fontsize": 6.4 * K * 0.85})],
+                             ("center right", {"bbox_to_anchor": (1.0, 0.3)}), ("lower right", {"fontsize": 6.4 * K * 0.85}),
+                             ("center left", {"bbox_to_anchor": (0.0, 0.62), "fontsize": 6.4 * K * 0.9})],
                    headroom=(1.0,), ncol=1, frameon=False,
                    handlelength=1.6, handletextpad=0.4, labelspacing=0.25, borderaxespad=0.2)
     check(fig, "analysis")
@@ -257,9 +260,9 @@ API = 190
 
 def landscape():
     fig, ax = plt.subplots(figsize=(3.35, 1.95))
-    marks = {"Prompted MLLMs (EmbodiedBench)": ("o", "#8C8C8C", "#8C8C8C", "prompted MLLM"),
-             "Training-free agents": ("s", "white", INK2, "training-free agent"),
-             "Fine-tuned": ("^", "white", INK2, "fine-tuned agent")}
+    marks = {"Prompted MLLMs (EmbodiedBench)": ("o", "white", MUTED, "prompted MLLM"),
+             "Training-free agents": ("s", "white", MUTED, "training-free agent"),
+             "Fine-tuned": ("^", "white", MUTED, "fine-tuned agent")}
     shift = {"Prompted MLLMs (EmbodiedBench)": 0.88, "Training-free agents": 1.12, "Fine-tuned": 0.88}
     seen, api = set(), 0
     for group, name, model, avg in DATA["published"]:
@@ -270,7 +273,7 @@ def landscape():
         else:  # closed models: spread the API column so equal scores do not hide each other
             xx = API * (0.74 + 0.085 * api)  # one slot per closed-model result
             api += 1
-        ax.scatter(xx, avg, s=13, marker=m, facecolor=fc, edgecolor=ec, linewidth=0.7, zorder=3,
+        ax.scatter(xx, avg, s=13, marker=m, facecolor=fc, edgecolor=ec, linewidth=0.8, zorder=3,
                    label=lab + " (reported)" if group not in seen else None)
         seen.add(group)
     b = DATA["bars"]
@@ -279,9 +282,9 @@ def landscape():
         lo, hi = b[eb][-1], b[s2m][-1]
         ax.annotate("", xy=(xx, hi - 2.4), xytext=(xx, lo + 2.4),
                     arrowprops=dict(arrowstyle="-|>", color=S2M, lw=0.9, mutation_scale=7), zorder=2)
-        ax.scatter(xx, lo, s=17, marker="o", facecolor="white", edgecolor=INK, linewidth=0.9, zorder=4,
+        ax.scatter(xx, lo, s=22, marker="o", facecolor="#595959", edgecolor="white", linewidth=0.4, zorder=4,
                    label="EB prompt (our run)" if size == 4 else None)
-        ax.scatter(xx, hi, s=50, marker="*", color=S2M, edgecolor="white", linewidth=0.3, zorder=5,
+        ax.scatter(xx, hi, s=70, marker="*", color=S2M, edgecolor="white", linewidth=0.3, zorder=5,
                    label="S2M (ours)" if size == 4 else None)
         # both gains beside their arrows, the 3B one low enough to stay clear of the fine-tuned 4B agents
         ax.text(xx * 1.16, (lo + hi) / 2 if side == "right" else lo + 15, f"{tag}\n+{hi - lo:.1f} pp", color=S2M,

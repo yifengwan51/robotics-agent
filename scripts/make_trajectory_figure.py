@@ -104,7 +104,8 @@ def main():
         gx = np.linspace(ext[0], ext[1], img.shape[1] + 1)[:-1] + (ext[1] - ext[0]) / img.shape[1] / 2
         gz = np.linspace(ext[2], ext[3], img.shape[0] + 1)[:-1] + (ext[3] - ext[2]) / img.shape[0] / 2
         from scipy.ndimage import gaussian_filter
-        ax.contour(gx, gz, gaussian_filter(img.astype(float), 0.8), levels=[0.5], colors=WALL, linewidths=0.8, zorder=1)
+        ax.contour(gx, gz, gaussian_filter(img.astype(float), 0.8), levels=[0.5], colors=WALL, linewidths=0.6, zorder=1,
+                   alpha=0.6)
         placed = []  # positions of the n-times counts in this panel
         for rec, col, ls, z in [(eb, C_EB, (0, (4.0, 1.8)), 2), (s2m, C_S2M, "-", 3)]:
             xs, zs = path(rec)
@@ -129,9 +130,10 @@ def main():
                         if abs(qx - (rx + dx)) < 0.9 and abs(qz - (rz + dz)) < 0.45:
                             dz = -0.55
                     placed.append((rx + dx, rz + dz))
-                    ax.text(rx + dx, rz + dz, f"{n}$\\times$", color=col, fontsize=6.8 * K, zorder=11, fontweight="bold", va="bottom",
-                            ha="left" if dx > 0 else "right",
-                            bbox=dict(boxstyle="round,pad=0.12", fc="white", ec="none", alpha=0.9))
+                    ax.annotate(f"{n}$\\times$", (rx, rz), (rx + 1.6 * dx, rz + 1.5 * dz), color=col, fontsize=6.8 * K,
+                                zorder=11, fontweight="bold", va="center", ha="left" if dx > 0 else "right",
+                                arrowprops=dict(arrowstyle="-", color=col, lw=0.6, shrinkA=0, shrinkB=2),
+                                bbox=dict(boxstyle="round,pad=0.1", fc="white", ec="none", alpha=0.95))
         hyps = s2m["perception_log"][-1]["hyps"]
         for hx, hz, w, exhausted in hyps:
             ax.scatter([hx], [hz], s=125, marker="o", zorder=8, lw=1.1,
@@ -142,8 +144,10 @@ def main():
         ax.scatter([s2m["target"]["x"]], [s2m["target"]["z"]], s=46, marker="*", c=INK, lw=0, zorder=7)
         px = path(eb)[0] + path(s2m)[0] + [s2m["target"]["x"]] + [h[0] for h in hyps]
         pz = path(eb)[1] + path(s2m)[1] + [s2m["target"]["z"]] + [h[1] for h in hyps]
-        x0, x1 = min(ext[0], min(px) - 0.3) - 0.05, max(ext[1], max(px) + 0.3) + 0.05
-        z0, z1 = min(ext[2], min(pz) - 0.3) - 0.32, max(ext[3], max(pz) + 0.3) + 0.05
+        x0, x1 = max(ext[0], min(px) - 1.0) - 0.05, min(ext[1], max(px) + 1.0) + 0.05
+        z0, z1 = max(ext[2], min(pz) - 1.0) - 0.32, min(ext[3], max(pz) + 1.0) + 0.05
+        x0, x1 = min(x0, min(px) - 0.3), max(x1, max(px) + 0.3)
+        z0, z1 = min(z0, min(pz) - 0.35), max(z1, max(pz) + 0.3)
         ax.set_xlim(x0, x1)
         ax.set_ylim(z0, z1)
         ax.set_aspect("equal")
@@ -188,7 +192,8 @@ def main():
     fig.savefig(OUT)
     cap = ("\\begin{figure*}[t]\n\\centering\n\\includegraphics[width=\\textwidth]{fig/trajectories.pdf}\n"
            "\\caption{Trajectories on three EB-Navigation test episodes (Qwen3-VL-4B) and the hypotheses of \\ours at the end "
-           "of each. Grey: reachable floor; targets on furniture lie outside it. $n\\times$: rejected moves at one spot.}\n"
+           "of each. Grey: reachable floor; targets on furniture lie outside it. $n\\times$: rejected moves at one spot. "
+           "In (c) the only hypothesis is a look-alike. Each map has its own scale.}\n"
            "\\label{fig:traj}\n\\end{figure*}\n")
     if not THESIS:  # the thesis keeps its own copy of the caption file
         open(CAPTION, "w").write(cap)

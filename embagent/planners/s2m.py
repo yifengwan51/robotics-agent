@@ -25,7 +25,7 @@ class Hypothesis:
         self.exhausted = False
         self.peak = w  # highest evidence ever reached (logging / RoboTHOR revisit)
 
-    def merge(self, xz, height, w, view, same_view, pw=1.0):
+    def merge(self, xz, height, w, view, same_view, pw=1.0, gamma=0.25):
         """pw: weight of this observation in the position average (1 for every observation = plain mean)."""
         n = getattr(self, "pw_sum", self.hits)
         self.xz = (self.xz * n + pw * np.asarray(xz)) / (n + pw)
@@ -33,7 +33,7 @@ class Hypothesis:
         self.pw_sum = n + pw
         self.hits += 1
         # repeated looks from (almost) the same pose add little new information
-        self.score += 0.25 * w if same_view else w
+        self.score += gamma * w if same_view else w
         self.peak = max(self.peak, self.score)
         if not same_view:
             self.views.append(view)
@@ -46,7 +46,8 @@ class S2MPlanner(Planner):
                  zoom_accept=0.5, neg_weight=0.4, tile_grid=3, max_tile_boxes=4, max_range=6.0,
                  use_negative=True, use_scan=True, use_zoom=True, use_tiles=True, use_exhaust=True,
                  use_fusion=True, nearest_first=True, tie_margin=0.3, fov=100.0, cam_h=None, core=None, use_contrast=False,
-                 pos_weight="uniform", neg_mode="any_miss", scan_mode="always", tile_cap=None, neg_protect=False, tile_mode="always", **kw):
+                 pos_weight="uniform", neg_mode="any_miss", scan_mode="always", tile_cap=None, neg_protect=False, tile_mode="always",
+                 same_view_w=0.25, **kw):
         self.g = Grounder(model_name)
         self.core = core or GeoCore()
         self.fov, self.cam_h = fov, cam_h
@@ -56,6 +57,7 @@ class S2MPlanner(Planner):
         self.use_negative, self.use_scan, self.use_zoom, self.use_tiles = use_negative, use_scan, use_zoom, use_tiles
         self.use_exhaust, self.use_fusion, self.nearest_first = use_exhaust, use_fusion, nearest_first
         self.tie_margin = tie_margin
+        self.same_view_w = same_view_w  # gamma: weight of a repeated view (same heading, within 0.2 m)
         self.use_contrast = use_contrast
         # "inv_range2": weight positions by 1/range^2, for estimated depth whose error grows with range
         self.pos_weight = pos_weight
@@ -187,7 +189,7 @@ class S2MPlanner(Planner):
             for h in self.hyps:
                 if np.linalg.norm(h.xz - xz) < self.merge_radius:
                     same = any(abs(v[0] - view[0]) + abs(v[1] - view[1]) < 0.2 and v[2] == view[2] for v in h.views)
-                    h.merge(xz, hgt, w, view, same, pw)
+                    h.merge(xz, hgt, w, view, same, pw, self.same_view_w)
                     return
         else:  # ablation: trust the latest single-view detection only
             self.hyps = [h for h in self.hyps if h.exhausted]

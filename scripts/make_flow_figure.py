@@ -42,11 +42,13 @@ T = {  # node text; every symbol is defined in the caption
     "out": "action\\\\$u_t$",
 }
 CAPTION = ("One step of \\ours. The frozen VLM $f$ gives the presence $\\pi_t$ and box $b_t$ of the phrase $s$ on the "
-           "frame $I_t$; a weak answer is checked on a magnified crop, which sets its weight $a_t$. The box is lifted to "
+           "frame $I_t$; a weak answer (presence and box disagree, or the goal names only an appearance) is checked on a "
+           "magnified crop, which sets its weight $a_t$. The box is lifted to "
            "a floor point $q_t$ with depth $D_t$ and pose $p_t$ and fused into a hypothesis $\\mu_k$ within $r$, or starts "
            "one; $\\gamma_t<1$ discounts a repeated view, and a hypothesis reached without ending the task is exhausted. "
            "Above $\\tau_\\mathrm{c}$ a hypothesis $\\mu_k$ with evidence $w_k$ is committed; A* on the map $M_t$ gives the "
-           "action $u_t$. Blue: the frozen VLM; orange: the hypothesis memory and the steps that read it.")
+           "action $u_t$. Blue: the frozen VLM; orange: steps that update or follow the hypothesis memory; diamonds: "
+           "decisions.")
 EL, ARROWS = [], []
 
 

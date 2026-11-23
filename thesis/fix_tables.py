@@ -46,11 +46,11 @@ def stretch(s):
 
 def traj_caption(s):
     """The thesis variant shows short panel titles; the caption says what each panel shows."""
-    if "(a) the target starts behind" in s:
+    if "(a)~the target starts behind" in s:
         return s
-    return s.replace("\\label{fig:traj}", "", 1).replace("}\n\n", "}\n", 1).replace(
-        "rejected moves at one spot.}", "rejected moves at one spot. (a)~the target starts behind the agent; (b)~furniture "
-        "blocks the EB prompt; (c)~\\ours proposes only look-alikes.}\n\\label{fig:traj}", 1)
+    s = s.replace("\\label{fig:traj}", "", 1).replace("}\n\n", "}\n", 1)
+    return s.replace("Each map has its own scale.}", "Each map has its own scale. (a)~the target starts behind the agent; "
+                     "(b)~furniture blocks the EB prompt; (c)~\\ours proposes only look-alikes.}\n\\label{fig:traj}", 1)
 
 
 edit("fig_traj.tex", traj_caption)

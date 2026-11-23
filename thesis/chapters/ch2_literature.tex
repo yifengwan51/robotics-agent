@@ -127,6 +127,16 @@ navigation agent needs to reach one object: a full scene graph or language field
 at every step, which is costly on a small GPU and adds failure modes of its own. A navigation agent needs to know
 where the target might be, how much evidence supports each candidate, and where it can move.
 
+The memory of \ours also has a classical ancestor outside semantic mapping. Multiple-hypothesis
+tracking keeps several candidate explanations of noisy, possibly false detections, associates each new detection
+with one of them, and lets the evidence decide~\cite{reid1979algorithm}; probabilistic robotics applies the same
+idea to localization and mapping~\cite{thrun2005probabilistic}. Active visual object search plans where a robot should
+look for an object, using probabilistic models of where objects tend to be and how reliable its detector
+is~\cite{aydemir2011search,aydemir2013active}. \ours borrows the hypothesis bookkeeping of tracking and the
+detector-aware search of active object search, and replaces the trained detector of both with the yes/no and box
+answers of a generative VLM, whose errors (confident boxes on look-alikes, repeated answers from one view) shape how
+the evidence is counted.
+
 Closest to the memory of \ours are two object-navigation systems. ApexNav fuses target-centric detections over time
 to suppress false positives~\cite{zhang2025apexnav}, and AECNav treats expected but absent detections as negative
 evidence~\cite{liu2026aecnav}. \ours shares both ideas and applies them at the minimal end of the spectrum: its memory

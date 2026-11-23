@@ -49,7 +49,7 @@
 \filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (61.69,-32.00) rectangle (88.69,-38.14);
 \node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, text width=22.06mm, align=center, inner sep=0, anchor=center] at (75.19,-35.07) {lift with $D_t$, $p_t$};
 \filldraw[fill=oOrangeL, draw=black, line width=0.36pt, rounded corners=2.6pt] (61.69,-41.31) rectangle (88.69,-50.63);
-\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, text width=22.06mm, align=center, inner sep=0, anchor=center] at (75.19,-45.97) {fuse viewpoints,\\negative evidence};
+\node[font=\rmfamily\fontsize{7.5}{9.00}\selectfont, text width=22.06mm, align=center, inner sep=0, anchor=center] at (75.19,-45.97) {fuse viewpoints,\\exhaust on arrival};
 \node[inner sep=0, anchor=north west] at (61.69,-53.80) {\includegraphics[width=27.00mm, height=16.20mm]{fig/arch_evidence.pdf}};
 \node[inner sep=0, anchor=north west] at (94.34,-32.00) {\includegraphics[width=28.00mm, height=28.00mm]{fig/arch_bev.png}};
 \draw[black, line width=0.19pt] (94.34,-32.00) rectangle (122.34,-60.00);
@@ -63,6 +63,6 @@
 \fill[white] (76.00,-73.75) rectangle (104.00,-76.25);
 \node[font=\rmfamily\fontsize{7.0}{8.40}\selectfont, text width=28.00mm, align=center, inner sep=0, anchor=center] at (90.00,-75.00) {next frame};
 \end{tikzpicture}
-\caption{\textbf{(a)}~The EB prompt maps $I_t$, the instruction $\ell$, and the history $h_t$ to a text plan $u_{t:t+m}$ with the VLM $f$. \textbf{(b)}~\ours asks $f$ for the presence $\pi_t$ and box $b_t$ of the phrase $s$, lifts them with depth $D_t$ and pose $p_t$ into hypotheses $\mu_k$ with evidence $w_k$, selects $k^\star$, and plans $u_t$ on the map $M_t$. Blue: the frozen VLM; orange: \ours's memory. Thumbnails: one Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) passing the commit threshold $\tau_c$ while two look-alikes (grey) stay below it, and the map with the path, the target (orange), and the look-alikes ($\times$).}
+\caption{\textbf{(a)}~The EB prompt maps $I_t$, the instruction $\ell$, and the history $h_t$ to a text plan $u_{t:t+m}$ with the VLM $f$. \textbf{(b)}~\ours asks $f$ for the presence $\pi_t$ and box $b_t$ of the phrase $s$, lifts them with depth $D_t$ and pose $p_t$ into hypotheses $\mu_k$ with evidence $w_k$, selects $k^\star$, and plans $u_t$ on the map $M_t$. Blue: the frozen VLM; orange: the hypothesis memory of \ours and the selection that reads it. Thumbnails: one Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) rising to ten times the commit threshold $\tau_\mathrm{c}$ while two look-alikes (grey) stay near or below it, and the map with the path, the target (orange), and the look-alikes ($\times$).}
 \label{fig:arch}
 \end{figure*}

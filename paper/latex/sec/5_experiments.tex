@@ -10,18 +10,21 @@ and Qwen2.5-VL-3B-Instruct, served with vLLM~\cite{kwon2023vllm} at temperature 
 renders the simulator; \ours uses their 4-bit AWQ checkpoints. The EB prompt uses the benchmark's prompts, three
 examples, parser, and plan execution. Monocular depth comes from Depth
 Anything V2 Metric-Indoor-Base~\cite{yang2024depthv2} on the CPU.
-\textit{Protocol.} \ours was run four times and the RGB-only configuration twice, each entering with its
+\textit{Protocol.} \ours was run three times and the RGB-only configuration twice, each entering with its
 per-episode mean. All comparisons are paired over the 300 episodes, with bootstrap 95\% CIs and sign-flip
 permutation tests, Holm-corrected over the seven variants of \cref{sec:abl}.
 
-\subsection{The gain follows the diagnosis}
+\subsection{Changing the role rivals a tenfold scale-up}
 \label{sec:main}
 \input{sec/tab_abl}
 \input{sec/fig_traj}
 
 With Qwen3-VL-4B, \ours succeeds in \nSThree\% of the episodes against \nEBThree\% for the EB prompt
 (\cref{tab:main}), a paired gain of ${+}\nGainThree$\,pp (CI [${+}\nGainThreeLo$, ${+}\nGainThreeHi$],
-$p\nGainThreeP$). The gain follows the predictions of \cref{sec:diagnosis}. It is largest where the target starts
+$p\nGainThreeP$). Scaling the benchmark's agent tenfold within a model family buys \nScaleQwen{} (Qwen2.5-VL, 7B to
+72B) and \nScaleIntern\,pp (InternVL3, 8B to 78B); changing the role of a 4B model buys as much, and closes
+\nGapClosed\% of the gap between the EB prompt and the oracle planner. The gain follows the predictions of
+\cref{sec:diagnosis}. It is largest where the target starts
 behind the agent (ii): on Long, \ours succeeds in \nSThreeLong\% against \nEBThreeLong\% (\cref{fig:traj}a), \nOracleGapLong\,pp below the
 oracle, and it is $\nGainThreeBase$, $\nGainThreeCommon$, and $\nGainThreeComplex$\,pp on Base, Common, and Complex. On
 Visual, the smallest gain with both models, the difference is not significant (iii; $\nGainThreeVisual$\,pp, CI
@@ -29,9 +32,11 @@ $[\nVisDiffLo, \nVisDiffHi]$, $p\nVisDiffP$; \cref{sec:gap}). With Qwen2.5-VL-3B
 [${+}\nGainTwoLo$, ${+}\nGainTwoHi$]): the smaller model costs \ours \nScaleDrop\,pp and the EB prompt
 \nScaleDropEB\,pp (iv).
 
-\noindent\textbf{Fewer steps.}
+\noindent\textbf{Fewer steps, \nSpeedUp$\times$ less time.}
 On the \nStepN{} episodes that both agents solve in every run, \ours needs \nStepS{} steps against \nStepEB{}
 ($p\nStepP$); within ten steps it solves \nBudSTen\% of the episodes against \nBudEBTen\% (\cref{fig:analysis}a).
+On the same GPU, a step of \ours takes \nSecS\,s and one of the EB prompt \nSecEB\,s (RGB only: \nSecRGB\,s, with
+depth estimated on the CPU).
 
 \begin{figure}[t]
 \centering
@@ -42,21 +47,23 @@ with the same model; closed models share the API column.}
 \end{figure}
 
 \noindent\textbf{A 4B model rivals far larger ones.}
-With a 4B model, no training, and RGB alone (\nRGBThree\%), \ours exceeds every prompted MLLM up to GPT-4o and
-the training-free agents built on GPT-4o and 8--35B models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,chen2026hodagent,ma2026brainmem,lee2026emho,liang2026robofoundry}, and
+With a 4B model, no training, and RGB alone (\nRGBThree\%), \ours exceeds every prompted MLLM up to GPT-4o,
+\nNTrainFreeBelowRGB{} of the \nNTrainFree{} training-free agents, which build on GPT-4o and 8--32B
+models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,ma2026brainmem,lee2026emho,liang2026robofoundry}, and
 MuSix and SVA, which train extra models around a 4B policy~\cite{jang2026musix,xie2026sva}. Only the tool-library
 agents~\cite{zhou2026enabling} and RoboFoundry on GPT-6 Astra score higher (\cref{fig:landscape}).
 
-\noindent\textbf{The diagnosed failures disappear.}
-The diagnosed failure modes largely disappear (i). Per run, \ours never sees the target in \nNeverSThree{} episodes (EB
-prompt: \nNeverEBThree), is blocked in \nBlockedSThree{} (\nBlockedEBThree), loses a seen target in \nLostSThree{}
-(\nLostEBThree), and ends near it in \nNearSThree{} (\nNearEBThree) (\cref{fig:analysis}b, \cref{fig:traj}).
+\noindent\textbf{Never-seen and blocked failures vanish.}
+The failure modes of \cref{sec:diagnosis} collapse (i; \cref{fig:analysis}b, \cref{fig:traj}): never-seen and
+blocked episodes fall by \nNeverRed{} and \nBlockedRed\%, near misses by \nNearRed\%, and lost targets by
+\nLostRed\%.
 
 \subsection{Evidence fusion carries the gain}
 \label{sec:abl}
 \noindent\textbf{Modularity alone is not enough.}
-The same model in a generic modular agent, which acts on single-view detections with the same map, planner,
-look-around, and exploration, reaches \nModThree\% (\cref{tab:main}): ${+}\nModOverEB$\,pp over the EB prompt
+The same model in a modular agent that is \ours with multi-view fusion and the crop check removed, so that it
+acts on each single-view detection with the same map, planner, look-around, exploration, and exhaustion, reaches
+\nModThree\% (\cref{tab:main}): ${+}\nModOverEB$\,pp over the EB prompt
 ($p\nModOverEBP$), but \nSOverMod\,pp below \ours (CI [${+}\nSOverModLo$, ${+}\nSOverModHi$], $p\nSOverModP$).
 Moving the state out of the model gives part of the gain, and the evidence design for a generative sensor the rest.
 \Cref{tab:abl} changes one element at a time. Disabling multi-view fusion, so that each detection replaces the
@@ -72,7 +79,8 @@ subsets gain the steps that the turn no longer costs ($\nAblScanOtherMin$ to $\n
 \nScanLongFull{} episodes succeed only with the look-around and \nScanLongAbl{} only without it (McNemar
 $p\nScanLongP$). The crop check adds \nAblZoomAbs\,pp (Holm $p\nAblZoomP$) at the cost of VLM calls, not steps.
 Exhaustion changes success by $\nAblExhaust$\,pp ($p\nAblExhaustP$); it acts only after the agent reaches a
-look-alike, most often on Visual ($\nAblExhaustVisual$\,pp).
+look-alike, which happens in \nExhVisLo--\nExhVisHi{} Visual episodes per run and \nExhOtherLo--\nExhOtherHi{} on each
+other subset.
 
 \begin{figure}[!tb]
 \centering
@@ -81,12 +89,12 @@ look-alike, most often on Visual ($\nAblExhaustVisual$\,pp).
 \label{fig:robothor}
 \end{figure}
 
-\subsection{No depth sensor is needed}
+\subsection{One RGB camera is enough}
 \label{sec:sensing}
 \noindent\textbf{Pose.}
-Dead reckoning (\cref{eq:deadreckon}) is exact in heading and tilt and errs by \nDRmean\,m in position on
-average, from the simulator's grid snapping. Accumulated odometry noise of 5\% per translation and 2$^\circ$ per turn changes success
-by $\nAblOdom$\,pp (\cref{tab:abl}).
+Dead reckoning (\cref{eq:deadreckon}) errs by \nDRmean\,m in position on average, from the simulator's grid
+snapping; odometry noise of 5\% per translation and 2$^\circ$ per turn changes success by $\nAblOdom$\,pp
+(\cref{tab:abl}).
 
 \noindent\textbf{Depth.}
 With one global depth scale $\bar\sigma$ and pose from the executed actions, \ours reaches \nRGBGlobal\%, level with the EB prompt ($\nGainGlobal$\,pp,

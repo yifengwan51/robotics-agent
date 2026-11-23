@@ -8,7 +8,7 @@
 
 Statistics. Success is per-episode binary; a configuration run several times enters as its per-episode mean.
 95% CIs are episode-level bootstrap intervals. Paired differences use a two-sided sign-flip permutation test on
-per-episode differences (exact McNemar for single binary runs), Holm-corrected over the ten variants of tab_abl.
+per-episode differences (exact McNemar for single binary runs), Holm-corrected over the seven variants of tab_abl.
 Simulator target state is read here for analysis only; the agents never receive it.
 """
 import collections
@@ -38,8 +38,8 @@ RUN = {
     "eb25": [f"eb_{Q25}-FP8-Dynamic_eb_bounded_rp105_r1"], "eb25_awq": [f"eb_{Q25}-AWQ_eb_bounded_r1"],
     "eb25_awq_raw": [f"eb_{Q25}-AWQ_eb_official_r1"], "s2m25": [f"s2m_{Q25}-AWQ_simp4_r1"],
     "oracle": ["oracle_geo_none_ceiling"],
-    # same model, single-frame detection + map + A*: no fusion, negative evidence, crop check, or tiled search
-    "mod3": [f"s2m_{Q3}-AWQ_modular_baseline_r1"],
+    # same model and the frozen simplified agent with multi-view fusion and the crop check off (queues/simp4_modular_baseline.txt)
+    "mod3": [f"s2m_{Q3}-AWQ_simp4_modular_r1"],
 }
 VARIANTS = [  # (key, table label, run dirs)
     ("fusion", "w/o fusion", [f"s2m_{Q3}-AWQ_simp4abl_no_fusion"]),
@@ -74,7 +74,10 @@ for _k in RUN:
 VARIANTS = [(k, lab, _resolve(runs)) for k, lab, runs in VARIANTS]
 VAR = {k: runs for k, _, runs in VARIANTS}
 SHORT = ["Base", "Common", "Complex", "Visual", "Long"]
-# reported results, each checked against the original paper (method, model, citation, subsets or None, average)
+# reported results as printed in the original paper (method, model, citation, subsets or None, average).
+# Checked 2026-11-23: HODAgent (arXiv 2608.17584) withdrawn -> removed. EMHO: best held-out score over search iterations
+# on half of each subset; MuSix: episodes 36-60; SVA: episodes 37-60 (marked pilcrow). RoboFoundry evolves its prompts and
+# code on the 300 test episodes (marked double bar). EmbodiSkill prints rounded subset scores; the tool library prints two decimals.
 PUBLISHED = [
     ("Prompted MLLMs (EmbodiedBench)", [
         ("EB prompt", "GPT-4o", "yang2025embodiedbench", [55.0, 60.0, 58.3, 60.0, 55.0], 57.7),
@@ -84,20 +87,19 @@ PUBLISHED = [
         ("EB prompt", "Qwen2.5-VL-72B", "yang2025embodiedbench", [46.7, 46.7, 46.7, 26.7, 33.3], 40.0),
         ("EB prompt", "InternVL3-8B", "yang2025embodiedbench", [38.3, 30.0, 40.0, 33.3, 5.0], 29.3),
         ("EB prompt", "Qwen2.5-VL-7B", "yang2025embodiedbench", [20.0, 26.7, 38.3, 16.7, 0.0], 20.3)]),
-    ("Training-free agents", [
+    ("Training-free agents", [  # pilcrow: part of each subset; double bar: adapts on the test stream
         ("MOSAIC (module graph)", "Qwen3-VL-8B", "wang2026mosaic", [60.00, 46.67, 45.56, 51.11, 46.67], 50.00),
         ("ESCA (scene graph)", "GPT-4o", "huang2025esca", [66.67, 62.00, 63.33, 55.00, 26.67], 54.67),
         ("EmbodiSkill (skills)", "Qwen3-VL-32B", "ju2026embodiskill", [65.0, 68.0, 73.0, 67.0, 33.0], 61.33),
-        ("HODAgent (agent loop)", "Qwen3.6-35B-A3B", "chen2026hodagent", [76.7, 55.0, 68.3, 55.0, 36.7], 58.3),
-        ("RoboFoundry (self-evolving)", "Qwen3.8-27B", "liang2026robofoundry", [76.7, 85.0, 73.3, 63.3, 43.3], 68.3),
+        ("RoboFoundry (self-evolving)$^\\|$", "Qwen3.8-27B", "liang2026robofoundry", [76.7, 85.0, 73.3, 63.3, 43.3], 68.3),
         ("BrainMem (memory)", "GPT-4o", "ma2026brainmem", [73.3, 71.7, 80.0, 66.6, 63.3], 71.0),
-        ("EMHO (harness)", "Qwen3.8-27B", "lee2026emho", [86.7, 76.7, 73.3, 76.7, 63.3], 75.3),
-        ("RoboFoundry (self-evolving)", "GPT-6 Astra", "liang2026robofoundry", [90.0, 85.0, 86.7, 73.3, 66.7], 80.3),
+        ("EMHO (harness)$^\\P$", "Qwen3.8-27B", "lee2026emho", [86.7, 76.7, 73.3, 76.7, 63.3], 75.3),
+        ("RoboFoundry (self-evolving)$^\\|$", "GPT-6 Astra", "liang2026robofoundry", [90.0, 85.0, 86.7, 73.3, 66.7], 80.3),
         ("Tool library", "Qwen3-VL-8B", "zhou2026enabling", [85.0, 85.0, 77.0, 75.0, 77.0], 80.0),
         ("Tool library", "GPT-4o", "zhou2026enabling", [80.0, 85.0, 85.0, 80.0, 83.0], 83.0)]),
     ("Fine-tuned", [
-        ("SVA (Q-model)", "Qwen3.5-4B", "xie2026sva", [54.17, 41.67, 45.83, 41.67, 50.00], 46.67),
-        ("MuSix (world models)", "Qwen3-VL-4B", "jang2026musix", [63.2, 63.2, 57.6, 62.4, 43.2], 57.9)]),
+        ("SVA (Q-model)$^\\P$", "Qwen3.5-4B", "xie2026sva", [54.17, 41.67, 45.83, 41.67, 50.00], 46.67),
+        ("MuSix (world models)$^\\P$", "Qwen3-VL-4B", "jang2026musix", [63.2, 63.2, 57.6, 62.4, 43.2], 57.9)]),
 ]
 MACROS = []
 
@@ -105,6 +107,10 @@ MACROS = []
 def macro(name, value, fmt="{:.1f}"):
     assert name.isalpha(), name
     MACROS.append((name, fmt.format(value) if not isinstance(value, str) else value))
+
+
+def M0(name):
+    return next(v for n, v in MACROS if n == name).replace("+", "")
 
 
 def exists(runs):
@@ -516,7 +522,7 @@ def main():
     macro("ScanLongFull", int(min(lw)), "{:d}"); macro("ScanLongAbl", int(max(ll)), "{:d}"); macro("ScanLongP", rel_p(lp, exact=True))
     with open(os.path.join(SEC, "tab_abl.tex"), "w") as f:
         f.write("\\begin{table*}[t]\n\\centering\\small\n\\setlength{\\tabcolsep}{6pt}\n")
-        f.write("\\caption{Components and sensing on EB-Navigation test (Qwen3-VL-4B). $\\Delta$: paired difference from "
+        f.write("\\caption{Components and sensing on EB-Navigation test (Qwen3-VL-4B), success rate (\\%). $\\Delta$ (pp): paired difference from "
                 "the full model; $p$: sign-flip permutation test, Holm-corrected. Bold: significant.}\n\\label{tab:abl}\n")
         f.write("\\begin{tabular}{@{}lrrrrrrrlr@{}}\n\\toprule\n"
                 "Variant & Base & Common & Complex & Visual & Long & Avg. & \\multicolumn{2}{c}{$\\Delta$ (95\\% CI)} & $p$\\\\\n\\midrule\n")
@@ -573,7 +579,11 @@ def main():
         f.write("\\bottomrule\n\\end{tabular}}\\usebox0\n\n\\vspace{0.2em}\\parbox{\\wd0}{\\footnotesize "
                 "$^\\S$Depth sensor and simulator pose. $^\\dagger$RGB only: monocular depth and pose from the executed "
                 "actions (\\cref{sec:sensing}); the comparisons with reported results use this row. "
-                "$^\\ddagger$Geometric planner given the true target position: an upper bound.}\n\\end{table*}\n")
+                "$^\\ddagger$Geometric planner given the true target position: an upper bound. "
+                "$^\\P$Reported on part of each subset: the best held-out score over search iterations on half of it "
+                "(EMHO), or episodes 36--60 (MuSix) and 37--60 (SVA), on which \\ours (RGB only) reaches "
+                "\\nRGBMuSix\\% and \\nRGBSVA\\%. $^\\|$Edits its prompts and code while it runs on the test "
+                "episodes.}\n\\end{table*}\n")
 
     # ---------------- figure data ----------------
     budget = {}
@@ -587,6 +597,45 @@ def main():
         budget[key] = np.mean(curves, axis=0).tolist()
     for key, n in (("eb3", "EB"), ("s2m3", "S"), ("rgb3", "RGB"), ("oracle", "Oracle")):
         macro(f"Bud{n}Ten", budget[key][10]); macro(f"Bud{n}Fifteen", budget[key][15])
+    # ---------------- story numbers ----------------
+    pub = {(r[0], r[1]): r for g, rows in PUBLISHED for r in rows}
+    eb_avg = lambda model: pub[("EB prompt", model)][4]
+    macro("ScaleQwen", eb_avg("Qwen2.5-VL-72B") - eb_avg("Qwen2.5-VL-7B"))      # tenfold scale-up, same family
+    macro("ScaleIntern", eb_avg("InternVL3-78B") - eb_avg("InternVL3-8B"))
+    o_eb, o_s, o_or = (100 * np.mean([O[x][k] for k in ks]) for x in ("eb3", "s2m3", "oracle"))
+    macro("GapClosed", 100 * (o_s - o_eb) / (o_or - o_eb), "{:.0f}")
+    # reported results on part of each subset: S2M (RGB only) on the same episodes (EB order, 1-based)
+    for name, lo in (("MuSix", 36), ("SVA", 37)):
+        sel = [k for k in ks if int(k[1].split("_")[1].split(".")[0]) >= lo]
+        macro(f"RGB{name}", 100 * np.mean([O["rgb3"][k] for k in sel]))
+        macro(f"RGB{name}N", len(sel) // 5, "{:d}")
+    tf = [r for r in PUBLISHED[1][1]]
+    macro("NTrainFree", len(tf), "{:d}")
+    macro("NTrainFreeBelowRGB", sum(r[4] < 100 * np.mean([O["rgb3"][k] for k in ks]) for r in tf), "{:d}")
+    # cost ratios
+    macro("TokRatio", float(M0("TokEB")) / float(M0("TokS")))
+    # wall-clock per environment step on the same GPU (model, simulator and agent; 2 THOR workers for S2M, 1 for EB)
+    def sec_per_step(runs):
+        E = [e for r in runs for e in records(r).values()]
+        return sum(e["elapsed_s"] for e in E) / sum(e["num_steps"] for e in E)
+    t_s, t_rgb, t_eb = sec_per_step(RUN["s2m3"]), sec_per_step(RUN["rgb3"]), sec_per_step(RUN["eb3"])
+    macro("SecS", t_s, "{:.2f}"); macro("SecRGB", t_rgb, "{:.1f}"); macro("SecEB", t_eb, "{:.1f}")
+    macro("SpeedUp", t_eb / t_s, "{:.0f}")
+    macro("TokcRatio", 1000 * float(M0("TokEBc")) / float(M0("TokSc")))
+    # failure reductions (EB prompt -> S2M, Qwen3-VL-4B)
+    for c in ("Never", "Blocked", "Near", "Lost"):
+        macro(f"{c}Red", 100 * (1 - float(M0(f"{c}SThree")) / float(M0(f"{c}EBThree"))), "{:.0f}")
+    # exhaustion: episodes per run in which a hypothesis is exhausted, by subset
+    exh = collections.defaultdict(list)
+    for r in RUN["s2m3"]:
+        R = records(r)
+        for s_ in SUBSETS:
+            exh[s_].append(sum(any(any(len(h) > 3 and h[3] for h in e.get("hyps", [])) for e in R[k]["perception_log"])
+                               for k in ks if k[0] == s_))
+    macro("ExhVisLo", min(exh["visual_appearance"]), "{:d}"); macro("ExhVisHi", max(exh["visual_appearance"]), "{:d}")
+    oth = [v for s_ in SUBSETS if s_ != "visual_appearance" for v in exh[s_]]
+    macro("ExhOtherLo", min(oth), "{:d}"); macro("ExhOtherHi", max(oth), "{:d}")
+
     # every qualitative statement of the text, checked against the numbers it rests on
     M = dict(MACROS)
     num = lambda k: float(M[k].replace("{=}", "").replace("+", "").replace(",", "").split("{")[0])
@@ -626,8 +675,19 @@ def main():
         "S2M above every published agent but the tool library and RoboFoundry (GPT-6 Astra)": all(
             num("SThree") > r[4] for g in PUBLISHED[1:] for r in g[1]
             if r[0] != "Tool library" and r[1] != "GPT-6 Astra"),
+        "GPT-6 Astra row present": any(r[1] == "GPT-6 Astra" for g in PUBLISHED for r in g[1]),
         "S2M below both tool-library agents and RoboFoundry (GPT-6 Astra) (stated in the text)":
-            all(num("SThree") < v for v in (83.0, 80.0, 80.3)),
+            all(num("SThree") < r[4] for g in PUBLISHED[1:] for r in g[1] if r[0] == "Tool library" or r[1] == "GPT-6 Astra"),
+        "RGB-only above both fine-tuned 4B agents on the episodes they report": num("RGBMuSix") > pub[("MuSix (world models)$^\\P$", "Qwen3-VL-4B")][4]
+            and num("RGBSVA") > pub[("SVA (Q-model)$^\\P$", "Qwen3.5-4B")][4],
+        "RGB-only above six of the nine training-free agents": num("NTrainFreeBelowRGB") == 6 and num("NTrainFree") == 9,
+        "Long: S2M and RGB-only above every reported agent but the tool library on GPT-4o": all(
+            min(num("SThreeLong"), num("RGBThreeLong")) > r[3][4] for g in PUBLISHED for r in g[1]
+            if not (r[0] == "Tool library" and r[1] == "GPT-4o")),
+        "role change as large as a tenfold scale-up (4B), more than twice the Qwen2.5 one (3B)": num("GainThree") > num("ScaleQwen")
+            and abs(num("GainThree") - num("ScaleIntern")) < 1 and num("GainTwo") > 2 * num("ScaleQwen"),
+        "exhaustion fires most often on Visual": num("ExhVisLo") > num("ExhOtherHi"),
+        "S2M at least 5x faster per step than the EB prompt, RGB-only still faster": num("SpeedUp") >= 5 and num("SecRGB") < num("SecEB"),
         "RoboTHOR: S2M SR above every zero-shot method but ForesightNav and STRIVE": all(num("RoboSR") > v for v in
             (26.7, 35.0, 38.1, 41.2, 42.3, 44.1, 47.5, 48.0, 54.6, 57.5)) and num("RoboSR") < min(62.5, 68.1),
         "RoboTHOR: S2M SPL above every method but STRIVE": all(num("RoboSPL") > v for v in

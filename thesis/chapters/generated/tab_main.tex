@@ -19,20 +19,19 @@ EB prompt~\cite{yang2025embodiedbench} & Qwen2.5-VL-7B & 20.0 & 26.7 & 38.3 & 16
 MOSAIC (module graph)~\cite{wang2026mosaic} & Qwen3-VL-8B & 60.0 & 46.7 & 45.6 & 51.1 & 46.7 & 50.0 &\\
 ESCA (scene graph)~\cite{huang2025esca} & GPT-4o & 66.7 & 62.0 & 63.3 & 55.0 & 26.7 & 54.7 &\\
 EmbodiSkill (skills)~\cite{ju2026embodiskill} & Qwen3-VL-32B & 65.0 & 68.0 & 73.0 & 67.0 & 33.0 & 61.3 &\\
-HODAgent (agent loop)~\cite{chen2026hodagent} & Qwen3.6-35B-A3B & 76.7 & 55.0 & 68.3 & 55.0 & 36.7 & 58.3 &\\
-RoboFoundry (self-evolving)~\cite{liang2026robofoundry} & Qwen3.8-27B & 76.7 & 85.0 & 73.3 & 63.3 & 43.3 & 68.3 &\\
+RoboFoundry (self-evolving)$^\|$~\cite{liang2026robofoundry} & Qwen3.8-27B & 76.7 & 85.0 & 73.3 & 63.3 & 43.3 & 68.3 &\\
 BrainMem (memory)~\cite{ma2026brainmem} & GPT-4o & 73.3 & 71.7 & 80.0 & 66.6 & 63.3 & 71.0 &\\
-EMHO (harness)~\cite{lee2026emho} & Qwen3.8-27B & 86.7 & 76.7 & 73.3 & 76.7 & 63.3 & 75.3 &\\
-RoboFoundry (self-evolving)~\cite{liang2026robofoundry} & GPT-6 Astra & 90.0 & 85.0 & 86.7 & 73.3 & 66.7 & 80.3 &\\
+EMHO (harness)$^\P$~\cite{lee2026emho} & Qwen3.8-27B & 86.7 & 76.7 & 73.3 & 76.7 & 63.3 & 75.3 &\\
+RoboFoundry (self-evolving)$^\|$~\cite{liang2026robofoundry} & GPT-6 Astra & 90.0 & 85.0 & 86.7 & 73.3 & 66.7 & 80.3 &\\
 Tool library~\cite{zhou2026enabling} & Qwen3-VL-8B & 85.0 & 85.0 & 77.0 & 75.0 & 77.0 & 80.0 &\\
 Tool library~\cite{zhou2026enabling} & GPT-4o & 80.0 & 85.0 & 85.0 & 80.0 & 83.0 & 83.0 &\\
 \multicolumn{9}{@{}l}{\textit{Fine-tuned}}\\
-SVA (Q-model)~\cite{xie2026sva} & Qwen3.5-4B & 54.2 & 41.7 & 45.8 & 41.7 & 50.0 & 46.7 &\\
-MuSix (world models)~\cite{jang2026musix} & Qwen3-VL-4B & 63.2 & 63.2 & 57.6 & 62.4 & 43.2 & 57.9 &\\
+SVA (Q-model)$^\P$~\cite{xie2026sva} & Qwen3.5-4B & 54.2 & 41.7 & 45.8 & 41.7 & 50.0 & 46.7 &\\
+MuSix (world models)$^\P$~\cite{jang2026musix} & Qwen3-VL-4B & 63.2 & 63.2 & 57.6 & 62.4 & 43.2 & 57.9 &\\
 \midrule
 \multicolumn{9}{@{}l}{\textit{Ours (one 8\,GB GPU)}}\\
 EB prompt & Qwen3-VL-4B & 66.7 & 65.0 & 65.0 & 53.3 & 25.0 & 55.0 & \\
-Modular, single view$^\S$ & Qwen3-VL-4B & 73.3 & 63.3 & 63.3 & 51.7 & 73.3 & 65.0 & \\
+Modular, single view$^\S$ & Qwen3-VL-4B & 68.3 & 66.7 & 68.3 & 50.0 & 70.0 & 64.7 & \\
 \ours{}$^\S$ & Qwen3-VL-4B & \textbf{87.8} & \textbf{83.9} & \textbf{85.0} & \textbf{59.4} & \textbf{80.0} & \textbf{79.2} & {\scriptsize$\pm$0.7}\\
 \ours, RGB only$^\dagger$ & Qwen3-VL-4B & 83.3 & 80.0 & 80.0 & 59.2 & 77.5 & 76.0 & {\scriptsize$\pm$0.9}\\
 \midrule
@@ -43,5 +42,5 @@ Oracle target$^\ddagger$ & true position & 93.3 & 93.3 & 93.3 & 93.3 & 83.3 & 91
 \bottomrule
 \end{tabular}}}\usebox0
 
-\vspace{0.2em}\parbox{\wd0}{\footnotesize $^\S$Depth sensor and simulator pose. $^\dagger$RGB only: monocular depth and pose from the executed actions (\cref{sec:sensing}); the comparisons with reported results use this row. $^\ddagger$Geometric planner given the true target position: an upper bound.}
+\vspace{0.2em}\parbox{\wd0}{\footnotesize $^\S$Depth sensor and simulator pose. $^\dagger$RGB only: monocular depth and pose from the executed actions (\cref{sec:sensing}); the comparisons with reported results use this row. $^\ddagger$Geometric planner given the true target position: an upper bound. $^\P$Reported on part of each subset: the best held-out score over search iterations on half of it (EMHO), or episodes 36--60 (MuSix) and 37--60 (SVA), on which \ours (RGB only) reaches \nRGBMuSix\% and \nRGBSVA\%. $^\|$Edits its prompts and code while it runs on the test episodes.}
 \end{table}

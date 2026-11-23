@@ -38,7 +38,7 @@ $q_t$ & floor point to which a box is lifted\\
 $\mu_k$, $w_k$, $V_k$ & position, evidence, and viewing poses of hypothesis $k$\\
 $M_t$ & occupancy map\\
 $\mathcal{B}_t$ & belief, the hypotheses together with the map\\
-$\tau_c$, $\tau_k$ & commit and keep thresholds\\
+$\tau_\mathrm{c}$, $\tau_\mathrm{keep}$ & commit and keep thresholds\\
 \bottomrule
 \end{tabular*}
 \end{table}
@@ -167,17 +167,17 @@ Monocular depth & Depth Anything V2 Metric-Indoor-Base, on the CPU\\
 \section{Protocol and statistics}
 \label{sec:pre-protocol}
 \subsection{Development and test splits}
-All design choices and parameters of \ours were selected on a separate development split and frozen before the
-first test run. EmbodiedBench provides targets and instruction variants for 90 iTHOR rooms, and its test set uses 60
-of them. Rerunning the benchmark's own generator on the other 30 rooms gives a development split of 150 episodes in
-five subsets of 30 (\cref{sec:appB-dev}). Test results are reported only on the complete official splits.
+All design choices and parameters of \ours were selected on a separate development split and frozen before its
+test runs. EmbodiedBench provides targets and instruction variants for 90 iTHOR rooms, and its test set uses 60
+of them. Rerunning the benchmark's own generator on the other 30 rooms gives 150 development targets in five subsets of
+30; three generator seeds give each target three start poses, 450 development episodes in all (\cref{sec:appB-dev}). Test results are reported only on the complete official splits.
 
 \subsection{Statistical tests}
-All agents run on the same 300 test episodes, so each comparison uses per-episode differences. \ours was run four
+All agents run on the same 300 test episodes, so each comparison uses per-episode differences. \ours was run three
 times on the EB-Navigation test set and the RGB-only configuration twice; a configuration run several times enters
 with its per-episode mean success. Confidence intervals are percentile intervals of $10^4$ episode-level bootstrap
 resamples~\cite{efron1993bootstrap}. $p$-values are two-sided sign-flip permutation tests with $10^6$ random sign
-assignments. The ten ablation variants of \cref{sec:exp-ablation} are corrected together with the Holm
+assignments. The seven ablation variants of \cref{sec:exp-ablation} are corrected together with the Holm
 procedure~\cite{holm1979simple}, and comparisons of two single binary runs use the exact McNemar
 test~\cite{mcnemar1947note}.
 
@@ -190,7 +190,7 @@ outcomes, so only episodes on which the agents disagree carry information. The b
 per-episode differences, and the sign-flip test asks how often a random assignment of signs to them produces a mean
 difference as large as the observed one. When one agent was run several times, its per-episode mean success
 enters the comparison, which uses all runs without counting the same episode twice. The Holm procedure controls the
-probability of any false positive among the ten ablation variants at 5\%, which is stricter than testing each
+probability of any false positive among the seven ablation variants at 5\%, which is stricter than testing each
 variant on its own.
 
 \section{Summary}

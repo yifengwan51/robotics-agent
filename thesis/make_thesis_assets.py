@@ -14,7 +14,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEST = os.path.join(ROOT, "runs", "eb_nav", "test")
 OUT = os.path.join(ROOT, "thesis", "chapters", "generated")
 S2M, EB, MOD = ("s2m_Qwen3-VL-4B-Instruct-AWQ_simp4_r1", "eb_Qwen3-VL-4B-Instruct-FP8_eb_official_r1",
-                "s2m_Qwen3-VL-4B-Instruct-AWQ_modular_baseline_r1")
+                "s2m_Qwen3-VL-4B-Instruct-AWQ_simp4_modular_r1")
 M = {}
 
 

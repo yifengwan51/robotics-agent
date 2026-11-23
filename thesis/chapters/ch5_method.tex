@@ -50,7 +50,7 @@ occupancy map $M_t$. \Cref{fig:mech} shows one step as a flowchart, and \cref{al
 phrase $s$ on the frame $I_t$; a weak answer is checked on a magnified crop, which sets its weight $a_t$. The box is
 lifted to a floor point $q_t$ with depth $D_t$ and pose $p_t$ and fused into a hypothesis $\mu_k$ within $r$, or
 starts one; $\gamma_t<1$ discounts a repeated view, and a hypothesis reached without ending the task is exhausted.
-Above $\tau_c$ a hypothesis $\mu_k$ with evidence $w_k$ is committed; A* on the map $M_t$ gives the action $u_t$.}
+Above $\tau_\mathrm{c}$ a hypothesis $\mu_k$ with evidence $w_k$ is committed; A* on the map $M_t$ gives the action $u_t$.}
 \label{fig:mech}
 \end{figure}
 
@@ -68,7 +68,7 @@ $(\pi_t,b_t)\leftarrow$ presence and box queries of $f$ on $(I_t,s)$, in paralle
 \ForEach{observation $(q_t,a_t)$}{
   fuse into the first $\mu_k$ within $r$ (\cref{eq:fuse}), else create a new hypothesis $(q_t,a_t)$\;
 }
-\uIf{some hypothesis is committed ($w_k\ge\tau_c$, kept while $w_k\ge\tau_k$)}{
+\uIf{some hypothesis is committed ($w_k\ge\tau_\mathrm{c}$, kept while $w_k\ge\tau_\mathrm{keep}$)}{
   $k^\star\leftarrow$ the committed hypothesis with the largest evidence\;
   \lIf{the agent is within 0.9\,m of $\mu_{k^\star}$}{mark $k^\star$ exhausted and select again}
   \Return{the first action of A* from $p_t$ to $\mu_{k^\star}$ on $M$}\;
@@ -103,15 +103,15 @@ token.
 \subsection{Lifting}
 \label{sec:method-lift}
 A box with centre $c(b_t)=(u,v)$ is lifted with the median depth $\tilde d_t$ over its central half, that is, half
-its width and half its height, which discards background pixels at the box border. With focal length $\varphi$ and
+its width and half its height, which discards background pixels at the box border. With focal length $\lambda$ and
 principal point $(u_0,v_0)$ of the pinhole camera, tilt $\phi_t$, and the forward and right unit vectors
 $e_f(\theta_t),e_r(\theta_t)$ of the heading,
 \begin{equation}
-q_t=x_t+\tilde d_t\Big[\big(\cos\phi_t-\tfrac{v-v_0}{\varphi}\sin\phi_t\big)\,e_f(\theta_t)
-+\tfrac{u-u_0}{\varphi}\,e_r(\theta_t)\Big],
+q_t=x_t+\tilde d_t\Big[\big(\cos\phi_t-\tfrac{v-v_0}{\lambda}\sin\phi_t\big)\,e_f(\theta_t)
++\tfrac{u-u_0}{\lambda}\,e_r(\theta_t)\Big],
 \label{eq:lift}
 \end{equation}
-which is written $q_t=\Pi_{p_t}^{-1}(c(b_t),\tilde d_t)$. Lifts with $\tilde d_t>6$\,m are discarded. The same
+Lifts with $\tilde d_t>6$\,m are discarded. The same
 back-projection, with the known camera height, labels each depth pixel as floor (height below 0.10\,m) or obstacle
 (0.10--1.9\,m) and writes it into a 5\,cm occupancy grid $M_t$~\cite{elfes1989occupancy}.
 
@@ -131,13 +131,14 @@ weak. A rejected crop does not delete the box; it enters with a small weight tha
 \section{Metric hypothesis memory}
 \label{sec:method-memory}
 \subsection{Association and fusion}
-Each hypothesis $k$ stores a floor position $\mu_k$, evidence $w_k$, and the poses $V_k$ from which it was observed.
+Each hypothesis $k$ stores a floor position $\mu_k$, evidence $w_k$, the number $n_k$ of fused observations, and the
+poses $V_k$ from which it was observed.
 An observation $(q_t,a_t)$ is associated with the first hypothesis within $r=0.5$\,m. If there is one,
 \begin{equation}
 \mu_k\leftarrow\frac{n_k\mu_k+q_t}{n_k+1},\qquad w_k\leftarrow w_k+\gamma_t\,a_t ,
 \label{eq:fuse}
 \end{equation}
-with $n_k$ the number of fused observations; otherwise a new hypothesis $(\mu,w)=(q_t,a_t)$ is created. The
+otherwise a new hypothesis $(\mu,w)=(q_t,a_t)$ is created. The
 discount is $\gamma_t=0.25$ if some $v\in V_k$ has the heading of $p_t$ and a position within 0.2\,m of it, and
 $\gamma_t=1$ otherwise.
 
@@ -148,7 +149,7 @@ repeatedly from one place cannot accumulate the evidence of a target confirmed f
 
 \subsection{Commitment, hysteresis, and exhaustion}
 \label{sec:method-commit}
-The agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while $w_k\ge\tau_k=0.4$. The hysteresis
+The agent commits to a hypothesis once $w_k\ge\tau_\mathrm{c}=0.8$ and keeps it while $w_k\ge\tau_\mathrm{keep}=0.4$. The hysteresis
 prevents one missed detection from abandoning a well-supported target. When the agent stands within 0.9\,m of a
 committed hypothesis and the episode continues, which on EB-Navigation means that it is not the target, the
 hypothesis is marked exhausted. It stays in memory, so later detections of the same look-alike merge into it instead
@@ -193,12 +194,12 @@ that the 0.25\,m action grid cannot plan.
 \Cref{tab:trace} follows the memory of \ours through the Long-horizon test episode of \cref{fig:arch}, in which
 the target is an alarm clock behind the agent. In the first two steps the agent turns and sees nothing ($\pi_t\approx0$).
 At step 2 the alarm clock enters the view; the box is lifted and creates a hypothesis with evidence $0.78$, just
-below $\tau_c$. The hypothesis is in view, so the agent walks toward it instead of turning away, and the next view
+below $\tau_\mathrm{c}$. The hypothesis is in view, so the agent walks toward it instead of turning away, and the next view
 commits it. The evidence then grows with each new viewpoint. At steps 5 and 8 the full-frame presence answer is low
 although a box is returned, the crop check confirms the target, and the evidence increases by the crop's presence. At
 step 7 the model boxes a look-alike instead; the crop check gives it a weight of 0.06, and the commitment to the
 target is unaffected. At step 9 the crop check rejects the box, so the step adds no evidence. At step 11 a second
-look-alike reaches 0.95, but the agent keeps its committed target, whose evidence is above $\tau_k$ and far larger.
+look-alike reaches 0.95, but the agent keeps its committed target, whose evidence is above $\tau_\mathrm{keep}$ and far larger.
 The episode ends successfully at step \tTraceSteps{} with the target hypothesis at $w=\tTraceFinalW$.
 
 \begin{table}[htbp]
@@ -206,7 +207,7 @@ The episode ends successfully at step \tTraceSteps{} with the target hypothesis 
 \caption[Evidence of every hypothesis in one episode]{Evidence of every hypothesis of \ours in the Long-horizon test
 episode of \cref{fig:arch} (Qwen3-VL-4B, target: \tTraceTarget). Observation: what the box query returned; $\pi_t$:
 full-frame presence; $\pi^z_t$: presence on the crop; $a_t$: weight of the observation (\cref{eq:weight}); $w$:
-evidence after the step; Action: the action taken. Bold: the target hypothesis is committed ($w\ge\tau_c$).}
+evidence after the step; Action: the action taken. Bold: the target hypothesis is committed ($w\ge\tau_\mathrm{c}$).}
 \label{tab:trace}
 \input{chapters/generated/tab_trace}
 \end{table}
@@ -219,9 +220,9 @@ hysteresis keeps the agent on its target when another candidate appears.
 \label{sec:method-params}
 The parameters of \ours (\cref{tab:s-params}) follow from the geometry of the task and were set on the development
 split. The association radius $r=0.5$\,m is half the success radius, so two detections of one object fall into one
-hypothesis while two objects on different pieces of furniture stay apart. The commit threshold $\tau_c=0.8$ is
+hypothesis while two objects on different pieces of furniture stay apart. The commit threshold $\tau_\mathrm{c}=0.8$ is
 reached by one confident answer from a named target ($\pi_t\ge0.8$) or by two moderate answers from different
-viewpoints, and the keep threshold $\tau_k=0.4$ keeps a committed target unless its evidence was low to begin with.
+viewpoints, and the keep threshold $\tau_\mathrm{keep}=0.4$ keeps a committed target unless its evidence was low to begin with.
 The repeated-view discount $\gamma=0.25$ allows four looks from the same place to add as much as one look from a new
 place.
 
@@ -229,12 +230,12 @@ place.
 \label{sec:method-rgb}
 \subsection{Per-frame ground-plane scale}
 Monocular metric depth networks err mostly by a frame-dependent scale. Let $\hat D_t$ be the raw prediction and
-$\kappa(v)=\sin\phi_t+\frac{v-v_0}{\varphi}\cos\phi_t$ the downward component of the ray through row $v$ per unit of
-planar depth. A pixel on the floor satisfies $\sigma\hat D_t(u,v)\,\kappa(v)=h$ for the camera height $h$, and an
+$\kappa(v)=\sin\phi_t+\frac{v-v_0}{\lambda}\cos\phi_t$ the downward component of the ray through row $v$ per unit of
+planar depth. A pixel on the floor satisfies $\sigma\hat D_t(u,v)\,\kappa(v)=h_\mathrm{c}$ for the camera height $h_\mathrm{c}$, and an
 object standing on the floor gives a larger $\sigma$. Over the pixels $\mathcal{F}_t$ whose rays point at least
 15$^\circ$ below the horizontal, \ours takes the mode
 \begin{equation}
-\sigma_t=\operatorname*{mode}_{(u,v)\in\mathcal{F}_t}\ \frac{h}{\hat D_t(u,v)\,\kappa(v)},\qquad D_t=\sigma_t\,\hat D_t ,
+\sigma_t=\operatorname*{mode}_{(u,v)\in\mathcal{F}_t}\ \frac{h_\mathrm{c}}{\hat D_t(u,v)\,\kappa(v)},\qquad D_t=\sigma_t\,\hat D_t ,
 \label{eq:floorscale}
 \end{equation}
 with the mode taken over values in $[\bar\sigma/1.33,\,1.33\,\bar\sigma]$, where $\bar\sigma$ is one global scale

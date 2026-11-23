@@ -57,7 +57,7 @@ Memory & association radius $r$ & 0.5\,m\\
  & repeated-view discount $\gamma$ & 0.25\\
  & same view: position, heading & 0.2\,m, equal\\
  & RoboTHOR only: negative evidence, range & 0.4, 3\,m\\
-Search & commit $\tau_c$ / keep $\tau_k$ & 0.8 / 0.4\\
+Search & commit $\tau_\mathrm{c}$ / keep $\tau_\mathrm{keep}$ & 0.8 / 0.4\\
  & approach a weak hypothesis & $w_k\ge0.35$\\
  & exhaustion radius & 0.9\,m\\
  & exploration goal distance & 0.75--3\,m\\
@@ -87,8 +87,7 @@ Locate the $\langle s\rangle$ in the image and output its bounding box as JSON: 
 "label": "$\langle s\rangle$"\}]. If it is not in the image, output [].
 \end{quote}
 The presence query generates one token and reads $P(\textit{yes})$ and $P(\textit{no})$ from the ten most likely
-first tokens (\cref{eq:s-presence}). The crop check asks the presence query and each tile the box query, both on
-the magnified image. Box replies are parsed with one regular expression; a box narrower than 2\,px counts as no box.
+first tokens (\cref{eq:s-presence}). The crop check asks the presence query on the magnified crop. Box replies are parsed with one regular expression; a box narrower than 2\,px counts as no box.
 \begin{equation}
 \pi_t=\frac{\sum_{y\in\textit{yes}}P(y)}{\sum_{y\in\textit{yes}}P(y)+\sum_{n\in\textit{no}}P(n)} ,
 \label{eq:s-presence}
@@ -100,6 +99,19 @@ Both models run in vLLM with their 4-bit AWQ checkpoints, temperature 0, and at 
 and one for a presence answer. Qwen2.5-VL receives frames resized to at most 409{,}600 pixels; Qwen3-VL uses its
 default processor. The two per-frame queries are sent in parallel.
 
+\noindent\textbf{RoboTHOR agent.}
+The RoboTHOR agent was frozen on 24 episodes of two training scenes, before the EB-Navigation agent was simplified,
+and keeps three parts that the EB-Navigation agent no longer has. The instruction is ``Find a $\langle$category$\rangle$.''
+\emph{Negative evidence}: a hypothesis within 3\,m that projects into the image unoccluded but is not detected loses
+0.4 of evidence, at most once per view (1\,m cell and 60$^\circ$ sector), so that hundreds of poor looks in a 500-step
+episode cannot erase a true target. \emph{Tiled search}: when a view yields no accepted detection and nothing is
+committed, the frame is split into $3{\times}3$ magnified tiles, each asked the box query; up to four boxes are checked
+with the crop presence query and enter with its probability if it exceeds 0.5. \emph{Exploration}: after a full
+look-around (twelve 30$^\circ$ turns, repeated after 1.5\,m of travel), the agent goes to the nearest observed free
+cell next to unknown space that is at least 1.3\,m away and 1\,m from every visited position; when none is left, it
+revisits the hypothesis with the highest evidence ever reached. The stop test is that of Sec.~4.4: within 0.9\,m,
+turned within 20$^\circ$, tilted into view, and a fresh presence probability of at least 0.5.
+
 \section{Protocol}
 \label{sec:s-protocol}
 
@@ -108,9 +120,11 @@ EmbodiedBench provides target objects and the three instruction variants for 90 
 60 of them (FloorPlan11--30, 211--230, 311--330). We rerun the benchmark's own generator on the other 30
 (FloorPlan1--10, 201--210, 301--310): a start pose 2.5--3.0\,m from the first instance of the target with the camera
 level, Common, Complex, and Visual from the same targets with the benchmark's instruction variants, and Long as Base
-with the start heading rotated by 180$^\circ$. This yields five subsets of 30 episodes. Every parameter of
-\cref{tab:s-params} and every design choice of Sec.~4 was selected on this split, and the configuration was
-frozen before the first test run.
+with the start heading rotated by 180$^\circ$. This yields five subsets of 30 targets. Running the generator with
+three seeds gives each target three start poses, 450 episodes in all. Every parameter of \cref{tab:s-params} and
+every design choice of Sec.~4 was selected on this split. Each of the four components was kept only if removing it
+lowered development success (paired McNemar over the 450 episodes, Holm over the four, $p<0.05$; all four had $p\le0.003$); the configuration
+was then frozen before its test runs.
 
 \noindent\textbf{Statistics.}
 All agents run on the same 300 test episodes, so each comparison uses per-episode differences. A configuration run
@@ -163,7 +177,9 @@ repeatedly).}
 \noindent\textbf{Cost.}
 Per episode, \ours makes \nCallsS{} VLM calls against \nCallsEB{} for the EB prompt, but each call asks one short
 question: it reads \nTokS{}k prompt tokens and generates \nTokSc{} tokens, against \nTokEB{}k and \nTokEBc{}k for the EB
-prompt, whose plans and reasoning dominate its generation.
+prompt, whose plans and reasoning dominate its generation. Wall-clock time per step, with the model, the simulator,
+and the agent on one RTX~5060, is \nSecS\,s for \ours, \nSecRGB\,s for its RGB-only configuration, and \nSecEB\,s for
+the EB prompt.
 
 \noindent\textbf{RoboTHOR by category.}
 \Cref{tab:s-robothor} lists success and SPL for each of the twelve categories.

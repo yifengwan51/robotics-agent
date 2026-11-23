@@ -7,9 +7,11 @@ EmbodiedBench provides target objects and the three instruction variants for 90 
 60 of them (FloorPlan11--30, 211--230, 311--330). We rerun the benchmark's own generator on the other 30
 (FloorPlan1--10, 201--210, 301--310): a start pose 2.5--3.0\,m from the first instance of the target with the camera
 level, Common, Complex, and Visual from the same targets with the benchmark's instruction variants, and Long as Base
-with the start heading rotated by 180$^\circ$. This yields five subsets of 30 episodes. Every parameter of
-\cref{tab:s-params} and every design choice of \cref{chap:method} was selected on this split, and the configuration was
-frozen before the first test run.
+with the start heading rotated by 180$^\circ$. This yields five subsets of 30 targets; three generator seeds give
+each target three start poses, 450 episodes in all. Every parameter of \cref{tab:s-params} and every design choice of
+\cref{chap:method} was selected on this split. Each of the four components was kept only if removing it lowered
+development success (paired McNemar over the 450 episodes, Holm over the four, $p<0.05$; all four had $p\le0.003$),
+and the configuration was then frozen before its test runs.
 
 \section{Statistics}
 All agents run on the same 300 test episodes, so each comparison uses per-episode differences. A configuration run

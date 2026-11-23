@@ -1,16 +1,18 @@
 \begin{abstract}
-Robots that follow open instructions need vision-language models (VLMs) small enough to run on board, yet
-multimodal LLM agents work only at frontier scale. These agents give one model every role: it reads the image and
-its own history, tracks the room, and writes the plan. Here we show that small VLMs fail in this role because of
-the role, not because they cannot see. On EB-Navigation, Qwen3-VL-4B prompted as the benchmark's agent solves
-\nEBThree\% of the test episodes, whereas a geometric planner given the target position solves \nOracle\% and the
-model boxes a visible target in \nProbeThreeCommon--\nProbeThreeBase\% of single views; what fails is keeping
-spatial state in generated text. We therefore recast the VLM from planner to sensor. \ours (Semantic-to-Metric) is
-a training-free navigation agent that asks the VLM only what the current image can answer, whether the target is
-visible and where, and keeps all state in metric form: a hypothesis memory lifts each answer with depth and pose,
-accumulates evidence across distinct viewpoints, and discards a candidate once reaching it does not end the task. With the model at 4-bit on one 8\,GB GPU, \ours reaches \nSThree\%, ${+}\nGainThree$\,pp over the
-benchmark's agent and ${+}\nSOverMod$\,pp over a generic modular agent with the same model, and \nRGBThree\% from
-RGB alone, above both fine-tuned 4B agents and seven of ten training-free agents built on larger models. With
-Qwen2.5-VL-3B it lifts success from \nEBTwo\% to \nSTwo\%, and on RoboTHOR ObjectNav it reaches \nRoboSR\%. Asking a
-small model only what it can see turns it into a competitive navigator.
+Multimodal LLM agents for embodied tasks improve with scale: on EB-Navigation, a tenfold larger model of the same
+family adds \nScaleQwen--\nScaleIntern\,pp, and the models a robot can carry fail most episodes that start with the
+target out of view. We show that this gap comes mostly from the role the model is given, not from its size. Prompted
+as the benchmark's agent, Qwen3-VL-4B solves \nEBThree\% of the test episodes, yet a geometric planner given the
+target position solves \nOracle\%, and the same model boxes a visible named target in
+\nProbeThreeCommon--\nProbeThreeBase\% of single views. What fails is keeping spatial state in generated text. We
+therefore turn the VLM from planner into sensor. \ours (Semantic-to-Metric) is a training-free agent that asks the VLM
+only what the current image can answer, whether the target is visible and where, and keeps everything else in metric
+form: a hypothesis memory lifts each answer with depth and pose, accumulates evidence across distinct viewpoints, and
+discards a candidate once reaching it does not end the task. With the 4B model at 4-bit on one 8\,GB GPU, \ours
+reaches \nSThree\%, ${+}\nGainThree$\,pp over the benchmark's agent, as much as a tenfold larger model gives, and
+${+}\nSOverMod$\,pp over a modular agent that acts on single-view answers. From RGB alone it reaches \nRGBThree\%,
+above GPT-4o, \nNTrainFreeBelowRGB{} of \nNTrainFree{} training-free agents built on larger models, and both
+fine-tuned 4B agents. With Qwen2.5-VL-3B it lifts success from \nEBTwo\% to \nSTwo\%, more than twice what a tenfold
+scale-up of that family gives, and on RoboTHOR ObjectNav it reaches \nRoboSR\% zero-shot. Asked only what they
+can see, small VLMs navigate.
 \end{abstract}

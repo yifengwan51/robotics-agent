@@ -28,9 +28,10 @@ about where the target is, and writes a plan of the next actions.
 
 \section{Motivation}
 \label{sec:intro-motivation}
-This design works at frontier scale. GPT-4o succeeds in 57.7\% of the EB-Navigation episodes. Open models with at
-most 8B parameters reach only 14.0--29.3\% overall and 0--5\% on the Long-horizon subset, in which the target
-starts behind the agent~\cite{yang2025embodiedbench}.
+The success of this design tracks model size. GPT-4o succeeds in 57.7\% of the EB-Navigation episodes and
+InternVL3-78B in 53.7\%, while models of 7--8B reach 20.3--29.3\% overall and 0--5\% on the Long-horizon subset, in
+which the target starts behind the agent~\cite{yang2025embodiedbench}. A tenfold larger model of the same family adds
+\nScaleQwen--\nScaleIntern{} percentage points.
 
 The gap matters because a robot has good reasons to use a small local model. A model that runs on the robot's own
 computer or on a consumer GPU works without a network connection, answers with a predictable latency, keeps camera
@@ -68,7 +69,7 @@ separates these causes with controlled experiments on the same test episodes (\c
 the model only the role it can fill. The thesis asks which components such an agent needs and which of them carry
 the gain (\cref{chap:method,sec:exp-modular,sec:exp-ablation}).
 \item[RQ3. How close does this agent come to agents built on larger models?] The thesis compares the agent with the
-benchmark's agent and a generic modular agent that use the same model, with published agents built on larger
+benchmark's agent and a modular agent that use the same model, with published agents built on larger
 models, without a depth sensor, with a smaller model, and on a second benchmark that requires an explicit stop
 (\cref{chap:experiments}).
 \end{description}
@@ -110,15 +111,19 @@ sees the history.
 the instruction $\ell$, and the history $h_t$ to a text plan $u_{t:t+m}$ with the VLM $f$. \textbf{(b)}~\ours asks
 $f$ for the presence $\pi_t$ and box $b_t$ of the phrase $s$, lifts them with depth $D_t$ and pose $p_t$ into
 hypotheses $\mu_k$ with evidence $w_k$, selects $k^\star$, and plans $u_t$ on the map $M_t$. Thumbnails: a
-Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) passing the commit
-threshold $\tau_c$ while two look-alikes (grey) fall below zero, and the map with the path, the target (orange), and
-the look-alikes ($\times$). Blue: the frozen VLM; orange: the memory of \ours.}
+Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) rising to ten times
+the commit threshold $\tau_\mathrm{c}$ while two look-alikes (grey) stay near or below it, and the map with the path,
+the target (orange), and the look-alikes ($\times$). Blue: the frozen VLM; orange: the hypothesis memory of \ours and
+the selection that reads it.}
 \label{fig:arch}
 \end{figure}
 
 The agent is evaluated on the full EB-Navigation test set and the full RoboTHOR validation split with two model
-generations, repeated runs, and paired statistics. With Qwen3-VL-4B at 4-bit, \ours succeeds in \nSThree\% of the
-EB-Navigation test episodes, \nGainThree{} percentage points more than the benchmark's agent with the same model.
+generations, repeated runs, and paired statistics. Changing the model's role moves it further than scaling it. With
+Qwen3-VL-4B at 4-bit, \ours succeeds in \nSThree\% of the EB-Navigation test episodes, \nGainThree{} percentage points
+more than the benchmark's agent with the same model, as much as the tenfold scale-up from InternVL3-8B to 78B gives,
+and it closes \nGapClosed\% of the gap to the oracle planner. Each step takes \nSecS\,s instead of \nSecEB\,s, because
+the model answers two short questions instead of writing a plan.
 
 \section{Contributions}
 \label{sec:intro-contrib}
@@ -131,12 +136,13 @@ recognize the target or plan a path. The diagnosis yields four predictions, all 
 the VLM only questions that the current image can settle, and the VLM never sees the history, the map, or the plan.
 \item \textbf{Evidence fusion for a generative sensor.} A metric hypothesis memory accumulates the model's presence
 and box answers over distinct viewpoints and discards look-alikes on arrival, which turns unreliable single
-answers into a stable target. A generic modular agent that acts on single-view answers with the same model and the
-same planner trails \ours by \nSOverMod{} percentage points.
+answers into a stable target. A modular agent that is \ours without fusion and the crop check, and so acts on single-view
+answers with the same model and planner, trails \ours by \nSOverMod{} percentage points.
 \item \textbf{Navigation from RGB alone.} A per-frame ground-plane scale for monocular depth raises RGB-only success
 from \nRGBGlobal\% with a global scale to \nRGBThree\%, within \nGapRGBAbs{} percentage points of a depth sensor.
-\item \textbf{A training-free 4B agent that rivals far larger ones.} From RGB alone, \ours is above both fine-tuned 4B
-agents and seven of ten training-free agents built on 8B to frontier-scale models. With Qwen2.5-VL-3B~\cite{bai2025qwen25vl}
+\item \textbf{A training-free 4B agent that rivals far larger ones.} From RGB alone, \ours is above GPT-4o, both fine-tuned
+4B agents, and \nNTrainFreeBelowRGB{} of \nNTrainFree{} training-free agents built on 8B to frontier-scale models; with a depth sensor, changing the
+model's role gives as much as a tenfold larger model. With Qwen2.5-VL-3B~\cite{bai2025qwen25vl}
 its gain over the benchmark's agent grows to \nGainTwo{} percentage points, and on RoboTHOR it reaches \nRoboSR\%
 success, above ten published zero-shot methods.
 \end{enumerate}

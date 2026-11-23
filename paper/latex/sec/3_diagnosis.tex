@@ -35,14 +35,14 @@ the agent has turned, must be carried by $h_t$ and the generated reasoning. \our
 \end{equation}
 where $s$ is a target phrase, $f$ answers only questions about $I_t$, and the metric belief $\mathcal{B}_t$ and the
 planner $\rho$ hold all state and every decision (\cref{sec:method,fig:mech}). The configuration of \ours was fixed on a
-development split of 150 episodes that we built with the benchmark's generator on 30 iTHOR rooms not used by the test
-set.
+development split that we built with the benchmark's generator on the 30 iTHOR rooms not used by the test set: 150
+targets with three start poses each, 450 episodes.
 
 \noindent\textbf{Planning is not the bottleneck.}
 Replacing the target belief of \ours by the true $x^\star$, with the same occupancy map and planner, solves
 \nOracle\% of the 300 test episodes (\nOracleBase\% on each of the first four subsets and \nOracleLong\% on Long).
 
-\noindent\textbf{Single views are informative but unreliable.}
+\noindent\textbf{The model can see.}
 For each test episode of the first four subsets we render the start view and the three other 90$^\circ$ headings
 and query the VLM with the phrase $s$. Qwen3-VL-4B places a box with IoU${\ge}0.3$ on the visible target in
 \nProbeThreeBase, \nProbeThreeCommon, \nProbeThreeComplex, and \nProbeThreeVisual\% of the views on Base, Common,
@@ -50,7 +50,7 @@ Complex, and Visual (75 visible instances each). It also errs the other way: on 
 still places a box in \nFalseBoxNamedLo--\nFalseBoxNamedHi\% of the cases for named categories and in
 \nFalseBoxVisual\% for appearance-only phrases. A single answer is therefore evidence, not a decision.
 
-\noindent\textbf{The prompted agent loses spatial state.}
+\noindent\textbf{The model cannot remember.}
 We label each failed episode by its first matching outcome: \emph{never seen}, \emph{near miss} (within 1.5\,m),
 \emph{lost after seen} (out of view in the last five steps), \emph{blocked} (30\% of actions rejected), oscillation, or
 approach failure.

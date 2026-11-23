@@ -11,21 +11,22 @@ turn toward a target behind it (\cref{chap:diagnosis}).
 \noindent\textbf{RQ2: What should an agent built around a small VLM look like?} It should ask the model only what
 the current image can settle and keep everything else in metric form. \ours does so with two per-image questions, a
 hypothesis memory, a search rule, and an occupancy-map planner (\cref{chap:method}). Of its components, multi-view
-evidence fusion carries the gain: a generic modular agent that acts on single-view answers trails \ours by
+evidence fusion carries the gain: a modular agent that acts on single-view answers of the same model trails \ours by
 \nSOverMod{} percentage points, and removing fusion alone costs \nAblFusionAbs{} (\cref{sec:exp-modular,sec:exp-ablation}).
 
 \noindent\textbf{RQ3: How far does this agent close the gap to larger models?} With a 4-bit 4B model on one 8\,GB GPU
 and without training, \ours succeeds in \nSThree\% of the EB-Navigation test episodes, \nGainThree{} percentage
-points more than the benchmark's agent with the same model. From RGB alone it reaches \nRGBThree\%, which is above
-both fine-tuned 4B agents and seven of ten training-free agents built on 8B to frontier-scale models. With a smaller
+points more than the benchmark's agent with the same model, as much as a tenfold larger model gives that agent. From RGB alone it reaches \nRGBThree\%, which is above
+GPT-4o, both fine-tuned 4B agents, and \nNTrainFreeBelowRGB{} of \nNTrainFree{} training-free agents built on 8B to frontier-scale models. With a smaller
 3B model the gain grows to \nGainTwo{} percentage points, and on RoboTHOR \ours reaches \nRoboSR\% success, above ten
 published zero-shot methods (\cref{chap:experiments}).
 
 \section{Discussion}
-The central finding of the thesis is that, for small models, the role matters more than the model. Agents designed
+The central finding of the thesis is that, for small models, the role matters more than the model: changing the role
+of a 4B model gives as much as scaling the benchmark's agent tenfold, at \nSpeedUp{} times less time per step. Agents designed
 around frontier models ask the model to perceive, remember, and plan, and they degrade quickly as the model shrinks.
 An agent that asks the same model only what it can see loses far less: replacing the 4B model by a 3B model costs
-\ours \nScaleDrop{} percentage points and the benchmark's agent \nScaleDropEB. The division of labor between a
+\ours \nScaleDrop{} percentage points and the benchmark's agent \nScaleDropEB{} percentage points. The division of labor between a
 semantic sensor and a metric controller is old in robotics, but the thesis shows that a generative VLM needs more
 than this division: because its single answers are unreliable, the controller must treat them as evidence and
 accumulate them over distinct viewpoints.
@@ -40,8 +41,8 @@ the second is far stronger than the first.
 
 \noindent\textbf{Treat a generative model as a noisy sensor.} A generative VLM places boxes in views that do not
 show the target and repeats its answers from the same viewpoint. An agent should therefore weigh its answers, combine
-them across viewpoints, and lower them when the expected detection does not appear, as one would with any other
-noisy sensor. Of all components of \ours, this evidence fusion is the one whose removal costs most.
+them across viewpoints, and discard a candidate once inspecting it rules it out, as one would with any other noisy
+sensor. Of all components of \ours, this evidence fusion is the one whose removal costs most.
 
 \noindent\textbf{Keep geometry in geometry.} Distances, free space, and directions already looked at are exact
 quantities that classical methods compute reliably from depth and pose, or from RGB alone with a ground-plane scale.
@@ -54,8 +55,8 @@ can be redirected to a new task by changing its prompt; \ours needs a new contro
 \noindent\textbf{Scene scale.} EB-Navigation episodes take place in single rooms with at most 20 steps. On the
 multi-room RoboTHOR apartments \ours remains below two zero-shot methods (\cref{tab:robothor}). Its exploration
 follows geometric rules and does not use semantic priors about where objects tend to be, which matter more in larger
-scenes. The components designed for competing candidates showed no significant effect in single rooms and remain
-untested at a larger scale.
+scenes. Negative evidence and tiled search, which the RoboTHOR agent uses, showed no significant effect in single
+rooms.
 
 \noindent\textbf{Recognition.} Visual is the only subset on which the gain over the benchmark's agent is not
 significant. When the

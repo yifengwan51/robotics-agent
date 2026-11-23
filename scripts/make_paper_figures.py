@@ -320,7 +320,7 @@ def robothor_cats():
     sr_all = DATA["robothor_sr"]
     spl_all = float(open(os.path.join(ROOT, "paper", "latex", "sec", "numbers.tex")).read()
                     .split("\\newcommand{\\nRoboSPL}{")[1].split("}")[0])
-    fig, ax = plt.subplots(figsize=(3.35, 1.5))
+    fig, ax = plt.subplots(figsize=(3.35, 2.05))
     y = list(np.arange(len(cats))) + [len(cats) + 0.35]  # the pooled row sits apart, on top
     sr, spl, names = sr + [sr_all], spl + [spl_all], names + ["all"]
     ax.barh(y, sr, 0.78, color="#F4B183", zorder=2, lw=0)
@@ -340,8 +340,8 @@ def robothor_cats():
     style(ax, grid="x")
     from matplotlib.patches import Patch
     ax.legend([Patch(color="#F4B183", lw=0), Patch(color=S2M, lw=0)], ["SR (first value)", "SPL (second value)"],
-              loc="lower right", frameon=False, handlelength=1.0, borderaxespad=0.1)
-    fig.subplots_adjust(left=0.2, right=0.965, top=0.99, bottom=0.215)
+              loc="lower right", frameon=False, handlelength=1.0, borderaxespad=0.1, fontsize=6.4 * K)
+    fig.subplots_adjust(left=0.2, right=0.975, top=0.99, bottom=0.16)
     check(fig, "robothor_cats")
     fig.savefig(os.path.join(FIG, "robothor_cats.pdf"))
 

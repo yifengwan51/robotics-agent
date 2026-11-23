@@ -105,8 +105,9 @@ def thumbnails():
     ax.annotate("", xy=(xs[-1], zs[-1]), xytext=(xs[-2], zs[-2]),
                 arrowprops=dict(arrowstyle="-|>", color=HEX["oGreyD"], lw=0.9, mutation_scale=6), zorder=4)
     ax.scatter([xs[0]], [zs[0]], s=9, marker="s", color=HEX["oGreyD"], zorder=4, lw=0)
+    tgt = (ep["target"]["x"], ep["target"]["z"])  # colour by identity: the hypothesis on the target vs look-alikes
     for (hx, hz), w in seen.items():
-        if w >= 0.8:
+        if np.hypot(hx - tgt[0], hz - tgt[1]) < 0.5:
             ax.scatter([hx], [hz], s=42, color=HEX["oOrangeD"], ec="white", lw=0.8, zorder=6)
         else:
             ax.scatter([hx], [hz], s=18, marker="x", color=HEX["oGreyK"], lw=1.0, zorder=5)
@@ -121,14 +122,14 @@ def thumbnails():
     def track(xz):
         return [(e["step"], next((h[2] for h in e["hyps"] if np.hypot(h[0] - xz[0], h[1] - xz[1]) < 0.12), np.nan))
                 for e in ep["perception_log"]]
-    plt.rcParams.update({"font.size": 7.0})
+    plt.rcParams.update({"font.size": 7.5})
     fig = plt.figure(figsize=(27 * MM, 16.0 * MM))
-    ax = fig.add_axes([0.2, 0.4, 0.77, 0.56])
+    ax = fig.add_axes([0.22, 0.42, 0.75, 0.54])
     for xz, c in (((0.33, -1.68), HEX["oOrangeD"]), ((1.51, -1.65), HEX["oGreyS"]), ((1.67, -1.74), HEX["oGreyS"])):
         tr = [(s, w) for s, w in track(xz) if not np.isnan(w)]
         ax.plot([s for s, _ in tr], [w for _, w in tr], color=c, lw=1.0, marker="o", ms=1.5, zorder=3)
     ax.axhline(0.8, color=HEX["oGreyD"], lw=0.6, ls=(0, (3.2, 2.2)), zorder=1)
-    ax.text(0.2, 1.1, r"$\tau_c$", fontsize=7.0, color="black", ha="left", va="bottom")
+    ax.text(0.2, 1.1, r"$\tau_\mathrm{c}$", fontsize=7.5, color="black", ha="left", va="bottom")
     ax.set_xlim(0, 13.6)
     ax.set_ylim(-0.6, 8.8)
     ax.set_xticks([0, 12])
@@ -204,7 +205,7 @@ ans = box("ans", S1[0] + PADH, vlm[3] + GV, 21.0, 2, "oGreyP", "presence $\\pi_t
 # stage 2 (contribution): lift, fuse, and the resulting metric memory
 xa = S2[0] + PADH
 lift = box("lift", xa, CY0 + 2.0, 27.0, 1, "oOrangeL", "lift with $D_t$, $p_t$")
-fuse = box("fuse", xa, lift[3] + GV, 27.0, 2, "oOrangeL", "fuse viewpoints,\\\\negative evidence")
+fuse = box("fuse", xa, lift[3] + GV, 27.0, 2, "oOrangeL", "fuse viewpoints,\\\\exhaust on arrival")
 add("img", "evidence", (xa, fuse[3] + GV, xa + 27.0, CY1 - 2.0), path="fig/arch_evidence.pdf", border=False)
 xb = xa + 27.0 + GH
 add("img", "bev", (xb, CY0 + 2.0, xb + 28.0, CY0 + 30.0), path="fig/arch_bev.png")
@@ -286,10 +287,10 @@ CAPTION = (
     "\\textbf{(a)}~The EB prompt maps $I_t$, the instruction $\\ell$, and the history $h_t$ to a text plan "
     "$u_{t:t+m}$ with the VLM $f$. \\textbf{(b)}~\\ours asks $f$ for the presence $\\pi_t$ and box $b_t$ of the "
     "phrase $s$, lifts them with depth $D_t$ and pose $p_t$ into hypotheses $\\mu_k$ with evidence $w_k$, selects "
-    "$k^\\star$, and plans $u_t$ on the map $M_t$. Blue: the frozen VLM; orange: \\ours's memory. Thumbnails: one "
-    "Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) passing the "
-    "commit threshold $\\tau_c$ while two look-alikes (grey) stay below it, and the map with the path, the target "
-    "(orange), and the look-alikes ($\\times$).")
+    "$k^\\star$, and plans $u_t$ on the map $M_t$. Blue: the frozen VLM; orange: the hypothesis memory of \\ours and the selection that reads it. Thumbnails: one "
+    "Long-horizon test episode, with the VLM's box on the target, the evidence of the target (orange) rising to ten "
+    "times the commit threshold $\\tau_\\mathrm{c}$ while two look-alikes (grey) stay near or below it, and the map with the "
+    "path, the target (orange), and the look-alikes ($\\times$).")
 
 # ------------------------------------------------------------------------------------------------ audit
 

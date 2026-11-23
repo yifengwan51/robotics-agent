@@ -29,7 +29,7 @@ Memory & association radius $r$ & 0.5\,m\\
  & repeated-view discount $\gamma$ & 0.25\\
  & same view: position, heading & 0.2\,m, equal\\
  & RoboTHOR only: negative evidence, range & 0.4, 3\,m\\
-Search & commit $\tau_c$ / keep $\tau_k$ & 0.8 / 0.4\\
+Search & commit $\tau_\mathrm{c}$ / keep $\tau_\mathrm{keep}$ & 0.8 / 0.4\\
  & approach a weak hypothesis & $w_k\ge0.35$\\
  & exhaustion radius & 0.9\,m\\
  & exploration goal distance & 0.75--3\,m\\
@@ -60,7 +60,7 @@ Locate the $\langle s\rangle$ in the image and output its bounding box as JSON: 
 "label": "$\langle s\rangle$"\}]. If it is not in the image, output [].
 \end{quote}
 The presence query generates one token and reads $P(\textit{yes})$ and $P(\textit{no})$ from the ten most likely
-first tokens (\cref{eq:s-presence}). The crop check asks the presence query and each tile the box query, both on
+first tokens (\cref{eq:s-presence}). The crop check asks the presence query, and on RoboTHOR each tile the box query, both on
 the magnified image. Box replies are parsed with one regular expression; a box narrower than 2\,px counts as no box.
 \begin{equation}
 \pi_t=\frac{\sum_{y\in\textit{yes}}P(y)}{\sum_{y\in\textit{yes}}P(y)+\sum_{n\in\textit{no}}P(n)} ,

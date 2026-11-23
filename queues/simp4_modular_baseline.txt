@@ -1,0 +1,5 @@
+# Same-model modular baseline matched to the frozen simplified S2M (runs/frozen/s2m_simp4_eb): identical settings
+# (gated look-around, strongest-first selection, exhaustion, map, planner) with multi-view fusion and the crop check
+# off, so every detection replaces the earlier hypotheses. Replaces modular_baseline_r1 (v5 code, ungated look-around,
+# nearest-first). Pre-registered 2026-11-23: this row enters the paper whatever it scores. One TEST run.
+models/Qwen3-VL-4B-Instruct-AWQ | 2048 | 0.72 | ~/miniforge3/envs/embnav_thor/bin/python -m embagent.eb.nav_runner --planner s2m --workers 2 --model Qwen3-VL-4B-Instruct-AWQ --exp simp4_modular_r1 --retry-errors --s2m '{"scan_mode": "gated", "use_negative": false, "use_tiles": false, "nearest_first": false, "use_fusion": false, "use_zoom": false}'

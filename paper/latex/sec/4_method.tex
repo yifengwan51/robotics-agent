@@ -19,14 +19,14 @@ or earlier answers, so every answer can be checked against the image alone.
 
 \noindent\textbf{Lifting.}
 A box with centre $c(b_t)=(u,v)$ is lifted with the median depth $\tilde d_t$ over its central half (half its width
-and half its height). With focal length $\varphi$ and principal point $(u_0,v_0)$ of the pinhole camera, tilt
-$\phi_t$, and the forward and right unit vectors $e_f(\theta_t),e_r(\theta_t)$ of the heading,
+and half its height). With focal length $\lambda$ and principal point $(u_0,v_0)$ of the pinhole camera, normalized
+coordinates $\bar u=(u-u_0)/\lambda$ and $\bar v=(v-v_0)/\lambda$, tilt $\phi_t$, and the forward and right unit
+vectors $e_f,e_r$ of the heading $\theta_t$,
 \begin{equation}
-q_t=x_t+\tilde d_t\Big[\big(\cos\phi_t-\tfrac{v-v_0}{\varphi}\sin\phi_t\big)\,e_f(\theta_t)
-+\tfrac{u-u_0}{\varphi}\,e_r(\theta_t)\Big],
+q_t=x_t+\tilde d_t\big[(\cos\phi_t-\bar v\sin\phi_t)\,e_f+\bar u\,e_r\big],
 \label{eq:lift}
 \end{equation}
-which we write $q_t=\Pi_{p_t}^{-1}(c(b_t),\tilde d_t)$; lifts with $\tilde d_t>6$\,m are discarded. The same
+lifts with $\tilde d_t>6$\,m are discarded. The same
 back-projection, with the known camera height, labels each depth pixel as floor (height below 0.10\,m) or obstacle
 (0.10--1.9\,m) in a 5\,cm occupancy grid $M_t$.
 
@@ -43,18 +43,19 @@ side resized to 448\,px. The crop is queried only when presence and box disagree
 appearance-only, so the extra cost is paid where the evidence is weak.
 
 \subsection{Metric hypothesis memory}
-Each hypothesis $k$ stores a floor position $\mu_k$, evidence $w_k$, and the poses $V_k$ from which it was seen. An
+Each hypothesis $k$ stores a floor position $\mu_k$, evidence $w_k$, the number $n_k$ of fused observations, and
+the poses $V_k$ from which it was seen. An
 observation $(q_t,a_t)$ is associated with the first hypothesis within \mbox{$r=0.5$\,m}. If there is one, then
 \begin{equation}
 \mu_k\leftarrow\frac{n_k\mu_k+q_t}{n_k+1},\qquad w_k\leftarrow w_k+\gamma_t\,a_t ,
 \label{eq:fuse}
 \end{equation}
-with $n_k$ the number of fused observations and $\gamma_t=0.25$ if some $v\in V_k$ has the heading of $p_t$ and a
+with $\gamma_t=0.25$ if some $v\in V_k$ has the heading of $p_t$ and a
 position within 0.2\,m of it, else $\gamma_t=1$; otherwise a new hypothesis $(\mu,w)=(q_t,a_t)$ is created. Through $\gamma_t$, evidence grows with the number
 of distinct viewpoints rather than with the number of frames.
 
 \noindent\textbf{Commitment and exhaustion.}
-The agent commits to a hypothesis once $w_k\ge\tau_c=0.8$ and keeps it while $w_k\ge\tau_k=0.4$; the hysteresis
+The agent commits to a hypothesis once $w_k\ge\tau_\mathrm{c}=0.8$ and keeps it while $w_k\ge\tau_\mathrm{keep}=0.4$; the hysteresis
 prevents one missed detection from abandoning a well-supported target. When the agent stands within 0.9\,m of a
 committed hypothesis and the episode continues, which on EB-Navigation means that it is not the target, the
 hypothesis is marked exhausted. It stays in memory, so later detections of the same look-alike merge into it
@@ -80,7 +81,7 @@ obstacles are removed, and a move that the simulator has rejected becomes a forb
 \centering
 \includegraphics[width=\textwidth]{fig/analysis.pdf}
 \caption{EB-Navigation test, Qwen3-VL-4B. \textbf{(a)} Episodes solved within a step budget, averaged over runs.
-\textbf{(b)} Failed episodes by outcome (first matching rule, \cref{sec:diagnosis}; mean over the runs of \ours).
+\textbf{(b)} Failed episodes by outcome (first matching rule, \cref{sec:diagnosis}; mean over the runs of \ours, rounded in the labels).
 \textbf{(c)} Cumulative distribution of lifted over true range for detections within 1\,m of the target (dashed:
 median), with the depth sensor and with monocular depth under a per-frame floor scale (\cref{eq:floorscale}) or a
 global scale.}
@@ -90,12 +91,12 @@ global scale.}
 \subsection{RGB-only and explicit-stop variants}
 \label{sec:rgbonly}
 Monocular metric depth networks err mostly by a frame-dependent scale. Let $\hat D_t$ be the raw prediction and
-$\kappa(v)=\sin\phi_t+\frac{v-v_0}{\varphi}\cos\phi_t$ the downward component of the ray through row $v$ per unit of
-planar depth. A pixel on the floor satisfies $\sigma\hat D_t(u,v)\,\kappa(v)=h$ for the camera height $h$, and an
+$\kappa(v)=\sin\phi_t+\bar v\cos\phi_t$ the downward component of the ray through row $v$ per unit of
+planar depth. A pixel on the floor satisfies $\sigma\hat D_t(u,v)\,\kappa(v)=h_\mathrm{c}$ for the camera height $h_\mathrm{c}$, and an
 object standing on the floor gives a larger $\sigma$. Over the pixels $\mathcal{F}_t$ whose rays point at least
 15$^\circ$ below the horizontal, \ours takes the mode
 \begin{equation}
-\sigma_t=\operatorname*{mode}_{(u,v)\in\mathcal{F}_t}\ \frac{h}{\hat D_t(u,v)\,\kappa(v)},\qquad D_t=\sigma_t\,\hat D_t ,
+\sigma_t=\operatorname*{mode}_{(u,v)\in\mathcal{F}_t}\ \frac{h_\mathrm{c}}{\hat D_t(u,v)\,\kappa(v)},\qquad D_t=\sigma_t\,\hat D_t ,
 \label{eq:floorscale}
 \end{equation}
 with the mode taken over values in $[\bar\sigma/1.33,\,1.33\,\bar\sigma]$, where $\bar\sigma$ is one global scale
@@ -103,7 +104,7 @@ fitted on development frames; it keeps $\bar\sigma$ when fewer than 10\% of the 
 this window. This is the ground-plane constraint of monocular visual
 odometry~\cite{song2014robust} applied per frame. Pose comes from dead reckoning over the executed actions,
 \begin{equation}
-\hat x_{t+1}=\hat x_t+0.25\,o_t\big(\alpha_f e_f(\hat\theta_t)+\alpha_r e_r(\hat\theta_t)\big),
+\hat x_{t+1}=\hat x_t+0.25\,\text{m}\cdot o_t\big(\alpha_f e_f(\hat\theta_t)+\alpha_r e_r(\hat\theta_t)\big),
 \label{eq:deadreckon}
 \end{equation}
 with $(\alpha_f,\alpha_r)\in\{(\pm1,0),(0,\pm1)\}$ the translation of $u_t$, and heading and tilt advanced by the
@@ -115,4 +116,4 @@ within 0.9\,m of a committed hypothesis, has turned within 20$^\circ$ of it and 
 presence query exceeds 0.5; otherwise the hypothesis is exhausted. Because RoboTHOR episodes last up to 500 steps
 and a stop is final, the RoboTHOR agent, frozen before the EB-Navigation agent was simplified, also lowers the
 evidence of a hypothesis that a frame within 3\,m shows but does not detect, searches magnified tiles when a view
-yields nothing, and explores toward the nearest frontier (supplement).
+yields nothing, and explores toward the nearest frontier (supplement, \S S1).

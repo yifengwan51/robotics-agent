@@ -14,10 +14,9 @@ EB-Navigation the following agents are compared, all with the same model in each
 \begin{description}
 \item[EB prompt] the benchmark's own agent (\cref{sec:diag-eb}), with its prompts, examples, parser, and plan
 execution.
-\item[Modular, single view] a generic modular agent with the same occupancy map, A* planner, look-around, and
-exploration as \ours, which acts on single-view detections: it has no multi-view fusion or crop check, and each box
-replaces the earlier target. It was built from the earlier version of \ours (\cref{sec:method-simplify}), whose
-look-around has no inspection rule.
+\item[Modular, single view] \ours with multi-view fusion and the crop check removed: the same occupancy map, A*
+planner, look-around, exploration, and exhaustion, acting on single-view detections, so that each box replaces the
+earlier target.
 \item[\ours] the full agent of \cref{chap:method}, with a depth sensor and simulator pose.
 \item[\ours, RGB only] \ours with monocular depth scaled per frame (\cref{eq:floorscale}) and pose from the executed
 actions (\cref{eq:deadreckon}).
@@ -51,7 +50,10 @@ With Qwen2.5-VL-3B, \ours reaches \nSTwo\% against \nEBTwo\% (${+}\nGainTwo$\,pp
 ${+}\nGainTwoHi$]). \Cref{fig:subsets} shows the
 success of every configuration on each subset, from the prompted agent to the oracle, and \cref{tab:ci} gives the
 confidence interval of every configuration run on EB-Navigation and of the paired differences on which the
-conclusions rest. The gain follows each of the four predictions.
+conclusions rest. Scaling the benchmark's agent tenfold within a model family buys \nScaleQwen{} percentage points
+(Qwen2.5-VL, 7B to 72B) and \nScaleIntern{} (InternVL3, 8B to 78B); changing the role of a 4B model buys as much, and
+closes \nGapClosed\% of the gap between the EB prompt and the oracle planner. The gain follows each of the four
+predictions.
 
 \begin{table}[htbp]
 \centering\small
@@ -92,8 +94,9 @@ the oracle (black line). \ours closes most of the gap to the oracle on every sub
 \label{fig:subsets}
 \end{figure}
 
-\subsection{Prediction (i): the diagnosed failures disappear}
-\Cref{fig:analysis}b breaks the failures down by outcome. Per run, \ours never sees the target in \nNeverSThree{}
+\subsection{Prediction (i): the diagnosed failures collapse}
+\Cref{fig:analysis}b breaks the failures down by outcome. Never-seen and blocked episodes fall by \nNeverRed{} and
+\nBlockedRed\%, near misses by \nNearRed\%, and lost targets by \nLostRed\%. Per run, \ours never sees the target in \nNeverSThree{}
 episodes (EB prompt: \nNeverEBThree), is blocked in \nBlockedSThree{} (\nBlockedEBThree), loses a seen target in
 \nLostSThree{} (\nLostEBThree), and ends near it in \nNearSThree{} (\nNearEBThree). The look-around, the occupancy map,
 and the memory remove the never-seen and blocked failures almost entirely and reduce the lost-after-seen ones, as
@@ -140,18 +143,22 @@ $p\nVisDiffP$), and Visual is also the subset with the smallest gain with Qwen2.
 is the subset on which single-view recognition was weakest (\cref{sec:diag-probe}); \cref{sec:exp-gap} examines it.
 
 \subsection{Prediction (iv): far less dependence on model size}
-Replacing Qwen3-VL-4B by Qwen2.5-VL-3B costs \ours \nScaleDrop{} percentage points and the EB prompt \nScaleDropEB.
+Replacing Qwen3-VL-4B by Qwen2.5-VL-3B costs \ours \nScaleDrop{} percentage points and the EB prompt \nScaleDropEB{}
+percentage points.
 The smaller model loses much of its ability to plan in text, but its answers to per-image questions remain good
 enough for the memory to use.
 
 \section{Comparison with published agents}
 \label{sec:exp-published}
 \Cref{fig:landscape} places \ours among the agents of \cref{tab:main} by the size of their model. Even from RGB alone
-(\nRGBThree\%), with a 4B model and no training, \ours exceeds every prompted MLLM up to GPT-4o and the training-free
-agents built on GPT-4o and 8--35B models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,chen2026hodagent,ma2026brainmem,lee2026emho,liang2026robofoundry},
-as well as MuSix and SVA, which train extra models around a 4B policy~\cite{jang2026musix,xie2026sva}. Only the
-tool-library agents~\cite{zhou2026enabling} and RoboFoundry on GPT-6 Astra score higher. These comparisons use the
-results reported by the respective authors on the same test set.
+(\nRGBThree\%), with a 4B model and no training, \ours exceeds every prompted MLLM up to GPT-4o,
+\nNTrainFreeBelowRGB{} of the \nNTrainFree{} training-free agents, which build on GPT-4o and 8--32B
+models~\cite{huang2025esca,wang2026mosaic,ju2026embodiskill,ma2026brainmem,lee2026emho,liang2026robofoundry}, and MuSix
+and SVA, which train extra models around a 4B policy~\cite{jang2026musix,xie2026sva}. MuSix and SVA report episodes
+36--60 and 37--60 of each subset, on which \ours (RGB only) reaches \nRGBMuSix{} and \nRGBSVA\%; EMHO reports its
+best held-out score over search iterations on half of each subset. Only the tool-library
+agents~\cite{zhou2026enabling} and RoboFoundry on GPT-6 Astra, which rewrites its prompts and code on the test
+episodes, score higher. These comparisons use the results reported by the respective authors.
 
 \begin{figure}[htbp]
 \centering
@@ -164,8 +171,8 @@ results reported by the respective authors on the same test set.
 \section{Modularity alone is not enough}
 \label{sec:exp-modular}
 A modular structure removes the model from planning, but it does not by itself make the model's answers reliable.
-The generic modular agent of \cref{sec:exp-setup} uses the same model, map, planner, look-around, and exploration as
-\ours and acts on single-view detections. It reaches \nModThree\%, \nModOverEB{} percentage points above the EB prompt
+The modular agent of \cref{sec:exp-setup} is \ours without multi-view fusion and the crop check: the same model,
+map, planner, look-around, exploration, and exhaustion, acting on single-view detections. It reaches \nModThree\%, \nModOverEB{} percentage points above the EB prompt
 ($p\nModOverEBP$) but \nSOverMod{} below \ours (CI [${+}\nSOverModLo$, ${+}\nSOverModHi$], $p\nSOverModP$). Its gain
 over the EB prompt falls almost entirely on Long ($\nModOverEBLong$\,pp), where the look-around alone finds the target;
 on the other subsets it is level with the EB prompt. On Base, Common, and Complex, \ours exceeds the modular agent by $\nSOverModBase$,
@@ -212,12 +219,11 @@ development split, but on the test set the two sides still balance.
 
 \subsection{The crop check and exhaustion}
 Removing the crop check lowers success by \nAblZoomAbs{} percentage points (Holm $p\nAblZoomP$); it costs VLM calls,
-not environment steps. Removing exhaustion changes success by $\nAblExhaust$\,pp (Holm $p\nAblExhaustP$), most on
-Visual ($\nAblExhaustVisual$\,pp), where appearance-only goals produce look-alikes that must be ruled out once
-visited. It acts only after the agent has reached a look-alike, which the single rooms of EB-Navigation rarely
-produce more than once per episode.
+not environment steps. Removing exhaustion changes success by $\nAblExhaust$\,pp (Holm $p\nAblExhaustP$). It acts only after the agent has
+reached a look-alike: in \nExhVisLo--\nExhVisHi{} Visual episodes per run, where appearance-only goals produce
+look-alikes that must be ruled out once visited, and in \nExhOtherLo--\nExhOtherHi{} on each other subset.
 
-\section{Operating without a depth sensor}
+\section{One RGB camera is enough}
 \label{sec:exp-sensing}
 \label{sec:sensing}
 \subsection{Pose}
@@ -233,7 +239,7 @@ nearby floor above the obstacle threshold, so the agent walks to a point short o
 exhaust a hypothesis within 1\,m of it, none with the sensor. The per-frame floor scale (\cref{eq:floorscale}) lowers
 the falsely blocked floor to \nBlockFloor\% and moves the range ratio to \nRangeFloor{} (sensor: \nRangeSensor).
 Success rises to \nRGBThree\%, \nGainRGB{} percentage points above the EB prompt ($p\nGainRGBP$) and \nGapRGBAbs{}
-below the depth sensor (Holm $p\nAblRgbfloorP$). \ours therefore does not depend on privileged sensing.
+below the depth sensor (Holm $p\nAblRgbfloorP$).
 
 \section{Efficiency and cost}
 \label{sec:exp-efficiency}
@@ -245,9 +251,10 @@ The cost of an episode is spent differently. \ours makes \nCallsS{} VLM calls pe
 EB prompt, but each call asks one short question: it reads \nTokS{}k prompt tokens and generates \nTokSc{} tokens per
 episode, against \nTokEB{}k and \nTokEBc{}k for the EB prompt, whose plans and reasoning dominate its generation.
 Because generation is the slow part of decoding, many short questions are cheaper than a few long plans on a small
-GPU. On the RTX 5060, which also renders the simulator, \ours takes \tTimeStepS\,s per step and \tTimeEpS\,s per
-episode on average, including rendering, all VLM calls, mapping, and planning. This is fast enough for a robot that
-moves 0.25\,m per step.
+GPU. On the RTX 5060, which also renders the simulator, \ours takes \nSecS\,s per step and \tTimeEpS\,s per
+episode on average, including rendering, all VLM calls, mapping, and planning, against \nSecEB\,s per step for the EB
+prompt, \nSpeedUp{} times longer. The RGB-only configuration, which runs the depth network on the CPU, takes
+\nSecRGB\,s per step. This is fast enough for a robot that moves 0.25\,m per step.
 
 \section{Qualitative analysis}
 \label{sec:exp-qualitative}
@@ -334,8 +341,8 @@ reliably, the same agent would convert both into successes. Successful episodes 
 \end{figure}
 
 \section{Summary}
-The experiments confirm all four predictions of the diagnosis. With the same model, \ours removes the never-seen and
-blocked failures and reduces lost targets, gains most on Long and least on Visual, and loses far less when the model
-shrinks. A generic modular agent recovers only part of the gain; multi-view fusion supplies most of the rest. The
-agent works from RGB alone, uses fewer steps, and transfers to RoboTHOR. Its main remaining limit is the recognition
+The experiments confirm all four predictions of the diagnosis. With the same model, \ours gains as much as a tenfold
+larger model gives the benchmark's agent, removes the never-seen and blocked failures and halves lost targets, gains
+most on Long and least on Visual, and loses far less when the model shrinks. A modular agent with the same model recovers only part of the gain; multi-view fusion supplies most of the rest. The
+agent works from RGB alone, uses fewer steps and \nSpeedUp{} times less time per step, and transfers to RoboTHOR. Its main remaining limit is the recognition
 of objects described only by appearance.

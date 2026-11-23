@@ -2,7 +2,7 @@
 
   ~/miniforge3/envs/embnav/bin/python thesis/make_thesis_figures.py   -> thesis/figures/th_*.pdf
 Palette: agents keep the paper's colours (S2M orange, RGB-only light orange, EB prompt grey, oracle as a black line)
-plus slate for the generic modular agent; orange never means anything but S2M. Episode outcomes use their own
+plus slate for the modular agent; orange never means anything but S2M. Episode outcomes use their own
 categorical set (validated for colour-vision deficiency with the dataviz validator), and significance is shown by filled
 vs open markers, so no colour carries two meanings across the thesis figures.
 """

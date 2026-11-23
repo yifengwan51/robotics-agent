@@ -8,6 +8,7 @@ TEX="$HOME/miniforge3/envs/tex/bin/tectonic"
 cp "$P"/sec/numbers.tex "$P"/sec/tab_main.tex "$P"/sec/tab_abl.tex "$P"/sec/tab_robothor.tex \
    "$P"/sec/supp_tab_probe.tex "$P"/sec/supp_tab_taxonomy.tex "$P"/sec/supp_tab_robothor.tex "$T/chapters/generated/"
 cp "$P/sec/fig_traj.tex" "$T/chapters/generated/"
+[ -f "$P/sec/tab_sens.tex" ] && cp "$P/sec/tab_sens.tex" "$T/chapters/generated/"  # written once the sensitivity runs finish
 cp "$P"/fig/*.pdf "$P"/fig/*.png "$T/figures/"
 cp "$P/main.bib" "$T/references.bib"
 # full-width paper figures have thesis variants (thesis text width, larger text); the column figures are reused

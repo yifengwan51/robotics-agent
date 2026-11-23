@@ -29,9 +29,9 @@ log() { echo "[queue $(date +%m-%d_%H:%M:%S)] $*"; }
 mem_avail_mb() { awk '/^MemAvailable:/ {print int($2 / 1024)}' /proc/meminfo; }
 
 stop_server() {
-  for p in $(pgrep -f "[v]llm serve"); do kill "$p" 2>/dev/null; done
-  for _ in $(seq 1 40); do pgrep -f "[v]llm serve" >/dev/null || break; sleep 1; done
-  for p in $(pgrep -f "[v]llm serve"); do kill -9 "$p" 2>/dev/null; done
+  for p in $(pgrep -f "[v]llm serve|[s]erve_vlm.sh"); do kill "$p" 2>/dev/null; done
+  for _ in $(seq 1 40); do pgrep -f "[v]llm serve|VLLM::EngineCore" >/dev/null || break; sleep 1; done
+  for p in $(pgrep -f "[v]llm serve|VLLM::EngineCore"); do kill -9 "$p" 2>/dev/null; done
   cur=""
 }
 
@@ -58,7 +58,7 @@ serve() {  # model_dir max_len gpu_util   (model_dir "none": job needs no model 
   for _ in $(seq 1 90); do
     sleep 5
     if curl -s -m 2 http://127.0.0.1:8000/v1/models >/dev/null 2>&1; then cur="$key"; return 0; fi
-    pgrep -f "[v]llm serve" >/dev/null || break
+    pgrep -f "[v]llm serve|[s]erve_vlm.sh" >/dev/null || break  # serve_vlm.sh: still activating conda before exec
   done
   log "vLLM failed to start for $key"; tail -3 "$slog"; return 1
 }

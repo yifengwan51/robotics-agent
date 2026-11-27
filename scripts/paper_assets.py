@@ -300,12 +300,13 @@ def main():
             macro(name + sn, 100 * np.mean([O[b][k] - O[a][k] for k in ks if k[0] == s]), "{:+.1f}")
     # ---------------- model size (Qwen3-VL-2B) and parameter sensitivity, written only when the runs are complete --
     Q2 = "Qwen3-VL-2B-Instruct"
-    two = {"eb2": [f"eb_{Q2}-FP8_eb_bounded_r1"], "s2m2": [f"s2m_{Q2}-AWQ_simp4_r1"]}  # bounded schema: DEV gate 2026-11-24
+    two = {"eb2": [f"eb_{Q2}-FP8_eb_bounded_r1"], "s2m2": [f"s2m_{Q2}-AWQ_simp4_r1"],  # bounded schema: DEV gate 2026-11-24
+           "rgb2": [f"s2m_{Q2}-AWQ_simp4_rgbonly_r1"]}
     HAVE2B = all(exists(v) for v in two.values())
     macro("HaveTwoB", "1" if HAVE2B else "0", "{}")
     if HAVE2B:
         o2 = {k: outcome(v) for k, v in two.items()}
-        for key, name in (("eb2", "EBQTwo"), ("s2m2", "SQTwo")):
+        for key, name in (("eb2", "EBQTwo"), ("s2m2", "SQTwo"), ("rgb2", "RGBQTwo")):
             m, lo, hi = boot_ci([o2[key][k] for k in ks])
             macro(name, m); macro(name + "Lo", lo); macro(name + "Hi", hi)
             for s_, v in zip(SHORT, per_subset(o2[key], ks)):
@@ -316,20 +317,15 @@ def main():
         macro("DropSQTwo", 100 * np.mean([O["s2m3"][k] for k in ks]) - 100 * np.mean([o2["s2m2"][k] for k in ks]))
         macro("DropEBQTwo", 100 * np.mean([O["eb3"][k] for k in ks]) - 100 * np.mean([o2["eb2"][k] for k in ks]))
         TWO = o2
-        sq2, eq2 = 100 * np.mean([o2["s2m2"][k] for k in ks]), 100 * np.mean([o2["eb2"][k] for k in ks])
-        lo_g = float(M0("GainQTwoLo"))
         # thesis paragraph for the smallest Qwen3-VL model; each clause follows from the numbers it states
         txt = (f"The smallest model of the same family tests the prediction further. With Qwen3-VL-2B, \\ours succeeds in "
                f"\\nSQTwo\\% of the episodes and the EB prompt in \\nEBQTwo\\% (${{+}}\\nGainQTwo$\\,pp, CI "
                f"[${{+}}\\nGainQTwoLo$, ${{+}}\\nGainQTwoHi$], $p\\nGainQTwoP$). Halving the model from 4B to 2B costs \\ours "
                f"\\nDropSQTwo{{}} percentage points and the EB prompt \\nDropEBQTwo.")
-        if float(M0("DropSQTwo")) < float(M0("DropEBQTwo")):
-            txt += " The agent that asks only per-image questions again loses less as the model shrinks."
-        else:
-            txt += (" Here the agent loses as much as the EB prompt: at 2B parameters the per-image answers themselves "
-                    "degrade, which sets a floor below which the role change cannot compensate.")
-        if lo_g > 0:
-            txt += " The gain over the benchmark's agent remains significant."
+        txt += (" From RGB alone, with the same monocular depth and dead reckoning as the 4B configuration, the 2B agent "
+                "reaches \\nRGBQTwo\\%.")
+        txt += (" The EB prompt with this model was run with the length-bounded output schema, which a development "
+                "comparison chose over the official one, as for Qwen2.5-VL-3B (\\cref{sec:pre-protocol}).")
         open(os.path.join(ROOT, "thesis", "chapters", "generated", "qwen2b_text.tex"), "w").write(txt + "\n")
     SENS = [("commit", "0.5", "commit threshold $\\tau_\\mathrm{c}=0.5$"), ("commit", "1.2", "commit threshold $\\tau_\\mathrm{c}=1.2$"),
             ("same_view_w", "0.0", "repeated view ignored, $\\gamma=0$"), ("same_view_w", "1.0", "repeated view counted fully, $\\gamma=1$")]
@@ -649,8 +645,9 @@ def main():
         if HAVE2B:  # the smallest Qwen3-VL model, added 2026-11-23 (queues/qwen3_2b_test.txt)
             O.update(TWO)
             f.write("\\midrule\n")
-            f.write(ours("eb2", "EB prompt", "Qwen3-VL-2B", block=("eb2", "s2m2")))
-            f.write(ours("s2m2", "\\ours{}$^\\S$", "Qwen3-VL-2B", block=("eb2", "s2m2")))
+            f.write(ours("eb2", "EB prompt", "Qwen3-VL-2B", block=("eb2", "s2m2", "rgb2")))
+            f.write(ours("s2m2", "\\ours{}$^\\S$", "Qwen3-VL-2B", block=("eb2", "s2m2", "rgb2")))
+            f.write(ours("rgb2", "\\ours, RGB only$^\\dagger$", "Qwen3-VL-2B", block=("eb2", "s2m2", "rgb2")))
         f.write("\\midrule\n")
         f.write(ours("oracle", "Oracle target$^\\ddagger$", "--"))
         f.write("\\bottomrule\n\\end{tabular}}\\usebox0\n\n\\vspace{0.2em}\\parbox{\\wd0}{\\footnotesize "

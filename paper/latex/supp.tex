@@ -126,6 +126,12 @@ every design choice of Sec.~4 was selected on this split. Each of the four compo
 lowered development success (paired McNemar over the 450 episodes, Holm over the four, $p<0.05$; all four had $p\le0.003$); the configuration
 was then frozen before its test runs.
 
+\noindent\textbf{2B baseline output format.}
+The Qwen3-VL-2B EB prompt frequently produced unparseable output with the official schema. After an incomplete
+test run was stopped, a rule fixed before the final test comparison selected between the official and a
+length-bounded schema on 150 development episodes; the bounded schema was selected. The partial test run was
+discarded. The EB baseline uses FP8 weights, whereas \ours uses 4-bit AWQ weights.
+
 \noindent\textbf{Statistics.}
 All agents run on the same 300 test episodes, so each comparison uses per-episode differences. A configuration run
 several times enters with its per-episode mean success. Confidence intervals are percentile intervals of $10^4$

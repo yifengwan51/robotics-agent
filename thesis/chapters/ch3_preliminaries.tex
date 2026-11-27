@@ -172,6 +172,11 @@ test runs. EmbodiedBench provides targets and instruction variants for 90 iTHOR 
 of them. Rerunning the benchmark's own generator on the other 30 rooms gives 150 development targets in five subsets of
 30; three generator seeds give each target three start poses, 450 development episodes in all (\cref{sec:appB-dev}). Test results are reported only on the complete official splits.
 
+For the Qwen3-VL-2B EB-prompt baseline, frequent unparseable outputs led us to stop an incomplete test run.
+Before the final test comparison, we fixed a rule to select the official or a length-bounded output schema using
+150 development episodes; the bounded schema was selected and the partial test run discarded. The EB baseline
+uses FP8 weights, while \ours uses 4-bit AWQ weights.
+
 \subsection{Statistical tests}
 All agents run on the same 300 test episodes, so each comparison uses per-episode differences. \ours was run three
 times on the EB-Navigation test set and the RGB-only configuration twice; a configuration run several times enters
